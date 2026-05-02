@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記 | Piste AI EVANGELISTS</title>
+  <meta name="description" content="Piste AI EVANGELISTSの特定商取引法に基づく表記ページです。">
+  <link rel="canonical" href="https://www.piste-ai.com/tokushoho.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --text: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* --- Header --- */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196, 162, 78, 0.2);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo img { height: 36px; }
+
+    .header-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85em;
+      margin-left: 28px;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover { color: var(--gold); }
+
+    .header-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 24px !important;
+      border-radius: 4px;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 1px;
+    }
+
+    .header-cta:hover { background: #a8882e !important; }
+
+    /* --- Hamburger --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.3s;
+    }
+
+    /* --- Mobile Nav --- */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 90;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0; right: -280px;
+      width: 280px; height: 100%;
+      background: var(--dark);
+      z-index: 95;
+      padding: 80px 30px 30px;
+      transition: right 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-nav.open { right: 0; }
+
+    .mobile-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    /* --- Main --- */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    .page-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    /* --- Table --- */
+    .tokusho-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+
+    .tokusho-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .tokusho-table th {
+      text-align: left;
+      padding: 18px 20px;
+      font-weight: 600;
+      color: var(--gold);
+      font-size: 0.9em;
+      width: 200px;
+      vertical-align: top;
+      background: rgba(196, 162, 78, 0.05);
+    }
+
+    .tokusho-table td {
+      padding: 18px 20px;
+      font-size: 0.9em;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(196, 162, 78, 0.2);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-nav { display: none; }
+
+      .tokusho-table th,
+      .tokusho-table td {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+      }
+
+      .tokusho-table th {
+        padding-bottom: 4px;
+      }
+
+      .tokusho-table td {
+        padding-top: 4px;
+        padding-bottom: 20px;
+      }
+
+      .page-hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="./" class="header-logo">
+        <img src="images/logo.png" alt="Piste AI EVANGELISTS">
+      </a>
+      <nav class="header-nav">
+        <a href="./#consulting">導入コンサル</a>
+        <a href="./#flow">ご利用の流れ</a>
+        <a href="./#plans">料金プラン</a>
+        <a href="blog/">ブログ</a>
+        <a href="./#profile">プロフィール</a>
+        <a href="./#contact" class="header-cta">無料相談</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav">
+    <a href="./#consulting">導入コンサル</a>
+    <a href="./#flow">ご利用の流れ</a>
+    <a href="./#plans">料金プラン</a>
+    <a href="blog/">ブログ</a>
+    <a href="./#profile">プロフィール</a>
+    <a href="./#contact">無料相談</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-title">Legal</p>
+      <h1>特定商取引法に基づく表記</h1>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <table class="tokusho-table">
+      <tr>
+        <th>販売業者（屋号）</th>
+        <td>Piste</td>
+      </tr>
+      <tr>
+        <th>運営統括責任者</th>
+        <td>石川 卓</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>〒447-0042 愛知県碧南市中後町3-3 中央ビル1F</td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td>0566-48-6580</td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>info@piste-i.com</td>
+      </tr>
+      <tr>
+        <th>販売価格</th>
+        <td>
+          Claude Code 導入サポート（スポット）：3,000円（税込）<br>
+          ライトプラン：18,000円/月（税込）<br>
+          スタンダードプラン：32,000円/月（税込）<br>
+          プラチナプラン：90,000円/月（税込）<br>
+          動画教材：2,500円（税込）
+        </td>
+      </tr>
+      <tr>
+        <th>商品代金以外の料金</th>
+        <td>インターネット接続料金、通信料金等はお客様のご負担となります。<br>Claude Code等のAIツール利用料は別途お客様のご負担となります。</td>
+      </tr>
+      <tr>
+        <th>お支払い方法</th>
+        <td>クレジットカード決済（Stripe）<br>※口座振込は別途ご相談</td>
+      </tr>
+      <tr>
+        <th>お支払い時期</th>
+        <td>初回申込時に決済。月額プランは以降毎月同日に自動決済。</td>
+      </tr>
+      <tr>
+        <th>役務提供時期</th>
+        <td>決済完了後、1週間以内にサービスを開始いたします。</td>
+      </tr>
+      <tr>
+        <th>返品・キャンセル</th>
+        <td>決済完了後の返品・返金は原則としてお受けできません。</td>
+      </tr>
+      <tr>
+        <th>解約手続き</th>
+        <td>月額プランの解約は次回決済日前日までにお申し出ください。日割り返金は行っておりません。</td>
+      </tr>
+      <tr>
+        <th>クーリング・オフ</th>
+        <td>通信販売のため、クーリング・オフ制度の適用対象外です。</td>
+      </tr>
+      <tr>
+        <th>推奨環境</th>
+        <td>Mac、Windows</td>
+      </tr>
+    </table>
+
+    <div style="text-align: center;">
+      <a href="./" class="back-link">← トップページに戻る</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileOverlay.classList.toggle('open');
+      });
+      mobileOverlay.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+      });
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          mobileOverlay.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

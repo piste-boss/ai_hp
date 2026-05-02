@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド | Piste</title>
+<meta name="description" content="Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,loop,スケジュール,cron,自動化,24時間業務,AI常駐,中小企業,夜間自動運転">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド</h1>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-thumb-01.jpg" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転" style="width: 100%; height: auto; display: block;">
+</div>
+<p><strong>2026.04.23 ・ 読了目安 9分</strong></p>
+
+<p>「毎朝6時に売上データをまとめて、9時までにレポートを作る」「夜21時に翌日の予約情報をLINEに通知する」「週次の競合調査を月曜の朝一で仕上げる」——時間で区切られた定型業務は、必ず「誰かがその時間に動く」ことを前提にしています。経営者や一人社長が早朝に起きて作業したり、スタッフに残業を頼んだりしていませんか。</p>
+<p>この問題を根本から解決するのが、Claude Codeの<strong>/loop（ループ機能）</strong>と<strong>CronCreate（スケジュール機能）</strong>です。Anthropic公式CLIであるClaude Codeには、2026年に入って「指定時刻に自動で処理を起動する」「一定間隔で繰り返す」という"常駐ワーカー"の仕組みが強化されました。AIが勝手に起き、仕事をして、また待機に戻る——そんな24時間運転の業務基盤が、非エンジニアでも構築できるようになっています。</p>
+<p>この記事では、Claude Codeのスケジュール機能の仕組みと、中小企業での活用法、非エンジニアでも始められる4ステップを解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>/loopとスケジュール機能とは？"AI常駐ワーカー"が生まれる理由</li>
+<li>中小企業で効果が出るスケジュール自動化5選</li>
+<li>業種別 活用シーン</li>
+<li>非エンジニアでもできる導入4ステップ</li>
+<li>導入前に知っておくべき注意点</li>
+<li>よくある質問</li>
+<li>導入サポートのご案内</li>
+</ol>
+
+<h2>1. /loopとスケジュール機能とは？"AI常駐ワーカー"が生まれる理由</h2>
+<p>Claude Codeの/loopは「同じコマンドを一定間隔で繰り返す」機能で、CronCreateは「指定の日時・曜日に自動起動する」機能です。2つを組み合わせると、AIがあらかじめ決めたスケジュールで勝手に業務を回し、結果を通知・記録する運用が可能になります。チャットのように人が呼び出す必要がなく、AIがタイマーに従って自分で起きてくる感覚に近いです。</p>
+
+<h3>従来の自動化との違い</h3>
+<ul>
+<li>RPAは画面を開きっぱなしにする必要があるが、Claude Codeはバックグラウンドで自動起動する</li>
+<li>業務スクリプトはエラー処理や通知機能を個別実装しなければならないが、Claude CodeはAIが状況を見て判断できる</li>
+<li>外部のワークフローサービス（Make・Zapier）に頼らなくても、AIが判断と実行を一体で担える</li>
+</ul>
+
+<h3>Hook・サブエージェントとの相性</h3>
+<blockquote>
+<p>/loopとCronCreateは単体でも便利ですが、Hook（イベント駆動）やサブエージェント（業務分担）と組み合わせると真価を発揮します。たとえば「毎朝7時に売上データを収集→専門サブエージェントに分析させる→結果をSlackに通知」といった複数工程を、一つのスケジュール起動で完結させられます。</p>
+</blockquote>
+
+<h3>手動運用とスケジュール運用の違い</h3>
+<table>
+<tr><th>項目</th><th>手動運用</th><th>スケジュール運用</th></tr>
+<tr><td>起動タイミング</td><td>人が呼び出す</td><td>指定時刻に自動起動</td></tr>
+<tr><td>深夜・早朝の業務</td><td>担当者が対応する</td><td>AIが無人で処理</td></tr>
+<tr><td>やり忘れリスク</td><td>人の記憶・気力に依存</td><td>スケジュール登録で解消</td></tr>
+<tr><td>結果通知</td><td>手動で報告</td><td>自動でメール・チャット通知</td></tr>
+</table>
+
+<h2>2. 中小企業で効果が出るスケジュール自動化5選</h2>
+
+<h3>(1) 早朝の売上・予約データ集計</h3>
+<p>毎朝6時〜7時に、前日の売上・予約・在庫データをまとめ、経営者のスマホに要約レポートを届ける運用が組めます。出社前に業績を把握できるため、朝礼の質が上がり、判断スピードが飛躍的に速くなります。データは会計・POS・予約システムなどから横断取得し、異常値があればコメント付きで報告します。</p>
+
+<h3>(2) 深夜の定期レポート・ブログ下書き作成</h3>
+<p>スタッフが退勤した後の深夜帯に、翌日以降のブログ原稿や社内レポートの下書きをAIが作成しておく運用です。出勤したときには「仕上げて公開するだけ」の状態で下書きが揃っており、朝の1時間が丸ごと浮きます。業務時間を侵食せずにコンテンツ量を増やせるのが最大の強みです。</p>
+
+<h3>(3) 週次の競合調査・市場動向サマリー</h3>
+<p>毎週月曜の朝、主要競合サイトの更新点・検索順位・SNS投稿動向をクロールして要約します。担当者が「月曜の朝イチでまとめる」習慣的な調査業務を、完全無人化できます。Claude Codeは結果の比較と差分検知もこなすため、変化が起きた項目だけを抜き出して報告させる設計も可能です。</p>
+
+<h3>(4) 毎晩の通知・リマインド配信</h3>
+<p>夜21時に「翌日の予約一覧」「仕込み・準備タスク」「明日の会議アジェンダ」を関係者のLINEやメールに送る運用が可能です。スタッフは自宅にいながら翌日の準備を把握でき、朝の出勤直後の混乱や抜け漏れが激減します。通知内容はAIが当日のデータを見て自動で組み立てます。</p>
+
+<h3>(5) 月次処理・請求書発行の自動化</h3>
+<p>毎月25日の夜間に、請求書の下書き作成・経費集計・月次報告書の初稿生成をAIが済ませておく運用です。月末・月初に集中する経理負担を夜間に分散でき、担当者は確認と最終送付だけに集中できます。会計ソフトと連携すれば、仕訳の初稿もあわせて準備させられます。</p>
+
+<h2>3. 業種別 活用シーン</h2>
+<table>
+<tr><th>業種</th><th>主な活用シーン</th></tr>
+<tr><td>美容・サロン</td><td>早朝の予約サマリー配信、深夜のSNS投稿下書き作成、月次売上レポート</td></tr>
+<tr><td>飲食・小売</td><td>毎朝の在庫・仕込み通知、週次の競合メニュー調査、閉店後の売上サマリー</td></tr>
+<tr><td>士業・コンサル</td><td>週次の業界ニュース要約、毎朝の案件進捗レポート、月次の請求書下書き</td></tr>
+<tr><td>不動産・工務店</td><td>朝イチの新着物件情報配信、週次の反響分析、夜間の問い合わせ返信下書き</td></tr>
+<tr><td>人材・教育</td><td>毎朝の応募者サマリー、週次の求人媒体更新確認、夜間の受講者フォロー下書き</td></tr>
+</table>
+
+<h2>4. 非エンジニアでもできる導入4ステップ</h2>
+
+<h3>ステップ1：時間で区切られた業務を洗い出す</h3>
+<p>「毎朝この時間にやっている」「毎週月曜にまとめている」「月末に発行している」といった、時刻や曜日に紐づく業務を棚卸しします。5分で済むものから1時間かかるものまで書き出し、先に自動化すべきものを決めます。最初は「早朝の売上確認」「週次レポート」「月末の請求処理」の中から一つ選ぶと効果が見えやすいです。</p>
+
+<h3>ステップ2：Claude Codeに業務手順をスキルとして登録する</h3>
+<p>選んだ業務を「どのデータを見て」「どうまとめて」「誰に届けるか」まで日本語で書き出し、Claude Codeのスキル（スラッシュコマンド）として登録します。指示は操作ログを書くような感覚で十分で、エンジニア的な書き方は不要です。1度作ったスキルは名前を付けて呼び出せるため、再利用が効きます。</p>
+
+<h3>ステップ3：/loopかCronCreateでスケジュールを設定する</h3>
+<p>登録したスキルを、一定間隔で繰り返すなら/loop、決まった時刻に起動するならCronCreateで時刻設定します。「毎朝7時」「毎週月曜9時」「毎月25日21時」など、日本語で指示するだけで予約完了です。初回は数日間、動作結果を確認しながら時刻を微調整すると安定します。</p>
+
+<h3>ステップ4：通知先とエラー対策を整える</h3>
+<p>自動実行の結果は、メール・Slack・LINE・社内Notionなど普段使いのツールに届けます。併せて「実行が失敗したら担当者に通知する」ルールを1つ決めておくと、放置事故を防げます。ここまで整えば、24時間運転の基盤が完成し、朝起きたときには業務の半分が終わっている状態になります。</p>
+
+<h2>5. 導入前に知っておくべき注意点</h2>
+<ul>
+<li><strong>PCの常時稼働設計</strong>：スケジュール起動は端末が動いている必要があるため、事務所PCのスリープ設定を見直す</li>
+<li><strong>重要操作の人確認</strong>：決済・送信・削除などの不可逆操作は、AIが準備まで行い最終送信は人が行う設計にする</li>
+<li><strong>時刻の重複に注意</strong>：複数スケジュールが同時刻に重なると処理が競合するため、5〜10分ずらして配置する</li>
+<li><strong>ログの保管</strong>：自動実行の結果ログは一定期間保存し、異常時の追跡に使えるようにする</li>
+<li><strong>祝日・休業日への対応</strong>：月次処理など営業日に依存するものはカレンダー連携で自動スキップさせる</li>
+</ul>
+
+<h2>6. よくある質問</h2>
+
+<h3>Q1. PCを閉じていても動きますか？</h3>
+<p>Claude Code自体はローカルPCで動くため、PCが起動していてかつスリープから復帰できる状態である必要があります。事務所の据え置き機や常時起動のMac miniなどを母艦にするのが一般的です。クラウド上で動かしたい場合は、サーバー設置型の運用に拡張できます。</p>
+
+<h3>Q2. プログラミング経験がなくても使えますか？</h3>
+<p>使えます。業務手順を日本語で書き、AIに「毎朝7時に実行して」と指示するだけです。cron記法を覚える必要はなく、自然な時刻表現で登録できます。エラー時の対応もAIが提案してくれるため、試行錯誤しながら完成度を上げていけます。</p>
+
+<h3>Q3. 実行結果をどこで確認できますか？</h3>
+<p>メール・Slack・LINE・社内チャット・Notionなど、普段使っているツールに出力できます。要約だけ通知してログ全文は別に保管する、という構成が読みやすさと追跡性の両立に向いています。</p>
+
+<h3>Q4. 他の自動化ツールと併用できますか？</h3>
+<p>併用できます。起動トリガーはClaude Codeに任せ、一部の複雑な画面操作はPlaywrightや別の自動化ツールに委ねるなど、役割を分けると運用が安定します。既存のMake・Zapierと組み合わせて使っている事例も増えています。</p>
+
+<h3>Q5. 導入にどれくらい時間がかかりますか？</h3>
+<p>1業務だけなら打ち合わせから初回稼働まで2〜3時間程度が目安です。3業務を並行稼働させる場合でも半日〜1日でセットアップでき、月単位で数十時間の稼働削減につながることが多いです。</p>
+
+<h2>7. 導入サポートのご案内</h2>
+<div class="cta">
+<h2>夜間・早朝の業務を、AIが自動で回す体制に</h2>
+<p>Claude Codeの/loopとスケジュール機能で「早朝の売上サマリー」「夜間のレポート作成」「月末の請求書下書き」などを自動化したい中小企業の方へ。対象業務の棚卸しから初回稼働までを一緒に進める、Claude Code導入サポート（¥3,000〜）をご用意しています。</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+
+<p>時間に区切られた業務は、人が張り付かなくても回せる業務です。AIが起きている間に仕事が進んでいる——それが当たり前になった企業は、人の時間を「判断と創造」に集中させられるようになります。まずは一番ストレスになっている時間帯の業務を書き出すところから始めてみてください。</p>
+
+</main>
+</body>
+</html>

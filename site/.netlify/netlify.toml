@@ -1,0 +1,26 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "/Users/ishikawasuguru/AI_コンサル/HP作成/site"
+publishOrigin = "default"
+base = "/Users/ishikawasuguru/AI_コンサル/HP作成/site"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

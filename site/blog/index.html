@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブログ | Piste AI EVANGELISTS</title>
+  <meta name="description" content="AI導入・活用に関する最新情報をお届けするPiste AI EVANGELISTSのブログ。">
+  <link rel="canonical" href="https://www.piste-ai.com/blog/">
+  <meta property="og:title" content="ブログ | Piste AI EVANGELISTS">
+  <meta property="og:description" content="AI導入・活用に関する最新情報をお届けするPiste AI EVANGELISTSのブログ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --text: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* --- Header --- */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196, 162, 78, 0.2);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo img {
+      height: 36px;
+    }
+
+    .header-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85em;
+      margin-left: 28px;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover {
+      color: var(--gold);
+    }
+
+    .header-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 24px !important;
+      border-radius: 4px;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 1px;
+    }
+
+    .header-cta:hover {
+      background: #a8882e !important;
+    }
+
+    /* --- Main --- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    .page-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      color: #aaa;
+      font-size: 1em;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    /* --- Blog Grid --- */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .blog-card {
+      background: var(--dark);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .blog-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover .blog-thumb img {
+      transform: scale(1.05);
+    }
+
+    .blog-body {
+      padding: 20px;
+    }
+
+    .blog-date {
+      font-size: 0.8em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .blog-body h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .blog-body p {
+      font-size: 0.85em;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(196, 162, 78, 0.2);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Hamburger --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.3s;
+    }
+
+    /* --- Mobile Nav --- */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 90;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100%;
+      background: var(--dark);
+      z-index: 95;
+      padding: 80px 30px 30px;
+      transition: right 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-nav.open { right: 0; }
+
+    .mobile-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-nav { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../" class="header-logo">
+        <img src="../images/logo.png" alt="Piste AI EVANGELISTS">
+      </a>
+      <nav class="header-nav">
+        <a href="../#consulting">導入コンサル</a>
+        <a href="../#flow">ご利用の流れ</a>
+        <a href="../#plans">料金プラン</a>
+        <a href="../blog/">ブログ</a>
+        <a href="../#profile">プロフィール</a>
+        <a href="../#contact" class="header-cta">無料相談</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav">
+    <a href="../#consulting">導入コンサル</a>
+    <a href="../#flow">ご利用の流れ</a>
+    <a href="../#plans">料金プラン</a>
+    <a href="../blog/">ブログ</a>
+    <a href="../#profile">プロフィール</a>
+    <a href="../#contact">無料相談</a>
+    <a href="../#line-cta">LINE友だち追加</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-title">Blog</p>
+      <h1>ブログ記事一覧</h1>
+      <p>AI導入・活用に関する最新情報をお届けします</p>
+    </div>
+  </div>
+
+  <!-- Blog Grid -->
+  <div class="container">
+    <div class="blog-grid">
+
+      <div class="blog-card">
+        <a href="claude-code-notion-integration.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-notion-integration.jpg" alt="Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.05.01</p>
+            <h3>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド</h3>
+            <p>Claude CodeとNotion MCPを連携させ、議事録・タスク・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-team-parallel-execution.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-team-parallel-execution.jpg" alt="Claude Codeのチーム機能で複数業務を画面分割で同時稼働"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.30</p>
+            <h3>Claude Codeのチーム機能で複数業務を画面分割で同時稼働！中小企業のAI並列ワークフロー活用ガイド</h3>
+            <p>Claude CodeのチームAPI（TeamCreate）と画面分割（tmuxパネル連携）で、複数のAIエージェントに別業務を同時並行で担当させる方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-websearch-research-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-websearch-research-automation.jpg" alt="Claude CodeのWeb検索機能で市場調査・競合分析を自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.29</p>
+            <h3>Claude CodeのWeb検索機能で市場調査・競合分析を自動化！中小企業のリサーチ業務効率化ガイド</h3>
+            <p>WebSearch・WebFetchを活用し、競合価格モニタリング・業界ニュース収集・補助金チェック等のリサーチ業務を自動化する方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-plan-mode-business.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-plan-mode-business.jpg" alt="Claude CodeのPlanモードで業務改革プロジェクトをAIに計画"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.28</p>
+            <h3>Claude CodeのPlanモードで業務改革プロジェクトをAIに計画させる！中小企業の戦略立案AI活用ガイド</h3>
+            <p>Claude CodeのPlanモードを使い、業務改革プロジェクト・新規事業・SOP整備の計画立案をAIに任せる方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-remote-control-mobile.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-remote-control-mobile.jpg" alt="Claude CodeのRemote Controlでスマホから業務指示"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.27</p>
+            <h3>Claude CodeのRemote Controlでスマホから業務指示！中小企業のモバイル経営AI活用ガイド</h3>
+            <p>Claude CodeのRemote Control機能で外出先のスマホから業務指示・進捗確認・承認まで完結。中小企業向けモバイル経営AI活用5選と非エンジニア向け導入4ステップを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-skills-knowledge.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-skills-knowledge.jpg" alt="Claude CodeのSkill機能で社内ノウハウを資産化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.26</p>
+            <h3>Claude CodeのSkill機能で社内ノウハウを資産化！中小企業の業務スキル再利用ガイド</h3>
+            <p>Skill機能でベテランの業務手順・チェックリストをAIに記憶させ、誰でも再利用できる社内スキル資産に変える方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-stripe-integration.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Stripe連携で決済・サブスク管理を自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.25</p>
+            <h3>Claude Code × Stripe連携で決済・サブスク管理を自動化！中小企業の課金業務効率化ガイド</h3>
+            <p>Claude CodeでStripe MCPを操作し、月次MRR・カード期限切れフォロー・解約理由集計を自動化。中小企業の課金業務効率化4ステップを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-claudemd-memory-guide.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-03.jpg" alt="Claude CodeのCLAUDE.mdで業務ルールをAIに記憶させる"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.24</p>
+            <h3>Claude CodeのCLAUDE.md（メモリ機能）で業務ルールをAIに記憶させる！中小企業のAI社内標準化ガイド</h3>
+            <p>CLAUDE.md（メモリ機能）で会社・部署・案件単位のルールをAIに常時記憶させ、属人化と毎回指示のロスをまとめて解消する社内標準化ガイド。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-loop-scheduler-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.23</p>
+            <h3>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド</h3>
+            <p>/loopとCronCreateで夜間・早朝・休日の定型業務を無人化。中小企業のAI常駐ワーカー構築と非エンジニア向け導入4ステップを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-playwright-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Playwright でブラウザ業務を自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.22</p>
+            <h3>Claude CodeのPlaywright連携でブラウザ業務を自動化！WordPress投稿・予約管理・SNS運用を丸ごと任せる中小企業ガイド</h3>
+            <p>Playwright MCP でブラウザを AI が操作。外部連携不可の SaaS もログインごと自動化できる中小企業向け実践ガイド。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-hooks-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code Hook機能で業務イベント自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.21</p>
+            <h3>Claude CodeのHook機能で業務イベントを自動化！中小企業向けイベント駆動型AIワークフローガイド</h3>
+            <p>受注メール・会議終了・レポート生成のイベントで自動発火するAI。Hook活用5選・業種別シーン・誤発火対策を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-slash-commands.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-slash-commands.jpg" alt="Claude Codeのスラッシュコマンドで業務を1行化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.20</p>
+            <h3>Claude Codeのスラッシュコマンドで社内業務を1行化！中小企業の業務テンプレート自動化ガイド</h3>
+            <p>繰り返し業務をテンプレート化し、一行で呼び出す方法を解説。中小企業で使える業務テンプレート5選と業種別活用シーン、非エンジニア向け導入4ステップ。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-subagent-team.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-subagent-team.jpg" alt="Claude Codeサブエージェントで業務分担"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.19</p>
+            <h3>Claude Codeのサブエージェント機能で業務を自動分担！中小企業のAIチーム編成ガイド</h3>
+            <p>役割を分けた複数のAIに業務を並列処理させる方法を解説。営業・経理・マーケ等のチーム編成5パターンと非エンジニア向け導入4ステップ。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-mcp-integration.html">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-mcp-integration.jpg" alt="Claude Code × MCP連携で業務ツール統合"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.18</p>
+            <h3>Claude CodeのMCP連携で業務ツールを統合！Notion・Googleドライブ・Gmailを繋ぐ中小企業の自動化ガイド</h3>
+            <p>Notion・クラウドストレージ・メール・カレンダーを一つの指示で横断操作。ツール間の転記ロスを解消する MCP 連携の実践ガイド。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-competitor-analysis.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-competitor-analysis.jpg" alt="AI競合分析・市場調査自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.17</p>
+            <h3>AIで競合分析・市場調査を自動化！中小企業のデータドリブン経営入門ガイド</h3>
+            <p>競合の動向が見えない、市場調査に時間が取れない——中小企業の悩みをAIで解決。データドリブン経営を実現する実践ガイド。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-sales-growth-examples.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-sales-growth-examples.jpg" alt="生成AIで売上アップ"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.17</p>
+            <h3>生成AIで売上アップ！中小企業の具体的な活用事例5選</h3>
+            <p>チャットボット導入、EC商品説明文の自動生成、SNS運用自動化など、実際に成果が出ている中小企業のAI活用事例を5つご紹介します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-contract-review-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-contract-review-automation.jpg" alt="AI契約書レビュー"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.16</p>
+            <h3>AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド</h3>
+            <p>NDA・業務委託・下請法チェックのプロンプト例とLegalOn Cloud・Claude活用事例。顧問弁護士費用を圧縮しつつ契約業務を90%削減する実践ガイド。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-automation-one-person-business.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-automation-one-person-business.jpg" alt="一人社長AI自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.15</p>
+            <h3>一人社長・フリーランス必見！AIで「自分の分身」を作る業務自動化術</h3>
+            <p>時間も人手も足りない一人社長・フリーランスこそAI活用で「自分の分身」を作り業務を自動化する実践術を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-knowledge-management.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-knowledge-management.jpg" alt="AI社内ナレッジ管理"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.14</p>
+            <h3>AIで社内マニュアル・ナレッジ管理を自動化！属人化を解消する実践ガイド</h3>
+            <p>ベテラン社員の退職で業務知識が消失…AIで社内ナレッジを自動整理・共有し属人化を根本解消する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-presentation-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-presentation-automation.jpg" alt="AIプレゼン資料作成"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.13</p>
+            <h3>AIでプレゼン資料を自動作成！中小企業の資料作成を10分の1にする実践ガイド</h3>
+            <p>AIを活用すれば見栄えの良いプレゼン資料を数分で作成できます。ツール選びから完全自動化まで実践方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-data-analysis-dashboard.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-data-analysis-dashboard.jpg" alt="AIデータ分析ダッシュボード"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.13</p>
+            <h3>AIでデータ分析を自動化！売上データから経営判断を支援するダッシュボード活用術</h3>
+            <p>データは溜まっているのに活用できていない方へ。AIを使えば専門知識がなくても経営に役立つダッシュボードを自動で作成できます。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="moneyforward-mcp-accounting.html">
+          <div class="blog-thumb"><img src="../images/blog-moneyforward-mcp-accounting.jpg" alt="マネーフォワード×MCP連携"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.12</p>
+            <h3>マネーフォワード×MCP連携でClaude Codeが会計業務を自動化！仕訳・決算書作成をAIに任せる時代へ</h3>
+            <p>マネーフォワードがMCPに対応。Claude Codeから直接仕訳入力・決算書作成が可能に。中小企業の会計業務を劇的に効率化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-inventory-management.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-inventory-management.jpg" alt="AI在庫管理"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.12</p>
+            <h3>AIで在庫管理を最適化！中小企業の欠品・過剰在庫を防ぐ実践ガイド</h3>
+            <p>AIによる需要予測と自動発注で、欠品率を半減・過剰在庫を3割削減する実践ガイド。小売・EC・飲食・製造の業種別コツを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-sales-email-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-sales-email-automation.jpg" alt="AI営業メール自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.11</p>
+            <h3>AIで営業メールを自動作成！商談獲得率を高めるメール文面の作り方</h3>
+            <p>AIで営業メールの作成時間を1/10に短縮しながら、商談獲得率を高める実践ノウハウ。プロンプト設計と業種別のコツを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-customer-support-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-customer-support-automation.jpg" alt="AI顧客対応自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.09</p>
+            <h3>AIで顧客対応を自動化！問い合わせ対応・予約管理を効率化する実践ガイド</h3>
+            <p>AIを活用すれば顧客対応の8割は自動化できます。問い合わせ対応・予約管理・顧客フォローの効率化方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-accounting-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-accounting-automation.jpg" alt="経理業務AI自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.06</p>
+            <h3>経理業務をAIで自動化！請求書処理・仕訳入力を効率化する実践ガイド</h3>
+            <p>請求書の自動読み取り、仕訳の自動入力、経費精算の自動化など、AIで経理業務を効率化する具体的な方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-sns-marketing-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-sns-marketing-automation.jpg" alt="AI×SNS集客自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.07</p>
+            <h3>AIでSNS集客を自動化！個人店・中小企業のInstagram・LINE運用術</h3>
+            <p>生成AIでSNS運用の8割を自動化。Instagram投稿文の自動生成からLINE配信の効率化まで、具体的な方法を解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-prompt-techniques-business.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-prompt-techniques-business.jpg" alt="プロンプト術ビジネス活用"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.06</p>
+            <h3>ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術</h3>
+            <p>ChatGPTやClaudeへの指示の出し方（プロンプト）を変えるだけで、AIの回答品質は劇的に変わります。今すぐ使えるプロンプト術を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-recruitment-efficiency.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-recruitment-efficiency.jpg" alt="AI採用効率化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.04</p>
+            <h3>人材採用にAIを活用！中小企業の採用業務を効率化す���実践テクニック</h3>
+            <p>求人原稿の作成からスカウトメール、面接質問設計まで。中小企業がすぐに実践できるAI×採用の効率化テクニック5選を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-meeting-minutes-automation.html">
+          <div class="blog-thumb"><img src="../images/blog-ai-meeting-minutes-automation.jpg" alt="AI議事録自動化"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.02</p>
+            <h3>AI議事録で会議の生産性を3倍に！音声認識×要約AIの実践活用ガイド</h3>
+            <p>AIの音声認識と要約機能を活用して議事録作成��自動化。おすすめツール比較、導入ステップまで徹底解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-cost-roi-for-sme.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="AI導入コストとROI"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.04.01</p>
+            <h3>AI導入コストはいくら？中小企業のリアルな費用と投資対効果</h3>
+            <p>AI導入にかかる費用を月額・初期・運用コストに分けて徹底解説。中小企業70社以上の実績データから、投資対効果（ROI）のリアルな数字を公開します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="claude-code-business-guide.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Codeとは"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.03.28</p>
+            <h3>Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命</h3>
+            <p>日本語で指示するだけでプログラムが完成。ITに詳しくない経営者でも業務自動化が実現できるClaude Codeの魅力と活用法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-adoption-mistakes.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="AI導入の失敗"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.03.25</p>
+            <h3>中小企業のAI導入で失敗しない5つのポイント</h3>
+            <p>AI導入で失敗する中小企業には共通点があります。70社以上の支援実績から、よくある失敗パターンと成功のポイントを解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card">
+        <a href="ai-tools-for-business-2026.html">
+          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="ビジネスAIツール"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.03.15</p>
+            <h3>ChatGPTだけじゃない！2026年注目のビジネス向け生成AIツール5選</h3>
+            <p>ChatGPT以外にもビジネスで使える生成AIツールは多数。2026年注目の5ツールを業務別に比較。</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div style="text-align: center;">
+      <a href="../" class="back-link">← トップページに戻る</a>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileOverlay.classList.toggle('open');
+      });
+      mobileOverlay.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+      });
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          mobileOverlay.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

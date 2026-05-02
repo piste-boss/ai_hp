@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIで在庫管理を最適化！中小企業の欠品・過剰在庫を防ぐ実践ガイド | Piste AI EVANGELISTS</title>
+  <meta name="description" content="AIによる需要予測と在庫管理で、欠品と過剰在庫をゼロに近づける実践ノウハウ。中小企業・EC・小売店向けの導入ステップ、業種別の工夫、注意点までAI導入コンサルタントが解説。">
+  <meta name="keywords" content="AI 在庫管理, 需要予測, 欠品対策, 過剰在庫, 中小企業 AI導入, EC 在庫最適化">
+  <meta property="og:title" content="AIで在庫管理を最適化！中小企業の欠品・過剰在庫を防ぐ実践ガイド">
+  <meta property="og:description" content="AIによる需要予測・自動発注で欠品と過剰在庫をゼロに近づける実践ガイド。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../images/blog-ai-inventory-management.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Reset & Base --- */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --gold-dark: #a8882e;
+      --gray: #888888;
+      --text: #333333;
+      --text-light: #666666;
+      --font-main: 'Noto Sans JP', sans-serif;
+      --font-en: 'Inter', sans-serif;
+      --transition: 0.3s ease;
+      --max-width: 800px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-main); color: var(--text); line-height: 1.8; background: var(--white); }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* --- Header --- */
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(26,26,26,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196,162,78,0.2);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+    }
+    .header-logo img { height: 36px; }
+    .header-nav { display: flex; align-items: center; gap: 28px; }
+    .header-nav a { color: #fff; font-size: 0.85rem; font-weight: 500; }
+    .header-nav a:hover { color: var(--gold); }
+    .header-cta {
+      background: var(--gold); color: var(--black) !important; padding: 8px 22px;
+      border-radius: 6px; font-weight: 700; font-size: 0.85rem;
+    }
+    .header-cta:hover { background: var(--gold-light); }
+
+    /* --- Article --- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+      padding: 140px 20px 60px; text-align: center;
+    }
+    .article-hero .label {
+      display: inline-block; background: var(--gold); color: var(--black);
+      font-size: 0.75rem; font-weight: 700; padding: 4px 16px; border-radius: 20px;
+      margin-bottom: 20px; letter-spacing: 1px;
+    }
+    .article-hero h1 {
+      color: #fff; font-size: 2rem; font-weight: 700; line-height: 1.5;
+      max-width: 700px; margin: 0 auto 16px;
+    }
+    .article-hero .meta {
+      color: var(--gray); font-size: 0.85rem;
+    }
+
+    .article-body {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+    .article-body h2 {
+      font-size: 1.5rem; font-weight: 700; color: var(--black);
+      margin: 50px 0 20px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .article-body h3 {
+      font-size: 1.15rem; font-weight: 700; color: var(--black);
+      margin: 35px 0 12px; padding-left: 14px;
+      border-left: 4px solid var(--gold);
+    }
+    .article-body p {
+      margin-bottom: 20px; line-height: 2; color: var(--text);
+    }
+    .article-body ul, .article-body ol {
+      margin: 0 0 20px 20px; line-height: 2;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: var(--black); }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, #fdf8ec, #fff9e6);
+      border-left: 4px solid var(--gold); border-radius: 8px;
+      padding: 24px 28px; margin: 30px 0;
+    }
+    .highlight-box h4 {
+      color: var(--gold-dark); font-size: 1rem; margin-bottom: 10px;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: 0.95rem; }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%; border-collapse: collapse; margin: 30px 0;
+      font-size: 0.9rem;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 14px 16px; text-align: left; border-bottom: 1px solid #eee;
+    }
+    .comparison-table th {
+      background: var(--black); color: #fff; font-weight: 600;
+    }
+    .comparison-table tr:nth-child(even) { background: #f9f9f9; }
+    .comparison-table td:first-child { font-weight: 600; }
+
+    /* TOC */
+    .toc {
+      background: #f7f7f7; border-radius: 12px; padding: 24px 28px; margin: 30px 0;
+    }
+    .toc h4 { font-size: 0.95rem; margin-bottom: 12px; color: var(--black); }
+    .toc ol { margin: 0 0 0 20px; }
+    .toc li { margin-bottom: 6px; font-size: 0.9rem; }
+    .toc a { color: var(--gold-dark); font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq-item { margin-bottom: 24px; }
+    .faq-item .q {
+      font-weight: 700; color: var(--black); margin-bottom: 6px; font-size: 1rem;
+    }
+    .faq-item .q::before {
+      content: 'Q.'; color: var(--gold); font-weight: 700; margin-right: 8px;
+    }
+    .faq-item .a { color: var(--text-light); font-size: 0.95rem; }
+    .faq-item .a::before {
+      content: 'A.'; color: var(--gold-dark); font-weight: 700; margin-right: 8px;
+    }
+
+    /* CTA Section */
+    .article-cta {
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+      border-radius: 16px; padding: 50px 30px; text-align: center;
+      margin: 50px 0;
+    }
+    .article-cta h2 {
+      color: #fff; border: none; margin: 0 0 10px; padding: 0; font-size: 1.4rem;
+    }
+    .article-cta p { color: #aaa; margin-bottom: 20px; }
+    .article-cta .price {
+      font-size: 2.5rem; font-weight: 700; color: var(--gold); margin-bottom: 5px;
+    }
+    .article-cta .price span { font-size: 0.5em; font-weight: 400; color: #aaa; }
+    .article-cta .note { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--black);
+      font-weight: 700; padding: 14px 50px; border-radius: 8px;
+      font-size: 1.05rem; transition: var(--transition);
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* Footer */
+    .footer {
+      background: var(--black); padding: 40px 20px; text-align: center;
+      color: var(--gray); font-size: 0.8rem;
+    }
+    .footer a { color: var(--gold); }
+    .footer a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-hero h1 { font-size: 1.5rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .header-nav { display: none; }
+      .article-cta .price { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <img src="../images/logo.png" alt="Piste AI EVANGELISTS">
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html#consulting">導入コンサル</a>
+        <a href="../index.html#plans">料金プラン</a>
+        <a href="../index.html#blog">ブログ</a>
+        <a href="../index.html#contact" class="header-cta">無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="article-hero">
+    <span class="label">AI在庫管理</span>
+    <h1>AIで在庫管理を最適化！<br>中小企業の欠品・過剰在庫を防ぐ<br>実践ガイド</h1>
+    <p class="meta">2026.04.12 ・ 読了目安 8分</p>
+  </section>
+
+  <!-- Article Body -->
+  <article class="article-body">
+
+    <p>「気づいたら人気商品が欠品していた」「倉庫に売れない在庫が山積みで資金が回らない」――小売店やEC事業者から最も多く寄せられる悩みです。</p>
+    <p>実は、AIを使った需要予測と在庫管理を導入すれば、<strong>欠品率を半分以下に、過剰在庫を3割以上削減</strong>することが可能です。本記事では、70社以上のAI導入を支援してきた経験から、中小企業向けのAI在庫管理の始め方を実践的に解説します。</p>
+
+    <!-- TOC -->
+    <div class="toc">
+      <h4>目次</h4>
+      <ol>
+        <li><a href="#problem">在庫管理の典型的な課題</a></li>
+        <li><a href="#automation">AIで自動化できる在庫業務</a></li>
+        <li><a href="#elements">需要予測精度を高める3つのデータ</a></li>
+        <li><a href="#steps">AI在庫管理の導入ステップ</a></li>
+        <li><a href="#industry">業種別・運用のコツ</a></li>
+        <li><a href="#caution">導入時の注意点</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#cta">導入サポートのご案内</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="problem">在庫管理の典型的な課題</h2>
+    <p>多くの中小企業・EC事業者は、在庫管理をExcelや担当者の経験と勘に頼っています。その結果、以下のような課題が発生しています。</p>
+    <ul>
+      <li>人気商品の欠品で販売機会を逃す</li>
+      <li>発注ミスで倉庫に売れない在庫が積み上がる</li>
+      <li>棚卸しに丸1日かかり通常業務が止まる</li>
+      <li>季節商品の需要予測が外れて大量の値下げ処分が発生</li>
+      <li>担当者が退職すると発注業務がブラックボックス化する</li>
+    </ul>
+    <p>在庫は「多すぎても少なすぎても損」という難しい管理対象ですが、人間の経験だけで最適化するのは限界があります。ここでAIの出番です。</p>
+
+    <!-- Section 2 -->
+    <h2 id="automation">AIで自動化できる在庫業務</h2>
+    <p>AIを使えば、以下の業務がすべて自動化できます。</p>
+
+    <table class="comparison-table">
+      <tr>
+        <th>業務内容</th>
+        <th>手作業の所要時間</th>
+        <th>AI活用後</th>
+      </tr>
+      <tr><td>需要予測</td><td>2〜3時間/週</td><td>自動（即時）</td></tr>
+      <tr><td>発注点計算</td><td>1時間/週</td><td>自動（即時）</td></tr>
+      <tr><td>発注書作成</td><td>30分/回</td><td>1分/回</td></tr>
+      <tr><td>欠品アラート</td><td>手動巡回</td><td>リアルタイム通知</td></tr>
+      <tr><td>在庫回転率分析</td><td>3時間/月</td><td>自動（即時）</td></tr>
+    </table>
+
+    <p>つまり、<strong>週10時間かかっていた在庫管理業務をほぼゼロに</strong>できます。浮いた時間を接客や商品企画に回せば、売上アップにもつながります。</p>
+
+    <!-- Section 3 -->
+    <h2 id="elements">需要予測精度を高める3つのデータ</h2>
+
+    <h3>データ1：過去の販売実績</h3>
+    <p>最低でも1年分、できれば3年分の販売データを用意しましょう。日次・商品別の販売数が揃っていれば、AIは季節変動・曜日変動・トレンドを自動で学習します。</p>
+
+    <h3>データ2：外部要因データ</h3>
+    <p>天候・気温・イベント情報・祝日カレンダーなどを組み合わせると精度が大きく向上します。例えばアイス・飲料は気温と強く相関するため、天気予報APIを連携させるだけで予測精度が一段上がります。</p>
+
+    <h3>データ3：プロモーション履歴</h3>
+    <p>値下げ・クーポン配布・広告出稿などのキャンペーン履歴もAIに学習させましょう。プロモーション時の売上ピークを正しく予測できるようになります。</p>
+
+    <!-- Section 4 -->
+    <h2 id="steps">AI在庫管理の導入ステップ</h2>
+    <p>中小企業が無理なくAI在庫管理を始めるには、<strong>小さく始めて効果を見ながら広げる</strong>のが鉄則です。</p>
+
+    <h3>ステップ1：対象商品を絞る</h3>
+    <ul>
+      <li>販売数量が多いABC分析の「A商品」から始める</li>
+      <li>全商品ではなく、売上・粗利への影響が大きい上位20％から着手</li>
+    </ul>
+
+    <h3>ステップ2：データを整える</h3>
+    <ul>
+      <li>POSレジ・ECカートの販売データをCSVで書き出す</li>
+      <li>商品マスタ・在庫マスタを1シートに統一する</li>
+    </ul>
+
+    <h3>ステップ3：予測モデルを回す</h3>
+    <ul>
+      <li>まずは生成AI（Claude・ChatGPT）に過去データを渡して予測させる</li>
+      <li>慣れてきたらGoogleスプレッドシートやBIツールと連携して自動化</li>
+    </ul>
+
+    <h3>ステップ4：発注フローに組み込む</h3>
+    <ul>
+      <li>予測結果をもとに発注案を自動生成し、担当者が承認するだけに</li>
+      <li>最終的には完全自動発注まで拡張可能</li>
+    </ul>
+
+    <!-- Section 5 -->
+    <h2 id="industry">業種別・運用のコツ</h2>
+
+    <h3>小売店・スーパー向け</h3>
+    <p>気温・天気・地域イベントの影響が大きい業態。日次予測と<strong>週次の棚割り最適化</strong>を組み合わせるのが効果的です。</p>
+
+    <h3>EC事業者向け</h3>
+    <p>広告出稿やセール企画の影響を強く受けます。<strong>広告費とセールカレンダーを予測モデルに入れる</strong>ことで精度が跳ね上がります。</p>
+
+    <h3>飲食店・厨房向け</h3>
+    <p>食材ロスが最大の課題。来店予約数・天候・曜日から食材発注量をAIが自動算出するだけで、<strong>食材ロスを3〜5割削減</strong>した事例もあります。</p>
+
+    <h3>製造業向け</h3>
+    <p>部材の調達リードタイムが長い業態では、早期の需要予測が命綱。<strong>受注見込みデータ</strong>とAI予測を組み合わせ、安全在庫を動的に最適化します。</p>
+
+    <!-- Section 6 -->
+    <h2 id="caution">導入時の注意点</h2>
+
+    <h3>データの質が結果を決める</h3>
+    <p>AIは万能ではありません。元となる販売データに欠損・誤りが多いと、予測精度は大きく下がります。まずは<strong>データ整備</strong>から着手しましょう。</p>
+
+    <h3>いきなり全自動にしない</h3>
+    <p>最初は「AIが予測→人が発注承認」のハイブリッド運用がおすすめです。3〜6ヶ月ほど結果を見ながら調整し、信頼できる領域から自動化を広げていきます。</p>
+
+    <h3>例外商品は別管理</h3>
+    <p>新商品・限定商品・季節限定品など、過去データが少ない商品はAI予測が苦手です。こうした商品は別ルールで管理し、AIと人の役割を明確に分けましょう。</p>
+
+    <h3>在庫KPIを決めておく</h3>
+    <p>「欠品率」「在庫回転率」「過剰在庫金額」など、改善したいKPIを最初に決めておくこと。<strong>効果測定の軸がなければ導入は失敗</strong>します。</p>
+
+    <!-- Section 7 -->
+    <h2 id="faq">よくある質問</h2>
+
+    <div class="faq-item">
+      <p class="q">どのくらいのデータがあれば始められますか？</p>
+      <p class="a">最低1年分の日次販売データがあれば予測可能です。データが少ない場合でも、近しい業種のベンチマークを組み合わせれば始められます。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">高価な在庫管理システムは必要ですか？</p>
+      <p class="a">不要です。まずはGoogleスプレッドシートと生成AIの組み合わせで十分に成果が出ます。効果を見ながら段階的にシステム化すればOKです。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">小規模店舗でも効果はありますか？</p>
+      <p class="a">あります。むしろ担当者が少ない小規模店舗ほど、AIによる自動化の恩恵は大きくなります。発注時間の短縮だけでも大きな価値です。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">費用はどれくらいかかりますか？</p>
+      <p class="a">月額2,000〜5,000円程度のAIサブスクリプションから始められます。本格的なBI連携を組んでも、初期費用は10万円以下で済むケースがほとんどです。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="article-cta" id="cta">
+      <span style="display:inline-block; background:#e74c3c; color:#fff; font-size:0.8rem; font-weight:700; padding:4px 18px; border-radius:20px; margin-bottom:16px;">期間限定</span>
+      <h2>AI在庫管理 導入サポート</h2>
+      <p>あなたの事業に合ったAI在庫最適化プランをご提案します。<br>データ整備から発注自動化まで、マンツーマンでサポート。</p>
+      <p class="price">&yen;3,000<span>（税込 / 1時間）</span></p>
+      <p class="note">オンライン（Zoom）で実施</p>
+      <a href="../index.html#contact" class="btn-primary">今すぐ申し込む</a>
+    </div>
+
+    <p style="text-align: center; color: var(--text-light); margin-top: 40px;">
+      AIの導入でお悩みの方は、<a href="../index.html#contact" style="color: var(--gold); font-weight: 600;">無料相談</a>からお気軽にお問い合わせください。<br>
+      70社以上のAI導入実績をもとに、あなたのビジネスに最適なご提案をいたします。
+    </p>
+
+  </article>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="../index.html">← トップページに戻る</a></p>
+    <p style="margin-top: 16px;">&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

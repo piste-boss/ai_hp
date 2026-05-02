@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 | Piste AI EVANGELISTS</title>
+  <meta name="description" content="Piste AI EVANGELISTSの利用規約ページです。">
+  <link rel="canonical" href="https://www.piste-ai.com/terms.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --text: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196, 162, 78, 0.2);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo img { height: 36px; }
+
+    .header-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85em;
+      margin-left: 28px;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover { color: var(--gold); }
+
+    .header-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 24px !important;
+      border-radius: 4px;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 1px;
+    }
+
+    .header-cta:hover { background: #a8882e !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.3s;
+    }
+
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 90;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0; right: -280px;
+      width: 280px; height: 100%;
+      background: var(--dark);
+      z-index: 95;
+      padding: 80px 30px 30px;
+      transition: right 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-nav.open { right: 0; }
+
+    .mobile-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    .page-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    .policy-section {
+      margin-bottom: 40px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(196, 162, 78, 0.2);
+    }
+
+    .policy-section p {
+      font-size: 0.9em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .policy-section ul li {
+      font-size: 0.9em;
+      color: var(--text);
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    .policy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(196, 162, 78, 0.2);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-nav { display: none; }
+      .page-hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="./" class="header-logo">
+        <img src="images/logo.png" alt="Piste AI EVANGELISTS">
+      </a>
+      <nav class="header-nav">
+        <a href="./#consulting">導入コンサル</a>
+        <a href="./#flow">ご利用の流れ</a>
+        <a href="./#plans">料金プラン</a>
+        <a href="blog/">ブログ</a>
+        <a href="./#profile">プロフィール</a>
+        <a href="./#contact" class="header-cta">無料相談</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav">
+    <a href="./#consulting">導入コンサル</a>
+    <a href="./#flow">ご利用の流れ</a>
+    <a href="./#plans">料金プラン</a>
+    <a href="blog/">ブログ</a>
+    <a href="./#profile">プロフィール</a>
+    <a href="./#contact">無料相談</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-title">Terms of Service</p>
+      <h1>利用規約</h1>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <p style="font-size: 0.9em; color: #aaa; margin-bottom: 50px;">この利用規約（以下「本規約」）は、Piste AI EVANGELISTS（以下「当社」）が提供するAI導入コンサルティングサービス（以下「本サービス」）の利用条件を定めるものです。ユーザーの皆さまには、本規約に同意いただいたうえで本サービスをご利用いただきます。</p>
+
+    <div class="policy-section">
+      <h2>第1条（適用）</h2>
+      <p>本規約は、ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されるものとします。</p>
+      <p>当社が本サービスに関して別途定める個別規定やガイドラインは、本規約の一部を構成するものとします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第2条（サービスの内容）</h2>
+      <p>本サービスは、以下の内容を含むAI導入支援サービスです。</p>
+      <ul>
+        <li>マンツーマンのAI導入コンサルティング（Zoomによるオンライン相談）</li>
+        <li>AIツール（Claude Code、ChatGPT等）の導入・設定支援</li>
+        <li>LINEによるサポート</li>
+        <li>AI活用に関する動画教材の販売</li>
+        <li>その他、当社が提供するAI関連サービス</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>第3条（利用料金・お支払い）</h2>
+      <p>ユーザーは、当社が定める利用料金を、所定の決済方法（クレジットカード決済等）により支払うものとします。</p>
+      <p>月額プランは、ユーザーから解約の申し出がない限り、毎月自動的に更新されるものとし、毎月同日にクレジットカードへの自動決済が行われます。自動更新を停止するには、次回決済日の前日までに解約手続きが必要です。</p>
+      <p>決済完了後の返金は原則としてお受けできません。日割り返金は行っておりません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第4条（禁止事項）</h2>
+      <p>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に違反する行為</li>
+        <li>犯罪行為に関連する行為</li>
+        <li>当社のサービス運営を妨害する行為</li>
+        <li>他のユーザーまたは第三者に不利益・損害を与える行為</li>
+        <li>当社が提供するコンテンツ（動画教材等）を無断で複製・転載・再配布する行為</li>
+        <li>不正アクセスまたはこれを試みる行為</li>
+        <li>その他、当社が不適切と判断する行為</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>第5条（本サービスの提供の停止等）</h2>
+      <p>当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
+      <ul>
+        <li>本サービスにかかるシステムの保守点検または更新を行う場合</li>
+        <li>地震、落雷、火災、停電その他の不可抗力により本サービスの提供が困難となった場合</li>
+        <li>その他、当社が本サービスの提供が困難と判断した場合</li>
+      </ul>
+      <p>当社は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第6条（免責事項）</h2>
+      <p>当社は、本サービスを通じて提供するAI関連のアドバイス・情報・成果物について、その正確性、完全性、有用性を保証するものではありません。</p>
+      <p>AI ツール（Claude、ChatGPT等）の利用に起因する損害について、当社は一切の責任を負わないものとします。</p>
+      <p>当社は、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等について一切責任を負いません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第7条（退会・利用停止）</h2>
+      <p>ユーザーは、当社所定の方法により、いつでも本サービスを退会し、利用を停止することができます。</p>
+      <p>月額プランの解約を希望する場合は、次回決済日の前日までにメール（info@piste-i.com）またはLINEにてお申し出ください。解約手続き完了後、次回以降の自動決済は停止されます。なお、既に決済済みの期間分の日割り返金は行いません。</p>
+      <p>当社は、ユーザーが以下のいずれかに該当する場合、事前の通知なくサービスの利用を停止または退会処理を行うことができるものとします。</p>
+      <ul>
+        <li>本規約のいずれかの条項に違反した場合</li>
+        <li>登録事項に虚偽の事実があることが判明した場合</li>
+        <li>料金等の支払いを遅滞し、または支払いを拒否した場合</li>
+        <li>その他、当社が本サービスの利用を適当でないと判断した場合</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2>第8条（サービス内容の変更等）</h2>
+      <p>当社は、ユーザーに通知することなく、本サービスの内容を変更し、または本サービスの提供を中止することができるものとし、これによってユーザーに生じた損害について一切の責任を負いません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第9条（利用規約の変更）</h2>
+      <p>当社は、必要と判断した場合には、ユーザーに通知することなくいつでも本規約を変更することができるものとします。変更後の利用規約は、本ページに掲載したときから効力を生じるものとします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第10条（個人情報の取り扱い）</h2>
+      <p>当社は、本サービスの利用によって取得する個人情報については、当社「<a href="privacy.html" style="color: var(--gold);">プライバシーポリシー</a>」に従い適切に取り扱うものとします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>第11条（準拠法・裁判管轄）</h2>
+      <p>本規約の解釈にあたっては、日本法を準拠法とします。</p>
+      <p>本サービスに関して紛争が生じた場合には、名古屋地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+    </div>
+
+    <p style="font-size: 0.85em; color: #666; margin-top: 40px;">制定日: 2026年3月31日</p>
+
+    <div style="text-align: center;">
+      <a href="./" class="back-link">← トップページに戻る</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileOverlay.classList.toggle('open');
+      });
+      mobileOverlay.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+      });
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          mobileOverlay.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>

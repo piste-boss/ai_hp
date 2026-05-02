@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude CodeのWeb検索機能で市場調査・競合分析を自動化！中小企業のリサーチ業務効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeのWebSearch・WebFetch機能で、競合価格モニタリング・市場調査・トレンドリサーチを自動化する方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,WebSearch,WebFetch,市場調査,競合分析,中小企業,リサーチ自動化,AI活用">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude CodeのWeb検索機能で市場調査・競合分析を自動化！中小企業のリサーチ業務効率化ガイド</h1>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-websearch-research-automation.jpg" alt="Claude CodeのWeb検索機能で市場調査・競合分析を自動化" style="width: 100%; height: auto; display: block;">
+</div>
+<p><strong>2026.04.29 ・ 読了目安 8分</strong></p>
+
+<p>「競合店の価格を毎週チェックしているが、半日つぶれる」「市場トレンドを追いたいが、検索とまとめに時間がかかる」「業界ニュースのリサーチ担当が固定化していて属人化している」——中小企業がリサーチ業務でぶつかる壁は、結局「Web検索」「ページ閲覧」「要約・転記」の3工程を人間が手作業で繰り返している点に集約されます。</p>
+<p>この煩雑なリサーチ業務を一気に自動化できるのが、Claude Codeに標準搭載された<strong>WebSearch（ウェブ検索）</strong>と<strong>WebFetch（ウェブページ取得）</strong>の2つの機能です。Claude CodeはAIに「検索キーワード」を渡すだけでGoogle相当の検索を実行し、ヒットしたページの本文を構造化して取り込み、必要な情報を抜き出して要約・比較表・レポート化までワンストップで処理します。</p>
+<p>この記事では、Claude CodeのWeb検索機能で実現できるリサーチ自動化の全体像と、中小企業で効果が出る活用5選、非エンジニアでも取り入れられる導入4ステップを解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>WebSearch・WebFetchとは何か（リサーチ業務の自動化基盤）</li>
+<li>従来のリサーチとClaude Codeで何が変わるのか</li>
+<li>中小企業向け活用5選（価格・競合・トレンド・採用・補助金）</li>
+<li>業種別の活用シーン</li>
+<li>非エンジニアでも始められる導入4ステップ</li>
+<li>導入時に押さえておきたい注意点</li>
+<li>まとめ：リサーチ業務をAIに常駐させる時代へ</li>
+</ol>
+
+<h2>WebSearch・WebFetchとは何か（リサーチ業務の自動化基盤）</h2>
+<p>Claude CodeのWebSearchは「キーワードを渡すと最新のWeb検索結果を返す」機能、WebFetchは「URLを渡すとそのページ本文を取得して要約・解析する」機能です。両者は組み合わせて使うことで、「検索 → 該当ページ閲覧 → 情報抽出 → 比較表化 → レポート化」というリサーチ業務の一連の流れをAIに丸ごと任せられます。</p>
+<p>従来のChatGPT等の単発的な「ブラウジング」と異なるのは、Claude Codeでは指示書（CLAUDE.md・スラッシュコマンド・スキル）と組み合わせて<strong>定型リサーチを毎日同じフォーマットで自動実行</strong>できる点です。「毎週月曜の朝に競合5社の価格を取得し、変動があればSlackに通知する」といった常駐リサーチ業務が現実的になります。</p>
+
+<h2>従来のリサーチとClaude Codeで何が変わるのか</h2>
+<table>
+<tr><th>工程</th><th>従来の手作業</th><th>Claude Code活用後</th></tr>
+<tr><td>検索キーワード入力</td><td>担当者が毎回入力</td><td>スキル化して1コマンドで実行</td></tr>
+<tr><td>ページ閲覧</td><td>1ページずつ手で開く</td><td>WebFetchで一括取得</td></tr>
+<tr><td>情報抽出</td><td>コピー＆ペースト</td><td>AIが指定項目を抽出</td></tr>
+<tr><td>比較表作成</td><td>Excelで手作業</td><td>マークダウン表で自動生成</td></tr>
+<tr><td>レポート化</td><td>担当者が文章化</td><td>テンプレートで自動文章化</td></tr>
+<tr><td>定例化</td><td>毎回ゼロから</td><td>cron・スケジュール機能で常駐化</td></tr>
+</table>
+<p>結果として、これまで半日かかっていた週次リサーチを15分程度に圧縮できるケースが多く、属人化していた業務が「再現可能な手順書（スキル）」として組織の資産になります。</p>
+
+<h2>中小企業向け活用5選</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-websearch-research-automation-01.jpg" alt="中小企業向け活用5選" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h3>1. 競合価格モニタリング</h3>
+<p>競合店・通販サイトの主力商品の価格・在庫・キャンペーン情報を毎週自動取得し、前週との差分をレポート化。値下げ・新商品投入を即日把握できる。</p>
+
+<h3>2. 業界ニュース・市場トレンド収集</h3>
+<p>「自社業界の主要キーワード」を登録しておくと、毎朝最新ニュースを検索・要約し、注目記事のリンクと300文字要約をまとめた日次ブリーフィングを自動作成。</p>
+
+<h3>3. 補助金・助成金の最新公募チェック</h3>
+<p>事業再構築補助金・IT導入補助金・自治体助成金などの公募情報を週次で検索し、自社が要件を満たすものを抽出。締切1ヶ月前に再リマインドを設定可能。</p>
+
+<h3>4. 採用市場・求人相場のリサーチ</h3>
+<p>「自社が募集している職種」の他社求人情報を週次で取得し、給与レンジ・必須スキル・歓迎要件を比較表化。求人票の競争力チェックを自動化。</p>
+
+<h3>5. 顧客企業のIRリサーチ・与信チェック補助</h3>
+<p>BtoB取引先の最新ニュース・プレスリリース・公開財務情報を取得し、契約更新前のレビュー資料を自動作成。リスク兆候があれば営業担当にアラート。</p>
+
+<h2>業種別の活用シーン</h2>
+
+<h3>小売・EC</h3>
+<p>競合EC3〜5社の主力SKU価格・送料条件を週次取得し、自社価格との差分を可視化。値付け会議の資料作成時間を90%削減。</p>
+
+<h3>飲食・サービス業</h3>
+<p>商圏内の競合店のメニュー・営業時間・口コミ評価をGoogleマップ＋自社サイトから定点観測し、リニューアルや値上げのタイミングを把握。</p>
+
+<h3>製造業</h3>
+<p>原材料市況・為替・物流コストの最新動向を毎朝レポート化。仕入れ価格交渉や見積根拠資料に直接活用できる。</p>
+
+<h3>士業・コンサル業</h3>
+<p>法改正情報・行政パブリックコメント・判例ニュースを週次取得し、顧問先向けニュースレターのドラフトを自動生成。</p>
+
+<h3>不動産・建設</h3>
+<p>商圏の物件相場・公示地価・建築単価ニュースをスケジュール検索し、提案書の最新データを常に最新化。</p>
+
+<h2>非エンジニアでも始められる導入4ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-websearch-research-automation-02.jpg" alt="非エンジニアでも始められる導入4ステップ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h3>Step 1: リサーチ業務の棚卸し</h3>
+<p>「自分が毎週繰り返しているWeb検索業務」を1週間記録する。検索キーワード・確認するサイト・抽出する項目・最終アウトプット（Excel/メール/口頭）を1表にまとめる。</p>
+
+<h3>Step 2: 1テーマだけスキル化する</h3>
+<p>最も時間がかかっているリサーチを1つだけ選び、Claude Codeに「このキーワードで検索して、ヒット上位5件を要約して、CSVで出力してほしい」と日本語で指示する。出力結果が想定と一致したら、その指示を「スラッシュコマンド」として保存する。</p>
+
+<h3>Step 3: 出力フォーマットを固定する</h3>
+<p>レポートのテンプレート（タイトル・概要・出典URL・差分・所感の5項目など）を決めて、CLAUDE.mdに記載する。これでAIの出力ぶれが解消され、毎回同じフォーマットでレポートが上がる。</p>
+
+<h3>Step 4: スケジュール実行で常駐化する</h3>
+<p>Claude Codeの<code>/loop</code>やスケジュール機能を使い、「毎週月曜9時にこのリサーチを自動実行する」と指定。Slackやメール通知と連携すれば、出社前にリサーチ完了レポートが届く状態を作れる。</p>
+
+<h2>導入時に押さえておきたい注意点</h2>
+<ul>
+<li><strong>ロボット制御（robots.txt）</strong>：取得対象サイトのクローリング規約を確認する。WebFetchは公開情報のみ対象で、ログインが必要な領域は対象外。</li>
+<li><strong>引用元の明記</strong>：要約結果は必ず出典URLを併記し、社内資料にも残す。</li>
+<li><strong>機密案件は別運用</strong>：未公開の競合情報・与信情報は人間レビューを必須にする。</li>
+<li><strong>更新頻度の見直し</strong>：毎日取得が必要か、週次で十分か業務単位で設計する。</li>
+</ul>
+
+<h2>よくある質問（FAQ）</h2>
+
+<h3>Q. プログラミングの知識がなくても使えますか？</h3>
+<p>A. 使えます。Claude Codeは日本語の指示文だけでWebSearch・WebFetchを呼び出せるため、エンジニア不在の企業でも自走可能です。最初の設定だけ伴走支援を受ければ、運用は社内で完結できます。</p>
+
+<h3>Q. ChatGPTのブラウジング機能と何が違いますか？</h3>
+<p>A. 大きな違いは「常駐性・再現性・連携性」です。ChatGPTは1回の対話で完結しがちですが、Claude Codeはスキル・スラッシュコマンド・スケジュール機能と組み合わせて<strong>毎週同じ手順で自動実行</strong>できます。さらに取得結果をローカルの業務ファイルやMCP連携先（Notion・Slack・Gmail等）に直接書き込めます。</p>
+
+<h3>Q. 取得したデータは社外に漏れませんか？</h3>
+<p>A. Claude Codeは原則ローカルで動作し、取得結果も手元のフォルダに保存されます。クラウド共有が必要な範囲だけMCP連携で送るため、機密情報の管理範囲を自社で制御できます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000〜）</h2>
+<p>「リサーチ業務に毎週何時間も奪われている」「市場調査が属人化している」とお悩みの中小企業様向けに、Claude CodeのWeb検索機能を活用した<strong>リサーチ自動化スキルの初期構築サポート</strong>を提供しています。<br>競合モニタリング・補助金チェック・業界ニュース収集の3点セットを最短1日で構築可能です。</p>
+<a href="../index.html#contact">無料相談はこちら</a>
+</div>
+
+<p>これまで200社超の中小企業のAI導入を支援してきた実績をもとに、御社のリサーチ業務に最適なスキルとフォーマットをご提案します。Claude Codeを「常駐リサーチアシスタント」として組織に定着させ、本来注力すべき意思決定と顧客対応に時間を取り戻していきましょう。</p>
+</main>
+</body>
+</html>

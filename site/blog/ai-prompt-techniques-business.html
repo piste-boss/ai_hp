@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術 | Piste AI EVANGELISTS</title>
+  <meta name="description" content="ChatGPTやClaudeへの指示の出し方（プロンプト）を変えるだけで、AIの回答品質は劇的に変わります。中小企業の経営者・ビジネスパーソン向けに、今すぐ使えるプロンプト術を解説。">
+  <link rel="canonical" href="https://www.piste-ai.com/blog/ai-prompt-techniques-business.html">
+  <meta name="keywords" content="プロンプト, ChatGPT, Claude, AI活用, ビジネス, 中小企業, 指示の出し方, プロンプトエンジニアリング">
+  <meta property="og:title" content="ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術">
+  <meta property="og:description" content="AIへの指示の出し方を変えるだけで回答品質が激変。ビジネスで使えるプロンプト術を具体例付きで解説。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/ai-prompt-techniques-business.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-ai-prompt-techniques-business.jpg">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --gold-dark: #a8882e;
+      --gray: #888888;
+      --text: #333333;
+      --text-light: #666666;
+      --font-main: 'Noto Sans JP', sans-serif;
+      --font-en: 'Inter', sans-serif;
+      --transition: 0.3s ease;
+      --max-width: 800px;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font-main); color: var(--text); line-height: 1.8; background: var(--white); }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .header {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      background: rgba(26,26,26,0.95); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196,162,78,0.2);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 20px;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+    }
+    .header-logo img { height: 36px; }
+    .header-nav { display: flex; align-items: center; gap: 28px; }
+    .header-nav a { color: #fff; font-size: 0.85rem; font-weight: 500; }
+    .header-nav a:hover { color: var(--gold); }
+    .header-cta {
+      background: var(--gold); color: var(--black) !important; padding: 8px 22px;
+      border-radius: 6px; font-weight: 700; font-size: 0.85rem;
+    }
+    .header-cta:hover { background: var(--gold-light); }
+
+    .article-hero {
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+      padding: 140px 20px 60px; text-align: center;
+    }
+    .article-hero .label {
+      display: inline-block; background: var(--gold); color: var(--black);
+      font-size: 0.75rem; font-weight: 700; padding: 4px 16px; border-radius: 20px;
+      margin-bottom: 20px; letter-spacing: 1px;
+    }
+    .article-hero h1 {
+      color: #fff; font-size: 2rem; font-weight: 700; line-height: 1.5;
+      max-width: 700px; margin: 0 auto 16px;
+    }
+    .article-hero .meta { color: var(--gray); font-size: 0.85rem; }
+
+    .article-body {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 60px 20px 80px;
+    }
+    .article-body h2 {
+      font-size: 1.5rem; font-weight: 700; color: var(--black);
+      margin: 50px 0 20px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .article-body h3 {
+      font-size: 1.15rem; font-weight: 700; color: var(--black);
+      margin: 35px 0 12px; padding-left: 14px;
+      border-left: 4px solid var(--gold);
+    }
+    .article-body p {
+      margin-bottom: 20px; line-height: 2; color: var(--text);
+    }
+    .article-body ul, .article-body ol {
+      margin: 0 0 20px 20px; line-height: 2;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: var(--black); }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #fdf8ec, #fff9e6);
+      border-left: 4px solid var(--gold); border-radius: 8px;
+      padding: 24px 28px; margin: 30px 0;
+    }
+    .highlight-box h4 {
+      color: var(--gold-dark); font-size: 1rem; margin-bottom: 10px;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: 0.95rem; }
+
+    .failure-box {
+      background: linear-gradient(135deg, #fef2f2, #fff5f5);
+      border-left: 4px solid #e74c3c; border-radius: 8px;
+      padding: 24px 28px; margin: 30px 0;
+    }
+    .failure-box h4 {
+      color: #c0392b; font-size: 1rem; margin-bottom: 10px;
+    }
+    .failure-box p { margin-bottom: 0; font-size: 0.95rem; }
+
+    .prompt-example {
+      background: #1e1e1e; border-radius: 10px; padding: 24px 28px; margin: 24px 0;
+      color: #e0e0e0; font-size: 0.9rem; line-height: 1.9;
+      border: 1px solid #333;
+    }
+    .prompt-example .label-bad {
+      display: inline-block; background: #e74c3c; color: #fff; font-size: 0.75rem;
+      font-weight: 700; padding: 2px 12px; border-radius: 4px; margin-bottom: 12px;
+    }
+    .prompt-example .label-good {
+      display: inline-block; background: #27ae60; color: #fff; font-size: 0.75rem;
+      font-weight: 700; padding: 2px 12px; border-radius: 4px; margin-bottom: 12px;
+    }
+
+    .comparison-table {
+      width: 100%; border-collapse: collapse; margin: 30px 0; font-size: 0.9rem;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 14px 16px; text-align: left; border-bottom: 1px solid #eee;
+    }
+    .comparison-table th {
+      background: var(--black); color: #fff; font-weight: 600;
+    }
+    .comparison-table tr:nth-child(even) { background: #f9f9f9; }
+    .comparison-table td:first-child { font-weight: 600; }
+
+    .article-cta {
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+      border-radius: 16px; padding: 50px 30px; text-align: center;
+      margin: 50px 0;
+    }
+    .article-cta h2 {
+      color: #fff; border: none; margin: 0 0 10px; padding: 0; font-size: 1.4rem;
+    }
+    .article-cta p { color: #aaa; margin-bottom: 20px; }
+    .article-cta .price {
+      font-size: 2.5rem; font-weight: 700; color: var(--gold); margin-bottom: 5px;
+    }
+    .article-cta .price span { font-size: 0.5em; font-weight: 400; color: #aaa; }
+    .article-cta .note { font-size: 0.85rem; color: #aaa; margin-bottom: 25px; }
+    .btn-primary {
+      display: inline-block; background: var(--gold); color: var(--black);
+      font-weight: 700; padding: 14px 50px; border-radius: 8px;
+      font-size: 1.05rem; transition: var(--transition);
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .toc {
+      background: #f7f7f7; border-radius: 12px; padding: 24px 28px; margin: 30px 0;
+    }
+    .toc h4 { font-size: 0.95rem; margin-bottom: 12px; color: var(--black); }
+    .toc ol { margin: 0 0 0 20px; }
+    .toc li { margin-bottom: 6px; font-size: 0.9rem; }
+    .toc a { color: var(--gold-dark); font-weight: 500; }
+    .toc a:hover { text-decoration: underline; }
+
+    .faq-item { margin-bottom: 24px; }
+    .faq-item .q {
+      font-weight: 700; color: var(--black); margin-bottom: 6px; font-size: 1rem;
+    }
+    .faq-item .q::before {
+      content: 'Q.'; color: var(--gold); font-weight: 700; margin-right: 8px;
+    }
+    .faq-item .a { color: var(--text-light); font-size: 0.95rem; }
+    .faq-item .a::before {
+      content: 'A.'; color: var(--gold-dark); font-weight: 700; margin-right: 8px;
+    }
+
+    .footer {
+      background: var(--black); padding: 40px 20px; text-align: center;
+      color: var(--gray); font-size: 0.8rem;
+    }
+    .footer a { color: var(--gold); }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .article-hero h1 { font-size: 1.5rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .header-nav { display: none; }
+      .article-cta .price { font-size: 2rem; }
+    }
+  </style>
+  <!-- Article 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術",
+    "description": "ChatGPTやClaudeへの指示の出し方（プロンプト）を変えるだけで、AIの回答品質は劇的に変わります。中小企業の経営者・ビジネスパーソン向けに、今すぐ使えるプロンプト術を解説。",
+    "author": {
+      "@type": "Person",
+      "name": "石川 卓",
+      "jobTitle": "AIコンサルタント"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Piste AI EVANGELISTS",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.piste-ai.com/images/logo.png"
+      }
+    },
+    "datePublished": "2026-04-06",
+    "dateModified": "2026-04-06",
+    "image": "https://www.piste-ai.com/images/blog-ai-prompt-techniques-business.jpg",
+    "mainEntityOfPage": "https://www.piste-ai.com/blog/ai-prompt-techniques-business.html"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <img src="../images/logo.png" alt="Piste AI EVANGELISTS" loading="lazy">
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html#consulting">導入コンサル</a>
+        <a href="../index.html#plans">料金プラン</a>
+        <a href="../index.html#blog">ブログ</a>
+        <a href="../index.html#contact" class="header-cta">無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="article-hero">
+    <span class="label">AI活用テクニック</span>
+    <h1>ChatGPTへの指示の出し方で<br>成果が10倍変わる！<br>ビジネスで使えるプロンプト術</h1>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <picture><source srcset="../images/blog-ai-prompt-techniques-business.webp" type="image/webp"><img src="../images/blog-ai-prompt-techniques-business.jpg" alt="ChatGPTプロンプト術 ビジネス活用" style="width: 100%; height: auto; display: block;" loading="lazy"></picture>
+</div>
+    <p class="meta">2026.04.06 ・ 読了目安 10分</p>
+  </section>
+
+  <article class="article-body">
+
+    <p>「ChatGPTを使ってみたけど、なんかイマイチな回答しか返ってこない」——そんな経験はありませんか？</p>
+    <p>実は、AIの回答品質を決めるのは<strong>AIの性能ではなく、あなたの「指示の出し方」</strong>です。この指示のことを「プロンプト」と呼びます。プロンプトを少し工夫するだけで、AIの回答は驚くほど変わります。</p>
+    <p>本記事では、プログラミング知識ゼロの方でも今すぐ実践できる<strong>ビジネス向けプロンプト術</strong>を、具体例付きで解説します。</p>
+
+    <div class="toc">
+      <h4>目次</h4>
+      <ol>
+        <li><a href="#p1">なぜ「指示の出し方」で結果が変わるのか</a></li>
+        <li><a href="#p2">ダメなプロンプトの3つの共通点</a></li>
+        <li><a href="#p3">成果が出るプロンプトの5つの型</a></li>
+        <li><a href="#p4">業務別プロンプト実例集</a></li>
+        <li><a href="#p5">プロンプトの「育て方」</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#cta">AI活用サポートのご案内</a></li>
+      </ol>
+    </div>
+
+    <h2 id="p1">1. なぜ「指示の出し方」で結果が変わるのか</h2>
+
+    <p>AIに指示を出す場面を、<strong>新入社員に仕事を依頼する場面</strong>に置き換えてみてください。</p>
+    <p>「いい感じの資料作っておいて」と言われた新入社員は困りますよね。何についての資料なのか、誰向けなのか、いつまでに必要なのか——情報が足りないと、的外れなアウトプットが出てきます。</p>
+    <p>AIもまったく同じです。<strong>曖昧な指示には曖昧な回答</strong>が返ってきます。逆に、具体的で明確な指示を出せば、プロ並みのアウトプットを出してくれます。</p>
+
+    <div class="highlight-box">
+      <h4>ポイント</h4>
+      <p>AIへの指示は「優秀だけど社内事情を知らない外部コンサルタントへの依頼」と考えましょう。前提情報・目的・期待する成果物を明確に伝えることが、良い回答を引き出すコツです。</p>
+    </div>
+
+    <h2 id="p2">2. ダメなプロンプトの3つの共通点</h2>
+
+    <p>多くの人がやりがちな「成果の出ないプロンプト」には、共通点があります。</p>
+
+    <h3>共通点1：抽象的すぎる</h3>
+
+    <div class="prompt-example">
+      <span class="label-bad">NG例</span><br>
+      「売上を上げる方法を教えて」
+    </div>
+
+    <p>これでは、AIは一般的なビジネス書に書いてあるような回答しか返せません。<strong>業種・規模・現在の課題・ターゲット</strong>がわからなければ、具体的なアドバイスは不可能です。</p>
+
+    <h3>共通点2：一度に複数のことを聞く</h3>
+
+    <div class="prompt-example">
+      <span class="label-bad">NG例</span><br>
+      「うちの会社のマーケティング戦略と採用計画と来期の予算案を考えて」
+    </div>
+
+    <p>人間でも一度に3つの異なるテーマを依頼されたら困りますよね。AIも同じで、<strong>1つのプロンプトでは1つのテーマに絞る</strong>のが鉄則です。</p>
+
+    <h3>共通点3：出力形式を指定しない</h3>
+
+    <div class="prompt-example">
+      <span class="label-bad">NG例</span><br>
+      「新商品のアイデアを出して」
+    </div>
+
+    <p>「箇条書きで5つ」「表形式で比較」「企画書のフォーマットで」——<strong>どんな形で出力してほしいか</strong>を指定するだけで、AIの回答は格段に使いやすくなります。</p>
+
+    <h2 id="p3">3. 成果が出るプロンプトの5つの型</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <picture><source srcset="../images/blog-ai-prompt-techniques-business-01.webp" type="image/webp"><img src="../images/blog-ai-prompt-techniques-business-01.jpg" alt="成果が出るプロンプトの5つの型" style="width: 100%; height: auto; display: block;" loading="lazy"></picture>
+</div>
+
+    <p>実際のビジネスで効果が出ているプロンプトには、共通する「型」があります。この型を覚えるだけで、AI活用の成果は劇的に変わります。</p>
+
+    <h3>型1：役割を与える</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">Good例</span><br>
+      「あなたは中小企業の経営コンサルタントです。従業員10名の製造業の社長に向けて、コスト削減の提案を3つしてください。」
+    </div>
+
+    <p>AIに<strong>「あなたは〇〇の専門家です」</strong>と役割を与えることで、その分野に特化した回答が得られます。「マーケター」「税理士」「コピーライター」など、目的に応じた役割を設定しましょう。</p>
+
+    <h3>型2：背景情報を伝える</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">Good例</span><br>
+      「当社は愛知県の従業員5名の工務店です。30〜40代のファミリー層がターゲットで、注文住宅を年間10棟受注しています。来月の完成見学会の集客チラシのキャッチコピーを5案作ってください。」
+    </div>
+
+    <p><strong>業種・規模・ターゲット・現状</strong>などの背景情報を具体的に伝えると、自社の状況にぴったり合った回答が返ってきます。</p>
+
+    <h3>型3：制約条件を設ける</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">Good例</span><br>
+      「以下の条件でブログ記事を書いてください。<br>
+      ・文字数：2000文字程度<br>
+      ・ターゲット：AIに興味はあるが未導入の中小企業経営者<br>
+      ・トーン：専門用語を避け、わかりやすく<br>
+      ・構成：導入→課題→解決策→事例→まとめ」
+    </div>
+
+    <p>文字数・ターゲット・トーン・構成を指定することで、<strong>手直し不要な完成度の高いアウトプット</strong>が得られます。</p>
+
+    <h3>型4：良い例・悪い例を示す</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">Good例</span><br>
+      「お客様への謝罪メールを書いてください。<br><br>
+      【良い例のトーン】<br>
+      「このたびはご不便をおかけし、誠に申し訳ございません。原因を調査の上、再発防止に努めてまいります。」<br><br>
+      【避けたいトーン】<br>
+      「すみません、ミスでした。今後気をつけます。」」
+    </div>
+
+    <p>求める品質のサンプルを見せることで、AIは<strong>文体・レベル感を正確に理解</strong>し、期待通りのアウトプットを出してくれます。</p>
+
+    <h3>型5：ステップバイステップで考えさせる</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">Good例</span><br>
+      「新規事業のアイデアを考えたいです。以下のステップで進めてください。<br>
+      Step 1: 当社の強み（製造技術、地域ネットワーク）を活かせる市場を3つ挙げる<br>
+      Step 2: 各市場の規模と成長性を分析<br>
+      Step 3: 最も有望な市場で具体的な事業案を提示」
+    </div>
+
+    <p>複雑な思考が必要なテーマでは、<strong>思考のステップを分解して指示</strong>することで、論理的で質の高い回答が得られます。</p>
+
+    <table class="comparison-table">
+      <tr>
+        <th>プロンプトの型</th>
+        <th>使いどころ</th>
+        <th>効果</th>
+      </tr>
+      <tr>
+        <td>役割を与える</td>
+        <td>専門的な回答がほしいとき</td>
+        <td>回答の専門性アップ</td>
+      </tr>
+      <tr>
+        <td>背景情報を伝える</td>
+        <td>自社に合った提案がほしいとき</td>
+        <td>具体性・実用性アップ</td>
+      </tr>
+      <tr>
+        <td>制約条件を設ける</td>
+        <td>完成度の高い文章がほしいとき</td>
+        <td>手直し工数の削減</td>
+      </tr>
+      <tr>
+        <td>例を示す</td>
+        <td>トーンや品質を揃えたいとき</td>
+        <td>期待値とのズレ防止</td>
+      </tr>
+      <tr>
+        <td>ステップ分解</td>
+        <td>複雑な分析・企画を依頼するとき</td>
+        <td>論理性・網羅性アップ</td>
+      </tr>
+    </table>
+
+    <h2 id="p4">4. 業務別プロンプト実例集</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <picture><source srcset="../images/blog-ai-prompt-techniques-business-02.webp" type="image/webp"><img src="../images/blog-ai-prompt-techniques-business-02.jpg" alt="業務別プロンプト実例集" style="width: 100%; height: auto; display: block;" loading="lazy"></picture>
+</div>
+
+    <p>すぐにコピーして使える、<strong>実務で効果が出ているプロンプト</strong>をご紹介します。</p>
+
+    <h3>メール作成</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">実用プロンプト</span><br>
+      「あなたはビジネスメールの専門家です。以下の条件でメールを作成してください。<br><br>
+      【目的】新規取引先への挨拶と打ち合わせ日程の提案<br>
+      【相手】A社の田中部長（先週の展示会で名刺交換済み）<br>
+      【提案日程】4月10日(木)・11日(金)の午後<br>
+      【トーン】丁寧だが堅すぎない、親しみやすいビジネス文体<br>
+      【文量】200文字程度」
+    </div>
+
+    <h3>議事録の要約</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">実用プロンプト</span><br>
+      「以下の会議メモを構造化された議事録にまとめてください。<br><br>
+      【出力形式】<br>
+      1. 会議概要（日時・参加者・議題）<br>
+      2. 決定事項（箇条書き）<br>
+      3. TODOリスト（担当者・期限付き）<br>
+      4. 次回アジェンダ案<br><br>
+      【会議メモ】<br>
+      （ここに会議メモを貼り付け）」
+    </div>
+
+    <h3>SNS投稿文の作成</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">実用プロンプト</span><br>
+      「あなたはSNSマーケティングの専門家です。以下の情報をもとに、X（Twitter）用の投稿文を3パターン作ってください。<br><br>
+      【投稿内容】新メニュー「季節のフルーツパフェ」の告知<br>
+      【ターゲット】20〜30代女性、スイーツ好き<br>
+      【店舗情報】名古屋市栄のカフェ、テイクアウト可<br>
+      【制約】140文字以内、ハッシュタグ3つ付き<br>
+      【トーン】カジュアルで親しみやすく」
+    </div>
+
+    <h3>競合分析</h3>
+
+    <div class="prompt-example">
+      <span class="label-good">実用プロンプト</span><br>
+      「あなたは経営コンサルタントです。以下の情報をもとに、当社の競合優位性を分析してください。<br><br>
+      【当社】愛知県の工務店、注文住宅専門、年間10棟<br>
+      【強み】自然素材へのこだわり、アフターサービスの手厚さ<br>
+      【競合】大手ハウスメーカーA社、地元工務店B社<br><br>
+      【出力形式】<br>
+      ・SWOT分析（表形式）<br>
+      ・差別化ポイント3つ<br>
+      ・今すぐ取り組むべきアクション2つ」
+    </div>
+
+    <h2 id="p5">5. プロンプトの「育て方」</h2>
+
+    <p>プロンプト術で最も大事なのは、<strong>一発で完璧を求めないこと</strong>です。AIとの対話は「会話」です。回答が期待と違ったら、追加の指示を出して修正していけばいいのです。</p>
+
+    <h3>フィードバックで精度を上げる</h3>
+
+    <p>最初の回答が70点なら、こう追加指示を出します。</p>
+
+    <div class="prompt-example">
+      <span class="label-good">追加指示の例</span><br>
+      「もう少しカジュアルなトーンにしてください」<br>
+      「具体的な数字を入れてください」<br>
+      「3番目の案を膨らませて、もう少し詳しく書いてください」<br>
+      「中小企業の経営者が読むことを意識して、専門用語を減らしてください」
+    </div>
+
+    <p>この<strong>「指示→回答→フィードバック→再回答」のサイクル</strong>を2〜3回繰り返すだけで、満足度の高いアウトプットに仕上がります。</p>
+
+    <h3>使えるプロンプトは保存する</h3>
+
+    <p>一度うまくいったプロンプトは、<strong>テンプレートとして保存</strong>しておきましょう。メール作成、議事録整理、SNS投稿——業務ごとにテンプレートを持っておくと、毎回ゼロから考える手間がなくなります。</p>
+
+    <div class="highlight-box">
+      <h4>実践のコツ</h4>
+      <p>スマホのメモアプリやスプレッドシートに「業務名・プロンプト・ポイント」を記録しておく。チーム全体で共有すれば、AI活用のスピードが一気に上がります。</p>
+    </div>
+
+    <h2 id="faq">よくある質問</h2>
+
+    <div class="faq-item">
+      <p class="q">プロンプトに正解はありますか？</p>
+      <p class="a">「正解」はありませんが「型」はあります。本記事で紹介した5つの型を組み合わせれば、ほとんどのビジネスシーンに対応できます。大事なのは、何度か試して自社に合ったパターンを見つけることです。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">ChatGPTとClaudeでプロンプトの書き方は変わりますか？</p>
+      <p class="a">基本的な書き方は同じです。ただし、Claudeは長文の読解・要約が得意、ChatGPTはクリエイティブな文章生成が得意といった特性があるため、得意分野に合わせた使い分けがおすすめです。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">英語で書いた方が精度は上がりますか？</p>
+      <p class="a">以前はそう言われていましたが、最新のAIは日本語でも十分な精度です。ビジネスの文脈では、日本語で具体的に指示する方がニュアンスが伝わりやすく、実用的です。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">社内の機密情報をプロンプトに入れても大丈夫ですか？</p>
+      <p class="a">法人プランを利用すれば、入力データが学習に使われることはありません。ただし、個人情報や機密性の高い情報を扱う場合は、社内のAI利用ポリシーを策定しておくことをおすすめします。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="q">プロンプトを学ぶのに時間はかかりますか？</p>
+      <p class="a">本記事の5つの型を意識するだけで、今日から効果を実感できます。日常業務で使いながら覚えていくのが最も効率的です。特別な勉強は必要ありません。</p>
+    </div>
+
+    <div class="article-cta" id="cta">
+      <span style="display:inline-block; background:#e74c3c; color:#fff; font-size:0.8rem; font-weight:700; padding:4px 18px; border-radius:20px; margin-bottom:16px;">期間限定</span>
+      <h2>AI導入 個別相談</h2>
+      <p>「プロンプトの書き方がわからない」「自社の業務に合った使い方を知りたい」<br>そんなお悩みに、マンツーマンでお答えします。</p>
+      <p class="price">&yen;3,000<span>（税込 / 1時間）</span></p>
+      <p class="note">オンライン（Zoom）で実施</p>
+      <a href="../index.html#contact" class="btn-primary">今すぐ申し込む</a>
+    </div>
+
+    <p style="text-align: center; color: var(--text-light); margin-top: 40px;">
+      AIの活用でお悩みの方は、<a href="../index.html#contact" style="color: var(--gold); font-weight: 600;">無料相談</a>からお気軽にお問い合わせください。<br>
+      70社以上のAI導入実績をもとに、あなたのビジネスに最適なご提案をいたします。
+    </p>
+
+  </article>
+
+  <footer class="footer">
+    <p><a href="../index.html">&larr; トップページに戻る</a></p>
+    <p style="margin-top: 16px;">&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

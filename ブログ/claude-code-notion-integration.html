@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。">
+<meta name="keywords" content="Claude Code,Notion連携,Notion MCP,社内Wiki,議事録,タスク管理,中小企業,業務自動化">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド</h1>
+<p><strong>2026.05.01 ・ 読了目安 8分</strong></p>
+
+<p>「Notionは導入したけれど、結局誰も書かなくなった」「議事録・案件メモ・社内Wikiを更新する余裕がない」「同じ情報がSlack・メール・GoogleドキュメントとNotionに散らばっている」——中小企業のNotion運用は、最初の数か月は盛り上がるものの、入力負荷の高さで形骸化しやすいのが現実です。</p>
+<p>この入力・整理・更新という"続ける部分"を丸ごと引き受けてくれるのが、<strong>Claude CodeとNotion MCPの連携</strong>です。Claude CodeをNotionワークスペースに接続すれば、議事録の自動転記・タスクの自動起票・顧客台帳の更新・週次レポート生成までを、日本語の指示だけで動かせます。</p>
+<p>この記事では、Claude Code × Notion連携で実現できる中小企業向け活用5選、業種別シーン、非エンジニアでも取り入れられる導入4ステップ、運用上の注意点を解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>なぜ中小企業のNotion運用は形骸化するのか</li>
+<li>Claude Code × Notion連携でできること</li>
+<li>中小企業向け活用5選</li>
+<li>業種別の活用シーン</li>
+<li>非エンジニアでも導入できる4ステップ</li>
+<li>運用上の注意点</li>
+<li>よくある質問</li>
+</ol>
+
+<h2>なぜ中小企業のNotion運用は形骸化するのか</h2>
+<p>Notionが続かない原因は、ツールではなく「<strong>誰がいつ書くか</strong>」という運用設計が抜けていることにあります。中小企業では情報整理の専任者を置けず、社長や現場リーダーが片手間で更新するため、忙しくなるほどNotionは止まります。</p>
+<p>Claude Code × Notion MCPは、この「片手間で続けられない」を構造的に解消します。会議終了直後・案件受注直後・売上データ更新時など、業務イベントに合わせてClaudeが自動で書き込み、検索・要約・週次集計までも肩代わりするため、人間は判断と承認に集中できます。</p>
+
+<h2>Claude Code × Notion連携でできること</h2>
+<table>
+<tr><th>領域</th><th>できること</th><th>使用するNotion MCP機能</th></tr>
+<tr><td>ページ作成</td><td>議事録・案件メモ・社内Wikiページの自動生成</td><td>notion-create-pages</td></tr>
+<tr><td>ページ更新</td><td>既存ページに進捗・追記・ステータス変更</td><td>notion-update-page</td></tr>
+<tr><td>データベース検索</td><td>顧客台帳・案件一覧・タスクの横断検索</td><td>notion-search / notion-fetch</td></tr>
+<tr><td>コメント追加</td><td>レビュー依頼・承認コメントの自動投稿</td><td>notion-create-comment</td></tr>
+<tr><td>データソース更新</td><td>顧客ステータス・売上数値の一括反映</td><td>notion-update-data-source</td></tr>
+</table>
+
+<h2>中小企業向け活用5選</h2>
+
+<h3>1. 議事録の自動転記とタスク化</h3>
+<p>Zoom・対面会議の文字起こしをClaude Codeに渡すと、要点抽出→議事録ページ作成→決定事項からタスクDBへ自動起票まで一気通貫で実行できます。会議直後の「議事録書く時間が取れない」が解消され、決定事項が漏れなくNotion上に残ります。</p>
+
+<h3>2. 顧客台帳・案件管理の自動更新</h3>
+<p>受注メール・問い合わせフォーム送信などをトリガーに、Claudeが顧客名・要件・優先度を抽出し、Notionの顧客DBに新規行を作成・既存行を更新します。営業がCRMを別途開かずに済み、台帳の鮮度が劇的に上がります。</p>
+
+<h3>3. 社内ナレッジの自動整理とリンク</h3>
+<p>散らばっている手順書・FAQ・トラブル事例をClaudeにスキャンさせ、テーマごとにNotion Wikiページとして再構成、関連ページ間に内部リンクを貼らせます。検索性が上がり、新人教育の工数が大幅に減少します。</p>
+
+<h3>4. 週次・月次レポートの自動生成</h3>
+<p>Notion DBに溜まった商談・タスク・売上の数値を集計し、Claudeが要約コメント付きの週次レポートページを毎週同じテンプレで生成します。経営会議用資料の準備が不要になります。</p>
+
+<h3>5. 案件レビューと承認フローの効率化</h3>
+<p>担当者が起案したNotionページに対して、Claudeに一次レビュー（不足情報の指摘・誤字脱字・社内ルール準拠チェック）をコメントで入れさせます。社長や上長は最終判断のみに集中でき、承認スピードが向上します。</p>
+
+<h2>業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>活用シーン</th></tr>
+<tr><td>士業（税理士・社労士・行政書士）</td><td>顧問先ごとの相談ログ・対応履歴をNotion DBに自動蓄積</td></tr>
+<tr><td>EC・小売</td><td>商品マスタ・仕入先メモ・キャンペーン履歴を自動更新</td></tr>
+<tr><td>飲食・サロン</td><td>予約クレーム対応・スタッフ引き継ぎメモを自動転記</td></tr>
+<tr><td>BtoBサービス・コンサル</td><td>案件議事録・提案書ドラフト・進行管理を一元化</td></tr>
+<tr><td>不動産・建築</td><td>物件・施主・工事進捗のステータスをNotionで一元管理</td></tr>
+</table>
+
+<h2>非エンジニアでも導入できる4ステップ</h2>
+<ol>
+<li><strong>Step 1</strong> Claude Codeをインストールし、Notion MCPサーバーを設定する（Notionワークスペースとの認証）。</li>
+<li><strong>Step 2</strong> Notion側で議事録DB・顧客DB・タスクDBなど、Claudeが書き込む先のページ構造を最低限整えておく。</li>
+<li><strong>Step 3</strong> 「会議メモを議事録DBに追加」「この問い合わせを顧客DBに登録」など、よく使う指示をスラッシュコマンド化する。</li>
+<li><strong>Step 4</strong> 1業務ずつ運用に組み込み、書き込み内容のチェックを1〜2週間人間が行ったうえで自動化範囲を拡大する。</li>
+</ol>
+
+<h2>運用上の注意点</h2>
+<blockquote>機密情報・個人情報・売上数値を扱うため、書き込み権限とアクセス可能ページは最小限に絞ること。重要な顧客台帳の更新はClaudeに「下書きまで」を任せ、最終公開は人間が行うのが安全です。</blockquote>
+<ul>
+<li>NotionのDBプロパティ（セレクト・日付・人物）の入力ルールを事前に明文化しておく</li>
+<li>大量更新を一気に行わず、1業務ずつ運用検証を行う</li>
+<li>削除・アーカイブ操作はClaudeに任せず、人間の承認を必須化する</li>
+<li>監査ログ（誰がいつ何を更新したか）の確認担当者を決めておく</li>
+</ul>
+
+<h2>よくある質問</h2>
+
+<h3>Q. NotionのMCP連携はプログラミングが必要ですか？</h3>
+<p>A. ClaudeCode本体のインストールと、Notion MCPサーバーの設定（数行の設定ファイル）のみで使えます。設定さえ済めば日常運用は日本語の指示だけで完結します。</p>
+
+<h3>Q. 既存のNotionワークスペースをそのまま使えますか？</h3>
+<p>A. 使えます。ただし、Claudeが書き込むDBの列構成・ステータスの選択肢は事前に整えておくと、自動更新がスムーズになります。</p>
+
+<h3>Q. セキュリティ面で気になります。</h3>
+<p>A. アクセス可能ページ・書き込み権限を必要最小限に絞り、機密DBは別ワークスペース・別権限管理にすることを推奨します。</p>
+
+<div class="cta">
+<h2>Claude CodeのNotion連携を業務に組み込みたい方へ</h2>
+<p>Claude Code導入サポート（¥3,000）で、Notion MCPの初期設定からスラッシュコマンド整備、運用設計までを伴走支援します。中小企業のNotion運用が"続く仕組み"になります。</p>
+<a href="../index.html#contact">導入サポートに申し込む</a>
+</div>
+
+<p>当社は中小企業70社以上のAI導入を支援してきました。Notion運用の形骸化に悩む経営者・一人社長の方は、ぜひお気軽にご相談ください。</p>
+
+</main>
+</body>
+</html>

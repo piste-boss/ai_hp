@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude CodeのHook機能で業務イベントを自動化！中小企業向けイベント駆動型AIワークフローガイド | Piste</title>
+<meta name="description" content="Claude CodeのHook機能で業務イベントに応じてAI処理を自動実行する方法を解説。中小企業がルーチン業務を自動化する5つの活用例と非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Hook,フック,イベント駆動,業務自動化,中小企業,ワークフロー,ルーチン自動化">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude CodeのHook機能で業務イベントを自動化！中小企業向けイベント駆動型AIワークフローガイド</h1>
+<p><strong>2026.04.21 ・ 読了目安 9分</strong></p>
+
+<p>「受注メールが届いたら、担当者にSlackで通知し、顧客台帳を更新する」——この単純なルーチンを誰が担当していますか。多くの中小企業では、営業担当や社長自身がメールを転送し、スプレッドシートを開いて手で転記しています。1件あたり3分でも、月100件なら5時間。こうした「イベント発生→定型処理」のロスは、積み重ねると大きな経営コストになります。</p>
+<p>この業務イベントの自動化に効いてくるのが、Claude Codeの<strong>Hook（フック）機能</strong>です。「特定のイベントが起きたら、あらかじめ決めた処理を自動実行する」仕組みを、プログラミングなしで組み立てられます。スラッシュコマンドが「人が呼び出すAI」なら、Hookは「勝手に発火するAI」です。</p>
+<p>この記事では、Hookとは何か、中小企業の実務でどう使うか、非エンジニアでも始められる4ステップを解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>Hook機能とは？イベント駆動型AIの基本</li>
+<li>中小企業で効果が出るHook活用5選</li>
+<li>業種別 活用シーン</li>
+<li>非エンジニアでもできる導入4ステップ</li>
+<li>導入前に知っておくべき注意点</li>
+<li>よくある質問</li>
+<li>導入サポートのご案内</li>
+</ol>
+
+<h2>1. Hook機能とは？イベント駆動型AIの基本</h2>
+<p>Claude CodeのHookは、あらかじめ定義したイベント（作業開始時、ファイル保存時、特定コマンド実行時、処理完了時など）に対して、自動でコマンドやAI処理を走らせる機能です。人がAIに指示しなくても、業務の節目で自動的にAIが動く——これがイベント駆動型AIの本質です。</p>
+
+<h3>従来の自動化ツールとの違い</h3>
+<ul>
+<li>RPAは「画面操作の再現」が中心で、判断を伴う作業には弱い</li>
+<li>メール自動転送やSlack連携は「決まった配信先に送るだけ」で、内容の加工まではできない</li>
+<li>Hookはイベント発生時にAIが内容を理解し、要約・整形・判断まで行える</li>
+</ul>
+
+<h3>スラッシュコマンドとの棲み分け</h3>
+<blockquote>
+<p>スラッシュコマンドは人が <code>/命令名</code> と打って呼び出す「能動型」。Hookはイベントが起きると自動で発火する「受動型」。両者を組み合わせることで、社内業務は「指示の手間すら不要な状態」へと近づきます。</p>
+</blockquote>
+
+<h3>Hookとスラッシュコマンドの違い</h3>
+<table>
+<tr><th>項目</th><th>スラッシュコマンド</th><th>Hook</th></tr>
+<tr><td>発火タイミング</td><td>人が明示的に呼び出す</td><td>イベント発生で自動発火</td></tr>
+<tr><td>得意な業務</td><td>繰り返し作業の省力化</td><td>見落としゼロの定型処理</td></tr>
+<tr><td>人の介入</td><td>毎回実行者が必要</td><td>設定後は基本無人</td></tr>
+<tr><td>運用リスク</td><td>実行忘れ</td><td>誤発火・過剰発火</td></tr>
+<tr><td>向いている企業</td><td>少量多品種の業務</td><td>同じトリガーが頻発する業務</td></tr>
+</table>
+
+<h2>2. 中小企業で効果が出るHook活用5選</h2>
+
+<h3>活用1：受注メール到着時に顧客台帳を自動更新</h3>
+<p>問い合わせや発注メールを受信した瞬間に、Hookが本文を解析。顧客名・品目・数量・納期を抽出し、スプレッドシートや顧客管理ツールへ自動追記します。転記漏れをなくし、担当が休みの日でも記録が残ります。</p>
+
+<h3>活用2：作業終了時に日報を自動生成</h3>
+<p>業務システムで「作業完了」ボタンが押されたタイミングに、当日の行動ログからAIが日報ドラフトを作成。担当者はチェックするだけで提出できる状態まで仕上がります。</p>
+
+<h3>活用3：ファイル保存時に規約チェックを自動実施</h3>
+<p>契約書や見積書を保存した瞬間に、AIが社内規約・禁止文言・記載漏れをチェック。NG項目があればその場で通知され、提出前にミスを潰せます。</p>
+
+<h3>活用4：会議終了後に議事録と宿題リストを自動配布</h3>
+<p>会議ツールの録画終了イベントをトリガーに、文字起こし→要約→宿題抽出までを自動実行。各担当者に宛先付きで配布し、言った言わないを防ぎます。</p>
+
+<h3>活用5：レポート生成完了時に経営層へサマリー通知</h3>
+<p>週次売上レポートの生成が終わった瞬間に、AIが3行サマリーを作成し経営層へ通知。前週比較や異常値検知も含めて、社長が移動中にスマホで経営状況を把握できます。</p>
+
+<h2>3. 業種別 活用シーン</h2>
+
+<h3>飲食・小売業</h3>
+<ul>
+<li>レジ締め完了時に、日次売上と在庫不足品目を店舗責任者へ自動通知</li>
+<li>クレームメール受信時に、一次対応案を3パターン生成して担当者へ配布</li>
+</ul>
+
+<h3>士業事務所</h3>
+<ul>
+<li>相談予約フォーム送信時に、案件要旨と必要書類リストを顧問先にメール返信</li>
+<li>契約書ファイル保存時に、条項の整合性と過去案件との差分を自動チェック</li>
+</ul>
+
+<h3>製造業・工務店</h3>
+<ul>
+<li>見積依頼メール受信時に、過去類似案件の原価データを付けて営業担当へ通知</li>
+<li>現場写真アップロード時に、進捗状況を文章化した工事日報を自動生成</li>
+</ul>
+
+<h3>IT・サービス業</h3>
+<ul>
+<li>GitHubへのpush時に、変更内容の要点と影響範囲を日本語で社内通知</li>
+<li>サポートチケット起票時に、過去類似問い合わせを参照して一次回答案を提示</li>
+</ul>
+
+<h2>4. 非エンジニアでもできる導入4ステップ</h2>
+
+<h3>ステップ1：イベントの棚卸し（1時間）</h3>
+<p>「どのイベントが起きると、いつも同じ処理を手作業でしているか」を書き出します。受信メール、フォーム送信、会議終了、ファイル保存など、日常に埋もれている発火ポイントを洗い出す作業です。</p>
+
+<h3>ステップ2：Hookの設定シートを作成（半日）</h3>
+<p>「トリガー」「入力データ」「AI処理内容」「出力先」「失敗時の挙動」の5項目を決めます。ここを丁寧に決めておくと、後の誤発火トラブルが激減します。</p>
+
+<h3>ステップ3：Claude CodeへHookを登録（1時間）</h3>
+<p>設定ファイルに所定の書式で登録するだけで、Hookが有効化されます。プログラミング知識は不要で、日本語中心の設定ファイルを書く感覚に近いです。</p>
+
+<h3>ステップ4：小さく試す→運用拡大（継続）</h3>
+<p>まずは1イベントだけで運用を開始し、1〜2週間はログを確認しながら挙動を観察。想定通り動いていることを確認してから、対象業務を広げていきます。</p>
+
+<h2>5. 導入前に知っておくべき注意点</h2>
+<ul>
+<li><strong>誤発火のリスク</strong>：条件設定が甘いと、意図しないタイミングでHookが走り、顧客通知が誤送信される恐れがある。条件は厳しめから始めるのが鉄則</li>
+<li><strong>過剰通知の防止</strong>：同じイベントで何度も発火すると社内通知が氾濫する。重複発火の抑制ルールを設計しておく</li>
+<li><strong>AIアウトプットの最終確認</strong>：顧客送信・契約関連など外部に出る文面は、最終確認フローを必ず挟む</li>
+<li><strong>権限と責任の明確化</strong>：Hookが誰の名義で処理を走らせるのか、社内で事前合意しておく</li>
+<li><strong>停止手順の準備</strong>：誤った運用に気づいた時にすぐ止められる手順を、設定時点で用意しておく</li>
+</ul>
+
+<h2>6. よくある質問</h2>
+
+<h3>Q. プログラミング未経験の経営者でも設定できますか？</h3>
+<p>はい。Hookは設定ファイルへの記述だけで動作します。最初の1件を導入支援で設定すれば、2件目以降は日本語の条件編集に近い感覚で拡張できます。</p>
+
+<h3>Q. 外部ツール（メール・Slack・スプレッドシート等）と連携できますか？</h3>
+<p>はい。Claude CodeはMCPと呼ばれる外部連携の仕組みを通じて、一般的な業務ツールと接続できます。HookとMCPを組み合わせることで、受信イベントから外部ツールへの書き込みまで一気通貫で自動化できます。</p>
+
+<h3>Q. どのくらいの業務量から効果が出ますか？</h3>
+<p>同じトリガーが週20回以上発生する業務であれば、導入1〜2か月で時短効果を体感できるケースが多いです。逆に月1〜2回しか起きない業務は、スラッシュコマンドに寄せた方が設計・保守コストの点で有利です。</p>
+
+<h3>Q. スラッシュコマンドとどう使い分けますか？</h3>
+<p>「人が見てから実行すべき業務」はスラッシュコマンド、「発生したら毎回同じ処理でよい業務」はHookと住み分けるのが基本です。大枠はHookで自動化し、例外対応をスラッシュコマンドで補う設計が運用しやすくなります。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>Hookの設計・設定・誤発火防止のガバナンス設計まで、1社ごとにカスタマイズしてご支援します。</p>
+<p><strong>初回導入サポート ¥3,000〜</strong></p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+
+<h2>まとめ</h2>
+<p>Claude CodeのHook機能は、「人が毎回AIに指示する」時代から「業務イベントに合わせてAIが勝手に動く」時代への転換点です。中小企業にとって、少人数でも抜け漏れなく業務を回す強力な武器になります。</p>
+<p>まずは社内で最も頻繁に発生しているイベントを1つ選び、小さなHookから始めてみてください。設定後は基本的に無人で回り続けるため、初期投資に対する時短リターンが長期的に積み上がります。</p>
+<p>Pisteでは、70社以上の中小企業AI導入実績を活かし、Hook設計・MCP連携・社内ガバナンス整備までワンストップでご支援しています。どの業務から自動化すべきか判断がつかない段階でも、お気軽にご相談ください。</p>
+
+</main>
+</body>
+</html>

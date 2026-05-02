@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeのサブエージェント機能で業務を自動分担！中小企業のAIチーム編成ガイド | Piste</title>
+<meta name="description" content="Claude Codeのサブエージェント機能で業務をAIチームに分担させる方法を解説。中小企業が複数タスクを並列処理するためのエージェント設計5選と導入ステップを紹介。">
+<meta name="keywords" content="Claude Code,サブエージェント,AIチーム,業務自動化,中小企業,並列処理,タスク分散">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Codeのサブエージェント機能で業務を自動分担！中小企業のAIチーム編成ガイド</h1>
+<p><strong>2026.04.19 ・ 読了目安 9分</strong></p>
+
+<p>「一人のAIに複数業務を任せると、どれも中途半端になってしまう」——Claude Codeを使い始めた中小企業の経営者からよく聞く悩みです。営業メール作成、資料整理、データ分析を同時に頼むと、処理が遅く、品質もばらつく。</p>
+<p>この壁を越える鍵が、2026年のClaude Codeに搭載された<strong>サブエージェント機能</strong>です。1人のAIではなく、役割の異なる複数のAI担当者（エージェント）に業務を分担させ、並列で実行させる——いわばAIチームを編成する機能です。</p>
+
+<h2>目次</h2>
+<ol>
+<li>サブエージェントとは？従来のAIとの違い</li>
+<li>中小企業で組めるAIチーム編成5パターン</li>
+<li>業務シーン別 サブエージェント活用事例</li>
+<li>導入ステップ（非エンジニア向け4ステップ）</li>
+<li>よくある質問</li>
+<li>導入サポートのご案内</li>
+</ol>
+
+<h2>1. サブエージェントとは？従来のAIとの違い</h2>
+<p>サブエージェントは、Claude Codeが内部で呼び出せる「専門担当AI」です。経営者が人を採用してチームを組むのと同じ発想で、AIに<strong>役割・責任範囲・口調・使えるツール</strong>を事前に決めておけます。</p>
+
+<h3>従来のAI活用の限界</h3>
+<p>ChatGPTや単体のClaudeに複数業務を依頼すると、以下が起きます。</p>
+<ul>
+<li>全作業を1つの会話で処理するため、指示が長くなり抜け漏れが発生</li>
+<li>前の作業の文脈が後の作業に混ざり、品質が低下</li>
+<li>全業務を順番に処理するため、時間がかかる</li>
+</ul>
+
+<h3>サブエージェントの革新</h3>
+<blockquote>「リサーチ担当が競合調査、ライター担当が営業文作成、レビュー担当が文面チェックを、同時並行で進める」——1回の指示でこれが完結します。</blockquote>
+<p>それぞれのエージェントは独立した記憶領域を持ち、並列に動きます。人間のチームにタスクを割り振る感覚でAIに業務を任せられます。</p>
+
+<h2>2. 中小企業で組めるAIチーム編成5パターン</h2>
+
+<h3>パターン1：営業チーム</h3>
+<ul>
+<li>リサーチ担当：見込み客の業界情報・競合調査を収集</li>
+<li>ライター担当：営業メール・提案資料の下書きを作成</li>
+<li>レビュー担当：文面の誤字・論理・トーンをチェック</li>
+</ul>
+
+<h3>パターン2：経理・バックオフィスチーム</h3>
+<ul>
+<li>データ入力担当：請求書PDFから金額・取引先を抽出</li>
+<li>仕訳担当：会計ルールに沿って仕訳を提案</li>
+<li>レポート担当：月次集計・経営者向けサマリーを作成</li>
+</ul>
+
+<h3>パターン3：マーケティングチーム</h3>
+<ul>
+<li>分析担当：SNS投稿データ・広告データから傾向を抽出</li>
+<li>企画担当：次回投稿案・キャンペーン案を立案</li>
+<li>コピー担当：投稿文・キャッチコピーを作成</li>
+</ul>
+
+<h3>パターン4：採用チーム</h3>
+<ul>
+<li>スクリーニング担当：応募書類を要件と照合</li>
+<li>質問作成担当：候補者ごとの面接質問を生成</li>
+<li>評価担当：面接議事録から評価レポートを作成</li>
+</ul>
+
+<h3>パターン5：カスタマーサポートチーム</h3>
+<ul>
+<li>分類担当：問い合わせを緊急度・カテゴリで分類</li>
+<li>回答起草担当：FAQ・過去対応履歴を参照して返信案を作成</li>
+<li>エスカレ担当：対応できない案件を担当者へ引き継ぎ</li>
+</ul>
+
+<h2>3. 業務シーン別 サブエージェント活用事例</h2>
+
+<h3>事例1：一人社長の営業フロー自動化</h3>
+<p>月50件の新規商談を一人で回していた経営者が、「リサーチ＋ライター＋レビュー」の3エージェント体制を組み、1件あたりの準備時間を<strong>90分→15分</strong>に短縮。</p>
+
+<h3>事例2：週次レポート自動生成</h3>
+<p>週1回の経営会議資料を、データ分析・グラフ作成・要約・スライド下書きの4エージェントで並列処理。担当者の作業時間を<strong>1日→1時間</strong>に圧縮。</p>
+
+<h3>事例3：社内問い合わせの一次対応</h3>
+<p>社内チャットへの「経費申請の方法は？」等の質問に、分類→回答起草→過去案件参照の3エージェントが連携。情シス担当の対応件数が<strong>半分以下</strong>に。</p>
+
+<h2>4. 導入ステップ（非エンジニア向け4ステップ）</h2>
+
+<h3>ステップ1：業務の棚卸し</h3>
+<p>現在の業務を「情報収集」「作成」「確認」「提出」の4工程に分解します。工程ごとに役割を分けやすくなります。</p>
+
+<h3>ステップ2：エージェントに役割を与える</h3>
+<p>Claude Codeの指示ファイルに、「あなたは〇〇担当です。△△の情報を使って□□を作成してください」と役割・責任を明確に書きます。人にお願いするときの指示書と同じ感覚です。</p>
+
+<h3>ステップ3：小さく試して検証</h3>
+<p>いきなり全業務を任せるのではなく、まず1工程（例：営業メール作成）をAIチームで回し、精度・スピードを確認します。</p>
+
+<h3>ステップ4：定期運用と改善</h3>
+<p>週次で結果を振り返り、指示内容・役割分担を微調整します。人材育成と同じ発想で、AIチームも育てていきます。</p>
+
+<h2>5. よくある質問</h2>
+
+<h3>Q1. プログラミング知識は必要ですか？</h3>
+<p>基本的な業務で使う範囲では不要です。役割指示と使いたいツールを自然言語で書くだけで運用できます。</p>
+
+<h3>Q2. 情報漏洩のリスクは？</h3>
+<p>法人利用では商用プランの利用・アクセス権限の適切な管理・機密情報の取り扱いルール策定が前提です。導入時に設計しておくことで、リスクは大きく低減できます。</p>
+
+<h3>Q3. どのくらいのコストがかかりますか？</h3>
+<p>基本プランは月額3,000〜5,000円前後から。複数人で使う場合は法人プランが効率的です。業務時間削減効果を考えれば、多くの中小企業で投資回収は1〜2ヶ月以内です。</p>
+
+<h3>Q4. 既存のAI活用と併用できますか？</h3>
+<p>可能です。ChatGPTやGeminiを個別業務に使い続けつつ、チーム運用が必要な業務だけClaude Codeのサブエージェントに切り替える運用も有効です。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート ¥3,000</h2>
+<p>サブエージェント設計から業務への落とし込みまで、中小企業に特化した導入支援を行っています。まずはお気軽にご相談ください。</p>
+<a href="../index.html#contact">相談してみる</a>
+</div>
+
+<p>Piste株式会社では、70社以上のAI導入支援実績をもとに、Claude Codeを中心としたAI業務自動化のコンサルティングを提供しています。サブエージェント設計・ワークフロー構築・運用定着までワンストップでサポートします。</p>
+</main>
+</body>
+</html>

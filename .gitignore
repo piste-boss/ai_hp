@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Netlify state (machine-local)
+.netlify/state.json
+site/.netlify/state.json
+site/.netlify/functions-internal/
+site/.netlify/v1/
+
+# Editor / OS
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs
+*.log

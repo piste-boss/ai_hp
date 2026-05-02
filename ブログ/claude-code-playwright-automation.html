@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude CodeのPlaywright連携でブラウザ業務を自動化！WordPress投稿・予約管理・SNS運用を丸ごと任せる中小企業ガイド | Piste</title>
+<meta name="description" content="Claude CodeとPlaywright MCPを組み合わせてブラウザ操作を自動化する方法を解説。中小企業がWordPress投稿・SNS運用・予約管理サイト操作などのルーチンを丸ごと任せる5つの活用例と非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Playwright,ブラウザ自動化,WordPress,SNS投稿,予約管理,業務自動化,中小企業,MCP">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude CodeのPlaywright連携でブラウザ業務を自動化！WordPress投稿・予約管理・SNS運用を丸ごと任せる中小企業ガイド</h1>
+<p><strong>2026.04.22 ・ 読了目安 9分</strong></p>
+
+<p>「毎週WordPressにブログを投稿して、同じ内容をnoteとココナラブログにも転記。画像を差し替えてカテゴリを選び、メタ情報も埋める——これだけで1時間以上かかる」。ブラウザの中で完結する業務は、人の手で繰り返されがちですが、時間も気力も確実に削っていきます。API連携ができないSaaSや、ログインが必要な管理画面ほど、この「手作業ゾーン」が分厚くなります。</p>
+<p>この問題を丸ごと解きほぐすのが、Claude Codeの<strong>Playwright連携</strong>です。Anthropic公式CLIであるClaude CodeにPlaywright MCPを組み合わせると、AIがブラウザを自分で開き、ログインし、フォーム入力や投稿操作まで一貫して処理できます。RPAのような画面録画は不要で、日本語で「管理画面に入って新規記事を公開して」と指示するだけで動きます。</p>
+<p>この記事では、Playwright連携の仕組みと中小企業での活用法、非エンジニアでも始められる4ステップを解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>Playwright連携とは？ブラウザ業務がAIに任せられる理由</li>
+<li>中小企業で効果が出るPlaywright活用5選</li>
+<li>業種別 活用シーン</li>
+<li>非エンジニアでもできる導入4ステップ</li>
+<li>導入前に知っておくべき注意点</li>
+<li>よくある質問</li>
+<li>導入サポートのご案内</li>
+</ol>
+
+<h2>1. Playwright連携とは？ブラウザ業務がAIに任せられる理由</h2>
+<p>Playwrightはもともとブラウザテスト用のオープンソースツールで、マイクロソフトが開発しています。Claude CodeはPlaywright MCP（Model Context Protocol）を通じてこのブラウザエンジンを呼び出し、AIが自律的にページを操作できる状態を作ります。ページを開く、要素をクリックする、文字を入力する、スクリーンショットを取る——これらをすべて自然言語の指示から実行します。</p>
+
+<h3>従来の自動化ツールとの違い</h3>
+<ul>
+<li>API連携は提供側が対応していなければ使えないが、Playwrightは「人が見ているブラウザ画面」ごと操作できる</li>
+<li>RPAは画面座標や操作手順を事前録画する必要があるが、PlaywrightはAIが画面構造を読み取って動的に判断する</li>
+<li>画面デザインが多少変わっても、AIが要素を探し直して処理を続けられる</li>
+</ul>
+
+<h3>MCPとHookとの相性</h3>
+<blockquote>
+<p>Playwright MCPは単体でも強力ですが、他のMCP（NotionやGoogleドライブ）と組み合わせると真価を発揮します。たとえば「Notionで承認された記事をWordPressに自動投稿」「受注メールを検知したら管理画面に在庫登録」といった部門横断の業務を、Claude Codeが一気通貫で処理できるようになります。</p>
+</blockquote>
+
+<h3>API連携とPlaywright連携の違い</h3>
+<table>
+<tr><th>項目</th><th>API連携</th><th>Playwright連携</th></tr>
+<tr><td>対応サービス</td><td>API提供ありのみ</td><td>ブラウザで使える全サービス</td></tr>
+<tr><td>導入コスト</td><td>トークン発行や審査が必要</td><td>ログイン情報があれば開始可能</td></tr>
+<tr><td>画面変更への耐性</td><td>影響なし</td><td>AIが構造を読み直して追従</td></tr>
+<tr><td>ログイン必須SaaS</td><td>不可のケース多い</td><td>ログインごと自動化できる</td></tr>
+</table>
+
+<h2>2. 中小企業で効果が出るPlaywright活用5選</h2>
+
+<h3>(1) WordPress・オウンドメディアの自動投稿</h3>
+<p>ブログ記事の本文・タイトル・カテゴリ・アイキャッチ画像・SEO設定を、管理画面を開いて入力するところまで自動化できます。毎週の投稿作業が1時間から数分に短縮され、しかも投稿漏れや設定ミスもなくなります。記事原稿をClaude Codeが書き、そのままPlaywrightで管理画面に流し込む一気通貫フローが実現します。</p>
+
+<h3>(2) SNS投稿・予約投稿の代行</h3>
+<p>note、ココナラブログ、各種SNSの投稿画面は、API提供が限定的なものが多い領域です。Playwright連携なら、ログインから本文入力、ハッシュタグ設定、公開ボタンのクリックまで任せられます。複数プラットフォームへの横展開もワンコマンドで完了し、担当者の「転記作業」がなくなります。</p>
+
+<h3>(3) 予約管理・顧客管理サイトへの登録</h3>
+<p>予約台帳、顧客管理システム、問い合わせフォーム、ECサイトの商品登録など、ブラウザで完結する中小企業向けSaaSはほとんどがPlaywrightで操作可能です。問い合わせ受付からCRM登録までの流れを自動化すれば、スタッフは一次対応や接客といった人にしかできない業務に集中できます。</p>
+
+<h3>(4) 競合調査・リサーチのスクリーンショット収集</h3>
+<p>競合サイト、検索結果、口コミサイトなどを定期巡回し、ページ内容とスクリーンショットを自動取得します。週次や月次でレポート化すれば、営業や企画部門の調査作業を大幅に削減できます。Claude Codeが取得結果を要約してくれるため、見るだけのレポートから「判断に使えるレポート」に進化します。</p>
+
+<h3>(5) 勤怠・経費申請などの社内業務自動化</h3>
+<p>勤怠システムの打刻、経費精算の申請、交通費計算、出張予約など、定型化された社内業務を丸ごと代行できます。社員が開いて打つのをやめれば、月単位で数十時間の可処分時間が生まれます。Hookと組み合わせれば、出社検知や業務開始の合図で自動的に打刻する流れも作れます。</p>
+
+<h2>3. 業種別 活用シーン</h2>
+<table>
+<tr><th>業種</th><th>主な活用シーン</th></tr>
+<tr><td>美容・サロン</td><td>予約サイトへの空き枠同期、口コミ返信の下書き登録、SNS投稿の自動化</td></tr>
+<tr><td>飲食・小売</td><td>食べログ・Googleビジネスプロフィールの更新、ECサイト商品登録</td></tr>
+<tr><td>士業・コンサル</td><td>オウンドメディアへの自動投稿、セミナー予約サイトの申込確認処理</td></tr>
+<tr><td>人材・教育</td><td>求人媒体への同時投稿、受講者管理画面の登録・更新</td></tr>
+<tr><td>不動産・工務店</td><td>ポータルサイトへの物件情報掲載、内見予約の自動受付</td></tr>
+</table>
+
+<h2>4. 非エンジニアでもできる導入4ステップ</h2>
+
+<h3>ステップ1：自動化したいブラウザ業務を洗い出す</h3>
+<p>毎週・毎日繰り返しているブラウザ作業を紙に書き出します。最初は「WordPressの投稿」「予約サイトの更新」「SNSの定期投稿」など、月10時間以上かかっている業務に絞ると費用対効果が出やすくなります。業務フローを図にすると、Claude Codeへの指示も作りやすくなります。</p>
+
+<h3>ステップ2：Claude CodeにPlaywright MCPを追加する</h3>
+<p>Claude CodeにPlaywright MCPをインストールします。コマンド一行で完了し、インストール後は「ブラウザを開いて」「ログインして」といった日本語指示がそのまま動くようになります。必要に応じてログイン情報は安全な設定ファイルに格納し、AIから直接見えないように管理します。</p>
+
+<h3>ステップ3：1業務ずつ手順書をAIに読ませる</h3>
+<p>自動化したい業務の操作手順を日本語で書きます。「管理画面にログイン」「新規作成ボタンを押す」「タイトルに〇〇を入力」といった粒度で十分です。この手順書をClaude Codeに渡し、実際にPlaywrightで動かしてみて、うまくいかない箇所を修正していきます。2〜3回の往復で安定稼働に入るケースが多いです。</p>
+
+<h3>ステップ4：スラッシュコマンドやHookに組み込む</h3>
+<p>動くようになった自動化フローを、スラッシュコマンド化して「一行呼び出し」にします。さらにHookと組み合わせれば、メール受信や業務開始のタイミングで勝手に走らせることもできます。ここまで組み込めば、ブラウザ業務は「やる」から「動いている」状態に変わります。</p>
+
+<h2>5. 導入前に知っておくべき注意点</h2>
+<ul>
+<li><strong>利用規約の確認</strong>：対象サービスが自動操作を明示的に禁止していないか、事前に規約を確認する</li>
+<li><strong>ログイン情報の管理</strong>：共有PCに直接パスワードを書かず、環境変数や専用の鍵管理ツールに格納する</li>
+<li><strong>二段階認証の設計</strong>：認証コードが必要なサービスは、運用設計段階で扱い方を決めておく</li>
+<li><strong>例外時の人の確認</strong>：重要操作（削除・決済など）は、実行前に人が確認するステップを残す</li>
+<li><strong>画面変更時の再テスト</strong>：対象SaaSが大幅リニューアルしたら、手順書を見直す</li>
+</ul>
+
+<h2>6. よくある質問</h2>
+
+<h3>Q1. プログラミング経験がなくても使えますか？</h3>
+<p>使えます。日本語の手順書さえ書ければ、Claude Codeが内部のコードを自動生成します。手順書は「操作の流れを言葉で並べたメモ」でよく、エンジニア的な記述は不要です。</p>
+
+<h3>Q2. ログイン情報をAIに渡すのは安全ですか？</h3>
+<p>環境変数や設定ファイルに保管し、AIが直接読み書きできない形にするのが基本です。Claude Codeはログイン処理の際に必要な値だけを参照する構成にできるため、設計次第で安全性を確保できます。</p>
+
+<h3>Q3. どのブラウザで動きますか？</h3>
+<p>Playwrightはchromium、firefox、webkitの3系統に対応しており、macOSでもWindowsでも動作します。ほとんどの業務はchromiumで十分ですが、Safariでしか動かない画面はwebkitを選ぶとよいです。</p>
+
+<h3>Q4. 他の自動化ツールと併用できますか？</h3>
+<p>併用できます。MakeやZapierなどで起動トリガーを作り、最終的な画面操作をPlaywrightに任せる構成も有効です。既存の自動化資産を捨てずに拡張できます。</p>
+
+<h3>Q5. 導入にどれくらい時間がかかりますか？</h3>
+<p>1業務であれば、打ち合わせから初回稼働まで2〜3時間程度が目安です。複数業務を横展開する場合は、1業務追加ごとに1時間前後で済むことが多いです。</p>
+
+<h2>7. 導入サポートのご案内</h2>
+<div class="cta">
+<h2>ブラウザ業務の自動化を、まずは1業務から</h2>
+<p>Claude Code × Playwright連携で「毎週のWordPress投稿」「SNSへの同時投稿」「予約サイトの更新」などを自動化したい中小企業の方へ。対象業務の棚卸しから初回稼働までを一緒に進める、Claude Code導入サポート（¥3,000〜）をご用意しています。</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+
+<p>ブラウザの中で終わる業務は、裏を返せばAIに代わってもらいやすい業務でもあります。月100時間の手作業が、半日のセットアップでゼロに近づく——Playwright連携は、その現実的な一歩を用意してくれます。まずは一番気になっているブラウザ業務を書き出すところから始めてみてください。</p>
+
+</main>
+</body>
+</html>
