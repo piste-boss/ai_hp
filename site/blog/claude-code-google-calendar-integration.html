@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化！中小企業のスケジュール管理効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとGoogleカレンダーを連携し、日程調整・会議準備・リマインド・スケジュール分析を非エンジニアでも自動化できる方法を解説。商談・打ち合わせが多い中小企業向け活用7選と4ステップ導入。">
+<meta name="keywords" content="Claude Code,Googleカレンダー連携,スケジュール管理,日程調整自動化,会議準備,リマインド,中小企業,DX,生成AI,業務自動化">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化！中小企業のスケジュール管理効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-thumb-01.jpg" alt="Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「打ち合わせの日程調整メールを何往復もしている」「会議の準備資料をいつも直前に慌ててまとめている」「予定が埋まっているのに、リマインドを忘れて連絡が漏れる」――少人数で動く中小企業ほど、スケジュール管理にかかる細かな手間が積み重なり、本業を圧迫しがちです。Anthropic公式のAIコーディングツール <strong>Claude Code</strong> と <strong>Googleカレンダー</strong> を連携させることで、予定調整から会議準備、リマインド、スケジュール分析までを半自動化する方法を、非エンジニアでも分かるように解説します。</p>
+
+<h2>1. 中小企業のスケジュール管理にありがちな3つの壁</h2>
+<p>経営者や担当者が複数の役割を兼務する中小企業では、商談・打ち合わせ・社内ミーティング・来客対応などの予定が一人に集中しがちです。予定そのものよりも、その前後の「調整・準備・連絡」に時間を奪われているケースが少なくありません。</p>
+<ul>
+<li><strong>日程調整の往復</strong>：空き確認とメールのやり取りが何度も発生し、確定までに時間がかかる</li>
+<li><strong>会議準備の直前化</strong>：議題整理や資料準備が後回しになり、毎回ギリギリで慌てる</li>
+<li><strong>連絡漏れ・リマインド忘れ</strong>：予定が埋まるほど、前日の確認連絡が漏れてトラブルにつながる</li>
+</ul>
+<p>これらの「調整と準備が回らない」状態を、Claude Code × Googleカレンダーの連携で「候補出しと準備が自動で整っている」状態に変えられます。</p>
+
+<h2>2. Claude Code × Googleカレンダー連携でできること</h2>
+<p>Claude Code は AnthropicのAIコーディングツールで、GoogleカレンダーのAPIを介して、以下のような操作を自然言語の指示だけで行えます。</p>
+<table>
+<thead><tr><th>カテゴリ</th><th>自動化できる業務例</th></tr></thead>
+<tbody>
+<tr><td>日程調整</td><td>空き時間を確認し、候補日時の提示文面を自動作成</td></tr>
+<tr><td>会議準備</td><td>予定から議題・準備資料・確認事項のリストを自動下書き</td></tr>
+<tr><td>朝のサマリー</td><td>当日の予定を一覧化し、スケジュールサマリーを自動生成</td></tr>
+<tr><td>リマインド</td><td>商談・来客の前日・当日のリマインド文面を自動準備</td></tr>
+<tr><td>予定分析</td><td>重複・移動時間のチェックや月次の時間配分レポートを作成</td></tr>
+</tbody>
+</table>
+<p>Claude Codeは「指示→計画→API実行→結果報告」を一連の流れでこなすため、ノーコードツールよりも柔軟で、自社開発するよりも工数が圧倒的に少なくて済みます。</p>
+
+<h2>3. 商談・打ち合わせが多い事業向け活用5選</h2>
+
+<h3>① 日程調整の候補出しと文面作成</h3>
+<p>「来週で1時間の打ち合わせ候補を3つ出して」と伝えると、空いている時間帯を確認し、相手に送る候補提示の文面までまとめて作成します。何往復もしていたメールのやり取りが一度で済みます。</p>
+
+<h3>② 会議準備の自動段取り</h3>
+<p>予定に登録された会議を読み取り、議題のたたき台・必要な準備資料・確認事項のリストを自動で下書きします。直前に慌てて準備する状況を防げます。</p>
+
+<h3>③ 朝のスケジュールサマリー</h3>
+<p>始業時に当日の予定を一覧化し、「今日は何時にどんな予定があるか」「移動や準備に必要な時間」を整理したサマリーを自動作成します。一日の見通しが朝の数分で立ちます。</p>
+
+<h3>④ リマインド連絡の文面準備</h3>
+<p>商談や来客の前日・当日に送るリマインドの文面を、相手や用件に合わせて自動で下書きします。送信前に内容を確認するだけで、連絡漏れを防げます。</p>
+
+<h3>⑤ 予定の重複・無理のチェックと振り返り</h3>
+<p>予定の重なりや移動時間が足りないスケジュールを自動でチェックし調整案を提示。さらに月単位の予定を分析し、時間の使い方を振り返るレポートも作成します。</p>
+
+<h2>4. 業種別の活用シーン</h2>
+<ul>
+<li><strong>士業・コンサル</strong>：相談・商談の日程調整と前日リマインドを自動化し、調整工数と無断キャンセルを削減</li>
+<li><strong>美容室・治療院</strong>：予約確認・次回予約のリマインド文面を準備し、来店間隔の空いた顧客フォローにも活用</li>
+<li><strong>不動産仲介・建築</strong>：内見・現地立会いの日程調整と移動時間チェックで、無理のない訪問スケジュールを組む</li>
+<li><strong>Web制作・広告代理店</strong>：定例ミーティングの議題・準備リストを自動下書きし、打ち合わせの質を一定に保つ</li>
+<li><strong>スクール・教室</strong>：体験・面談の日程調整、開講・休講案内のリマインドを一括準備</li>
+</ul>
+
+<h2>5. 導入の4ステップ</h2>
+<ol>
+<li><strong>業務棚卸し</strong>：日程調整・会議準備・リマインドのうち、まず自動化したい業務を1つ選ぶ</li>
+<li><strong>カレンダー側の準備</strong>：GoogleカレンダーのAPI連携設定を行い、利用範囲を必要最小限に限定する</li>
+<li><strong>Claude Codeへの業務指示</strong>：営業時間・移動の前提・連絡のトーンをメモリファイルにまとめ、予定調整スキルを登録する</li>
+<li><strong>定期運用＋人による最終確認</strong>：候補出しや文面作成までを自動化し、予定確定・送信は人が承認する運用に乗せる</li>
+</ol>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>予定確定と送信は人が行う</strong>：自動はあくまで候補出し・文面作成まで。誤った日程確定や連絡ミスを防ぐため最終判断は人が行う</li>
+<li><strong>前提条件を先に固める</strong>：営業時間・移動時間・会議に充てたくない時間帯を明確にし、現実的な候補を出させる</li>
+<li><strong>認証情報の最小権限化</strong>：連携情報は環境変数で管理し、ファイル権限を本人のみに制限する</li>
+<li><strong>個人情報と共有範囲の管理</strong>：予定に含まれる取引先名・連絡先は、共有範囲を必要な人に限定する</li>
+<li><strong>運用責任者の固定</strong>：自動化の番人を決め、異常時に止められる体制にしておく</li>
+</ul>
+
+<h2>7. よくある質問</h2>
+<p><strong>Q1. プログラミングが全くできなくても使えますか？</strong><br>はい。Claude Codeは自然言語で指示するため、コードを書く必要はありません。最初の設定だけサポートを受ければ、その後は普通の会話で運用できます。</p>
+<p><strong>Q2. 予定が勝手に登録・変更されてしまうことはありませんか？</strong><br>予定の確定や変更を人の承認制にできます。自動はあくまで候補出しや文面の準備までで、最終的な確定は人が行う設計が安全です。</p>
+<p><strong>Q3. すでに使っているGoogleカレンダーにそのまま組み込めますか？</strong><br>現在の予定やカレンダーの分け方を活かしたまま連携できます。今の運用を読み込み、AIが自社の使い方を学習します。</p>
+<p><strong>Q4. 月にどれくらいの工数削減になりますか？</strong><br>予定の数や日程調整の頻度にもよりますが、調整・準備・リマインドを合わせて月10〜20時間前後の削減が見込めるケースが多いです。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>Claude CodeとGoogleカレンダーの連携設定、初期スキルの作成、予定調整・会議準備自動化フローの設計まで一括サポート。環境構築・自動化スキル作成・前提条件のメモリ化・運用マニュアル作成・30日間の質問対応つき。「日程調整のメール往復がほぼなくなった」「会議準備を直前に慌てなくなった」と多くの声をいただいています。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p>スケジュール調整に費やしていた時間を、本業の成長やお客様と向き合う時間に振り向けましょう。Claude Code × Googleカレンダーの連携は、その第一歩として最適な投資です。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に最適な仕組みをご提案します。</p>
+
+</main>
+</body>
+</html>

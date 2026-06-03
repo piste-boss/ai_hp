@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Dropbox連携で社内ファイル管理・共有・自動整理をAI自動化！中小企業のクラウドストレージ運用ガイド | Piste</title>
+<meta name="description" content="Claude CodeとDropboxを連携し、ファイル整理・共有リンク発行・契約書管理・バックアップ運用を非エンジニアでも自動化できる方法を解説。資料が散らかりがちな中小企業向け活用7選と4ステップ導入。">
+<meta name="keywords" content="Claude Code,Dropbox連携,ファイル管理,クラウドストレージ,ファイル共有自動化,契約書管理,中小企業,DX,生成AI,業務自動化">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Dropbox連携で社内ファイル管理・共有・自動整理をAI自動化！中小企業のクラウドストレージ運用ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-dropbox-integration.jpg" alt="Claude Code × Dropbox連携でファイル管理を自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「契約書や請求書がどこに保存されているか分からない」「クライアント別フォルダの命名がバラバラで検索が大変」「共有リンクを毎回手作業で発行し、有効期限を管理しきれない」――Dropboxを使っているのに、結局フォルダの中はカオスになっていませんか。Anthropic公式のAIコーディングツール <strong>Claude Code</strong> と <strong>Dropbox</strong> を連携させれば、ファイル整理・共有リンクの一括発行・契約書の自動仕分け・社内アーカイブの定期メンテナンスまでをAIに任せられます。本記事では、非エンジニアでも導入できる具体的な活用法と運用ステップを解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>中小企業のファイル管理にありがちな3つの壁</li>
+<li>Claude Code × Dropbox連携でできること</li>
+<li>業務別活用例7選</li>
+<li>導入4ステップ</li>
+<li>運用上の注意点と社内ルール</li>
+<li>よくある質問（FAQ）</li>
+</ol>
+
+<h2>1. 中小企業のファイル管理にありがちな3つの壁</h2>
+<p>少人数で複数業務を回す中小企業では、Dropboxが「とりあえずの保存先」になりがちです。担当者ごとに命名規則が違ったり、契約書と見積書が同じフォルダに混在したり、過去ファイルがどんどん溜まっていく――こうした状態は、検索・引き継ぎ・監査のすべてでコストになります。</p>
+
+<table>
+<tr><th>よくある壁</th><th>現場で起きていること</th></tr>
+<tr><td>命名・階層の属人化</td><td>「2026_案件_最新」「最終版_v3_本当に最終」など担当者ごとにバラバラ</td></tr>
+<tr><td>共有リンクの管理漏れ</td><td>取引先に発行したリンクの有効期限・閲覧可否が不明、解約後も生きている</td></tr>
+<tr><td>過去ファイルの肥大化</td><td>3年以上前の作業中ファイルが残り続け、容量・検索性ともに低下</td></tr>
+</table>
+
+<h2>2. Claude Code × Dropbox連携でできること</h2>
+<p>Claude CodeはMCP（Model Context Protocol）やDropbox API経由でフォルダ・ファイル操作を直接実行できます。社長や事務担当者は「Dropboxの○○フォルダを整理して」「先月末以降の請求書だけをまとめて」とチャットで指示するだけで、AIが代わりに動きます。</p>
+<ul>
+<li>フォルダ階層の自動リネーム・移動・統合</li>
+<li>ファイル内容に基づくタグ付け・カテゴリ仕分け</li>
+<li>共有リンクの一括発行・有効期限設定・棚卸し</li>
+<li>契約書・請求書・議事録などの自動分類とインデックス作成</li>
+<li>長期間アクセスのない古いファイルのアーカイブ提案</li>
+<li>顧客別・案件別フォルダの自動生成と初期テンプレ展開</li>
+</ul>
+
+<h2>3. 業務別活用例7選</h2>
+
+<h3>3-1. 案件フォルダの自動生成</h3>
+<p>新規受注が発生するたびに、Claude Codeへ「○○商事の案件フォルダを作って」と指示するだけで、Dropbox上に「案件名／契約書／請求書／納品物／議事録」の標準テンプレートが一括展開されます。命名規則のブレを根本から防げます。</p>
+
+<h3>3-2. 契約書・請求書の自動仕分け</h3>
+<p>受信フォルダにアップロードされたPDFをAIが内容判定し、契約書・請求書・見積書などの種別ごとに正しいフォルダへ自動移動。ファイル名も「日付_取引先名_書類種別」のルールで一括リネームできます。</p>
+
+<h3>3-3. 共有リンクの棚卸しと一括無効化</h3>
+<p>「3か月以上アクセスのない共有リンクを一覧化し、まとめて無効化したい」――こうした作業もChatで指示するだけ。退職者・解約済み顧客との共有リンクをAIが洗い出し、表にして提示します。</p>
+
+<h3>3-4. 議事録・打ち合わせメモの自動アーカイブ</h3>
+<p>議事録フォルダに保存されたMDやテキストファイルをAIが要約し、四半期ごとのサマリーを自動生成。古い議事録は年度別アーカイブフォルダへ自動移動できるため、検索性を落とさず履歴を残せます。</p>
+
+<h3>3-5. 顧客提案資料のバージョン管理</h3>
+<p>「提案書_v1〜v8まで散らばっているので、最新版だけ顧客フォルダに残して旧版をarchiveへ」といった整理も自動化。AIがファイル名と更新日時から最新版を判定し、提案途中の古いバージョンは履歴フォルダに退避します。</p>
+
+<h3>3-6. 月次バックアップと差分レポート</h3>
+<p>毎月末、AIが指定フォルダのファイル数・容量・新規追加分をスキャンし、差分レポートを生成。経営者は「今月の更新があったのはどこか」を一覧で確認できます。バックアップ漏れの早期発見にも有効です。</p>
+
+<h3>3-7. 退職・契約終了時の権限棚卸し</h3>
+<p>社員の退職・業務委託契約の終了タイミングで、対象アカウントが持つアクセス権限と共有リンクを一覧化し、不要なものを一括解除。属人化したアクセス管理を、AIに任せて常に最新の状態へ保てます。</p>
+
+<h2>4. 導入4ステップ</h2>
+
+<h3>ステップ1：Dropbox API（Dropbox App）の発行</h3>
+<p>Dropbox開発者向け管理画面で社内専用のアプリを作成し、フォルダ操作に必要な権限（ファイル読み書き、共有リンク管理など）を許可します。アクセストークンは社内の管理者のみが扱い、運用ログを残します。</p>
+
+<h3>ステップ2：Claude Codeのインストールと設定</h3>
+<p>業務PCにClaude Codeをセットアップし、Dropbox APIキーを安全な場所に格納。アクセス対象のフォルダや禁止操作（例：個人フォルダの書き換え禁止）を初期ルールとしてAIに記憶させます。</p>
+
+<h3>ステップ3：小さなフォルダで試験運用</h3>
+<p>いきなり全社フォルダに適用せず、特定の案件フォルダや議事録フォルダなど影響範囲の小さい場所から開始。AIが行う整理結果を担当者が目視確認し、ルールの過不足を洗い出します。</p>
+
+<h3>ステップ4：社内ルール化と定例タスク登録</h3>
+<p>運用が安定したら、「毎週月曜：先週分の議事録を要約」「月末：共有リンクの棚卸し」など定例タスクとして登録。担当者は実行ログをチェックするだけで、AIが日常的にDropboxを整えてくれる状態になります。</p>
+
+<h2>5. 運用上の注意点と社内ルール</h2>
+<p>AIに任せるからこそ、人間側でのガードレール設計が重要です。次の3点は最初に必ず決めておきましょう。</p>
+<blockquote>
+1. アクセス可能フォルダ・禁止フォルダを明文化する<br>
+2. 削除・上書きは必ずAIが「実行前に確認」する設定にする<br>
+3. 操作ログを残し、月1回担当者がレビューする
+</blockquote>
+<p>機密性の高い人事ファイルや財務情報は、別アカウント・別フォルダで物理的に分離するのが安全です。</p>
+
+<h2>6. よくある質問（FAQ）</h2>
+
+<h3>Q1. Dropboxの料金プランは何が必要ですか？</h3>
+<p>個人プランでも基本的なAPI連携は可能ですが、ビジネスプランの方が権限管理・監査ログ・容量の面で安心です。社内で複数人が使う場合はビジネスプランを推奨します。</p>
+
+<h3>Q2. 既存のフォルダ階層を壊してしまわないか不安です。</h3>
+<p>Claude Codeは事前に「移動先・新フォルダ作成内容」を提示し、確認後に実行する運用が可能です。試験運用フェーズでは「ドライラン（提案だけして実行しない）」モードで動かすのがおすすめです。</p>
+
+<h3>Q3. 非エンジニアでも本当に使えますか？</h3>
+<p>はい。基本操作は日本語のチャット指示で完結します。導入時のAPI設定・初期ルール作成だけ伴走支援を受ければ、その後は社内の事務担当者がそのまま運用できます。</p>
+
+<h2>7. まとめ：ファイル管理を「片付け業務」から「AIに任せる業務」へ</h2>
+<p>Dropboxは便利な反面、放っておくとフォルダのカオス化が進み、検索・引き継ぎ・監査の足を引っ張ります。Claude Codeと連携させることで、ファイル整理・共有管理・アーカイブ運用を日常的に自動化でき、本業に集中できる体制が作れます。属人化していたファイル管理を仕組み化したい中小企業ほど、効果を実感しやすい領域です。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート ¥3,000</h2>
+<p>Dropbox連携を含む、Claude Codeの初期セットアップ・社内ルール設計・運用支援をワンストップで提供します。非エンジニアの担当者でも安心して使えるよう、画面共有で丁寧に伴走します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p style="margin-top:30px;color:#888;font-size:0.9rem;">Piste｜中小企業向けAI業務自動化コンサルティング　／　Claude Code導入支援実績多数。月次のフォルダ整理に追われている方こそ、AIを「社内のファイル番」として活用してみてください。</p>
+
+</main>
+</body>
+</html>

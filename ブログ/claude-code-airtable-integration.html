@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Airtable連携でデータベース業務をAI自動化！中小企業の顧客・案件・在庫管理ガイド | Piste</title>
+<meta name="description" content="Claude CodeとAirtableを連携し、顧客管理・案件管理・在庫管理などのデータベース業務をAIで自動化する方法を中小企業向けに解説します。">
+<meta name="keywords" content="Claude Code,Airtable,データベース自動化,中小企業,業務自動化,AIコーディング">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#e8e8e8;line-height:1.8;}
+header{background:var(--dark);padding:20px 5%;border-bottom:1px solid var(--gold);}
+header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+header img{height:40px;}
+header ul{list-style:none;display:flex;gap:24px;}
+header a{color:#e8e8e8;text-decoration:none;font-size:14px;}
+header a:hover{color:var(--gold);}
+main{max-width:880px;margin:40px auto;padding:0 5%;}
+h1{color:var(--gold-light);font-size:30px;line-height:1.4;margin-bottom:20px;}
+h2{color:var(--gold);font-size:24px;margin-top:48px;margin-bottom:16px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);font-size:19px;margin-top:32px;margin-bottom:12px;}
+p{margin-bottom:18px;}
+ul,ol{margin:16px 0 16px 32px;}
+li{margin-bottom:8px;}
+table{width:100%;border-collapse:collapse;margin:24px 0;}
+th,td{padding:12px;border:1px solid #444;text-align:left;}
+th{background:var(--dark);color:var(--gold);}
+.toc{background:var(--dark);padding:24px;border-radius:8px;margin:32px 0;}
+.toc h3{margin-top:0;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#1a1a1a);border:2px solid var(--gold);padding:32px;border-radius:12px;margin:48px 0;text-align:center;}
+.cta h2{border:none;padding:0;text-align:center;}
+.cta a{display:inline-block;background:var(--gold);color:var(--black);padding:14px 40px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:16px;}
+.cta a:hover{background:var(--gold-light);}
+blockquote{border-left:4px solid var(--gold);padding:8px 16px;margin:16px 0;background:var(--dark);color:#ccc;}
+footer{background:var(--dark);padding:24px;text-align:center;color:#888;margin-top:60px;}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<ul>
+<li><a href="../index.html#service">サービス</a></li>
+<li><a href="../index.html#blog">ブログ</a></li>
+<li><a href="../index.html#contact">お問い合わせ</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Airtable連携でデータベース業務をAI自動化！中小企業の顧客・案件・在庫管理ガイド</h1>
+
+<p>「顧客リスト、案件管理、在庫管理…Airtableで業務データを管理しているけれど、手入力・転記・集計が多くて時間が取られている」——そんな中小企業の方に向けて、Claude CodeとAirtableを連携してデータベース業務をAI自動化する方法を解説します。</p>
+
+<div class="toc">
+<h3>目次</h3>
+<ol>
+<li>Claude Code × Airtable連携で何ができるか</li>
+<li>連携の準備（APIキー・MCP設定）</li>
+<li>活用事例1：問い合わせフォームから顧客レコード自動作成</li>
+<li>活用事例2：案件ステータスの自動更新と日次レポート</li>
+<li>活用事例3：在庫テーブルの欠品アラート自動化</li>
+<li>導入のロードマップ</li>
+<li>よくある質問</li>
+</ol>
+</div>
+
+<h2>1. Claude Code × Airtable連携で何ができるか</h2>
+<p>Claude CodeはAnthropic公式のAIコーディングCLIで、外部サービスとの連携（MCP／APIコール）に強みがあります。AirtableはノーコードのデータベースSaaSで、中小企業の顧客管理・案件管理・在庫管理・コンテンツ管理など幅広く使われています。両者を連携することで、以下のような業務が自然言語の指示だけで自動化できます。</p>
+<ul>
+<li>「先週問い合わせのあった企業を一覧化して」と話しかけるだけで、Airtableからフィルタ条件付きで抽出</li>
+<li>新規問い合わせメールの本文をAIが読み取り、Airtableの顧客テーブルに自動でレコード追加</li>
+<li>案件ステータスを自動更新し、停滞案件をピックアップ</li>
+<li>在庫が閾値を下回ったらアラート＆発注リスト生成</li>
+</ul>
+
+<h2>2. 連携の準備（APIキー・MCP設定）</h2>
+<h3>準備するもの</h3>
+<ul>
+<li>Airtableアカウントと対象ベース（Base）</li>
+<li>Personal Access Token（PAT）：Airtable管理画面の開発者設定から発行</li>
+<li>Claude Code（インストール済み）</li>
+</ul>
+<h3>セットアップの基本ステップ</h3>
+<ol>
+<li>AirtableでPATを発行し、対象ベースへの読み取り・書き込みスコープを付与</li>
+<li>Claude Codeの設定ファイルにAirtable用のMCPサーバーまたはAPIラッパースクリプトを登録</li>
+<li>「baseId」「tableName」「fieldName」をプロジェクト設定としてCLAUDE.mdに記載</li>
+<li>動作確認：「顧客テーブルから最新10件を表示して」と指示し、応答が返ることを確認</li>
+</ol>
+<blockquote>PATは絶対にコード内に直書きせず、環境変数または認証情報ディレクトリで管理してください。</blockquote>
+
+<h2>3. 活用事例1：問い合わせフォームから顧客レコード自動作成</h2>
+<p>HPの問い合わせフォームに新規の問い合わせが届いた際、その本文をClaude Codeに読み込ませてAirtableの「顧客」テーブルへ自動でレコード作成します。</p>
+<h3>自動化の流れ</h3>
+<ol>
+<li>新着問い合わせ本文をテキストファイルに保存</li>
+<li>Claude Codeに「この問い合わせ内容から会社名・氏名・業種・要件・温度感を抽出してAirtableの顧客テーブルに新規レコードとして追加して」と指示</li>
+<li>Claude Codeが本文を構造化し、Airtable APIで書き込み</li>
+<li>追加されたレコードIDを担当者に通知</li>
+</ol>
+<p>このフローを導入した中小企業では、1件あたり5〜10分かかっていた問い合わせ登録作業がほぼゼロになり、対応漏れも大幅に減少しました。</p>
+
+<h2>4. 活用事例2：案件ステータスの自動更新と日次レポート</h2>
+<p>Airtableで「案件管理」テーブルを運用している場合、Claude Codeで日次の自動レポートを作成できます。</p>
+<table>
+<tr><th>機能</th><th>内容</th></tr>
+<tr><td>停滞案件の抽出</td><td>「最終更新から7日以上経過」かつ「ステータス＝商談中」の案件をリスト化</td></tr>
+<tr><td>受注見込みの集計</td><td>各案件の金額×確度を掛けて月次見込み売上を算出</td></tr>
+<tr><td>担当者別の進捗</td><td>担当者別に案件数・進捗率・次のアクションを整理</td></tr>
+<tr><td>日次サマリー</td><td>毎朝9時に上記をMarkdownで生成し、社内チャットに投稿</td></tr>
+</table>
+<p>Claude Codeのスケジュール機能と組み合わせれば、社長や営業マネージャーが朝のコーヒーを飲みながら状況把握できる「AI営業秘書」のような体制が作れます。</p>
+
+<h2>5. 活用事例3：在庫テーブルの欠品アラート自動化</h2>
+<p>飲食・小売・EC・製造業など在庫を抱える中小企業では、Airtableの「在庫」テーブルとClaude Codeを連携することで、欠品リスクを早期発見できます。</p>
+<ul>
+<li>在庫数 ≤ 安全在庫数 となったSKUを毎時抽出</li>
+<li>過去30日の出荷数から欠品予測日を計算</li>
+<li>仕入先・推奨発注数とともに発注リストを生成</li>
+<li>発注後はAirtableに「発注済」ステータスを自動更新</li>
+</ul>
+<p>表計算ソフトで手動管理していたときは「気づいたら欠品」が頻発していた現場でも、AIが裏で常時監視することで欠品ゼロを実現できた事例があります。</p>
+
+<h2>6. 導入のロードマップ</h2>
+<ol>
+<li><strong>1週目</strong>：AirtableベースをAIから参照できるようにする（読み取り専用で動作確認）</li>
+<li><strong>2週目</strong>：1業務を選んで自動化（例：問い合わせ→顧客レコード作成）</li>
+<li><strong>3週目</strong>：日次レポートと欠品アラートを追加</li>
+<li><strong>4週目</strong>：他部署のAirtable運用にも展開し、業務全体をAI化</li>
+</ol>
+<p>いきなり全自動を目指さず、1業務ずつ自動化していくのが成功のコツです。</p>
+
+<h2>7. よくある質問</h2>
+<h3>Q. プログラミング知識が無くても導入できますか</h3>
+<p>はい。Claude Code自体が自然言語で操作でき、Airtable連携のセットアップも初回だけ専門家がサポートすれば、運用は誰でも可能です。</p>
+<h3>Q. 既存のAirtable構成を変えないと使えませんか</h3>
+<p>いいえ。既存のテーブル・フィールドのまま連携できます。むしろ「使いにくい構成だった」場合に、AIで整理しなおすことも可能です。</p>
+<h3>Q. セキュリティは大丈夫ですか</h3>
+<p>PATのスコープを最小権限に設定し、対象ベースのみアクセス可能にすれば安全です。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート ¥3,000〜</h2>
+<p>Claude CodeとAirtableの連携初期設定、自動化ワークフロー設計、社内マニュアル作成までワンストップでサポートします。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+
+<p>当社では中小企業向けにClaude Code活用支援を多数提供しています。Airtableに限らず、Notion・スプレッドシート・kintoneなど既存ツールのAI化のご相談もお気軽にどうぞ。</p>
+</main>
+<footer>&copy; 2026 Piste</footer>
+</body>
+</html>

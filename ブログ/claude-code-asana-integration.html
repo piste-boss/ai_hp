@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Asana連携でタスク管理をAI自動化！中小企業のプロジェクト進行効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとAsanaを連携し、議事録からのタスク自動切り出し・進捗ダイジェスト・週次レポートまで非エンジニアでも導入できる方法を解説。中小企業向け活用5選と4ステップ導入。">
+<meta name="keywords" content="Claude Code,Asana連携,タスク管理,プロジェクト管理,中小企業,DX,生成AI,業務自動化">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Asana連携でタスク管理をAI自動化！中小企業のプロジェクト進行効率化ガイド</h1>
+
+<p>「Asanaを導入したけど、結局タスクの登録・更新が属人化していて、現場で活用されていない」「複数プロジェクトの進捗を毎週確認するだけで半日が消える」——そんな悩みを抱える中小企業の経営者・PM向けに、Anthropic公式のAIコーディングツール <strong>Claude Code</strong> と <strong>Asana</strong> を連携させることで、タスク管理・進捗集約・週次レポート作成まで一気通貫で自動化する方法を、非エンジニアでも分かるように解説します。</p>
+
+<h2>1. 中小企業のAsana運用にありがちな3つの壁</h2>
+<p>Asanaは世界で広く使われているタスク管理ツールですが、中小企業の現場では以下のような課題が頻発します。</p>
+<ul>
+<li><strong>タスク登録が属人化</strong>：会議や顧客対応で発生したタスクが、特定のメンバーしか登録できず、ボトルネックになる</li>
+<li><strong>進捗確認に時間がかかる</strong>：マネージャーが複数プロジェクトを横断確認するだけで毎日1〜2時間が消える</li>
+<li><strong>週次・月次レポート作成が手作業</strong>：Asanaの状態をスプレッドシートに転記して整形する作業が現場の負担になっている</li>
+</ul>
+<p>これらの「Asanaに人を合わせる」運用を、Claude CodeとのAPI連携で「Asanaに業務フローを合わせる」AI運用に転換できます。</p>
+
+<h2>2. Claude Code × Asana連携でできること</h2>
+<p>Claude Code は AnthropicのAIコーディングツールで、Asana の公式 REST API を介して、以下のような操作を自然言語の指示だけで行えます。</p>
+<table>
+<thead><tr><th>カテゴリ</th><th>自動化できる業務例</th></tr></thead>
+<tbody>
+<tr><td>タスク登録</td><td>議事録テキストからタスクを自動切り出しして担当者ごとに登録</td></tr>
+<tr><td>進捗集約</td><td>全プロジェクトの未完了タスクを担当者別・期限別にレポート化</td></tr>
+<tr><td>ステージ更新</td><td>完了報告メールを読んでステータスを自動更新、次タスクを提案</td></tr>
+<tr><td>期限管理</td><td>期限超過タスクを自動抽出し担当者ごとに通知文を生成</td></tr>
+<tr><td>週次レポート</td><td>今週完了・今週新規・来週期限のサマリーを自動作成</td></tr>
+</tbody>
+</table>
+<p>Claude Codeは「指示→計画→API実行→結果報告」を一連の流れでこなすため、ノーコードツールよりも柔軟で、Pythonなどでスクラッチ実装するよりも工数が圧倒的に少なくて済みます。</p>
+
+<h2>3. 中小企業向け活用5選</h2>
+
+<h3>① 議事録からタスクを自動切り出し</h3>
+<p>Zoom議事録や対面の打ち合わせメモをClaude Codeに渡すと、「決定事項」「ToDo」「担当者」「期限」を抽出し、Asanaの該当プロジェクトにタスクを自動登録します。会議後の「タスク登録漏れ」がゼロになります。</p>
+
+<h3>② 朝の進捗ダイジェスト自動配信</h3>
+<p>毎朝8時に、Claude CodeがAsana APIから全プロジェクトの状態を取得し、「昨日完了したタスク」「今日期限のタスク」「停滞中のタスク（48時間以上動きなし）」をマネージャー向けにまとめます。マネージャーは1分で全体把握できます。</p>
+
+<h3>③ 完了報告メールからのステータス自動更新</h3>
+<p>担当者から「○○の見積もり、先方に送付完了しました」というメールが届いたら、Claude Codeがメール内容を解析してAsanaの該当タスクを「完了」に更新し、次のフェーズタスク（フォロー連絡など）を自動生成します。</p>
+
+<h3>④ 期限超過タスクの担当者別アラート</h3>
+<p>毎週金曜の夕方、期限を過ぎている未完了タスクをClaude Codeが担当者ごとに整理し、「○○さんへ：期限超過3件、対応方針をご確認ください」というアラート文を担当者ごとに作成します。マネージャーは内容を確認して送信ボタンを押すだけです。</p>
+
+<h3>⑤ 週次・月次レポートの自動生成</h3>
+<p>「今週完了タスク」「来週期限の重要タスク」「プロジェクト別の進捗率」「リソース負荷の偏り」を含む週次サマリーを、Claude CodeがAsanaのデータから自動生成します。経営会議用のレポート作成時間が90%削減されます。</p>
+
+<h2>4. 業種別の活用シーン</h2>
+<ul>
+<li><strong>士業・コンサル業</strong>：複数クライアント案件を横断し、「来週期限のクライアント納品物リスト」「担当者別の稼働偏り」を自動レポート化</li>
+<li><strong>製造業</strong>：受注ごとに「設計→部材手配→製造→検査→出荷」のテンプレートタスクを自動展開、各工程の遅延を検知して関係者に通知</li>
+<li><strong>Web制作・広告代理店</strong>：クライアント案件ごとに「ヒアリング→構成→デザイン→実装→修正→納品」をテンプレ化し、修正依頼メールを起点にタスクを自動追加</li>
+<li><strong>不動産仲介・建築業</strong>：物件案件ごとの「内見→申込→契約→引渡」を管理し、必要書類リストもClaude Codeが自動生成</li>
+<li><strong>EC事業</strong>：出店プラットフォーム別の「商品登録→撮影→ページ公開→販促→在庫補充」のサイクルをタスク化し、対応漏れを防止</li>
+</ul>
+
+<h2>5. 非エンジニアでも導入できる4ステップ</h2>
+<ol>
+<li><strong>業務棚卸し</strong>：Asanaで管理したい業務フローを書き出し、「議事録からのタスク登録」「進捗ダッシュボード」「週次レポート」など3つに絞って優先順位を決める</li>
+<li><strong>Asana APIトークンの発行</strong>：Asanaのアカウント設定から個人アクセストークンを発行（数分で完了）。Claude Codeの設定ファイルに環境変数として保存</li>
+<li><strong>Claude Codeへの業務指示</strong>：「議事録からタスクを切り出して、プロジェクト『○○案件』に登録するスキルを作って」のような自然言語で指示し、必要なAPI呼び出しコードを生成・テスト実行</li>
+<li><strong>定時実行と人による最終確認</strong>：毎朝・毎週金曜などのタイミングで自動実行されるようスケジュール機能でセット。重要な通知は必ず人が最終確認してから送信</li>
+</ol>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>APIトークンの権限を最小化</strong>：個人アクセストークンは、業務上必要なプロジェクトのみアクセスできるようにAsana側のチーム・プロジェクト権限で絞り込む</li>
+<li><strong>重要操作は必ず人の承認を経る</strong>：契約や納品など重大なフェーズの完了処理はマネージャーの最終承認を経るフローに。Claude Codeは「ドラフト作成」、人は「最終承認」が原則</li>
+<li><strong>変更履歴の記録</strong>：Claude Codeが自動更新したタスクのコメント欄に「AI自動更新（2026/5/17 09:00）」のような記録を残し、追跡性を担保</li>
+<li><strong>運用責任者の明確化</strong>：「Claude Codeの設定変更ができる人」「APIトークンを管理する人」を1〜2名に絞り、属人化と漏洩リスクを抑える</li>
+<li><strong>障害時のフォールバック</strong>：Asana API障害時に業務が止まらないよう、「APIエラー時は管理者にメール通知＋手動対応用URLを送信する」フォールバックを組み込む</li>
+</ul>
+
+<h2>7. よくある質問（FAQ）</h2>
+
+<h3>Q. Asanaの無料プランでも使えますか？</h3>
+<p>はい、Asana無料プランでもAPIは利用可能です。ただしカスタムフィールドやポートフォリオ機能は有料プランが必要なため、活用範囲に応じてプランを検討してください。</p>
+
+<h3>Q. プログラミング未経験ですが導入できますか？</h3>
+<p>可能です。Claude Codeは自然言語の指示でコードを生成・実行するため、コードを読み書きできなくても運用できます。初期構築だけ伴走支援を受けると、その後の運用は社内で完結できます。</p>
+
+<h3>Q. データ漏洩が心配です</h3>
+<p>APIトークンの権限を最小化し、Claude Codeの実行環境を信頼できる端末に限定することで、リスクを大幅に下げられます。機密性の高いプロジェクトは別アカウント・別トークンで分離する設計も可能です。</p>
+
+<h3>Q. 既にスプレッドシートで管理しています。乗り換える価値はありますか？</h3>
+<p>スプレッドシート運用は属人化と更新漏れが起きやすく、規模拡大とともに破綻します。Asana×Claude Code化により、入力負担を変えずに「自動集計・自動レポート」が得られるため、月次・週次の管理工数が大幅に減ります。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>「自社でも始めてみたいけれど、何から手を付ければよいかわからない」という方向けに、Claude Codeの初期セットアップ・業務テンプレート作成・Asana連携の最初の自動化までを丸ごとサポートします。</p>
+<a href="../index.html#contact">サポートの詳細を見る</a>
+</div>
+
+<blockquote>
+70社以上のAI導入を支援してきた知見をベースに、Asanaだけでなく既存の業務ツールを横断したタスク管理自動化までを一気通貫でご提案します。
+</blockquote>
+
+</main>
+</body>
+</html>

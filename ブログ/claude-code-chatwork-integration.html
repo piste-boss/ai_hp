@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Chatwork連携で社内コミュニケーションをAI自動化！中小企業のChatwork運用効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとChatworkを連携し、メッセージ要約・タスク自動化・FAQ返信・日報集計をAIに任せる方法を解説。中小企業向けの活用5選と非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Chatwork,ビジネスチャット,業務自動化,中小企業,DX,生成AI,コミュニケーション">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Chatwork連携で社内コミュニケーションをAI自動化！中小企業のChatwork運用効率化ガイド</h1>
+
+<p>「Chatworkに通知が溢れて重要なメッセージを見落としがち」「タスク化や議事録化がチャットの中で止まってしまう」「定型問い合わせや日報チェックに毎日時間が取られる」と感じていませんか？</p>
+
+<p>Claude CodeとChatworkを連携させると、メッセージ要約・タスク自動化・通知振り分け・FAQ自動応答までを一気通貫でAIに任せられ、<strong>社内のコミュニケーションコストを最大半分以下</strong>に圧縮できます。本記事では、中小企業向けに具体的な活用5選と非エンジニアでも実装できる4ステップを解説します。</p>
+
+<h2>1. Claude Code × Chatwork 連携でできること</h2>
+<p>Chatwork単体は日本企業に馴染みやすいビジネスチャットですが、メッセージは「人が読んで判断・対応する」前提で設計されています。Claude Codeを連携させると、メッセージの読み取り・要約・タスク化・自動返信までをAIが肩代わりできます。</p>
+<table>
+<thead><tr><th>従来のChatwork単体</th><th>Claude Code × Chatwork</th></tr></thead>
+<tbody>
+<tr><td>大量メッセージを目視で確認</td><td>重要度別にAIが要約し、社長・部門長へダイジェスト配信</td></tr>
+<tr><td>タスク化はメッセージから手動転記</td><td>「対応必要」発言をAIが検知して自動でタスク化</td></tr>
+<tr><td>同じFAQを何度も人が回答</td><td>既出質問への回答テンプレを学習しAIが下書き</td></tr>
+<tr><td>日報チェックに毎日時間</td><td>全員の日報をAIがまとめ、責任者は要点だけ確認</td></tr>
+</tbody>
+</table>
+<p>つまり「Chatworkを開いて全部読む」運用から、「<strong>AIがまとめ → 担当者は判断と対応だけ</strong>」のワークフローへ切り替えられるのが最大のメリットです。</p>
+
+<h2>2. 中小企業の活用シーン5選</h2>
+
+<h3>① ルームのメッセージをAIが要約・ダイジェスト配信</h3>
+<p>役員・営業・現場など複数ルームに散らばる重要発言を、Claude Codeが日次・週次でまとめて経営者へダイジェスト配信。<strong>社長が30分かけて巡回していた確認作業が、毎朝3分で完了</strong>します。</p>
+
+<h3>② 「対応必要」発言を自動タスク化</h3>
+<p>「これお願い」「明日までに」「対応漏れてる」といった発言パターンをAIが検知し、Chatworkのタスク機能に自動登録。<strong>抜け漏れによる失注・クレームを未然に防止</strong>できます。</p>
+
+<h3>③ FAQ問い合わせへの自動返信ドラフト</h3>
+<p>社内・取引先からの定型質問（納期確認・請求書再発行・営業時間など）に対し、Claude Codeが過去回答ログをもとに返信文を下書き。<strong>担当者は内容を確認して送信ボタンを押すだけ</strong>になります。</p>
+
+<h3>④ 日報の自動集計・経営ダッシュボード化</h3>
+<p>各メンバーが日次で投稿する日報をAIが読み取り、商談数・受注額・トラブル件数を構造化データに変換。<strong>Excel手集計をやめて、リアルタイムで経営状況が見える</strong>仕組みが組めます。</p>
+
+<h3>⑤ 議事録ルームの整理・ナレッジ化</h3>
+<p>議事録ルームに流れた決定事項・宿題・期限をAIが抽出し、案件別に再構成。<strong>過去の決定がどこにあるか分からない問題が解消</strong>され、新人教育にも転用可能なナレッジ資産が積み上がります。</p>
+
+<h2>3. 非エンジニア向け 導入4ステップ</h2>
+<ol>
+<li><strong>Chatwork APIトークンを発行</strong>：Chatworkの個人設定からAPIトークンを発行。法人アカウントの場合は管理者権限のあるアカウントで発行するのが運用上スムーズです</li>
+<li><strong>Claude Codeから接続できる仕組みを用意</strong>：Claude CodeにChatwork APIのトークンと「ルームID取得・メッセージ取得・投稿・タスク作成」の操作手順を渡すだけで、自然言語の指示で動く状態を作る</li>
+<li><strong>自動化したい運用を一つだけ動かしてみる</strong>：「日報ルームから昨日の日報を読み、要約を社長ルームに投稿する」など、効果が見えやすい運用を一つだけ選定し、最小単位で効果検証</li>
+<li><strong>定期実行・通知ルールを整え本番運用へ</strong>：スケジュール機能やイベント駆動で「毎朝7時に日報サマリ」「対応必要キーワード検知時に自動タスク化」など定期化し、業務インフラに昇格</li>
+</ol>
+
+<h2>4. 導入時の注意点</h2>
+<ul>
+<li><strong>権限管理</strong>：APIトークンは閲覧範囲が広いため、必ず管理者で適切に保管する</li>
+<li><strong>個人情報の扱い</strong>：取引先名・契約金額などはAIへの入力可否を社内ルール化する</li>
+<li><strong>完全自動投稿は段階的に</strong>：いきなり外部宛メッセージを自動送信せず、最初は「下書きまでAI、送信は人」の構成で安全に開始する</li>
+<li><strong>既存運用との並走</strong>：現場が混乱しないよう、最低2週間は従来のフローと並走させながら切替を行う</li>
+</ul>
+
+<h2>5. よくある質問</h2>
+<h3>Q. Chatworkのフリープランでも利用できますか？</h3>
+<p>A. APIは利用できますが、メッセージ取得期間や接続数に制約があります。本格運用ならビジネスプラン以上を推奨します。</p>
+
+<h3>Q. SlackやMicrosoft Teamsとの同時利用は可能ですか？</h3>
+<p>A. 可能です。Claude Codeは複数チャットツールを横断して扱えるため、ツール統合のハブとして活用できます。</p>
+
+<h3>Q. 社員のメッセージをAIに読ませることに抵抗があります。</h3>
+<p>A. 監査ログ・除外ルームの設定を組み合わせれば、対象範囲を業務ルームのみに限定できます。社内告知のうえで合意形成をしてから運用するのが望ましいです。</p>
+
+<h3>Q. 実装は何日くらいかかりますか？</h3>
+<p>A. 自動化したい運用1本あたり、要件整理から本番稼働まで概ね1〜2週間が目安です。</p>
+
+<div class="cta">
+<h2>Claude Code × Chatwork連携 導入サポート（¥3,000）</h2>
+<p>業務棚卸し → Claude Code設定 → Chatwork API連携設計 → 1運用の自動化までをまとめてサポート。中小企業の経営者・担当者から多数の導入実績があります。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+
+<p>Chatworkはすでに多くの中小企業で日常インフラになっている一方、「メッセージを読む・タスクに落とす・返信する」工数は依然として人に集中しています。Claude Codeを連携させれば、この<strong>コミュニケーション3工程をAIに肩代わりさせ、人は判断と対応だけに集中できる</strong>仕組みが現実的に組めます。AI導入の中で最も成果が見えやすい領域の一つなので、まずは1ルームから試してみてください。</p>
+</main>
+</body>
+</html>

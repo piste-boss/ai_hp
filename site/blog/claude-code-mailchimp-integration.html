@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+<title>Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化！中小企業のメールマーケティング効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとMailchimpを連携し、メルマガ企画・原稿作成・セグメント抽出・配信予約・効果測定までを一括自動化する方法を、中小企業向けに解説します。">
+<meta name="keywords" content="Claude Code,Mailchimp,メルマガ自動化,メールマーケティング,中小企業,業務自動化">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#e8e8e8;line-height:1.8;}
+header{background:var(--dark);padding:20px 5%;border-bottom:1px solid var(--gold);}
+header nav{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;}
+header img{height:40px;}
+header ul{list-style:none;display:flex;gap:24px;}
+header a{color:#e8e8e8;text-decoration:none;font-size:14px;}
+header a:hover{color:var(--gold);}
+main{max-width:880px;margin:40px auto;padding:0 5%;}
+h1{color:var(--gold-light);font-size:30px;line-height:1.4;margin-bottom:20px;}
+h2{color:var(--gold);font-size:24px;margin-top:48px;margin-bottom:16px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);font-size:19px;margin-top:32px;margin-bottom:12px;}
+p{margin-bottom:18px;}
+ul,ol{margin:16px 0 16px 32px;}
+li{margin-bottom:8px;}
+table{width:100%;border-collapse:collapse;margin:24px 0;}
+th,td{padding:12px;border:1px solid #444;text-align:left;}
+th{background:var(--dark);color:var(--gold);}
+.toc{background:var(--dark);padding:24px;border-radius:8px;margin:32px 0;}
+.toc h3{margin-top:0;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#1a1a1a);border:2px solid var(--gold);padding:32px;border-radius:12px;margin:48px 0;text-align:center;}
+.cta h2{border:none;padding:0;text-align:center;}
+.cta a{display:inline-block;background:var(--gold);color:var(--black);padding:14px 40px;border-radius:6px;text-decoration:none;font-weight:700;margin-top:16px;}
+.cta a:hover{background:var(--gold-light);}
+blockquote{border-left:4px solid var(--gold);padding:8px 16px;margin:16px 0;background:var(--dark);color:#ccc;}
+footer{background:var(--dark);padding:24px;text-align:center;color:#888;margin-top:60px;}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<ul>
+<li><a href="../index.html#service">サービス</a></li>
+<li><a href="../index.html#blog">ブログ</a></li>
+<li><a href="../index.html#contact">お問い合わせ</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化！中小企業のメールマーケティング効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-mailchimp-integration.jpg" alt="Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「メルマガを定期的に出したいのに、文面作成と配信予約だけで毎週半日かかる」「Mailchimpの管理画面を開く時間がない」——そんな悩みを抱える中小企業経営者の方は多いのではないでしょうか。本記事では、Anthropic公式のAIコーディングツール「Claude Code」とMailchimpを連携させ、メルマガの企画・原稿作成・セグメント抽出・配信予約・効果測定まで一括自動化する方法を解説します。</p>
+
+<div class="toc">
+<h3>目次</h3>
+<ol>
+<li>Claude Code × Mailchimp連携で実現できること</li>
+<li>なぜ中小企業にメルマガ自動化が必要なのか</li>
+<li>連携の全体像と必要な準備</li>
+<li>具体的な活用シーン7選</li>
+<li>自動化フローのサンプル構成</li>
+<li>導入時に押さえるべきポイント</li>
+<li>よくある質問</li>
+</ol>
+</div>
+
+<h2>1. Claude Code × Mailchimp連携で実現できること</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-mailchimp-integration-01.jpg" alt="Claude Code × Mailchimp連携で実現できること" style="width: 100%; height: auto; display: block;">
+</div>
+<p>Claude Codeはターミナル上で動くAIコーディングツールで、自然言語で業務指示を出すと、API呼び出しやファイル操作、ブラウザ自動化までこなしてくれます。Mailchimpの公式APIと組み合わせることで、次の作業がほぼ全自動になります。</p>
+<ul>
+<li>配信したい内容を口頭で伝えるだけで、件名・本文・プレビューテキストをAIが下書き</li>
+<li>過去の開封率データを参照し、開封されやすい件名パターンを学習</li>
+<li>購読者リストから条件に合うセグメントを自動抽出</li>
+<li>A/Bテスト用の2バージョン同時生成と配信予約</li>
+<li>配信後の開封率・クリック率を取得し、レポートとしてマークダウンで保存</li>
+</ul>
+
+<h2>2. なぜ中小企業にメルマガ自動化が必要なのか</h2>
+<p>メルマガはSNSと違いアルゴリズムに左右されず、読者に直接届く強力な集客チャネルです。しかし運用が続かない最大の理由は「手間」です。</p>
+<table>
+<tr><th>課題</th><th>手作業の場合</th><th>自動化後</th></tr>
+<tr><td>文面作成</td><td>1本あたり60〜90分</td><td>5〜10分（AIドラフト+人の修正）</td></tr>
+<tr><td>セグメント抽出</td><td>リスト確認・タグ付け30分</td><td>自動条件抽出で1分以内</td></tr>
+<tr><td>配信予約</td><td>管理画面操作15分</td><td>コマンド1行で予約完了</td></tr>
+<tr><td>効果測定</td><td>翌日に手動で集計</td><td>自動レポート生成</td></tr>
+</table>
+<p>月4本配信する場合、手作業では月6時間以上かかっていた業務が、Claude Code連携によって1時間以内に短縮できます。</p>
+
+<h2>3. 連携の全体像と必要な準備</h2>
+<h3>3-1. Mailchimp側の準備</h3>
+<ul>
+<li>Mailchimpアカウント（Free プランから利用可能）</li>
+<li>APIキーの発行（Account → Extras → API keys から取得）</li>
+<li>配信元アドレスの認証完了</li>
+<li>メルマガ用のオーディエンス（リスト）作成済み</li>
+</ul>
+<h3>3-2. Claude Code側の準備</h3>
+<ul>
+<li>公式CLIのインストール</li>
+<li>作業ディレクトリにメルマガ用フォルダを作成</li>
+<li>環境変数ファイルにAPIキーを保存（権限は本人のみ）</li>
+<li>メルマガのトーン・読者像・禁止表現をまとめたメモリファイル</li>
+</ul>
+<h3>3-3. 役割分担</h3>
+<table>
+<tr><th>担当</th><th>内容</th></tr>
+<tr><td>人間</td><td>企画方針、最終確認、配信承認</td></tr>
+<tr><td>Claude Code</td><td>原稿作成、API操作、データ取得、レポート出力</td></tr>
+<tr><td>Mailchimp</td><td>配信、開封・クリック計測、購読者管理</td></tr>
+</table>
+
+<h2>4. 具体的な活用シーン7選</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-mailchimp-integration-02.jpg" alt="具体的な活用シーン7選" style="width: 100%; height: auto; display: block;">
+</div>
+<h3>シーン1：週次メルマガの企画から配信まで</h3>
+<p>「今週は新サービスの紹介を一本出したい」とClaude Codeに伝えると、過去のメルマガを参照しつつ件名候補3つ・本文・プレビューテキストを生成し、Mailchimpへ下書き登録まで一気に行います。</p>
+<h3>シーン2：購読者セグメント別の出し分け</h3>
+<p>「過去30日開封の既存顧客」「3ヶ月未開封の休眠層」「新規登録から7日以内」など条件別にセグメントを抽出し、それぞれに最適化した文面を別々に下書きできます。</p>
+<h3>シーン3：A/Bテストの自動セットアップ</h3>
+<p>件名違い・本文違いの2バージョンを自動生成し、MailchimpのA/B機能に登録。配信完了後の結果を取得し、分析メモまで作成します。</p>
+<h3>シーン4：定期送信パターンのテンプレ化</h3>
+<p>誕生日メール・休眠復活メール・月次振り返りなどの定期送信を、Claude Codeのスキルとして保存し、コマンド一発で実行できる仕組みにします。</p>
+<h3>シーン5：配信結果の週次レポート</h3>
+<p>Mailchimp API経由で開封率・クリック率・購読解除数を取得し、マークダウン形式でレポートを保存。社内共有用のPDF変換まで自動化できます。</p>
+<h3>シーン6：未開封者へのフォローアップ配信</h3>
+<p>前回未開封だった購読者だけを対象に、件名を変えて再配信する仕組みを組めます。開封率が20%向上した事例もあります。</p>
+<h3>シーン7：顧客接点データの一元化</h3>
+<p>問い合わせ管理ツール・予約管理ツールから新規顧客を取得し、Mailchimpの該当オーディエンスに自動登録。タグも付与され、配信セグメントに即反映されます。</p>
+
+<h2>5. 自動化フローのサンプル構成</h2>
+<ol>
+<li>配信ネタ収集（自社ブログ・顧客の質問・業界ニュース）</li>
+<li>文面ドラフト作成（件名3案／本文／プレビューテキスト）</li>
+<li>Mailchimp連携（対象オーディエンス→セグメント→キャンペーン作成→予約）</li>
+<li>人間による最終確認</li>
+<li>配信実行（承認後）</li>
+<li>配信翌日のレポート生成（開封率／クリック率／改善案）</li>
+</ol>
+<p>このフローを1つのスキルとして登録しておけば、「今週のメルマガ作って」とClaude Codeに伝えるだけで、ステップ1〜3が自動進行します。</p>
+
+<h2>6. 導入時に押さえるべきポイント</h2>
+<ul>
+<li><strong>ブランドトーンの統一</strong>：である調／ですます調、絵文字使用可否、禁止表現リストをメモリファイルにまとめる</li>
+<li><strong>APIキーの安全な管理</strong>：環境変数ファイルに保存、ファイル権限を制限</li>
+<li><strong>配信予約は承認制</strong>：下書きまで自動、配信は人が承認</li>
+<li><strong>テスト配信を必ず実施</strong>：スマホ表示・ダークモード表示もチェック</li>
+<li><strong>購読解除リンクの保護</strong>：Mailchimp側で自動付与されるリンクは編集・削除しない</li>
+</ul>
+<blockquote>完全自動配信ではなく「下書きまで自動・配信は人が承認」という運用が、誤配信リスクを抑えつつ業務時間を大幅短縮する最適バランスです。</blockquote>
+
+<h2>7. よくある質問</h2>
+<h3>Q. プログラミングが全くできなくても使えますか</h3>
+<p>はい。Claude Codeは自然言語で指示するため、コードを書く必要はありません。最初の設定だけサポートを受ければ、その後は普通の会話で運用できます。</p>
+<h3>Q. Mailchimp以外でも同じことができますか</h3>
+<p>APIが公開されているSendGrid、Brevo、Benchmark Email などでも同様の連携が可能です。</p>
+<h3>Q. 個人情報の取り扱いは大丈夫ですか</h3>
+<p>購読者リストはMailchimp側で管理され、Claude Codeにはセグメント抽出に必要な範囲のみが渡される設計にできます。</p>
+<h3>Q. 月にどれくらいの工数削減になりますか</h3>
+<p>月4本配信の場合、平均で月6〜8時間の削減が見込めます。配信本数を増やしても工数は比例しません。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート ¥3,000〜</h2>
+<p>Claude CodeとMailchimpの連携設定、初期スキルの作成、運用フロー設計までワンストップでサポートします。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+
+<p>当社では中小企業向けにClaude Code活用支援を多数提供しています。メルマガ運用に限らず、業務自動化全般のご相談もお気軽にどうぞ。</p>
+</main>
+<footer>&copy; 2026 Piste</footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Shopify連携でECサイト運営をAI自動化！中小企業のオンライン売上アップガイド | Piste</title>
+<meta name="description" content="Claude CodeとShopifyを連携し、商品登録・受注処理・在庫管理・顧客対応・レビュー分析までEC運営をAI自動化する方法を解説。中小企業向け活用5選と導入5ステップ、実践プロンプト例を紹介。">
+<meta name="keywords" content="Claude Code,Shopify連携,EC自動化,ECサイト運営,在庫管理,中小企業,DX,生成AI">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+pre{background:#0d0d0d;color:#d8d8d8;padding:14px;border-radius:8px;overflow-x:auto;font-family:'Inter',monospace;margin:15px 0;}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Shopify連携でECサイト運営をAI自動化！中小企業のオンライン売上アップガイド</h1>
+
+<p>「ECサイトを立ち上げたものの、商品登録・受注処理・顧客対応・在庫管理に追われて、本来やりたい商品開発や販促に時間が回らない」——中小企業や個人経営のEC事業者なら、誰もが直面する悩みです。</p>
+
+<p>そんな日々の作業を、AnthropicのAIコーディングツール「<strong>Claude Code</strong>」とECプラットフォーム「<strong>Shopify</strong>」を連携させることで、ほぼ自動化できる時代になりました。本記事では、Claude Code × Shopify連携で実現できるEC運営の自動化と、中小企業がオンライン売上を伸ばすための実践ガイドを解説します。</p>
+
+<h2>1. ECサイト運営の典型的な悩みとAI自動化の方向性</h2>
+<p>中小企業のEC担当者が抱える悩みは、以下のように整理できます。</p>
+<ul>
+<li>商品登録に時間がかかる（説明文・画像・SEO・カテゴリ設定）</li>
+<li>受注ごとに発送ステータスを手動で更新している</li>
+<li>在庫切れ・売れ筋の把握が遅れて機会損失が出る</li>
+<li>顧客からの質問対応に追われ、新商品開発に時間が割けない</li>
+<li>売上データを集計して施策に活かす余裕がない</li>
+</ul>
+<p>これらは、いずれも「ルール化できる定型業務」であり、AIエージェントとShopify APIを連携させれば、人間が手を動かす時間を大幅に削減できます。</p>
+
+<h2>2. Claude Codeとは？ECオーナーが知るべき基本</h2>
+<p>Claude Codeは、Anthropic社が提供する公式CLI（コマンドラインインターフェース）型のAIコーディングツールです。</p>
+<table>
+<thead><tr><th>項目</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>提供元</td><td>Anthropic</td></tr>
+<tr><td>形式</td><td>コマンドライン操作（プログラミング知識不要のスキル機能あり）</td></tr>
+<tr><td>強み</td><td>自然言語で指示するだけで、ファイル操作・外部API連携・ブラウザ操作までこなす</td></tr>
+<tr><td>連携範囲</td><td>Shopify、Notion、Googleスプレッドシート、Slack、Gmailなど多数</td></tr>
+</tbody>
+</table>
+<p>「プログラミングはわからないが、Excelの関数や基本的なPC操作はできる」というレベルの方でも、テンプレート化された手順（スキル）を呼び出すだけで業務を自動化できる仕組みが整っています。</p>
+
+<h2>3. Shopify連携で自動化できる5つのEC業務</h2>
+
+<h3>3-1. 商品登録の自動化</h3>
+<p>商品名・特徴・素材・サイズ・ターゲット顧客を入力するだけで、AIがSEOを意識した商品タイトル、購買意欲を高める商品説明文、メタディスクリプション、適切なタグ・カテゴリ、関連商品との内部リンク候補までを自動生成します。外注ライターに依頼していた商品ページ作成を、社内で1点あたり数分で完成させられます。</p>
+
+<h3>3-2. 在庫・売上のダッシュボード自動更新</h3>
+<p>ShopifyのAPIから売上・在庫データを取得し、Googleスプレッドシートやローカルファイルに自動転記する仕組みを構築できます。毎朝、昨日の売上・受注件数・平均単価をレポート化し、在庫切れ・在庫過剰の商品をリストアップ、カテゴリ別の売上推移を可視化することで「数字を見る習慣」をAIが代行します。</p>
+
+<h3>3-3. 受注処理・発送ステータスの一括更新</h3>
+<p>定型的な受注対応（在庫引当→発送準備→ステータス更新→配送通知）を、ルール化したワークフローとして実行できます。入金確認済みの注文を抽出、配送業者の伝票番号を一括登録、発送完了通知のテンプレートを自動作成、在庫数を自動でマイナス計上、までを連動させられます。</p>
+
+<h3>3-4. 顧客からの質問対応のドラフト作成</h3>
+<p>商品ページに寄せられる質問や購入後のご相談を、AIが下書きしてくれます。「サイズ感を教えてほしい」「素材は何？」などの定番質問はテンプレート即返信、クレーム対応はAIが状況を整理した「下書き」をオーナーが最終チェック、過去の対応履歴を踏まえた一貫性のある回答が可能です。</p>
+
+<h3>3-5. レビュー分析と商品改善</h3>
+<p>Shopifyに集まる商品レビューをAIに読み込ませ、ポジティブ・ネガティブの分類、改善要望の頻度ランキング、リピート顧客が評価しているポイント、次の新商品開発に活かす示唆までを整理できます。</p>
+
+<h2>4. 導入ステップと運用イメージ</h2>
+<table>
+<thead><tr><th>Step</th><th>内容</th><th>所要時間</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Claude Code（公式CLI）をPCにインストール</td><td>30分</td></tr>
+<tr><td>2</td><td>Shopify管理画面でアプリ用APIキーを発行</td><td>15分</td></tr>
+<tr><td>3</td><td>自動化したい業務を3つに絞ってヒアリング</td><td>1時間</td></tr>
+<tr><td>4</td><td>Claude Codeに業務テンプレート（スキル）を登録</td><td>半日</td></tr>
+<tr><td>5</td><td>試験運用→修正→本番運用</td><td>1〜2週間</td></tr>
+</tbody>
+</table>
+<p>ポイントは「最初から全部やろうとしない」こと。商品登録・売上レポート・受注通知のような、明確に定型化できる業務から始めるのが成功の近道です。</p>
+
+<h2>5. ECで成果を出すための実践プロンプト例</h2>
+
+<h3>5-1. 商品説明文の自動生成</h3>
+<pre><code>あなたはECコピーライターです。
+以下の商品情報をもとに、Shopifyの商品説明欄に貼り付ける文章を作成してください。
+
+【商品名】オーガニックコットン100％ ロングTシャツ（メンズ）
+【特徴】肌触りがよく、洗濯しても型崩れしにくい。アースカラー4色展開。
+【ターゲット】30〜40代、ナチュラル志向、価格より品質重視
+
+【出力指示】
+- タイトル（30文字以内、SEOキーワード「メンズ オーガニックTシャツ」を含む）
+- 商品説明本文（300〜400字）
+- 着用シーンの提案
+- メタディスクリプション（120字）</code></pre>
+
+<h3>5-2. 売上レポートの自動作成</h3>
+<pre><code>Shopify APIから昨日の売上データを取得し、以下の項目で日次レポートを作成してください。
+- 総売上、注文件数、平均客単価
+- カテゴリ別売上TOP3
+- 在庫が10個以下の商品リスト
+- 前週同曜日との比較
+出力はマークダウン形式、社内Slackにも投稿できる体裁で。</code></pre>
+
+<h3>5-3. 顧客レビューの要約</h3>
+<pre><code>添付の商品レビュー50件を読み込み、以下の観点で分析してください。
+- 高評価ポイント（上位3つ）
+- 低評価ポイント（上位3つ）
+- 改善要望の頻度
+- リピーターが共通して評価しているポイント
+- 次回新商品開発への示唆
+最後に「3か月以内に着手すべき改善策」を3つ提案してください。</code></pre>
+
+<h2>6. よくある質問（FAQ）</h2>
+
+<h3>Q. ITに詳しくない経営者でも導入できますか？</h3>
+<p>可能です。Claude Codeはスキル機能（テンプレート）を呼び出すだけで動作するため、最初の設定さえ済めば、毎日の操作は1〜2行の指示で完結します。</p>
+
+<h3>Q. 既存のShopifyテーマやアプリと競合しませんか？</h3>
+<p>競合しません。Claude Codeはバックグラウンドでデータ連携・自動化を行うため、テーマや既存アプリと並行して動かせます。</p>
+
+<h3>Q. セキュリティは大丈夫ですか？</h3>
+<p>APIキーはローカル環境で管理し、Shopify公式の権限設定で「読み取り専用」「書き込み可」を細かく制御できます。最小権限の原則で運用するのが基本です。</p>
+
+<h3>Q. 月額コストの目安は？</h3>
+<p>Claude Code自体のAI利用料は月数千円〜数万円が一般的な目安です。外注ライターや受注処理スタッフ1人分の人件費と比べれば、十分にペイするケースが多いです。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>Claude Codeの初期セットアップ・業務テンプレート作成・Shopify連携の最初の自動化までを丸ごとサポートします。</p>
+<a href="../index.html#contact">サポートの詳細を見る</a>
+</div>
+
+<blockquote>
+70社以上のAI導入を支援してきた知見をベースに、Shopifyだけでなく既存の業務ツールを横断したEC運営自動化までを一気通貫でご提案します。
+</blockquote>
+
+</main>
+</body>
+</html>

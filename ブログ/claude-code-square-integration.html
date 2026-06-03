@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化！実店舗・小売店の運営効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとPOS・決済サービスSquareを連携し、売上集計、在庫管理、予約対応、リピート顧客へのフォロー文面作成を非エンジニアでも自動化する方法を解説。実店舗・小売店・サロン向けの活用シーンと導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Square,POS,決済,在庫管理,予約管理,実店舗,小売,業務自動化,中小企業,生成AI,DX">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化！実店舗・小売店の運営効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-square-integration.jpg" alt="Claude Code × Square連携で店舗運営をAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「閉店後に売上を集計し、Excelに転記するだけで毎日30分かかる」「在庫がいつの間にか切れていて、人気商品の販売機会を逃した」「リピートしてくれそうなお客様がいるのに、フォローの連絡まで手が回らない」――POS・決済サービスのSquareを使って日々の会計はスムーズになっても、その先のデータ活用や店舗運営の事務作業に追われている個人店・小売店は少なくありません。AnthropicのAIコーディングツール「<strong>Claude Code</strong>」とSquareを連携させれば、売上集計から在庫の確認、予約対応、リピート客へのフォロー文面作成までを非エンジニアでも自動化できます。本記事ではその仕組みと活用法を、専門知識がない方にもわかる形で解説します。</p>
+
+<h2>1. 店舗運営の「会計以外の事務作業」が積み重なる理由</h2>
+<p>Squareは決済や会計をスマートにしてくれますが、店舗運営にはそれ以外の事務作業が数多く残ります。よくあるつまずきは次の通りです。</p>
+<ul>
+<li>毎日の売上を手作業で集計・転記し、振り返りに時間がかかっている</li>
+<li>在庫数の確認や発注のタイミング判断が、担当者の勘に頼っている</li>
+<li>予約の確認やリマインド連絡を一件ずつ手入力している</li>
+<li>リピートしてくれそうなお客様への連絡まで手が回らない</li>
+<li>売れ筋・死に筋の分析ができず、仕入れや陳列の改善につながっていない</li>
+</ul>
+<p>これらは「集計する」「条件で抽出する」「文章を書く」「一覧にまとめる」という、まさにAIが得意とする定型作業です。</p>
+
+<h2>2. Claude Code × Square連携でできること</h2>
+<p>Claude CodeはAnthropicが提供するターミナル操作型のAIツールで、指示を出すだけで情報の収集・集計・要約・文章作成を自動で行えます。Squareに蓄積された売上・在庫・顧客データと組み合わせることで、次のような業務を効率化できます。</p>
+<table>
+<thead><tr><th>カテゴリ</th><th>自動化できる業務例</th></tr></thead>
+<tbody>
+<tr><td>売上集計</td><td>日次・週次・月次の売上を自動集計し、売れ筋・時間帯別の傾向をレポート化</td></tr>
+<tr><td>在庫管理</td><td>在庫数を確認し、設定した基準を下回った商品を発注候補として一覧化</td></tr>
+<tr><td>予約対応</td><td>予約一覧の整理、確認・リマインド連絡の下書き作成</td></tr>
+<tr><td>顧客フォロー</td><td>来店履歴をもとに、再来店を促すフォロー文面をトーンを統一して作成</td></tr>
+<tr><td>売れ筋分析</td><td>商品別・カテゴリ別の売上推移を分析し、仕入れや陳列改善のヒントを提示</td></tr>
+<tr><td>レポート作成</td><td>日報・月次レポートのたたき台を自動で作成し、振り返りを効率化</td></tr>
+</tbody>
+</table>
+<p>Claude Codeは「指示→計画→データ処理→結果報告」を一連の流れでこなすため、データを一件ずつ手作業で集計する必要がなく、自社専用の管理ツールを開発するよりはるかに少ない工数で導入できます。</p>
+
+<h2>3. 店舗運営を効率化する活用6選</h2>
+
+<h3>① 売上の自動集計とレポート化</h3>
+<p>「今週の売上を商品別・曜日別にまとめて」と伝えるだけで、ばらばらの取引データを意味のあるレポートに整理します。閉店後の集計作業から解放され、振り返りに集中できます。</p>
+
+<h3>② 在庫切れを防ぐ発注候補リスト</h3>
+<p>在庫数を確認し、設定した基準を下回った商品を発注候補として一覧化します。人気商品の販売機会を逃すリスクを減らせます。</p>
+
+<h3>③ 予約確認・リマインド連絡の下書き作成</h3>
+<p>予約一覧を整理し、前日の確認やリマインド連絡の下書きを用意します。最終確認と送信は人が行うため、丁寧で失礼のない対応を保てます。</p>
+
+<h3>④ リピート客へのフォロー文面作成</h3>
+<p>来店履歴をもとに、再来店を促すお礼や案内の下書きを相手に合わせて作成します。手が回らなかった顧客フォローを無理なく続けられます。</p>
+
+<h3>⑤ 売れ筋・死に筋の分析</h3>
+<p>商品別・カテゴリ別の売上推移を分析し、仕入れや陳列改善のヒントを提示します。勘に頼っていた判断にデータの裏付けを加えられます。</p>
+
+<h3>⑥ 日報・月次レポートのたたき台作成</h3>
+<p>日々の売上や来店状況をまとめた日報・月次レポートのたたき台を自動で作成します。報告資料づくりの手間を大きく減らせます。</p>
+
+<h2>4. 業種別の活用シーン</h2>
+<ul>
+<li><strong>小売・物販店</strong>：売れ筋商品の集計と在庫切れ前の発注候補リスト化で、欠品と過剰在庫の両方を防止</li>
+<li><strong>飲食店・カフェ</strong>：時間帯別の売上分析でシフトや仕込み量を最適化し、ロスを削減</li>
+<li><strong>美容室・サロン</strong>：予約確認・リマインド連絡と、来店履歴をもとにした再来店フォローを効率化</li>
+<li><strong>パーソナルジム・教室</strong>：会員の来店状況を集計し、足が遠のいた方へのフォロー連絡の下書きを準備</li>
+<li><strong>イベント・ポップアップ出店</strong>：日別の売上を即集計し、出店判断や次回の仕入れ計画に活用</li>
+</ul>
+
+<h2>5. 非エンジニアでも始められる導入4ステップ</h2>
+<ol>
+<li><strong>業務の棚卸し</strong>：まず「売上集計」「在庫の発注候補リスト化」「予約リマインド」など、どの作業を自動化したいかを一つに絞ります。</li>
+<li><strong>データ側の準備</strong>：Squareから扱う売上・在庫・顧客データを、必要最小限の範囲で書き出すか連携できる状態に整えます。設定が不安な場合はサポートを利用すると確実です。</li>
+<li><strong>Claude Codeへの業務指示</strong>：「今週の売上を商品別にまとめて」「在庫が基準を下回った商品を一覧にして」といった指示を、テンプレートとして登録します。</li>
+<li><strong>定期運用と人による最終確認</strong>：集計やリスト化、下書きまでをAIに任せ、発注や送信の前に必ず人が内容を確認します。これを習慣化することで無理なく継続できます。</li>
+</ol>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>発注・送信前の人による承認を必須にする</strong>：発注やお客様への連絡は店舗の経営と印象を左右します。AIの提案や下書きはあくまで叩き台とし、最終確認は必ず人が行いましょう。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：売上・顧客データへのアクセス権限は、必要な範囲だけに絞ります。</li>
+<li><strong>個人情報の取り扱いに注意する</strong>：顧客データは氏名・連絡先・来店履歴などの個人情報を含みます。店舗のルールと法令にのっとって慎重に管理します。</li>
+<li><strong>運用責任者を固定する</strong>：誰が最終確認を行うかを決めておくと、品質のばらつきを防げます。</li>
+<li><strong>元データとの照合を欠かさない</strong>：AIがまとめた集計やリストは便利ですが、発注や経営判断の前にはSquare上の元データと照らし合わせます。</li>
+</ul>
+
+<h2>7. よくある質問</h2>
+<p><strong>Q. プログラミングの知識がなくても使えますか。</strong><br>はい。Claude Codeは日本語の指示で操作でき、初期設定さえ整えれば非エンジニアの方でも運用できます。設定部分はサポートを利用すると安心です。</p>
+<p><strong>Q. すでにSquareに溜まっている売上データも活用できますか。</strong><br>これまでに蓄積した売上・取引データをそのまま活かして集計・分析できます。一から記録し直す必要はありません。</p>
+<p><strong>Q. 発注や顧客連絡をすべてAIに任せて大丈夫ですか。</strong><br>候補のリスト化や下書き作成までをAIに任せ、実行前に人が確認・修正する運用を推奨します。これにより効率と品質を両立できます。</p>
+<p><strong>Q. どれくらいの工数削減になりますか。</strong><br>売上集計・在庫確認・予約対応・顧客フォローにかけていた時間を中心に、月数時間〜十数時間の削減が見込めるケースが多く、データにもとづいた店舗運営の改善も進みます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>Claude CodeとSquareの連携設定、初期スキルの作成、売上集計・在庫管理・予約対応・顧客フォローフローの設計まで一括サポート。環境構築・自動化スキル作成・運用テンプレートのメモリ化・運用マニュアル作成つき。「閉店後の集計作業がなくなった」「在庫切れと顧客フォローの抜け漏れが減った」と多くの声をいただいています。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p>せっかくSquareで会計データが蓄積されているのに、活用しきれず事務作業に追われるのはもったいないことです。Claude Code × Squareの連携は、店舗のデータを「集計」し「次の行動」に変える第一歩として最適です。これまで多数の中小企業・店舗のAI導入・業務自動化を支援してきた実績をもとに、御社の店舗運営の目的に合わせた最適な仕組みをご提案します。</p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+<title>Claude Code × Slack連携で社内コミュニケーションをAI自動化！中小企業のSlack運用効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとSlackを連携し、通知集約・要約・自動応答・リマインドを自動化する方法を解説。中小企業向けSlack運用効率化の活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Slack連携,社内チャット,業務自動化,中小企業,DX,生成AI">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#services">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Slack連携で社内コミュニケーションをAI自動化！中小企業のSlack運用効率化ガイド</h1>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-slack-integration.jpg" alt="Claude Code × Slack連携で社内コミュニケーションをAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+<p><strong>2026.05.06 ・ 読了目安 8分</strong></p>
+
+<p>「Slackを導入したものの、通知が多すぎて見切れない」「重要な情報が雑談チャンネルに埋もれてしまう」「社内からの問い合わせ対応に毎日30分以上取られる」——中小企業でSlackを運用している経営者・管理職が抱える共通の悩みです。</p>
+<p>そこで活用したいのが、AnthropicのAIコーディングツール <strong>Claude Code</strong> と <strong>Slack</strong> の連携です。Claude Codeから Slack API を直接呼び出して、通知集約・チャンネル要約・自動応答・リマインドを <strong>非エンジニアでも対話形式の指示だけで構築</strong> できる時代になりました。</p>
+<p>本記事では、Claude Code × Slack連携で中小企業の社内コミュニケーションを大きく効率化する活用パターンと、すぐに導入できる5つの具体例を解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>なぜ今 Claude Code × Slack 連携なのか</li>
+<li>Claude Code × Slack で実現できる4つの基本機能</li>
+<li>中小企業向け活用5選</li>
+<li>業種別の活用シーン</li>
+<li>非エンジニアでも始められる導入4ステップ</li>
+<li>導入時に押さえておきたい注意点</li>
+<li>まとめ：社内チャットを「情報の倉庫」から「経営インフラ」へ</li>
+</ol>
+
+<h2>なぜ今 Claude Code × Slack 連携なのか</h2>
+<p>中小企業のSlack運用には、共通の課題があります。</p>
+<ul>
+<li><strong>通知過多</strong>：チャンネルが増えすぎて、重要メッセージを見逃す</li>
+<li><strong>情報の偏在</strong>：社内ルールや過去のやり取りが特定チャンネルに埋もれて検索しづらい</li>
+<li><strong>問い合わせ対応の属人化</strong>：FAQ的な質問にいつも同じ人が答えている</li>
+<li><strong>リマインド漏れ</strong>：締切・申請期限・契約更新日が個人の記憶頼り</li>
+</ul>
+<p>ここに Claude Code を組み合わせると、Slackの中で動くAIアシスタントが生まれ、上記の課題を一気に巻き取れます。月額数千円〜の運用コストで、社内チャットを「情報倉庫」から「経営インフラ」へ進化させられます。</p>
+
+<h2>Claude Code × Slack で実現できる4つの基本機能</h2>
+<table>
+<thead><tr><th>機能</th><th>従来のSlack運用</th><th>Claude Code連携後</th></tr></thead>
+<tbody>
+<tr><td>チャンネル要約</td><td>担当者が手作業で要約</td><td>AIが毎朝自動要約</td></tr>
+<tr><td>FAQ自動応答</td><td>同じ質問に毎回手動回答</td><td>AIが過去ログから即答</td></tr>
+<tr><td>通知集約</td><td>各チャンネルを巡回</td><td>1チャンネルにダイジェスト集約</td></tr>
+<tr><td>リマインド</td><td>カレンダーや個人のメモ頼り</td><td>AIが定時に自動投稿</td></tr>
+</tbody>
+</table>
+
+<h2>中小企業向け活用5選</h2>
+<h3>1. 朝のチャンネルダイジェスト自動配信</h3>
+<p>前日の主要チャンネルの投稿をAIが要約し、毎朝8時に経営層向けの「経営ダイジェスト」チャンネルへ自動投稿。出社前にスマホで全社の動きが把握できます。</p>
+<h3>2. 社内FAQ自動応答ボット</h3>
+<p>就業規則・経費精算ルール・各種申請手順など、過去のやり取りや社内ドキュメントを学習させたAIが、質問されたら即座にスレッド内で回答。総務・人事の対応工数が大幅に減ります。</p>
+<h3>3. 顧客対応スレッドの自動要約とタスク化</h3>
+<p>顧客対応チャンネルのスレッドが長くなったら、AIが「現状」「課題」「次のアクション」を3行で要約し、担当者と期限を自動でタグ付け。引き継ぎ漏れがゼロに近づきます。</p>
+<h3>4. 重要キーワード監視と関係者への通知</h3>
+<p>「クレーム」「解約」「見積依頼」など重要キーワードを監視し、検出したらAIが内容を要約して経営層チャンネルへ転送。雑談チャンネルに埋もれていた経営シグナルを拾えます。</p>
+<h3>5. 締切・期限の自動リマインド</h3>
+<p>申請書類提出期限・契約更新日・売上目標進捗など、社内のあらゆる「期限」をAIが管理し、当日朝・前日・3日前のタイミングで担当者へ自動リマインド。期限管理の属人化を解消します。</p>
+
+<h2>業種別の活用シーン</h2>
+<h3>小売・通販</h3>
+<p>受注・在庫・配送遅延などの社内通知をAIが集約。店舗別の売上ダイジェストを毎朝マネージャーチャンネルに配信。</p>
+<h3>飲食・サービス業</h3>
+<p>店舗ごとの予約状況・口コミ・売上をAIが自動投稿。本部の管理者は1チャンネルで全店舗状況を把握できる。</p>
+<h3>製造業</h3>
+<p>生産現場・品質管理・受注からの通知をAIが要約し、経営会議前に「数字と課題」が揃った状態に。</p>
+<h3>士業・コンサル業</h3>
+<p>顧問先別チャンネルをAIが横断要約。担当替え・引き継ぎ時の情報整理がワンコマンドで完了。</p>
+<h3>不動産・建設</h3>
+<p>現場進捗・問い合わせ・契約締結状況を定時集約。営業管理職の状況把握コストを大きく削減できる。</p>
+
+<h2>非エンジニアでも始められる導入4ステップ</h2>
+<h3>Step 1: 自動化したい業務を3つ書き出す</h3>
+<p>「朝の状況把握」「社内FAQ」「期限管理」など、Slackで負担になっている業務を3つ選ぶ。最初は欲張らず、効果が見えやすいものから始める。</p>
+<h3>Step 2: SlackアプリとAPIトークンを準備</h3>
+<p>Slack管理画面から自社用のアプリを作成し、必要な権限（メッセージ読み取り・投稿・チャンネル一覧など）を付与してトークンを発行。社内ITに詳しい人がいなくても30分程度で完了します。</p>
+<h3>Step 3: Claude Code に処理ロジックを依頼</h3>
+<p>「毎朝8時に営業チャンネルの前日投稿を要約して経営ダイジェストに投稿して」など、日本語で依頼すればClaude Codeが必要なスクリプトを自動生成。動作確認・微修正もすべて対話形式で進められます。</p>
+<h3>Step 4: 定時実行をセット</h3>
+<p>Claude Codeのスケジュール機能で実行タイミングを設定。社内サーバー不要、自社PC1台で運用可能です。最初の1〜2週間は出力内容を確認しつつ、要約のトーンや項目を調整していくとフィットします。</p>
+
+<h2>導入時に押さえておきたい注意点</h2>
+<ul>
+<li><strong>権限設計を最小限に</strong>：Slackアプリには必要なチャンネル・必要な権限だけを付与する。全チャンネル閲覧などは避ける。</li>
+<li><strong>機微情報のチャンネル取り扱いを明文化</strong>：人事・労務・契約に関わる機密チャンネルはAI連携対象外にするなど、社内ルールを定義する。</li>
+<li><strong>誤投稿対策</strong>：AIによる自動投稿は最初「下書きチャンネル」に出させ、人が確認した上で本番に流すフローにすると安全。</li>
+<li><strong>運用責任者を1名固定</strong>：AI出力の品質を週次で振り返る担当を決めておくと、運用が形骸化しない。</li>
+</ul>
+
+<h2>よくある質問（FAQ）</h2>
+<h3>Q. プログラミング知識は必要ですか？</h3>
+<p>A. 不要です。Slackアプリの初期設定さえ終わってしまえば、その後の自動化ロジックは日本語の指示だけで構築できます。</p>
+<h3>Q. 月額費用はどれくらいですか？</h3>
+<p>A. SlackのAPI利用は基本無料（プラン範囲内）。Claude Code利用料は業務用途で月額1〜2万円台が一般的です。専用ボットツールを別途契約するより安価に運用できます。</p>
+<h3>Q. 既存のSlackアプリ（ワークフロー等）と共存できますか？</h3>
+<p>A. はい。Claude Codeは外部からAPI経由で動作するため、既存のSlackアプリやワークフロービルダーと干渉せず併用できます。</p>
+
+<div class="cta">
+<h2>Claude Code × Slack連携の初期構築サポート</h2>
+<p>200社超の中小企業AI導入支援実績をもとに、御社のSlack運用に合わせた自動化を最短1日で構築します。チャンネルダイジェスト・FAQボット・期限リマインドなど目的別の設計から運用ルール策定まで一気通貫でご支援。</p>
+<a href="../index.html#contact">無料相談はこちら</a>
+</div>
+</main>
+</body>
+</html>

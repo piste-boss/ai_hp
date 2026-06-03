@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+<title>Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用！中小企業のオフィス効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとMicrosoft 365を連携し、Excel・Word・PowerPoint・Outlookの定型業務をAIに任せる方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Microsoft 365,Excel,Word,PowerPoint,Outlook,業務自動化,中小企業,DX,生成AI">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用！中小企業のオフィス効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-microsoft365-integration.jpg" alt="Claude Code × Microsoft 365連携で業務自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「Excelの集計や定期レポートに毎週時間を取られる」「Word文書のテンプレ更新が属人的でつらい」「PowerPointの資料作りに半日溶けてしまう」と感じていませんか？</p>
+
+<p>Claude Codeを<strong>Microsoft 365</strong>と連携させると、Excel・Word・PowerPoint・Outlookの定型業務をAIに任せ、<strong>現場担当者は確認と判断だけ</strong>に集中できる体制が組めます。本記事では、中小企業向けに具体的な活用5選と非エンジニアでも実装できる4ステップを解説します。</p>
+
+<h2>1. Claude Code × Microsoft 365 連携でできること</h2>
+<p>Microsoft 365単体は強力な編集環境を提供しますが、ファイルを開いてデータを更新したりテンプレを差し替えたりする作業は<strong>人がやることが前提</strong>です。Claude Codeを連携させると、AIがファイルを読み・更新し、文書を生成・整形・共有するところまで担当できます。</p>
+<table>
+<thead><tr><th>従来のMicrosoft 365単体</th><th>Claude Code × Microsoft 365</th></tr></thead>
+<tbody>
+<tr><td>売上Excelを毎週手作業で集計</td><td>売上ファイルをAIが読み取り、月次サマリと前年比コメントを自動生成</td></tr>
+<tr><td>Word文書のテンプレを手で更新</td><td>テンプレを呼び出し、案件情報を差し込んで変更履歴付きで自動修正</td></tr>
+<tr><td>PowerPointを白紙から作り始める</td><td>構成案・図解・文字テンプレをAIが下書きし、現場が仕上げに集中</td></tr>
+<tr><td>Outlookで定型返信を毎回書く</td><td>受信文面の要約・返信ドラフト・予定提案までAIが用意</td></tr>
+</tbody>
+</table>
+
+<h2>2. 中小企業の活用シーン5選</h2>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-microsoft365-integration-01.jpg" alt="月次売上Excelの自動集計と要約レポート" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h3>① 月次売上Excel → AIが自動集計・要約レポート</h3>
+<p>毎月のレジ・受注Excelをまとめ、Claude Codeが商品別・店舗別の集計、前月比・前年比、要注意セグメントの抽出までを自動化。経理担当者の月初3日間の集計作業がほぼゼロになります。</p>
+
+<h3>② Word契約書テンプレ → 案件情報差し込みで変更履歴付きで生成</h3>
+<p>契約書テンプレートに対して、案件名・金額・期間などをAIに渡すだけで、変更履歴付きWord文書を自動生成。法務担当のリーガルチェックが本来の論点だけに集中でき、雛形コピペのケアレスミスが激減します。</p>
+
+<h3>③ PowerPoint提案書 → 構成案・図解の下書きをAIが用意</h3>
+<p>提案テーマと商談メモを渡すだけで、Claude Codeが章立て・各スライドの要旨・図解パターン・サンプル文を自動生成。営業担当は仕上げと話法の調整だけに集中でき、提案書作成時間が半分以下になります。</p>
+
+<h3>④ Outlook受信文面 → AIによる要約と返信ドラフト</h3>
+<p>繁忙時にOutlookで届く文面をClaude Codeが自動で要約し、種類別に分類。返信が必要なものには、トーンを整えた返信ドラフトをOutlookの下書きフォルダへ自動保存します。</p>
+
+<h3>⑤ Excel社員名簿・取引先名簿 → AIで重複・表記ゆれを自動クレンジング</h3>
+<p>長年運用してきた名簿ファイルをAIが読み取り、住所・社名・部署名の表記ゆれや重複を検知。クレンジング案を別シートに出力し、担当者は承認するだけ。情報の質が一段上がり、その後の販促・分析の精度も底上げされます。</p>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-microsoft365-integration-02.jpg" alt="Excel・Word・PowerPointを横断するAIワークフロー" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h2>3. 非エンジニア向け 導入4ステップ</h2>
+<ol>
+<li><strong>対象ファイルの棚卸し</strong>：Excel・Word・PowerPoint・Outlookで毎週同じ作業を繰り返している業務を3つだけリストアップする</li>
+<li><strong>Claude Codeをセットアップ</strong>：Anthropicアカウントを取得し、業務PCにインストール。スラッシュコマンドで業務テンプレートを準備する</li>
+<li><strong>Microsoft 365との接続を設定</strong>：Claude Codeから対象ファイルを読み書きできるよう、フォルダ単位で権限を整理し、自動化対象の置き場を1か所に固定する</li>
+<li><strong>1業務だけ自動化→検証→横展開</strong>：まず月次レポート1本など効果が見えやすい業務から自動化し、社内で結果を共有してから横展開する</li>
+</ol>
+
+<h2>4. 導入時の注意点</h2>
+<ul>
+<li>機密性の高いExcel・Word文書は<strong>自動化対象に含める範囲を最初から明確化</strong>しておく</li>
+<li>AIが生成した文書は<strong>必ず人間が最終承認</strong>してから外部送付するルールを徹底する</li>
+<li>バージョン管理を意識し、<strong>変更履歴・更新者・更新時刻</strong>が追跡できる構成にしておく</li>
+<li>マクロやVBAで既に動いている処理がある場合、二重運用にならないよう棚卸しと整理を先に行う</li>
+<li>全員に同じ権限を与えず、<strong>業務領域ごとにフォルダ単位で権限分離</strong>をしておく</li>
+</ul>
+
+<h2>5. よくある質問</h2>
+<h3>Q. ExcelとGoogleスプレッドシート、どちらの自動化に向いていますか？</h3>
+<p>A. どちらも対応可能ですが、Microsoft 365を主軸に使っている中小企業はExcel・Wordとの相性が圧倒的に良いです。既存の業務ファイルをそのまま活かせる点が大きなメリットです。</p>
+
+<h3>Q. プログラミング知識がなくても使えますか？</h3>
+<p>A. 使えます。Claude Codeは日本語の指示で動き、Microsoft 365側もファイル置き場と権限の整理だけで連携が始められます。最初の1業務だけ専門家に伴走してもらうと失敗しません。</p>
+
+<h3>Q. 料金感はどれくらいですか？</h3>
+<p>A. Microsoft 365のプラン料金＋Claude CodeのAI利用料（月数千円〜）から始められます。中小企業なら月1万円前後で、まず1業務を自動化する規模感が現実的です。</p>
+
+<h3>Q. どんな業種に向いていますか？</h3>
+<p>A. 月次レポートが多い業種（小売・飲食チェーン）、契約書のひな形が多い業種（士業・不動産・人材）、提案書を多用する業種（コンサル・代理店）、Outlookでの社外連絡が多い業種（営業組織全般）と相性が良いです。</p>
+
+<div class="cta">
+<h2>Claude Code × Microsoft 365連携 導入サポート（¥3,000）</h2>
+<p>業務棚卸し → Claude Code設定 → Microsoft 365連携設計 → 1業務の自動化までをまとめてサポート。中小企業の経営者・担当者から多数の導入実績があります。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+
+<p>Microsoft 365を毎日使っている中小企業ほど、Claude Codeとの組み合わせで一気に業務効率を引き上げられます。最初の1業務さえ自動化できれば、Excel・Word・PowerPoint・Outlookすべての作業に「AIに下書きさせる文化」が広がっていきます。</p>
+</main>
+</body>
+</html>

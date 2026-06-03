@@ -42,3 +42,31 @@
 | 2026-04-30 | Claude Codeのチーム機能で複数業務を画面分割で同時稼働！中小企業のAI並列ワークフロー活用ガイド | claude-code-team-parallel-execution.md |
 | 2026-05-01 | Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド | claude-code-notion-integration.md |
 | 2026-05-02 | Claude Code × Discord連携で社内通知をAI化！中小企業のリアルタイム業務通知ガイド | claude-code-discord-notification.md |
+| 2026-05-03 | Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド | claude-code-google-sheets-integration.md |
+| 2026-05-04 | Claude Code × Gmail連携でメール業務を完全自動化！中小企業の問い合わせ対応・営業フォロー・社内連絡ガイド | claude-code-gmail-integration.md |
+| 2026-05-05 | Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド | claude-code-kintone-integration.md |
+| 2026-05-06 | Claude Code × Slack連携で社内コミュニケーションをAI自動化！中小企業のSlack運用効率化ガイド | claude-code-slack-integration.md |
+| 2026-05-07 | Claude Code × Zapier連携で業務自動化を10倍加速！中小企業のノーコード×AI活用ガイド | claude-code-zapier-integration.md |
+| 2026-05-08 | Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド | claude-code-notion-integration.md |
+| 2026-05-10 | Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用！中小企業のオフィス効率化ガイド | claude-code-microsoft365-integration.md |
+| 2026-05-11 | Claude Code × Chatwork連携で社内コミュニケーションをAI自動化！中小企業のChatwork運用効率化ガイド | claude-code-chatwork-integration.md |
+| 2026-05-12 | Claude Code × freee連携で経理業務をAI自動化！中小企業の請求書・仕訳・月次決算ガイド | claude-code-freee-integration.md |
+| 2026-05-13 | Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客育成ガイド | claude-code-hubspot-integration.md |
+| 2026-05-14 | Claude Code × Shopify連携でECサイト運営をAI自動化！中小企業のオンライン売上アップガイド | claude-code-shopify-integration.md |
+| 2026-05-16 | Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客管理ガイド | claude-code-salesforce-integration.md |
+| 2026-05-17 | Claude Code × Asana連携でタスク管理をAI自動化！中小企業のプロジェクト進行効率化ガイド | claude-code-asana-integration.md |
+| 2026-05-18 | Claude Code × Backlog連携でプロジェクト管理をAI自動化！日本企業向けタスク・課題管理AI化ガイド | claude-code-backlog-integration.md |
+| 2026-05-19 | Claude Code × Trello連携でカンバン式タスク管理をAI自動化！中小企業のビジュアル業務管理ガイド | claude-code-trello-integration.md |
+| 2026-05-20 | Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化！中小企業の予約業務効率化ガイド | claude-code-calendly-integration.md |
+| 2026-05-21 | Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド | claude-code-zoom-integration.md |
+| 2026-05-22 | Claude Code × Airtable連携でデータベース業務をAI自動化！中小企業の顧客・案件・在庫管理ガイド | claude-code-airtable-integration.md |
+| 2026-05-24 | Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化！中小企業のメールマーケティング効率化ガイド | claude-code-mailchimp-integration.md |
+| 2026-05-25 | Claude Code × SmartHR連携で人事労務をAI自動化！中小企業の入退社手続き・年末調整・勤怠管理ガイド | claude-code-smarthr-integration.md |
+| 2026-05-26 | Claude Code × Canva連携でバナー・SNS画像・チラシ制作をAI自動化！中小企業のデザイン業務効率化ガイド | claude-code-canva-integration.md |
+| 2026-05-27 | Claude Code × LINE公式アカウント連携で顧客対応・配信・予約案内をAI自動化！中小企業・店舗の集客効率化ガイド | claude-code-line-official-integration.md |
+| 2026-05-28 | Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化！中小企業のスケジュール管理効率化ガイド | claude-code-google-calendar-integration.md |
+| 2026-05-29 | Claude Code × Dropbox連携で社内ファイル管理・共有・自動整理をAI自動化！中小企業のクラウドストレージ運用ガイド | claude-code-dropbox-integration.md |
+| 2026-05-30 | Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化！店舗集客・MEO効率化ガイド | claude-code-google-business-profile-integration.md |
+| 2026-05-31 | Claude Code × Googleアナリティクス（GA4）連携でアクセス解析・改善提案をAI自動化！中小企業のWebデータ活用ガイド | claude-code-ga4-analytics-integration.md |
+| 2026-06-01 | Claude Code × Googleフォーム連携でアンケート・問い合わせ・申込対応をAI自動化！中小企業のフォーム業務効率化ガイド | claude-code-googleform-integration.md |
+| 2026-06-02 | Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化！中小企業の営業リード活用ガイド | claude-code-sansan-integration.md |

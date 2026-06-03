@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客管理ガイド | Piste</title>
+<meta name="description" content="Claude CodeとSalesforceを連携し、リードスコアリング・営業日報の自動要約・商談ステージ更新提案までを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Salesforce連携,CRM自動化,リードスコアリング,商談管理,中小企業,DX,生成AI">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客管理ガイド</h1>
+
+<p>「Salesforceを導入したものの、入力が面倒で営業担当が活用しきれていない」「リードが大量に溜まっているが、優先順位がつけられない」「商談ステージの更新が後回しで、現場と本部の認識がズレている」と感じていませんか？</p>
+
+<p>Claude Codeを<strong>Salesforce</strong>と連携させると、リードスコアリング・営業日報の自動要約・商談ステージの自動更新提案までを<strong>非エンジニアでも構築できる仕組み</strong>に変えられます。本記事では、中小企業向けの活用5選と導入4ステップを解説します。</p>
+
+<h2>1. Claude Code × Salesforce 連携でできること</h2>
+<p>Salesforce単体は「顧客情報の蓄積」「商談プロセスの可視化」「レポート・ダッシュボード」が中心です。一方、Claude Codeは「テキストを読み解いて分類する」「自然な日本語で文章を書く」「次の打ち手を提案する」ことが得意です。両者を繋ぐと次のような業務が実現できます。</p>
+<table>
+<thead><tr><th>従来のSalesforce単体</th><th>Claude Code × Salesforce</th></tr></thead>
+<tbody>
+<tr><td>リードリストを溜める</td><td>業種・規模・反応履歴から優先順位を自動採点</td></tr>
+<tr><td>担当者が手動で日報入力</td><td>商談メモ・通話メモを要約して活動履歴に自動転記</td></tr>
+<tr><td>商談ステージを手動更新</td><td>議事録から次ステージ候補と更新理由を提案</td></tr>
+<tr><td>ダッシュボードで数字を眺める</td><td>売上トレンドの異常値・要因をAIが自然文で説明</td></tr>
+<tr><td>過去案件は埋もれる</td><td>失注理由を分類し、再アプローチ候補リストを自動作成</td></tr>
+</tbody>
+</table>
+
+<h2>2. 中小企業の活用シーン5選</h2>
+
+<h3>① 新規リードの自動スコアリング</h3>
+<p>Webフォーム経由でSalesforceに登録された新規リードの業種・役職・問い合わせ本文をClaude Codeが分析し、A／B／Cランクと「優先理由」を自動付与。営業担当はAランクに即対応するだけでよくなり、限られた営業リソースを成約確度の高い案件へ集中できます。</p>
+
+<h3>② 商談メモの自動要約と活動履歴登録</h3>
+<p>通話メモ・対面議事録の文字起こしをClaude Codeに渡し、「先方の課題」「決裁者」「次のアクション」「想定金額」を構造化。Salesforceの活動オブジェクトへ自動投入し、入力工数を5分の1以下に圧縮できます。</p>
+
+<h3>③ 商談ステージの自動更新提案</h3>
+<p>議事録・メール・通話メモを横断的に解析し、「ヒアリング → 提案 → 見積 → クロージング」のどこに進めるべきかを判定。Salesforceの商談ステージに「変更案＋根拠」を提示し、担当者がワンクリックで承認できる運用にします。</p>
+
+<h3>④ 失注案件の再アプローチリスト自動作成</h3>
+<p>過去12ヶ月以内の失注案件を抽出し、Claude Codeが失注理由をクラスタリング。価格・タイミング・競合・社内事情といった切り口で、再アプローチ候補リストと提案トーク骨子を自動生成。営業会議の議題が「数字を眺める」から「具体的な打ち手を決める」に変わります。</p>
+
+<h3>⑤ 経営ダッシュボードのAIサマリー</h3>
+<p>Salesforceの売上レポート・パイプラインレポートをClaude Codeが読み取り、「前月比で◯◯業界の受注額が下がった主因」「営業担当別の成約率の偏りと改善案」を自然文で要約。経営層は数字の羅列ではなく、行動に直結する示唆を毎朝メールで受け取れます。</p>
+
+<h2>3. 業種別の活用シーン</h2>
+<ul>
+<li><strong>士業・コンサル</strong>：顧問契約候補のスコアリング、業種別提案書テンプレ自動生成</li>
+<li><strong>製造業の営業</strong>：見積依頼の仕様書を要約し、技術部門への自動振り分け</li>
+<li><strong>不動産仲介</strong>：物件希望条件のヒアリングメモを商談オブジェクトへ自動転記、物件マッチング</li>
+<li><strong>BtoB SaaS</strong>：トライアル利用状況をスコアリングし、解約予兆顧客への営業介入を自動提案</li>
+<li><strong>建設・設備</strong>：見積案件の規模・工期・予算をAIが分類し、社内アサインリストを自動生成</li>
+</ul>
+
+<h2>4. 非エンジニア向け 導入4ステップ</h2>
+<ol>
+<li><strong>業務の棚卸し</strong>：Salesforceで「手作業のまま放置している運用」を3つだけリストアップ（例：日報入力、ステージ更新、失注フォロー）</li>
+<li><strong>Salesforce 接続用ユーザー発行</strong>：管理画面で連携用ユーザーを作成し、必要最小オブジェクト（リード／取引先責任者／商談）にのみ参照・更新権限を付与</li>
+<li><strong>Claude Codeで自動化スクリプトを作成</strong>：スラッシュコマンドで「新規リードのスコアリング」「商談サマリー作成」「失注リスト再分類」などの業務テンプレートを準備</li>
+<li><strong>定時実行＋人による最終確認</strong>：朝・夕など決まったタイミングで自動実行し、リスト・下書きは必ず担当者が最終確認してから配信・更新</li>
+</ol>
+
+<h2>5. よくある質問（FAQ）</h2>
+
+<h3>Q. Salesforceの安価なプランでも連携できますか？</h3>
+<p>Sales Cloud の Essentials や Professional 以上であれば API 連携は可能です。エディションによって API コール数の上限が異なるため、業務量に合わせて選定してください。Claude Code 側はローカル環境で動作するため、追加のクラウド利用料は基本的に発生しません。</p>
+
+<h3>Q. AIが商談ステージを勝手に動かすのは怖いのですが…</h3>
+<p>「AIは提案までで、最終更新は人が承認」という運用を推奨します。Claude Codeに「変更案＋根拠」だけを出力させ、担当者がワンクリックで適用する設計にすれば、暴走リスクを抑えつつスピードを上げられます。監査ログには「AI提案」「人が承認」の2段階を残してください。</p>
+
+<h3>Q. 顧客情報を含むデータをAIに渡しても大丈夫ですか？</h3>
+<p>個人を識別できる情報は最小化し、社内ポリシーに沿った範囲で渡すのが基本です。Claude Codeはローカル環境で動作するため、機密情報を社外へ保存しない設計にしやすい点は中小企業にとって安心材料となります。氏名・連絡先などはマスキングしてからAIに渡す運用も有効です。</p>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>接続ユーザーの権限分離</strong>：書き込みと読み取りで別ユーザーを発行し、用途を限定する</li>
+<li><strong>AI更新フラグの必須化</strong>：AIによる更新は専用フィールドで識別し、後から監査できるようにする</li>
+<li><strong>運用責任者の明確化</strong>：「AIスコアリング担当」「サマリーレビュー担当」を必ず1名ずつ指名する</li>
+<li><strong>APIコール数のモニタリング</strong>：Salesforceの日次API上限を超えないよう、バッチ処理時間帯と件数を最適化する</li>
+<li><strong>障害時のフォールバック</strong>：API障害時にも業務が止まらないよう、手動運用手順を残しておく</li>
+</ul>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>「自社でも始めてみたいけれど、何から手を付ければよいかわからない」という方向けに、Claude Codeの初期セットアップ・業務テンプレート作成・Salesforce連携の最初の自動化までを丸ごとサポートします。</p>
+<a href="../index.html#contact">サポートの詳細を見る</a>
+</div>
+
+<blockquote>
+70社以上のAI導入を支援してきた知見をベースに、Salesforceだけでなく既存の業務ツールを横断したCRM自動化までを一気通貫でご提案します。
+</blockquote>
+
+</main>
+</body>
+</html>

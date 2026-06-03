@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客育成ガイド | Piste</title>
+<meta name="description" content="Claude CodeとHubSpotを連携し、見込み顧客の自動育成・商談ステージ管理・営業日報の自動生成までを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,HubSpot連携,CRM自動化,見込み顧客育成,商談管理,中小企業,DX,生成AI">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客育成ガイド</h1>
+
+<p>「HubSpotを導入したものの、結局リストに連絡先が溜まっているだけ」「商談ステージが手作業更新のままで、営業の動きが見えない」と感じていませんか？</p>
+
+<p>Claude Codeを<strong>HubSpot</strong>と連携させると、見込み顧客の自動育成・商談ステージの自動更新・営業日報の自動要約までを<strong>非エンジニアでも構築できる仕組み</strong>に変えられます。本記事では、中小企業向けの活用5選と導入4ステップを解説します。</p>
+
+<h2>1. Claude Code × HubSpot 連携でできること</h2>
+<p>HubSpot単体は「顧客情報の蓄積」と「メール配信・フォーム管理」が中心です。一方、Claude Codeは「顧客情報を読み解いて文章を書く・分類する・次の打ち手を提案する」ことが得意です。両者を繋ぐと次のような業務が実現できます。</p>
+<table>
+<thead><tr><th>従来のHubSpot単体</th><th>Claude Code × HubSpot</th></tr></thead>
+<tbody>
+<tr><td>連絡先リストを蓄積</td><td>業種・規模・課題を自動分類し、優先度をスコアリング</td></tr>
+<tr><td>定型ナーチャリングメール配信</td><td>顧客プロフィール別にトーンと提案内容を変えた個別文面を自動生成</td></tr>
+<tr><td>商談ステージを手動更新</td><td>議事録・通話メモから次のステージ候補と更新理由を提案</td></tr>
+<tr><td>営業日報を手動入力</td><td>活動履歴・予定から日報・週報を自動要約</td></tr>
+</tbody>
+</table>
+
+<h2>2. 中小企業の活用シーン5選</h2>
+
+<h3>① 新規見込み顧客の自動スコアリング</h3>
+<p>HubSpotに登録された新規連絡先の業種・役職・WEB行動履歴をClaude Codeが分析し、A/B/Cランクと「優先理由」を自動付与。営業担当はAランクのみ即対応すれば良くなり、リソース集中投下が実現します。</p>
+
+<h3>② 業種別ナーチャリングシナリオの自動生成</h3>
+<p>「製造業の経理担当向け」「美容サロンのオーナー向け」など、ペルソナ別に3〜5通のステップ配信文面をClaude Codeが一括生成。HubSpotのワークフローへ流し込めば、属人化していたシナリオ設計が標準化されます。</p>
+
+<h3>③ 商談ステージ自動更新と次アクション提案</h3>
+<p>商談メモ・通話録音の文字起こしをClaude Codeが解析し、「ヒアリング → 提案 → クロージング」のどこに進めるべきかを判定。HubSpotのDeal（商談）プロパティを更新し、次のアクションリストもタスクとして自動投入します。</p>
+
+<h3>④ 失注顧客の再アプローチリスト自動作成</h3>
+<p>過去6ヶ月以内の失注Dealを抽出し、Claude Codeが失注理由をクラスタリング。価格・タイミング・競合といった切り口で再アプローチ候補リストと提案トーク骨子を作成。営業会議の議題が「数字を眺める」から「具体的な打ち手を決める」に変わります。</p>
+
+<h3>⑤ 営業日報・週報の自動要約</h3>
+<p>HubSpotのアクティビティログ・予定・メール送受信履歴をClaude Codeが要約し、担当者ごとの日報・週報を自動作成。上長は数十名分の日報をAIサマリーでチェックでき、マネジメント工数を大幅に削減できます。</p>
+
+<h2>3. 業種別の活用シーン</h2>
+<ul>
+<li><strong>士業・コンサル</strong>：顧問契約候補のスコアリング、業種別提案書テンプレ自動生成</li>
+<li><strong>製造業の営業</strong>：図面・スペック資料の問い合わせ内容を分類し、技術部門への自動振り分け</li>
+<li><strong>不動産仲介</strong>：物件希望条件のヒアリングメモをDealへ自動転記、希望条件マッチング</li>
+<li><strong>美容・治療院</strong>：来店動機・主訴を分類し、リピート促進シナリオを業種別に自動配信</li>
+<li><strong>BtoB SaaS</strong>：トライアル中の利用状況をスコアリングし、解約予兆顧客に営業介入</li>
+</ul>
+
+<h2>4. 非エンジニア向け 導入4ステップ</h2>
+<ol>
+<li><strong>業務の棚卸し</strong>：HubSpotで「手作業のまま放置している運用」を3つだけリストアップ（例：ステージ更新、シナリオ設計、日報作成）</li>
+<li><strong>HubSpot APIキー発行</strong>：管理画面でプライベートアプリを作成し、必要最小スコープのみ付与</li>
+<li><strong>Claude Codeで自動化スクリプトを作成</strong>：スラッシュコマンドで「新規Contactのスコアリング」「Dealサマリー作成」などの業務テンプレートを準備</li>
+<li><strong>定時実行＋人による最終確認</strong>：朝・夕など決まったタイミングで自動実行し、リスト・下書きは必ず担当者が最終確認してから配信・更新</li>
+</ol>
+
+<h2>5. よくある質問（FAQ）</h2>
+
+<h3>Q. HubSpotの無料プランでも連携できますか？</h3>
+<p>はい、HubSpotの無料CRMでも基本的なAPI連携は可能です。ただし、ワークフロー機能やカスタムプロパティに制限があるため、活用範囲を広げたい場合は有料プランの検討が必要です。</p>
+
+<h3>Q. AIが商談ステージを勝手に動かすのは怖いのですが…</h3>
+<p>「AIは提案までで、最終更新は人が承認」という運用を推奨します。Claude Codeに「変更案＋根拠」だけを出させ、担当者がワンクリックで適用する設計にすれば、暴走リスクを抑えつつスピードを上げられます。</p>
+
+<h3>Q. 個人情報を含む顧客データをAIに渡しても大丈夫ですか？</h3>
+<p>個人を識別できる情報は最小化し、社内ポリシーに沿った範囲で渡すのが基本です。Claude Codeはローカル環境で動作するため、外部に保存されない設計にしやすい点は中小企業にとって安心材料となります。</p>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>APIキーの権限分離</strong>：書き込みと読み取りのキーを分け、用途を限定する</li>
+<li><strong>変更履歴の必須化</strong>：AIによる更新は専用プロパティで識別し、後から監査できるようにする</li>
+<li><strong>運用責任者の明確化</strong>：「AIスコアリング担当」「シナリオレビュー担当」を必ず1名指名する</li>
+<li><strong>失敗時のフォールバック</strong>：API障害時にもオペレーションが止まらないよう、手動運用の手順を残しておく</li>
+</ul>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>「自社でも始めてみたいけれど、何から手を付ければよいかわからない」という方向けに、Claude Codeの初期セットアップ・業務テンプレート作成・HubSpot連携の最初の自動化までを丸ごとサポートします。</p>
+<a href="../index.html#contact">サポートの詳細を見る</a>
+</div>
+
+<blockquote>
+70社以上のAI導入を支援してきた知見をベースに、HubSpotだけでなく既存の業務ツールを横断したCRM自動化までを一気通貫でご提案します。
+</blockquote>
+
+</main>
+</body>
+</html>

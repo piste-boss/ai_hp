@@ -1,15 +1,15 @@
 // ============================================
 // Google Apps Script - お問い合わせフォーム処理
 // 1. スプレッドシートに転記
-// 2. Resend API で管理者通知メール送信
-// 3. Resend API でお客様に自動返信メール送信
+// 2. Resend API で管理者通知メール送信（失敗時は MailApp で代替送信）
+// 3. Resend API でお客様に自動返信メール送信（失敗時は MailApp で代替送信）
 // ============================================
 
 // === 設定 ===
 // スクリプトプロパティから取得（GASエディタ → プロジェクトの設定 → スクリプトプロパティで設定）
 const RESEND_API_KEY = PropertiesService.getScriptProperties().getProperty('RESEND_API_KEY');
-const ADMIN_EMAIL = 'info@piste-i.com';
-const FROM_EMAIL = 'info@piste-i.com';
+const ADMIN_EMAIL = 'info@piste-ai.com';
+const FROM_EMAIL = 'info@piste-ai.com';
 const FROM_NAME = 'Piste AI EVANGELISTS';
 
 // === POST受信（お問い合わせ & Stripe Webhook 兼用） ===
@@ -19,9 +19,9 @@ function doPost(e) {
 
     // Stripe Webhookの場合
     if (data.type && data.type === 'checkout.session.completed') {
-      handleStripeCheckout(data);
+      const result = handleStripeCheckout(data);
       return ContentService
-        .createTextOutput(JSON.stringify({ status: 'ok' }))
+        .createTextOutput(JSON.stringify({ status: 'ok', result: result }))
         .setMimeType(ContentService.MimeType.JSON);
     }
 
@@ -46,17 +46,13 @@ function doPost(e) {
 function handleStripeCheckout(event) {
   const session = event.data.object;
   const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-  let sheet = ss.getSheetByName('決済情報');
+  const sheet = getPaymentSheet(ss);
+  const sessionId = session.id || '';
+  const eventId = event.id || '';
 
-  if (!sheet) {
-    sheet = ss.insertSheet('決済情報');
-    sheet.appendRow([
-      'タイムスタンプ', '氏名', 'メールアドレス',
-      'プラン', '金額', '通貨', 'ステータス',
-      'Stripe顧客ID', 'セッションID', 'サブスクリプションID'
-    ]);
-    sheet.getRange(1, 1, 1, 10).setFontWeight('bold');
-    sheet.setFrozenRows(1);
+  if (hasProcessedPayment(sheet, sessionId, eventId)) {
+    Logger.log('Stripe決済Webhook重複のためスキップ: session=' + sessionId + ' event=' + eventId);
+    return { duplicated: true, sessionId: sessionId, eventId: eventId };
   }
 
   // 顧客情報を取得
@@ -84,13 +80,17 @@ function handleStripeCheckout(event) {
     session.payment_status || '',
     session.customer || '',
     session.id || '',
-    session.subscription || ''
+    session.subscription || '',
+    event.id || ''
   ]);
 
   Logger.log('✅ 決済情報記録: ' + name + ' / ' + plan);
 
-  // 管理者に決済通知メール
-  sendPaymentNotification(name, email, plan, amount);
+  try {
+    sendPaymentNotification(name, email, plan, amount);
+  } catch (error) {
+    Logger.log('決済通知メール送信エラー（決済記録は完了）: ' + error.message);
+  }
 
   // 動画商品の場合、購入者に動画リンクを送信
   const VIDEO_PRODUCTS = {
@@ -101,8 +101,54 @@ function handleStripeCheckout(event) {
   };
 
   if (VIDEO_PRODUCTS[amount] && email) {
-    sendVideoDelivery(name, email, VIDEO_PRODUCTS[amount]);
+    try {
+      sendVideoDelivery(name, email, VIDEO_PRODUCTS[amount]);
+    } catch (error) {
+      Logger.log('動画配信メール送信エラー（決済記録は完了）: ' + error.message);
+    }
   }
+
+  return { duplicated: false, sessionId: sessionId, eventId: eventId };
+}
+
+function getPaymentSheet(ss) {
+  let sheet = ss.getSheetByName('決済情報');
+
+  if (!sheet) {
+    sheet = ss.insertSheet('決済情報');
+  }
+
+  const headers = [
+    'タイムスタンプ', '氏名', 'メールアドレス',
+    'プラン', '金額', '通貨', 'ステータス',
+    'Stripe顧客ID', 'セッションID', 'サブスクリプションID',
+    'StripeイベントID'
+  ];
+
+  const currentHeaders = sheet.getRange(1, 1, 1, headers.length).getValues()[0];
+  const needsHeaderUpdate = headers.some(function(header, index) {
+    return currentHeaders[index] !== header;
+  });
+
+  if (needsHeaderUpdate) {
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
+    sheet.setFrozenRows(1);
+  }
+
+  return sheet;
+}
+
+function hasProcessedPayment(sheet, sessionId, eventId) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return false;
+
+  const values = sheet.getRange(2, 9, lastRow - 1, 3).getValues();
+  return values.some(function(row) {
+    const existingSessionId = row[0];
+    const existingEventId = row[2];
+    return (sessionId && existingSessionId === sessionId) || (eventId && existingEventId === eventId);
+  });
 }
 
 // === 決済通知メール ===
@@ -165,7 +211,7 @@ function sendVideoDelivery(name, email, video) {
 
         <p style="font-size: 0.85em; color: #888;">
           Piste AI EVANGELISTS<br>
-          メール: info@piste-i.com<br>
+          メール: ${FROM_EMAIL}<br>
           LINE: <a href="https://lin.ee/Pul5f6V">https://lin.ee/Pul5f6V</a>
         </p>
       </div>
@@ -213,8 +259,17 @@ function writeToSheet(data) {
   ]);
 }
 
-// === Resend API メール送信 ===
+// === メール送信 ===
 function sendViaResend(to, subject, html) {
+  if (!to) {
+    throw new Error('メール送信先が空です');
+  }
+
+  if (!RESEND_API_KEY) {
+    Logger.log('RESEND_API_KEY未設定のため MailApp で送信します: ' + to);
+    return sendViaMailApp(to, subject, html);
+  }
+
   const payload = {
     from: FROM_NAME + ' <' + FROM_EMAIL + '>',
     to: [to],
@@ -233,8 +288,33 @@ function sendViaResend(to, subject, html) {
   };
 
   const response = UrlFetchApp.fetch('https://api.resend.com/emails', options);
-  Logger.log('Resend response: ' + response.getContentText());
+  const statusCode = response.getResponseCode();
+  const responseText = response.getContentText();
+  Logger.log('Resend response (' + statusCode + '): ' + responseText);
+
+  if (statusCode < 200 || statusCode >= 300) {
+    Logger.log('Resend送信失敗のため MailApp で代替送信します: ' + to);
+    try {
+      return sendViaMailApp(to, subject, html);
+    } catch (fallbackError) {
+      throw new Error('Resend送信失敗: ' + responseText + ' / MailApp送信失敗: ' + fallbackError.message);
+    }
+  }
+
   return response;
+}
+
+function sendViaMailApp(to, subject, html) {
+  MailApp.sendEmail({
+    to: to,
+    subject: subject,
+    htmlBody: html,
+    name: FROM_NAME,
+    replyTo: FROM_EMAIL
+  });
+
+  Logger.log('MailApp sent: ' + to);
+  return { status: 'sent_by_mailapp' };
 }
 
 // === 管理者通知メール ===
@@ -304,7 +384,7 @@ function sendAutoReply(data) {
 
         <p style="font-size: 0.85em; color: #888;">
           Piste AI EVANGELISTS<br>
-          メール: info@piste-i.com<br>
+          メール: ${FROM_EMAIL}<br>
           LINE: <a href="https://lin.ee/Pul5f6V">https://lin.ee/Pul5f6V</a>
         </p>
       </div>
@@ -315,6 +395,16 @@ function sendAutoReply(data) {
 }
 
 // === テスト関数（GASエディタから手動実行） ===
+function authorizeMailApp() {
+  MailApp.sendEmail({
+    to: ADMIN_EMAIL,
+    subject: 'Piste AI EVANGELISTS - MailApp権限確認',
+    body: 'MailAppの送信権限が承認されました。'
+  });
+
+  Logger.log('MailApp authorization test sent.');
+}
+
 function testAll() {
   const testData = {
     name: 'テスト太郎',

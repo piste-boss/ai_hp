@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化！店舗集客・MEO効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとGoogleビジネスプロフィールを連携し、口コミ返信・店舗投稿・MEO運用を非エンジニアでも半自動化する方法を解説。業種別の活用シーンと導入4ステップ、運用上の注意点を紹介。">
+<meta name="keywords" content="Claude Code,Googleビジネスプロフィール,MEO,口コミ返信,店舗集客,Googleマイビジネス,中小企業,業務自動化,生成AI,DX">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化！店舗集客・MEO効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-google-business-profile-integration.jpg" alt="Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「Googleマップの口コミに返信したいけれど、毎回文面を考える時間がない」「店舗の最新情報を投稿したいのに、気づけば数週間更新が止まっている」。店舗を運営する中小企業や一人オーナーにとって、Googleビジネスプロフィール（旧Googleマイビジネス）の運用は集客に直結する重要な仕事です。しかし日々の営業に追われ、後回しになりがちなのも事実です。</p>
+
+<p>この記事では、AnthropicのAIコーディングツール「<strong>Claude Code</strong>」とGoogleビジネスプロフィールを連携させ、口コミ返信や投稿、情報更新を半自動化する方法を、非エンジニアの方にもわかる形で解説します。</p>
+
+<h2>Googleビジネスプロフィール運用が後回しになる理由</h2>
+<p>店舗集客において、Googleマップ上での見え方（MEO）は来店数を大きく左右します。口コミへの丁寧な返信や定期的な投稿は、検索順位にも好影響を与えるといわれています。それでも運用が滞るのは、次のような理由があるからです。</p>
+<ul>
+<li>口コミ一件ごとに適切な返信文を考えるのに時間がかかる</li>
+<li>写真付きの投稿を作るのが面倒で続かない</li>
+<li>複数店舗があると管理が煩雑になる</li>
+<li>担当者によって返信のトーンがばらつく</li>
+</ul>
+<p>これらは「考えて書く」「定型作業を繰り返す」という、まさにAIが得意とする領域です。</p>
+
+<h2>Claude Code × Googleビジネスプロフィール連携でできること</h2>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-google-business-profile-integration-01.jpg" alt="Claude Code × Googleビジネスプロフィール連携でできること" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>Claude CodeはAnthropicが提供するターミナル操作型のAIツールで、指示を出すだけで情報の収集・文章作成・分類・整形を自動で行えます。GoogleビジネスプロフィールのAPIと組み合わせることで、次のような業務を効率化できます。</p>
+
+<h3>1. 口コミ返信ドラフトの自動作成</h3>
+<p>新着の口コミ内容をAIが読み取り、お店の雰囲気に合わせた返信文の下書きを自動生成します。高評価には感謝を、低評価には誠実な改善姿勢を示す文面を、トーンを統一して用意できます。最終的な確認と投稿は人が行うため、心のこもった対応を保てます。</p>
+
+<h3>2. 店舗投稿（最新情報）の文面作成</h3>
+<p>季節のキャンペーンや新メニュー、営業時間の変更など、伝えたい内容を箇条書きで渡すだけで、読まれやすい投稿文を作成します。週次・月次でまとめて下書きを用意しておけば、更新の習慣化につながります。</p>
+
+<h3>3. 口コミの傾向分析とレポート化</h3>
+<p>集まった口コミをAIが分類・要約し、「よく褒められる点」「改善を求められる点」を整理します。感覚ではなくデータに基づいた店舗改善の判断材料が得られます。</p>
+
+<h3>4. よくある質問への回答テンプレート整備</h3>
+<p>「駐車場はありますか」「予約は必要ですか」といった頻出質問に対し、統一感のある回答文をあらかじめ用意。スタッフ誰でも同じ品質で対応できます。</p>
+
+<h3>5. 複数店舗の情報整合チェック</h3>
+<p>複数拠点を運営する場合、営業時間や住所表記のゆれをAIがチェックし、統一すべき箇所をリストアップします。</p>
+
+<h2>業種別の活用シーン</h2>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-google-business-profile-integration-02.jpg" alt="業種別の活用シーン" style="width: 100%; height: auto; display: block;">
+</div>
+
+<table>
+<thead><tr><th>業種</th><th>主な活用例</th></tr></thead>
+<tbody>
+<tr><td>飲食店</td><td>口コミ返信の自動下書き、新メニュー告知投稿の作成</td></tr>
+<tr><td>美容室・サロン</td><td>予約に関する質問テンプレ整備、キャンペーン投稿作成</td></tr>
+<tr><td>治療院・整体</td><td>症状相談口コミへの丁寧な返信文作成、口コミ傾向分析</td></tr>
+<tr><td>小売・物販</td><td>季節商品の告知投稿、営業時間変更のお知らせ自動作成</td></tr>
+<tr><td>教室・スクール</td><td>体験会告知投稿、保護者からの質問への回答整備</td></tr>
+</tbody>
+</table>
+
+<h2>非エンジニアでも始められる導入4ステップ</h2>
+<p>専門知識がなくても、次の手順で運用を始められます。</p>
+<ol>
+<li><strong>業務の棚卸し</strong>：まず「口コミ返信」「投稿作成」など、どの作業を自動化したいかを決めます。</li>
+<li><strong>API連携の設定</strong>：GoogleビジネスプロフィールのAPI利用設定を行い、Claude Codeから安全にアクセスできるようにします。設定が不安な場合はサポートを利用すると確実です。</li>
+<li><strong>Claude Codeへの業務指示</strong>：「この口コミにこのトーンで返信文を作って」といった指示を、テンプレートとして登録します。</li>
+<li><strong>定期運用と人による最終確認</strong>：下書きまでをAIに任せ、公開前に必ず人が内容を確認します。これを習慣化することで、無理なく継続できます。</li>
+</ol>
+
+<h2>運用上の注意点</h2>
+<p>便利な仕組みだからこそ、安全に使うための配慮が欠かせません。</p>
+<ul>
+<li><strong>公開前の人による承認を必須にする</strong>：口コミ返信や投稿は店舗の顔です。AIの下書きはあくまで叩き台とし、最終確認は必ず人が行いましょう。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：API連携に使う認証情報は、必要な範囲だけに権限を絞ります。</li>
+<li><strong>お客さまの個人情報の取り扱いに注意する</strong>：口コミに含まれる個人が特定される情報は、返信文に転記しないよう配慮します。</li>
+<li><strong>運用責任者を固定する</strong>：誰が最終確認を行うかを決めておくと、品質のばらつきを防げます。</li>
+<li><strong>不具合時の手動対応を想定しておく</strong>：API側の仕様変更などに備え、手動でも対応できる体制を残しておきます。</li>
+</ul>
+
+<h2>よくある質問</h2>
+<p><strong>Q. プログラミングの知識がなくても使えますか。</strong><br>はい。Claude Codeは日本語の指示で操作でき、初期設定さえ整えれば非エンジニアの方でも運用できます。設定部分はサポートを利用すると安心です。</p>
+<p><strong>Q. 口コミへの返信をすべてAIに任せてしまって大丈夫ですか。</strong><br>下書き作成までをAIに任せ、公開前に人が確認・修正する運用を推奨します。これにより効率と品質を両立できます。</p>
+<p><strong>Q. 複数店舗でも使えますか。</strong><br>使えます。むしろ拠点数が多いほど、情報の統一や返信の効率化といった効果を実感しやすくなります。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>「自店舗で何から自動化できるか相談したい」「API連携の設定を任せたい」という方に向けて、Claude Code導入サポートをご用意しています。業務の棚卸しから初期設定、運用テンプレートの作成までを丁寧にお手伝いします。これまで多数の中小企業・店舗オーナー様のAI業務自動化を支援してきた実績があります。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p>「忙しくて手が回らない」を「仕組みで回る」へ。Googleビジネスプロフィールの運用を、Claude Codeで一歩前に進めてみませんか。御社の店舗と目的に合わせた最適な仕組みをご提案します。</p>
+
+</main>
+</body>
+</html>
