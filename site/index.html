@@ -63,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260625-1">
+  <link rel="stylesheet" href="css/style.css?v=20260625-2">
 </head>
 <body>
   <header class="header">
@@ -74,11 +74,11 @@
       <nav class="header-nav" aria-label="メインナビゲーション">
         <a href="#services">支援内容</a>
         <a href="#plans">料金</a>
-        <a href="#training">研修</a>
+        <a href="#training" class="header-subsidy">助成金活用プラン</a>
         <a href="#flow">流れ</a>
         <a href="#media">メディア掲載</a>
         <a href="blog/">ブログ</a>
-        <a href="#profile">代表</a>
+        <a href="#profile">講師プロフィール</a>
         <a href="#contact" class="header-cta">無料相談</a>
       </nav>
       <button class="hamburger" type="button" aria-label="メニューを開く">
@@ -93,11 +93,11 @@
   <nav class="mobile-nav" aria-label="モバイルナビゲーション">
     <a href="#services">支援内容</a>
     <a href="#plans">料金</a>
-    <a href="#training">研修</a>
+    <a href="#training" class="mobile-subsidy">助成金活用プラン</a>
     <a href="#flow">流れ</a>
     <a href="#media">メディア掲載</a>
     <a href="blog/">ブログ</a>
-    <a href="#profile">代表</a>
+    <a href="#profile">講師プロフィール</a>
     <a href="#line-cta">LINE相談</a>
     <a href="#contact">無料相談</a>
   </nav>
@@ -112,7 +112,7 @@
       <div class="container hero-grid">
         <div class="hero-copy fade-in">
           <p class="eyebrow">AI implementation partner</p>
-          <h1>中小企業のAI導入を、現場で使える形まで伴走します。</h1>
+          <h1>企業のAI導入を、現場で使える形まで伴走します。</h1>
           <p class="hero-lead">ChatGPT、Claude、業務自動化、資料作成、顧客対応。ツール選定から実装、運用改善まで、マンツーマンで一緒に進めます。</p>
           <p style="display:inline-flex;align-items:center;gap:8px;margin:4px 0 20px;padding:8px 16px;background:rgba(196,162,78,0.12);border:1px solid rgba(196,162,78,0.5);border-radius:999px;font-size:0.82em;font-weight:600;color:#c4a24e;">
             <span style="font-size:1.1em;">✦</span>Anthropic 公式パートナーネットワーク認定企業
@@ -287,12 +287,13 @@
       <div class="container">
         <div class="section-head center fade-in">
           <p class="section-title">Training</p>
-          <h2 class="section-heading">AI研修プログラム（人材開発支援助成金 活用可能）</h2>
-          <p class="section-desc">従業員向け Claude Code 実践研修（全10コマ）。厚生労働省「人材開発支援助成金」を活用すると、自己負担を大幅に抑えて社内へAIを定着できます。</p>
+          <h2 class="section-heading">AI研修プログラム<br><span class="training-heading-sub">（人材開発支援助成金 活用可能）</span></h2>
+          <p class="section-desc">従業員向け Claude Code 実践研修（全12コマ／60分）。厚生労働省「人材開発支援助成金」を活用すれば、研修費の大半が経費助成され、社内へのAI定着コストを大幅に圧縮できます。</p>
         </div>
 
-        <article class="training-highlight fade-in">
-          <p class="training-eyebrow">助成金活用イメージ（中小企業・経費助成75%適用時）</p>
+        <article class="training-highlight hero-style fade-in">
+          <div class="training-ribbon">助成金活用 NEW</div>
+          <p class="training-eyebrow">中小企業・経費助成75%適用時の試算例</p>
           <div class="training-price-row">
             <div class="training-price-col original">
               <p class="training-price-label">通常受講料</p>
@@ -305,30 +306,73 @@
               <p class="training-price-badge">最大 75% OFF</p>
             </div>
           </div>
+          <p class="training-savings">
+            <span class="training-savings-label">差額（受給見込額）</span>
+            <span class="training-savings-value">¥300,000<span>/人</span></span>
+          </p>
           <p class="training-note">※ 経費助成75%（中小企業／人材育成支援コース）を適用した試算例。受講人数・研修時間・自社の状況により受給額は変動します。賃金助成（1,000円/h）を併用すると、自己負担はさらに軽減されます。</p>
         </article>
 
-        <div class="training-features fade-in">
-          <div class="training-feature">
-            <h3>カリキュラム</h3>
-            <p>全10コマ（標準60〜90分／コマ）。AI基礎・業務棚卸し → Claude Code環境構築 → 単体エージェント → LP制作・公開 → 外部API/SNS自動投稿 → エージェントチーム運用まで段階的に習得。</p>
-          </div>
-          <div class="training-feature">
-            <h3>対象者</h3>
-            <p>経営者・管理職・現場担当者（プログラミング未経験OK）。1社単位での開講に対応し、自社業務に合わせて演習テーマをカスタマイズします。</p>
-          </div>
-          <div class="training-feature">
-            <h3>形式</h3>
-            <p>講義＋ハンズオン（PC実機操作）＋グループワーク。オンライン／対面いずれも対応可。受講者は自社業務の成果物を持ち帰れる構成です。</p>
-          </div>
-          <div class="training-feature">
-            <h3>到達像</h3>
-            <p>「おはよう」の一言で日次業務が自動実行され、LPの制作・公開や外部API連携システムまで自走開発できる組織人材を育成します。</p>
-          </div>
+        <div class="training-overview fade-in">
+          <h3 class="training-subheading">研修全体の概要</h3>
+          <dl class="training-overview-grid">
+            <div>
+              <dt>目的</dt>
+              <dd>ChatGPT・Claude Code を中核に、受講者が自社の業務を自ら AI 化・自動化できる状態を作る</dd>
+            </div>
+            <div>
+              <dt>対象</dt>
+              <dd>管理職・現場担当者（プログラミング未経験OK／1社単位での開講に対応）</dd>
+            </div>
+            <div>
+              <dt>形式</dt>
+              <dd>講義＋ハンズオン（PC実機操作）＋グループワーク（オンライン／対面）</dd>
+            </div>
+            <div>
+              <dt>1コマ</dt>
+              <dd>60分（休憩・質疑含む）／全12コマ</dd>
+            </div>
+            <div>
+              <dt>到達像</dt>
+              <dd>「おはよう」の一言で日次業務が自動実行され、LPの制作・公開や外部API連携システムまで自走開発できる組織人材を育成</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="training-roadmap fade-in">
+          <h3 class="training-subheading">学習ロードマップ</h3>
+          <ol class="training-roadmap-list">
+            <li>
+              <span class="training-roadmap-step">PHASE 1</span>
+              <h4>導入・基礎</h4>
+              <p>AIの概念、業務の棚卸し、リサーチ体験</p>
+            </li>
+            <li>
+              <span class="training-roadmap-step">PHASE 2</span>
+              <h4>環境構築・単体エージェント</h4>
+              <p>環境構築／フォルダ設計、Office連携、返信・単体エージェントの構築</p>
+            </li>
+            <li>
+              <span class="training-roadmap-step">PHASE 3</span>
+              <h4>Web制作・公開</h4>
+              <p>Codex を使ったLP制作、GitHub・サーバー公開</p>
+            </li>
+            <li>
+              <span class="training-roadmap-step">PHASE 4</span>
+              <h4>外部API・SNS自動投稿</h4>
+              <p>外部API連携、Claude Code × GAS、SNS自動投稿システム</p>
+            </li>
+            <li>
+              <span class="training-roadmap-step">PHASE 5</span>
+              <h4>複合自動化</h4>
+              <p>スキルマネージャー、エージェントチームによる複数タスク同時実行</p>
+            </li>
+          </ol>
         </div>
 
         <p class="training-cta fade-in">
-          <a href="#contact" class="btn-primary">AI研修について相談する</a>
+          <a href="training.html" class="btn-primary training-cta-main">カリキュラムの詳細を見る</a>
+          <a href="#contact" class="btn-outline dark training-cta-sub">無料相談で助成金活用を相談する</a>
         </p>
         <p class="training-note small fade-in">助成金の申請可否は事業所所在地のハローワーク・労働局の判断に基づきます。要件確認・申請計画の組み立てもサポートします。</p>
       </div>
@@ -427,12 +471,20 @@
           <p class="section-desc">2026年5月26日付の中部経済新聞で、Piste AI EVANGELISTSのAI導入支援についてご紹介いただきました。</p>
           <a href="media/chubu-keizai-20260526-piste.pdf" class="btn-gold-outline" target="_blank" rel="noopener">掲載記事PDFを見る</a>
         </div>
-        <article class="media-card fade-in">
-          <p class="media-date">2026.05.26</p>
-          <h3>中部経済新聞 掲載</h3>
-          <p>AI活用・業務効率化を支援する取り組みとして、Piste AI EVANGELISTSの活動が紹介されました。</p>
-          <span>Chubu Keizai Shimbun</span>
-        </article>
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <article class="media-card fade-in">
+            <p class="media-date">2026.05.26</p>
+            <h3>中部経済新聞 掲載</h3>
+            <p>AI活用・業務効率化を支援する取り組みとして、Piste AI EVANGELISTSの活動が紹介されました。</p>
+            <span>Chubu Keizai Shimbun</span>
+          </article>
+          <article class="media-card fade-in">
+            <p class="media-date">✦ Certified Partner</p>
+            <h3>Anthropic 公式パートナーネットワーク認定</h3>
+            <p>Claudeを開発するAnthropicの公式パートナーネットワーク企業に認定されました。最新のAI技術を活かした導入支援を提供します。</p>
+            <span>Anthropic Partner Network</span>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -497,9 +549,12 @@
         <div class="profile-body fade-in-right">
           <p class="section-title">About</p>
           <h2 class="section-heading">石川 卓</h2>
-          <p class="profile-role">Piste AI EVANGELISTS 代表 / AIコンサルタント / フィットネスクラブ経営者</p>
+          <p class="profile-role">株式会社Piste CEO / Piste AI EVANGELISTS 代表 / AIコンサルタント / フィットネスクラブ経営者</p>
           <p>岐阜大学工学部修士課程修了後、大手鉄鋼メーカーにてエンジニアとして約8年間勤務。その後独立し、AIエンジニア・コンサルタントとして200社以上のAI導入を支援。</p>
           <p>自らもフィットネスクラブを経営し、予約管理、顧客対応、会計処理、SNS運用、集客施策をAIで自動化しています。技術を知っているだけでなく、実際の事業運営で使う視点から支援します。</p>
+          <p style="display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:8px 16px;background:rgba(196,162,78,0.12);border:1px solid rgba(196,162,78,0.5);border-radius:999px;font-size:0.85em;font-weight:600;color:#c4a24e;">
+            <span style="font-size:1.1em;">✦</span>Anthropic 公式パートナーネットワーク認定企業
+          </p>
         </div>
       </div>
     </section>
@@ -508,7 +563,7 @@
       <div class="container line-grid">
         <div class="fade-in">
           <p class="section-title">LINE Official</p>
-          <h2 class="section-heading">まずはLINEで気軽に相談できます。</h2>
+          <h2 class="section-heading">LINEからもお問い合わせできます。</h2>
         </div>
         <div class="fade-in">
           <a href="https://lin.ee/Pul5f6V" class="btn-line" target="_blank" rel="noopener">
@@ -525,8 +580,7 @@
       <div class="container contact-grid">
         <div class="contact-copy fade-in">
           <p class="section-title">Contact</p>
-          <h2 class="section-heading">無料相談フォーム</h2>
-          <p class="section-desc">AI導入の初期相談、Claude Code導入サポート、月額プランのご相談はこちらからどうぞ。</p>
+          <h2 class="section-heading">お問い合わせはこちら</h2>
         </div>
         <form class="contact-form fade-in" id="contactForm">
           <div class="form-group">
@@ -569,6 +623,9 @@
       <div>
         <img src="images/logo.png" alt="Piste AI EVANGELISTS" loading="lazy">
         <p>AIの力で、ビジネスの未来を変える。企業のためのAI導入パートナー。</p>
+        <p style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:6px 14px;background:rgba(196,162,78,0.12);border:1px solid rgba(196,162,78,0.45);border-radius:999px;font-size:0.78em;font-weight:600;color:#c4a24e;">
+          <span>✦</span>Anthropic 公式パートナーネットワーク認定企業
+        </p>
       </div>
       <nav>
         <h3>サービス</h3>

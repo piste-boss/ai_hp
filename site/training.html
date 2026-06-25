@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI研修プログラム（人材開発支援助成金 活用可能・全12コマ） | Piste AI EVANGELISTS</title>
+<meta name="description" content="従業員向け Claude Code 実践研修（全12コマ／60分）。厚生労働省「人材開発支援助成金」を活用すれば、研修費の最大75%が経費助成され、自己負担を大幅に圧縮できます。">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="canonical" href="https://www.piste-ai.com/training.html">
+<style>
+  :root{
+    --ink:#1a2332;
+    --sub:#55617a;
+    --accent:#e07b1a;
+    --accent-dark:#c75b07;
+    --line:#ece2d6;
+    --bg:#faf6f1;
+    --card:#ffffff;
+    --soft:#fbf1e4;
+    --code-bg:#2b2f3a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",Meiryo,sans-serif;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:960px;
+    margin:40px auto;
+    background:var(--card);
+    border-radius:14px;
+    box-shadow:0 10px 40px rgba(20,30,50,.10);
+    overflow:hidden;
+  }
+  .head{
+    background:linear-gradient(135deg,#f0921f 0%,#c75b07 100%);
+    color:#fff;
+    padding:48px 56px 40px;
+  }
+  .head .label{
+    font-size:13px;
+    letter-spacing:.32em;
+    opacity:.85;
+    margin:0 0 16px;
+  }
+  .head h1{
+    margin:0;
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:.03em;
+    line-height:1.5;
+  }
+  .head .meta{
+    font-size:14px;
+    opacity:.9;
+    margin:18px 0 0;
+    letter-spacing:.04em;
+  }
+  .body{padding:46px 56px 54px;}
+
+  h2{
+    font-size:22px;
+    margin:54px 0 22px;
+    padding:14px 0 14px 18px;
+    border-left:6px solid var(--accent);
+    background:linear-gradient(90deg,var(--soft),transparent);
+    letter-spacing:.04em;
+  }
+  h2:first-of-type{margin-top:8px;}
+  h3{
+    font-size:17px;
+    margin:32px 0 14px;
+    color:var(--accent-dark);
+    letter-spacing:.04em;
+    border-bottom:2px dotted var(--line);
+    padding-bottom:6px;
+  }
+  h4{
+    font-size:15px;
+    margin:22px 0 10px;
+    color:var(--ink);
+  }
+  p{margin:0 0 16px;font-size:15px;}
+  strong{color:var(--accent-dark);font-weight:700;}
+
+  .lesson-tag{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    padding:3px 12px;
+    border-radius:6px;
+    margin-right:10px;
+    letter-spacing:.05em;
+    vertical-align:middle;
+  }
+  .goal{
+    background:var(--soft);
+    border-radius:10px;
+    padding:14px 20px;
+    margin:18px 0 22px;
+    font-size:15px;
+  }
+  .goal strong{color:var(--accent-dark);}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    margin:18px 0 24px;
+    background:#fff;
+  }
+  th,td{
+    text-align:left;
+    padding:12px 15px;
+    border:1px solid var(--line);
+    vertical-align:top;
+  }
+  thead th{
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  tbody th{
+    background:var(--soft);
+    color:var(--accent-dark);
+    font-weight:700;
+    white-space:nowrap;
+    width:120px;
+  }
+  tbody tr:nth-child(even) td{background:#fcf9f5;}
+
+  ul,ol{margin:10px 0 20px;padding-left:26px;}
+  li{margin:7px 0;font-size:15px;}
+
+  pre{
+    background:var(--code-bg);
+    color:#e8eaf0;
+    padding:20px 22px;
+    border-radius:10px;
+    overflow-x:auto;
+    font-size:13px;
+    line-height:1.7;
+    font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    margin:18px 0 24px;
+  }
+  code{
+    background:var(--soft);
+    color:var(--accent-dark);
+    padding:2px 6px;
+    border-radius:4px;
+    font-size:.9em;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;
+  }
+  pre code{background:none;color:inherit;padding:0;}
+
+  blockquote{
+    margin:18px 0;
+    padding:12px 20px;
+    border-left:4px solid var(--accent);
+    background:#fcf9f5;
+    color:var(--sub);
+    font-size:14px;
+    border-radius:0 8px 8px 0;
+  }
+  blockquote p{margin:6px 0;}
+
+  .check{list-style:none;padding-left:4px;}
+  .check li{position:relative;padding-left:30px;}
+  .check li::before{
+    content:"";
+    position:absolute;
+    left:0;top:5px;
+    width:18px;height:18px;
+    border:2px solid var(--accent);
+    border-radius:4px;
+    background:#fff;
+  }
+
+  hr{border:none;border-top:1px solid var(--line);margin:46px 0;}
+
+  .roadmap{
+    background:#1f2530;
+    color:#dfe4ee;
+    border-radius:10px;
+    padding:22px 24px;
+    font-size:13px;
+    line-height:1.8;
+    overflow-x:auto;
+    font-family:"SFMono-Regular",Consolas,Menlo,monospace;
+    margin:18px 0 24px;
+  }
+  .roadmap b{color:var(--accent);}
+
+  .note-section{
+    background:#fff8ef;
+    border:1px solid #f0d9b8;
+    border-radius:12px;
+    padding:28px 32px;
+    margin-top:24px;
+  }
+  .note-section h2{
+    margin-top:0;
+    background:none;
+    border-left:6px solid var(--accent);
+  }
+  .risk{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:6px 22px;
+    margin:16px 0;
+  }
+  .risk h4{
+    color:var(--accent-dark);
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+  }
+  .foot-note{
+    text-align:center;
+    color:var(--sub);
+    font-size:13px;
+    font-style:italic;
+    margin-top:36px;
+  }
+  @media print{
+    @page{ size:A4; margin:14mm 13mm; }
+    body{background:#fff;}
+    /* 内容を10%スケールダウンして1ページに収まる量を増やす */
+    .sheet{box-shadow:none;margin:0 auto;border-radius:0;max-width:none;zoom:0.9;}
+    .body{padding:0;}
+    .head{padding:26px 4px 22px;}
+    /* 各コマ（h2）を必ずA4の新しいページから始める。概要だけは表紙と同じページに置く */
+    h2{ page-break-before:always; break-before:page; }
+    h2:first-of-type{ page-break-before:avoid; break-before:avoid; }
+    /* 画面用の区切り線は印刷では非表示（ページ区切りが代替） */
+    hr{ display:none; }
+    /* 見出し直後での改ページや、ブロック途中での分断を避ける */
+    h2,h3,h4{ page-break-after:avoid; break-after:avoid; }
+    table,pre,blockquote,.goal,.risk,.roadmap,li{ page-break-inside:avoid; break-inside:avoid; }
+    .note-section{ page-break-before:always; break-before:page; }
+  }
+  @media(max-width:640px){
+    .head,.body{padding-left:24px;padding-right:24px;}
+    .head h1{font-size:24px;}
+  }
+
+  .training-page-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 12px rgba(20,30,50,.05);
+  }
+  .training-page-header-inner{
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 24px;
+    gap:18px;
+  }
+  .training-page-logo img{height:36px;display:block;}
+  .training-page-nav{display:flex;align-items:center;gap:16px;}
+  .training-page-nav a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.04em;
+  }
+  .training-page-nav a:hover{color:var(--accent-dark);}
+  .training-page-cta{
+    background:var(--accent);
+    color:#fff !important;
+    padding:9px 18px;
+    border-radius:999px;
+    transition:background .2s;
+  }
+  .training-page-cta:hover{background:var(--accent-dark);color:#fff !important;}
+
+  .training-page-bottom-cta{
+    background:linear-gradient(135deg,#fff8ef 0%,#fbe5c8 100%);
+    padding:64px 24px;
+  }
+  .training-page-bottom-inner{
+    max-width:780px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .training-page-eyebrow{
+    color:var(--accent-dark);
+    font-size:13px;
+    letter-spacing:.32em;
+    font-weight:800;
+    margin:0 0 12px;
+  }
+  .training-page-bottom-cta h2{
+    background:none;
+    border:none;
+    padding:0;
+    margin:0 0 16px;
+    font-size:24px;
+    letter-spacing:.04em;
+  }
+  .training-page-bottom-cta p{
+    color:var(--sub);
+    font-size:15px;
+    margin:0 0 28px;
+  }
+  .training-page-bottom-actions{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .training-page-bottom-btn{
+    display:inline-block;
+    padding:14px 26px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:.06em;
+    min-width:220px;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .training-page-bottom-btn.primary{
+    background:var(--accent);
+    color:#fff;
+    box-shadow:0 8px 22px rgba(224,123,26,.32);
+  }
+  .training-page-bottom-btn.primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(224,123,26,.42);
+  }
+  .training-page-bottom-btn.outline{
+    background:#fff;
+    color:var(--accent-dark);
+    border:1.5px solid var(--accent);
+  }
+  .training-page-bottom-btn.outline:hover{
+    background:var(--soft);
+  }
+
+  .training-page-footer{
+    background:#1a2332;
+    color:#dfe4ee;
+    padding:32px 24px;
+  }
+  .training-page-footer-inner{
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .training-page-footer p{
+    margin:0;
+    font-size:13px;
+    opacity:.75;
+  }
+  .training-page-footer nav{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .training-page-footer nav a{
+    color:#dfe4ee;
+    text-decoration:none;
+    font-size:13px;
+    opacity:.85;
+  }
+  .training-page-footer nav a:hover{opacity:1;text-decoration:underline;}
+
+  @media print{
+    .training-page-header,
+    .training-page-bottom-cta,
+    .training-page-footer{display:none !important;}
+  }
+</style>
+</head>
+<body>
+<header class="training-page-header">
+  <div class="training-page-header-inner">
+    <a href="index.html" class="training-page-logo" aria-label="Piste AI EVANGELISTS トップへ">
+      <img src="images/logo.png" alt="Piste AI EVANGELISTS">
+    </a>
+    <nav class="training-page-nav" aria-label="トップに戻る">
+      <a href="index.html">← トップへ戻る</a>
+      <a href="index.html#contact" class="training-page-cta">無料相談を予約</a>
+    </nav>
+  </div>
+</header>
+
+<div class="sheet">
+  <div class="head">
+    <p class="label">人材開発支援助成金 活用事業 ／ 研修カリキュラム</p>
+    <h1>Claude Code 実践活用<br>AI研修プログラム（全12コマ）</h1>
+    <p class="meta">人材開発支援助成金 活用対応カリキュラム　／　講師：石川 卓（いしかわ すぐる）</p>
+  </div>
+
+  <div class="body">
+
+    <h2>研修全体の概要</h2>
+    <table>
+      <tbody>
+        <tr><th>目的</th><td>ChatGPT・Claude Code を中核に、受講者が自社の業務を自ら AI 化・自動化できる状態を作る</td></tr>
+        <tr><th>対象</th><td>管理職・現場担当者（プログラミング未経験者を含む）</td></tr>
+        <tr><th>形式</th><td>講義＋ハンズオン（PC実機操作）＋グループワーク</td></tr>
+        <tr><th>1コマ</th><td>60分（休憩・質疑含む）／全12コマ</td></tr>
+        <tr><th>到達像</th><td>「おはよう」の一言で日次業務が自動実行され、ランディングページの制作・公開や外部API連携システムまで自走開発できる組織人材を育成する</td></tr>
+      </tbody>
+    </table>
+
+    <h3>学習ロードマップ（全体像）</h3>
+    <div class="roadmap">
+【導入・基礎】　　　　【環境・単体エージェント】　【Web制作・公開】【外部API・SNS自動投稿】　【複合自動化】<br>
+ <b>1〜2コマ目</b>　 →　 <b>3〜5コマ目</b>　　　　 →　 <b>6コマ目</b>　 →　 <b>7〜8コマ目</b>　　　 →　 <b>9〜10コマ目</b><br>
+ AIの概念　　　　 環境構築/フォルダ　　　　　 Codexで　　　 外部API連携　　　　　 スキルマネージャー/<br>
+ 業務の棚卸し　　 Office連携/返信　　　　　　 LP制作　　　 Claude Code×GAS　　 エージェントチーム<br>
+ リサーチ体験　　 エージェント単体構築　　　　 GitHub/公開　 SNS自動投稿
+    </div>
+
+    <h3>受講前の事前準備（共通）</h3>
+    <ul>
+      <li>PC（macOS / Windows）、安定したネット回線</li>
+      <li>Claude（Pro/Max）アカウント、Claude Code のインストール</li>
+      <li>ChatGPT アカウント</li>
+      <li>Google アカウント（または Microsoft 365 アカウント）</li>
+      <li>※APIキーやアカウント作成は各コマで案内（無料枠で進行可能な範囲を中心に構成）</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">1コマ目</span>ChatGPT・AIエージェントを実務へ落とし込む / AI化ポイントの見つけ方</h2>
+    <div class="goal"><strong>ゴール：</strong>グループワークで自社のどの業務にAIを活用できるかを見つける。リスクや注意点などAIの基礎概念を理解する。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>AIの基礎概念
+        <ul>
+          <li>生成AIとは何か（LLMの仕組みをざっくり理解）</li>
+          <li>「ツールとしてのAI」と「エージェントとしてのAI」の違い</li>
+          <li>ハルシネーション（誤情報）・著作権・機密情報の取り扱いリスク</li>
+        </ul>
+      </li>
+      <li>AI化すべき業務の見つけ方
+        <ul>
+          <li>「繰り返し・定型・大量・調べ物」がAI化の狙い目</li>
+          <li>業務棚卸しの4象限（頻度 × 定型度）</li>
+        </ul>
+      </li>
+      <li>プロンプト基礎を「画像生成」で体感する
+        <ul>
+          <li>役割付与・前提条件・出力形式の指定（プロンプトの型）を、画像生成で実演する</li>
+          <li>同じ題材でも、指示の解像度（被写体・構図・色・雰囲気・用途）で結果が大きく変わることを<strong>目で見て</strong>理解する</li>
+          <li>狙い：目に見える成果物を扱うことで、AIへの指示出しスキル（プロンプト力）を高める。文章出力より良し悪しが直感的に分かり、初学者でも「伝え方で変わる」を体感しやすい</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>画像生成プロンプト実演・ハンズオン（目に見える成果物で学ぶ）</h3>
+    <ul>
+      <li>講師がまず曖昧な指示（例：「かっこいい画像を作って」）と具体的な指示（被写体・構図・色味・用途を明示）の差を実演</li>
+      <li>受講者も自社で使えそうな画像（例：SNS投稿用バナー、商品イメージ、サムネイル）を1枚生成</li>
+      <li>「もっと明るく」「正方形に」「文字を入れて」など、対話で目標に近づける反復を体験</li>
+      <li>ここで掴んだ「指示の型」が、2コマ目以降のエージェントへの指示出しにそのまま生きる</li>
+    </ul>
+
+    <h3>グループワーク（30分）</h3>
+    <ul>
+      <li>自社業務を付箋（または共有シート）に書き出す</li>
+      <li>「頻度 × 定型度」マトリクスに配置</li>
+      <li>AI化の優先順位TOP3を各自・各グループで決定 → 発表</li>
+    </ul>
+
+    <h3>リスク・注意点（必ず押さえる）</h3>
+    <ul>
+      <li>機密情報・個人情報を安易に入力しない（社内ルールの必要性）</li>
+      <li>出力は必ず人がチェックする（最終責任は人間）</li>
+      <li>無料版と有料版/API利用時のデータ学習設定の違い</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>AI化候補業務を3つ以上挙げられる</li>
+      <li>AIのリスクを自分の言葉で説明できる</li>
+      <li>プロンプトの型を使い、画像生成で意図した成果物に近づけられる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">2コマ目</span>Claude Code を活用したリサーチエージェント（お試し体験）</h2>
+    <div class="goal"><strong>ゴール：</strong>Claude Code と他AIの違いを理解し、簡単なリサーチを実行できることを体験する。「自分のPCを操作するエージェント」のインパクトを先に体感し、3コマ目以降の本格構築へのモチベーションにする。</div>
+    <blockquote><p>このコマは本格的な環境構築（3コマ目）の前の「お試し体験」回。<strong>講師のデモを中心</strong>に進め、受講者は講師の画面または最小セットアップで「Claude Code が自律的に調べてファイルを作る」様子を体感する。各自の本格的な環境構築・許可設定は3コマ目で丁寧に行う。</p></blockquote>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>Claude Code とは何か
+        <ul>
+          <li>チャットUI型AI（ChatGPT等）との決定的な違い
+            <ul>
+              <li>自分のPC（ファイル・ターミナル・ツール）を操作できる</li>
+              <li>複数ステップのタスクを自律的に実行する「エージェント」</li>
+            </ul>
+          </li>
+          <li>できること / 苦手なことの整理</li>
+        </ul>
+      </li>
+      <li>リサーチエージェントの作り方
+        <ul>
+          <li>Web検索・WebFetchによるリサーチのさせかた</li>
+          <li>「調べる→出典確認→要約→ファイル保存」の一連の流れ</li>
+          <li>出典を必ず明示させるプロンプト設計</li>
+          <li>調査結果を <code>04_成果物/リサーチレポート/</code> に保存する運用（フォルダ構成は3コマ目で整える）</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン（講師デモ中心）</h3>
+    <ul>
+      <li>「自社業界の最新トレンドを5つ調べてMDファイルにまとめて」を実行し、エージェントの動きを観察</li>
+      <li>出力をレビューし、出典の妥当性をチェック</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>Claude Code とChatGPTの違いを説明できる</li>
+      <li>リサーチエージェントが「調べてファイルにまとめる」流れをイメージできる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">3コマ目</span>環境構築・動作確認 / AIが迷わないフォルダ構成</h2>
+    <div class="goal"><strong>ゴール：</strong>Claude Code を自分のPCで起動し、簡単な指示が通る状態（動作確認）まで到達する。あわせて、以降の全コマの土台となる「AIが迷わないフォルダ構成」を理解し、自社用に構築する。</div>
+    <blockquote><p>このコマは以降のコマで本格的に手を動かすための土台づくり。ここで環境構築につまずくと以降が全滅するため、<strong>全員が確実に動く状態をつくることを最優先</strong>とする。手の早い受講者には待ち時間でフォルダ設計を先に進めてもらう。</p></blockquote>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>環境構築・動作確認
+        <ul>
+          <li>Claude Code のインストール（macOS / Windows）</li>
+          <li>ターミナルの基本操作（怖くない・最低限のコマンドだけ）</li>
+          <li>起動・プロンプトの送り方・許可（permission）の考え方</li>
+          <li>MCP / API認証の基礎（仕組みと最初のつなぎ方）</li>
+          <li>「ちゃんと動くか」の動作確認（2コマ目で見たリサーチを今度は自分のPCで再現）</li>
+        </ul>
+      </li>
+      <li>AIが迷わないフォルダ構成（共通設計）
+        <ul>
+          <li>プロンプトの上手さだけでなく、<strong>AIが参照すべき資料・作業中ファイル・完成物・認証情報を迷わず見つけられるフォルダ設計</strong>が重要</li>
+          <li>各社が自社用に流用できる標準構成を作りながら進める</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>AIが迷わないフォルダ構成（標準構成）</h3>
+    <pre><code>会社名_AI業務自動化/
+├── 00_ルール/
+│   ├── CLAUDE.md                 # AIへの常時指示書
+│   ├── 命名規則.md
+│   └── セキュリティルール.md
+├── 01_業務棚卸し/
+│   ├── AI化候補リスト.xlsx
+│   └── 業務フロー整理.md
+├── 02_素材/
+│   ├── 会社情報/
+│   ├── 商品サービス情報/
+│   └── よく使う文章/
+├── 03_スキル/
+│   ├── research.md
+│   ├── gmail_reply.md
+│   └── daily_routine.md
+├── 04_成果物/
+│   ├── リサーチレポート/
+│   ├── 提案書/
+│   └── アプリ/
+├── 05_ログ/
+│   ├── 実行ログ/
+│   └── 改善履歴/
+└── .claude/
+    ├── commands/                 # 自作スキル・スラッシュコマンド
+    └── credentials/              # APIキー・MCP認証情報（Git管理しない）</code></pre>
+
+    <h4>フォルダ設計の考え方</h4>
+    <ul>
+      <li><code>00_ルール/</code>：AIに毎回守らせる社内ルール、表記、禁止事項を置く</li>
+      <li><code>01_業務棚卸し/</code>：AI化する前の業務一覧・優先順位・現状フローを置く</li>
+      <li><code>02_素材/</code>：AIが参照してよい会社情報・商品情報・定型文を置く</li>
+      <li><code>03_スキル/</code>：再利用できる業務手順やプロンプトを置く</li>
+      <li><code>04_成果物/</code>：AIが作成したレポート、提案書、アプリ・LPなどを保存する</li>
+      <li><code>05_ログ/</code>：いつ、何を、どのAIに実行させたかを記録する</li>
+      <li><code>.claude/credentials/</code>：APIキーや認証情報を置くが、外部共有・GitHub公開はしない</li>
+    </ul>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>Claude Code を起動し、「今日の日付をファイルに書いて」など簡単な指示が通ることを確認</li>
+      <li>自社用のAI業務フォルダ（上記の標準構成）を作成する</li>
+      <li>ルール・素材・成果物・ログ・認証情報の保存先を自分で決める</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>Claude Code を自分のPCで起動し、簡単な指示を実行できる</li>
+      <li>ターミナルの基本操作・許可（permission）の考え方を説明できる</li>
+      <li>自社用のAI業務フォルダを作成し、用途別に分けて管理できる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">4コマ目</span>Google Workspace / Microsoft Office 連携エージェント構築</h2>
+    <div class="goal"><strong>ゴール：</strong>GoogleワークスペースやOfficeとAPI連携させ、エクセル/スプレッドシート入力業務を代行するエージェントを構築できるようになる。CLAUDE.md への理解を深める。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>API連携の基礎概念
+        <ul>
+          <li>「APIで外部サービスとつなぐ」とはどういうことか</li>
+          <li>MCP（Model Context Protocol）の概要</li>
+        </ul>
+      </li>
+      <li>Google Workspace / Microsoft 365 連携
+        <ul>
+          <li>スプレッドシート / Excel の読み書き連携セットアップ</li>
+          <li>認証情報の安全な管理（<code>.claude/credentials/</code> の考え方）</li>
+        </ul>
+      </li>
+      <li>CLAUDE.md の理解と活用
+        <ul>
+          <li>CLAUDE.md とは「AIへの常時指示書」</li>
+          <li>プロジェクトルール・命名規則・業務手順を書く</li>
+          <li>グローバルルールとプロジェクトルールの使い分け</li>
+          <li>3コマ目で作ったフォルダ構成を、CLAUDE.md でAIに明示する</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>スプレッドシートに「項目別データを自動入力」させる</li>
+      <li>CLAUDE.md に自社のルール（言語・命名・保存先）を記述し、挙動が変わることを体験</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>スプレッドシート/Excelの入力業務をエージェントに代行させられる</li>
+      <li>CLAUDE.md に自社ルールを記述できる</li>
+      <li>AIに「どこを見て、どこに保存するか」を明示できる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">5コマ目</span>返信エージェント構築（Slack / Gmail 連携）</h2>
+    <div class="goal"><strong>ゴール：</strong>Slack や Gmail と MCP連携させ、メッセージ返信エージェントを構築できるようになる。スキルを構築する。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>MCP連携の実践
+        <ul>
+          <li>Slack MCP / Gmail MCP のセットアップ</li>
+          <li><code>~/.claude/.mcp.json</code> への設定（※settings.jsonのmcpServersは非対応）</li>
+        </ul>
+      </li>
+      <li>返信エージェントの設計
+        <ul>
+          <li>メッセージを読む→文脈を理解→返信ドラフトを作る</li>
+          <li>「下書きまで」と「自動送信」の線引き（安全設計）</li>
+        </ul>
+      </li>
+      <li>スキル（Skill）の構築
+        <ul>
+          <li>スキルとは「再利用できる業務手順のパッケージ」</li>
+          <li><code>.claude/commands/</code> への保存</li>
+          <li>スラッシュコマンドで呼び出せるようにする</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>Gmailの未読を要約し、返信ドラフトを作るスキルを作成</li>
+      <li>Slackの特定チャンネルへ定型連絡を送るスキルを作成</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>Slack/Gmail と連携した返信エージェントを動かせる</li>
+      <li>自作スキルをスラッシュコマンドで呼び出せる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">6コマ目</span>Codex を使ったランディングページ（LP）制作・公開</h2>
+    <div class="goal"><strong>ゴール：</strong>Codex（OpenAI Codex CLI）を使って、自社のランディングページ（LP）をAIに作らせ、対話で仕上げられるようになる。さらに <strong>GitHub とサーバー管理の考え方</strong> を理解し、作ったLPをインターネットに公開できるようになる。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>Codex（OpenAI Codex CLI）とは
+        <ul>
+          <li>Claude Code と同じ「ターミナルで動くAIコーディングエージェント」</li>
+          <li>Claude Code との違い・使い分け（複数のAIエージェントを目的で選ぶ発想）</li>
+          <li>インストールと起動・許可の考え方</li>
+        </ul>
+      </li>
+      <li>ランディングページ（LP）の基礎
+        <ul>
+          <li>LPとは：1ページで商品・サービスの魅力を伝え、行動（問い合わせ・購入）を促すページ</li>
+          <li>基本構成：ファーストビュー → 課題提起 → ベネフィット → 実績・お客様の声 → CTA（行動喚起）</li>
+        </ul>
+      </li>
+      <li>バイブコーディングでLPを作る
+        <ul>
+          <li>「誰に・何を・どんな印象で」を伝えてLPを生成（指示の解像度が成果物を決める）</li>
+          <li>プレビューで確認しながら対話で修正（1コマ目の画像生成プロンプトの考え方がそのまま活きる）</li>
+          <li>キャッチコピー・配色・レイアウト・CTAを指示で調整</li>
+          <li>生成物を <code>04_成果物/アプリ/</code> に保存する運用</li>
+        </ul>
+      </li>
+      <li>GitHub とサーバー管理の考え方（公開の土台）
+        <ul>
+          <li><strong>ローカル（自分のPC）と公開サーバーの違い</strong>：なぜ作っただけではネットに出ないのか</li>
+          <li><strong>GitHub とは</strong>：コードの保存・バージョン管理（リポジトリ / コミット / プッシュ）、過去に戻せる・共同編集できる利点</li>
+          <li><strong>サーバー / ホスティングの考え方</strong>：作ったLPを「誰でもURLで見られる状態」にする仕組み</li>
+          <li><strong>公開（デプロイ）の流れ</strong>：GitHub → Netlify / GitHub Pages 等で自動公開、独自ドメインの概要</li>
+          <li>Codex に「GitHubへ上げて公開して」と頼む際の指示の出し方・許可の考え方</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>自社サービスのLPをCodexに作らせる（1ページ）</li>
+      <li>ファーストビューのキャッチコピーとCTAボタンを対話で改善</li>
+      <li>1コマ目で作った画像を差し込み、配色を自社イメージに合わせる</li>
+      <li>作ったLPをGitHubにプッシュ（バージョン管理を体験）</li>
+      <li>Netlify / GitHub Pages で公開し、URLを発行してスマホで確認 → 修正して再公開</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>Codex CLI を起動し、AIにLPを作らせられる</li>
+      <li>LPの基本構成を理解し、対話で見た目・文章を修正できる</li>
+      <li>GitHub と公開サーバーの役割の違いを説明できる</li>
+      <li>作ったLPをGitHub経由で公開し、URLでアクセスできる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">7コマ目</span>SNS自動投稿システム構築①（外部API連携 / Claude Code × GAS）</h2>
+    <div class="goal"><strong>ゴール：</strong>外部API連携の考え方を理解し、Claude Code と GAS（Google Apps Script）を連携させて、SNSへ自動投稿する簡単なプログラムを作れるようになる。<strong>「外部APIと連携できる」状態を作ることが狙い。</strong></div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>外部API連携とは
+        <ul>
+          <li>「APIで外部サービスを操作する」とは（投稿する・取得する・更新する）</li>
+          <li>APIキー / アクセストークン / 認証の基礎</li>
+          <li>SNS API（X / Threads / Instagram 等）でできること・制約（審査・レート制限）</li>
+        </ul>
+      </li>
+      <li>Claude Code × GAS の連携
+        <ul>
+          <li>GAS（Google Apps Script）とは：Googleのクラウド上で動く・環境構築不要・ブラウザだけで完結</li>
+          <li>Claude Code で GAS のコードを生成・編集する流れ（文法を書けなくてOK）</li>
+          <li>スプレッドシートを「投稿ネタ管理表」として使う発想</li>
+        </ul>
+      </li>
+      <li>自動投稿システムの全体設計
+        <ul>
+          <li>投稿文をスプレッドシートに用意 → GASがAPIを叩いて投稿</li>
+          <li>「下書き／予約／即時投稿」の考え方</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>スプレッドシートに「投稿ネタ表」を作る</li>
+      <li>Claude Code に指示して、指定したテキストを外部サービス（SNS API、難しければ Slack / Webhook で代替）に送る最小のGASプログラムを生成</li>
+      <li>実際に1件、テスト投稿を飛ばして「外部APIに届く」を体験</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>外部API連携・APIキー（トークン）の考え方を説明できる</li>
+      <li>Claude Code で GAS のコードを生成・修正できる</li>
+      <li>スプレッドシートの内容を外部サービスに送る最小プログラムを動かせる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">8コマ目</span>SNS自動投稿システム構築②（定期実行・運用）</h2>
+    <div class="goal"><strong>ゴール：</strong>GASのトリガーで定期自動投稿を実現し、投稿管理・エラー対応まで含めた「実用的な外部API連携プログラム」を1つ完成できるようになる。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>定期実行（トリガー）
+        <ul>
+          <li>GASの時間主導型トリガーで「毎朝9時に自動投稿」</li>
+          <li>投稿済みフラグ管理（二重投稿の防止）</li>
+        </ul>
+      </li>
+      <li>複数SNS・複数アカウント対応の考え方
+        <ul>
+          <li>投稿先を表で切り替える設計</li>
+          <li>サービスごとのAPIの違いを吸収する発想</li>
+        </ul>
+      </li>
+      <li>運用・エラー対応
+        <ul>
+          <li>失敗時のログ・通知（Slack / メール）</li>
+          <li>レート制限・トークン期限切れへの対処</li>
+          <li>認証情報の安全管理(コードに直書きしない／Script Properties の活用)</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>7コマ目のプログラムにトリガーを設定し、定期自動投稿にする</li>
+      <li>「投稿済み」管理列を追加し、二重投稿を防ぐ</li>
+      <li>エラー時に Slack / メールへ通知する仕組みを追加</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>GASのトリガーで定期自動投稿を動かせる</li>
+      <li>投稿管理（二重投稿防止・ログ）を設計できる</li>
+      <li>外部APIと連携した実用的な自動化プログラムを1つ完成できる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">9コマ目</span>複数タスク実行エージェントの構築①（スキルマネージャー）</h2>
+    <div class="goal"><strong>ゴール：</strong>スキルマネージャーを構築し、「おはよう」の一言で全タスク業務が自動実行される仕組みを作れるようになる。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>スキルの組み合わせ（オーケストレーション）
+        <ul><li>これまでに作った単体スキル・自動投稿プログラムを束ねる発想</li></ul>
+      </li>
+      <li>スキルマネージャー（親スキル）の構築
+        <ul>
+          <li>「おはよう」をトリガーに複数スキルを順次/並列実行</li>
+          <li>実行順序・依存関係の設計</li>
+        </ul>
+      </li>
+      <li>日次ルーティンの自動化設計
+        <ul><li>例：予定取得 → ニュース収集 → メール下書き → SNS投稿 → レポート作成</li></ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>自社の朝の定型業務3〜5個を洗い出す</li>
+      <li>「おはよう」で一括実行されるスキルマネージャーを構築・テスト</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>「おはよう」の一言で複数タスクが自動実行される</li>
+      <li>実行順序を自分で設計・調整できる</li>
+    </ul>
+
+    <hr>
+
+    <h2><span class="lesson-tag">10コマ目</span>複数タスク実行エージェントの構築②（エージェントチーム）</h2>
+    <div class="goal"><strong>ゴール：</strong>エージェントチームを構築し、複数エージェントによる並列業務を実行できるようになる。ログ管理・コンテキストの理解・最適なAIモデルの選択ができるようになる。</div>
+
+    <h3>学習内容</h3>
+    <ol>
+      <li>マルチエージェント（並列処理）
+        <ul>
+          <li>1つのエージェントの限界と、チーム化のメリット</li>
+          <li>サブエージェントへのタスク分担</li>
+        </ul>
+      </li>
+      <li>コンテキスト管理
+        <ul>
+          <li>コンテキストウィンドウとは / なぜ重要か</li>
+          <li>長時間タスクでの情報の引き継ぎ</li>
+        </ul>
+      </li>
+      <li>ログ管理
+        <ul>
+          <li>何を・どこに記録するか（実行ログ・成果物ログ）</li>
+          <li>後から振り返れる運用設計</li>
+        </ul>
+      </li>
+      <li>AIモデルの選択
+        <ul>
+          <li>Opus / Sonnet / Haiku の特性と使い分け</li>
+          <li>「速度・コスト・賢さ」のトレードオフ</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>ハンズオン</h3>
+    <ul>
+      <li>複数エージェントで「調査＋執筆＋校正」を並列分担</li>
+      <li>タスクごとに最適なモデルを割り当てる</li>
+    </ul>
+
+    <h3>到達確認</h3>
+    <ul class="check">
+      <li>複数エージェントで並列業務を実行できる</li>
+      <li>タスクに応じてAIモデルを使い分けられる</li>
+    </ul>
+
+    <hr>
+
+    <h2>研修修了時の到達目標（まとめ）</h2>
+    <table>
+      <thead>
+        <tr><th>カテゴリ</th><th>修了時にできること</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>基礎・環境</th><td>AIのリスクを理解し、環境構築とAIが迷わないフォルダ設計を整えたうえで、自社業務のAI化ポイントを特定できる</td></tr>
+        <tr><th>単体エージェント</th><td>リサーチ・Office連携・返信を自動化するエージェントを作れる</td></tr>
+        <tr><th>Web制作・公開</th><td>Codex を使って自社のランディングページを制作し、GitHub経由でWebに公開できる</td></tr>
+        <tr><th>外部API・SNS自動投稿</th><td>外部APIと連携し、Claude Code × GAS でSNS自動投稿システムを構築できる</td></tr>
+        <tr><th>複合自動化</th><td>「おはよう」で日次業務が自動実行され、複数エージェントを並列運用できる</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<section class="training-page-bottom-cta">
+  <div class="training-page-bottom-inner">
+    <p class="training-page-eyebrow">Next Step</p>
+    <h2>助成金を活用したAI研修の導入をご検討中ですか？</h2>
+    <p>カリキュラムのカスタマイズや、人材開発支援助成金の申請可否確認も無料相談で承ります。<br>1社単位での開講、オンライン／対面いずれも対応します。</p>
+    <div class="training-page-bottom-actions">
+      <a href="index.html#contact" class="training-page-bottom-btn primary">無料相談を予約する</a>
+      <a href="index.html#training" class="training-page-bottom-btn outline">助成金活用プランの概要に戻る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="training-page-footer">
+  <div class="training-page-footer-inner">
+    <p>&copy; Piste AI EVANGELISTS</p>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="index.html#training">助成金活用プラン</a>
+      <a href="index.html#contact">お問い合わせ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="tokushoho.html">特定商取引法</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
