@@ -63,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260521-2">
+  <link rel="stylesheet" href="css/style.css?v=20260625-1">
 </head>
 <body>
   <header class="header">
@@ -74,6 +74,7 @@
       <nav class="header-nav" aria-label="メインナビゲーション">
         <a href="#services">支援内容</a>
         <a href="#plans">料金</a>
+        <a href="#training">研修</a>
         <a href="#flow">流れ</a>
         <a href="#media">メディア掲載</a>
         <a href="blog/">ブログ</a>
@@ -92,6 +93,7 @@
   <nav class="mobile-nav" aria-label="モバイルナビゲーション">
     <a href="#services">支援内容</a>
     <a href="#plans">料金</a>
+    <a href="#training">研修</a>
     <a href="#flow">流れ</a>
     <a href="#media">メディア掲載</a>
     <a href="blog/">ブログ</a>
@@ -112,6 +114,9 @@
           <p class="eyebrow">AI implementation partner</p>
           <h1>中小企業のAI導入を、現場で使える形まで伴走します。</h1>
           <p class="hero-lead">ChatGPT、Claude、業務自動化、資料作成、顧客対応。ツール選定から実装、運用改善まで、マンツーマンで一緒に進めます。</p>
+          <p style="display:inline-flex;align-items:center;gap:8px;margin:4px 0 20px;padding:8px 16px;background:rgba(196,162,78,0.12);border:1px solid rgba(196,162,78,0.5);border-radius:999px;font-size:0.82em;font-weight:600;color:#c4a24e;">
+            <span style="font-size:1.1em;">✦</span>Anthropic 公式パートナーネットワーク認定企業
+          </p>
           <div class="hero-actions">
             <a href="#contact" class="btn-primary">無料相談を予約する</a>
             <a href="#services" class="btn-outline">支援内容を見る</a>
@@ -241,7 +246,7 @@
         <div class="plan-grid">
           <article class="plan-card fade-in">
             <p class="plan-name">ライトプラン</p>
-            <p class="plan-price">¥22,000<span>/月</span></p>
+            <p class="plan-price">¥20,000<span>/月</span></p>
             <p class="plan-period">税込</p>
             <ul class="plan-features">
               <li>週1時間×2回 マンツーマン指導</li>
@@ -253,7 +258,7 @@
           <article class="plan-card recommended fade-in">
             <span class="plan-badge">おすすめ</span>
             <p class="plan-name">スタンダードプラン</p>
-            <p class="plan-price">¥36,000<span>/月</span></p>
+            <p class="plan-price">¥40,000<span>/月</span></p>
             <p class="plan-period">税込</p>
             <ul class="plan-features">
               <li>週1時間×4回 マンツーマン相談</li>
@@ -268,13 +273,64 @@
             <p class="plan-period">税込</p>
             <ul class="plan-features">
               <li>週2時間×4回 マンツーマン相談</li>
-              <li>3名まで同時参加可能</li>
+              <li>業務テンプレート作成</li>
               <li>LINEサポート随時</li>
             </ul>
             <a href="#contact" class="btn-primary">相談して申し込む</a>
           </article>
         </div>
         <p class="payment-note fade-in">カード決済対応。口座振込は別途ご相談ください。<a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラの評価・実績を見る</a></p>
+      </div>
+    </section>
+
+    <section class="section training" id="training">
+      <div class="container">
+        <div class="section-head center fade-in">
+          <p class="section-title">Training</p>
+          <h2 class="section-heading">AI研修プログラム（人材開発支援助成金 活用可能）</h2>
+          <p class="section-desc">従業員向け Claude Code 実践研修（全10コマ）。厚生労働省「人材開発支援助成金」を活用すると、自己負担を大幅に抑えて社内へAIを定着できます。</p>
+        </div>
+
+        <article class="training-highlight fade-in">
+          <p class="training-eyebrow">助成金活用イメージ（中小企業・経費助成75%適用時）</p>
+          <div class="training-price-row">
+            <div class="training-price-col original">
+              <p class="training-price-label">通常受講料</p>
+              <p class="training-price-value">¥400,000<span>/人</span></p>
+            </div>
+            <span class="training-arrow" aria-hidden="true">→</span>
+            <div class="training-price-col net">
+              <p class="training-price-label">助成金活用後の実質負担</p>
+              <p class="training-price-value">¥100,000<span>/人</span></p>
+              <p class="training-price-badge">最大 75% OFF</p>
+            </div>
+          </div>
+          <p class="training-note">※ 経費助成75%（中小企業／人材育成支援コース）を適用した試算例。受講人数・研修時間・自社の状況により受給額は変動します。賃金助成（1,000円/h）を併用すると、自己負担はさらに軽減されます。</p>
+        </article>
+
+        <div class="training-features fade-in">
+          <div class="training-feature">
+            <h3>カリキュラム</h3>
+            <p>全10コマ（標準60〜90分／コマ）。AI基礎・業務棚卸し → Claude Code環境構築 → 単体エージェント → LP制作・公開 → 外部API/SNS自動投稿 → エージェントチーム運用まで段階的に習得。</p>
+          </div>
+          <div class="training-feature">
+            <h3>対象者</h3>
+            <p>経営者・管理職・現場担当者（プログラミング未経験OK）。1社単位での開講に対応し、自社業務に合わせて演習テーマをカスタマイズします。</p>
+          </div>
+          <div class="training-feature">
+            <h3>形式</h3>
+            <p>講義＋ハンズオン（PC実機操作）＋グループワーク。オンライン／対面いずれも対応可。受講者は自社業務の成果物を持ち帰れる構成です。</p>
+          </div>
+          <div class="training-feature">
+            <h3>到達像</h3>
+            <p>「おはよう」の一言で日次業務が自動実行され、LPの制作・公開や外部API連携システムまで自走開発できる組織人材を育成します。</p>
+          </div>
+        </div>
+
+        <p class="training-cta fade-in">
+          <a href="#contact" class="btn-primary">AI研修について相談する</a>
+        </p>
+        <p class="training-note small fade-in">助成金の申請可否は事業所所在地のハローワーク・労働局の判断に基づきます。要件確認・申請計画の組み立てもサポートします。</p>
       </div>
     </section>
 
@@ -318,36 +374,45 @@
         </div>
         <div class="news-list" style="max-width:880px;margin:0 auto;">
           <div class="news-item fade-in" onclick="this.querySelector('.news-detail').classList.toggle('open')" style="background:#fff;border-radius:12px;padding:25px 30px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);cursor:pointer;">
-            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.03 ─ Claude Code / Anthropic 関連</p>
-            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">AnthropicがSECへS-1提出、評価額9,650億ドルでOpenAIを逆転 <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
+            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.25 ─ Claude Code / Anthropic 関連</p>
+            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">Claude Tag（Slack連携）発表、Claude Code v2.1.187 <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
             <div class="news-detail" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">Anthropicは6/1にSECへForm S-1のドラフトを秘密提出し、米国上場への第一歩を踏み出した（OpenAIに先行）。評価額は2月の3,800億ドルから9,650億ドルへ倍増し、OpenAIを逆転して「世界一のAIスタートアップ」となった。5/28には最上位モデル「Claude Opus 4.8」を価格据え置きで投入し、コーディング・エージェント用途を強化。5/27にはClaude Code向けの無料セキュリティプラグイン「security-guidance」を公開し、コード生成中に脆弱性を検出して同一セッション内で修正まで完結できるようになった。なお有料プランは6/15から「対話」と「自動化」の利用枠が分離される。</p>
+              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">AnthropicがSlackで@Claudeとタグ付けしてタスクを委任できる「Claude Tag」をEnterprise/Teamにベータ提供。PR作成・データ分析・障害対応を非同期で実行し「Claude Codeの進化の始まり」と位置づけた。Claude Code v2.1.187では sandbox.credentials 追加、組織レベルのモデル制限、構造化出力の無限再呼び出し修正、リモートMCPタイムアウト改善を実装。Claude Designもデザインシステム横断対応で刷新。6/15の課金変更でAgent SDK・ヘッドレスClaude Code等をAPIレートの月次クレジットへ分離。6/23の大規模障害は解決済み。</p>
             </div>
           </div>
           <div class="news-item fade-in" onclick="this.querySelector('.news-detail').classList.toggle('open')" style="background:#fff;border-radius:12px;padding:25px 30px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);cursor:pointer;">
-            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.03 ─ ChatGPT / OpenAI 関連</p>
-            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">GPT-4.5が6/27に廃止、AI広告を2030年に10兆円規模と位置づけ <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
+            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.25 ─ ChatGPT / OpenAI 関連</p>
+            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">ChatGPTスーパーアプリ化計画、メルカリ連携を開始 <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
             <div class="news-detail" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">GPT-4.5は30日間の移行期間を経て2026年6月27日にChatGPT上で廃止される。直前の4月には同社初の「思考機能」を搭載した画像生成モデル「ChatGPT Images 2.0」を発表し、生成前に構図や正確性を検討してから出力、日本語テキストの描画精度も向上した。Business/Enterprise/Edu/Teachers向けには、ユーザーが寝ている間にもタスクを進める非同期エージェント「Workspace agents」を提供。さらにAI広告を2030年に1,000億ドル規模のビジネスと位置づけ、収益化路線を鮮明にしている。日本ではMUFGと組み、マネーツリー×ChatGPTで国内初の家計簿連携も登場した。</p>
+              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">OpenAIはChatGPTをコーディングツールとAIエージェントを組み込んだ「スーパーアプリ」へ刷新する過去最大規模の計画を進め、IPO前の収益強化を狙う（FT報道）。6/23にはメルカリが「Apps in ChatGPT」でChatGPT上の商品検索・出品説明文の下書き作成に対応。ハルシネーションを抑えた GPT-5.5 Instant が全ユーザーの既定モデルとなり、営業・データ分析向けCodexプラグインや「ChatGPT Sites」プレビューもビジネス／エンタープライズ向けに提供開始。SECにIPO草案登録書を提出する一方、巨額赤字を計上していることも判明した。</p>
             </div>
           </div>
           <div class="news-item fade-in" onclick="this.querySelector('.news-detail').classList.toggle('open')" style="background:#fff;border-radius:12px;padding:25px 30px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);cursor:pointer;">
-            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.03 ─ Gemini / Google 関連</p>
-            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">Gemini 3.5 Proが6月提供予定、Androidを「知能を持つシステム」へ <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
+            <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.25 ─ Gemini / Google 関連</p>
+            <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">Gemini Omni搭載のPixel更新、Geminiアプリ全面刷新 <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
             <div class="news-detail" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">Google I/O 2026（5/19）で投入された高速・低コストの「Gemini 3.5 Flash」に続き、より高精度で複雑な推論を行う上位モデル「Gemini 3.5 Pro」が6月に提供開始予定。Googleは「Gemini Intelligence」を発表し、Geminiをシステムの中心に据えてAndroidを“知能を持つシステム”へ進化させ、複数アプリを横断するタスクを自動処理するエージェンティックAIを強化する。検索ボックスも短いクエリと長文チャットの両方にシームレス対応するよう刷新。チャットボット内の広告テストも開始した。Googleは「安く速い」モデルを先行投入し、数十億ユーザーが使う製品全体への展開を優先する戦略を取る。</p>
+              <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">動画・画像・マルチメディアの生成／編集を担う新モデル「Gemini Omni」を6月のPixelアップデートの目玉として搭載。Geminiアプリは新デザイン言語「Neural Expressive」で全面刷新し、流麗なアニメーション・触覚フィードバックに加え「Daily Brief」やパーソナルAIエージェント「Gemini Spark」を追加した。科学・数学・一般推論でリードする Deep Think 推論モードも注目。Googleは「チャットボット」販売から、リサーチ・音声・動画・コーディング・検索を横断する業務システム構築へと戦略を転換している。</p>
             </div>
           </div>
           <div class="news-item-hidden fade-in" style="display:none;">
             <div class="news-item" onclick="this.querySelector('.news-detail').classList.toggle('open')" style="background:#fff;border-radius:12px;padding:25px 30px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);cursor:pointer;">
-              <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.03 ─ 業界全体の動向</p>
-              <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">1兆ドル級IPOラッシュ到来、フロンティア競争は「ほぼ互角」 <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
+              <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.25 ─ 公式リリースまとめ</p>
+              <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">3社の最新リリース：Claude Tag・GPT-5.5・Gemini Omni <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
               <div class="news-detail" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-                <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">Anthropicが先陣を切ってS-1を提出し、SpaceX（6月）、OpenAI（秋）と1兆ドル級の大型IPOが続く見込み。資金がIPOに集中するため、上場時期をずらす企業が増える可能性がある。フロンティアモデルの競争はGoogle・OpenAI・Anthropicの「ほぼ互角」とされ、各社がコスト・速度・計算資源のトレードオフで差別化を図る。Anthropicは「Mythos」により前進したとの見方も。AI広告市場の本格化（Googleのチャットボット内広告、OpenAIの$100B構想）、そしてClaude Codeの無料セキュリティプラグインやAnthropicのProject Glasswing拡大など、コード生成時の脆弱性対策が新たな競争軸となっている。</p>
+                <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">Anthropic＝Claude Tag（Slackベータ）・Claude Code v2.1.187・Claude Design刷新・6/15課金変更。OpenAI＝ChatGPTスーパーアプリ化・GPT-5.5 Instant既定化・Codexプラグイン／ChatGPT Sites提供・IPO草案提出。Google＝Gemini Omni搭載のPixel 6月更新・Geminiアプリ刷新（Neural Expressive）・Gemini Spark／Daily Brief追加。各社の公式チャネル（Changelog／リリースノート／DeepMindブログ）で最新情報が随時更新されている。</p>
               </div>
             </div>
           </div>
-        </div>
+          <div class="news-item-hidden fade-in" style="display:none;">
+            <div class="news-item" onclick="this.querySelector('.news-detail').classList.toggle('open')" style="background:#fff;border-radius:12px;padding:25px 30px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);cursor:pointer;">
+              <p style="font-size:0.8em;color:#c4a24e;font-weight:600;margin-bottom:8px;">2026.06.25 ─ 業界全体の動向</p>
+              <h3 style="font-size:1.1em;margin-bottom:0;display:flex;justify-content:space-between;align-items:center;color:#1a1a1a;">AIコーディング競争激化、AppleもマルチAI戦略へ <span style="font-size:0.8em;color:#aaa;">▼</span></h3>
+              <div class="news-detail" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
+                <p style="font-size:0.9em;color:#666;line-height:1.8;margin-top:12px;">Microsoft・GoogleがAnthropic・OpenAIを追ってコーディングAIに注力。Microsoft Build 2026のFoundryモデルカタログはGPT-5.5・Claude・Geminiを含む11,000超のモデルを単一Azureエンドポイントで提供する。AppleはGemini搭載Siri、Claudeを初めてiPhoneの選択肢にするExtensions機構、iOS 27 Beta 1を発表。Anthropicは評価額965億ドル規模・年換算売上44億ドルでQ2に初の営業黒字見込みと報じられた。HBM需要を軸に半導体メモリの勢力図も変動している。</p>
+              </div>
+            </div>
+          </div>
+                </div>
         <div class="text-center fade-in" style="margin-top:30px;text-align:center;">
           <button id="newsMoreBtn" onclick="document.querySelectorAll('.news-item-hidden').forEach(el=>el.style.display='block');this.style.display='none';" class="btn-gold-outline" style="background:none;border:1px solid #c4a24e;color:#c4a24e;padding:12px 40px;border-radius:4px;cursor:pointer;font-size:0.95em;">もっと読む →</button>
         </div>
@@ -379,38 +444,38 @@
         </div>
         <div class="blog-grid">
           <article class="blog-card fade-in">
-            <a href="blog/claude-code-square-integration.html">
-              <img src="images/blog-claude-code-square-integration.jpg" alt="Claude CodeとSquare連携でPOS・決済・在庫・予約をAI自動化" loading="lazy">
+            <a href="blog/claude-code-peraichi-integration.html">
+              <img src="images/blog-claude-code-peraichi-integration.jpg" alt="Claude Codeとペライチ連携でLP・ホームページ作成をAI自動化" loading="lazy">
               <div>
-                <p>2026.06.03</p>
-                <h3>Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化！実店舗・小売店の運営効率化ガイド</h3>
+                <p>2026.06.25</p>
+                <h3>Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド</h3>
               </div>
             </a>
           </article>
           <article class="blog-card fade-in">
-            <a href="blog/claude-code-sansan-integration.html">
-              <img src="images/blog-claude-code-sansan-integration.jpg" alt="Claude CodeとSansan連携で名刺管理をAI自動化" loading="lazy">
+            <a href="blog/claude-code-airregi-integration.html">
+              <img src="images/blog-thumb-02.jpg" alt="Claude CodeとAirレジ連携で売上集計・在庫・日報をAI自動化" loading="lazy">
               <div>
-                <p>2026.06.02</p>
-                <h3>Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化！中小企業の営業リード活用ガイド</h3>
+                <p>2026.06.24</p>
+                <h3>Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化！飲食店・小売店の店舗運営効率化ガイド</h3>
               </div>
             </a>
           </article>
           <article class="blog-card fade-in">
-            <a href="blog/claude-code-googleform-integration.html">
-              <img src="images/blog-claude-code-googleform-integration.jpg" alt="Claude CodeとGoogleフォーム連携でフォーム業務をAI自動化" loading="lazy">
+            <a href="blog/claude-code-stores-integration.html">
+              <img src="images/blog-claude-code-stores-integration.jpg" alt="Claude CodeとSTORES連携でネットショップ・予約・POSをAI自動化" loading="lazy">
               <div>
-                <p>2026.06.01</p>
-                <h3>Claude Code × Googleフォーム連携でアンケート・問い合わせ・申込対応をAI自動化</h3>
+                <p>2026.06.23</p>
+                <h3>Claude Code × STORES連携でネットショップ・予約・POSをAI自動化！実店舗＆EC両立の中小事業者向け運営効率化ガイド</h3>
               </div>
             </a>
           </article>
           <article class="blog-card fade-in">
-            <a href="blog/claude-code-google-business-profile-integration.html">
-              <img src="images/blog-claude-code-google-business-profile-integration.jpg" alt="Claude CodeとGoogleビジネスプロフィール連携" loading="lazy">
+            <a href="blog/claude-code-rakuten-integration.html">
+              <img src="images/blog-claude-code-rakuten-integration.jpg" alt="Claude Codeと楽天市場連携で出店・商品ページ・受注対応をAI自動化" loading="lazy">
               <div>
-                <p>2026.06.01</p>
-                <h3>Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化</h3>
+                <p>2026.06.21</p>
+                <h3>Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化！中小ショップの売上アップガイド</h3>
               </div>
             </a>
           </article>
@@ -481,9 +546,10 @@
             <select id="category" name="category">
               <option value="">選択してください</option>
               <option value="claude-code">Claude Code 導入サポート</option>
-              <option value="light">ライトプラン（月額22,000円）</option>
-              <option value="standard">スタンダードプラン（月額36,000円）</option>
+              <option value="light">ライトプラン（月額20,000円）</option>
+              <option value="standard">スタンダードプラン（月額40,000円）</option>
               <option value="platinum">プラチナプラン（月額100,000円）</option>
+              <option value="training">AI研修プログラム（人材開発支援助成金 活用）</option>
               <option value="general">AI導入について相談したい</option>
               <option value="other">その他</option>
             </select>
@@ -508,6 +574,7 @@
         <h3>サービス</h3>
         <a href="#services">支援内容</a>
         <a href="#plans">料金プラン</a>
+        <a href="#training">AI研修プログラム</a>
         <a href="#flow">ご利用の流れ</a>
         <a href="#media">メディア掲載</a>
         <a href="blog/">ブログ</a>

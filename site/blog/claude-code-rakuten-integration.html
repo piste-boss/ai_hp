@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化！中小ショップの売上アップガイド | Piste</title>
+<meta name="description" content="Claude Codeと楽天市場の店舗運営を組み合わせ、商品ページの文章づくり、受注メール・問い合わせ返信、レビュー整理、セール案内文作成、売上・在庫データ集計を非エンジニアでも効率化する方法を解説。中小ショップ・個人店向けの活用シーンと導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,楽天市場,EC,ネットショップ,出店,受注対応,業務自動化,生成AI,DX,中小企業">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+.date{color:#999;font-size:0.9rem;margin-bottom:30px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化！中小ショップの売上アップガイド</h1>
+<p class="date">2026年6月21日 ・ 読了目安7分</p>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-rakuten-integration.jpg" alt="Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p>「楽天市場に出店したものの、商品ページの作成や更新に手が回らない」「受注メールやレビュー対応に追われて、肝心の分析まで届かない」「店舗運営ツールの画面を見ているだけで一日が終わる」。楽天市場は国内最大級の集客力を持つ販売チャネルですが、その分やるべき作業が多く、中小ショップや個人店にとって大きな負担になりがちです。</p>
+
+<p>この記事では、AnthropicのAIコーディングツール「Claude Code」と楽天市場の店舗運営の組み合わせで、商品ページづくり・受注対応・レビュー管理などの楽天運用を非エンジニアでも効率化する方法を、専門知識がない方にもわかる形で解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>楽天市場の運用が負担になる理由</li>
+<li>Claude Code × 楽天市場連携でできること</li>
+<li>楽天市場の運用効率化につながる活用5選</li>
+<li>業種別の活用シーン</li>
+<li>非エンジニアでも始められる導入4ステップ</li>
+<li>運用上の注意点</li>
+<li>よくある質問</li>
+</ol>
+
+<h2>1. 楽天市場の運用が負担になる理由</h2>
+<p>楽天市場は集客力が高い反面、運用がうまく回らないことも少なくありません。主な理由は次のとおりです。</p>
+<ul>
+<li>商品ページの作成・更新に手間と時間がかかる</li>
+<li>受注ごとのメール対応や問い合わせ返信が積み重なる</li>
+<li>レビューの確認とお礼・改善対応が後回しになる</li>
+<li>セールやイベントが多く、その都度の準備に追われる</li>
+<li>売上や在庫のデータを分析する時間が取れない</li>
+</ul>
+<p>これらは「文章を作る」「整理する」「集計する」という、まさにAIが得意とする作業です。Claude Code を使えば、少人数の店舗でも楽天運用の土台を整えられます。</p>
+
+<h2>2. Claude Code × 楽天市場連携でできること</h2>
+<p>Claude Code は、日本語の指示で作業を自動化できるAIツールです。プログラミングの知識がなくても、普段の言葉で指示するだけで、楽天運用の面倒な下準備を任せられます。</p>
+<p>具体的には、次のような流れを下準備できます。</p>
+<ul>
+<li>商品情報をもとに、検索されやすい商品ページの文章を作成する</li>
+<li>受注後のサンキューメールや問い合わせ返信のたたき台を用意する</li>
+<li>レビューを整理し、よい点・改善点をまとめる</li>
+<li>セール・イベントの案内文のたたき台を作成する</li>
+<li>売上・在庫データを集計して、判断に使える形にまとめる</li>
+</ul>
+<p>重要なのは、最終的な公開や送信の判断は必ず人が行うという点です。Claude Code はあくまで「作成と整理の担当者」として活用し、内容の確認と意思決定は人が握ることで、安心して導入できます。</p>
+
+<h2>3. 楽天市場の運用効率化につながる活用5選</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-rakuten-integration-01.jpg" alt="商品ページづくり・受注対応の自動化" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h3>(1) 商品ページの文章づくり</h3>
+<p>商品の特徴やサイズ、用途、こだわりなどを渡すと、検索されやすく分かりやすい商品名・キャッチコピー・説明文のたたき台を作成します。出品や更新にかかる時間を大きく減らせます。</p>
+
+<h3>(2) 受注メール・問い合わせ返信の下書き</h3>
+<p>注文後のお礼メールやよくある質問への返信を、これまでの対応をもとに統一感のあるたたき台として用意します。返信のスピードと品質を両立できます。</p>
+
+<h3>(3) レビューの整理とフォロー</h3>
+<p>集まったレビューを整理し、評価されている点と改善が必要な点をまとめます。お礼コメントの下書きや、商品改善・ページ修正の方針が見えやすくなります。</p>
+
+<h3>(4) セール・イベント案内文の作成</h3>
+<p>スーパーセールやお買い物マラソンなど、楽天はイベントが多いチャネルです。値引きやポイント施策の案内文のたたき台を用意し、毎回ゼロから考える負担をなくします。</p>
+
+<h3>(5) 売上・在庫データの集計</h3>
+<p>売れ筋商品や在庫の状況を集計し、補充が必要な商品や動きの鈍い商品を分かりやすくまとめます。欠品や過剰在庫を防ぎやすくなります。</p>
+
+<h2>4. 業種別の活用シーン</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-rakuten-integration-02.jpg" alt="業種別の活用シーンと売上・在庫データ集計" style="width: 100%; height: auto; display: block;">
+</div>
+<table>
+<thead>
+<tr><th>業種・ジャンル</th><th>活用シーン</th></tr>
+</thead>
+<tbody>
+<tr><td>食品・産直・スイーツ</td><td>季節商品の説明文づくり、ギフト案内、レビュー対応の標準化</td></tr>
+<tr><td>アパレル・雑貨</td><td>複数カラー・サイズの商品ページ作成、コーディネート提案文の下書き</td></tr>
+<tr><td>メーカー・製造業</td><td>商品仕様をもとにした説明文づくり、問い合わせ対応の標準化</td></tr>
+<tr><td>化粧品・健康食品</td><td>表現に配慮した説明文の整え直し、リピーター向けフォロー文の作成</td></tr>
+<tr><td>複数モール運営</td><td>楽天と他の販売先で使う商品文の整理と使い回し</td></tr>
+</tbody>
+</table>
+
+<h2>5. 非エンジニアでも始められる導入4ステップ</h2>
+<p>「プログラミングの知識が必要では」と心配される方も多いですが、Claude Code は日本語の指示で動くため、専門知識がなくても始められます。導入は次の4ステップで進めます。</p>
+
+<h3>ステップ1：業務の棚卸し</h3>
+<p>まずは「楽天運用のどこに時間がかかっているか」を書き出します。商品ページ作成、受注対応、レビュー確認、セール準備、データ分析など、現状の負担を整理することで、自動化すべきポイントが見えてきます。</p>
+
+<h3>ステップ2：情報の準備</h3>
+<p>商品情報やよくある問い合わせ、これまでの返信文など、Claude Code に渡す材料をそろえます。手元にある情報を整理するだけで準備は完了します。</p>
+
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「この商品の説明文を作って」「この問い合わせへの返信を考えて」といった日本語の指示を出します。最初は小さな範囲で試し、出力のトーンや精度を確認しながら指示を調整していきます。</p>
+
+<h3>ステップ4：定期運用＋人による最終確認</h3>
+<p>商品ページづくりや受注対応を定例業務に組み込みます。Claude Code が作る下書きを土台にしつつ、公開・送信の最終判断は必ず人が行います。これにより、品質を保ちながら作業時間を大きく削減できます。</p>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>公開・返信前の人承認は必須</strong>：AIの提案はあくまで下書きです。実際の公開や送信の前に、必ず内容を人が確認しましょう。</li>
+<li><strong>価格・ポイント・在庫数の裏取り</strong>：価格やポイント、在庫数などの数値は人が裏取りします。</li>
+<li><strong>認証情報の最小権限化</strong>：認証情報は必要最小限の権限で管理します。</li>
+<li><strong>規約・表現ルールの確認</strong>：楽天市場の出店規約や薬機法など、表現のルールに沿っているかを人が確認します。</li>
+<li><strong>運用責任者を固定する</strong>：「誰が運用を回し、誰が最終判断するか」を決めておくことで、運用が属人化せず継続できます。</li>
+</ul>
+
+<h2>7. よくある質問</h2>
+
+<h3>Q. プログラミングの知識がなくても使えますか？</h3>
+<p>はい。日本語の指示で操作できるため、専門知識がなくても始められます。最初の設定だけサポートを受ければ、その後は普段の言葉で依頼できます。</p>
+
+<h3>Q. 自動で商品が公開されてしまう心配はありませんか？</h3>
+<p>Claude Code はあくまでたたき台を作る役割で、実際の公開や送信は人が確認したうえで行います。価格や在庫は人が裏取りする運用にすれば、安心して使えます。</p>
+
+<h3>Q. どの業務から始めるのがおすすめですか？</h3>
+<p>商品ページづくりや返信文の下書きなど、毎回発生して効果が見えやすい業務から始めるのがおすすめです。小さく試して効果を実感してから広げると失敗しにくくなります。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥10,000）</h2>
+<p>「楽天運用を仕組み化したい」「商品ページづくりや受注対応、レビュー整理を効率化したい」という方へ。Claude Code の初期設定から、楽天運用の自動化までを、非エンジニアの方にもわかりやすく伴走支援します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p>私たちは、中小企業や個人事業主の業務自動化を数多く支援してきました。「専門用語が多くて難しそう」という段階からでも、御社の状況に合わせて一歩ずつ導入をお手伝いします。楽天運用を、勘や根性ではなく、続けられる仕組みに変えていきましょう。</p>
+
+</main>
+</body>
+</html>

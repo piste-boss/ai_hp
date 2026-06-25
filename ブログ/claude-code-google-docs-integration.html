@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化！中小企業の文書業務効率化ガイド | Piste</title>
+<meta name="description" content="Claude CodeとGoogleドキュメントを組み合わせ、議事録の下書き作成、契約書・提案書の雛形づくり、長い文書の要約、文章のトーン統一と校正、定型文書の作成を非エンジニアでも効率化する方法を解説。中小企業向けの活用シーンと導入4ステップを紹介。">
+<meta name="keywords" content="Claude Code,Googleドキュメント,議事録,契約書,提案書,文書作成,業務自動化,生成AI,DX,中小企業">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root { --black:#1a1a1a; --dark:#2c2c2c; --gold:#c4a24e; --gold-light:#d4b96a; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--black);color:#e5e5e5;font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8;}
+header{background:var(--dark);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--gold);}
+header img{height:40px;}
+header nav a{color:var(--gold-light);margin-left:20px;text-decoration:none;font-weight:500;}
+main{max-width:800px;margin:40px auto;padding:0 20px;}
+h1{color:var(--gold);font-size:2rem;margin-bottom:20px;line-height:1.4;}
+h2{color:var(--gold-light);margin:40px 0 15px;border-left:4px solid var(--gold);padding-left:12px;}
+h3{color:var(--gold-light);margin:25px 0 10px;}
+p{margin-bottom:15px;}
+ul,ol{margin:15px 0 15px 25px;}
+blockquote{border-left:3px solid var(--gold);padding:10px 20px;background:var(--dark);margin:20px 0;font-style:italic;}
+table{width:100%;border-collapse:collapse;margin:20px 0;}
+th,td{border:1px solid #444;padding:10px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--black);padding:30px;border-radius:12px;text-align:center;margin:40px 0;}
+.cta h2{color:var(--black);border:none;padding:0;}
+.cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
+.date{color:#999;font-size:0.9rem;margin-bottom:30px;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<nav>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+<main>
+<h1>Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化！中小企業の文書業務効率化ガイド</h1>
+<p class="date">2026年6月19日 ・ 読了目安7分</p>
+
+<p>「議事録をまとめるのに毎回時間がかかる」「契約書や提案書のたたき台づくりが進まない」「文章の体裁を整えるだけで一日が終わってしまう」。文書づくりは、中小企業や一人社長にとって地味ながら大きな負担になりがちです。</p>
+
+<p>この記事では、AnthropicのAIコーディングツール「Claude Code」と「Googleドキュメント」を組み合わせ、議事録・契約書・提案書などの文書づくりを非エンジニアでも効率化する方法を、専門知識がない方にもわかる形で解説します。</p>
+
+<h2>目次</h2>
+<ol>
+<li>文書づくりが負担になる理由</li>
+<li>Claude Code × Googleドキュメント連携でできること</li>
+<li>文書業務の効率化につながる活用5選</li>
+<li>業種別の活用シーン</li>
+<li>非エンジニアでも始められる導入4ステップ</li>
+<li>運用上の注意点</li>
+<li>よくある質問</li>
+</ol>
+
+<h2>1. 文書づくりが負担になる理由</h2>
+<p>Googleドキュメントは無料で使える便利な文書作成ツールですが、運用がうまく回らないことも少なくありません。主な理由は次のとおりです。</p>
+<ul>
+<li>議事録や報告書を一から書き起こすのに時間がかかる</li>
+<li>契約書や提案書の体裁を毎回整えるのが手間</li>
+<li>過去の文書を探すのに時間を取られる</li>
+<li>文章のトーンや表現が人によってばらつく</li>
+</ul>
+<p>これらは「文章を作る」「整理する」「体裁を整える」という、まさにAIが得意とする作業です。Claude Code を使えば、一人運営でも文書づくりの土台を整えられます。</p>
+
+<h2>2. Claude Code × Googleドキュメント連携でできること</h2>
+<p>Claude Code は、日本語の指示で文章作成や整理、要約を自動化できるAIツールです。打ち合わせのメモや過去の文書を渡すことで、専門知識がなくても整った文書のたたき台を用意できます。</p>
+<p>具体的には、次のような流れを下準備できます。</p>
+<ul>
+<li>打ち合わせのメモから議事録の下書きを作成する</li>
+<li>過去の文書をもとに契約書や提案書の雛形を整える</li>
+<li>長い文章を要約し、要点だけを抜き出す</li>
+<li>文章のトーンを統一し、誤字や表現の揺れを整える</li>
+</ul>
+<p>重要なのは、最終的な確定や送付の判断は必ず人が行うという点です。Claude Code はあくまで「作成と整理の担当者」として活用し、内容の確認と意思決定は人が握ることで、安心して導入できます。</p>
+
+<h2>3. 文書業務の効率化につながる活用5選</h2>
+
+<h3>(1) 議事録の下書き作成</h3>
+<p>打ち合わせのメモや録音の書き起こしを渡すと、決定事項・宿題・次回までの担当を整理した議事録の下書きを作成します。書き起こしの手間が減り、会議直後に共有できます。</p>
+
+<h3>(2) 契約書・提案書の雛形づくり</h3>
+<p>過去の契約書や提案書をもとに、案件に合わせた雛形を整えます。条件や金額の差し込み箇所を分かりやすくまとめ、ゼロから書く負担を減らせます。</p>
+
+<h3>(3) 長い文書の要約</h3>
+<p>長い報告書や資料を渡すと、要点だけを抜き出して短くまとめます。社内共有や上長への報告がスムーズになります。</p>
+
+<h3>(4) 文章のトーン統一と校正</h3>
+<p>複数人で書いた文書のトーンを統一し、誤字や表現の揺れを整えます。社外に出す文書の品質を一定に保てます。</p>
+
+<h3>(5) 定型文書の作成</h3>
+<p>お知らせ、案内文、報告フォーマットなど、繰り返し使う文書のたたき台を用意します。毎回ゼロから考える必要がなくなります。</p>
+
+<h2>4. 業種別の活用シーン</h2>
+<table>
+<thead>
+<tr><th>業種・ジャンル</th><th>活用シーン</th></tr>
+</thead>
+<tbody>
+<tr><td>士業・コンサル</td><td>顧問先との打ち合わせ議事録、提案書、報告書の下書き</td></tr>
+<tr><td>美容室・サロン・治療院</td><td>来店案内文、スタッフ向けマニュアル、お知らせ文書</td></tr>
+<tr><td>工務店・建築・不動産</td><td>見積もり前の提案書、工程の報告書、契約書の雛形</td></tr>
+<tr><td>教室・スクール</td><td>保護者向け案内、カリキュラム資料、面談記録</td></tr>
+<tr><td>製造業・BtoB企業</td><td>仕様書のたたき台、社内報告書、取引先向け提案資料</td></tr>
+</tbody>
+</table>
+
+<h2>5. 非エンジニアでも始められる導入4ステップ</h2>
+<p>「プログラミングの知識が必要では」と心配される方も多いですが、Claude Code は日本語の指示で動くため、専門知識がなくても始められます。導入は次の4ステップで進めます。</p>
+
+<h3>ステップ1：業務の棚卸し</h3>
+<p>まずは「どの文書づくりに時間がかかっているか」を書き出します。議事録、提案書、報告書など、現状の負担を整理することで、自動化すべきポイントが見えてきます。</p>
+
+<h3>ステップ2：情報の準備</h3>
+<p>過去の議事録や提案書、文書のトーンが分かる資料など、Claude Code に渡す材料をそろえます。手元にある情報を整理するだけで準備は完了します。</p>
+
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「このメモから議事録を作って」「この提案書を案件用に整えて」といった日本語の指示を出します。最初は小さな範囲で試し、出力のトーンや精度を確認しながら指示を調整していきます。</p>
+
+<h3>ステップ4：定期運用＋人による最終確認</h3>
+<p>議事録づくりや文書の校正を定例業務に組み込みます。Claude Code が作る下書きを土台にしつつ、確定・送付の最終判断は必ず人が行います。これにより、文書の品質を保ちながら作業時間を大きく削減できます。</p>
+
+<h2>6. 運用上の注意点</h2>
+<ul>
+<li><strong>公開・送付前の人承認は必須</strong>：AIの提案はあくまで下書きです。社外に出す前に、必ず内容を人が確認しましょう。</li>
+<li><strong>数値・条件の裏取り</strong>：契約書や提案書の金額・条件などの数値は人が裏取りします。</li>
+<li><strong>認証情報の最小権限化</strong>：認証情報は必要最小限の権限で管理します。</li>
+<li><strong>機密文書の範囲設定</strong>：機密性の高い文書の扱う範囲をあらかじめ決めておきます。</li>
+<li><strong>運用責任者を固定する</strong>：「誰が文書づくりを回し、誰が最終判断するか」を決めておくことで、運用が属人化せず継続できます。</li>
+</ul>
+
+<h2>7. よくある質問</h2>
+
+<h3>Q. プログラミングの知識がなくても使えますか？</h3>
+<p>はい。日本語の指示で操作できるため、専門知識がなくても始められます。最初の設定だけサポートを受ければ、その後は普段の言葉で依頼できます。</p>
+
+<h3>Q. 文書の内容が外部に漏れることはありませんか？</h3>
+<p>扱う文書の範囲をあらかじめ決め、機密性の高いものは対象外にすることで、安心して運用できます。認証情報の権限も最小限に保ちます。</p>
+
+<h3>Q. どの業務から始めるのがおすすめですか？</h3>
+<p>議事録づくりなど、効果が見えやすく毎回発生する業務から始めるのがおすすめです。小さく試して効果を実感してから広げると失敗しにくくなります。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート（¥3,000）</h2>
+<p>「文書づくりを仕組み化したい」「議事録・契約書・提案書のたたき台づくりと校正を効率化したい」という方へ。Claude Code の初期設定から、文書業務の自動化までを、非エンジニアの方にもわかりやすく伴走支援します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+<p>私たちは、中小企業や一人社長の業務自動化を数多く支援してきました。「専門用語が多くて難しそう」という段階からでも、御社の状況に合わせて一歩ずつ導入をお手伝いします。文書づくりを、勘や根性ではなく、続けられる仕組みに変えていきましょう。</p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド</title>
+<meta name="description" content="Claude Codeとペライチを連携し、ランディングページ・ホームページの作成・更新・分析をAI自動化する方法を解説。Web知識のない小規模事業者・個人事業主向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,ペライチ,ランディングページ,ホームページ作成,LP自動化,Web集客,個人事業主,中小企業,業務自動化,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド</h1>
+
+<p class="lead">「ホームページを作りたいけれど、業者に頼むと高い」「ペライチで作り始めたものの、文章とデザインで手が止まってしまう」「公開した後、まったく更新できていない」——Web集客に踏み出したい小規模事業者・個人事業主ほど、この“作って終われない”壁に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、ノーコードでLP・ホームページが作れる<strong>ペライチ</strong>を組み合わせ、ページの作成から更新・改善までをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ「ペライチ × Claude Code」なのか</a></li>
+<li><a href="#s2">2. Claude Codeとは？（おさらい）</a></li>
+<li><a href="#s3">3. 連携でできること・活用5選</a></li>
+<li><a href="#s4">4. 業種別の活用シーン</a></li>
+<li><a href="#s5">5. 非エンジニアのための導入4ステップ</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ「ペライチ × Claude Code」なのか</h2>
+<p>ペライチは、専門知識がなくてもブロックを並べるだけで1ページ完結のランディングページ（LP）やホームページが作れるサービスです。手軽な一方で、実際に手を動かすと「キャッチコピーが思いつかない」「サービス説明が長くなりすぎる」「お客様の声をどうまとめるか分からない」といった、<strong>文章とコンテンツづくりの部分</strong>で多くの人が止まってしまいます。</p>
+<p>Claude Codeは、こうした「考えて・書いて・整える」作業を日本語の指示だけでAIに任せられるツールです。ペライチに載せる原稿づくりや構成案、公開後の改善提案までを横断的にサポートできます。プログラミングの知識は不要で、やりたいことを言葉で伝えるだけです。つまり、ペライチという「自分で組み立てられるページの箱」に対して、Claude Codeを「Webライター兼ディレクター」として配置するイメージです。</p>
+
+<h2 id="s2">2. Claude Codeとは？（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツール（CLI）です。最大の特徴は、専門用語を覚えなくても<strong>「〇〇して」と日本語で頼むだけ</strong>で、文章作成・情報整理・構成立案・ブラウザ操作までこなしてくれる点にあります。</p>
+<ul>
+<li><strong>ノーコードに近い操作感</strong>：コードを書かずに業務指示が出せる</li>
+<li><strong>外部サービスとの連携</strong>：ブラウザ操作などで他ツールとつながる</li>
+<li><strong>繰り返し作業の自動化</strong>：一度作った手順を何度でも再利用できる</li>
+</ul>
+<p>ペライチ単体では「作る場所」は手に入りますが、「何を書くか」は自分で考える必要があります。そこをClaude Codeが補うことで、ページづくりのいちばん重い部分が一気に軽くなります。</p>
+
+<h2 id="s3">3. 連携でできること・活用5選</h2>
+
+<h3>① ページ構成案とキャッチコピーの自動作成</h3>
+<p>商品・サービスの情報を伝えるだけで、ペライチのブロック構成に沿った「見出し→説明→お客様の声→料金→申し込み」といった流れと、目を引くキャッチコピー案を複数生成します。ゼロから書き始める負担がなくなります。</p>
+
+<h3>② サービス説明・プロフィール文の量産</h3>
+<p>箇条書きのメモを渡すだけで、読みやすく整った紹介文に仕上げます。トーン（やわらかい／信頼感重視など）を最初に決めておけば、ブランドの世界観を保ったまま各ブロックの文章を一括で用意できます。</p>
+
+<h3>③ よくある質問（FAQ）と申し込み導線の設計</h3>
+<p>想定される問い合わせを洗い出してFAQ形式にまとめ、申し込みボタンの文言や配置のアイデアまで提案します。「迷わせない・離脱させない」ページ設計を、データと定石の両面からサポートします。</p>
+
+<h3>④ 公開後のページ改善・リライト提案</h3>
+<p>すでに公開しているページの内容を読み取り、「説明が長い」「強みが伝わりにくい」といった改善点を指摘し、書き換え案を提示します。作りっぱなしになりがちなページを、定期的にブラッシュアップできます。</p>
+
+<h3>⑤ キャンペーン・季節ページの一括作成</h3>
+<p>セールや季節イベントに合わせた告知ページの原稿を、テーマを伝えるだけでまとめて作成します。繁忙期前に複数パターンを用意しておけば、タイミングを逃さず公開できます。</p>
+
+<h2 id="s4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>活用シーン</th></tr>
+<tr><td>士業・コンサル</td><td>サービス紹介LPの構成・文章作成、相談申し込みフォームへの導線文を整える</td></tr>
+<tr><td>美容・サロン</td><td>メニュー紹介とお客様の声ページを作成、季節キャンペーンページを量産</td></tr>
+<tr><td>教室・スクール</td><td>体験レッスン募集LPの作成、コース説明と料金表をわかりやすく整理</td></tr>
+<tr><td>飲食・テイクアウト店</td><td>お店紹介ページと予約・注文導線の文章作成、季節メニュー告知ページの更新</td></tr>
+<tr><td>ハンドメイド・個人作家</td><td>作品紹介と作家プロフィールの文章作成、受注会・イベント告知ページの作成</td></tr>
+</table>
+
+<h2 id="s5">5. 非エンジニアのための導入4ステップ</h2>
+<ol>
+<li><strong>目的を1つに絞る</strong>：まずは「サービス紹介LPの原稿を作りたい」など、効果が見えやすいページを一つ選びます。</li>
+<li><strong>Claude Codeを用意する</strong>：PCにClaude Codeを導入し、「どんなお客様に・何を伝えたいか」を日本語で伝えられる状態にします。</li>
+<li><strong>つなぎ方を決める</strong>：原稿づくりはClaude Codeで行い、ペライチへの貼り付けは手作業から始めると安全です。慣れてきたらブラウザ操作で更新作業まで広げます。</li>
+<li><strong>小さく試して広げる</strong>：1ページでうまく回ったら、FAQ作成・改善提案・キャンペーンページ量産へと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり全自動化を狙わず、<strong>「まず一つのページを確実に完成させる」</strong>こと。小さな成功体験が、Web集客への自信と継続につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li><strong>認証情報の管理</strong>：ペライチのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li><strong>公開前は必ず人が確認する</strong>：料金・申し込み条件・特典など重要な情報は、AIに下書きまで任せ、最終チェックは人が行う設計にします。</li>
+<li><strong>事実と異なる表現に注意</strong>：実績や効果をうたう文章は、誇張や不正確な記載がないか確認し、景品表示法など関連ルールに配慮します。</li>
+<li><strong>ペライチの利用規約を確認</strong>：自動操作が規約に反しないか、事前に確認しておくと安心です。</li>
+<li><strong>ブランドの一貫性</strong>：作った文章のトーンや言い回しのルールを記録に残し、ページが増えても世界観がぶれないようにしておきます。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「このサービスのLP原稿を作って」といった頼み方で十分です。</p>
+<h3>Q. すでにペライチで作ったページがあります。活かせますか？</h3>
+<p>活かせます。既存ページの内容を読み取り、改善点の指摘やリライト案の作成から始められるので、ゼロから作り直す必要はありません。</p>
+<h3>Q. どのくらいの作業から始めるのがおすすめですか？</h3>
+<p>まずは「1ページ分の原稿作成」から始めるのがおすすめです。効果を実感しやすく、その後の改善や量産にもスムーズに広げられます。</p>
+<h3>Q. 文章のトーンを自社らしく保てますか？</h3>
+<p>保てます。最初に希望するトーンや言い回しのルールを伝えておけば、ブランドの世界観を保ったまま各ページの文章を作成できます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「ペライチでホームページは作ったけれど、文章や更新で手が止まっている」——そんな方に向けて、Claude Codeの導入から最初のページづくりの自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">¥3,000〜</div>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+
+<p style="text-align:center;color:#aaa;font-size:14px;margin-top:24px;">これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った“ちょうどいい自動化”をご提案します。</p>
+
+</div>
+
+<footer>
+&copy; 2026 Piste. All rights reserved.
+</footer>
+</body>
+</html>
