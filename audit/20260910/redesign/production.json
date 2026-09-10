@@ -1,0 +1,10 @@
+{
+  "site_id": "22906075-c680-4d7e-b48b-ceb78d987037",
+  "site_name": "piste-ai",
+  "deploy_id": "6aa270ce06ade41c6c0278ab",
+  "deploy_url": "https://6aa270ce06ade41c6c0278ab--piste-ai.netlify.app",
+  "logs": "https://app.netlify.com/projects/piste-ai/deploys/6aa270ce06ade41c6c0278ab",
+  "function_logs": "https://app.netlify.com/projects/piste-ai/logs/functions",
+  "edge_function_logs": "https://app.netlify.com/projects/piste-ai/logs/edge-functions",
+  "url": "https://www.piste-ai.com"
+}

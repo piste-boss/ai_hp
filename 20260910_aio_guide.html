@@ -417,6 +417,10 @@
     <p>原因は1つです。公開手順書（<code>.Codex/commands/seo-publish.md</code>）では <code>tools/release_build.py</code> で変換した <code>audit/20260910/release/public</code> からデプロイする決まりで、10:59 のリリース（deploy 6aa20f07）はそのとおりでした。ところが 14:56 のデプロイ「add phone, GSC verification meta, SNS sameAs」（deploy 6aa2469f）は <code>site/</code> 直下から行われ、変換前のファイルで本番を上書きしました。本番のトップページは <code>site/index.html</code> と完全一致します。</p>
     <p>再調査ののち、手順書どおり <code>seo_build.py</code> → <code>release_build.py</code> → <code>verify_release.py</code>（エラー0）→ テスト4件合格 → 確認URLで検証 → 本番デプロイ（deploy 6aa25188）を実行しました。本番で確認した結果は、記事の canonical が拡張子なし、旧 <code>.html</code> は 301、GA4 は analytics.js の1回だけ（直書き0）、サイトマップ170 URL すべて拡張子なし、feed と llms.txt も同形式、電話番号は保持。GA4 のブログ計測は <b>9/10 14:56〜17:30 頃だけ二重</b>なので、分析時はこの区間を除外してください。あわせて CLAUDE.md の「正規URLは .html 付き」「site/ から直接デプロイ」の記述を公開手順に書き換えました。</p>
 
+    <h3>別途行われた公開サイトの技術再検査（16:29、<code>20260910_recheck_report.md</code>）</h3>
+    <p>同日 16:29 に、HTTP で公開170 URL を取得して技術項目を検査する別の再調査が行われています。結果は、公開URL 170/170 が 200、サイトマップと canonical の不一致 0、H1 全ページ1件、title 重複 0、description・OGP 画像・画像の alt と寸法の欠落 0、JSON-LD 構文エラー 0、計測コードは全ページ共通ローダー1件、旧 `.html` URL は 301、存在しない URL は 404。この検査で見つかった「法的表記3ページの OGP 画像未設定」と「ブログ一覧・カテゴリ6ページ・法的表記3ページのロゴに幅・高さがない」の10ページ分は補完され、以後のビルドで自動的に補われるよう <code>tools/complete_page_metadata.py</code> がリリースビルドに組み込まれました。本レポート執筆時点の本番でも、この補完が維持されていることを確認しています。</p>
+    <p class="tbl-note">その再検査は HTTP とコードの検査であり、検索順位・AI 引用率・GA4 サーバー側での受信・メール配達・管理画面の設定状態を証明するものではないと明記されています。本レポートの3章の記事内容の判定（要点欄・質問形 H2・一次情報・表記統一）は、その技術検査の対象外だった項目です。</p>
+
     <h3>7か条ごとの判定（155記事）</h3>
     <div class="tbl-wrap">
       <table>
@@ -868,7 +872,7 @@
       <li>口コミアカデミー「ホットペッパーグルメのランキングはどう決まる？」 <a href="https://academy.kutikomi.com/news/restaurant_hotpeppergourmet/">academy.kutikomi.com</a>、リクルート プレスリリース「『ホットペッパーグルメ』口コミ・評点機能をリニューアル」2026-01-29 <a href="https://www.recruit.co.jp/newsroom/pressrelease/2026/0129_146600.html">recruit.co.jp</a></li>
       <li>2026-09-10 SEO・MEO・AIO 診断レポート（20260910_seo_analysis_report.md）。Search Console「生成AI機能」の実測値はこのレポートによる</li>
       <li>再調査の一次データ: <code>audit/20260910/audit_aio.py</code>（判定スクリプト）、<code>aio_articles.csv</code>（記事ごとの結果）、<code>aio_summary.json</code>（集計）。本番の確認は 2026-09-10 夕方に curl と Netlify のデプロイ一覧で実施</li>
-      <li>公開手順書 <code>.Codex/commands/seo-publish.md</code>、実装報告 <code>20260910_implementation_report.md</code>、実装ログ <code>20260910_seo_implementation_log.md</code></li>
+      <li>公開手順書 <code>.Codex/commands/seo-publish.md</code>、実装報告 <code>20260910_implementation_report.md</code>、実装ログ <code>20260910_seo_implementation_log.md</code>、公開サイト技術再検査 <code>20260910_recheck_report.md</code>（証跡 <code>audit/20260910/recheck/</code>）</li>
       <li>SOCi「Local Visibility Index 2026」の数値は HousingWire の報道による <a href="https://www.housingwire.com/articles/google-business-profile-ai-search/">housingwire.com/articles/google-business-profile-ai-search/</a></li>
       <li>Whitespark「Want to Rank in ChatGPT? Focus on These Review Sites」2025-09-15 <a href="https://whitespark.ca/blog/want-to-rank-in-chatgpt-focus-on-these-review-sites-new-research/">whitespark.ca</a></li>
       <li>Search Engine Roundtable「Connect your Google Business Profile to Gemini」 <a href="https://www.seroundtable.com/google-business-profile-integrated-gemini-41484.html">seroundtable.com</a>、RankFuse「Google Ask Maps」 <a href="https://rankfuse.com/blog/googles-ask-maps-update-what-business-owners-need-to-know/">rankfuse.com</a></li>

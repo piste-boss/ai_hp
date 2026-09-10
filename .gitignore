@@ -20,3 +20,7 @@ site/.netlify/v1/
 audit/20260910/release/public/
 audit/20260910/pre-implementation/
 tools/__pycache__/
+
+# Local design review environment and source snapshots
+audit/20260910/redesign/venv/
+audit/20260910/redesign/before/

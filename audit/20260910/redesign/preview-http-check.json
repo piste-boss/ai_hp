@@ -1,0 +1,71 @@
+{
+  "base": "https://6aa2709715c0c915001e254d--piste-ai.netlify.app",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 44910,
+      "sha256": "c68da6bfd88bc032231140ed72b59cb3b192112385e351c336f06018eaa12e64"
+    },
+    {
+      "path": "/css/redesign-20260910.css",
+      "status": 200,
+      "bytes": 16433,
+      "sha256": "7ee9d6624102b7b58bcae2ac0425ccc0e6e934102be364d2b484a23e7272fd1e"
+    },
+    {
+      "path": "/images/redesign-ascent-1200.webp",
+      "status": 200,
+      "bytes": 110322,
+      "sha256": "120304006f986b48b6f47eeae6722740c362ef6c6ea88e21a332b5845719885c"
+    },
+    {
+      "path": "/images/redesign-ascent-640.webp",
+      "status": 200,
+      "bytes": 48084,
+      "sha256": "be2a1baa8de8f3210188d2e6b74c9cafd0b5c75a87556ad381c5cb2eda0f5c0c"
+    },
+    {
+      "path": "/images/redesign-workshop-1200.webp",
+      "status": 200,
+      "bytes": 62968,
+      "sha256": "61dcd37a84fec11fbc1496b051dee87dd8e04995d1d9a0febfdfe54ca8da1879"
+    },
+    {
+      "path": "/images/redesign-workshop-640.webp",
+      "status": 200,
+      "bytes": 28296,
+      "sha256": "ca97afff9a6fe1c1289c5cd74d39269f76d83375852ad10f23c8ccdbc7aea441"
+    },
+    {
+      "path": "/js/main.js",
+      "status": 200,
+      "bytes": 5569,
+      "sha256": "637624abfdbb6da4a6ec8f25d65e0c4d8db0a88d039f19644ab2a3921283afbd"
+    },
+    {
+      "path": "/js/analytics.js",
+      "status": 200,
+      "bytes": 2179,
+      "sha256": "e133e51acb0ed4c05d757b37de05d37bc00a903d68a3a99fa9027bc18be6c07f"
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "bytes": 14844,
+      "sha256": "6422c77574ef94efee976d34124d5cd215a8ff889bde15cb3ef86fb90256c5b8"
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "bytes": 149043,
+      "sha256": "dba8beba76a75237345f06f76e31b66ac191867bd21272c931ed6d630cf86bd7"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 18968,
+      "sha256": "2287ff2087698e4ff3b9b461f4e7956050a5188216fcdd2616aa2c4e96c3da56"
+    }
+  ]
+}

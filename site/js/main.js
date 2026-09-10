@@ -20,22 +20,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNav = document.querySelector('.mobile-nav');
   const mobileOverlay = document.querySelector('.mobile-overlay');
 
-  if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-      mobileOverlay.classList.toggle('open');
-    });
-
-    mobileOverlay.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      mobileOverlay.classList.remove('open');
-    });
-
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        mobileOverlay.classList.remove('open');
-      });
+  if (hamburger && mobileNav && mobileOverlay) {
+    const setMenu = (open) => {
+      mobileNav.classList.toggle('open', open);
+      mobileOverlay.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    };
+    hamburger.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
+    mobileOverlay.addEventListener('click', () => setMenu(false));
+    mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && mobileNav.classList.contains('open')) {
+        setMenu(false);
+        hamburger.focus();
+      }
     });
   }
 

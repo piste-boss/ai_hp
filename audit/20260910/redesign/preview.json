@@ -1,0 +1,9 @@
+{
+  "site_id": "22906075-c680-4d7e-b48b-ceb78d987037",
+  "site_name": "piste-ai",
+  "deploy_id": "6aa2709715c0c915001e254d",
+  "deploy_url": "https://6aa2709715c0c915001e254d--piste-ai.netlify.app",
+  "logs": "https://app.netlify.com/projects/piste-ai/deploys/6aa2709715c0c915001e254d",
+  "function_logs": "https://app.netlify.com/projects/piste-ai/logs/functions?scope=deploy:6aa2709715c0c915001e254d",
+  "edge_function_logs": "https://app.netlify.com/projects/piste-ai/logs/edge-functions?scope=deployid:6aa2709715c0c915001e254d"
+}

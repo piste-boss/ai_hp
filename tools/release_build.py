@@ -98,7 +98,7 @@ def main():
     for path in sorted(DEST.rglob('*.html')):
         if path.name == '404.html': continue
         s = path.read_text()
-        canonical = re.search(r'<link[^>]*rel="canonical"[^>]*href="([^"]+)"', s)
+        canonical = re.search(r'<link(?=[^>]*\brel="canonical")(?=[^>]*\bhref="([^"]+)")[^>]*>', s)
         if not canonical: raise ValueError(f'Missing canonical: {path}')
         url = canonical[1]
         item = ET.SubElement(xml, 'url')
