@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Etsy連携で海外販売・英語商品ページを自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeと海外向けハンドメイドマーケットEtsy（エッツィー）を組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・Etsy内SEOタグ最適化をAI自動化する方法を解説。ハンドメイド作家・中小事業者の越境ECに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+<meta name="keywords" content="Claude Code,Etsy,エッツィー,越境EC,海外販売,ハンドメイド,英語リスティング,商品ページ英語化,受注対応,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-etsy-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × Etsy連携で海外販売・英語商品ページを自動化">
+  <meta property="og:description" content="Claude Codeと海外向けハンドメイドマーケットEtsy（エッツィー）を組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・Etsy内SEOタグ最適化をAI自動化する方法を解説。ハンドメイド作家・中小事業者の越境ECに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-etsy-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-etsy-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-13T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × Etsy連携で海外販売・英語商品ページを自動化">
+  <meta name="twitter:description" content="Claude Codeと海外向けハンドメイドマーケットEtsy（エッツィー）を組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・Etsy内SEOタグ最適化をAI自動化する方法を解説。ハンドメイド作家・中小事業者の越境ECに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-etsy-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-etsy-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-etsy-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-etsy-integration.html","headline":"Claude Code × Etsy連携で海外販売・英語の商品ページ・受注対応をAI自動化！ハンドメイド作家・中小事業者の越境EC売上アップガイド","alternativeHeadline":"Claude Code × Etsy連携で海外販売・英語商品ページを自動化","description":"Claude Codeと海外向けハンドメイドマーケットEtsy（エッツィー）を組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・Etsy内SEOタグ最適化をAI自動化する方法を解説。ハンドメイド作家・中小事業者の越境ECに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-etsy-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-13T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","Etsy","エッツィー","越境EC","海外販売","ハンドメイド","英語リスティング","商品ページ英語化","受注対応","業務効率化","AI活用"],"wordCount":4181,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × Etsy連携で海外販売・英語商品ページを自動化","item":"https://www.piste-ai.com/blog/claude-code-etsy-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-etsy-integration.html#faq","mainEntity":[{"@type":"Question","name":"英語が苦手でも海外販売を始められますか？","acceptedAnswer":{"@type":"Answer","text":"はい。作品の魅力を日本語で伝えれば、AIが海外の買い手に伝わる英語へ整えてくれます。最終的な確認は人が行うことで、安心して発信を続けられます。"}},{"@type":"Question","name":"AIが書いた英語の説明文をそのまま公開して大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"事実確認や表現のチェックが必要なため、そのままの公開はおすすめしません。公開前に人が目を通し、自分らしさを加える運用にすることで、安心して活用できます。"}},{"@type":"Question","name":"どこまでを任せられますか？","acceptedAnswer":{"@type":"Answer","text":"英語リスティングづくり、海外顧客への返信ドラフト、発送案内文、レビュー分析、タグ最適化までを任せられます。公開・送信の可否と最終確認は人が行う前提で組み立てると安心です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × Etsy連携で海外販売・英語の商品ページ・受注対応をAI自動化！ハンドメイド作家・中小事業者の越境EC売上アップガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-13">公開日：2026年7月13日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-etsy-integration.webp" alt="Claude Code × Etsy連携で越境ECをAI自動化" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Etsy で海外販売したいが英語の商品ページや返信に手が止まる作家・小規模事業者</li><li><strong>できるようになること：</strong>英語リスティング・海外顧客への返信・発送案内・レビュー分析の下書きを作り、人が確認して公開できる</li><li><strong>必要なもの：</strong>Claude Code と、作品情報・よくある質問・発送条件を日本語でまとめた材料</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「作品を海外にも売ってみたいけれど、英語の商品説明を書くのが大変で手が止まる」「海外のお客様からの英語メッセージにどう返信すればいいか分からない」「送料や発送の案内、海外向けの言い回しに毎回悩む」——そんな悩みを抱えるハンドメイド作家・中小事業者の方に向けて、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、世界中に利用者がいる海外向けハンドメイドマーケット<strong>Etsy（エッツィー）</strong>を組み合わせ、英語の商品ページづくりから受注対応・分析までを効率化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. Etsyでの海外販売でつまずきがちな3つの壁</a></li>
+<li><a href="#s2">2. Claude Code は Etsy 運営のどこを自動化できますか？</a></li>
+<li><a href="#s3">3. 業種別・越境EC活用シーン</a></li>
+<li><a href="#s4">4. Etsy に Claude Code を取り入れるには何から始めますか？</a></li>
+<li><a href="#s5">5. 運用で押さえておきたい注意点</a></li>
+<li><a href="#s6">6. 他のツール・国内モールとの違い</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. Etsyでの海外販売でつまずきがちな3つの壁</h2>
+<p>Etsyは、ハンドメイド作品・クラフト素材・ヴィンテージ品を中心に、海外を含む世界中の買い手が集まるマーケットプレイスです。日本にいながら海外のお客様に作品を届けられる魅力がある一方で、国内のネットショップとは勝手が違い、次のような壁にぶつかりがちです。</p>
+<ul>
+<li><strong>英語での商品ページづくりが重い</strong>：タイトル・説明文・タグをすべて英語で用意する必要があり、1点ごとに書き上げるだけでかなりの時間がかかります。</li>
+<li><strong>海外のお客様とのやり取りに緊張する</strong>：英語のメッセージで質問が来ると、返信の文面づくりに時間がかかり、対応が後回しになりがちです。</li>
+<li><strong>越境ならではの案内が難しい</strong>：発送日数・送料・関税・追跡番号の伝え方など、海外向けの説明を毎回ゼロから考えるのは負担が大きいものです。</li>
+</ul>
+<p>これらは「英語力が足りない」からではなく、翻訳・言語化・案内文づくりといった地道な作業に手が回らないことが原因です。ここはまさにAIが得意とする領域です。</p>
+
+<h2 id="s2">2. Claude Code は Etsy 運営のどこを自動化できますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-etsy-integration-01.webp" alt="Claude CodeでEtsy運営を自動化" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>Claude Codeは、<a href="https://www.etsy.com/developers" target="_blank" rel="noopener">Etsyの公式API（Etsy Open API）</a>を介して、あるいは商品データや受注データを読み込ませることで、自然言語の指示だけで次のような作業を手伝ってくれます。</p>
+<ul>
+<li><strong>英語リスティングの下書き作成</strong>：作品の特徴を日本語で伝えると、海外の買い手に伝わる英語のタイトル・説明文・タグ（キーワード）を複数案で提案します。</li>
+<li><strong>海外顧客への返信文づくり</strong>：届いた英語メッセージの内容を要約し、丁寧で自然な英語の返信ドラフトを用意します。日本語で意図を伝えれば、それを英語に整えてくれます。</li>
+<li><strong>越境発送・案内文の準備</strong>：発送日数・送料・追跡・受け取りまでの流れを説明する、海外向けの定型案内文を作成します。</li>
+<li><strong>レビュー分析と返信ドラフト</strong>：海外レビューの内容をテーマ別に整理し、良い点・改善点をまとめたうえで、感謝を伝える返信文の下書きをつくります。</li>
+<li><strong>Etsy内検索を意識したタグ最適化</strong>：どんな英語キーワードで探されているかを踏まえ、検索で見つけてもらいやすいタグ構成のたたき台を提案します。</li>
+</ul>
+<p>いずれも「AIがたたき台を高速でつくり、人が仕上げて公開を判断する」という役割分担が基本です。英語のハードルを大きく下げつつ、最終的なブランドの世界観は自分の手で守れます。</p>
+
+<h2 id="s3">3. 業種別・越境EC活用シーン</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-etsy-integration-02.webp" alt="業種別・越境EC活用シーン" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ハンドメイドアクセサリー・雑貨作家</h3>
+<p>素材やデザインのこだわりを日本語で伝えれば、海外の買い手に響く英語の説明文へと整えてもらえます。作品ごとにタグを最適化し、海外の検索から見つけてもらいやすくできます。</p>
+<h3>和雑貨・和小物・日本らしさを届ける作り手</h3>
+<p>手ぬぐい・和柄小物・箸置きなど、日本ならではの魅力は海外で人気のテーマです。文化的な背景や使い方を英語で丁寧に説明する文章づくりを任せられます。</p>
+<h3>アート・イラスト・デジタル商品</h3>
+<p>プリントやテンプレートなどのデジタル商品は、ダウンロード方法や利用範囲の説明が英語で必要です。分かりやすい案内文と作品説明を量産できます。</p>
+<h3>陶器・木工・クラフト作家</h3>
+<p>素材感やサイズ、扱い方の注意点など、伝えるべき情報が多い作品でも、要点を押さえた英語の説明に整えられます。壊れ物の梱包・発送案内の文面づくりも手伝ってもらえます。</p>
+<h3>ヴィンテージ・古物セレクト</h3>
+<p>年代や状態、使用感の伝え方は英語だと表現に悩みがちです。状態を正確かつ魅力的に伝える説明文づくりで、海外の買い手が安心して購入できる情報発信を続けられます。</p>
+
+<h2 id="s4">4. Etsy に Claude Code を取り入れるには何から始めますか？</h2>
+<p>専門的なプログラミングは不要です。次の4ステップで、無理なく始められます。</p>
+<h3>ステップ1：目的を1つに絞る</h3>
+<p>まずは「英語の商品説明を量産したい」「海外からのメッセージに素早く返したい」「発送案内の文面を整えたい」など、困りごとを1つに絞ります。効果を感じやすい一点から始めるのがおすすめです。</p>
+<h3>ステップ2：材料の準備</h3>
+<p>作品の写真・特徴・サイズ・素材・こだわり、よく届く質問、発送条件などを日本語でまとめておきます。AIに渡す材料が多いほど、自分らしい英語リスティングになります。</p>
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「この作品で英語のタイトルと説明文を3案」「この英語メッセージへの丁寧な返信を用意して」といった具体的な指示を、日本語で伝えます。出力を見ながら指示を調整し、自分のトーンに合わせていきます。</p>
+<h3>ステップ4：小さく試して広げる</h3>
+<p>まずは数点から試し、閲覧数や海外からの反応を確かめてから対象を増やします。公開前の最終確認と、どの表現を使うかの判断は、必ず人が行います。</p>
+
+<h2 id="s5">5. 運用で押さえておきたい注意点</h2>
+<ul>
+<li><strong>公開前の確認は人が行う</strong>：AIはあくまで下書き役です。英語表現や事実関係の最終確認は、公開前に人が行います。</li>
+<li><strong>誇大な表現・断定を避ける</strong>：「必ず届く」「絶対に問題ない」など、状況によっては使えない表現があります。生成された文章はこの観点で必ず見直します。</li>
+<li><strong>ブランドの世界観を守る</strong>：AIの英語は整いすぎて無個性になりがちです。言い回しやトーンに手を入れ、自分ならではの雰囲気を残します。</li>
+<li><strong>越境ならではのルールに配慮する</strong>：発送日数・関税・返品対応など、海外取引特有の条件は、案内文に誤りがないか人が確認します。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：Etsyの出品・受注・分析の権限は、必要な範囲に絞って安全に管理します。</li>
+</ul>
+<p>AIはあくまで「海外販売を続けるための手伝い役」です。作品に込めた想いや、お客様を大切にする姿勢は、人が持ち続けることが大切です。</p>
+
+<h2 id="s6">6. 他のツール・国内モールとの違い</h2>
+<p>国内向けのネットショップ（<a href="claude-code-colorme-integration.html">カラーミーショップ</a>など）や日本のハンドメイドモール（<a href="claude-code-minne-integration.html">minne</a>など）は、日本語のお客様に向けた運営が中心です。一方Etsyは、海外の買い手が世界中から集まる越境マーケットで、英語での商品ページづくりや海外顧客とのやり取りが成果を左右します。つまり「作品の魅力を英語でどう伝えるか」がカギになる点が、国内販売との大きな違いです。</p>
+<p>Claude Codeを使えば、Etsyの英語リスティングづくりから海外顧客への返信、発送案内、レビュー分析、タグ最適化までを幅広く手伝ってもらえます。今使っているEtsyショップはそのままに、英語まわりの手間だけをAIに任せる、という始め方であれば、大きな入れ替えをせずに越境販売を前に進められます。まずは負担に感じている英語の商品説明づくりなど、一点から取り入れてみるのがおすすめです。</p>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. 英語が苦手でも海外販売を始められますか？</h3>
+<p>はい。作品の魅力を日本語で伝えれば、AIが海外の買い手に伝わる英語へ整えてくれます。最終的な確認は人が行うことで、安心して発信を続けられます。</p>
+<h3>Q. AIが書いた英語の説明文をそのまま公開して大丈夫ですか？</h3>
+<p>事実確認や表現のチェックが必要なため、そのままの公開はおすすめしません。公開前に人が目を通し、自分らしさを加える運用にすることで、安心して活用できます。</p>
+<h3>Q. どこまでを任せられますか？</h3>
+<p>英語リスティングづくり、海外顧客への返信ドラフト、発送案内文、レビュー分析、タグ最適化までを任せられます。公開・送信の可否と最終確認は人が行う前提で組み立てると安心です。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「Etsyで海外販売を伸ばしたいけれど、英語の作業や受注対応に時間が取れない」「Claude Codeの導入や使い方が不安」というハンドメイド作家・中小事業者の方に向けて、導入から自分に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラで相談する</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-pinterest-integration.html"><img src="../images/blog-claude-code-pinterest-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化</span></a><a class="seo-related-card" href="claude-code-colorme-integration.html"><img src="../images/blog-claude-code-colorme-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × カラーミーショップ連携で受注対応を自動化</span></a><a class="seo-related-card" href="claude-code-minne-integration.html"><img src="../images/blog-claude-code-minne-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × minne（ミンネ）連携で作品説明文をAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; 株式会社Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

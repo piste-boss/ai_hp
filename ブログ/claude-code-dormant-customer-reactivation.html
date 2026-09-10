@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド</title>
+<meta name="description" content="Claude Codeで休眠顧客の掘り起こしリストをつくる手順を解説。休眠の基準づくり・名簿からの抽出とグループ分け・グループ別の案内文下書き・結果の記録までの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,休眠顧客,掘り起こし,再来店,顧客名簿,業務効率化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド</h1>
+
+<p class="lead">「新しいお客様を増やしたい」というご相談を受けて名簿を拝見すると、多くの会社で同じことが起きています。<strong>過去に利用してくれたのに、足が遠のいたままのお客様が名簿の半分以上を占めている</strong>のです。新規のお客様を一人連れてくるより、一度利用してくれた方に戻ってきてもらうほうが、実は距離が近い。この記事では、その掘り起こしの準備作業を Claude Code で軽くする手順を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<a href="#s1">名簿は「ある」のに、使われていない</a><br>
+<a href="#s2">掘り起こしが後回しになる3つの理由</a><br>
+<a href="#s3">先に「休眠」の基準を1行で決める</a><br>
+<a href="#s4">Claude Codeに任せる範囲と、人が決める範囲</a><br>
+<a href="#s5">実務は5つのステップで回る</a><br>
+<a href="#s6">頼み方の3原則</a><br>
+<a href="#s7">現場でつまずく5つの型</a><br>
+<a href="#s8">業種別に、どこで効くか</a><br>
+<a href="#s9">よくある質問</a><br>
+<a href="#s10">まとめ</a><br>
+</div>
+
+<h2 id="s1">名簿は「ある」のに、使われていない</h2>
+<p>顧客名簿そのものを持っていない会社は、ほとんどありません。予約の記録、販売の履歴、会員登録。形はどうあれ、過去のお客様の情報はどの会社にも蓄積されています。</p>
+<p>使われていないのは、名簿がないからではなく、<strong>名簿から「いま声をかけるべき相手」を取り出す作業に手が回らない</strong>からです。</p>
+<blockquote>ご相談を受けた治療院では、開業からの顧客カードが800枚を超えていました。ところが直近半年に来院した方はそのうち2割ほど。残りの8割には、この数年、一度も声をかけていませんでした。「気にはなっていたが、誰から声をかければいいのか分からなかった」とのことでした。</blockquote>
+<p>掘り起こしは、広告費のかかる新規集客と違い、<strong>すでにある名簿を整えて声をかけるだけ</strong>で始められます。かかるのは手間だけ。そして、その手間こそ Claude Code が引き受けられる部分です。</p>
+
+<h2 id="s2">掘り起こしが後回しになる3つの理由</h2>
+<p>やったほうがよいと分かっていて手が付かない作業には、共通の構造があります。</p>
+<h3>理由1: 誰が「休眠」なのか分からない</h3>
+<p>名簿に最終利用日が整理されていないと、そもそも足が遠のいている方を特定できません。記録が予約台帳と販売履歴に分かれている場合はなおさらです。</p>
+<h3>理由2: 抽出と仕分けが面倒</h3>
+<p>「最後の利用から6か月以上」という条件で数百件の名簿を絞り込み、さらに利用内容ごとに分ける。手作業でやれば半日仕事で、繁忙期には絶対に着手できません。</p>
+<h3>理由3: 文面を考える時間がない</h3>
+<p>やっと相手を絞り込んでも、全員に同じ文面を送るのは気が引ける。かといって一人ずつ書き分ける時間はない。ここで止まってしまう会社が最も多い印象です。</p>
+<p>この3つは、いずれも「判断」ではなく「作業」です。作業である以上、外に出せます。</p>
+
+<h2 id="s3">先に「休眠」の基準を1行で決める</h2>
+<p>作業を始める前に、一つだけ決めごとが要ります。<strong>自社にとって何か月空いたら「休眠」とみなすか</strong>です。これは業種の利用サイクルで決まるもので、正解は会社ごとに違います。</p>
+<table>
+<tr><th>業種の例</th><th>通常の利用間隔</th><th>休眠とみなす目安</th></tr>
+<tr><td>美容室・治療院</td><td>1〜2か月に1回</td><td>4か月以上空いたら</td></tr>
+<tr><td>飲食店（常連中心）</td><td>月に数回</td><td>3か月以上空いたら</td></tr>
+<tr><td>小売・通販</td><td>季節ごと</td><td>1年以上空いたら</td></tr>
+<tr><td>教室・スクール</td><td>毎週〜毎月</td><td>2か月以上空いたら</td></tr>
+<tr><td>士業・コンサルティング</td><td>案件ごと</td><td>前案件の完了から1年で一度様子うかがい</td></tr>
+</table>
+<p>大事なのは、この基準を<strong>「最終利用日から6か月」のように1行で書けること</strong>です。1行で書ければ機械に渡せます。「なんとなく最近見ないな」という感覚のままでは、抽出のしようがありません。</p>
+
+<h2 id="s4">Claude Codeに任せる範囲と、人が決める範囲</h2>
+<p>掘り起こしには、外に出せる工程と、手放してはいけない工程があります。</p>
+<table>
+<tr><th>工程</th><th>Claude Codeに任せる</th><th>人がやる</th></tr>
+<tr><td>基準づくり</td><td>業種の利用間隔から目安の案を出す</td><td>自社の基準を1行で確定する</td></tr>
+<tr><td>抽出</td><td>名簿から基準に当てはまる方を一覧化する</td><td>一覧の件数と中身をざっと確かめる</td></tr>
+<tr><td>仕分け</td><td>期間や利用内容でグループ分けし、理由を書き添える</td><td>声をかけないグループを決める</td></tr>
+<tr><td>文面づくり</td><td>グループ別に案内文の下書きをつくる</td><td>自社の言葉に直し、最終文面を確定する</td></tr>
+<tr><td>送付</td><td>—</td><td>送るかどうかの判断と、送る操作</td></tr>
+</table>
+<p>線引きの考え方はシンプルです。<strong>リストと下書きまでが機械、お客様に届く手前からが人</strong>。案内はお客様との関係そのものなので、送る判断と最終的な文面は必ず手元に残します。</p>
+
+<h2 id="s5">実務は5つのステップで回る</h2>
+
+<h3>ステップ1: 名簿の控えを取り、最終利用日が分かる形にする</h3>
+<p>最初に必ず名簿の控えを取ります。元の名簿は触らず、複製に対して作業する。これは何をするときも同じ原則です。そのうえで、お客様ごとに「最後に利用した日」が1列で分かる形に整えてもらいます。予約台帳と販売履歴が別々なら、突き合わせて最新の日付を採る作業ごと任せられます。</p>
+
+<h3>ステップ2: 休眠の基準で絞り込む</h3>
+<p>決めておいた1行の基準を渡し、当てはまる方を一覧にしてもらいます。このとき<strong>件数を必ず確認</strong>してください。名簿全体の件数、絞り込み後の件数、その差。数が合わない場合は最終利用日が空欄の行が抜けていることが多いので、「日付が空欄の方は別の一覧に分けてください」と頼みます。</p>
+
+<h3>ステップ3: グループに分け、理由を書き添えてもらう</h3>
+<p>絞り込んだ一覧を、そのまま使ってはいけません。半年ぶりの方と3年ぶりの方に同じ文面は出せないからです。「空いた期間」と「よく利用していた内容」の2軸でグループ分けし、<strong>各行になぜそのグループなのかの理由列</strong>を付けてもらいます。理由が書いてあれば、人が後から確かめられます。</p>
+
+<h3>ステップ4: グループ別に案内文の下書きをつくる</h3>
+<p>グループごとに、案内文の下書きを出してもらいます。半年ぶりの方には「その後いかがですか」の距離感、数年ぶりの方には近況のお知らせから入る距離感。よく利用していた内容が分かっていれば、「以前ご利用いただいた〇〇」と一言添えるだけで、文面の温度が変わります。<strong>下書きはあくまで下書き</strong>。自社の言葉に直してから使います。</p>
+
+<h3>ステップ5: 結果を記録し、基準と文面を見直す</h3>
+<p>送りっぱなしにせず、「どのグループに何件送り、何件戻ってきたか」を1行ずつ記録します。この記録が次回の材料になります。戻りが多かったグループの文面は残し、反応のなかったグループは基準や文面を変える。<strong>掘り起こしは一度きりの企画ではなく、記録を挟んで回す仕組み</strong>にしたほうが、確実に効きます。</p>
+
+<h2 id="s6">頼み方の3原則</h2>
+<p>同じ作業でも、頼み方で結果の信頼度が変わります。</p>
+<ul>
+<li><strong>推測で埋めさせない。</strong>「最終利用日が分からない場合は空欄のままにし、推測では埋めないでください」と必ず添えます。日付を推測で埋められると、絞り込み全体が信用できなくなります。</li>
+<li><strong>理由を書かせる。</strong>グループ分けには必ず理由列を付けてもらいます。理由のない仕分けは、人が確かめられません。</li>
+<li><strong>件数で突き合わせる。</strong>元の件数、絞り込み後の件数、グループ別の合計。この3つの数が合っているかを毎回確かめます。中身を全部読まなくても、件数が合っていれば大きな抜けはないと判断できます。</li>
+</ul>
+
+<h2 id="s7">現場でつまずく5つの型</h2>
+<h3>型1: 全員に一斉に同じ文面を送ってしまう</h3>
+<p>リストができた勢いで一斉送付すると、数年ぶりの方に馴れ馴れしい文面が届きます。グループ別の距離感を保つこと自体が、掘り起こしの品質です。</p>
+<h3>型2: 案内を控えるべき方が混ざる</h3>
+<p>転居された方、以前やり取りが難しくなった方、すでに目的を果たされた方（例: 結婚式前の集中利用、受験対策の教室）。機械には分からない事情があります。<strong>仕分け後の一覧を人が一度見て、外す方を外す</strong>工程を飛ばさないでください。</p>
+<h3>型3: 名簿が散らかったまま抽出する</h3>
+<p>同じお客様が2件登録されていると、同じ方に案内が2通届きます。重複や表記ゆれが目立つ名簿は、掘り起こしの前に名寄せから始めるのが結局の近道です。</p>
+<h3>型4: 頻度が高すぎて逆効果になる</h3>
+<p>反応がないからと立て続けに送ると、戻るはずだった方も離れます。同じ方への案内は期間を空ける、というルールも先に1行で決めておきます。</p>
+<h3>型5: 結果を記録せず、毎回ゼロから始める</h3>
+<p>記録がないと、次回また「誰に送ったんだっけ」から始まります。送付日と結果の2列を足すだけで、次回は今回の半分の手間になります。</p>
+
+<h2 id="s8">業種別に、どこで効くか</h2>
+<p><strong>美容室・治療院</strong>：利用間隔が読みやすく、基準が立てやすい業種です。「前回の施術から4か月」の抽出と、施術内容別の文面分けがそのまま効きます。</p>
+<p><strong>小売・通販</strong>：購入履歴から「季節商品を昨年買って今年買っていない方」のような、時期に紐づく抽出が強力です。</p>
+<p><strong>教室・スクール</strong>：休会・退会の理由が記録にあれば、声をかけてよい方とそっとしておく方の仕分けまで下ごしらえできます。</p>
+<p><strong>飲食店</strong>：会員登録や予約の記録がある店なら、常連だった方の足が遠のいたことに数字で気づけます。</p>
+<p><strong>士業・コンサルティング</strong>：案件完了から1年の「その後いかがですか」は、営業というより関係の手入れです。完了案件の一覧から時期が来た先を月初に出してもらう運用が合います。</p>
+
+<h2 id="s9">よくある質問</h2>
+<h3>Q. 名簿が紙のカードなのですが。</h3>
+<p>まず名簿のデータ化が先になります。カードを撮影またはスキャンして読み取らせ、一覧表に起こすところから Claude Code に手伝わせられます。データ化と掘り起こしを一度にやろうとせず、分けて進めるのが安全です。</p>
+<h3>Q. 何年も前のお客様にも送ってよいのでしょうか。</h3>
+<p>送ること自体は判断次第ですが、期間が長いほど文面の距離感を変える必要があります。また、案内を受け取らない意思を示されたことのある方は、期間にかかわらず必ず除外します。除外リストを1つ持っておき、抽出のたびに照合する運用にすると漏れません。</p>
+<h3>Q. 顧客名簿を読ませて大丈夫でしょうか。</h3>
+<p>渡す範囲は自社でコントロールできます。抽出とグループ分けに氏名は必須ではないので、<strong>顧客番号と日付だけの形に落としてから渡す</strong>方法が最も安全です。どの情報まで渡すかの社内ルールを先に決めておくと、迷いがなくなります。</p>
+<h3>Q. どれくらい戻ってくるものですか。</h3>
+<p>業種と名簿の状態によるため、約束できる数字はありません。ただ、母数がすでに関係のあった方々なので、まったくの新規向け施策より反応は総じて高くなります。まず小さな1グループで試し、自社の数字を取ることをおすすめします。</p>
+
+<h2 id="s10">まとめ</h2>
+<p>休眠顧客の掘り起こしについて、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>掘り起こしが進まないのは名簿がないからではなく、<strong>抽出・仕分け・文面づくりの作業時間がない</strong>から</li>
+<li>始める前に<strong>「休眠」の基準を1行で決める</strong>。1行で書ければ機械に渡せる</li>
+<li>リストと下書きまでが Claude Code、<strong>送る判断と最終文面は人</strong></li>
+<li>手順は<strong>名簿を整える・基準で絞る・理由付きで仕分ける・グループ別に下書き・結果を記録する</strong>の5つ</li>
+<li>推測で埋めさせない・理由を書かせる・件数で突き合わせる、の3原則で頼む</li>
+</ul>
+<p>新しいお客様を探す前に、一度来てくれた方の名簿を開く。地味ですが、費用をかけずに今週から始められる打ち手です。まずは自社の「休眠の基準」を1行、決めるところから始めてみてください。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「名簿はあるが手が回らない」「何から任せればいいか分からない」という方に、Claude Codeの導入から掘り起こしの実務への活用まで、非エンジニアの方にも分かりやすく伴走支援します。70社以上のAI導入・業務自動化の支援実績があります。</p>
+<p class="price">¥3,000〜</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+</div>
+
+<footer>© Piste AI Consulting</footer>
+</body>
+</html>

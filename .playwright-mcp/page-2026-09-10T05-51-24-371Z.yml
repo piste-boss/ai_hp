@@ -1,0 +1,134 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - img "Search Console" [ref=e7]
+    - link "今すぐ開始" [ref=e9] [cursor=pointer]:
+      - /url: https://accounts.google.com/ServiceLogin?service=sitemaps&hl=ja&continue=https://search.google.com/search-console?utm_source%3Dabout-page
+      - generic [ref=e12]: 今すぐ開始
+  - generic [ref=e13]:
+    - generic [ref=e18]:
+      - generic [ref=e19]: Google 検索での掲載順位を改善する
+      - generic [ref=e20]:
+        - generic [ref=e21]: Search Console のツールやレポートを使うことで、サイトの検索トラフィックや掲載順位を測定できるほか、問題を修正し、Google 検索結果でのサイトの注目度を高めることができます
+        - link "今すぐ開始" [ref=e23] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=sitemaps&hl=ja&continue=https://search.google.com/search-console?utm_source%3Dabout-page
+          - generic [ref=e26]: 今すぐ開始
+    - generic [ref=e31]:
+      - generic [ref=e32]: 検索アナリティクスでコンテンツを最適化する
+      - generic [ref=e33]: どのようなクエリでユーザーがサイトにアクセスしているかを確認できます。Google 検索でのサイトのインプレッション数、クリック数、掲載順位を分析できます。
+    - generic [ref=e38]:
+      - generic [ref=e39]: コンテンツを Google のインデックスに登録する
+      - generic [ref=e40]: クロール用にサイトマップや個別 URL を送信します。インデックス カバレッジで、Google に最新のサイトが表示されることを確認できます。
+    - generic [ref=e45]:
+      - generic [ref=e46]: 問題が検出されたら通知を受け取り、サイトを修正する
+      - generic [ref=e47]: サイト上で問題が検出されると、メールで通知が届きます。その問題の影響を受ける URL を確認し、修正が完了したら Google にお知らせください。
+    - generic [ref=e52]:
+      - generic [ref=e53]: Google 検索でのページの表示を確認する
+      - generic [ref=e54]: URL 検査ツールを使用すると、各ページのクロール、インデックス登録、検索結果に関する詳細情報を Google インデックスから直接入手できます。
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]: Search Console トレーニング
+        - generic [ref=e59]: Google 検索での見え方を最適化し、ウェブサイトへの自然検索トラフィックを増やす方法をご確認ください
+      - generic [ref=e60]:
+        - link "Google Search Console について" [ref=e61] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=ONr5Z7VhNFI&list=PLKoqnv2vTMUOnQn-lNDfT38X9gA_CHxTo&index=1
+          - generic [ref=e64]:
+            - generic [ref=e67]: 
+            - generic [ref=e68]: Google Search Console について
+        - link "サイトの所有権を確認する 7 つの方法" [ref=e69] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=N4PmE3LysUM&list=PLKoqnv2vTMUOnQn-lNDfT38X9gA_CHxTo&index=8
+          - generic [ref=e72]:
+            - generic [ref=e75]: 
+            - generic [ref=e76]: サイトの所有権を確認する 7 つの方法
+        - link "Search Console のパフォーマンス レポート" [ref=e77] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=wTwnFcWUM3k&list=PLKoqnv2vTMUOnQn-lNDfT38X9gA_CHxTo&index=6
+          - generic [ref=e80]:
+            - generic [ref=e83]: 
+            - generic [ref=e84]: Search Console のパフォーマンス レポート
+        - link "URL 検査ツール" [ref=e85] [cursor=pointer]:
+          - /url: https://www.youtube.com/watch?v=Pe_-TkdbXN0&list=PLKoqnv2vTMUOnQn-lNDfT38X9gA_CHxTo&index=5
+          - generic [ref=e88]:
+            - generic [ref=e91]: 
+            - generic [ref=e92]: URL 検査ツール
+      - link "その他の動画" [ref=e94] [cursor=pointer]:
+        - /url: https://www.youtube.com/playlist?list=PLKoqnv2vTMUOnQn-lNDfT38X9gA_CHxTo
+        - generic [ref=e97]: その他の動画
+    - generic [ref=e99]:
+      - generic [ref=e100]: "サイトを最適化し、改善する:"
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e104]: AMP
+          - generic [ref=e105]: Search Console のツールやレポートで AMP ページの管理、テスト、トラッキングを行えます。
+          - link "詳細" [ref=e106] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters/answer/7450883?hl=ja
+        - generic [ref=e107]:
+          - generic [ref=e109]: ウェブに関する主な指標
+          - generic [ref=e110]: モバイルやパソコンの Search Console レポートでサイトの Core Web Vitals をモニターできます。
+          - link "詳細" [ref=e111] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters/answer/9205520?hl=ja
+        - generic [ref=e112]:
+          - generic [ref=e114]: リッチリザルト
+          - generic [ref=e115]: レシピ、求人情報などの構造化データは Google 検索にリッチリザルトとして掲載できます。リッチリザルトの管理、改善に Search Console レポートをご利用ください。
+          - link "詳細" [ref=e116] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters/answer/7552505?hl=ja
+    - generic [ref=e119]:
+      - generic [ref=e120]: Google 検索結果でのサイトの注目度を高めましょう。
+      - link "Google Search Console に移動する" [ref=e122] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?service=sitemaps&hl=ja&continue=https://search.google.com/search-console?utm_source%3Dabout-page
+        - text: Google Search Console に移動する
+        - generic [ref=e123]: 
+    - generic [ref=e125]:
+      - generic [ref=e126]:
+        - generic [ref=e127]: "フォロー:"
+        - generic [ref=e128]:
+          - link [ref=e129] [cursor=pointer]:
+            - /url: https://twitter.com/googlewmc
+            - img [ref=e130]
+          - link [ref=e132] [cursor=pointer]:
+            - /url: https://plus.google.com/s/googlewebmasters?hl=ja
+            - generic [ref=e133]: 
+          - link [ref=e134] [cursor=pointer]:
+            - /url: https://webmasters.googleblog.com/?hl=ja
+            - generic [ref=e135]: 
+          - link [ref=e136] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/GoogleWebmasterHelp
+            - generic [ref=e137]: 
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: ウェブマスター向けリソース
+          - link "ヘルプセンター" [ref=e142] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters?hl=ja
+          - link "ヘルプ フォーラム" [ref=e143] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters/go/community?hl=ja
+          - link "ウェブマスター アカデミー" [ref=e144] [cursor=pointer]:
+            - /url: https://support.google.com/webmasters/answer/6001102?hl=ja
+        - generic [ref=e145]:
+          - generic [ref=e146]: ビジネスの基本
+          - link "Google ビジネス ソリューション" [ref=e147] [cursor=pointer]:
+            - /url: https://www.google.com/services/
+          - link "Google 広告" [ref=e148] [cursor=pointer]:
+            - /url: https://www.google.com/ads/?ww-ww-et-g-aw-a-webmaster_1-footer!o2
+          - link "デジタル ワークショップ" [ref=e149] [cursor=pointer]:
+            - /url: https://digitalgarage.withgoogle.com/?utm_source=Engagement&utm_medium=ep&utm_term=SMB&utm_content=UK%20Webmast%20footer&utm_campaign=Q1_2016%20UK%20Webmast%20footer
+        - generic [ref=e150]:
+          - generic [ref=e151]: デベロッパー キット
+          - link "デベロッパーを検索" [ref=e152] [cursor=pointer]:
+            - /url: https://developers.google.com/search/
+          - link "ウェブの基礎" [ref=e153] [cursor=pointer]:
+            - /url: https://developers.google.com/web/fundamentals/
+          - link "App Indexing" [ref=e154] [cursor=pointer]:
+            - /url: https://developers.google.com/app-indexing/?hl=ja
+        - generic [ref=e155]:
+          - generic [ref=e156]: 関連サービス
+          - link "Google Analytics" [ref=e157] [cursor=pointer]:
+            - /url: https://www.google.com/analytics/
+          - link "G Suite" [ref=e158] [cursor=pointer]:
+            - /url: https://gsuite.google.com?hl=ja
+      - generic [ref=e159]:
+        - link "ヘルプ" [ref=e160] [cursor=pointer]:
+          - /url: https://support.google.com/webmasters/?hl=ja
+        - link "Google" [ref=e161] [cursor=pointer]:
+          - /url: https://www.google.com/?hl=ja
+        - link "プライバシー" [ref=e162] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy?hl=ja
+        - link "利用規約" [ref=e163] [cursor=pointer]:
+          - /url: https://policies.google.com/terms?hl=ja

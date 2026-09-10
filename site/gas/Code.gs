@@ -8,7 +8,7 @@
 // === 設定 ===
 // スクリプトプロパティから取得（GASエディタ → プロジェクトの設定 → スクリプトプロパティで設定）
 const RESEND_API_KEY = PropertiesService.getScriptProperties().getProperty('RESEND_API_KEY');
-const ADMIN_EMAIL = 'info@piste-ai.com';
+const ADMIN_EMAIL = PropertiesService.getScriptProperties().getProperty('ADMIN_EMAIL') || 'pistei.com2019@gmail.com';
 const FROM_EMAIL = 'info@piste-ai.com';
 const FROM_NAME = 'Piste AI EVANGELISTS';
 
@@ -27,8 +27,18 @@ function doPost(e) {
 
     // お問い合わせフォームの場合
     writeToSheet(data);
-    sendAdminNotification(data);
-    sendAutoReply(data);
+
+    try {
+      sendAdminNotification(data);
+    } catch (mailError) {
+      Logger.log('管理者通知メール送信エラー（問い合わせ記録は完了）: ' + mailError.message);
+    }
+
+    try {
+      sendAutoReply(data);
+    } catch (mailError) {
+      Logger.log('自動返信メール送信エラー（問い合わせ記録は完了）: ' + mailError.message);
+    }
 
     return ContentService
       .createTextOutput(JSON.stringify({ status: 'ok' }))
@@ -228,6 +238,7 @@ const CATEGORY_MAP = {
   'light': 'ライトプラン（月額）',
   'standard': 'スタンダードプラン（月額）',
   'platinum': 'プラチナプラン（月額）',
+  'training': 'AI研修プログラム（人材開発支援助成金 活用）',
   'general': 'AI導入について相談したい',
   'other': 'その他'
 };
@@ -260,14 +271,14 @@ function writeToSheet(data) {
 }
 
 // === メール送信 ===
-function sendViaResend(to, subject, html) {
+function sendViaResend(to, subject, html, replyTo) {
   if (!to) {
     throw new Error('メール送信先が空です');
   }
 
   if (!RESEND_API_KEY) {
     Logger.log('RESEND_API_KEY未設定のため MailApp で送信します: ' + to);
-    return sendViaMailApp(to, subject, html);
+    return sendViaMailApp(to, subject, html, replyTo);
   }
 
   const payload = {
@@ -276,6 +287,10 @@ function sendViaResend(to, subject, html) {
     subject: subject,
     html: html
   };
+
+  if (replyTo) {
+    payload.reply_to = replyTo;
+  }
 
   const options = {
     method: 'post',
@@ -295,7 +310,7 @@ function sendViaResend(to, subject, html) {
   if (statusCode < 200 || statusCode >= 300) {
     Logger.log('Resend送信失敗のため MailApp で代替送信します: ' + to);
     try {
-      return sendViaMailApp(to, subject, html);
+      return sendViaMailApp(to, subject, html, replyTo);
     } catch (fallbackError) {
       throw new Error('Resend送信失敗: ' + responseText + ' / MailApp送信失敗: ' + fallbackError.message);
     }
@@ -304,13 +319,13 @@ function sendViaResend(to, subject, html) {
   return response;
 }
 
-function sendViaMailApp(to, subject, html) {
+function sendViaMailApp(to, subject, html, replyTo) {
   MailApp.sendEmail({
     to: to,
     subject: subject,
     htmlBody: html,
     name: FROM_NAME,
-    replyTo: FROM_EMAIL
+    replyTo: replyTo || FROM_EMAIL
   });
 
   Logger.log('MailApp sent: ' + to);
@@ -349,7 +364,7 @@ function sendAdminNotification(data) {
     </div>
   `;
 
-  sendViaResend(ADMIN_EMAIL, subject, html);
+  sendViaResend(ADMIN_EMAIL, subject, html, data.email || FROM_EMAIL);
 }
 
 // === お客様への自動返信メール ===

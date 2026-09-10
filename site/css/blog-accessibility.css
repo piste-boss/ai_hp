@@ -1,0 +1,13 @@
+/* Article templates use intrinsic image dimensions with a fixed header height. */
+header img { width: auto; max-width: 100%; object-fit: contain; }
+header { gap: 16px; }
+img { max-width: 100%; }
+table { display: block; max-width: 100%; overflow-x: auto; }
+a:focus-visible, button:focus-visible { outline: 3px solid #e6c66c; outline-offset: 4px; }
+@media (max-width: 600px) {
+  header { padding: 16px 20px; flex-wrap: wrap; }
+  header > a { flex: 0 0 auto; }
+  header nav { display: flex; flex-wrap: wrap; gap: 12px; }
+  header nav a { margin-left: 0 !important; font-size: 14px; }
+  h1 { font-size: 26px; overflow-wrap: anywhere; }
+}

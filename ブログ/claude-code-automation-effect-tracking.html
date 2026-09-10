@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeの自動化は結局どれだけ効いた？中小企業のための削減時間の記録と社内共有ガイド</title>
+<meta name="description" content="Claude Codeの自動化効果を数字で残す方法を解説。測るのは前の時間・今の時間・人が直した回数の3つだけ。そのまま使える記録の型、月1回15分の振り返り4項目、数字が伸びないときに疑う3点を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,効果測定,削減時間,業務自動化,記録,振り返り,中小企業,一人社長,運用ルール,社内共有">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeの自動化は結局どれだけ効いた？中小企業のための削減時間の記録と社内共有ガイド</h1>
+
+<p class="lead">「たしかに楽にはなった。でも、どれくらい効いているのかと聞かれると答えられない」。Claude Code を業務に入れて数か月経った会社から、いちばん多く出てくる声です。効果が数字で残っていないと、続けるか広げるかの判断ができません。この記事では、専門的な集計をしなくても、日々の業務のなかで<strong>効果を数字として残していく方法</strong>を整理します。難しい指標は使いません。測るのは3つだけです。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 数字が残らないと自動化は続かない</a></li>
+<li><a href="#sec2">2. 測るのは3つだけ</a></li>
+<li><a href="#sec3">3. 導入前の時間は、あとからでも出せる</a></li>
+<li><a href="#sec4">4. そのまま使える記録の型</a></li>
+<li><a href="#sec5">5. 月に1回、4項目だけ振り返る</a></li>
+<li><a href="#sec6">6. 数字が伸びないときに疑う3つ</a></li>
+<li><a href="#sec7">7. 業種別の測りどころ</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 数字が残らないと自動化は続かない</h2>
+<p>自動化がやめられてしまうときの理由は、うまく動かなかったからとは限りません。むしろ多いのは次の2つです。</p>
+<ul>
+<li>効果を説明できないので、忙しくなると後回しになる</li>
+<li>担当者が交代したとき、引き継ぐ理由を示せない</li>
+</ul>
+<p>逆に「この作業は月に8時間減った」と1行残っているだけで、扱いはまったく変わります。数字は、続ける理由を人ではなく記録側に置くための道具です。</p>
+
+<h2 id="sec2">2. 測るのは3つだけ</h2>
+<p>細かく測ろうとすると必ず続きません。実務で意味があるのは次の3項目です。</p>
+<table>
+<tr><th>測る項目</th><th>中身</th><th>なぜ必要か</th></tr>
+<tr><td>前の時間</td><td>導入前に、その作業1件にかかっていた時間</td><td>比べる基準がないと効果が出せない</td></tr>
+<tr><td>今の時間</td><td>依頼してから、使える状態になるまでの時間</td><td>実際の負担を表す</td></tr>
+<tr><td>直した回数</td><td>出てきたものに人が手を入れた回数</td><td>品質が安定してきたかが分かる</td></tr>
+</table>
+<p>3つ目の「直した回数」を入れるのが要点です。時間だけを見ていると、実は毎回大幅に書き直していた、という状態を見落とします。</p>
+
+<h2 id="sec3">3. 導入前の時間は、あとからでも出せる</h2>
+<p>「前の時間を測っておかなかった」という相談をよく受けますが、あとからで問題ありません。次の順で決めます。</p>
+<ol>
+<li>その作業を実際にやっていた人に、1件あたりの所要時間を聞く</li>
+<li>幅がある場合は<strong>短いほうの数字</strong>を基準にする</li>
+<li>月の件数を、過去の実績から数える</li>
+</ol>
+<p>短いほうを基準にするのは、効果を大きく見せないためです。控えめな数字で出しておくと、社内で数字を疑われることがなくなり、かえって話が早く進みます。</p>
+
+<h2 id="sec4">4. そのまま使える記録の型</h2>
+<p>記録は表計算でも文書でもかまいません。1件につき1行、この形で残します。</p>
+<blockquote>日付 ／ 作業名 ／ 件数 ／ 前の時間・1件あたり ／ 今の時間・1件あたり ／ 人が直した回数 ／ 気づいたこと</blockquote>
+<p>「気づいたこと」の欄が効きます。うまくいかなかった理由がここに溜まっていくと、次に指示を直すときの材料になります。</p>
+<p>記録を書くこと自体を作業にしないことも大切です。<strong>作業が終わった直後に30秒で書ける分量</strong>に留めてください。きれいな集計表を作ろうとした会社は、ほぼ例外なく2週間で止まっています。</p>
+
+<h2 id="sec5">5. 月に1回、4項目だけ振り返る</h2>
+<p>月末に15分だけ時間を取り、次の4つを見ます。</p>
+<ol>
+<li><strong>今月いちばん時間が減った作業はどれか</strong>。広げる候補になります</li>
+<li><strong>人が直した回数が多い作業はどれか</strong>。指示の書き方を直す対象です</li>
+<li><strong>使われなかった作業はあるか</strong>。合っていない可能性が高いので、やめる判断をします</li>
+<li><strong>新しく増やせそうな作業はあるか</strong>。1か月に1つ増やせば十分です</li>
+</ol>
+<p>やめる判断を入れておくのが重要です。使わないものを抱えたままにすると、全体が「よく分からないもの」になります。</p>
+
+<h2 id="sec6">6. 数字が伸びないときに疑う3つ</h2>
+<p><strong>依頼の作り直しに時間がかかっている</strong>：毎回ゼロから指示文を書いていると、時短分が相殺されます。よく使う依頼は呼び出し1行にまとめてください。</p>
+<p><strong>確認に時間がかかっている</strong>：全部を人が読み直していると効果は出ません。確認するのは、間違えたときに実害が出る箇所だけに絞ります。</p>
+<p><strong>前提を毎回伝え直している</strong>：表記のきまりや禁止事項は、毎回書くのではなくルールを書いたファイルに集約します。ここが最も効きます。</p>
+
+<h2 id="sec7">7. 業種別の測りどころ</h2>
+<p><strong>士業・コンサル</strong>：資料や書面の下書きが中心です。1件あたりの作成時間と、修正の往復回数を見ます。</p>
+<p><strong>美容室・治療院</strong>：案内文や口コミへの返信が中心です。1本あたりの作成時間より、<strong>月に何本出せたか</strong>を見るほうが実態に合います。</p>
+<p><strong>小売・EC</strong>：商品説明や受注対応です。件数が多いため、1件の削減がわずかでも月合計で大きく効きます。合計時間で見てください。</p>
+<p><strong>建設・工務店</strong>：日報や報告の整理です。現場ごとに条件が違うので、作業単位ではなく<strong>現場1件あたり</strong>で測ると比較しやすくなります。</p>
+<p><strong>教室・スクール</strong>：案内や連絡文の作成です。繁忙期と閑散期で件数が変わるため、月ごとの件数と合わせて記録します。</p>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>細かく測る時間がありません。</strong></p>
+<p>3項目だけで十分です。作業が終わった直後に1行書くだけなら、1件あたり30秒もかかりません。全件記録する必要もなく、週に数件のサンプルで傾向はつかめます。</p>
+<p><strong>数字を大きく見せたほうが社内を説得しやすいのでは。</strong></p>
+<p>逆効果になりやすいです。控えめな数字で出しておくと、後から実感と合わないという指摘が出ません。信用されている数字のほうが、結果的に予算も人も付きます。</p>
+<p><strong>時間以外に見たほうがよい指標はありますか。</strong></p>
+<p>規模が大きくなるまでは不要です。強いて挙げれば、担当者以外の人が同じ作業を回せたかどうか。これが達成できていれば、属人化の解消という別の効果が出ています。</p>
+<p><strong>効果が出ていない作業は、やめてしまってよいですか。</strong></p>
+<p>やめて問題ありません。合わない作業を残すより、効いた作業を横に広げるほうが成果は大きくなります。やめた記録も残しておくと、次に選ぶときの判断材料になります。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>Claude Code の効果を残す作業は、集計ではなく<strong>習慣</strong>です。前の時間、今の時間、人が直した回数。この3つを1行ずつ残し、月に1回15分だけ振り返る。それだけで、続けるか広げるかの判断ができるようになります。</p>
+<p>そして数字は、控えめに出しておくこと。誇張しない記録は、社内でいちばん強い後ろ盾になります。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「自動化してみたが、効果を数字で説明できない」「続けるべきか広げるべきか判断できない」という課題をお持ちの方に向けて、測りやすい業務の選び方から、記録の型づくり、月次の振り返りの回し方までを、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

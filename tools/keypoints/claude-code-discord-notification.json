@@ -1,0 +1,1 @@
+{"target": "売上・問い合わせ・シフトの連絡を Discord で一元化したい中小企業の経営者", "outcome": "Webhook 通知・コマンド Bot・AI 要約通知の3パターンを Claude Code で構築し定時実行できる", "requirement": "Claude Code と、Discord サーバーおよびチャンネルの Webhook アドレス"}

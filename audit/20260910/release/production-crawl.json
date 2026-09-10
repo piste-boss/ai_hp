@@ -1,0 +1,1022 @@
+[
+  {
+    "url": "https://www.piste-ai.com/about",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/about",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/aichi",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/aichi",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-accounting-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-accounting-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-adoption-mistakes",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-adoption-mistakes",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-automation-one-person-business",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-automation-one-person-business",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-competitor-analysis",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-competitor-analysis",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-contract-review-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-contract-review-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-cost-roi-for-sme",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-cost-roi-for-sme",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-customer-support-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-customer-support-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-data-analysis-dashboard",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-data-analysis-dashboard",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-inventory-management",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-inventory-management",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-knowledge-management",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-knowledge-management",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-meeting-minutes-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-meeting-minutes-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-presentation-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-presentation-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-prompt-techniques-business",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-prompt-techniques-business",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-recruitment-efficiency",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-recruitment-efficiency",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-sales-email-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-sales-email-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-sales-growth-examples",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-sales-growth-examples",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-sns-marketing-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-sns-marketing-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/ai-tools-for-business-2026",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-ai-basics",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-ai-basics",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-claude-code-basics",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-claude-code-basics",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-finance",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-finance",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-operations",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-operations",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-sales-customer",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-sales-customer",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/category-tool-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/category-tool-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-airregi-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-airregi-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-airtable-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-airtable-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-ameblo-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-ameblo-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-andpad-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-andpad-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-asana-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-asana-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-automation-effect-tracking",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-automation-effect-tracking",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-automation-handover",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-automation-handover",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-backlog-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-backlog-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-backup-and-recovery",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-backup-and-recovery",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-base-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-base-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-board-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-board-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-business-guide",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-business-guide",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-calendly-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-calendly-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-canva-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-canva-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-cashflow-forecast",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-cashflow-forecast",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-chatwork-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-chatwork-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-claude-md-rules",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-claude-md-rules",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-claudemd-memory-guide",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-claudemd-memory-guide",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-cloudsign-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-cloudsign-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-colorme-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-colorme-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-complaint-first-response",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-complaint-first-response",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-confidential-data-rules",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-confidential-data-rules",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-context-management",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-context-management",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-customer-list-deduplication",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-customer-list-deduplication",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-cybozu-office-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-cybozu-office-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-deepl-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-deepl-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-deliverable-review-process",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-deliverable-review-process",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-discord-notification",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-discord-notification",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-dropbox-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-dropbox-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-equipment-inspection-records",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-equipment-inspection-records",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-etsy-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-etsy-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-facebook-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-facebook-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-fixed-cost-review",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-fixed-cost-review",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-food-delivery-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-food-delivery-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-freee-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-freee-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-gmail-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-gmail-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-ads-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-business-profile-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-business-profile-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-calendar-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-calendar-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-docs-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-docs-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-drive-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-google-sheets-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-google-sheets-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-googleform-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-googleform-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-gross-margin-analysis",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-gross-margin-analysis",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-hooks-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-hooks-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-hotpepper-beauty-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-hotpepper-beauty-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-hubspot-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-indeed-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-indeed-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-invoice-registration-check",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-invoice-registration-check",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-jalan-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-jalan-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-jobcan-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-jobcan-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-kintone-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-kintone-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-line-official-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-line-official-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-lineworks-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-lineworks-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-linkedin-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-linkedin-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-loan-repayment-overview",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-loan-repayment-overview",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-lost-deal-review",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-lost-deal-review",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-mailchimp-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-mailchimp-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-make-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-make-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-mcp-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-mcp-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-mercari-shops-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-mercari-shops-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-microsoft-teams-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-microsoft-teams-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-microsoft365-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-microsoft365-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-minne-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-minne-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-miro-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-miro-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-model-cost-optimization",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-model-cost-optimization",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-moneyforward-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-moneyforward-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-near-miss-records",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-near-miss-records",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-new-client-credit-check",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-new-client-credit-check",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-note-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-note-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-notion-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-notion-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-paper-document-digitization",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-paper-document-digitization",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-paypay-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-paypay-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-peatix-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-peatix-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-peraichi-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-permission-security-guide",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-permission-security-guide",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-pinterest-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-pinterest-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-plan-mode-business",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-plan-mode-business",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-playwright-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-playwright-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-price-revision-preparation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-price-revision-preparation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-quote-comparison",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-quote-comparison",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-rakuten-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-receivables-payment-check",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-receivables-payment-check",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-remote-control-mobile",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-remote-control-mobile",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-reserva-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-reserva-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-returns-defect-log",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-returns-defect-log",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-salesforce-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-salesforce-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-sansan-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-sansan-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-search-console-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-search-console-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-shopify-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-shopify-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-skills-knowledge",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-skills-knowledge",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-slack-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-slack-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-slash-commands",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-slash-commands",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-smaregi-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-smaregi-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-smarthr-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-smarthr-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-spec-change-log",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-spec-change-log",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-square-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-square-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-stores-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-stores-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-stripe-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-stripe-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-subagent-team",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-subagent-team",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-subcontractor-track-record",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-subcontractor-track-record",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-subsidy-application-support",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-subsidy-application-support",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-tabelog-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-tabelog-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-task-delegation-boundary",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-task-delegation-boundary",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-team-parallel-execution",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-team-parallel-execution",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-threads-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-threads-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-tiktok-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-tiktok-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-timee-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-timee-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-todoist-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-todoist-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-trello-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-trello-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-troubleshooting-guide",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-troubleshooting-guide",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-wantedly-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-wantedly-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-websearch-research-automation",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-websearch-research-automation",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-wordpress-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-x-twitter-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-x-twitter-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-yayoi-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-youtube-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-youtube-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-zapier-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-zapier-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-zendesk-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-zendesk-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-zoho-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-zoho-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-zoom-integration",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/claude-code-zoom-integration",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/moneyforward-mcp-accounting",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/blog/moneyforward-mcp-accounting",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/claude-code-support",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/claude-code-support",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/privacy",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/privacy",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/terms",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/terms",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/tokushoho",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/tokushoho",
+    "loader": 1
+  },
+  {
+    "url": "https://www.piste-ai.com/training",
+    "status": 200,
+    "canonical": "https://www.piste-ai.com/training",
+    "loader": 1
+  }
+]

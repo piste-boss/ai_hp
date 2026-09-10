@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-10",
+  "production": "https://www.piste-ai.com/",
+  "deploy_id": "6aa20f07f0efb9e960bd058e",
+  "ga4_property": "531067300",
+  "stream_id": "14296889350",
+  "measurement_id": "G-LR35246V7B",
+  "search_console": "sc-domain:piste-ai.com",
+  "ga4_search_console_link": "linked, confirmed in GA4 UI",
+  "clarity": "w54yutjekb; GA integration active",
+  "sitemap_submission": "submitted successfully in Search Console UI",
+  "key_events": {
+    "generate_lead": "already marked, preserved",
+    "line_friend_add": "unmarked; new link clicks use line_click"
+  },
+  "gtm": "not installed; retained and centralized direct Google tag",
+  "public_urls_verified": 170,
+  "html_pages_including_404": 171,
+  "automated_tests_passed": 4,
+  "actual_test_email_sent": false
+}

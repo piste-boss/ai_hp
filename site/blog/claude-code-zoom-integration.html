@@ -2,10 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
-<title>Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド | Piste</title>
+<title>Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化 | Piste AI EVANGELISTS</title>
 <meta name="description" content="Claude CodeとZoomを連携し、議事録自動生成・録画資産化・商談トーク分析・経営レポートを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と4ステップ導入。">
 <meta name="keywords" content="Claude Code,Zoom連携,議事録自動化,オンライン会議,録画資産化,中小企業,DX,生成AI,業務自動化">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,21 +131,76 @@ th{background:var(--dark);color:var(--gold-light);}
 .cta h2{color:var(--black);border:none;padding:0;}
 .cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
 </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-zoom-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化">
+  <meta property="og:description" content="Claude CodeとZoomを連携し、議事録自動生成・録画資産化・商談トーク分析・経営レポートを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と4ステップ導入。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-zoom-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-zoom-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-05-21T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化">
+  <meta name="twitter:description" content="Claude CodeとZoomを連携し、議事録自動生成・録画資産化・商談トーク分析・経営レポートを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と4ステップ導入。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-zoom-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-zoom-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-zoom-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-zoom-integration.html","headline":"Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド","alternativeHeadline":"Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化","description":"Claude CodeとZoomを連携し、議事録自動生成・録画資産化・商談トーク分析・経営レポートを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と4ステップ導入。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-zoom-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-05-21T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","Zoom連携","議事録自動化","オンライン会議","録画資産化","中小企業","DX","生成AI","業務自動化"],"wordCount":3510,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化","item":"https://www.piste-ai.com/blog/claude-code-zoom-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-zoom-integration.html#faq","mainEntity":[{"@type":"Question","name":"プログラミングが分からなくても本当に導入できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Claude Codeは日本語の指示で動くため、Zoomアプリ作成などの初期設定さえ整えば、運用は対話形式で進められます。"}},{"@type":"Question","name":"Zoomの無料プランでも連携できますか？","acceptedAnswer":{"@type":"Answer","text":"PIは利用可能ですが、商用利用の議事録自動化・録画資産化を本格運用するなら有料プラン（録画クラウド保存・トランスクリプト機能）を推奨します。"}},{"@type":"Question","name":"セキュリティが心配です","acceptedAnswer":{"@type":"Answer","text":"サーバーサイドアプリのスコープを最小化し、外部共有用議事録には人による承認ステップを挟むことで、リスクを大きく抑えられます。"}},{"@type":"Question","name":"他のWeb会議ツール（Google Meet、Teams等）でも同じことができますか？","acceptedAnswer":{"@type":"Answer","text":"基本的な仕組みは同じで、Claude CodeはGoogle Meet録画やTeams録画でも同様の自動化が可能です。既に使っているツールから始めるのが最短ルートです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 <header>
-<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<a href="../"><img src="../images/logo.webp" alt="Piste" loading="eager" fetchpriority="high" width="240" height="240"></a>
 <nav>
-<a href="../index.html#service">サービス</a>
-<a href="../index.html#contact">お問い合わせ</a>
+<a href="../#services">サービス</a>
+<a href="../#contact">お問い合わせ</a>
 </nav>
 </header>
 <main>
 <h1>Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-05-21">公開日：2026年5月21日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
 <div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
-  <img src="../images/blog-claude-code-zoom-integration.jpg" alt="Claude Code × Zoom連携で議事録・録画を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+  <img src="../images/blog-claude-code-zoom-integration.webp" alt="Claude Code × Zoom連携で議事録・録画を自動化するイメージ" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
 </div>
 
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Zoomで商談・会議・研修を日常的に行う中小企業の経営者・一人社長</li><li><strong>できるようになること：</strong>録画の文字起こしからの議事録生成、会議ダイジェスト配信、録画のインデックス化を Claude Code に任せられる</li><li><strong>必要なもの：</strong>Claude Code と、最小スコープで作成した Zoom のサーバーサイドアプリ</li></ul></div>
+<!-- /seo:points -->
 <p>「Zoomで毎日打ち合わせをしているが、議事録を起こす時間がない」「録画ファイルが溜まる一方で活用できていない」「商談動画から自社のトークの改善点を抽出したいが手作業では無理」――そんな悩みを抱える中小企業の経営者や一人社長向けに、Anthropic公式のAIコーディングツール <strong>Claude Code</strong> と <strong>Zoom</strong> を連携させることで、会議運営から議事録作成、録画資産の活用までを丸ごと自動化する方法を、非エンジニアでも分かるように解説します。</p>
 
 <h2>1. 中小企業のZoom運用にありがちな3つの壁</h2>
@@ -56,8 +212,8 @@ th{background:var(--dark);color:var(--gold-light);}
 </ul>
 <p>これらの「会議が終わってからの作業」を、Claude Code × Zoom APIの連携で「会議が終わった瞬間に作業が完了している」状態に変えられます。</p>
 
-<h2>2. Claude Code × Zoom連携でできること</h2>
-<p>Claude Code は AnthropicのAIコーディングツールで、ZoomのAPIを介して、以下のような操作を自然言語の指示だけで行えます。</p>
+<h2>2. Claude Code は Zoom の何を自動化できますか？</h2>
+<p>Claude Code は AnthropicのAIコーディングツールで、<a href="https://developers.zoom.us/docs/api/" target="_blank" rel="noopener">Zoom の API</a>を介して、以下のような操作を自然言語の指示だけで行えます。</p>
 <table>
 <thead><tr><th>カテゴリ</th><th>自動化できる業務例</th></tr></thead>
 <tbody>
@@ -76,7 +232,7 @@ th{background:var(--dark);color:var(--gold-light);}
 <p>Zoom会議の録画とトランスクリプト（文字起こし）が生成された瞬間、Claude Codeが内容を読み取り、「議題」「決定事項」「宿題（誰がいつまでに何を）」「次回アジェンダ」の構造で議事録を自動下書きします。担当者は内容を確認するだけで配布できます。</p>
 
 <h3>② 朝の会議ダイジェスト自動配信</h3>
-<p>毎朝、Claude CodeがZoom APIから当日の会議一覧を取得し、「商談2件（新規1件・既存1件）」「社内定例1件」「研修1件」のように担当役員向けにまとめて社内に共有します。Zoom画面を開かずに当日の会議状況を把握できます。</p>
+<p>毎朝、Claude CodeがZoom APIから当日の会議一覧を取得し、「商談2件（新規1件・既存1件）」「社内定例1件」「研修1件」のように担当役員向けにまとめて社内に共有します。Zoom画面を開かずに当日の会議状況を把握できます。配信先は<a href="claude-code-slack-integration.html">Slack との連携</a>でチャンネルに流す形にもできます。</p>
 
 <h3>③ 商談録画から自社トークの改善提案</h3>
 <p>過去の商談録画をClaude Codeが解析し、「自社の発言比率が高すぎる商談」「顧客の課題ヒアリング時間が短い商談」「成約パターンと未成約パターンの違い」を可視化。営業会議でのトーク改善判断に直結します。</p>
@@ -92,11 +248,11 @@ th{background:var(--dark);color:var(--gold-light);}
 <li><strong>士業・コンサル</strong>：顧問先とのZoom面談録画から、相談テーマ・アドバイス内容・次回宿題を要約し、顧問先別カルテとして自動蓄積</li>
 <li><strong>美容室・治療院</strong>：オンライン研修録画を施術理論・カウンセリング技術・症例解説のテーマ別にチャプター化し、新人スタッフが必要なシーンだけ視聴可能に</li>
 <li><strong>不動産仲介・建築</strong>：オンライン内見・商談録画から、顧客の関心ポイント・不安・次のアクションを抽出し、次回提案資料の精度を高める</li>
-<li><strong>Web制作・広告代理店</strong>：クライアント定例会の録画から、決定事項・保留事項・次回作業をプロジェクト管理ツールへ転記可能な形式で出力</li>
+<li><strong>Web制作・広告代理店</strong>：クライアント定例会の録画から、決定事項・保留事項・次回作業をプロジェクト管理ツール（<a href="claude-code-kintone-integration.html">kintone との連携</a>など）へ転記可能な形式で出力</li>
 <li><strong>スクール・教室</strong>：オンライン授業の録画を章立て解析し、重要解説・補足説明・練習問題解説のタイムスタンプを自動生成して復習体験を向上</li>
 </ul>
 
-<h2>5. 非エンジニアでも導入できる4ステップ</h2>
+<h2>5. 非エンジニアが Zoom 連携を導入する手順は？</h2>
 <ol>
 <li><strong>業務棚卸し</strong>：「議事録作成」「録画活用」「商談分析」「経営レポート」のうち、最も困っているテーマを1つ選んで優先する</li>
 <li><strong>Zoom APIアプリ作成</strong>：Zoom App Marketplaceから自社用のサーバーサイドアプリを作成し、必要なスコープ（会議取得・録画取得・トランスクリプト取得）だけを最小権限で付与する</li>
@@ -127,14 +283,18 @@ th{background:var(--dark);color:var(--gold-light);}
 <h3>Q. 他のWeb会議ツール（Google Meet、Teams等）でも同じことができますか？</h3>
 <p>基本的な仕組みは同じで、Claude CodeはGoogle Meet録画やTeams録画でも同様の自動化が可能です。既に使っているツールから始めるのが最短ルートです。</p>
 
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-slack-integration.html"><img src="../images/blog-claude-code-slack-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Slack連携で社内コミュニケーションをAI自動化</span></a><a class="seo-related-card" href="claude-code-zapier-integration.html"><img src="../images/blog-claude-code-zapier-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Zapier連携で業務自動化を10倍加速</span></a><a class="seo-related-card" href="claude-code-kintone-integration.html"><img src="../images/blog-claude-code-kintone-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × kintone連携で業務アプリをAI自動運用</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
 <div class="cta">
 <h2>Claude Code導入サポート（¥10,000）</h2>
 <p>「自社でも始めてみたいけれど、何から手を付ければよいかわからない」という方向けに、Claude Codeの初期セットアップ・業務テンプレート作成・Zoom連携の最初の自動化までを丸ごとサポートします。</p>
-<a href="../index.html#contact">サポートの詳細を見る</a>
+<a href="../#contact">サポートの詳細を見る</a>
 </div>
 
 <blockquote>
-70社以上のAI導入を支援してきた知見をベースに、Zoomだけでなく既存の会議・録画・議事録業務を横断したAI自動化までを一気通貫でご提案します。
+400社以上のAI導入を支援してきた知見をベースに、Zoomだけでなく既存の会議・録画・議事録業務を横断したAI自動化までを一気通貫でご提案します。
 </blockquote>
 
 </main>

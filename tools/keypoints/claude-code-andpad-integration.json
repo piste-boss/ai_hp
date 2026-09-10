@@ -1,0 +1,1 @@
+{"target": "ANDPAD を使う建設・リフォーム会社の社長・現場監督", "outcome": "現場メモから日報・写真の説明文・工程変更の案内文・案件集計を Claude Code に作らせ、確認だけで済ませられる", "requirement": "Claude Code と、現場メモや ANDPAD から書き出した案件データ"}

@@ -1,0 +1,88 @@
+[
+  {
+    "path": "/index.html",
+    "status": 301,
+    "location": "/",
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/blog/index.html",
+    "status": 301,
+    "location": "/blog/",
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/about.html",
+    "status": 301,
+    "location": "/about",
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/blog/claude-code-instagram-integration.html",
+    "status": 301,
+    "location": "/blog/claude-code-instagram-integration",
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/feed.xml",
+    "status": 200,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate",
+    "rss_items": 30
+  },
+  {
+    "path": "/llms.txt",
+    "status": 200,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/js/analytics.js",
+    "status": 200,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate",
+    "matches_local": true
+  },
+  {
+    "path": "/js/main.js",
+    "status": 200,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate",
+    "matches_local": true
+  },
+  {
+    "path": "/api/contact",
+    "status": 405,
+    "location": null,
+    "cache_control": "no-store"
+  },
+  {
+    "path": "/gas/Code.gs",
+    "status": 404,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/netlify/functions/contact.mjs",
+    "status": 404,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "/seo-missing-page-check",
+    "status": 404,
+    "location": null,
+    "cache_control": "public,max-age=0,must-revalidate"
+  },
+  {
+    "path": "POST /api/contact (invalid)",
+    "status": 400,
+    "response": "{\"status\":\"error\"}"
+  }
+]

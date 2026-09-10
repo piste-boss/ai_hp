@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeの自動化が止まった・結果がおかしいときの対処法！中小企業のための切り分け手順と再発防止ガイド</title>
+<meta name="description" content="Claude Codeの自動化が途中で止まる、結果が意図と違うといったトラブルは原因が3つに絞れます。非エンジニアでもできる4つの確認手順、やり直す前に実物を確認する事故防止策、再発を防ぐ4つの備えを中小企業向けに解説します。">
+<meta name="keywords" content="Claude Code,トラブル対処,エラー,業務自動化,切り分け,再発防止,中小企業,一人社長,二重実行,運用ルール">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeの自動化が止まった・結果がおかしいときの対処法！中小企業のための切り分け手順と再発防止ガイド</h1>
+
+<p class="lead">「先週まで動いていた自動化が、今朝は途中で止まっていた」「同じ頼み方をしたのに、出てきたものが前と違う」。Claude Code を業務に入れた会社から、しばらく経つと必ず出てくる相談です。 多くの場合、これは壊れたわけでも、能力が落ちたわけでもありません。<strong>原因の種類が少なく、順番に確かめれば自分で切り分けられる</strong>というのが実務での結論です。この記事では、専門知識がない立場でも使える確認手順と、同じことを繰り返さないための備え方を整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. うまくいかない原因は大きく3つ</a></li>
+<li><a href="#sec2">2. まず確かめる4項目</a></li>
+<li><a href="#sec3">3. 原因別の直し方</a></li>
+<li><a href="#sec4">4. やってはいけない対処</a></li>
+<li><a href="#sec5">5. 再発を防ぐ4つの備え</a></li>
+<li><a href="#sec6">6. 業種別の「効きどころ」</a></li>
+<li><a href="#sec7">よくある質問</a></li>
+<li><a href="#sec8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. うまくいかない原因は大きく3つ</h2>
+<p>現場で起きるトラブルは、ほぼこの3分類に収まります。</p>
+<table>
+<tr><th>分類</th><th>症状</th><th>感覚的にいうと</th></tr>
+<tr><td>つながる先の問題</td><td>途中で止まる、外部のサービスから何も取れない</td><td>相手先の扉が閉まっている</td></tr>
+<tr><td>伝え方の問題</td><td>動くが、出てくるものが意図と違う</td><td>指示書が足りていない</td></tr>
+<tr><td>頼みすぎの問題</td><td>前半は正確、後半から雑になる</td><td>机の上が書類で埋まっている</td></tr>
+</table>
+<p>大事なのは、<strong>症状からこの3つのどれかに当てをつけてから手を動かす</strong>ことです。当てをつけずに設定をいじると、直ったのか偶然なのか分からなくなります。</p>
+<h2 id="sec2">2. まず確かめる4項目</h2>
+<p>順番に確認してください。上から順に、頻度の高いものになっています。</p>
+<ol>
+<li><strong>今日が初めての失敗か、ずっと失敗し続けているか</strong>。今日だけなら外部側の一時的な不調が疑わしく、時間をおくと直ることがあります</li>
+<li><strong>つなぎ先の許可が切れていないか</strong>。外部サービスとの接続は期限が切れる仕組みになっているものが多く、期限切れは最も多い原因です</li>
+<li><strong>指示の文面を変えていないか</strong>。前回と今回で言い方を変えていないか、見比べます</li>
+<li><strong>一度の依頼に何件詰め込んだか</strong>。件数が多いほど、後半の精度は落ちます</li>
+</ol>
+<p>この4つで、実務のトラブルの大半は説明がつきます。</p>
+<h2 id="sec3">3. 原因別の直し方</h2>
+<p><strong>つなぎ先の許可が切れている場合</strong>：やり直しの操作は人が行う必要があります。自動化の側では復旧できないため、担当者を決めておき、切れたら誰が対応するかを先に決めておきます。</p>
+<p><strong>伝え方が足りない場合</strong>：口頭の追加指示ではなく、設定ファイルに書き足します。その場で言い直すと、翌日また同じことになります。</p>
+<p><strong>頼みすぎの場合</strong>：一度の依頼を小分けにします。100件を1回で頼むより、20件ずつ5回に分けたほうが、確認も直しも早く終わります。</p>
+<h2 id="sec4">4. やってはいけない対処</h2>
+<p>止まったときに最もやりがちで、最も危ないのが<strong>同じ指示を続けて何度も投げること</strong>です。</p>
+<p>途中まで進んでいた作業が、実は成功していたというケースは珍しくありません。そこへ同じ指示を重ねると、<strong>二重に投稿される、二重に登録される</strong>といった実害が出ます。</p>
+<p>原則は、こうです。</p>
+<ul>
+<li>止まったように見えたら、まず<strong>結果がどこまで反映されたかを実際に見に行く</strong></li>
+<li>反映済みなら、やり直さずに残りだけを指定する</li>
+<li>分からないときは、いったん止めて確認する</li>
+</ul>
+<p>「たぶん失敗しているから、もう一度」は事故のもとです。</p>
+<h2 id="sec5">5. 再発を防ぐ4つの備え</h2>
+<ol>
+<li><strong>作業の記録を残す</strong>。いつ・何を・どこまでやったかが残っていれば、次に止まったとき10分で切り分けられます</li>
+<li><strong>確認ポイントを決めておく</strong>。全部終わってから見るのではなく、途中で1回だけ人が見る場所を決めます</li>
+<li><strong>止め方を共有しておく</strong>。おかしいと思った人が誰でも止められる状態にしておきます</li>
+<li><strong>前提は設定ファイルに集約する</strong>。毎回の言い直しをなくすことが、結果のばらつきを消す一番の近道です</li>
+</ol>
+<h2 id="sec6">6. 業種別の「効きどころ」</h2>
+<p><strong>士業・コンサル</strong>：期限のある書類を扱うため、途中確認を必ず1回入れる運用が向いています。</p>
+<p><strong>小売・EC</strong>：登録や更新の二重実行が売上データを狂わせます。やり直す前に実物を確認する習慣が最も効きます。</p>
+<p><strong>建設・工務店</strong>：現場ごとに条件が違うため、前提を設定ファイルに書き出しておく効果が大きい業種です。</p>
+<p><strong>教室・スクール</strong>：案内文の作成が多く、小分けにして依頼するだけで精度が安定します。</p>
+<h2 id="sec7">よくある質問</h2>
+<p><strong>専門の担当者がいなくても切り分けできますか。</strong></p>
+<p>できます。この記事の4項目は、すべて画面を見て確認できる範囲です。技術的な調査が必要になるのは、ここまでやって原因が残った場合だけです。</p>
+<p><strong>止まったまま気づかないのが不安です。</strong></p>
+<p>終わったら結果を決まった場所に書き出す運用にしておくと、書き出しがない日は止まったと分かります。</p>
+<p><strong>やり直すたびに結果が変わるのは故障ですか。</strong></p>
+<p>故障ではありません。前提の伝え方と依頼量の影響が大きいので、その2点を固定すると安定します。</p>
+<p><strong>一度うまくいった手順は、そのまま使い続けられますか。</strong></p>
+<p>使い続けられます。ただし、つなぎ先の許可の期限だけは定期的に切れるため、更新の担当と時期を決めておいてください。</p>
+<h2 id="sec8">まとめ</h2>
+<p>Claude Code の自動化が止まったとき、必要なのは技術的な知識ではなく<strong>確認の順番</strong>です。今日だけの不調か、許可が切れていないか、伝え方を変えていないか、一度に頼みすぎていないか。この4つを順に見れば、ほとんどの場面で原因にたどり着けます。</p>
+<p>そして最大の事故防止策は、<strong>やり直す前に実物を確認する</strong>という一行の習慣です。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「自動化が途中で止まる原因が分からない」「やり直してよいのか判断できない」という課題をお持ちの方に向けて、トラブルの切り分け手順づくりから、二重実行を防ぐ確認ルール、止まったときの復旧体制の設計までを、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Header scroll effect ---
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
+    if (!header) return;
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
@@ -69,22 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (href === '#') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
+      const target = document.getElementById(decodeURIComponent(href.slice(1)));
       if (target) {
-        const headerHeight = header.offsetHeight;
+        const headerHeight = header?.offsetHeight || 0;
         const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
         window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     });
   });
 
+  // Make the existing news disclosure available to keyboard users too.
+  document.querySelectorAll('.news-item[onclick]').forEach((item, index) => {
+    const detail = item.querySelector('.news-detail');
+    if (!detail) return;
+    detail.id = detail.id || `news-detail-${index}`;
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('aria-controls', detail.id);
+    item.setAttribute('aria-expanded', String(detail.classList.contains('open')));
+    item.addEventListener('click', () => item.setAttribute('aria-expanded', String(detail.classList.contains('open'))));
+    item.addEventListener('keydown', event => {
+      if (event.target === item && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault(); item.click();
+      }
+    });
+  });
+
   // --- Contact form ---
-  const GAS_URL = 'https://script.google.com/macros/s/AKfycby4Tn3NHhyIVd_3gQzGT6bfF2EP9Q6bZ2IMLET5BE_ttVZCLBlC8yz5JpXOS_JAE6pi/exec';
+  const CONTACT_URL = '/api/contact';
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      if (btn.disabled || !form.reportValidity()) return;
       btn.textContent = '送信中...';
       btn.disabled = true;
 
@@ -93,20 +114,22 @@ document.addEventListener('DOMContentLoaded', () => {
         company: form.querySelector('[name="company"]').value,
         email: form.querySelector('[name="email"]').value,
         category: form.querySelector('[name="category"]').value,
-        message: form.querySelector('[name="message"]').value
+        message: form.querySelector('[name="message"]').value,
+        website: form.querySelector('[name="website"]')?.value || ''
       };
 
       try {
-        await fetch(GAS_URL, {
+        const response = await fetch(CONTACT_URL, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
-        alert('お問い合わせありがとうございます。確認メールをお送りしましたのでご確認ください。');
+        if (!response.ok || (await response.json()).status !== 'ok') throw new Error('Submission not confirmed');
+        window.pisteTrack?.('generate_lead', { method: 'contact_form' });
+        alert('お問い合わせを受け付けました。担当者より順次ご連絡します。');
         form.reset();
       } catch (err) {
-        alert('送信に失敗しました。お手数ですがLINEからお問い合わせください。');
+        alert('送信完了を確認できませんでした。重複送信を避けるため、時間をおいて受信メールをご確認いただくか、LINEからお問い合わせください。');
       } finally {
         btn.textContent = '送信する';
         btn.disabled = false;

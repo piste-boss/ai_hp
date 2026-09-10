@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える！中小企業のための自動化コスト管理ガイド</title>
+<meta name="description" content="Claude Codeは使うモデルによって費用が10倍以上変わります。Opus・Sonnet・Haikuの違いと業務ごとの使い分け、月額を予測可能にする運用ルール、コストが膨らむ典型パターンと対策まで、非エンジニアの経営者・担当者向けに整理しました。">
+<meta name="keywords" content="Claude Code,運用コスト,モデル使い分け,Opus,Sonnet,Haiku,業務自動化,中小企業,AI導入,費用対効果">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える！中小企業のための自動化コスト管理ガイド</h1>
+
+<p class="lead">「AIで業務を自動化したいが、毎月いくらかかるのか読めないので踏み切れない」。中小企業の経営者から、権限や安全性の次に多く出てくるのがこの相談です。実は Claude Code には性能と価格の違う複数のモデルが用意されていて、どれを使うかで同じ作業の費用が10倍以上変わります。ここを押さえずに一番賢いモデルで全部やらせると、成果は出ても費用が跳ね上がります。この記事では、Anthropic公式のAIコーディングツール Claude Code のモデルの違いと、業務ごとの使い分け方、月額を予測可能にする運用ルールを、専門知識のない方にも分かる言葉で整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. なぜ同じ作業で費用が10倍変わるのか</a></li>
+<li><a href="#sec2">2. 3つのモデルの性格と得意分野</a></li>
+<li><a href="#sec3">3. 業務別・モデルの選び方早見表</a></li>
+<li><a href="#sec4">4. 費用が膨らむ典型パターン4つ</a></li>
+<li><a href="#sec5">5. 月額を予測可能にする5つの運用ルール</a></li>
+<li><a href="#sec6">6. 定額プランと従量課金、どちらを選ぶか</a></li>
+<li><a href="#sec7">7. モデル選定を社内に定着させる4手順</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. なぜ同じ作業で費用が10倍変わるのか</h2>
+<p>Claude Code の利用料は、扱った文章量に応じた従量制が基本です。読み込んだ資料の量と、生成した文章の量。この2つの合計に単価をかけたものが費用になります。</p>
+<p>ここで効いてくるのが<strong>モデルごとの単価差</strong>です。Claude には、最も高性能な Opus、バランス型の Sonnet、軽量で高速な Haiku という系統があり、Opus と Haiku では同じ文章量あたりの単価が大きく開きます。つまり「日報の体裁を整えるだけ」の作業を最上位モデルにやらせると、必要のない性能に費用を払っていることになります。</p>
+<p>逆に、複雑な業務フローの設計や、複数の資料を突き合わせて判断が必要な作業を軽量モデルにやらせると、やり直しが増えて結局は割高になります。<strong>安いモデルを使うことが節約ではなく、作業に見合ったモデルを選ぶことが節約</strong>だという点が出発点です。</p>
+
+<h2 id="sec2">2. 3つのモデルの性格と得意分野</h2>
+<table><thead><tr><th>系統</th><th>性格</th><th>向いている作業</th></tr></thead><tbody>
+<tr><td>Opus</td><td>最も賢く、長い文脈を保ったまま複雑な判断ができる。単価は最も高い</td><td>業務フロー全体の設計、複数資料を横断する分析、失敗が許されない重要作業</td></tr>
+<tr><td>Sonnet</td><td>実務の主力。多くの業務で十分な精度と、扱いやすい単価のバランス</td><td>記事や提案書の作成、データ集計、日常的な自動処理の大半</td></tr>
+<tr><td>Haiku</td><td>軽量・高速・低単価。単純な判断や定型処理を大量にこなすのが得意</td><td>分類・仕分け、定型文の生成、大量ファイルの一次処理</td></tr>
+</tbody></table>
+<p>2026年に入ってからは、上位モデルにも長文をまとめて扱える大容量の枠が用意され、軽量モデル側も「補助役として大量に走らせる」用途を想定した構成が整ってきました。中小企業の実務では、<strong>Sonnet を基準にして、重い判断だけ Opus、単純作業は Haiku</strong>という三層構成が最も費用対効果が良くなります。</p>
+<h3>「一番賢いモデルを常用する」が損になる理由</h3>
+<p>最上位モデルは、答えを出すまでに考える量そのものが多くなります。単価が高いうえに扱う文章量も増えるため、費用は単純な単価差以上に開きます。毎日回す定型業務にこれを使い続けると、月額は想定の数倍になります。</p>
+
+<h2 id="sec3">3. 業務別・モデルの選び方早見表</h2>
+<table><thead><tr><th>業務</th><th>推奨</th><th>理由</th></tr></thead><tbody>
+<tr><td>自動化の仕組みを最初に設計する</td><td>Opus</td><td>設計を誤ると後の全作業に響く。ここだけは上位モデルで固める</td></tr>
+<tr><td>ブログ記事・提案書の下書き</td><td>Sonnet</td><td>文章品質と単価の釣り合いが最も良い領域</td></tr>
+<tr><td>売上データの集計・グラフ化</td><td>Sonnet</td><td>計算と表現の両方が必要。軽量モデルだと取りこぼしが出やすい</td></tr>
+<tr><td>受信した連絡の重要度仕分け</td><td>Haiku</td><td>判断基準が単純で件数が多い。速度と単価が効く</td></tr>
+<tr><td>定型の返信文づくり</td><td>Haiku</td><td>型が決まっている作業。上位モデルの性能は不要</td></tr>
+<tr><td>大量ファイルの名前付け・整理</td><td>Haiku</td><td>件数が多いほど単価差が効く典型例</td></tr>
+<tr><td>契約書・見積の内容確認</td><td>Opus</td><td>見落としの損失が大きい。費用より精度を優先する場面</td></tr>
+<tr><td>毎日の日報まとめ</td><td>Sonnet または Haiku</td><td>体裁を整えるだけなら軽量で十分。要約に含みを求めるなら中位へ</td></tr>
+</tbody></table>
+<p>迷ったときの原則はシンプルです。<strong>間違えたときに取り返しがつかない作業ほど上位モデル、件数が多く型が決まっている作業ほど軽量モデル</strong>。この2軸で仕分ければ、ほとんどの業務は自然に割り振れます。</p>
+
+<h2 id="sec4">4. 費用が膨らむ典型パターン4つ</h2>
+<h3>パターン1：会話を延々と続けてしまう</h3>
+<p>同じやり取りを続けると、それまでの会話全体を毎回読み直すことになり、後半になるほど1回あたりの費用が増えます。業務が一区切りついたら会話を切り、新しく始めるだけで費用は下がります。</p>
+<h3>パターン2：不要な資料まで読み込ませる</h3>
+<p>フォルダ全体を対象にすると、関係のないファイルまで読み込まれます。作業対象を必要な範囲に限定しておくことは、安全対策であると同時にコスト対策でもあります。</p>
+<h3>パターン3：定型作業に上位モデルを使い続ける</h3>
+<p>最初の設計時に上位モデルを使ったまま、日々の運用も同じ設定で回してしまうケースです。設計が終わったら運用用のモデルに切り替える、という手順を運用ルールに入れておきます。</p>
+<h3>パターン4：自動実行の頻度が過剰</h3>
+<p>「1時間ごとに確認」と設定したものの、実際は1日1回で十分だった、という例は珍しくありません。頻度は業務の実態に合わせて後から下げられます。まず粗く始めて、必要なら上げる順番が安全です。</p>
+
+<h2 id="sec5">5. 月額を予測可能にする5つの運用ルール</h2>
+<ol>
+<li><strong>業務ごとに使うモデルを決めて書き出す</strong>：口頭で決めても運用では崩れます。「日報は軽量モデル、提案書は中位モデル」と一覧にしておきます。</li>
+<li><strong>作業対象のフォルダを限定する</strong>：読み込む範囲が決まっていれば、費用の上限も見えます。</li>
+<li><strong>1業務が終わったら会話を切る</strong>：長い会話を引きずらないだけで、月額は目に見えて変わります。</li>
+<li><strong>月初に前月の利用状況を確認する</strong>：どの業務にいくらかかったかを見る習慣をつけると、翌月の調整が具体的になります。</li>
+<li><strong>上限額を決めておく</strong>：想定を超えたら止まる仕組みを先に用意します。「気づいたら想定の3倍」を防ぐ最後の安全装置です。</li>
+</ol>
+
+<h2 id="sec6">6. 定額プランと従量課金、どちらを選ぶか</h2>
+<table><thead><tr><th>使い方</th><th>向いている契約</th><th>目安</th></tr></thead><tbody>
+<tr><td>毎日まとまった時間、対話しながら使う</td><td>定額プラン</td><td>1人が業務時間の多くを AI と進める場合</td></tr>
+<tr><td>決まった処理を自動で回すだけ</td><td>従量課金</td><td>夜間に定型処理を走らせるだけ、といった用途</td></tr>
+<tr><td>両方を並行して使う</td><td>併用</td><td>対話は定額、自動処理は従量で分けると読みやすい</td></tr>
+</tbody></table>
+<p>少人数の会社では、まず従量課金で1か月試し、実際の金額を見てから定額プランを検討する順番が安全です。使っていない機能に先に払う必要はありません。</p>
+
+<h2 id="sec7">7. モデル選定を社内に定着させる4手順</h2>
+<p>決めたモデルの割り振りは、書いておかないと必ず崩れます。Claude Code には、業務ごとの決めごとをあらかじめ登録しておく仕組みがあるため、そこに組み込んでしまうのが確実です。</p>
+<ol>
+<li><strong>業務名とモデルの対応表をつくる</strong>：「日報の整形は軽量モデル」「提案書の下書きは中位モデル」というように一覧の形にします。3行から始めて構いません。</li>
+<li><strong>その対応表を作業ルールとして登録する</strong>：Claude Code には、繰り返し使う指示や社内ルールを記憶させておく仕組みがあります。ここに対応表を入れておけば、毎回モデルを指定し直す必要がなくなり、担当者が変わっても同じ運用が続きます。</li>
+<li><strong>定型業務は呼び出し1行にまとめる</strong>：よく使う業務は、手順とモデル指定をまとめて1つの呼び出しにできます。「日報まとめ」と打つだけで決めたモデルで決めた手順が走る状態にしておけば、選び間違いそのものが起きません。</li>
+<li><strong>月に一度だけ見直す</strong>：やり直しが多い業務は一段上のモデルへ、余裕がありすぎる業務は一段下へ。毎日調整しようとすると続きません。</li>
+</ol>
+<p>この4手順まで済ませて、はじめて「決めたつもり」が「決まっている」状態になります。</p>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>モデルの切り替えは難しい操作が必要ですか。</strong></p>
+<p>設定で切り替えるだけで、専門知識は必要ありません。業務ごとにあらかじめ決めておけば、日々の運用で迷うこともなくなります。</p>
+<p><strong>軽量モデルだと品質が落ちませんか。</strong></p>
+<p>型の決まった作業であれば、体感できる差はほとんど出ません。差が出るのは、含みを読んだり複数の情報を突き合わせたりする作業です。そこだけ上位モデルに任せれば品質は保てます。</p>
+<p><strong>小規模でも導入する価値はありますか。</strong></p>
+<p>一人社長や数名の会社ほど、1人が抱える業務の幅が広く、自動化の効果は大きく出ます。まず1業務から始めて、費用と効果を実測してから広げる進め方をおすすめします。</p>
+<p><strong>途中で費用が想定を超えたらどうすればよいですか。</strong></p>
+<p>上限額を設定しておけば、超えた時点で止まります。そのうえで、会話の長さ・読み込む範囲・実行頻度の3つを見直せば、たいていは想定内に戻せます。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>Claude Code の運用コストは、使い方ではなく<strong>選び方</strong>で決まります。最上位モデルで全部やらせれば費用は膨らみ、軽量モデルで全部やらせればやり直しが増えます。取り返しのつかない作業は上位モデル、件数の多い定型作業は軽量モデル。この仕分けができていれば、同じ成果を出しながら月額を大きく下げられます。</p>
+<p>そして、費用を読めるようにするために必要なのは、難しい設定ではありません。業務ごとに使うモデルを書き出し、作業範囲を限定し、上限額を決める。この3つだけで、月額は十分に予測可能になります。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、お気軽にご相談ください。導入サポート 税込3,000円で、御社の業務に合わせた自動化の第一歩をいっしょに設計します。</p>
+<p>これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「毎月いくらかかるのか読めない」という不安をお持ちの方に向けて、業務ごとのモデル選定から作業範囲の設定、費用の見積もりまで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

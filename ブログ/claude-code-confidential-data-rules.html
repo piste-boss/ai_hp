@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド</title>
+<meta name="description" content="Claude Codeに渡してよい情報と止めたほうがよい情報の線引きを解説。手元で動く仕組みの正しい理解、情報の3分類、伏せて渡す3つの工夫、社内で決める4行のルールを中小企業・一人社長向けに整理します。">
+<meta name="keywords" content="Claude Code,機密情報,個人情報,情報管理,中小企業,一人社長,業務自動化,社内ルール,情報の取り扱い">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド</h1>
+
+<p class="lead">Claude Code を業務に入れるとき、経営者から最も多く受ける質問が「うちの顧客名簿を読ませても大丈夫なのか」というものです。この判断を各自の感覚に委ねていると、必ず誰かが一番危ない情報を渡します。この記事では、専門知識がなくても運用できる<strong>情報の線引き</strong>と、社内で共有する4行のルールを整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 「決めていない」が一番危ない</a></li>
+<li><a href="#sec2">2. まず正しく知る：手元で動くが、内容は送られる</a></li>
+<li><a href="#sec3">3. 情報を3つに分ける</a></li>
+<li><a href="#sec4">4. 渡さずに仕事を進める3つの工夫</a></li>
+<li><a href="#sec5">5. 社内で決める4行のルール</a></li>
+<li><a href="#sec6">6. 業種別の注意どころ</a></li>
+<li><a href="#sec7">よくある質問</a></li>
+<li><a href="#sec8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 「決めていない」が一番危ない</h2>
+<p>情報の取り扱いで事故が起きるのは、危険な情報を渡したときよりも、<strong>渡してよいかどうかを誰も決めていないとき</strong>です。決まっていなければ、判断はその場の忙しさに左右されます。急いでいる日ほど「とりあえず全部読ませて要約させよう」となり、名簿がまるごと処理対象に含まれてしまいます。</p>
+<p>この記事で目指すのは、社員が迷ったときに5秒で判断できる状態です。難しい規程は要りません。分類は3つ、決めごとは4行で足ります。</p>
+
+<h2 id="sec2">2. まず正しく知る：手元で動くが、内容は送られる</h2>
+<p>ここを誤解したまま運用している会社が非常に多いため、最初にはっきりさせます。</p>
+<p>Claude Code は自分のパソコンの中で動く道具です。ファイルを開く、書き換える、フォルダを整理するといった<strong>操作は手元で行われます</strong>。ここまでは事実です。</p>
+<p>しかし、AIが内容を理解して考えるためには、<strong>読み取った文章はAIの処理のために外部へ送られます</strong>。つまり「手元のアプリだから外に出ない」というのは誤りです。逆に「常に全部が送られている」というのも誤りで、送られるのは実際に読ませたファイルや、指示文に書いた内容だけです。</p>
+<blockquote>正しい理解は「開くかどうかは自分で決められるが、開いた内容は処理のために送られる」。だからこそ、<strong>何を開かせるかの線引きが要になります。</strong></blockquote>
+<p>なお、法人向けの契約形態では、送られた内容がAIの学習に使われない条件で提供されるのが一般的です。ただし条件は提供元やプランによって異なるため、自社が使っているプランの規約は一度確認しておいてください。</p>
+
+<h2 id="sec3">3. 情報を3つに分ける</h2>
+<p>難しい分類は続きません。次の3つで十分です。</p>
+<table>
+<tr><th>区分</th><th>中身の例</th><th>扱い</th></tr>
+<tr><td>そのまま渡してよい</td><td>社内の議事メモ、商品説明、社外に公開済みの資料、書式のひな形</td><td>制限なし</td></tr>
+<tr><td>形を変えれば渡してよい</td><td>顧客名簿、取引先ごとの売上、従業員の勤務記録</td><td>氏名や住所を伏せる、記号に置き換える</td></tr>
+<tr><td>渡さない</td><td>他社から預かった秘密保持の対象、口座や決済の認証情報、採用選考や健康に関する記録</td><td>人が扱う</td></tr>
+</table>
+<p>迷ったときの判断は1つだけです。<strong>その情報が外に出たとき、謝りに行く相手がいるかどうか。</strong>いるなら「形を変えれば渡してよい」以下に置きます。自社が困るだけなら1段目で構いません。</p>
+
+<h2 id="sec4">4. 渡さずに仕事を進める3つの工夫</h2>
+<p>「渡さない」と決めた情報が絡む作業でも、やり方を変えれば自動化できます。</p>
+<h3>工夫1：伏せる</h3>
+<p>氏名を「顧客A」「顧客B」に置き換えたうえで集計や分類を任せます。売上の傾向を知りたいだけなら、氏名は最初から不要です。</p>
+<h3>工夫2：範囲を絞る</h3>
+<p>フォルダごと読ませず、その作業に必要な列や期間だけを別ファイルに切り出して渡します。「今月の件数と金額だけ」の1枚があれば足りる作業は多いものです。</p>
+<h3>工夫3：手前で止める</h3>
+<p>下書きの作成までを任せ、実際の名簿と突き合わせる工程は人が行います。分けてしまえば、危ない情報は最後まで手元から出ません。</p>
+<p>この3つで、実務のほとんどは無理なく回ります。「渡さない情報があるから自動化できない」という結論になったときは、たいてい作業の切り分けが足りていません。</p>
+
+<h2 id="sec5">5. 社内で決める4行のルール</h2>
+<p>決めごとは、口頭ではなく文字にします。Claude Code には、作業のたびに必ず読ませる決めごとのファイルを置く仕組みがあります。そこに次の4行を書いておくだけで、判断のばらつきは大きく減ります。</p>
+<blockquote>
+1. 顧客と従業員の氏名・住所が入ったファイルは、伏せてから渡すこと<br>
+2. 他社から預かった資料と、支払いに関わる認証情報は渡さないこと<br>
+3. 迷ったときは進めず、必ず人に確認すること<br>
+4. 判断に迷った事例は、その日のうちにこのファイルへ追記すること
+</blockquote>
+<p>4行目が要点です。最初から完璧なルールは作れませんが、迷った事例を書き足していけば、3か月で自社に合ったものになります。</p>
+
+<h2 id="sec6">6. 業種別の注意どころ</h2>
+<p><strong>士業・コンサル</strong>：他社から預かった資料が業務の中心です。自社作成の資料と、預かり物を保管場所ごと分けるのが先決です。</p>
+<p><strong>美容室・治療院</strong>：施術記録には健康に関する情報が含まれます。集計は来店回数と金額だけを切り出して行います。</p>
+<p><strong>小売・EC</strong>：注文データには住所が含まれます。商品分析には商品名と数量だけを渡せば足ります。</p>
+<p><strong>建設・工務店</strong>：現場写真に第三者の顔や表札が写り込みます。仕分けを任せる前に対象範囲を決めます。</p>
+<p><strong>教室・スクール</strong>：生徒の名簿は保護者の情報も伴います。連絡文の作成は下書きまでにし、宛先の差し込みは人が行います。</p>
+
+<h2 id="sec7">よくある質問</h2>
+<p><strong>結局、顧客名簿は読ませてよいのですか。</strong></p>
+<p>氏名と住所を伏せれば実務上は問題ありません。伏せずに渡す必要が本当にあるのかを、まず疑ってください。ほとんどの集計作業では不要です。</p>
+<p><strong>社員がルールを守らない気がします。</strong></p>
+<p>禁止項目を増やすほど守られなくなります。4行に絞り、作業のたびに自動で読み込まれる場所へ置いてください。人の記憶ではなくファイルに持たせるのが要点です。</p>
+<p><strong>すでに名簿をそのまま読ませてしまいました。</strong></p>
+<p>まず何をいつ渡したかを記録に残し、契約上の制限がある資料が含まれていないかを確認します。そのうえで今日から線引きを決めれば十分です。慌てて過去分をたどるより、再発しない形を作るほうが優先されます。</p>
+<p><strong>専門の担当者がいなくても運用できますか。</strong></p>
+<p>できます。この記事の分類は3つ、決めごとは4行です。判断に迷った事例を書き足す担当を1人決めておけば、それだけで回ります。</p>
+
+<h2 id="sec8">まとめ</h2>
+<p>危ないのは、機密情報そのものではなく<strong>線引きがない状態</strong>です。まず「手元で動くが、開いた内容は処理のために送られる」という事実を正しく共有し、情報を3つに分け、渡さない情報は伏せる・絞る・手前で止めるの3つで迂回する。</p>
+<p>そして決めた線引きは4行にまとめ、毎回読み込まれるファイルに置く。この形にしておけば、忙しい日でも判断がぶれません。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「顧客情報を扱う業務を自動化したいが不安がある」「社内で共有できるルールの形が分からない」という課題をお持ちの方に向けて、情報の線引きの決め方から、決めごとファイルの書き方、運用の定着までを、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った安全な自動化をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

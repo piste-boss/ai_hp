@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで増やした自動化を棚卸しする方法 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,棚卸し,業務自動化,運用見直し,中小企業,一人社長,自動化 整理,運用コスト">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで増やした自動化を棚卸しする方法">
+  <meta property="og:description" content="Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-12T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="Claude Codeの使い方">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで増やした自動化を棚卸しする方法">
+  <meta name="twitter:description" content="Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html"},"url":"https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html","headline":"Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド","alternativeHeadline":"Claude Codeで増やした自動化を棚卸しする方法","description":"Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg","width":1200,"height":800},"datePublished":"2026-08-12T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"Claude Codeの使い方","keywords":["Claude Code","棚卸し","業務自動化","運用見直し","中小企業","一人社長","自動化 整理","運用コスト"],"wordCount":5786,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude Codeの使い方","item":"https://www.piste-ai.com/blog/category-claude-code-basics.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで増やした自動化を棚卸しする方法","item":"https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html#faq","mainEntity":[{"@type":"Question","name":"止めたあとに「やっぱり必要だった」となったら、作り直しですか。","acceptedAnswer":{"@type":"Answer","text":"設定を消さずに止めていれば、動作を再開するだけで戻ります。完全に消してしまった場合でも、棚卸しの記録に「何をしていたか」の1文が残っていれば、同じものをもう一度作るのは初回よりずっと早く済みます。記録を残す意味はここにあります。"}},{"@type":"Question","name":"自動化がいくつあるかも把握できていません。どこから手をつければよいですか。","acceptedAnswer":{"@type":"Answer","text":"思い出せるものだけで構いませんので、5つ書き出すところから始めてください。全部を洗い出そうとすると始められません。書き出した5つを確認していく途中で「そういえばあれもある」と芋づる式に出てきます。最初から完全な一覧を目指す必要はありません。"}},{"@type":"Question","name":"使っていない自動化を残しておくと、費用はどのくらい変わりますか。","acceptedAnswer":{"@type":"Answer","text":"金額は使い方によって幅がありますが（利用料の考え方はモデル選択とコスト最適化を参照）、実務上より大きいのは金額以外のコストです。全体が見えないと新しい自動化を足すのが怖くなり、担当者が代わるたびに説明する対象が増えます。止める判断ができないこと自体が、次の一歩を止めてしまう点が本当の負担です。"}},{"@type":"Question","name":"棚卸しの作業自体を Claude Code に任せられますか。","acceptedAnswer":{"@type":"Answer","text":"一覧づくりと、出力先が最近開かれているかの確認までは任せられます。ただし止める・残すの判断は人が決めてください。使っている人がいるかどうかは、社内の事情を知らないと分かりません。作業は任せて、判断は持つ。この線引きが安全です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-claude-code-basics.html">Claude Codeの使い方</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-12">公開日：2026年8月12日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-automation-inventory-cleanup.webp" alt="Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Claude Code の自動化が増えすぎて全体像が見えなくなった中小企業</li><li><strong>できるようになること：</strong>1行7項目の一覧を作り、出口の確認と4つの基準で止める・残すを判断し、3ステップで安全に止められる</li><li><strong>必要なもの：</strong>Claude Code の設定ファイル一式と、年2回2時間程度の棚卸し時間</li></ul></div>
+<!-- /seo:points -->
+<p class="lead"><a href="https://code.claude.com/docs/ja/overview" target="_blank" rel="noopener">Claude Code</a> を使い始めて半年、1年と経つと、たいていの会社で同じことが起きます。便利だからと自動化を1つ、また1つと足していくうちに、いつの間にか全体像が分からなくなる。「これ、まだ動いてるんだっけ」「誰かが使ってる気もするけど、聞いたことがない」。この記事では、<strong>増えすぎた自動化を棚卸しして、使われていないものを見つけて安全に止めるまでの手順</strong>を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">自動化は「増える」ようにできている</a></li>
+<li><a href="#s2">まず一覧をつくる。1行7項目でよい</a></li>
+<li><a href="#s3">自動化が本当に使われているかはどう見分けますか？</a></li>
+<li><a href="#s4">止める・残すを決める4つの基準</a></li>
+<li><a href="#s5">使われていない自動化はどう止めれば安全ですか？</a></li>
+<li><a href="#s6">棚卸しは年2回でちょうどいい</a></li>
+<li><a href="#s7">よくある質問</a></li>
+<li><a href="#cta">Claude Code導入サポートのご案内</a></li>
+</ul>
+</div>
+
+<h2 id="s1">自動化は「増える」ようにできている</h2>
+
+<p>まず前提として、自動化が増えるのは失敗ではありません。むしろ、うまくいっている証拠です。1つ作って効果が出たから、もう1つ作る。この繰り返しでしか自動化は広がりません。</p>
+
+<p>ただし、作るときと使い続けるときでは、かかる手間の性質が違います。作るのは1回で終わりますが、<strong>「これは何のためのものだったか」を覚えておくコストは、増やした数だけ毎日かかり続けます</strong>。3つなら覚えていられます。10を超えたあたりから怪しくなり、20を超えると、作った本人でも全部は言えなくなります。</p>
+
+<p>そして厄介なのは、使われなくなった自動化が自分から手を挙げてくれないことです。業務のほうが先に変わっても、自動化は黙って動き続けます。誰も見ていないファイルを毎朝律儀に作り続ける、といったことが平気で起こります。</p>
+
+<blockquote>実際にご相談を受けた例では、月末の集計を自動化したあとに会計ソフトを乗り換えたにもかかわらず、旧ソフト向けの集計が9か月動き続けていました。出力先のフォルダを誰も開いていなかったため、止まっていないことに誰も気づかなかった、というものです。</blockquote>
+
+<p>つまり棚卸しは、散らかったから片付けるという後ろ向きの作業ではありません。<strong>次の自動化を安心して増やすための、前向きな準備</strong>です。</p>
+
+<h2 id="s2">まず一覧をつくる。1行7項目でよい</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-automation-inventory-cleanup-01.webp" alt="まず一覧をつくる。1行7項目でよい" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>棚卸しの最初の一歩は、全部を1枚に並べることです。頭の中にあるうちは絶対に判断できません。表計算ソフトでも、テキストファイルでも構いません。1つの自動化につき1行、次の7項目を埋めます。</p>
+
+<table>
+<tr><th>項目</th><th>書く内容</th><th>記入例</th></tr>
+<tr><td>名前</td><td>社内で呼んでいる呼び名</td><td>月次の請求書まとめ</td></tr>
+<tr><td>何をするか</td><td>1文。専門用語なし</td><td>前月分の請求書PDFを読み取り、一覧表に追記する</td></tr>
+<tr><td>いつ動くか</td><td>頻度とタイミング</td><td>毎月1日の朝</td></tr>
+<tr><td>誰のためか</td><td>成果物を実際に見る人</td><td>経理担当と社長</td></tr>
+<tr><td>出口</td><td>結果がどこに出るか</td><td>共有フォルダの請求一覧ファイル</td></tr>
+<tr><td>最後に使った日</td><td>分かる範囲で。不明なら空欄</td><td>不明</td></tr>
+<tr><td>作った人</td><td>担当者名</td><td>山田</td></tr>
+</table>
+
+<p>ここで大事なのは、<strong>完璧に埋めようとしないこと</strong>です。「最後に使った日」が分からないのはよくあることで、むしろ<strong>空欄であること自体が最初の手がかり</strong>になります。分からないものが多いほど、棚卸しの効果は大きくなります。</p>
+
+<h3>一覧をつくる作業自体も Claude Code に手伝ってもらえる</h3>
+
+<p>自動化が10も20もあると、一覧をつくるだけで半日かかります。ここは Claude Code に頼ってしまって構いません。日本語でこう頼みます。</p>
+
+<blockquote>この中にある自動化の設定ファイルを全部確認して、それぞれ「名前」「何をするか」「いつ動くか」「結果がどこに出るか」の4つを表にまとめてください。分からない項目は空欄のままにして、推測で埋めないでください。</blockquote>
+
+<p><strong>「推測で埋めないでください」を必ず添える</strong>のがポイントです。これを言わないと、それらしい説明が補われてしまい、棚卸しの意味がなくなります。空欄が残っている表のほうが、この作業では価値があります。</p>
+
+<h2 id="s3">自動化が本当に使われているかはどう見分けますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-automation-inventory-cleanup-02.webp" alt="使われているかは「出口」で見分ける" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>一覧ができたら、次は1つずつ「本当に使われているか」を確かめます。ここで多くの方がつまずくのは、<strong>「動いているか」と「使われているか」を混同する</strong>ことです。この2つはまったく別です。毎朝きちんと動いていても、誰も結果を見ていなければ、それは使われていません。</p>
+
+<p>見分け方は単純で、動いている側ではなく<strong>出口の側を見ます</strong>。</p>
+
+<table>
+<tr><th>確認すること</th><th>見方</th><th>判断</th></tr>
+<tr><td>出力ファイルが開かれているか</td><td>ファイルの更新日ではなく、共有フォルダの閲覧履歴やアクセス記録を見る</td><td>3か月開かれていなければ、使われていない可能性が高い</td></tr>
+<tr><td>結果が次の作業に流れているか</td><td>その出力を元に、誰かが何かをしているか</td><td>流れていなければ、作って終わりになっている</td></tr>
+<tr><td>止まったら誰か困るか</td><td>担当者に「これ来週から止めますが大丈夫ですか」と聞く</td><td>即答で困ると言われなければ、要検討</td></tr>
+<tr><td>エラーが放置されていないか</td><td>失敗の通知が来ていて、誰も対応していないか</td><td>放置されているなら、実質すでに使われていない</td></tr>
+</table>
+
+<p>4つ目は特に分かりやすい判定になります。<strong>エラーが出ているのに誰も困っていないなら、その自動化はもう役目を終えています</strong>。困る人がいれば、必ず誰かが言ってくるからです。</p>
+
+<h3>「念のため残しておきたい」への向き合い方</h3>
+
+<p>棚卸しで必ず出てくるのが「使ってないけど、念のため残しておきたい」という声です。気持ちはよく分かりますが、ここは一度立ち止まる価値があります。</p>
+
+<p>残すこと自体にコストがあるからです。動き続ける限り、月々の利用料がかかり、他の自動化を直すときに「これは何だっけ」と毎回考える対象になり、担当者が代わるたびに引き継ぎ資料に載り続けます。<strong>「念のため」は無料ではありません</strong>。</p>
+
+<p>おすすめは、消すか残すかの二択にしないことです。<strong>「止めるが、消さない」</strong>という中間を用意します。動作は停止して、設定だけ残しておく。これなら、必要になったときに戻せるうえ、日々のコストはゼロになります。</p>
+
+<h2 id="s4">止める・残すを決める4つの基準</h2>
+
+<p>ここまでの情報が揃ったら、判断に入ります。迷わないように、基準を4つに絞ります。上から順に当てはめて、最初に当たったところで決めます。</p>
+
+<table>
+<tr><th>順番</th><th>基準</th><th>当てはまったら</th></tr>
+<tr><td>1</td><td>結果を見ている人が今もいる</td><td><strong>残す</strong>（他の基準は見ない）</td></tr>
+<tr><td>2</td><td>法令や契約で記録が必要</td><td><strong>残す</strong>（使用頻度は関係ない）</td></tr>
+<tr><td>3</td><td>元になる業務そのものが無くなった</td><td><strong>止めて、消す</strong></td></tr>
+<tr><td>4</td><td>上の3つに当てはまらない</td><td><strong>止めるが、消さない</strong></td></tr>
+</table>
+
+<p>この順番には理由があります。1番を最優先にするのは、<strong>実際に使っている人が1人でもいるものを止めてしまうのが、棚卸しで最も損害が大きい失敗</strong>だからです。他がどれだけ非効率でも、使われているなら残す。ここは機械的に扱って構いません。</p>
+
+<p>2番の法令・契約絡みは、頻度で判断してはいけない領域です。年に1度しか見なくても、必要なものは必要です。電子帳簿保存法対応のように「求められたときに出せる状態を保つ」類のものは、ここに入ります。</p>
+
+<p>3番と4番の違いは、<strong>業務が無くなったのか、たまたま使われていないだけなのか</strong>です。会計ソフトを乗り換えて旧ソフト向けの処理が不要になったなら3番、繁忙期だけ使う集計がオフシーズンで止まっているだけなら4番になります。判断に迷ったら4番にしておけば安全です。</p>
+
+<h2 id="s5">使われていない自動化はどう止めれば安全ですか？</h2>
+
+<p>止めると決めたあと、いきなり削除するのは避けてください。順番を守れば、失敗しても戻せます。</p>
+
+<h3>ステップ1: 止める前に、直近の結果を保存する</h3>
+
+<p>その自動化が最後に出した成果物を、1回分だけ別の場所にコピーしておきます。後から「あの形式のファイルがもう一度必要」となったときに、作り直さずに済みます。1分で終わる作業ですが、これを飛ばすと後で困ることがあります。</p>
+
+<h3>ステップ2: 動作を止めて、2週間待つ</h3>
+
+<p>設定は消さず、動作だけを止めます。そして<strong>2週間そのままにします</strong>。この待ち時間が重要で、月次の処理なら1か月待ちます。誰かが困れば、この期間に必ず声が上がります。声が上がったら戻せばよく、これが一番確実な確認方法です。</p>
+
+<p>止めるときは、社内に一言伝えておきます。「来週から◯◯の自動化を止めます。困る方は教えてください」の1行で十分です。<strong>黙って止めるのが一番よくない</strong>やり方で、後から発覚したときに信頼を損ないます。</p>
+
+<h3>ステップ3: 誰も困らなければ、記録を残して整理する</h3>
+
+<p>待ち期間を過ぎて何も起きなければ、整理して構いません。このとき、消したという記録だけは残します。</p>
+
+<ul>
+<li>止めた日</li>
+<li>止めたもの（名前と、何をしていたか1文）</li>
+<li>止めた理由</li>
+<li>復活させたい場合の相談先</li>
+</ul>
+
+<p>この4行があるだけで、半年後に「そういえば昔こういうのがあった気がする」となったときに、探す手間がなくなります。棚卸しの一覧表に「停止済み」の欄を足して、そこに移しておくのが分かりやすいでしょう。</p>
+
+<h2 id="s6">棚卸しは年2回でちょうどいい</h2>
+
+<p>棚卸しを1回やって終わりにすると、1年後にまた同じ状態に戻ります。かといって毎月やるのは重すぎます。<strong>年2回</strong>が、多くの中小企業にとって続けやすい頻度です。</p>
+
+<table>
+<tr><th>時期</th><th>やること</th><th>所要時間の目安</th></tr>
+<tr><td>期の変わり目</td><td>一覧の更新と、使われているかの確認</td><td>2時間程度</td></tr>
+<tr><td>半年後</td><td>前回の判断の見直しと、新しく増えた分の追加</td><td>1時間程度</td></tr>
+</table>
+
+<p>もう1つ、棚卸しを楽にする習慣があります。<strong>新しく自動化を作ったら、その場で一覧に1行足す</strong>。作った直後なら1分で書けますし、半年後に思い出しながら書くより正確です。<a href="claude-code-automation-effect-tracking.html">削減時間の記録</a>と同じ表にしておくと、棚卸しと効果測定を一度に済ませられます。棚卸しが大変になるのは、たいてい記録を後回しにしたことが原因です。</p>
+
+<h3>一人社長でも棚卸しは効く</h3>
+
+<p>「社内に自分しかいないから、全部把握している」と思われるかもしれません。ですが、一人だからこそ効きます。誰も指摘してくれないぶん、不要な自動化が動き続けても気づく機会がないからです。</p>
+
+<p>一人の場合は、判断基準の1番を<strong>「直近3か月で、その結果を自分が実際に見たか」</strong>に置き換えてください。見ていないなら止める。これだけで十分に機能します。</p>
+
+<h2 id="s7">よくある質問</h2>
+
+<h3>Q. 止めたあとに「やっぱり必要だった」となったら、作り直しですか。</h3>
+<p>設定を消さずに止めていれば、動作を再開するだけで戻ります。完全に消してしまった場合でも、棚卸しの記録に「何をしていたか」の1文が残っていれば、同じものをもう一度作るのは初回よりずっと早く済みます。記録を残す意味はここにあります。</p>
+
+<h3>Q. 自動化がいくつあるかも把握できていません。どこから手をつければよいですか。</h3>
+<p>思い出せるものだけで構いませんので、5つ書き出すところから始めてください。全部を洗い出そうとすると始められません。書き出した5つを確認していく途中で「そういえばあれもある」と芋づる式に出てきます。最初から完全な一覧を目指す必要はありません。</p>
+
+<h3>Q. 使っていない自動化を残しておくと、費用はどのくらい変わりますか。</h3>
+<p>金額は使い方によって幅がありますが（利用料の考え方は<a href="claude-code-model-cost-optimization.html">モデル選択とコスト最適化</a>を参照）、実務上より大きいのは金額以外のコストです。全体が見えないと新しい自動化を足すのが怖くなり、担当者が代わるたびに説明する対象が増えます。<strong>止める判断ができないこと自体が、次の一歩を止めてしまう</strong>点が本当の負担です。</p>
+
+<h3>Q. 棚卸しの作業自体を Claude Code に任せられますか。</h3>
+<p>一覧づくりと、出力先が最近開かれているかの確認までは任せられます。ただし<strong>止める・残すの判断は人が決めてください</strong>。使っている人がいるかどうかは、社内の事情を知らないと分かりません。作業は任せて、判断は持つ。この線引きが安全です。</p>
+
+<h2>まとめ</h2>
+
+<p>Claude Code で増やした自動化を棚卸しするために、この記事でお伝えしたことを整理します。</p>
+
+<ul>
+<li>自動化が増えるのは失敗ではなく、<strong>うまくいっている証拠</strong>。棚卸しは次を増やすための準備</li>
+<li>まず<strong>1行7項目の一覧</strong>をつくる。空欄はそのままでよく、空欄自体が手がかりになる</li>
+<li>「動いているか」ではなく<strong>「出口が見られているか」</strong>で使用状況を判断する</li>
+<li>判断基準は<strong>4つを上から順に</strong>。使っている人がいれば無条件で残す</li>
+<li>止め方は<strong>保存 → 2週間待つ → 記録して整理</strong>の3ステップ。黙って止めない</li>
+<li>頻度は<strong>年2回</strong>。作ったその場で一覧に1行足す習慣が、棚卸しを軽くする</li>
+</ul>
+
+<p>使われていない自動化を止めることは、後ろ向きな作業に見えて、実は「今うちに本当に効いている仕組みはこれです」と言い切れる状態をつくる作業です。数が多いことではなく、<strong>全部の役割を説明できることが、自動化がうまくいっている状態</strong>だと考えてみてください。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「自動化を増やしたものの全体像が分からなくなってきた」「止めていいものと残すべきものの判断がつかない」という課題をお持ちの方に向けて、一覧の作り方から使用状況の確認方法、止める・残すの判断基準づくり、安全な停止手順の設計までを、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、増やし続けても迷子にならない運用の形をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-model-cost-optimization.html"><img src="../images/blog-claude-code-model-cost-optimization-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude CodeのOpus・Sonnet・Haiku使い分けでコスト削減</span></a><a class="seo-related-card" href="claude-code-troubleshooting-guide.html"><img src="../images/blog-claude-code-troubleshooting-guide-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの自動化が止まった・結果がおかしいときの対処法</span></a><a class="seo-related-card" href="claude-code-automation-effect-tracking.html"><img src="../images/blog-claude-code-automation-effect-tracking-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの自動化は結局どれだけ効いた？削減時間の記録ガイド</span></a></div>
+<p class="seo-related-more"><a href="category-claude-code-basics.html">「Claude Codeの使い方」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

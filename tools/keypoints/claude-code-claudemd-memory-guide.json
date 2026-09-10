@@ -1,0 +1,1 @@
+{"target": "AI に同じ説明を毎回している中小企業の経営者・担当者", "outcome": "名称表記・トーン・命名規則・NG事項を CLAUDE.md に書き、Claude Code に業務ルールを記憶させられる", "requirement": "Claude Code と、繰り返し説明している決まり事20〜30行の書き出し"}

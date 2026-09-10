@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Googleドライブ連携で資料整理・ファイル検索・共有管理をAI自動化！中小企業・一人社長の「探す時間」削減ガイド</title>
+<meta name="description" content="Claude CodeとGoogleドライブを組み合わせ、散らかった資料の棚卸し・ファイル名の統一・目的の書類をすぐ見つける検索・共有設定の点検・月次の資料整理をAI自動化する方法を解説。非エンジニアの中小企業・一人社長でも取り組める活用シーンと導入ステップを紹介します。">
+<meta name="keywords" content="Claude Code,Googleドライブ,ファイル整理,資料検索,共有設定,ドキュメント管理,中小企業,一人社長,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Googleドライブ連携で資料整理・ファイル検索・共有管理をAI自動化！中小企業・一人社長の「探す時間」削減ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-google-drive-integration.jpg" alt="Claude Code × Googleドライブで資料整理・ファイル検索・共有設定の点検を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「あの見積書がどこにあるか分からない」「同じ資料の最新版が3つある」「フォルダを開くたびに気が重くなる」。Googleドライブを使い始めて数年、気づけば中身は誰も把握できない状態になっていた——中小企業や一人社長の現場で本当によく起こることです。この記事では、Anthropic公式のAIコーディングツール Claude Code と Googleドライブを組み合わせ、資料の棚卸し・ファイル名の統一・必要な書類をすぐ見つける仕組みづくりを、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code とは何か</a></li>
+<li><a href="#sec2">2. ドライブが「探せない倉庫」になる理由</a></li>
+<li><a href="#sec3">3. Googleドライブ運用で自動化できる5つの活用シーン</a></li>
+<li><a href="#sec4">4. 業種別の活用シーン</a></li>
+<li><a href="#sec5">5. 導入の4ステップ</a></li>
+<li><a href="#sec6">6. 手作業での整理との違い</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code とは何か</h2>
+<p>Claude Code は、Anthropic が公式に提供している AI コーディングツールです。名前に「コーディング」とありますが、できることはプログラム作成だけではありません。パソコンやクラウド上にあるファイルを読み取り、中身を理解し、一覧に整え、名前を付け直し、決まった手順を繰り返し実行してくれます。</p>
+<p>操作は日本語の会話だけで完結します。「このフォルダの中身を種類別に一覧にして」「去年の見積書だけ抜き出して」と伝えるだけで作業が進みます。表計算ソフトの関数もプログラムも覚える必要がないため、日常業務でパソコンを使う方であれば十分に活用できます。</p>
+<p>さらに Claude Code は、外部サービスと安全につなぐ仕組みを備えています。この仕組みを使うと、Googleドライブの中身を直接読み取り、フォルダをまたいだ整理や検索を任せられるようになります。</p>
+
+<h2 id="sec2">2. ドライブが「探せない倉庫」になる理由</h2>
+<p>Googleドライブそのものは優秀な保管場所です。それでも中身が散らかるのは、保管のルールが人によって違うまま溜まり続けるからです。</p>
+<ul><li>ファイル名が「見積書」「見積書2」「見積書_最終」となり、どれが最新か分からない</li><li>同じ資料が担当者ごとのフォルダに重複して置かれている</li><li>フォルダの階層が深くなりすぎ、目的の書類まで何度もたどる必要がある</li><li>誰にどこまで共有しているかを誰も把握していない</li><li>使わなくなった古い資料が残り続け、検索結果を埋めてしまう</li></ul>
+<p>いずれも「読む・分類する・名前を付ける・一覧にする」という地道な作業です。重要だと分かっていても後回しになり続ける領域であり、まさに Claude Code に任せるのに向いています。</p>
+
+<h2 id="sec3">3. Googleドライブ運用で自動化できる5つの活用シーン</h2>
+<h3>1. 散らかった資料の棚卸し</h3>
+<p>対象のフォルダを指定して「中身を種類別に分類し、一覧表にまとめて」と伝えるだけで、書類の種類・作成時期・おおよその内容を整理した一覧が出てきます。何がどれだけあるのかが見えるだけで、次に何を捨て何を残すかの判断がつきます。数百件のファイルでも、人が1つずつ開いて確認する必要はありません。</p>
+<h3>2. ファイル名の統一ルールづくりと一括提案</h3>
+<p>「日付・取引先名・書類種別の順で名前を付けたい」と決めれば、既存ファイルの中身を読み取ったうえで、新しい名前の候補を一覧で提案させられます。人はその一覧を眺めて修正するだけで済みます。命名が揃うと、その後の検索精度が一気に上がります。</p>
+<h3>3. 目的の書類をすぐ見つける検索</h3>
+<p>「去年の秋に出した、あの取引先向けの提案資料」といった曖昧な記憶からでも探し出せます。ファイル名だけでなく中身の文章まで読んで判断するため、名前が適当に付けられた資料でも見つかります。「探す時間」が最も削減効果の大きい部分です。</p>
+<h3>4. 共有設定の点検</h3>
+<p>いつの間にか社外の方まで見られる状態になっている資料はないか。退職した担当者に権限が残っていないか。こうした点検を一覧化させ、見直すべき候補を洗い出します。情報管理の観点で、年に数回は確認しておきたい作業です。</p>
+<h3>5. 月次の資料整理と報告書づくり</h3>
+<p>毎月末に「今月追加された資料を種類別にまとめ、整理が必要なものを挙げて」と実行させれば、散らかる前に手を打てます。同じ指示を保存しておけば、翌月も同じ品質で繰り返せます。溜めてから片付けるのではなく、溜まらない流れをつくるのが狙いです。</p>
+
+<h2 id="sec4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>主な悩み</th><th>Claude Code の使いどころ</th></tr>
+<tr><td>建設・リフォーム</td><td>現場ごとの図面や写真が探せない</td><td>現場名・工期・書類種別で一覧化し命名を統一</td></tr>
+<tr><td>士業・コンサル</td><td>顧問先ごとの資料が年度をまたいで散在</td><td>顧問先別・年度別に棚卸しし最新版を特定</td></tr>
+<tr><td>製造・卸</td><td>仕様書と図面の版が複数あり最新が不明</td><td>中身を読み比べて版の新旧を整理し古い版を隔離</td></tr>
+<tr><td>Web制作・デザイン</td><td>案件ごとの納品データが肥大化</td><td>案件別に容量と内容を集計し保管方針を決める</td></tr>
+<tr><td>教室・スクール</td><td>教材や配布資料の最新版が分からない</td><td>教材を種類別に一覧化し使用中のものだけ整理</td></tr>
+</table>
+
+<h2 id="sec5">5. 導入の4ステップ</h2>
+<ol><li><strong>対象を1つのフォルダに絞る</strong>：ドライブ全体をいきなり整理しようとせず、最も困っているフォルダを1つ選びます。効果を実感しやすく、途中で挫折しません。</li><li><strong>望ましい状態を言葉にする</strong>：「日付から始まる名前に揃えたい」「取引先ごとにまとめたい」など、理想の形を先に決めます。ここが決まっていれば、あとは任せられます。</li><li><strong>Claude Code に日本語で指示する</strong>：「このフォルダの中身を一覧にして、種類別に分類して」と伝えるところから始めます。出てきた一覧を見ながら「この分類は分けなくていい」と調整していきます。</li><li><strong>整理のリズムを決める</strong>：月末や四半期末など、繰り返す時期を決めて同じ指示を実行します。うまくいった指示は保存しておくと、次回から同じ品質で再現できます。</li></ol>
+
+<h2 id="sec6">6. 手作業での整理との違い</h2>
+<table>
+<tr><th>項目</th><th>これまでの手作業</th><th>Claude Code を使った運用</th></tr>
+<tr><td>資料の棚卸し</td><td>1つずつ開いて確認するため丸1日かかる</td><td>一覧が短時間で出るため判断だけに集中できる</td></tr>
+<tr><td>ファイル名の統一</td><td>気づいた人がその都度直すため揃わない</td><td>命名の候補をまとめて提案させ一括で整える</td></tr>
+<tr><td>書類探し</td><td>記憶と勘に頼りフォルダを行き来する</td><td>曖昧な条件でも中身から見つけられる</td></tr>
+<tr><td>共有の管理</td><td>設定した本人しか把握していない</td><td>状況を一覧化し見直す候補を洗い出せる</td></tr>
+<tr><td>整理の継続</td><td>忙しくなると止まってしまう</td><td>同じ指示を毎月繰り返すだけで維持できる</td></tr>
+</table>
+
+<h2 id="sec7">7. 運用上の注意点</h2>
+<ul><li><strong>削除は必ず人が判断する</strong>：整理の提案までを任せ、実際に消す操作は人が確認してから行います。取り返しのつかない作業を自動化しないことが安全に続けるコツです。</li><li><strong>個人情報を含む資料は範囲を決める</strong>：氏名や取引条件などが含まれるフォルダは、扱ってよい範囲をあらかじめ決めておきます。</li><li><strong>権限は必要最小限にする</strong>：外部サービスとつなぐ際の権限は、必要なフォルダだけに絞ります。最初から全体を許可する必要はありません。</li><li><strong>古い資料はすぐ消さず隔離する</strong>：「保管」フォルダに退避させてから一定期間置くと、あとで必要になったときに困りません。</li><li><strong>ルールは1つに決めて全員で守る</strong>：どれだけ整理しても、新しい資料が旧ルールで増えれば元に戻ります。命名の型を1つ決めて共有することが最も効きます。</li></ul>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>パソコンが得意ではありませんが使えますか。</strong></p>
+<p>日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。</p>
+<p><strong>ドライブの中身が勝手に消されることはありませんか。</strong></p>
+<p>整理案の作成までを任せ、削除や移動は人が確認して実行する運用にすれば安全です。実際、その形をおすすめしています。</p>
+<p><strong>ファイル数が数千件ありますが対応できますか。</strong></p>
+<p>件数が多いほど効果が出ます。ただし最初は1つのフォルダに絞り、手順が固まってから範囲を広げるのが確実です。</p>
+<p><strong>何から始めるのがよいですか。</strong></p>
+<p>いちばん探すのに苦労しているフォルダの棚卸しから始めてください。一覧が出てきた時点で、次にやるべきことが自然に見えてきます。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>資料が見つからない時間は、1回あたり数分でも、年間で数十時間に積み上がります。それでいて「整理の時間」は売上に直結しないため、いつまでも後回しにされ続けます。Claude Code に棚卸し・命名・検索を任せ、人は「何を残すか」の判断だけを担う。この分担ができれば、少人数の会社でも資料が散らからない状態を保てます。</p>
+<p>大切なのは、いきなり全体を整理しようとせず、いちばん困っているフォルダ1つから小さく始めることです。ひとつ整った状態を経験すれば、その型をほかのフォルダにも広げていけます。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、ココナラのメッセージ機能からお気軽にご相談ください。導入サポート 税込3,000円で、あなたの業務に合わせた自動化の第一歩をいっしょに設計します。まずは購入画面に進むボタンからお進みください。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「必要な資料がすぐ出てこない」「同じ書類の最新版が分からない」という中小企業・一人社長の方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

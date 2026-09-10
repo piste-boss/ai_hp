@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで新しい取引先を取引前に見極める | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,与信,新規取引先,取引開始,信用チェック,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで新しい取引先を取引前に見極める">
+  <meta property="og:description" content="Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-new-client-credit-check-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-30T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで新しい取引先を取引前に見極める">
+  <meta name="twitter:description" content="Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-new-client-credit-check-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html"},"url":"https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html","headline":"Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド","alternativeHeadline":"Claude Codeで新しい取引先を取引前に見極める","description":"Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-new-client-credit-check-og.jpg","width":1200,"height":800},"datePublished":"2026-08-30T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","与信","新規取引先","取引開始","信用チェック","業務効率化","中小企業"],"wordCount":5431,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで新しい取引先を取引前に見極める","item":"https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html#faq","mainEntity":[{"@type":"Question","name":"信用調査の会社に頼むのと、何が違いますか","acceptedAnswer":{"@type":"Answer","text":"調査会社の報告書は、深さと裏付けで勝ります。金額の大きな継続取引なら、費用をかけて頼む価値があります。この記事の方法が効くのは、そこまでの費用をかけない日常の新規取引です。まず自前の型で確かめ、引っかかりが残る大きな案件だけ調査会社に頼む、という二段構えが現実的です。"}},{"@type":"Question","name":"相手の情報を集めるのは、失礼にあたりませんか","acceptedAnswer":{"@type":"Answer","text":"公開されている情報を確かめるのは、商売の当たり前の作法です。むしろ、確認をきちんとする会社だと伝わることは、こちらの信頼にもつながります。集めた情報を取引の判断以外に使わない、社外に出さない、という節度だけ守ります。"}},{"@type":"Question","name":"どこまでやれば十分ですか","acceptedAnswer":{"@type":"Answer","text":"完璧な確認はありません。目安は、その取引で失っても事業が揺らがない金額かどうかです。揺らがない金額なら短い型で、揺らぐ金額なら深い型で。ステップ1で段階を分けておくのは、このためです。"}},{"@type":"Question","name":"どのくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"型ができるまでの初回は一時間ほど見てください。二回目からは、材料集めと突き合わせを任せられるので、一件あたり十五分ほどの確認で判断材料がそろいます。未入金一件の回収にかかる時間と比べれば、はるかに軽い投資です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-30">公開日：2026年8月30日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-new-client-credit-check.webp" alt="Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>初めての相手からの注文で支払い能力の確認を省きがちな中小企業</li><li><strong>できるようになること：</strong>確認項目の型を作り、相手の情報と公開情報を突き合わせて一覧にし、前受けや上限額などの取引条件を人が決められる</li><li><strong>必要なもの：</strong>Claude Code と、相手から受け取った名刺・会社案内・注文内容、登記や法人番号などの公開情報</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">初めての相手から、思いがけず大きな注文が入った。ありがたい話のはずなのに、どこかで小さな引っかかりが残る——この会社、本当に代金を払ってくれるのだろうか。中小企業や一人社長の現場で、この引っかかりはたいてい、確かめられないまま流されます。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">取引前の確認が飛ばされる3つの理由</a></li>
+<li><a href="#s2">取引先の確認で Claude Code に任せる範囲と人が決める範囲は？</a></li>
+<li><a href="#s3">新規取引先の確認はどんな5ステップで進めますか？</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<p>前回の記事では、売掛金の未入金を早く見つける仕組みを扱いました。しかし本当は、その一つ手前があります。<strong>危ない取引は、始める前に見極めるのがいちばん安上がり</strong>です。未入金の回収には時間も気力も要りますが、取引前の確認は机の上で済みます。</p>
+<p>ところが多くの会社では、新しい取引先の確認は「なんとなく大丈夫そう」で始まります。ホームページが立派だった、担当の方の感じがよかった、紹介だったから。どれも悪い判断材料ではありませんが、<strong>支払い能力とはほとんど関係がありません</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、新しい取引先について確認すべきことを整理し、集めた情報を突き合わせて、取引を始めるかどうかの判断材料をそろえる手順を、非エンジニアの方向けに整理します。</p>
+<h2 id="s1">取引前の確認が飛ばされる3つの理由</h2>
+<p>慎重さが足りないから飛ばされるのではありません。作業の側に、飛ばしたくなる構造があります。</p>
+<h3>1. 何を確認すべきかが決まっていない</h3>
+<p>「与信」と聞くと、専門の部署がある大企業の話に聞こえます。確認項目の型が手元にないため、何から手を付けてよいか分からず、<strong>分からないことは後回しになります</strong>。実際には、確認すべきことの大半は決まりきった項目です。</p>
+<h3>2. 情報が散らばっていて、集めるのが重い</h3>
+<p>相手の正式名称、所在地、設立の時期、代表者、事業の中身、登記の情報、決算の公告。それぞれ見る場所が違い、一件そろえるだけでも骨が折れます。忙しい時期に新しい注文が来ると、<strong>確認よりも受注の準備が先に走り出します</strong>。</p>
+<h3>3. 断る基準がなく、注文の嬉しさに流される</h3>
+<p>仮に気になる点が見つかっても、では断るのか、と言われると迷います。売上は欲しい。せっかくの縁を壊したくない。<strong>判断の基準を先に持っていないと、目の前の注文の大きさに引っ張られます</strong>。</p>
+<blockquote>取引前の確認が働かないのは、疑い深さが足りないからではありません。確認項目の型がなく、集める作業が重く、断る基準がないからです。このうち前の二つは、機械に任せられます。</blockquote>
+<h2 id="s2">取引先の確認で Claude Code に任せる範囲と人が決める範囲は？</h2>
+<p>大前提として、<strong>取引を始めるかどうか、どんな条件で始めるかは、経営判断そのもの</strong>です。機械が決めることではありません。機械に任せるのは、判断の材料を机の上にそろえるまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>確認項目の一覧づくり</td><td>機械</td><td>業種と取引の大きさに応じた確認項目の型を作る</td></tr><tr><td>相手から受け取った情報の整理</td><td>機械</td><td>名刺・案内資料・注文内容から項目を書き出す</td></tr><tr><td>公開情報の収集の下準備</td><td>機械</td><td>どこで何を確かめられるかを項目ごとに整理する</td></tr><tr><td>集めた情報の突き合わせ</td><td>機械</td><td>受け取った情報と確認できた情報の食い違いを挙げる</td></tr><tr><td>確認できない項目の分離</td><td>機械</td><td>埋まらなかった項目を、理由を添えて別に出す</td></tr><tr><td>気になる点の一覧化</td><td>機械</td><td>食い違い・空欄・引っかかりを一枚に並べる</td></tr><tr><td>取引条件の選択肢づくり</td><td>機械</td><td>前受けや上限額など、条件の組み合わせ案を並べる</td></tr><tr><td>取引可否と条件の決定</td><td><strong>人</strong></td><td>材料を見て、始めるか、どんな条件かを決める</td></tr><tr><td>相手とのやり取り</td><td><strong>人</strong></td><td>条件の相談も、お断りも、人が伝える</td></tr></tbody></table>
+<p>線引きは単純です。<strong>集めて、突き合わせて、並べるまでが機械。決めて、伝えるのは人</strong>。この順番を守ると、「なんとなく大丈夫そう」が「ここまで確かめた上で決めた」に変わります。</p>
+<h2 id="s3">新規取引先の確認はどんな5ステップで進めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-new-client-credit-check-01.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：確認項目の型を先に作る</h3>
+<p>まず、新しい取引先について確かめる項目の一覧を作らせます。正式名称と法人格、所在地、設立からの年数、代表者、事業の中身、こちらとの取引で発生する金額の規模、希望されている支払い条件。<strong>自社の業種と、想定する取引の大きさを伝えて、項目の型を出させます</strong>。</p>
+<p>大事なのは、取引の大きさで確認の深さを変えることです。数万円の単発と、毎月続く数百万円では、そろえるべき材料が違います。段階を二つか三つに分けた型にしておくと、以後ずっと使い回せます。こちらが発注する側になる場面では、<a href="claude-code-quote-comparison.html">相見積もりの比較</a>にも同じ「型を先に作る」考え方が使えます。</p>
+<h3>ステップ2：手元にある情報を全部書き出させる</h3>
+<p>次に、相手から受け取ったものを一か所に集めます。名刺、会社案内、届いた注文の内容、見積もりのやり取り。それらを渡して、<strong>ステップ1の型に沿って、分かることと分からないことを仕分けさせます</strong>。</p>
+<p>このとき必ず、<strong>書かれていないことを推測で埋めさせない</strong>ようにします。「資料にない項目は空欄のまま、不明と書いてください」と最初に伝えます。それらしく埋まった一覧は、空欄だらけの正直な一覧より危険です。</p>
+<h3>ステップ3：公開されている情報と突き合わせる</h3>
+<p>法人であれば、登記の情報や決算の公告、公的な<a href="https://www.houjin-bangou.nta.go.jp/" target="_blank" rel="noopener">法人番号の公表情報</a>など、誰でも確かめられる情報があります。自社のホームページに書かれている内容も材料になります。集めた公開情報を渡して、<strong>相手から受け取った情報と食い違う点を挙げさせます</strong>。</p>
+<p>見るべきは、立派かどうかではなく、<strong>つじつまが合っているか</strong>です。名乗っている社名と登記上の名称は一致するか。所在地は実在するか。設立して間もないのに長い実績をうたっていないか。食い違いそれ自体が即座に問題とは限りませんが、確かめる価値のある引っかかりです。</p>
+<h3>ステップ4：気になる点を三つの区分で一覧にする</h3>
+<p>集めた材料を、<strong>確認できた・確認できなかった・食い違いがある</strong>、の三つに仕分けた一覧を作らせます。判断するのはこの一枚を見てからです。</p>
+<p>確認できなかった項目が多いこと自体は、悪い印とは限りません。小さな事業者なら公開情報が少ないのは普通です。大事なのは、<strong>何が確認できていないのかを分かった上で決める</strong>ことです。知らずに決めるのと、知って決めるのとでは、同じ結論でも意味がまったく違います。</p>
+<h3>ステップ5：取引条件の選択肢を並べて、人が決める</h3>
+<p>最後に、判断材料に応じた取引条件の選択肢を並べさせます。初回は前受けにする、金額の上限を設ける、支払いまでの期間を短くする、少額の取引から段階的に広げる。<strong>どの組み合わせなら安心して受けられるかの案を三つほど出させ、決めるのは人</strong>です。</p>
+<p>決めたら、判断の理由と条件を短く記録に残します。この記録が、次の新しい取引先のときの型を育てます。条件を相手に伝える際の段取りは、<a href="claude-code-price-revision-preparation.html">価格改定の準備</a>と共通する部分があります。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<p>同じ道具を使っても、頼み方で結果が変わります。</p>
+<p><strong>1. 確認項目を名前で指定する</strong></p>
+<p>「この会社を調べて」だけでは、出てくるものが毎回変わります。ステップ1で作った型を渡し、「この項目に沿って整理してください」と頼めば、どの取引先も同じ形で比べられます。</p>
+<p><strong>2. 書かれていないことを補わせない</strong></p>
+<p>この作業でいちばん危険なのは、それらしい推測で空欄が埋まることです。「確認できない項目は不明のまま残し、なぜ確認できないかを添えてください」と最初に伝えます。</p>
+<p><strong>3. 出どころを添えさせる</strong></p>
+<p>一覧の各項目に、その情報をどこから取ったかを書かせます。相手の資料から、公開情報から、こちらの推測か。<strong>出どころの分からない安心材料は、材料になりません</strong>。あとから見返したときにも、出どころがあると確かめ直せます。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-new-client-credit-check-02.webp" alt="つまずきやすい5つの型" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>1. 注文が大きいほど、確認が甘くなる</h3>
+<p>本来は逆で、金額が大きいほど深く確かめるべきです。ところが現場では、大きな注文ほど逃したくない気持ちが働き、確認が形だけになります。<strong>取引の大きさと確認の深さを、先に型で結びつけておく</strong>のが対策です。</p>
+<h3>2. 見た目の立派さで安心する</h3>
+<p>整ったホームページや洗練された資料は、支払い能力の証明ではありません。見るべきは、つじつまと実体です。<strong>印象と事実を、一覧の上で分けて扱う</strong>ようにします。</p>
+<h3>3. 一度確認した相手を、ずっと信用し続ける</h3>
+<p>取引開始の時点で健全でも、状況は変わります。支払いの遅れが出はじめた、注文の量が急に増えた、といった変化は見直しの合図です。<strong>長い付き合いの相手も、年に一度は同じ型で見直す</strong>と決めておきます。</p>
+<h3>4. 確認できないことを、悪い印と決めつける</h3>
+<p>公開情報の少なさは、規模の小ささの表れであることがほとんどです。確認できない項目は、断る理由ではなく、<strong>条件でおぎなう対象</strong>です。前受けや少額からの開始など、条件の工夫で受けられる取引はたくさんあります。</p>
+<h3>5. 判断の記録を残さず、毎回一からやり直す</h3>
+<p>何を確かめてどう決めたかを残しておかないと、次の新規の相手のときにまた同じ迷いを繰り返します。<strong>一覧と判断理由をひとまとめに保管する</strong>。それだけで、二回目からは半分の時間で済みます。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>建設・工務店</strong> — 元請けからの新規の発注。工事は着手から入金までが長く、金額も大きい。着手金の設定と組み合わせた条件づくりに材料が効きます。</p>
+<p><strong>製造・卸売</strong> — 新規の販売先との掛け取引。締め払いを求められたときに、初回の上限額と支払いまでの期間を材料に基づいて決められます。</p>
+<p><strong>広告・制作</strong> — 紹介経由の単発案件。紹介だからと確認を飛ばしがちですが、紹介者は支払いを保証してくれません。短い型でも一度通す価値があります。</p>
+<p><strong>士業・コンサル</strong> — 顧問契約の新規のご依頼。毎月の関係が長く続くからこそ、始める前の確認が効きます。事業の実体の確認は、その後の助言の質にもつながります。</p>
+<p><strong>小売・通販</strong> — 法人からの大口注文。個人向けの商売に突然入る大口は、うれしい反面リスクも大きい。前受けを基本にした条件の型を持っておくと迷いません。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 信用調査の会社に頼むのと、何が違いますか</h3>
+<p>調査会社の報告書は、深さと裏付けで勝ります。金額の大きな継続取引なら、費用をかけて頼む価値があります。この記事の方法が効くのは、<strong>そこまでの費用をかけない日常の新規取引</strong>です。まず自前の型で確かめ、引っかかりが残る大きな案件だけ調査会社に頼む、という二段構えが現実的です。</p>
+<h3>Q. 相手の情報を集めるのは、失礼にあたりませんか</h3>
+<p>公開されている情報を確かめるのは、商売の当たり前の作法です。むしろ、確認をきちんとする会社だと伝わることは、こちらの信頼にもつながります。集めた情報を取引の判断以外に使わない、社外に出さない、という節度だけ守ります。</p>
+<h3>Q. どこまでやれば十分ですか</h3>
+<p>完璧な確認はありません。目安は、<strong>その取引で失っても事業が揺らがない金額かどうか</strong>です。揺らがない金額なら短い型で、揺らぐ金額なら深い型で。ステップ1で段階を分けておくのは、このためです。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>型ができるまでの初回は一時間ほど見てください。二回目からは、材料集めと突き合わせを任せられるので、<strong>一件あたり十五分ほどの確認で判断材料がそろいます</strong>。未入金一件の回収にかかる時間と比べれば、はるかに軽い投資です。</p>
+<h2 id="s8">まとめ</h2>
+<p>取引先とのお金の困りごとは、起きてから対処するより、始まる前に防ぐほうが安く済みます。そして取引前の見極めは、勘や度胸の話ではなく、<strong>確認項目の型と、突き合わせの作業と、条件の工夫</strong>でできています。</p>
+<p>型を作り、手元の情報を書き出し、公開情報と突き合わせ、三つの区分で並べ、条件の選択肢から人が決める。ここまで整えば、新しい注文は「うれしいけれど不安なもの」から「確かめた上で受けるもの」に変わります。</p>
+<p>集めて並べるのは機械、決めて伝えるのは人。この線引きを守れば、<strong>売上を増やす挑戦と、手元のお金を守る慎重さは、両立できます</strong>。</p>
+
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-subsidy-application-support.html"><img src="../images/blog-claude-code-subsidy-application-support-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで補助金申請の準備を効率化</span></a><a class="seo-related-card" href="claude-code-quote-comparison.html"><img src="../images/blog-claude-code-quote-comparison-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで相見積もりを比べる</span></a><a class="seo-related-card" href="claude-code-price-revision-preparation.html"><img src="../images/blog-claude-code-price-revision-preparation-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで価格改定の根拠を整理する</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

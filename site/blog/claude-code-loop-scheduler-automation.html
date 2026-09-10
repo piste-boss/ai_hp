@@ -2,10 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
-<title>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド | Piste</title>
+<title>Claude Codeの/loop機能で業務を24時間自動運転する | Piste AI EVANGELISTS</title>
 <meta name="description" content="Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。">
 <meta name="keywords" content="Claude Code,loop,スケジュール,cron,自動化,24時間業務,AI常駐,中小企業,夜間自動運転">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,21 +131,76 @@ th{background:var(--dark);color:var(--gold-light);}
 .cta h2{color:var(--black);border:none;padding:0;}
 .cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
 </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeの/loop機能で業務を24時間自動運転する">
+  <meta property="og:description" content="Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-04-23T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="Claude Codeの使い方">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeの/loop機能で業務を24時間自動運転する">
+  <meta name="twitter:description" content="Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html"},"url":"https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html","headline":"Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド","alternativeHeadline":"Claude Codeの/loop機能で業務を24時間自動運転する","description":"Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/ogp.jpg","width":640,"height":640},"datePublished":"2026-04-23T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"Claude Codeの使い方","keywords":["Claude Code","loop","スケジュール","cron","自動化","24時間業務","AI常駐","中小企業","夜間自動運転"],"wordCount":4739,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude Codeの使い方","item":"https://www.piste-ai.com/blog/category-claude-code-basics.html"},{"@type":"ListItem","position":4,"name":"Claude Codeの/loop機能で業務を24時間自動運転する","item":"https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html#faq","mainEntity":[{"@type":"Question","name":"1. PCを閉じていても動きますか？","acceptedAnswer":{"@type":"Answer","text":"Claude Code自体はローカルPCで動くため、PCが起動していてかつスリープから復帰できる状態である必要があります。事務所の据え置き機や常時起動のMac miniなどを母艦にするのが一般的です。クラウド上で動かしたい場合は、サーバー設置型の運用に拡張できます。"}},{"@type":"Question","name":"2. プログラミング経験がなくても使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。業務手順を日本語で書き、AIに「毎朝7時に実行して」と指示するだけです。cron記法を覚える必要はなく、自然な時刻表現で登録できます。エラー時の対応もAIが提案してくれるため、試行錯誤しながら完成度を上げていけます。"}},{"@type":"Question","name":"3. 実行結果をどこで確認できますか？","acceptedAnswer":{"@type":"Answer","text":"メール・Slack・LINE・社内チャット・Notionなど、普段使っているツールに出力できます。要約だけ通知してログ全文は別に保管する、という構成が読みやすさと追跡性の両立に向いています。"}},{"@type":"Question","name":"4. 他の自動化ツールと併用できますか？","acceptedAnswer":{"@type":"Answer","text":"併用できます。起動トリガーはClaude Codeに任せ、一部の複雑な画面操作はPlaywrightや別の自動化ツールに委ねるなど、役割を分けると運用が安定します。既存のMake・Zapierと組み合わせて使っている事例も増えています。"}},{"@type":"Question","name":"5. 導入にどれくらい時間がかかりますか？","acceptedAnswer":{"@type":"Answer","text":"1業務だけなら打ち合わせから初回稼働まで2〜3時間程度が目安です。3業務を並行稼働させる場合でも半日〜1日でセットアップでき、月単位で数十時間の稼働削減につながることが多いです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 <header>
-<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<a href="../"><img src="../images/logo.webp" alt="Piste" loading="eager" fetchpriority="high" width="240" height="240"></a>
 <nav>
-<a href="../index.html#services">サービス</a>
-<a href="../index.html#blog">ブログ</a>
-<a href="../index.html#contact">お問い合わせ</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
 </nav>
 </header>
 <main>
 <h1>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-claude-code-basics.html">Claude Codeの使い方</a></nav>
+<p class="seo-postmeta"><time datetime="2026-04-23">公開日：2026年4月23日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
 <div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
-  <img src="../images/blog-thumb-01.jpg" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転" style="width: 100%; height: auto; display: block;">
+  <img src="../images/blog-thumb-01.webp" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転" style="width: 100%; height: auto; display: block;" loading="lazy" width="640" height="640">
 </div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>早朝・深夜・週次・月次の定型業務を人手で回している中小企業の経営者</li><li><strong>できるようになること：</strong>/loop と CronCreate で業務を指定時刻に自動実行し、結果をメールやチャットに届ける体制を組める</li><li><strong>必要なもの：</strong>Claude Code と、スリープしない常時稼働のPC、日本語で書き出した業務手順</li></ul></div>
+<!-- /seo:points -->
 <p><strong>2026.04.23 ・ 読了目安 9分</strong></p>
 
 <p>「毎朝6時に売上データをまとめて、9時までにレポートを作る」「夜21時に翌日の予約情報をLINEに通知する」「週次の競合調査を月曜の朝一で仕上げる」——時間で区切られた定型業務は、必ず「誰かがその時間に動く」ことを前提にしています。経営者や一人社長が早朝に起きて作業したり、スタッフに残業を頼んだりしていませんか。</p>
@@ -54,16 +210,16 @@ th{background:var(--dark);color:var(--gold-light);}
 <h2>目次</h2>
 <ol>
 <li>/loopとスケジュール機能とは？"AI常駐ワーカー"が生まれる理由</li>
-<li>中小企業で効果が出るスケジュール自動化5選</li>
+<li>中小企業ではどんな業務をスケジュール自動化すると効果が出ますか？</li>
 <li>業種別 活用シーン</li>
-<li>非エンジニアでもできる導入4ステップ</li>
+<li>非エンジニアが Claude Code のスケジュール実行を導入する4ステップは？</li>
 <li>導入前に知っておくべき注意点</li>
 <li>よくある質問</li>
 <li>導入サポートのご案内</li>
 </ol>
 
 <h2>1. /loopとスケジュール機能とは？"AI常駐ワーカー"が生まれる理由</h2>
-<p>Claude Codeの/loopは「同じコマンドを一定間隔で繰り返す」機能で、CronCreateは「指定の日時・曜日に自動起動する」機能です。2つを組み合わせると、AIがあらかじめ決めたスケジュールで勝手に業務を回し、結果を通知・記録する運用が可能になります。チャットのように人が呼び出す必要がなく、AIがタイマーに従って自分で起きてくる感覚に近いです。</p>
+<p>Claude Codeの<a href="https://code.claude.com/docs/ja/scheduled-tasks" target="_blank" rel="noopener">/loop</a>は「同じコマンドを一定間隔で繰り返す」機能で、CronCreateは「指定の日時・曜日に自動起動する」機能です。2つを組み合わせると、AIがあらかじめ決めたスケジュールで勝手に業務を回し、結果を通知・記録する運用が可能になります。チャットのように人が呼び出す必要がなく、AIがタイマーに従って自分で起きてくる感覚に近いです。</p>
 
 <h3>従来の自動化との違い</h3>
 <ul>
@@ -74,7 +230,7 @@ th{background:var(--dark);color:var(--gold-light);}
 
 <h3>Hook・サブエージェントとの相性</h3>
 <blockquote>
-<p>/loopとCronCreateは単体でも便利ですが、Hook（イベント駆動）やサブエージェント（業務分担）と組み合わせると真価を発揮します。たとえば「毎朝7時に売上データを収集→専門サブエージェントに分析させる→結果をSlackに通知」といった複数工程を、一つのスケジュール起動で完結させられます。</p>
+<p>/loopとCronCreateは単体でも便利ですが、Hook（イベント駆動）や<a href="claude-code-subagent-team.html">サブエージェント（業務分担）</a>と組み合わせると真価を発揮します。たとえば「毎朝7時に売上データを収集→専門サブエージェントに分析させる→結果をSlackに通知」といった複数工程を、一つのスケジュール起動で完結させられます。</p>
 </blockquote>
 
 <h3>手動運用とスケジュール運用の違い</h3>
@@ -86,7 +242,7 @@ th{background:var(--dark);color:var(--gold-light);}
 <tr><td>結果通知</td><td>手動で報告</td><td>自動でメール・チャット通知</td></tr>
 </table>
 
-<h2>2. 中小企業で効果が出るスケジュール自動化5選</h2>
+<h2>2. 中小企業ではどんな業務をスケジュール自動化すると効果が出ますか？</h2>
 
 <h3>(1) 早朝の売上・予約データ集計</h3>
 <p>毎朝6時〜7時に、前日の売上・予約・在庫データをまとめ、経営者のスマホに要約レポートを届ける運用が組めます。出社前に業績を把握できるため、朝礼の質が上がり、判断スピードが飛躍的に速くなります。データは会計・POS・予約システムなどから横断取得し、異常値があればコメント付きで報告します。</p>
@@ -113,13 +269,13 @@ th{background:var(--dark);color:var(--gold-light);}
 <tr><td>人材・教育</td><td>毎朝の応募者サマリー、週次の求人媒体更新確認、夜間の受講者フォロー下書き</td></tr>
 </table>
 
-<h2>4. 非エンジニアでもできる導入4ステップ</h2>
+<h2>4. 非エンジニアが Claude Code のスケジュール実行を導入する4ステップは？</h2>
 
 <h3>ステップ1：時間で区切られた業務を洗い出す</h3>
 <p>「毎朝この時間にやっている」「毎週月曜にまとめている」「月末に発行している」といった、時刻や曜日に紐づく業務を棚卸しします。5分で済むものから1時間かかるものまで書き出し、先に自動化すべきものを決めます。最初は「早朝の売上確認」「週次レポート」「月末の請求処理」の中から一つ選ぶと効果が見えやすいです。</p>
 
 <h3>ステップ2：Claude Codeに業務手順をスキルとして登録する</h3>
-<p>選んだ業務を「どのデータを見て」「どうまとめて」「誰に届けるか」まで日本語で書き出し、Claude Codeのスキル（スラッシュコマンド）として登録します。指示は操作ログを書くような感覚で十分で、エンジニア的な書き方は不要です。1度作ったスキルは名前を付けて呼び出せるため、再利用が効きます。</p>
+<p>選んだ業務を「どのデータを見て」「どうまとめて」「誰に届けるか」まで日本語で書き出し、Claude Codeのスキル（スラッシュコマンド）として登録します。指示は操作ログを書くような感覚で十分で、エンジニア的な書き方は不要です。1度作ったスキルは名前を付けて呼び出せるため、再利用が効きます。通知先や社内ルールなどの決めごとは<a href="claude-code-claude-md-rules.html">CLAUDE.md</a>にまとめておくと、毎回の実行で守られます。</p>
 
 <h3>ステップ3：/loopかCronCreateでスケジュールを設定する</h3>
 <p>登録したスキルを、一定間隔で繰り返すなら/loop、決まった時刻に起動するならCronCreateで時刻設定します。「毎朝7時」「毎週月曜9時」「毎月25日21時」など、日本語で指示するだけで予約完了です。初回は数日間、動作結果を確認しながら時刻を微調整すると安定します。</p>
@@ -154,10 +310,14 @@ th{background:var(--dark);color:var(--gold-light);}
 <p>1業務だけなら打ち合わせから初回稼働まで2〜3時間程度が目安です。3業務を並行稼働させる場合でも半日〜1日でセットアップでき、月単位で数十時間の稼働削減につながることが多いです。</p>
 
 <h2>7. 導入サポートのご案内</h2>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-claude-md-rules.html"><img src="../images/blog-claude-code-claude-md-rules-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる</span></a><a class="seo-related-card" href="claude-code-business-guide.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命</span></a><a class="seo-related-card" href="claude-code-subagent-team.html"><img src="../images/blog-claude-code-subagent-team-card.webp" alt="" loading="lazy" width="640" height="357"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeのサブエージェント機能で業務を自動分担</span></a></div>
+<p class="seo-related-more"><a href="category-claude-code-basics.html">「Claude Codeの使い方」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
 <div class="cta">
 <h2>夜間・早朝の業務を、AIが自動で回す体制に</h2>
 <p>Claude Codeの/loopとスケジュール機能で「早朝の売上サマリー」「夜間のレポート作成」「月末の請求書下書き」などを自動化したい中小企業の方へ。対象業務の棚卸しから初回稼働までを一緒に進める、Claude Code導入サポート（¥10,000〜）をご用意しています。</p>
-<a href="../index.html#contact">導入サポートの詳細を見る</a>
+<a href="../#contact">導入サポートの詳細を見る</a>
 </div>
 
 <p>時間に区切られた業務は、人が張り付かなくても回せる業務です。AIが起きている間に仕事が進んでいる——それが当たり前になった企業は、人の時間を「判断と創造」に集中させられるようになります。まずは一番ストレスになっている時間帯の業務を書き出すところから始めてみてください。</p>

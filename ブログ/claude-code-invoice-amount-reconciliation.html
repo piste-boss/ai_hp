@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド</title>
+<meta name="description" content="Claude Codeで請求内容と発注内容の食い違いを見つける突合の手順を解説。合計・明細・条件の3階層の分け方、機械と人の役割分担、差分の3区分での出し方、単位や税など5つのつまずきまで中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,突合,請求書,発注,金額チェック,経理,業務自動化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド</h1>
+
+<p class="lead">「先月の請求額、うちが頼んだ数と違っていた気がする」——そう思いながらも、確かめる時間がなくてそのまま支払っている。中小企業の現場で、静かに損失を生んでいるのがこの<strong>突合</strong>の抜けです。この記事では、請求内容と発注内容の食い違いを Claude Code で洗い出す手順を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<a href="#s1">問題は「食い違いが起きること」ではない</a><br>
+<a href="#s2">突合が止まるのは、だいたい3つの理由から</a><br>
+<a href="#s3">突合は3つの階層に分けると迷わない</a><br>
+<a href="#s4">Claude Codeが担うのは「差分を並べるところ」まで</a><br>
+<a href="#s5">実務は5ステップで回る</a><br>
+<a href="#s6">頼み方で、出てくる一覧の質が変わる</a><br>
+<a href="#s7">現場でつまずく5つの型</a><br>
+<a href="#s8">業種別に、どこから手を付けるか</a><br>
+<a href="#s9">よくある質問</a><br>
+<a href="#s10">まとめ</a><br>
+</div>
+
+
+<h2 id="s1">問題は「食い違いが起きること」ではない</h2>
+<p>取引の数が増えれば、金額の食い違いは一定の割合で必ず発生します。数量の伝え間違い、単価改定の反映漏れ、追加作業の二重計上。これらは相手の不誠実ではなく、<strong>人が関わる工程がある限り避けられない誤差</strong>です。</p>
+<p>本当の問題は、食い違いが起きることではなく、<strong>起きても気づけないこと</strong>にあります。</p>
+<blockquote>ご相談を受けた工務店では、資材の請求内容を1年分さかのぼって突き合わせたところ、単価改定の反映漏れが11件見つかりました。1件あたりは数千円。合計すると、決して小さくない金額になっていました。「毎月見ていたつもりだった」というのが、社長の言葉です。</blockquote>
+<p>金額が大きくずれていれば誰でも気づきます。実際に取りこぼされるのは、<strong>1件ずつは小さく、件数が多いもの</strong>です。</p>
+
+<h2 id="s2">突合が止まるのは、だいたい3つの理由から</h2>
+<p>多くの会社で、この作業は「やったほうがいいと分かっているのに続かない」状態にあります。理由は共通しています。</p>
+<p><strong>形がそろっていない。</strong> 発注の記録は台帳、請求の内容は届いた書類。並べて比べられる形になっていません。</p>
+<p><strong>基準が人の頭の中にある。</strong> 「これくらいの差なら許容」という感覚は、担当者ごとに違います。しかも言葉になっていません。</p>
+<p><strong>件数が多くて全部は見られない。</strong> 結果として、金額の大きいものだけを見る運用になり、小さいものが積み上がります。</p>
+<p>この3つは、いずれも仕組みで解けます。</p>
+
+<h2 id="s3">突合は3つの階層に分けると迷わない</h2>
+<p>「請求内容を確認する」とひとくくりにすると手が止まります。次の3階層に分けると、どこまでやるかを決められます。</p>
+<table>
+<tr><th>階層</th><th>見るもの</th><th>手間</th><th>効き方</th></tr>
+<tr><td>合計の一致</td><td>請求の総額と発注の総額</td><td>小さい</td><td>大きなずれだけ検知できる</td></tr>
+<tr><td>明細の一致</td><td>品目ごとの数量と単価</td><td>中くらい</td><td>取りこぼしの大半がここで出る</td></tr>
+<tr><td>条件の一致</td><td>単価改定、値引き、締め日の扱い</td><td>大きい</td><td>繰り返し発生する損失が止まる</td></tr>
+</table>
+<p>最初から3階層すべてを狙うと続きません。<strong>まず明細の一致だけを回す</strong>のが現実的です。合計だけでは小さな差が消えてしまい、条件まで踏み込むと初回から重くなるためです。</p>
+
+<h2 id="s4">Claude Codeが担うのは「差分を並べるところ」まで</h2>
+<p>ここは先にはっきりさせておきます。</p>
+<p><strong>支払ってよいかどうかの判断まで機械に渡してはいけません。</strong></p>
+<p>差分が出たとき、それが請求側の誤りなのか、こちらの発注記録の抜けなのか、あるいは現場で合意した追加なのかは、経緯を知る人にしか分かりません。役割はこう分けます。</p>
+<table>
+<tr><th>工程</th><th>担当</th></tr>
+<tr><td>形の違う2つの記録を、比べられる形に整える</td><td>Claude Code</td></tr>
+<tr><td>全件を突き合わせて、差分のある行だけを抜き出す</td><td>Claude Code</td></tr>
+<tr><td>差分の理由候補と、金額インパクトを並べる</td><td>Claude Code</td></tr>
+<tr><td>相手に確認するか、こちらの記録を直すかを決める</td><td>人</td></tr>
+<tr><td>支払いを実行するかを決める</td><td>人</td></tr>
+</table>
+<p>この線引きを守れば、<strong>確認する対象が数百行から数行に減る</strong>という形で効きます。</p>
+
+<h2 id="s5">実務は5ステップで回る</h2>
+<h3>ステップ1：比べる2つを決める</h3>
+<p>「請求内容」と「発注内容」と言っても、社内には複数の記録があります。発注書の控え、現場が入れた作業記録、担当者の手元の一覧。<strong>どれを正とするかを先に決めます。</strong> ここが曖昧なまま進めると、差分が出るたびに議論が振り出しに戻ります。</p>
+<h3>ステップ2：同じ行とみなす条件を1行で書く</h3>
+<p>「品目名と納入日が一致したら同じ行とみなす」のように、判断基準を言葉にします。<strong>この1行があるかないかで、出てくる結果の使いやすさが変わります。</strong> 品目名の書き方がそろっていない場合は、先に整える工程が要ります。</p>
+<h3>ステップ3：突き合わせる前に、形を揃える</h3>
+<p>数量の単位、金額の税込と税別、日付の書き方。この3つは高い確率でずれています。揃えるときは、<strong>元の値を別の欄に残したまま</strong>、揃えた値を新しい欄に作ります。あとから「元はどう書かれていたか」をたどれるようにするためです。</p>
+<h3>ステップ4：差分を3区分で出す</h3>
+<p>すべての差分を同列に並べると、結局全部見ることになります。次の3つに分けて出してもらいます。</p>
+<ul>
+<li><strong>要対応</strong>：金額または数量が明確に食い違っている</li>
+<li><strong>許容範囲</strong>：端数処理や税計算の丸めで説明がつく差</li>
+<li><strong>情報不足</strong>：片方に対応する記録がなく、判断材料が足りない</li>
+</ul>
+<p>このとき、<strong>差分の理由候補を必ず1列添えてもらう</strong>ことが重要です。「なぜこの行が挙がったのか」が読めない一覧は、確認作業がかえって重くなります。</p>
+<h3>ステップ5：見つけたあとの動きを先に決めておく</h3>
+<p>差分が出てから「どうするか」を考え始めると、そこで止まります。着手前に、<strong>いくら以上なら相手に確認するか、誰が確認するか、いつまでに戻すか</strong>の3点を決めておきます。</p>
+
+<h2 id="s6">頼み方で、出てくる一覧の質が変わる</h2>
+<p>同じ作業を頼んでも、伝え方によって結果の使いやすさは大きく変わります。押さえるべきは3点です。</p>
+<p><strong>取り出す項目を先に決めて、名前で指定する。</strong> 「必要な情報を拾って」ではなく、「品目名、数量、単位、単価、金額、納入日の6項目を取り出して」と伝えます。曖昧に頼むと、書類ごとに違う項目が拾われ、そもそも比べられません。</p>
+<p><strong>推測で埋めさせない。</strong> 読み取れなかった箇所を、それらしい値で埋められると、差分は消えて安全に見えてしまいます。<strong>「読み取れない箇所は空欄のままにして、空欄の行を最後にまとめて教えてください」</strong>と必ず添えます。この一言があるかどうかで、信頼できる結果かどうかが決まります。</p>
+<p><strong>判断ではなく材料を求める。</strong> 「支払ってよいか教えて」ではなく、「差分のある行と、その差の金額、考えられる理由を並べて」と頼みます。求めるものを材料に限定すると、こちらの確認も速くなります。</p>
+<p>慣れてきたら、この一連の頼み方を毎月使い回せる形で保存しておくと、翌月からは同じ品質の一覧が数分で出てきます。</p>
+
+<h2 id="s7">現場でつまずく5つの型</h2>
+<table>
+<tr><th>型</th><th>何が起きるか</th></tr>
+<tr><td>単位の取り違え</td><td>箱単位と本単位が混ざり、数量が10倍ずれて見える</td></tr>
+<tr><td>税の扱い</td><td>税込と税別が混在し、全行が差分として挙がる</td></tr>
+<tr><td>締め日のずれ</td><td>月末納入分が翌月請求となり、対応する行が見つからない</td></tr>
+<tr><td>品目名の変更</td><td>相手側の商品名変更で、同じ物が別物として扱われる</td></tr>
+<tr><td>追加分の記録漏れ</td><td>現場で合意した追加作業が発注記録に残っておらず、正しい請求が差分として出る</td></tr>
+</table>
+<p>最後の型は特に見落とされます。差分が出たとき、<strong>疑うべきは請求側とは限らない</strong>という前提を持っておくと、確認の質が上がります。</p>
+
+<h2 id="s8">業種別に、どこから手を付けるか</h2>
+<p><strong>建設・工務店</strong>：資材の単価改定と数量の食い違い。金額の規模が大きく、効果が出やすい領域です。</p>
+<p><strong>製造</strong>：外注加工の単価と数量。取引先が固定されている分、改定の反映漏れが繰り返し発生します。</p>
+<p><strong>飲食</strong>：食材の仕入。1件あたりは小さいものの、日次で積み上がるため合計インパクトが出ます。</p>
+<p><strong>小売</strong>：仕入と返品の相殺。返品処理が反映されていない請求は、金額としても手間としても重い部類です。</p>
+<p><strong>士業・コンサル</strong>：外注費と実費立替。件数は少ないものの、請求側に回ることも多く、こちらの請求漏れの発見にもつながります。</p>
+
+<h2 id="s9">よくある質問</h2>
+<h3>Q. 書類の形式がバラバラですが、比べられますか。</h3>
+<p>比べられます。ただし、<strong>先に値を取り出して同じ形に整える工程</strong>が必要です。この工程を飛ばして直接比べようとすると精度が出ません。書類を扱う場合は、取り出す項目を先に決めておくことをおすすめします。</p>
+<h3>Q. 過去分もさかのぼって確認すべきでしょうか。</h3>
+<p>まず直近3か月で回してみて、差分が出る割合を見てください。<strong>割合が高ければさかのぼる価値があり、低ければ今月分からで十分</strong>です。いきなり全期間を対象にすると、量に負けて続きません。</p>
+<h3>Q. 差分が大量に出たらどうすればよいですか。</h3>
+<p>ほとんどの場合、<strong>基準の設定が緩すぎる</strong>か、<strong>形を揃える工程が不十分</strong>かのどちらかです。件数が想定を大きく超えたときは、確認作業に入る前に条件を見直すほうが早く終わります。</p>
+<h3>Q. 取引先との関係が悪くならないか心配です。</h3>
+<p>差分の指摘は、相手を疑う行為ではありません。<strong>こちらの記録漏れが原因だった件も同じ一覧に出てくる</strong>ため、実際には双方の記録をそろえる作業になります。確認の理由を添えて伝えれば、むしろ精度の高い相手として扱われます。</p>
+
+<h2 id="s10">まとめ</h2>
+<p>請求内容と発注内容の突合について、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>問題は食い違いが起きることではなく、<strong>小さく件数の多い差に気づけないこと</strong></li>
+<li>突合は<strong>合計・明細・条件</strong>の3階層に分け、まず明細だけを回す</li>
+<li>Claude Codeが担うのは<strong>差分を並べるところまで</strong>。支払い判断は人がする</li>
+<li>手順は<strong>比べる2つを決める・同じ行の条件を書く・形を揃える・3区分で出す・動きを先に決める</strong>の5つ</li>
+<li>つまずきは<strong>単位・税・締め日・品目名・追加分の記録漏れ</strong>に集中する</li>
+<li>差分が出たとき、<strong>疑うべきは請求側とは限らない</strong></li>
+</ul>
+<p>毎月の支払いは、いちど流れができると誰も止めなくなります。<strong>確認していないのではなく、確認する形がないだけ</strong>というのが、多くの現場の実態です。形さえ作れば、この作業は月に数十分で回ります。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p>「請求額が合っているのか確かめられていない」「毎月見ているつもりだが、根拠がない」「さかのぼって確認したいが手が回らない」という課題をお持ちの方に向けて、比べる記録の決め方から形の揃え方、差分の出し方、確認体制の作り方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、いま使っている書類や台帳の形を変えずに始められる方法をご提案します。</p>
+<p>導入サポートは3,000円からご用意しています。ご相談は、ココナラのメッセージ機能からお気軽にどうぞ。ご依頼の際は、購入画面に進むボタンからお進みください。</p>
+<div class="price">3,000円〜</div>
+<a href="../index.html#contact">導入サポートに申し込む</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

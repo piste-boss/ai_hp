@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド</title>
+<meta name="description" content="Claude Codeと人気のオンラインホワイトボードMiroを組み合わせ、付箋の分類・ブレスト要約・アイデアのタスク化・業務図解・ワークショップ進行台本づくりをAI自動化する方法を解説。中小企業向けに活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+<meta name="keywords" content="Claude Code,Miro,オンラインホワイトボード,ブレスト,業務図解,ワークショップ,中小企業,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-miro-integration.jpg" alt="Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「Miroにアイデアを貼り出したものの、付箋だらけで整理がつかない」「ブレストは盛り上がったのに、次の行動に落とし込めないまま終わる」「ワークショップの進行がいつも特定の人まかせになっている」——そんな悩みを抱える中小企業の方に向けて、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、人気のオンラインホワイトボード<strong>Miro</strong>を組み合わせて、アイデア整理や業務の図解づくりを効率化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. Miroを使っていて起きがちな3つの壁</a></li>
+<li><a href="#s2">2. Claude CodeでMiroまわりのどこを自動化できるのか</a></li>
+<li><a href="#s3">3. 業種別・オンラインホワイトボードAI活用シーン</a></li>
+<li><a href="#s4">4. 導入の4ステップ</a></li>
+<li><a href="#s5">5. 運用で押さえておきたい注意点</a></li>
+<li><a href="#s6">6. 他のツールとの違い</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. Miroを使っていて起きがちな3つの壁</h2>
+<p>Miroは、オンライン上の大きなホワイトボードに付箋や図形を自由に配置し、複数人で同時にアイデアを出し合える便利なツールです。ブレストや業務フローの整理、プロジェクト計画など幅広く使えますが、実際に運用していると次のような壁にぶつかりがちです。</p>
+<h3>壁その1：付箋が増えすぎて整理がつかない</h3>
+<p>ブレストで勢いよく付箋を貼っていくと、ボードはあっという間にアイデアで埋め尽くされます。似た内容が散らばり、どれが重要でどれが重複かを人の手で仕分けするのは、想像以上に骨の折れる作業です。</p>
+<h3>壁その2：出したアイデアが次の行動につながらない</h3>
+<p>盛り上がったブレストも、「で、結局何をやるんだっけ」となりがちです。ボード上のアイデアを、実行できるタスクや優先順位に落とし込む工程が抜け落ち、せっかくの議論が形に残りません。</p>
+<h3>壁その3：ワークショップの進行が属人化する</h3>
+<p>「どんな順番で、どんな問いかけをするか」というワークショップの進行台本は、慣れた人の頭の中にしかないことが多いものです。担当者が不在だと、同じ質の場を再現できません。</p>
+
+<h2 id="s2">2. Claude CodeでMiroまわりのどこを自動化できるのか</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-miro-integration-01.jpg" alt="2. Claude CodeでMiroまわりのどこを自動化できるのか" style="width: 100%; height: auto; display: block;">
+</div>
+<p>Claude Codeは、日本語で指示するだけで、文章の整理・分類・要約・構成づくりといった「頭を使う定型作業」を任せられるAIツールです。Miroの付箋やボードの内容をテキストで渡すことで、アイデア整理の下ごしらえを幅広く手伝ってもらえます。ここでは代表的な6つの活用を紹介します。</p>
+<h3>活用1：付箋のテーマ別分類・グルーピング</h3>
+<p>ボードに貼り出した大量の付箋のテキストを渡すと、内容の近いものをテーマごとにまとめ、重複や似た意見を整理してくれます。手作業だと時間のかかる仕分けを、短時間で下ごしらえできます。</p>
+<h3>活用2：ブレスト内容の要約とアイデアの深掘り</h3>
+<p>出そろったアイデアの要点をまとめ、「この方向をもっと広げるなら」という追加の切り口まで提案してくれます。議論が一巡したあとの「もう一歩」を引き出せます。</p>
+<h3>活用3：アイデアから実行タスクへの落とし込み</h3>
+<p>ボード上のアイデアを渡すと、「誰が・何を・いつまでに」の形に整えたタスク案に変換してくれます。盛り上がって終わりにせず、次の行動へつなげられます。</p>
+<h3>活用4：業務フロー図・図解の構成案づくり</h3>
+<p>「受注から納品までの流れを図にしたい」といった依頼を渡すと、工程やステップを洗い出し、ボードに配置しやすい構成案を作ってくれます。ゼロから図を考える負担が軽くなります。</p>
+<h3>活用5：ワークショップ進行台本のたたき台</h3>
+<p>テーマと目的を伝えると、アイスブレイク・発散・収束といった流れに沿った進行台本のたたき台を作ってくれます。誰が担当しても一定の質で場を進められます。</p>
+<h3>活用6：ボード内容の議事録・共有メモ化</h3>
+<p>ワークショップ後のボードの内容を渡すと、決まったこと・宿題・次回の論点を整理した共有メモにまとめてくれます。参加できなかった人への共有もスムーズになります。</p>
+<table>
+<thead><tr><th>業務</th><th>手作業だと</th><th>Claude Code活用後</th></tr></thead>
+<tbody>
+<tr><td>付箋の整理</td><td>一枚ずつ人力で仕分け</td><td>テーマ別に自動でグルーピング</td></tr>
+<tr><td>行動への落とし込み</td><td>議論しっぱなしで放置</td><td>実行タスク案に変換</td></tr>
+<tr><td>図解づくり</td><td>ゼロから構成を考える</td><td>工程を洗い出し構成案を提示</td></tr>
+<tr><td>進行台本</td><td>慣れた人の頭の中だけ</td><td>台本のたたき台を数分で作成</td></tr>
+</tbody>
+</table>
+
+<h2 id="s3">3. 業種別・オンラインホワイトボードAI活用シーン</h2>
+<h3>コンサル・士業</h3>
+<p>顧客との課題整理やロードマップづくりでMiroを使う場面が多い業種です。付箋の分類とタスクへの落とし込みで、議論を成果物に素早くまとめられます。</p>
+<h3>Web制作・広告代理店</h3>
+<p>サイト構成やキャンペーン企画の発散にMiroが活躍します。ブレスト内容の要約と深掘りで、提案の幅を広げられます。</p>
+<h3>製造業・メーカー</h3>
+<p>業務改善や工程見直しのワークショップに向いています。業務フロー図の構成案づくりで、現場の流れを見える化しやすくなります。</p>
+<h3>教室・スクール</h3>
+<p>カリキュラム設計やイベント企画のアイデア出しに使えます。進行台本のたたき台で、企画会議を短時間で回せます。</p>
+<h3>小売・サービス業</h3>
+<p>店舗改善やサービス設計のアイデア整理に向いています。ボード内容の共有メモ化で、シフトの都合で参加できないスタッフにも共有できます。</p>
+
+<h2 id="s4">4. 導入の4ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-miro-integration-02.jpg" alt="4. 導入の4ステップ" style="width: 100%; height: auto; display: block;">
+</div>
+<p>専門的なプログラミングは不要です。次の4ステップで、無理なく始められます。</p>
+<h3>ステップ1：目的を1つに絞る</h3>
+<p>まずは「付箋の整理を楽にしたい」「ブレストを行動につなげたい」など、困りごとを1つに絞ります。あれもこれもと欲張らず、効果を感じやすい一点から始めるのがおすすめです。</p>
+<h3>ステップ2：データの準備</h3>
+<p>Miroの付箋やボードの内容を、テキストで書き出せるように整えておきます。AIに渡す情報を、必要な部分だけまとめておくとスムーズです。</p>
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「この付箋をテーマ別に分類して」「このアイデアをタスクに落とし込んで」といった具体的な指示を、日本語で伝えます。出力を見ながら指示を調整し、自社のやり方に合わせていきます。</p>
+<h3>ステップ4：小さく試して広げる</h3>
+<p>まずは1つのボードで試し、手応えを確かめてから活用の幅を広げます。最終的にどのアイデアを採用し、何を実行するかの判断は、必ず人が行います。</p>
+
+<h2 id="s5">5. 運用で押さえておきたい注意点</h2>
+<ul>
+<li><strong>採用・実行の判断は人が行う</strong>：AIはあくまで整理役です。どのアイデアを採用し実行するかの最終判断は、人が持ち続けます。</li>
+<li><strong>提案はたたき台として扱う</strong>：分類や台本の案はあくまで下書きです。自社の実情に合わせて手を入れる前提で使います。</li>
+<li><strong>顧客・社内の情報の取り扱いに配慮する</strong>：ボードには取引先名や社内の検討事項が含まれます。渡す範囲を決め、必要な部分だけを共有します。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：ツールのデータにアクセスする権限は、必要な範囲に絞って設定します。</li>
+<li><strong>属人化を解消する意識を持つ</strong>：進行台本や整理の型を残しておくことで、担当者が変わっても同じ質を保てます。</li>
+</ul>
+<p>AIはあくまで「アイデアを形にする手伝い役」です。何を大切にし、どこへ進むかという判断は、人が持ち続けることが大切です。</p>
+
+<h2 id="s6">6. 他のツールとの違い</h2>
+<p>ドキュメント作成ツールは文章を、タスク管理ツールはやることの一覧を扱うのが得意です。一方、Miroは、付箋や図を自由に広げて「発想を空間的に整理する」ことに強みがあります。頭の中のもやもやを、まず視覚的に外に出したいときに力を発揮するツールです。</p>
+<p>Claude Codeを使えば、Miroに貼り出したアイデアの整理や、図解の構成づくり、行動への落とし込みまでを幅広く手伝ってもらえます。今使っているMiroはそのままに、その周辺の手間だけをAIに任せる、という始め方であれば、大きな入れ替えをせずに効率化を進められます。まずは付箋の整理など、負担に感じている一点から取り入れてみるのがおすすめです。</p>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. パソコンやAIの専門知識がなくても導入できますか？</h3>
+<p>最初の環境づくりだけ少しハードルを感じるかもしれません。設定に不安がある場合は、導入部分だけサポートを受けることで、スムーズに始められます。</p>
+<h3>Q. ボードの内容をそのままAIに渡して大丈夫ですか？</h3>
+<p>取引先名や社内の検討事項を含むことがあるため、取り扱いには配慮が必要です。渡す範囲を決め、必要な部分だけを共有する運用にすることで、安心して活用できます。</p>
+<h3>Q. どこまでを任せられますか？</h3>
+<p>付箋の分類、ブレストの要約と深掘り、アイデアからタスクへの落とし込み、図解の構成案づくり、進行台本のたたき台づくりまでを任せられます。何を採用し実行するかの判断は人が行う前提で組み立てると安心です。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「自社のアイデア出しや業務の見える化を効率化したいけれど、Claude Codeの導入や使い方が不安」という中小企業の方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<div class="price">3,000円〜</div>
+<p>まずはアイデア出しや業務図解など、負担に感じている一点から。御社に合った「ちょうどいい自動化」をご提案します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+</div>
+
+<footer>
+&copy; Piste — AIコンサルティング. All rights reserved.
+</footer>
+</body>
+</html>

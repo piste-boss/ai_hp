@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × フードデリバリー連携でメニュー文を自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeとフードデリバリー運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。">
+<meta name="keywords" content="Claude Code,フードデリバリー,Uber Eats,出前館,飲食店,宅配,メニュー説明文,売上分析,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × フードデリバリー連携でメニュー文を自動化">
+  <meta property="og:description" content="Claude Codeとフードデリバリー運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-food-delivery-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-29T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × フードデリバリー連携でメニュー文を自動化">
+  <meta name="twitter:description" content="Claude Codeとフードデリバリー運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-food-delivery-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html","headline":"Claude Code × フードデリバリー連携でメニュー文・商品写真の説明・売上分析をAI自動化！飲食店の宅配売上アップガイド","alternativeHeadline":"Claude Code × フードデリバリー連携でメニュー文を自動化","description":"Claude Codeとフードデリバリー運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-food-delivery-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-29T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","フードデリバリー","Uber Eats","出前館","飲食店","宅配","メニュー説明文","売上分析","業務自動化","AI活用"],"wordCount":4244,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × フードデリバリー連携でメニュー文を自動化","item":"https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html#faq","mainEntity":[{"@type":"Question","name":"パソコンが得意ではありませんが使えますか。","acceptedAnswer":{"@type":"Answer","text":"日本語で「こうしたい」と伝えるだけで進められます。専門的な知識は要りません。"}},{"@type":"Question","name":"書いてもらった文章をそのまま使ってよいですか。","acceptedAnswer":{"@type":"Answer","text":"たたき台として受け取り、店主が確認して整えてから使ってください。実物との食い違いを防ぐためにも、最終判断は人が担います。"}},{"@type":"Question","name":"複数の宅配サービスに出店していますが対応できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。サービスごとに文字数や見え方が違うため、「短い版」「詳しい版」を用意しておくと使い回しが楽になります。"}},{"@type":"Question","name":"何から始めるのがよいですか。","acceptedAnswer":{"@type":"Answer","text":"いちばん売りたい商品1つの説明文づくりから始めてください。仕上がりを見れば、次に任せたい作業が自然に見えてきます。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × フードデリバリー連携でメニュー文・商品写真の説明・売上分析をAI自動化！飲食店の宅配売上アップガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-29">公開日：2026年7月29日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-food-delivery-integration.webp" alt="Claude Code × フードデリバリーでメニュー文づくりと売上分析を自動化するイメージ" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>フードデリバリーに出店したが注文が伸びず、説明文を書く時間もない飲食店</li><li><strong>できるようになること：</strong>宅配向けのメニュー説明文・写真の添え言葉・セット企画・評価返信の下書きと、時間帯別・商品別の売上集計を用意できる</li><li><strong>必要なもの：</strong>Claude Code と、素材や調理のこだわりのメモ、管理画面から取り出した注文データ</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「デリバリーを始めたものの、注文が伸びない」「メニューの説明文を書く時間がない」「どの商品が売れているのか感覚でしか分からない」。<a href="https://merchants.ubereats.com/jp/ja/" target="_blank" rel="noopener">Uber Eats</a> や出前館などのフードデリバリーに出店した飲食店から、こうした声をよく聞きます。店内営業だけでも手一杯なのに、宅配用の運用まで手が回らないのが実情です。この記事では、Anthropic公式のAIコーディングツール Claude Code とフードデリバリーの運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・販促企画・売上分析までを、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code とは何か</a></li>
+<li><a href="#sec2">2. デリバリーの注文が伸びない本当の理由</a></li>
+<li><a href="#sec3">3. Claude Code はフードデリバリー運用の何を自動化できますか？</a></li>
+<li><a href="#sec4">4. 業態別の活用シーン</a></li>
+<li><a href="#sec5">5. フードデリバリーに Claude Code を取り入れるには何から始めますか？</a></li>
+<li><a href="#sec6">6. 手作業での運用との違い</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code とは何か</h2>
+<p>Claude Code は、Anthropic が公式に提供している AI コーディングツールです。名前に「コーディング」とありますが、できることはプログラム作成だけではありません。手元の資料や売上データを読み取り、内容を理解し、文章にまとめ、決まった手順を何度でも繰り返し実行してくれます。</p>
+<p>操作は日本語の会話だけで完結します。「この商品の説明文を、写真の見栄えに合う短い言葉で3案つくって」と伝えるだけで作業が進みます。関数もプログラムも覚える必要がないため、日々パソコンやタブレットを触っている方であれば十分に使いこなせます。</p>
+<p>デリバリー運用は「文章をつくる」「数字を数える」「同じ作業を繰り返す」の集まりです。まさに Claude Code の得意分野が重なる領域といえます。</p>
+<h2 id="sec2">2. デリバリーの注文が伸びない本当の理由</h2>
+<p>料理の味に問題がなくても、宅配で選ばれないことはよくあります。原因の多くは、料理そのものではなく「見せ方」と「振り返り」にあります。</p>
+<ul>
+<li>商品名だけが並び、どんな味なのかが伝わっていない</li>
+<li>写真は良いのに、添える言葉が「おいしい」だけで差が出ていない</li>
+<li>セットや組み合わせの提案がなく、注文単価が上がらない</li>
+<li>時間帯や曜日ごとの売れ方を把握しないまま、同じ品揃えを続けている</li>
+<li>悪い評価が付いても、なぜそう感じられたのかを振り返れていない</li>
+</ul>
+<p>画面の中で他店と横並びになる以上、伝わる言葉があるかどうかで結果が変わります。しかし営業中の店主に、文章を練る時間はほとんどありません。</p>
+<h2 id="sec3">3. Claude Code はフードデリバリー運用の何を自動化できますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-food-delivery-integration-01.webp" alt="デリバリー運用で自動化できる5つの活用シーン" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>1. メニュー説明文づくり</h3>
+<p>「使っている素材」「調理法」「どんなときに食べてほしいか」を伝えると、宅配向けの説明文をいくつも提案してくれます。宅配は届くまでに時間が空くため、店内とは違う訴求が要ります。「冷めてもおいしい」「持ち帰りやすい容器」といった宅配ならではの安心材料を、自然な言葉で盛り込めます。</p>
+<h3>2. 商品写真に添える短い言葉づくり</h3>
+<p>一覧画面で目に入るのは、写真と数十文字の言葉だけです。「一言で食欲をそそる表現を5案」と頼めば、長さを揃えた候補が並びます。その中から店の雰囲気に合うものを選ぶだけで、全商品の言葉が短時間で整います。</p>
+<h3>3. セット商品・販促企画のたたき台づくり</h3>
+<p>「平日の昼にひとりで注文する方向けのセットを考えて」と伝えれば、組み合わせと価格帯の案が出てきます。単品ばかりで注文単価が伸び悩む店にとって、この提案づくりだけでも効果があります。</p>
+<h3>4. 評価コメントへの返信文づくり</h3>
+<p>寄せられた感想に返す言葉も任せられます。厳しい内容ほど返信の書き方に悩むものですが、事実を受け止めつつ改善の姿勢を示す文面のたたき台があれば、感情的にならずに済みます。公開前に必ず店主が読み、自店の言葉に整えてから使います。</p>
+<h3>5. 売上データの集計と月次の振り返り</h3>
+<p>管理画面から取り出した注文データを渡し、「時間帯別・商品別に集計して、伸びている商品と落ちている商品を挙げて」と指示すれば、表と要点がまとまって出てきます。感覚ではなく数字で品揃えを見直せるようになり、翌月の打ち手が具体的になります。店内の売上と合わせて見るなら、<a href="claude-code-airregi-integration.html">Airレジとの連携</a>で同じ形の集計ができます。</p>
+<h2 id="sec4">4. 業態別の活用シーン</h2>
+<table><thead><tr><th>業態</th><th>主な悩み</th><th>Claude Code の使いどころ</th></tr></thead><tbody>
+<tr><td>ラーメン・麺類</td><td>伸びやすさを心配され選ばれにくい</td><td>容器や食べ方の工夫を説明文に落とし込む</td></tr>
+<tr><td>弁当・定食</td><td>似た商品が多く埋もれる</td><td>素材や量の違いを短い言葉で明確に伝える</td></tr>
+<tr><td>カフェ・スイーツ</td><td>単価が低く注文が伸びない</td><td>組み合わせセットや季節企画の案を出す</td></tr>
+<tr><td>居酒屋・惣菜</td><td>夜の宅配需要を取り込めていない</td><td>時間帯別の売れ方を集計し品揃えを調整する</td></tr>
+<tr><td>ゴーストキッチン</td><td>実店舗がなく世界観が伝わらない</td><td>ブランドの物語を説明文全体で統一する</td></tr>
+</tbody></table>
+<h2 id="sec5">5. フードデリバリーに Claude Code を取り入れるには何から始めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-food-delivery-integration-02.webp" alt="導入の4ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<ol>
+<li><strong>改善したい商品を5つに絞る</strong>：全品を一度に見直そうとせず、売りたい商品や伸ばしたい商品から手を付けます。効果が見えやすく、続けやすくなります。</li>
+<li><strong>材料をそろえる</strong>：使っている素材、調理のこだわり、想定する食べる場面をメモにまとめます。この材料の濃さが、出てくる文章の質をそのまま決めます。</li>
+<li><strong>Claude Code に日本語で指示する</strong>：「この商品の説明文を、宅配で選ばれる視点で3案つくって」と伝えます。出てきた案に「もっと短く」「素材の名前を前に」と注文を重ねて仕上げます。</li>
+<li><strong>小さく試して広げる</strong>：まず数品だけ差し替え、2週間ほど注文の動きを見ます。手応えがあれば同じやり方を他の商品にも広げていきます。</li>
+</ol>
+<h2 id="sec6">6. 手作業での運用との違い</h2>
+<table><thead><tr><th>項目</th><th>これまでの手作業</th><th>Claude Code を使った運用</th></tr></thead><tbody>
+<tr><td>メニュー説明文</td><td>営業後に少しずつ書き、途中で止まる</td><td>材料を渡せば全品分の案が短時間でそろう</td></tr>
+<tr><td>写真の添え言葉</td><td>思いつきで書くため店内で表現が揃わない</td><td>長さと調子を統一した候補から選べる</td></tr>
+<tr><td>販促企画</td><td>他店の真似になりがち</td><td>自店の商品構成に沿った案を複数比べられる</td></tr>
+<tr><td>評価への返信</td><td>気が重く後回しになる</td><td>たたき台があり短時間で丁寧に返せる</td></tr>
+<tr><td>売上の振り返り</td><td>感覚で判断している</td><td>時間帯別・商品別の数字を根拠に判断できる</td></tr>
+</tbody></table>
+<h2 id="sec7">7. 運用上の注意点</h2>
+<ul>
+<li><strong>公開前は必ず人が確認する</strong>：味や量に関わる表現は、実物と食い違うと信頼を損ないます。最終確認は必ず店主が行います。</li>
+<li><strong>誇大な表現は避ける</strong>：「日本一」「絶対に」といった断定は避け、素材や調理法など事実で伝えます。</li>
+<li><strong>注文者の個人情報は扱わない</strong>：氏名や住所を含むデータは渡さず、集計に必要な商品名と数量だけを使います。</li>
+<li><strong>自店らしさを残す</strong>：整った文章ほど無個性になりがちです。最後に店主の言葉をひとこと足すだけで印象が変わります。</li>
+<li><strong>管理画面の権限は最小限に</strong>：外部とつなぐ場合は、必要な範囲だけを許可します。最初から全体を開放する必要はありません。</li>
+</ul>
+<h2 id="sec8">よくある質問</h2>
+<p><strong>パソコンが得意ではありませんが使えますか。</strong></p>
+<p>日本語で「こうしたい」と伝えるだけで進められます。専門的な知識は要りません。</p>
+<p><strong>書いてもらった文章をそのまま使ってよいですか。</strong></p>
+<p>たたき台として受け取り、店主が確認して整えてから使ってください。実物との食い違いを防ぐためにも、最終判断は人が担います。</p>
+<p><strong>複数の宅配サービスに出店していますが対応できますか。</strong></p>
+<p>できます。サービスごとに文字数や見え方が違うため、「短い版」「詳しい版」を用意しておくと使い回しが楽になります。</p>
+<p><strong>何から始めるのがよいですか。</strong></p>
+<p>いちばん売りたい商品1つの説明文づくりから始めてください。仕上がりを見れば、次に任せたい作業が自然に見えてきます。</p>
+<h2 id="sec9">まとめ</h2>
+<p>デリバリーは、画面の中で他店と真正面から比べられる場所です。だからこそ、写真と数十文字の言葉が売上を左右します。とはいえ営業の合間にその文章を練り続けるのは現実的ではありません。</p>
+<p>Claude Code に文章づくりと数字の集計を任せ、店主は「どれを選ぶか」「何を出すか」の判断に集中する。この分担ができれば、少人数の店でも宅配の見せ方を継続的に磨いていけます。まずは1商品から、小さく試してみてください。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、ココナラのメッセージ機能からお気軽にご相談ください。導入サポート（1時間 ¥10,000 税込）で、あなたの業務に合わせた自動化の第一歩をいっしょに設計します。まずは購入画面に進むボタンからお進みください。</p>
+<p>これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「デリバリーの注文が伸びない」「メニューの説明文を書く時間がない」という飲食店の方に向けて、導入から自店に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラで相談する</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-timee-integration.html"><img src="../images/blog-claude-code-timee-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × タイミー連携で募集文・手順書をAI自動化</span></a><a class="seo-related-card" href="claude-code-mercari-shops-integration.html"><img src="../images/blog-claude-code-mercari-shops-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × メルカリShops連携で出品・注文対応・分析をAI自動化</span></a><a class="seo-related-card" href="claude-code-airregi-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

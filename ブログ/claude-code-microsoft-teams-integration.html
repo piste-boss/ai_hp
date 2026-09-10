@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化！中小企業の社内コミュニケーション効率化ガイド</title>
+<meta name="description" content="Claude CodeとMicrosoft Teamsを組み合わせ、会議の議事録自動作成・チャット要約・決定事項のタスク化・社内アナウンス下書き・週次サマリー作成をAI自動化する方法を解説。中小企業向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,Microsoft Teams,Teams,議事録,会議要約,チャット,タスク管理,社内コミュニケーション,中小企業,業務自動化,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化！中小企業の社内コミュニケーション効率化ガイド</h1>
+
+<p class="lead">「Teamsのチャットが流れていって、大事な連絡を見落とす」「会議は録画しているのに、議事録づくりが後回しでたまっていく」「あちこちのチャネルで決まったことが共有されず、同じ話を何度もしている」——Microsoft Teamsを社内の連絡基盤にしている中小企業ほど、この“情報は溜まっているのに整理されていない”壁に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、ビジネスチャット・会議の定番である<strong>Microsoft Teams</strong>を組み合わせ、会議要約・チャットの整理・タスク化までをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ「Microsoft Teams × Claude Code」なのか</a></li>
+<li><a href="#s2">2. Claude Codeとは（おさらい）</a></li>
+<li><a href="#s3">3. 連携でできること・活用5選</a></li>
+<li><a href="#s4">4. 業種別の活用シーン</a></li>
+<li><a href="#s5">5. 非エンジニアのための導入4ステップ</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ「Microsoft Teams × Claude Code」なのか</h2>
+<p>Microsoft Teamsは、チャット・会議・ファイル共有を1か所にまとめられる社内コミュニケーションの定番ツールです。導入すれば連絡の基盤は整いますが、実際に使い込むほど「チャネルが増えて情報が散らばる」「会議の録画はあるが議事録が追いつかない」「決定事項やタスクが埋もれる」といった課題が次々と出てきます。</p>
+<p>Claude Codeは、こうした「読んで・要約して・整理する」作業を日本語の指示だけでAIに任せられるツールです。会議の文字起こしから要点と決定事項を抜き出したり、長いチャットのやり取りを短くまとめたり、決まったことを担当者・期限つきのタスク一覧に変換したりといった作業を横断的にサポートできます。プログラミングの知識は不要で、やりたいことを言葉で伝えるだけです。</p>
+<p>つまり、Teamsという「情報が集まる場所」に対して、Claude Codeを「情報を整理する専属アシスタント」として配置するイメージです。</p>
+
+<h2 id="s2">2. Claude Codeとは（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツールです。最大の特徴は、専門用語を覚えなくても「〇〇して」と日本語で頼むだけで、文章作成・要約・情報整理・分類までこなしてくれる点にあります。</p>
+<ul>
+<li>ノーコードに近い操作感：コードを書かずに業務指示が出せる</li>
+<li>長文の要約・整理：会議の文字起こしや長いチャットを短くまとめられる</li>
+<li>繰り返し作業の自動化：一度作った要約・議事録の型を毎回の会議に再利用できる</li>
+</ul>
+<p>Teams単体では「連絡を集める仕組み」は手に入りますが、「集まった情報をどう要約し、誰の何のタスクに落とすか」は自分で行う必要があります。そこをClaude Codeが補うことで、社内コミュニケーションのいちばん重い「整理と振り分け」が一気に軽くなります。</p>
+
+<h2 id="s3">3. 連携でできること・活用5選</h2>
+<h3>① 会議の文字起こしから議事録を自動作成</h3>
+<p>Teamsの会議でとった文字起こしテキストを渡すだけで、「議題」「決定事項」「次のアクション」を整理した議事録の下書きを作成します。会議後すぐに共有できる形にまとまるので、議事録づくりに追われる時間を大きく減らせます。</p>
+<h3>② 長いチャットスレッドの要約</h3>
+<p>何十件にもなったチャネルのやり取りを読み取り、「何が論点で」「どう決まったか」を短くまとめます。後から参加したメンバーも、長文を全部追わずに経緯をつかめます。</p>
+<h3>③ 決定事項のタスク化・担当割り</h3>
+<p>会議やチャットで決まったことから、「誰が・いつまでに・何をするか」を担当者と期限つきのタスク一覧に変換します。決定が会話の中に埋もれず、実行に移しやすくなります。</p>
+<h3>④ 連絡文・アナウンスの下書き</h3>
+<p>「来週の全社ミーティングの案内」「シフト変更の周知」といった社内アナウンスを、要点を押さえた読みやすい文面で下書きします。送る前に人が確認するだけで、連絡の質とスピードを両立できます。</p>
+<h3>⑤ 週次の活動サマリー作成</h3>
+<p>1週間分のチャネルの動きや決定事項をまとめ、「今週決まったこと」「持ち越しの課題」を週次サマリーとして整理します。情報共有のための定例まとめづくりが、ぐっと楽になります。</p>
+
+<h2 id="s4">4. 業種別の活用シーン</h2>
+<table>
+<thead><tr><th>業種</th><th>活用シーン</th></tr></thead>
+<tbody>
+<tr><td>士業・コンサル</td><td>顧客打ち合わせの議事録づくりと決定事項のタスク化を効率化</td></tr>
+<tr><td>小売・飲食店</td><td>店舗間のチャネル連絡の要約とシフト・周知アナウンスの下書きを時短</td></tr>
+<tr><td>建設・工事業</td><td>現場ごとのやり取りの整理と、決定事項の担当・期限への落とし込みをサポート</td></tr>
+<tr><td>IT・制作業</td><td>プロジェクトチャネルの論点整理と週次サマリー作成で進捗共有を効率化</td></tr>
+<tr><td>医療・福祉</td><td>申し送り・連絡事項の要約と、対応漏れを防ぐタスク一覧づくりを支援</td></tr>
+</tbody>
+</table>
+
+<h2 id="s5">5. 非エンジニアのための導入4ステップ</h2>
+<ol>
+<li>目的を1つに絞る：まずは「会議の議事録を自動でまとめたい」など、効果が見えやすい作業を一つ選びます。</li>
+<li>Claude Codeを用意する：PCにClaude Codeを導入し、「どの会議・どのチャネルを・どんな形にまとめたいか」を日本語で伝えられる状態にします。</li>
+<li>つなぎ方を決める：会議の文字起こしやチャットの本文をClaude Codeに渡して要約・整理し、Teamsへの共有は手作業から始めると安全です。慣れてきたら定例の流れに組み込みます。</li>
+<li>小さく試して広げる：1つの作業でうまく回ったら、チャット要約・タスク化・週次サマリーへと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり全自動化を狙わず、「まず一つの作業を確実に楽にする」こと。小さな成功体験が、社内への定着と継続につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li>認証情報の管理：Teamsやアカウントのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li>共有前は必ず人が確認する：議事録やアナウンスはAIに下書きまで任せ、社内に共有する前に必ず人が最終チェックする設計にします。</li>
+<li>機密・個人情報の取り扱い：会議やチャットには社外秘や個人情報が含まれます。扱う範囲を決め、社内ルールに沿って慎重に管理します。</li>
+<li>要約の取りこぼし確認：AIの要約は便利ですが、重要なニュアンスが落ちることもあります。決定事項は元の発言と突き合わせて確認します。</li>
+<li>整理ルールの明文化：議事録やタスクの書き方の型を記録に残し、担当者が変わってもまとめ方がぶれないようにしておきます。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この会議の議事録をまとめて」といった頼み方で十分です。</p>
+<h3>Q. 会議の内容が社外に漏れないか心配です。</h3>
+<p>扱う情報の範囲を社内で決め、機密性の高い会議は対象から外すといった運用にできます。共有前に人が確認する設計にしておけば、内容の管理を保ったまま活用できます。</p>
+<h3>Q. どのくらいの作業から始めるのがおすすめですか？</h3>
+<p>まずは「会議の議事録づくり」や「長いチャットの要約」から始めるのがおすすめです。毎週発生する作業なので効果を実感しやすく、その後のタスク化や週次サマリーにもスムーズに広げられます。</p>
+<h3>Q. すでにTeamsを使っていますが、何か入れ替えが必要ですか？</h3>
+<p>入れ替えは不要です。今お使いのTeamsはそのままに、会議やチャットの整理という「手が回りにくい部分」だけをClaude Codeが補う形なので、無理なく始められます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「Teamsは使っているけれど、議事録や情報整理で手が止まっている」。そんな方に向けて、Claude Codeの導入から最初の社内コミュニケーション自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">3,000円〜</div>
+<p>これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った「ちょうどいい自動化」をご提案します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+</div>
+
+<footer>
+&copy; Piste — AIコンサルティング. All rights reserved.
+</footer>
+</body>
+</html>

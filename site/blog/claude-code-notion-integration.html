@@ -2,10 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
-<title>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド | Piste</title>
+<title>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化 | Piste AI EVANGELISTS</title>
 <meta name="description" content="Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。">
 <meta name="keywords" content="Claude Code,Notion連携,Notion MCP,社内Wiki,議事録,タスク管理,中小企業,業務自動化">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,29 +131,84 @@ th{background:var(--dark);color:var(--gold-light);}
 .cta h2{color:var(--black);border:none;padding:0;}
 .cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
 </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-notion-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化">
+  <meta property="og:description" content="Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-notion-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-notion-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-05-01T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化">
+  <meta name="twitter:description" content="Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-notion-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-notion-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-notion-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-notion-integration.html","headline":"Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド","alternativeHeadline":"Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化","description":"Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-notion-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-05-01T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","Notion連携","Notion MCP","社内Wiki","議事録","タスク管理","中小企業","業務自動化"],"wordCount":3414,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化","item":"https://www.piste-ai.com/blog/claude-code-notion-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-notion-integration.html#faq","mainEntity":[{"@type":"Question","name":"NotionのMCP連携はプログラミングが必要ですか？","acceptedAnswer":{"@type":"Answer","text":"ClaudeCode本体のインストールと、Notion MCPサーバーの設定（数行の設定ファイル）のみで使えます。設定さえ済めば日常運用は日本語の指示だけで完結します。"}},{"@type":"Question","name":"既存のNotionワークスペースをそのまま使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。ただし、Claudeが書き込むDBの列構成・ステータスの選択肢は事前に整えておくと、自動更新がスムーズになります。"}},{"@type":"Question","name":"セキュリティ面で気になります。","acceptedAnswer":{"@type":"Answer","text":"アクセス可能ページ・書き込み権限を必要最小限に絞り、機密DBは別ワークスペース・別権限管理にすることを推奨します。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 <header>
-<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<a href="../"><img src="../images/logo.webp" alt="Piste" loading="eager" fetchpriority="high" width="240" height="240"></a>
 <nav>
-<a href="../index.html#services">サービス</a>
-<a href="../index.html#blog">ブログ</a>
-<a href="../index.html#contact">お問い合わせ</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
 </nav>
 </header>
 <main>
 <h1>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-05-01">公開日：2026年5月1日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Notionを導入したものの入力・更新が続かず形骸化している中小企業</li><li><strong>できるようになること：</strong>Notion MCP で議事録の転記、顧客台帳の更新、週次レポート、一次レビューを任せ、判断と承認に集中できる</li><li><strong>必要なもの：</strong>Claude Code と Notion MCP の設定、書き込み先のDB構造（権限は最小限）</li></ul></div>
+<!-- /seo:points -->
 <p><strong>2026.05.01 ・ 読了目安 8分</strong></p>
 
 <p>「Notionは導入したけれど、結局誰も書かなくなった」「議事録・案件メモ・社内Wikiを更新する余裕がない」「同じ情報がSlack・メール・GoogleドキュメントとNotionに散らばっている」——中小企業のNotion運用は、最初の数か月は盛り上がるものの、入力負荷の高さで形骸化しやすいのが現実です。</p>
-<p>この入力・整理・更新という"続ける部分"を丸ごと引き受けてくれるのが、<strong>Claude CodeとNotion MCPの連携</strong>です。Claude CodeをNotionワークスペースに接続すれば、議事録の自動転記・タスクの自動起票・顧客台帳の更新・週次レポート生成までを、日本語の指示だけで動かせます。</p>
+<p>この入力・整理・更新という"続ける部分"を丸ごと引き受けてくれるのが、<strong>Claude Codeと<a href="https://developers.notion.com/docs/mcp" target="_blank" rel="noopener">Notion MCP</a>の連携</strong>です。Claude CodeをNotionワークスペースに接続すれば、議事録の自動転記・タスクの自動起票・顧客台帳の更新・週次レポート生成までを、日本語の指示だけで動かせます。</p>
 <p>この記事では、Claude Code × Notion連携で実現できる中小企業向け活用5選、業種別シーン、非エンジニアでも取り入れられる導入4ステップ、運用上の注意点を解説します。</p>
 
 <h2>目次</h2>
 <ol>
 <li>なぜ中小企業のNotion運用は形骸化するのか</li>
-<li>Claude Code × Notion連携でできること</li>
-<li>中小企業向け活用5選</li>
+<li>Claude Code × Notion 連携で何ができますか？</li>
+<li>中小企業は Notion × Claude Code をどう活用できますか？</li>
 <li>業種別の活用シーン</li>
 <li>非エンジニアでも導入できる4ステップ</li>
 <li>運用上の注意点</li>
@@ -63,7 +219,7 @@ th{background:var(--dark);color:var(--gold-light);}
 <p>Notionが続かない原因は、ツールではなく「<strong>誰がいつ書くか</strong>」という運用設計が抜けていることにあります。中小企業では情報整理の専任者を置けず、社長や現場リーダーが片手間で更新するため、忙しくなるほどNotionは止まります。</p>
 <p>Claude Code × Notion MCPは、この「片手間で続けられない」を構造的に解消します。会議終了直後・案件受注直後・売上データ更新時など、業務イベントに合わせてClaudeが自動で書き込み、検索・要約・週次集計までも肩代わりするため、人間は判断と承認に集中できます。</p>
 
-<h2>Claude Code × Notion連携でできること</h2>
+<h2>Claude Code × Notion 連携で何ができますか？</h2>
 <table>
 <tr><th>領域</th><th>できること</th><th>使用するNotion MCP機能</th></tr>
 <tr><td>ページ作成</td><td>議事録・案件メモ・社内Wikiページの自動生成</td><td>notion-create-pages</td></tr>
@@ -73,13 +229,13 @@ th{background:var(--dark);color:var(--gold-light);}
 <tr><td>データソース更新</td><td>顧客ステータス・売上数値の一括反映</td><td>notion-update-data-source</td></tr>
 </table>
 
-<h2>中小企業向け活用5選</h2>
+<h2>中小企業は Notion × Claude Code をどう活用できますか？</h2>
 
 <h3>1. 議事録の自動転記とタスク化</h3>
-<p>Zoom・対面会議の文字起こしをClaude Codeに渡すと、要点抽出→議事録ページ作成→決定事項からタスクDBへ自動起票まで一気通貫で実行できます。会議直後の「議事録書く時間が取れない」が解消され、決定事項が漏れなくNotion上に残ります。</p>
+<p>Zoom・対面会議の文字起こしをClaude Codeに渡すと、要点抽出→議事録ページ作成→決定事項からタスクDBへ自動起票まで一気通貫で実行できます。会議直後の「議事録書く時間が取れない」が解消され、決定事項が漏れなくNotion上に残ります。会議を<a href="claude-code-microsoft-teams-integration.html">Microsoft Teams</a>で行っている場合も、文字起こしを渡す流れは同じです。</p>
 
 <h3>2. 顧客台帳・案件管理の自動更新</h3>
-<p>受注メール・問い合わせフォーム送信などをトリガーに、Claudeが顧客名・要件・優先度を抽出し、Notionの顧客DBに新規行を作成・既存行を更新します。営業がCRMを別途開かずに済み、台帳の鮮度が劇的に上がります。</p>
+<p>受注メール・問い合わせフォーム送信などをトリガーに、Claudeが顧客名・要件・優先度を抽出し、Notionの顧客DBに新規行を作成・既存行を更新します。営業がCRMを別途開かずに済み、台帳の鮮度が劇的に上がります。タスク管理を<a href="claude-code-asana-integration.html">Asana</a>で行っている場合は、案件の起票をそちらに振り分ける構成もとれます。</p>
 
 <h3>3. 社内ナレッジの自動整理とリンク</h3>
 <p>散らばっている手順書・FAQ・トラブル事例をClaudeにスキャンさせ、テーマごとにNotion Wikiページとして再構成、関連ページ間に内部リンクを貼らせます。検索性が上がり、新人教育の工数が大幅に減少します。</p>
@@ -128,13 +284,17 @@ th{background:var(--dark);color:var(--gold-light);}
 <h3>Q. セキュリティ面で気になります。</h3>
 <p>A. アクセス可能ページ・書き込み権限を必要最小限に絞り、機密DBは別ワークスペース・別権限管理にすることを推奨します。</p>
 
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-microsoft-teams-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Microsoft Teams連携で会議要約を自動化</span></a><a class="seo-related-card" href="claude-code-asana-integration.html"><img src="../images/blog-claude-code-asana-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Asana連携でタスク管理をAI自動化</span></a><a class="seo-related-card" href="claude-code-trello-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Trello連携でカンバン式タスク管理をAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
 <div class="cta">
 <h2>Claude CodeのNotion連携を業務に組み込みたい方へ</h2>
 <p>Claude Code導入サポート（¥10,000）で、Notion MCPの初期設定からスラッシュコマンド整備、運用設計までを伴走支援します。中小企業のNotion運用が"続く仕組み"になります。</p>
-<a href="../index.html#contact">導入サポートに申し込む</a>
+<a href="../#contact">導入サポートに申し込む</a>
 </div>
 
-<p>当社は中小企業70社以上のAI導入を支援してきました。Notion運用の形骸化に悩む経営者・一人社長の方は、ぜひお気軽にご相談ください。</p>
+<p>当社は中小企業400社以上のAI導入を支援してきました。Notion運用の形骸化に悩む経営者・一人社長の方は、ぜひお気軽にご相談ください。</p>
 
 </main>
 </body>

@@ -1,0 +1,1 @@
+{"target": "Dropbox の命名や共有リンクの管理が属人化している中小企業", "outcome": "案件フォルダの自動生成、書類の自動仕分け、共有リンクの棚卸しなどを Claude Code に指示して定例化できる", "requirement": "Claude Code と、Dropbox App（API）のアクセストークン"}

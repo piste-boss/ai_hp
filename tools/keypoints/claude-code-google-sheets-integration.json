@@ -1,0 +1,1 @@
+{"target": "売上・在庫・顧客リストをGoogleスプレッドシートで管理している中小企業", "outcome": "MCP連携でシートを読み書きし、月次売上集計・発注アラート・月次レポートの生成を指示文だけで実行できる", "requirement": "Claude Code と Google Drive MCP サーバーの OAuth 認証設定"}

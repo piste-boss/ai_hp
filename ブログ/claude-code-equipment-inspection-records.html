@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド</title>
+<meta name="description" content="Claude Codeで散らばった設備・備品の情報を一枚の点検一覧にまとめ、故障を先回りで防ぐ手順を解説。十項目の型づくり、納品書・保証書の写し替え、次回点検時期の計算、点検結果の追記、修理と買い替えの判断材料づくりまで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,設備管理,点検記録,備品管理,故障予防,保守,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド</h1>
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-equipment-inspection-records.jpg" alt="Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">エアコンが真夏に止まる。配達に使う車が車検切れの前日に気づかれる。厨房の機械が繁忙期に壊れて、修理まで一週間の休業になる。中小企業の設備トラブルは、たいていいちばん困る日にやってきます。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">点検記録が続かない3つの理由</a></li>
+<li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li>
+<li><a href="#s3">実務5ステップ</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<p>不思議なことではありません。設備や備品の点検は、「壊れていない間は何も起きない仕事」だからです。何も起きないことが成果である仕事は、後回しにされ続け、記録も残らず、<strong>壊れた日に初めて存在を思い出されます</strong>。</p>
+<p>点検の記録がないと、困る場面は具体的にやってきます。この機械を最後に見たのはいつか、誰も答えられない。保守の契約がどの設備に付いているのか分からない。修理と買い替えのどちらが得か、判断する材料が何もない。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、散らばった設備・備品の情報を一枚の点検一覧にまとめ、次にやるべき点検を先回りで見えるようにして、修理や買い替えを考えるための判断材料をそろえる手順を、非エンジニアの方向けに整理します。</p>
+
+<h2 id="s1">点検記録が続かない3つの理由</h2>
+<p>きちんとしていないから記録がないのではありません。記録が残らなくなる仕組みが、点検という仕事の側にあります。</p>
+<h3>1. 情報が場所ごと・人ごとに散っている</h3>
+<p>車の整備記録は車検証入れの中、エアコンの保守契約は書類棚、パソコンの購入時期は買った本人の記憶の中。設備の情報は、<strong>買った経緯ごとに別々の場所へしまわれます</strong>。全体をひと目で見られる一枚は、自分で作らない限りどこにも存在しません。</p>
+<h3>2. 点検の周期が設備ごとに違い、計算が要る</h3>
+<p>車検は二年ごと、消防設備は年に二回、エアコンの清掃は季節の前、パソコンの入れ替えは数年に一度。周期がばらばらなので、<strong>「今月は何を見る月か」を知るには毎回計算が必要</strong>です。計算が要る予定は、カレンダーに載らないまま忘れられます。</p>
+<h3>3. 壊れるまで、見直すきっかけがない</h3>
+<p>設備は黙って動き続けます。調子が落ちていても数字に出ず、止まった日に初めて問題になります。<strong>立ち止まって状態を確かめる日が、カレンダーのどこにもない</strong>。これは借入や契約の見直しが放置されるのと同じ構造です。</p>
+<blockquote>点検が続かないのは、担当者が怠けているからではありません。情報が散らばり、周期の計算が要り、見直す日が存在しないからです。この三つは、いずれも機械に任せて解消できる種類の問題です。</blockquote>
+
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>修理に出すか、買い替えるか、まだ使うかは、経営判断そのもの</strong>です。機械が決めることではありません。実際に設備を見て触って確かめるのも、人にしかできない仕事です。機械に任せるのは、判断の材料を一枚にそろえるまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>一覧の型づくり</td><td>機械</td><td>設備を並べる項目の型を先に作る</td></tr><tr><td>記録の写し替え</td><td>機械</td><td>納品書・保証書・整備記録を型に写す</td></tr><tr><td>次回予定の計算</td><td>機械</td><td>周期から次の点検時期を設備ごとに出す</td></tr><tr><td>今月の点検一覧</td><td>機械</td><td>期限が近い順に今やるべき点検を並べる</td></tr><tr><td>期限超過の指摘</td><td>機械</td><td>予定を過ぎたまま放置の設備を挙げる</td></tr><tr><td>実際の点検作業</td><td><strong>人</strong></td><td>見る・触る・試す。現物の確認は人が行う</td></tr><tr><td>修理・買い替えの決定</td><td><strong>人</strong></td><td>材料を見て、手を打つかどうかを決める</td></tr><tr><td>保守会社とのやり取り</td><td><strong>人</strong></td><td>依頼も交渉も、人が行う</td></tr></tbody></table>
+<p>線引きはこれまでの記事と同じです。<strong>集めて、並べて、思い出させるまでが機械。見て、決めて、頼むのは人</strong>。この順番を守ると、保守会社への依頼も「なんとなく調子が悪い」ではなく「前回の点検から二年、この症状が出ている」という具体的な話になります。</p>
+
+<h2 id="s3">実務5ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-equipment-inspection-records-01.jpg" alt="実務5ステップ" style="width: 100%; height: auto; display: block;">
+</div>
+<h3>ステップ1：一覧の型を先に決める</h3>
+<p>まず、設備を並べる項目の型を作らせます。設備の名前、置き場所、購入時期、購入金額、保証の期限、保守契約の有無、点検の周期、前回の点検日、次回の予定日、今の状態。<strong>この十項目を先に固定してから</strong>、資料の読み取りに進みます。型を先に決めるのは、車もエアコンもパソコンも、同じ形に並べるためです。</p>
+<h3>ステップ2：手元の資料を型に写し替えさせる</h3>
+<p>次に、納品書・保証書・整備記録・保守契約書の控えを集めて渡し、型に沿って一覧にさせます。紙の書類は撮影やスキャンで構いません。ここで必ず、<strong>読み取れない項目は空欄のまま「不明」と書かせます</strong>。購入時期が分からない設備を、それらしい推測で埋めた一覧は、空欄のある正直な一覧より危険です。不明の欄は、現物の銘板や購入先の記録で埋められます。</p>
+<h3>ステップ3：次回の点検時期を計算させ、時間順に並べさせる</h3>
+<p>一覧ができたら、点検の周期と前回の実施日から、<strong>設備ごとの次回予定日を計算させて、近い順に並べ替えます</strong>。これで「今月やるべき点検」「三か月以内に来る点検」が、計算なしで見える一枚になります。車検や消防設備のように法令で時期が決まっているものは、その期限も並べて書かせます。</p>
+<h3>ステップ4：点検のたびに、結果を追記させる</h3>
+<p>点検を実施したら、日付と結果を短く伝えて一覧に追記させます。「異常なし」だけでも構いません。大事なのは、<strong>気になった点をひと言残すこと</strong>です。「音が大きくなった気がする」「効きが弱い」。この小さな記録の積み重ねが、次に壊れる設備を教えてくれる唯一の手がかりになります。</p>
+<h3>ステップ5：材料を並べて、人が決める</h3>
+<p>調子の落ちた設備が出てきたら、判断の材料を並べさせます。購入からの年数、これまでの修理の履歴、修理した場合の見込み額、買い替えた場合の金額。<strong>それぞれの利点と注意点を添えた案を出させ、決めるのは人</strong>です。修理は安く済みますが同じ故障を繰り返すことがあり、買い替えは高くつきますがその後の心配が減ります。どちらが正解かは、その設備が止まったとき事業がどれだけ困るかでしか決められません。</p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-equipment-inspection-records-02.jpg" alt="頼み方の3原則" style="width: 100%; height: auto; display: block;">
+</div>
+<p><strong>1. 項目を名前で指定する</strong></p>
+<p>「設備をまとめて」だけでは、出てくる形が毎回変わります。ステップ1の十項目を名前で伝え、「この型で一覧にしてください」と頼めば、あとから増えた設備も同じ形で追記できます。</p>
+<p><strong>2. 書かれていないことを補わせない</strong></p>
+<p>資料にない購入時期や周期を、推測で埋めさせないようにします。「資料から読み取れない項目は不明と書き、何の資料があれば埋まるかを添えてください」と最初に伝えます。</p>
+<p><strong>3. 一覧を現物と突き合わせる</strong></p>
+<p>出来上がった一覧を持って、一度だけ社内を歩きます。<strong>一覧にあって現物がない設備、現物があって一覧にない設備を見つけるのが目的</strong>です。処分したのに載り続けている機械や、誰かが買い足して記録のない備品が、この一周で必ず見つかります。</p>
+
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>1. 大きな設備だけ載せて、小さな備品を数に入れない</h3>
+<p>止まって困るのは、大きな機械だけではありません。レジ、換気扇、給湯器、業務で使うプリンター。<strong>止まった日に業務が止まるかどうか</strong>を基準に載せると、金額は小さくても大事な備品が一覧に入ってきます。</p>
+<h3>2. 一覧を作って満足し、点検の日を決めない</h3>
+<p>一覧はあくまで台帳で、点検そのものではありません。<strong>月に一度、一覧を開いて「今月の点検」を確かめる日を先に決めておく</strong>。月初の朝一番など、ほかの習慣にくっつけると続きます。</p>
+<h3>3. 点検の結果を記録せず、頭の中に置く</h3>
+<p>見たけれど書かなかった点検は、半年後には無かったことと同じです。「異常なし」の一行でも書き残せば、<strong>次に調子が変わったとき、いつから変わったのかを遡れます</strong>。</p>
+<h3>4. 保証と保守契約の期限を一覧に入れない</h3>
+<p>保証が切れた翌月に壊れるのは、よくある話です。保証の期限と保守契約の範囲を一覧に載せておくと、<strong>期限が切れる前に、延長するか手放すかを考える機会</strong>が生まれます。</p>
+<h3>5. 修理の履歴を捨てて、同じ判断を繰り返す</h3>
+<p>「この機械、前にも同じところを直した気がする」を記憶に頼ると、修理と買い替えの判断を毎回ゼロからやり直すことになります。修理のたびに日付と金額と内容を一覧へ追記すれば、<strong>積み上がった修理代が買い替えの金額に近づいた瞬間</strong>が見えます。</p>
+
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>飲食店</strong> — 冷蔵庫・製氷機・厨房機器は、止まった日に営業が止まります。夏前のエアコン、繁忙期前の厨房と、山場の前に点検が並ぶ一覧にしておくと、いちばん困る日の故障が減ります。</p>
+<p><strong>製造業</strong> — 機械の点検は品質と安全に直結します。法令で決まった点検と自主的な点検を同じ一覧に載せると、抜けの確認が一枚で済みます。</p>
+<p><strong>美容室・治療院</strong> — シャンプー台、施術のベッド、タオルの洗濯機。お客様の目の前で使う設備は、故障がそのまま信頼に関わります。小さな違和感の記録が特に効く業種です。</p>
+<p><strong>建設・工務店</strong> — 車両と工具が資産の中心です。車検と保険の期限、工具の購入時期を一覧にすると、現場ごとに散らばりがちな情報が事務所の一枚にまとまります。</p>
+<p><strong>教室・スクール</strong> — 冷暖房、プロジェクター、楽器や器具。使用の頻度が季節で波打つ設備は、使わない期間の後に壊れがちです。再開の前に見る、という周期の書き方ができます。</p>
+
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 会計ソフトの固定資産台帳と何が違いますか</h3>
+<p>固定資産台帳は、減価償却のための金額の記録です。この記事で作るのは、<strong>いつ見るか・今どんな状態か・次に何をするかを並べた一覧</strong>で、日々の管理と修理・買い替えの判断のための材料です。帳簿とは目的が違うので、両方あって困ることはありません。</p>
+<h3>Q. 設備が少ない一人事業でも意味がありますか</h3>
+<p>設備が少ないほど、一台が止まったときの影響は大きくなります。車一台とパソコン一台で仕事をしている方こそ、<strong>その二台の状態と期限が一枚で見えること</strong>の価値は大きいはずです。初回の作業も三十分ほどで終わります。</p>
+<h3>Q. 点検そのものもClaude Codeにできますか</h3>
+<p>できません。見る・触る・試すという現物の確認は、人にしかできない仕事です。機械にできるのは、<strong>何をいつ見るべきかを思い出させ、見た結果を記録し、判断の材料を並べること</strong>までです。この線引きは守ってください。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>設備が二十点ほどなら、資料集めを含めて初回は一時間ほど見てください。型ができてしまえば、<strong>月に一度の確認と追記は十分ほど</strong>で済みます。繁忙期の故障が一度防げるだけで、この一時間は十分に元が取れます。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>設備の点検は、何も起きないことが成果の仕事です。だからこそ記録がなければ誰にも見えず、評価もされず、続きません。</p>
+<p>型を決め、資料を写し替え、次回の予定を計算させ、点検のたびに一行残し、材料から人が決める。ここまで整えば、設備のトラブルは「いちばん困る日に突然来るもの」から「予定表の上で先回りできるもの」に変わります。</p>
+<p>集めて、並べて、思い出させるのは機械。見て、決めて、頼むのは人。この線引きを守れば、<strong>設備と向き合う時間は、月に一度の十分で足ります</strong>。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

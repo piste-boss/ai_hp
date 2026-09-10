@@ -2,7 +2,108 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド | Piste</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<title>Claude Code × Google Sheets連携で売上集計・在庫管理を自動化 | Piste AI EVANGELISTS</title>
 <meta name="description" content="Claude Codeを使ってGoogle Sheets（スプレッドシート）の売上集計・在庫管理・帳票作成を自動化する実践ガイド。MCP連携の設定手順から具体的なプロンプト例、中小企業の活用事例まで詳しく解説します。">
 <meta name="keywords" content="Claude Code,Google Sheets,スプレッドシート,自動化,売上集計,在庫管理,中小企業,MCP連携,業務効率化">
 <style>
@@ -38,22 +139,77 @@ pre code{background:none;padding:0;}
 .toc a:hover{color:var(--gold);}
 footer{background:var(--dark);text-align:center;padding:30px;color:#999;margin-top:80px;}
 </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × Google Sheets連携で売上集計・在庫管理を自動化">
+  <meta property="og:description" content="Claude Codeを使ってGoogle Sheets（スプレッドシート）の売上集計・在庫管理・帳票作成を自動化する実践ガイド。MCP連携の設定手順から具体的なプロンプト例、中小企業の活用事例まで詳しく解説します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-google-sheets-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-15T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × Google Sheets連携で売上集計・在庫管理を自動化">
+  <meta name="twitter:description" content="Claude Codeを使ってGoogle Sheets（スプレッドシート）の売上集計・在庫管理・帳票作成を自動化する実践ガイド。MCP連携の設定手順から具体的なプロンプト例、中小企業の活用事例まで詳しく解説します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-google-sheets-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html","headline":"Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド","alternativeHeadline":"Claude Code × Google Sheets連携で売上集計・在庫管理を自動化","description":"Claude Codeを使ってGoogle Sheets（スプレッドシート）の売上集計・在庫管理・帳票作成を自動化する実践ガイド。MCP連携の設定手順から具体的なプロンプト例、中小企業の活用事例まで詳しく解説します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-google-sheets-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-15T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","Google Sheets","スプレッドシート","自動化","売上集計","在庫管理","中小企業","MCP連携","業務効率化"],"wordCount":5624,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × Google Sheets連携で売上集計・在庫管理を自動化","item":"https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html#faq","mainEntity":[{"@type":"Question","name":"1. プログラミング知識がなくても使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、Claude Codeへの指示は自然言語で行えます。初期セットアップ（MCPサーバー導入）にやや技術的な作業がありますが、導入サポートを使えば1〜2時間で利用開始できます。"}},{"@type":"Question","name":"2. データの安全性は大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"Google SheetsへのアクセスはOAuth認証で行われ、Claude Codeはローカル環境で動作します。Anthropicは入力データを学習に使用しないポリシーを採用しており、ビジネス利用にも安心して活用できます。"}},{"@type":"Question","name":"3. 既存のGAS資産は活かせますか？","acceptedAnswer":{"@type":"Answer","text":"はい、既存のGASスクリプトをClaude Codeから呼び出すことも、Claude CodeにGASスクリプト自体を生成・改修してもらうことも可能です。"}},{"@type":"Question","name":"4. 料金はいくらかかりますか？","acceptedAnswer":{"@type":"Answer","text":"Claude Codeは月額20ドル前後のClaudeサブスクリプション、もしくはAPI従量課金で利用できます。中小企業の月次業務量であれば、月額3,000〜10,000円程度で運用できるケースが大半です。"}},{"@type":"Question","name":"5. 導入失敗を避けるコツは？","acceptedAnswer":{"@type":"Answer","text":"最初から全業務を自動化しようとせず、最も時間を取られている1業務（多くは月次集計）から始めることをおすすめします。1業務で成功体験を積むと、社内の協力も得やすくなります。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 <header>
-<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<a href="../"><img src="../images/logo.webp" alt="Piste" loading="eager" fetchpriority="high" width="240" height="240"></a>
 <nav>
-<a href="../index.html#service">サービス</a>
-<a href="../index.html#blog">ブログ</a>
-<a href="../index.html#contact">お問い合わせ</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
 </nav>
 </header>
 <main>
 <h1>Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-15">公開日：2026年7月15日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
 <div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
-  <img src="../images/blog-claude-code-google-sheets-integration.jpg" alt="Claude Code × Google Sheets連携" style="width: 100%; height: auto; display: block;">
+  <img src="../images/blog-claude-code-google-sheets-integration.webp" alt="Claude Code × Google Sheets連携" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
 </div>
 
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>売上・在庫・顧客リストをGoogleスプレッドシートで管理している中小企業</li><li><strong>できるようになること：</strong>MCP連携でシートを読み書きし、月次売上集計・発注アラート・月次レポートの生成を指示文だけで実行できる</li><li><strong>必要なもの：</strong>Claude Code と Google Drive MCP サーバーの OAuth 認証設定</li></ul></div>
+<!-- /seo:points -->
 <p>「毎月の売上集計に半日かかる」「在庫表の更新が漏れて欠品が発生する」「月次レポート作成のたびにスプレッドシートを開いて手作業でコピペ」——こうしたGoogle Sheets（スプレッドシート）まわりの定型業務に時間を奪われている中小企業の経営者・管理担当者は多いはずです。</p>
 
 <p>本記事では、AnthropicのAIコーディングツール「Claude Code」とGoogle SheetsをMCP（Model Context Protocol）で連携させ、売上集計・在庫管理・帳票作成を自動化する具体的な手順と活用事例を解説します。プログラミング知識がなくても、自然言語の指示だけでスプレッドシート業務をAIに任せられる時代の入口を体感していただけるはずです。</p>
@@ -62,8 +218,8 @@ footer{background:var(--dark);text-align:center;padding:30px;color:#999;margin-t
 <h3>目次</h3>
 <ul>
 <li><a href="#section1">1. なぜ今、Google Sheets業務をAI化すべきか</a></li>
-<li><a href="#section2">2. Claude Code × Google Sheets連携の全体像</a></li>
-<li><a href="#section3">3. MCP連携のセットアップ手順</a></li>
+<li><a href="#section2">2. Claude Code は Google スプレッドシートで何ができますか？</a></li>
+<li><a href="#section3">3. Claude Code と Google スプレッドシートの MCP 連携はどう設定しますか？</a></li>
 <li><a href="#section4">4. 売上集計の自動化（実践プロンプト例）</a></li>
 <li><a href="#section5">5. 在庫管理・発注アラートの自動化</a></li>
 <li><a href="#section6">6. 月次レポート自動生成のワークフロー</a></li>
@@ -95,7 +251,7 @@ footer{background:var(--dark);text-align:center;padding:30px;color:#999;margin-t
 
 <p>これまでもGoogle Apps Script（GAS）やマクロでスプレッドシート業務を自動化することは可能でした。しかし、GAS開発には JavaScriptの知識が必要で、要件変更のたびにコード修正が発生します。Claude Codeを使えば、自然言語で「先月分の売上を商品カテゴリ別に集計して新しいシートに出力して」と指示するだけで、AIが自動的に処理を実行してくれます。</p>
 
-<h2 id="section2">2. Claude Code × Google Sheets連携の全体像</h2>
+<h2 id="section2">2. Claude Code は Google スプレッドシートで何ができますか？</h2>
 
 <p>Claude CodeはAnthropicが提供する公式CLIツールで、ターミナル上からClaudeに作業を依頼できる開発者向けインターフェースです。MCP（Model Context Protocol）という仕組みを使うことで、Google Sheets・Drive・Calendar・Gmail等の外部サービスをClaude Codeから直接操作できるようになります。</p>
 
@@ -111,7 +267,7 @@ Google Sheets API
        ↓
 スプレッドシート（読み取り・書き込み・集計・グラフ生成）</code></pre>
 
-<p>この構成により、Claude Codeは「特定のシートを読む」「セル範囲を計算する」「新しいシートを追加する」「条件付き書式を適用する」「グラフを挿入する」といった操作を自律的に行えます。</p>
+<p>この構成により、Claude Codeは<a href="https://developers.google.com/sheets/api/guides/concepts?hl=ja" target="_blank" rel="noopener">Google Sheets API</a> を通じて「特定のシートを読む」「セル範囲を計算する」「新しいシートを追加する」「条件付き書式を適用する」「グラフを挿入する」といった操作を自律的に行えます。</p>
 
 <h3>できることの一例</h3>
 
@@ -123,7 +279,7 @@ Google Sheets API
 <li>月次・週次レポートのGoogleドキュメント自動生成</li>
 </ul>
 
-<h2 id="section3">3. MCP連携のセットアップ手順</h2>
+<h2 id="section3">3. Claude Code と Google スプレッドシートの MCP 連携はどう設定しますか？</h2>
 
 <p>Claude CodeからGoogle Sheetsを操作するには、Google Drive MCPサーバーをインストール・設定します。具体的な手順は以下の通りです。</p>
 
@@ -222,11 +378,11 @@ Google Sheets API
 
 <h3>事例1: 飲食店チェーン（5店舗運営）</h3>
 
-<p>各店舗のPOSデータを統合した売上管理シートを毎週Claude Codeで集計。商品別の販売動向と廃棄率を分析し、メニュー改廃の判断材料を経営会議で活用。週次集計時間が4時間→15分に短縮しました。</p>
+<p>各店舗のPOSデータ（<a href="claude-code-airregi-integration.html">Airレジとの連携</a>で日次取り込みも可能）を統合した売上管理シートを毎週Claude Codeで集計。商品別の販売動向と廃棄率を分析し、メニュー改廃の判断材料を経営会議で活用。週次集計時間が4時間→15分に短縮しました。</p>
 
 <h3>事例2: ECショップ運営会社</h3>
 
-<p>在庫管理シートとセール販売予測を組み合わせた発注計算を自動化。欠品率が15%→3%に改善し、過剰在庫による廃棄ロスも年間120万円削減できたという報告があります。</p>
+<p>在庫管理シートとセール販売予測を組み合わせた発注計算を自動化（<a href="claude-code-shopify-integration.html">Shopify の在庫データ</a>をシートに取り込む形でも構築できます）。欠品率が15%→3%に改善し、過剰在庫による廃棄ロスも年間120万円削減できたという報告があります。</p>
 
 <h3>事例3: 士業事務所（社労士5名）</h3>
 
@@ -249,17 +405,21 @@ Google Sheets API
 <h3>Q5. 導入失敗を避けるコツは？</h3>
 <p>最初から全業務を自動化しようとせず、最も時間を取られている1業務（多くは月次集計）から始めることをおすすめします。1業務で成功体験を積むと、社内の協力も得やすくなります。</p>
 
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-shopify-integration.html"><img src="../images/blog-claude-code-shopify-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Shopify連携でECサイト運営をAI自動化</span></a><a class="seo-related-card" href="claude-code-square-integration.html"><img src="../images/blog-claude-code-square-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化</span></a><a class="seo-related-card" href="claude-code-airregi-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
 <div class="cta">
 <h3>Claude Code導入サポート ¥10,000</h3>
 <p>「自社のスプレッドシート業務をAI化したいが、何から始めればよいかわからない」「MCP連携の設定で詰まってしまった」——そんな経営者・担当者様向けに、Claude Codeの導入から最初の自動化ワークフロー構築までを伴走支援するサービスを提供しています。</p>
-<a href="../index.html#contact">導入サポートに申し込む</a>
+<a href="../#contact">導入サポートに申し込む</a>
 </div>
 
 <p style="margin-top:60px;color:#999;font-size:0.9em;">本記事は、AIコンサルティングサービスPisteが運営するブログです。Claude Code・ChatGPT・Geminiなど生成AIを活用した中小企業の業務自動化について、現場で活きる実践情報を発信しています。</p>
 
 </main>
 <footer>
-<p>&copy; 2026 Piste. All rights reserved.</p>
+<p>&copy; 2026 株式会社Piste. All rights reserved.</p>
 </footer>
 </body>
 </html>

@@ -1,0 +1,1 @@
+{"target": "kintone 導入済みだが転記や横断集計が手作業のまま残っている中小企業", "outcome": "kintone REST API でレコードの自動登録・更新、複数アプリの横断集計、他SaaSとの定期同期を組める", "requirement": "Claude Code と、最小権限で発行した kintone の APIトークンとアプリID"}

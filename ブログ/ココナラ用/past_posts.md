@@ -92,3 +92,75 @@
 | 2026-06-23 | Claude Code × STORES連携でネットショップ・予約・POSをAI自動化！実店舗＆EC両立の中小事業者向け運営効率化ガイド | claude-code-stores-integration.md |
 | 2026-06-24 | Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化！飲食店・小売店の店舗運営効率化ガイド | claude-code-airregi-integration.md |
 | 2026-06-25 | Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド | claude-code-peraichi-integration.md |
+| 2026-06-26 | Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文・サロンブログをAI自動化！美容室・サロンの集客効率化ガイド | claude-code-hotpepper-beauty-integration.md |
+| 2026-06-27 | Claude Code × 食べログ連携で口コミ返信・予約対応・メニュー紹介文をAI自動化！飲食店の集客効率化ガイド | claude-code-tabelog-integration.md |
+| 2026-06-28 | Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化！中小企業・個人事業主の経理効率化ガイド | claude-code-yayoi-integration.md |
+| 2026-06-29 | Claude Code × Yahoo!ショッピング連携で出店・商品ページ・受注対応をAI自動化！中小ECの売上アップガイド | claude-code-yahoo-shopping-integration.md |
+| 2026-06-30 | Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化！中小企業の社内コミュニケーション効率化ガイド | claude-code-microsoft-teams-integration.md |
+| 2026-07-01 | Claude Code × TikTok連携でショート動画の企画・台本・分析をAI自動化！中小企業・店舗の集客効率化ガイド | claude-code-tiktok-integration.md |
+| 2026-07-02 | Claude Code × Trello連携でカンバン式タスク管理をAI自動化！中小企業のビジュアル業務管理ガイド | claude-code-trello-integration.md |
+| 2026-07-03 | Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化！小売店・飲食店の店舗運営効率化ガイド | claude-code-smaregi-integration.md |
+| 2026-07-04 | Claude Code × note連携で記事作成・発信・分析をAI自動化！中小企業・個人事業主のコンテンツ集客効率化ガイド | claude-code-note-integration.md |
+| 2026-07-05 | Claude Code × board連携で見積書・請求書作成・入金管理をAI自動化！フリーランス・一人社長のバックオフィス効率化ガイド | claude-code-board-integration.md |
+| 2026-07-06 | Claude Code × LINE WORKS連携で社内チャット・掲示板・タスク管理をAI自動化！中小企業のビジネスチャット運用効率化ガイド | claude-code-lineworks-integration.md |
+| 2026-07-08 | Claude Code × 楽楽精算連携で経費精算・交通費申請・請求書処理をAI自動化！中小企業の経理・精算業務効率化ガイド | claude-code-rakuraku-seisan-integration.md |
+| 2026-07-09 | Claude Code × Todoist連携でToDo・タスク管理をAI自動化！一人社長・フリーランスのタスク整理効率化ガイド | claude-code-todoist-integration.md |
+| 2026-07-10 | Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド | claude-code-miro-integration.md |
+| 2026-07-11 | Claude Code × アメブロ連携でブログ集客をAI自動化！サロン・店舗・個人事業主の記事作成・投稿効率化ガイド | claude-code-ameblo-integration.md |
+| 2026-07-12 | Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化！ネットショップ・店舗のビジュアル集客効率化ガイド | claude-code-pinterest-integration.md |
+| 2026-07-13 | Claude Code × Etsy連携で海外販売・英語の商品ページ・受注対応をAI自動化！ハンドメイド作家・中小事業者の越境EC売上アップガイド | claude-code-etsy-integration.md |
+| 2026-07-14 | Claude Code × Wantedly連携で採用広報・ストーリー記事・カジュアル面談対応をAI自動化！中小企業・一人社長の採用ブランディング効率化ガイド | claude-code-wantedly-integration.md |
+| 2026-07-15 | Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド | claude-code-google-sheets-integration.md |
+| 2026-07-16 | Claude Code × サイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化！中小企業のグループウェア運用効率化ガイド | claude-code-cybozu-office-integration.md |
+| 2026-07-17 | Claude Code × LinkedIn連携で経営者の情報発信・B2Bリード獲得・プロフィール運用をAI自動化！中小企業・一人社長のビジネスSNS活用ガイド | claude-code-linkedin-integration.md |
+| 2026-07-18 | Claude Code × Threads連携で投稿・返信・分析をAI自動化！中小企業・店舗のテキストSNS集客効率化ガイド | claude-code-threads-integration.md |
+| 2026-07-19 | Claude Code × PayPay連携で売上集計・キャッシュレス対応・クーポン販促をAI自動化！実店舗・小規模事業者の店頭集客効率化ガイド | claude-code-paypay-integration.md |
+| 2026-07-20 | Claude Code × カラーミーショップ連携で商品ページ・受注対応・メルマガをAI自動化！ネットショップ運営者の売上アップガイド | claude-code-colorme-integration.md |
+| 2026-07-21 | Claude Code × minne（ミンネ）連携で作品説明文・オーダー相談・レビュー返信をAI自動化！ハンドメイド作家の国内ファン育成ガイド | claude-code-minne-integration.md |
+| 2026-07-22 | Claude Code × DeepL連携で翻訳・多言語対応をAI自動化！中小企業の海外取引・インバウンド接客効率化ガイド | claude-code-deepl-integration.md |
+| 2026-07-23 | Claude Code × Peatix連携でイベント・セミナー集客をAI自動化！中小企業・講師・コンサルの集客効率化ガイド | claude-code-peatix-integration.md |
+| 2026-07-24 | Claude Code × Make（旧Integromat）連携で複数ステップの業務自動化をAIに設計させる！中小企業のノーコード業務フロー効率化ガイド | claude-code-make-integration.md |
+| 2026-07-25 | Claude Code × Zoho連携で顧客管理・見積請求・連絡対応をオールインワンでAI自動化！中小企業・一人社長の業務統合ガイド | claude-code-zoho-integration.md |
+| 2026-07-26 | Claude Code × じゃらん連携で宿泊プラン作成・口コミ返信・繁閑対策をAI自動化！旅館・ホテル・民泊の集客効率化ガイド | claude-code-jalan-integration.md |
+| 2026-07-27 | Claude Code × RESERVA連携で予約受付・リマインド・キャンセル対策をAI自動化！教室・サロン・士業の予約業務効率化ガイド | claude-code-reserva-integration.md |
+| 2026-07-28 | Claude Code × Googleドライブ連携で資料整理・ファイル検索・共有管理をAI自動化！中小企業・一人社長の「探す時間」削減ガイド | claude-code-google-drive-integration.md |
+| 2026-07-29 | Claude Code × フードデリバリー連携でメニュー文・商品写真の説明・売上分析をAI自動化！飲食店の宅配売上アップガイド | claude-code-food-delivery-integration.md |
+| 2026-07-30 | Claude Code × ANDPAD連携で工事日報・現場写真整理・工程管理をAI自動化！建設・リフォーム会社の事務負担削減ガイド | claude-code-andpad-integration.md |
+| 2026-07-31 | Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ！中小企業のための安全な業務自動化ルールづくりガイド | claude-code-permission-security-guide.md |
+| 2026-08-01 | Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える！中小企業のための自動化コスト管理ガイド | claude-code-model-cost-optimization.md |
+| 2026-08-02 | Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド | claude-code-claude-md-rules.md |
+| 2026-08-03 | Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド | claude-code-context-management.md |
+| 2026-08-04 | Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド | claude-code-denshi-chobo-compliance.md |
+| 2026-08-05 | Claude Codeの自動化が止まった・結果がおかしいときの対処法！中小企業のための切り分け手順と再発防止ガイド | claude-code-troubleshooting-guide.md |
+| 2026-08-06 | Claude Codeの自動化は結局どれだけ効いた？中小企業のための削減時間の記録と社内共有ガイド | claude-code-automation-effect-tracking.md |
+| 2026-08-07 | Claude Codeに任せる仕事・人がやる仕事をどう分ける？中小企業のための線引き判断ガイド | claude-code-task-delegation-boundary.md |
+| 2026-08-08 | Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド | claude-code-confidential-data-rules.md |
+| 2026-08-09 | Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド | claude-code-backup-and-recovery.md |
+| 2026-08-10 | Claude Codeが出した成果物は誰がどう確認する？中小企業のための検収チェック体制づくりガイド | claude-code-deliverable-review-process.md |
+| 2026-08-11 | Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド | claude-code-automation-handover.md |
+| 2026-08-12 | Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド | claude-code-automation-inventory-cleanup.md |
+| 2026-08-15 | Claude Codeで紙の書類・PDF・手書きメモをデータ化する！中小企業のための紙業務デジタル化ガイド | claude-code-paper-document-digitization.md |
+| 2026-08-17 | Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド | claude-code-customer-list-deduplication.md |
+| 2026-08-18 | Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド | claude-code-invoice-amount-reconciliation.md |
+| 2026-08-19 | Claude Codeで補助金申請の準備を効率化！中小企業のための要件整理・事業計画書ドラフトづくりガイド | claude-code-subsidy-application-support.md |
+| 2026-08-20 | Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド | claude-code-dormant-customer-reactivation.md |
+| 2026-08-21 | Claude Codeで契約・サブスクの更新期限を見落とさない！中小企業のための期限一覧づくりと更新可否の判断ガイド | claude-code-contract-renewal-deadline.md |
+| 2026-08-22 | Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド | claude-code-survey-freetext-analysis.md |
+| 2026-08-23 | Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド | claude-code-quote-comparison.md |
+| 2026-08-24 | Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド | claude-code-price-revision-preparation.md |
+| 2026-08-25 | Claude Codeで資金繰りの見通しを立てる！中小企業・一人社長のための入出金予定の整理と資金ショート予防ガイド | claude-code-cashflow-forecast.md |
+| 2026-08-26 | Claude Codeでお客様のお叱りに落ち着いて対応する！中小企業のための一次回答の下書きと再発防止の記録づくりガイド | claude-code-complaint-first-response.md |
+| 2026-08-27 | Claude Codeで毎月の固定費を洗い出す！中小企業・一人社長のための経費削減の判断材料づくりガイド | claude-code-fixed-cost-review.md |
+| 2026-08-28 | Claude Codeで商品・取引先ごとの粗利を出す！中小企業のためのもうけの出どころを見つける利益率整理ガイド | claude-code-gross-margin-analysis.md |
+| 2026-08-29 | Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド | claude-code-receivables-payment-check.md |
+| 2026-08-30 | Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド | claude-code-new-client-credit-check.md |
+| 2026-08-31 | Claude Codeで借入の返済予定を整理する！中小企業のための返済一覧づくりと金利負担の見える化ガイド | claude-code-loan-repayment-overview.md |
+| 2026-09-01 | Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド | claude-code-equipment-inspection-records.md |
+| 2026-09-03 | Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド | claude-code-bcp-emergency-preparedness.md |
+| 2026-09-04 | Claude Codeで受け取った請求書のインボイス対応を確かめる！中小企業のための登録番号チェックと保存整理ガイド | claude-code-invoice-registration-check.md |
+| 2026-09-05 | Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド | claude-code-spec-change-log.md |
+| 2026-09-06 | Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド | claude-code-near-miss-records.md |
+| 2026-09-07 | Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド | claude-code-lost-deal-review.md |
+| 2026-09-08 | Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド | claude-code-delivery-delay-early-warning.md |
+| 2026-09-09 | Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド | claude-code-returns-defect-log.md |
+| 2026-09-10 | Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド | claude-code-subcontractor-track-record.md |

@@ -1,0 +1,1 @@
+{"target": "Airtableで顧客・案件・在庫を管理しているが手入力や転記が多い中小企業", "outcome": "Claude CodeをAirtableにつなぎ、顧客レコード作成・日次レポート・欠品アラートを自動化できる", "requirement": "Airtableのアカウントと対象ベース、アクセストークン、Claude Code"}

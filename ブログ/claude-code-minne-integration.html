@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × minne（ミンネ）連携で作品説明文・オーダー相談・レビュー返信をAI自動化！ハンドメイド作家の国内ファン育成ガイド</title>
+<meta name="description" content="Claude Codeとハンドメイドマーケットminne（ミンネ）の運営を組み合わせ、作品説明文づくり・オーダーメイド相談の返信・レビュー返信・販売データの振り返りをAI自動化する方法を解説。ハンドメイド作家が非エンジニアでも取り組める活用例・ジャンル別シーン・導入4ステップ・注意点を紹介します。">
+<meta name="keywords" content="Claude Code,minne,ミンネ,ハンドメイド,作品説明文,オーダーメイド,レビュー返信,ハンドメイド作家,ファン育成,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × minne（ミンネ）連携で作品説明文・オーダー相談・レビュー返信をAI自動化！ハンドメイド作家の国内ファン育成ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-minne-integration.jpg" alt="Claude Code × minneで作品説明文・オーダー相談・レビュー返信を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「作品はどんどん生まれるのに、説明文を書く時間がなくて出品が止まってしまう」「オーダーメイドの相談メッセージへの返信に、毎回30分以上かかってしまう」「レビューへのお礼が後回しになり、気づけば何日も経っている」——そんな悩みを抱えるハンドメイド作家の方に向けて、Anthropic公式のAIコーディングツール Claude Code と、国内最大級のハンドメイドマーケット minne（ミンネ）を組み合わせ、作品ページづくりからお客様対応・ファン育成までを効率化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. minne運営で「制作以外の時間」が膨らむ理由</a></li>
+<li><a href="#sec2">2. Claude Codeでminne運営のどこを任せられるのか</a></li>
+<li><a href="#sec3">3. ジャンル別・活用シーン</a></li>
+<li><a href="#sec4">4. 導入の4ステップ</a></li>
+<li><a href="#sec5">5. 運用上の注意点</a></li>
+<li><a href="#sec6">6. 他のマーケットとの違い</a></li>
+<li><a href="#sec7">7. よくある質問</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. minne運営で「制作以外の時間」が膨らむ理由</h2>
+<p>minneは、アクセサリー・布小物・陶器・木工・イラストなど、作り手が自分の作品を直接お客様へ届けられる国内のハンドメイドマーケットです。買い手も「作り手の顔が見えるもの」を求めて訪れるため、作品そのものだけでなく、言葉で伝える部分が売れ行きを大きく左右します。</p>
+<p>ところが多くの作家さんが、次のような壁にぶつかります。</p>
+<ul>
+<li><strong>作品説明文が書き切れない</strong>：素材・サイズ・使い方・お手入れ方法まで丁寧に書こうとすると、1点あたり30分近くかかり、出品作業そのものが止まってしまいます。</li>
+<li><strong>オーダーメイド相談の往復が重い</strong>：色違い・サイズ変更・名入れなどの相談は一件ごとに内容が違い、丁寧な返信を書くほど制作時間が削られます。</li>
+<li><strong>発信が続かない</strong>：新作のお知らせや制作の裏側を伝えたい気持ちはあっても、文章を考える余力が残っていません。</li>
+</ul>
+<p>これらは「文章力が足りない」からではなく、言語化という地道な作業に手が回らないことが原因です。まさにAIが力を発揮する領域です。</p>
+<h2 id="sec2">2. Claude Codeでminne運営のどこを任せられるのか</h2>
+<p>Claude Codeは、作品情報や過去のやり取りを読み込ませることで、自然言語の指示だけで次のような作業を手伝ってくれます。</p>
+<ul>
+<li><strong>作品説明文の量産</strong>：素材・サイズ・制作の背景を箇条書きで伝えるだけで、世界観の伝わる説明文を複数案で提案します。</li>
+<li><strong>オーダーメイド相談への返信ドラフト</strong>：お客様からの相談内容を整理し、確認すべき項目（色・サイズ・納期・用途）を漏らさない返信の下書きを用意します。</li>
+<li><strong>レビュー返信文の作成</strong>：いただいた感想の要点をくみ取り、定型文に見えない、一人ひとりに向けたお礼の文面をつくります。</li>
+<li><strong>作家プロフィール・ギャラリー紹介文の見直し</strong>：どんな想いで作っているのかを言葉にし、初めて訪れた方に伝わる自己紹介へ整えます。</li>
+<li><strong>販売データの振り返り</strong>：売れた作品の傾向を月別・カテゴリ別に整理し、次に力を入れる作品づくりのヒントをまとめます。</li>
+</ul>
+<p>いずれも「AIがたたき台を素早くつくり、人が仕上げて公開を判断する」という役割分担が基本です。手を動かす時間を制作に戻しながら、伝える力は落とさずに済みます。</p>
+<h2 id="sec3">3. ジャンル別・活用シーン</h2>
+<h3>アクセサリー作家</h3>
+<p>天然石やパーツの名前、金具の素材、アレルギーへの配慮など、書くべき情報が多いジャンルです。要点を押さえた説明文をまとめて用意でき、出品の手が止まりません。</p>
+<h3>布小物・バッグ作家</h3>
+<p>生地の風合い、縫製のこだわり、収納力といった実用面の魅力を、写真だけでは伝わらない言葉に置き換えられます。お手入れ方法の案内文も定型として持てます。</p>
+<h3>陶器・木工作家</h3>
+<p>一点ごとの個体差や、経年変化の楽しみ方を伝える文章づくりを任せられます。割れ物の梱包・発送に関する案内も、丁寧な文面を毎回使い回せます。</p>
+<h3>イラスト・紙もの作家</h3>
+<p>用途の提案（贈り物・自分用・季節のしつらえ）を添えた説明文にすることで、購入の後押しになります。シリーズものの世界観を統一した紹介文も整えられます。</p>
+<h3>名入れ・オーダーメイド中心の作家</h3>
+<p>相談から制作決定までの往復が多いジャンルです。確認事項をもれなく含んだ返信テンプレートを用意しておくことで、やり取りの回数そのものを減らせます。</p>
+<h2 id="sec4">4. 導入の4ステップ</h2>
+<h3>ステップ1：解きたい課題を1つに絞る</h3>
+<p>「説明文づくり」「オーダー相談の返信」「レビュー返信」のうち、いま一番つらいものを1つだけ選びます。欲張らないことが定着のコツです。</p>
+<h3>ステップ2：材料をそろえる</h3>
+<p>作品の素材・サイズ・こだわり、過去に自分が書いた説明文、よく届く相談内容などを手元に集めます。過去の文章があるほど、自分らしい文体に寄せた提案が得られます。</p>
+<h3>ステップ3：たたき台をつくらせる</h3>
+<p>「この作品情報から、minneの作品説明文を3案つくってほしい。やわらかい語り口で、300字程度」といった具合に、目的・分量・雰囲気を添えて依頼します。</p>
+<h3>ステップ4：自分の言葉で仕上げるリズムを決める</h3>
+<p>出品前・返信前に必ず人が読み直す時間を決めておきます。週に一度まとめて出品する、といったリズムをつくると、制作と発信のバランスが安定します。</p>
+<h2 id="sec5">5. 運用上の注意点</h2>
+<ul>
+<li><strong>公開・送信前は必ず人が確認する</strong>：素材名やサイズなどの事実に誤りがないか、AI任せにせず自分の目で確かめます。</li>
+<li><strong>お客様の個人情報は扱いを慎重に</strong>：名入れの内容や住所などをそのまま読み込ませることは避け、必要な範囲にとどめます。</li>
+<li><strong>誇大な表現を避ける</strong>：効能や品質について、根拠のない言い切りにならないよう表現を整えます。</li>
+<li><strong>自分らしさを手放さない</strong>：AIの文章に寄せすぎると、作り手の温度が薄れます。最後のひと言は自分で書く、と決めておくと安心です。</li>
+<li><strong>アカウント情報の管理は最小限に</strong>：連携や認証を行う場合は、必要な権限だけに絞って運用します。</li>
+</ul>
+<h2 id="sec6">6. 他のマーケットとの違い</h2>
+<p>海外向けのハンドメイドマーケットは英語での商品ページづくりが中心となり、フリマ形式のサービスは中古品も含めた気軽な売買が主軸です。それに対してminneは、国内の買い手に向けて、作り手の世界観とストーリーを伝えながらファンを育てていく場という性格が強いのが特徴です。</p>
+<p>だからこそ、作品説明文・オーダー相談への丁寧な返信・レビューへのお礼といった「言葉の積み重ね」が、そのままリピーターの数につながります。Claude Codeを使えば、その言葉づくりの負担だけをAIに預け、今のminneギャラリーはそのままに、制作の時間を取り戻すことができます。まずは負担に感じている作品説明文づくりなど、一点から取り入れてみるのがおすすめです。</p>
+<h2 id="sec7">7. よくある質問</h2>
+<h3>Q. パソコンが苦手でも使えますか？</h3>
+<p>はい。専門的な知識がなくても、日本語で「こういう文章をつくってほしい」と伝えるだけで使えます。導入時の設定さえ済ませれば、あとは会話するように依頼できます。</p>
+<h3>Q. AIが書いた説明文をそのまま公開して大丈夫ですか？</h3>
+<p>事実確認や表現のチェックが必要なため、そのままの公開はおすすめしません。公開前に人が目を通し、自分らしい言い回しを加える運用にすると安心です。</p>
+<h3>Q. 作品の世界観が崩れてしまいませんか？</h3>
+<p>過去に自分が書いた文章を読み込ませることで、文体や語り口を寄せた提案が得られます。最後のひと言だけは自分で書く、と決めておくと世界観は保たれます。</p>
+<h3>Q. どこまでを任せられますか？</h3>
+<p>作品説明文づくり、オーダー相談への返信ドラフト、レビュー返信、プロフィール文の見直し、販売データの振り返りまでを任せられます。公開・送信の判断と最終確認は人が行う前提で組み立てると安心です。</p>
+
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「minneでの販売を伸ばしたいけれど、説明文づくりやお客様対応に時間が取れない」「Claude Codeの導入や使い方が不安」というハンドメイド作家の方に向けて、導入から自分に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

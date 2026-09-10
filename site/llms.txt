@@ -1,0 +1,212 @@
+# Piste AI EVANGELISTS（株式会社Piste）
+
+> 中小企業のためのAI導入コンサルティング。Anthropic 公式パートナーネットワーク認定企業。代表・石川 卓が Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。所在地は愛知県碧南市、全国オンライン対応。
+
+## 会社・サービス
+
+- [トップページ](https://www.piste-ai.com/): サービス概要、料金プラン、ご利用の流れ、最新AIニュース、お問い合わせ
+- [Claude Code 導入サポート](https://www.piste-ai.com/claude-code-support.html): Claude Code のセットアップから業務への組み込みまでのマンツーマン支援（¥10,000税込/1時間）
+- [AI研修プログラム](https://www.piste-ai.com/training.html): 従業員向け Claude Code 実践研修（全12コマ）。厚生労働省「人材開発支援助成金」の対象
+- [愛知県・西三河の中小企業向けAI導入支援](https://www.piste-ai.com/aichi.html): 地域の事業者向けの案内
+- [代表プロフィール](https://www.piste-ai.com/about.html): 石川 卓（岐阜大学大学院修了、大手鉄鋼メーカーで約8年勤務、400社以上のAI導入支援（2026年9月時点））
+- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。155記事
+- [RSS](https://www.piste-ai.com/feed.xml) / [サイトマップ](https://www.piste-ai.com/sitemap.xml)
+
+## 料金（税込）
+
+- Claude Code 導入サポート: ¥10,000 / 1時間
+- 動画レッスン「Claude Code 基礎＆セットアップ」: ¥5,000
+- ライトプラン: ¥20,000 / 月（週1時間×2回のマンツーマン指導）
+- スタンダードプラン: ¥40,000 / 月（週1時間×4回のマンツーマン相談・ハンズオン支援・業務テンプレート作成）
+
+## ブログ記事（カテゴリ別）
+
+### ツール連携
+
+Claude Code と業務ツール（会計・EC・SNS・チャット・予約など）をつなぐ自動化ガイド。一覧: https://www.piste-ai.com/blog/category-tool-integration.html
+
+- [Claude Code × ANDPAD連携で工事日報・現場写真整理・工程管理をAI自動化！建設・リフォーム会社の事務負担削減ガイド](https://www.piste-ai.com/blog/claude-code-andpad-integration.html) (2026-07-30): Claude Codeと施工管理アプリANDPADの運用を組み合わせ、工事日報の下書き・現場写真の整理・工程変更の案内文・案件データの集計をAI自動化する方法を解説。非エンジニアの建設・リフォーム会社の経営者や現場監督でも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × フードデリバリー連携でメニュー文・商品写真の説明・売上分析をAI自動化！飲食店の宅配売上アップガイド](https://www.piste-ai.com/blog/claude-code-food-delivery-integration.html) (2026-07-29): Claude Codeとフードデリバリー運用を組み合わせ、メニュー説明文づくり・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × Googleドライブ連携で資料整理・ファイル検索・共有管理をAI自動化！中小企業・一人社長の「探す時間」削減ガイド](https://www.piste-ai.com/blog/claude-code-google-drive-integration.html) (2026-07-28): Claude CodeとGoogleドライブを組み合わせ、散らかった資料の棚卸し・ファイル名の統一・目的の書類をすぐ見つける検索・共有設定の点検・月次の資料整理をAI自動化する方法を解説。非エンジニアの中小企業・一人社長でも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × RESERVA連携で予約受付・リマインド・キャンセル対策をAI自動化！教室・サロン・士業の予約業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-reserva-integration.html) (2026-07-27): Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × タイミー連携で募集文・受け入れ手順書・稼働データ集計をAI自動化！人手不足の飲食店・小売・物流の現場運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-timee-integration.html) (2026-07-27): Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × じゃらん連携で宿泊プラン作成・口コミ返信・繁閑対策をAI自動化！旅館・ホテル・民泊の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-jalan-integration.html) (2026-07-26): Claude Codeと宿泊予約サイトじゃらんを組み合わせ、宿泊プランの紹介文づくり・口コミ返信・繁閑期の販促・インバウンド対応をAI自動化する方法を解説。小規模な旅館・ホテル・ペンション・民泊のオーナーでも取り組める活用シーンと導入ステップを紹介します。
+- [Claude Code × Zoho連携で顧客管理・見積請求・連絡対応をオールインワンでAI自動化！中小企業・一人社長の業務統合ガイド](https://www.piste-ai.com/blog/claude-code-zoho-integration.html) (2026-07-25): Claude Codeと統合ビジネススイートZohoを組み合わせ、顧客管理・見積請求・連絡対応・データ集計をオールインワンでAI自動化する方法を解説。ツールが分散しがちな中小企業・一人社長でも取り組める活用シーン・導入ステップ・バラバラ運用との違いを紹介します。
+- [Claude Code × Make（旧Integromat）連携で複数ステップの業務自動化をAIに設計させる！中小企業のノーコード業務フロー効率化ガイド](https://www.piste-ai.com/blog/claude-code-make-integration.html) (2026-07-24): Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオの改善をAI自動化する方法を解説。Zapierとの使い分けや、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × Peatix連携でイベント・セミナー集客をAI自動化！中小企業・講師・コンサルの集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-peatix-integration.html) (2026-07-23): Claude Codeとイベント管理プラットフォームPeatixを組み合わせ、イベントページの文章づくり・集客メッセージ・参加者フォロー・アンケート集計・次回企画をAI自動化する方法を解説。非エンジニアの中小企業・講師・コンサルでも取り組める活用シーン・導入ステップ・手作業運用との違いを紹介します。
+- [Claude Code × DeepL連携で翻訳・多言語対応をAI自動化！中小企業の海外取引・インバウンド接客効率化ガイド](https://www.piste-ai.com/blog/claude-code-deepl-integration.html) (2026-07-22): Claude Codeと翻訳サービスDeepLを組み合わせ、海外メール対応・越境ECの商品ページ多言語化・インバウンド案内・資料翻訳をAI自動化する方法を解説。非エンジニアの中小企業でも取り組める活用シーン・導入ステップ・翻訳ツール単体との違いを紹介します。
+- [Claude Code × minne（ミンネ）連携で作品説明文・オーダー相談・レビュー返信をAI自動化！ハンドメイド作家の国内ファン育成ガイド](https://www.piste-ai.com/blog/claude-code-minne-integration.html) (2026-07-21): Claude Codeとハンドメイドマーケットminne（ミンネ）の運営を組み合わせ、作品説明文づくり・オーダーメイド相談の返信・レビュー返信・販売データの振り返りをAI自動化する方法を解説。ハンドメイド作家が非エンジニアでも取り組める活用例・ジャンル別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × カラーミーショップ連携で商品ページ・受注対応・メルマガをAI自動化！ネットショップ運営者の売上アップガイド](https://www.piste-ai.com/blog/claude-code-colorme-integration.html) (2026-07-20): Claude Codeとカラーミーショップの運営を組み合わせ、商品ページの説明文づくり・受注対応の文面・メルマガづくり・売上の振り返りをAI自動化する方法を解説。ネットショップ運営者・個人店が非エンジニアでも取り組める活用例・業種別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × PayPay連携で売上集計・キャッシュレス対応・クーポン販促をAI自動化！実店舗・小規模事業者の店頭集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-paypay-integration.html) (2026-07-19): Claude CodeとQRコード決済PayPayの売上データを組み合わせ、売上集計・傾向の振り返り・クーポンや告知文づくりをAI自動化する方法を解説。実店舗・小規模事業者が非エンジニアでも取り組める活用例・業種別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × Threads連携で投稿・返信・分析をAI自動化！中小企業・店舗のテキストSNS集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-threads-integration.html) (2026-07-18): Claude CodeとテキストSNSのThreads（スレッズ）を組み合わせ、投稿づくり・返信対応・反応の分析をAI自動化する方法を解説。写真がなくても言葉で発信できるThreadsを、中小企業・店舗が非エンジニアでも効率よく運用するための活用例・業種別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × LinkedIn連携で経営者の情報発信・B2Bリード獲得・プロフィール運用をAI自動化！中小企業・一人社長のビジネスSNS活用ガイド](https://www.piste-ai.com/blog/claude-code-linkedin-integration.html) (2026-07-17): Claude Codeとビジネス特化SNSのLinkedInを組み合わせ、経営者の情報発信・プロフィール運用・B2Bのつながりづくり・リード獲得をAI自動化する方法を解説。中小企業・一人社長に向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド](https://www.piste-ai.com/blog/claude-code-google-sheets-integration.html) (2026-07-15): Claude Codeを使ってGoogle Sheets（スプレッドシート）の売上集計・在庫管理・帳票作成を自動化する実践ガイド。MCP連携の設定手順から具体的なプロンプト例、中小企業の活用事例まで詳しく解説します。
+- [Claude Code × Wantedly連携で採用広報・ストーリー記事・カジュアル面談対応をAI自動化！中小企業・一人社長の採用ブランディング効率化ガイド](https://www.piste-ai.com/blog/claude-code-wantedly-integration.html) (2026-07-14): Claude Codeと共感採用の求人サービスWantedlyを組み合わせ、募集記事・ストーリー記事・スカウト文・カジュアル面談準備・反響データ整理をAI自動化する方法を解説。中小企業・一人社長の採用ブランディングに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × Etsy連携で海外販売・英語の商品ページ・受注対応をAI自動化！ハンドメイド作家・中小事業者の越境EC売上アップガイド](https://www.piste-ai.com/blog/claude-code-etsy-integration.html) (2026-07-13): Claude Codeと海外向けハンドメイドマーケットEtsy（エッツィー）を組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・Etsy内SEOタグ最適化をAI自動化する方法を解説。ハンドメイド作家・中小事業者の越境ECに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化！ネットショップ・店舗のビジュアル集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-pinterest-integration.html) (2026-07-12): Claude Codeとビジュアル検索プラットフォームPinterest（ピンタレスト）を組み合わせ、ピンの説明文づくり・ボード設計・投稿カレンダー・分析レポート・ECサイトへの送客導線づくりをAI自動化する方法を解説。ネットショップ・店舗・ハンドメイド作家向けに活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × アメブロ連携でブログ集客をAI自動化！サロン・店舗・個人事業主の記事作成・投稿効率化ガイド](https://www.piste-ai.com/blog/claude-code-ameblo-integration.html) (2026-07-11): Claude Codeと集客ブログとして人気のアメブロ（Ameba Blog）を組み合わせ、ネタ出し・記事の下書き作成・タイトル改善・お客様の声の記事化・予約導線づくりをAI自動化する方法を解説。サロン・店舗・個人事業主向けに活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド](https://www.piste-ai.com/blog/claude-code-miro-integration.html) (2026-07-10): Claude Codeと人気のオンラインホワイトボードMiroを組み合わせ、付箋の分類・ブレスト要約・アイデアのタスク化・業務図解・ワークショップ進行台本づくりをAI自動化する方法を解説。中小企業向けに活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × Todoist連携でToDo・タスク管理をAI自動化！一人社長・フリーランスのタスク整理効率化ガイド](https://www.piste-ai.com/blog/claude-code-todoist-integration.html) (2026-07-09): Claude Codeと個人向けタスク管理ツールTodoistを組み合わせ、会話からのタスク抽出・優先順位づけ・仕事の細分化・週次の振り返りをAI自動化する方法を解説。一人社長・フリーランス向けに、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × 楽楽精算連携で経費精算・交通費申請・請求書処理をAI自動化！中小企業の経理・精算業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration.html) (2026-07-08): Claude Codeと経費精算システム「楽楽精算」を組み合わせ、経費精算・交通費申請・請求書処理・月次レポートづくりをAI自動化する方法を解説。中小企業向けに、自動化できる作業・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。
+- [Claude Code × LINE WORKS連携で社内チャット・掲示板・タスク管理をAI自動化！中小企業のビジネスチャット運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-lineworks-integration.html) (2026-07-07): Claude Codeと国産ビジネスチャットLINE WORKSを組み合わせ、社内チャット・掲示板・お知らせ文づくり・定型返信・トーク要約・タスク整理までをAI自動化する方法を解説。中小企業・店舗向けに、自動化できる作業・業種別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × board連携で見積書・請求書作成・入金管理をAI自動化！フリーランス・一人社長のバックオフィス効率化ガイド](https://www.piste-ai.com/blog/claude-code-board-integration.html) (2026-07-06): Claude Codeとクラウド見積・請求書サービスboardを組み合わせ、見積書・請求書づくりから入金管理・督促文・取引先別の売上集計までをAI自動化する方法を解説。フリーランス・一人社長・小規模事業者向けに、自動化できる作業・業種別シーン・導入4ステップ・注意点を紹介します。
+- [Claude Code × サイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化！中小企業のグループウェア運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html) (2026-07-05): Claude Codeと国産グループウェア サイボウズ Officeを組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくり・社内情報のまとめをAI自動化する方法を解説。中小企業向けに、活用5選・部門別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × note連携で記事作成・発信・分析をAI自動化！中小企業・個人事業主のコンテンツ集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-note-integration.html) (2026-07-04): Claude Codeとnoteを組み合わせ、記事の企画・ネタ出し・構成案づくり・下書き作成・タイトル改善・過去記事の分析までをAI自動化する方法を解説。中小企業・個人事業主向けに、自動化できる作業・業種別シーン・導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化！小売店・飲食店の店舗運営効率化ガイド](https://www.piste-ai.com/blog/claude-code-smaregi-integration.html) (2026-07-03): Claude Codeとクラウドスマレジを組み合わせ、日次の売上集計・在庫の減り方チェック・売れ筋分析・顧客の購買傾向整理・月次レポートづくりをAI自動化する方法を解説。小売店・飲食店向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × TikTok連携でショート動画の企画・台本・分析をAI自動化！中小企業・店舗の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-tiktok-integration.html) (2026-07-02): Claude CodeとTikTokを組み合わせ、ショート動画の企画・台本づくり・キャプション作成・1か月分の投稿企画・コメント返信の下書き・反応データの分析をAI自動化する方法を解説。中小企業・店舗向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化！中小企業の社内コミュニケーション効率化ガイド](https://www.piste-ai.com/blog/claude-code-microsoft-teams-integration.html) (2026-06-30): Claude CodeとMicrosoft Teamsを組み合わせ、会議の議事録自動作成・チャット要約・決定事項のタスク化・社内アナウンス下書き・週次サマリー作成をAI自動化する方法を解説。中小企業向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × Yahoo!ショッピング連携で出店・商品ページ・受注対応をAI自動化！中小ECの売上アップガイド](https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration.html) (2026-06-29): Claude CodeとYahoo!ショッピングの店舗運営を組み合わせ、商品ページの文章づくり・受注対応や問い合わせ返信の下書き・レビュー対応・PayPayポイント施策やセール告知文・売上在庫データの集計をAI自動化する方法を解説。中小EC事業者・非エンジニア向けに、活用5選・業種別シーン・導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化！中小企業・個人事業主の経理効率化ガイド](https://www.piste-ai.com/blog/claude-code-yayoi-integration.html) (2026-06-29): Claude Codeと国内シェア上位の会計ソフト弥生会計を組み合わせ、仕訳の下書き・記帳チェック・月次レポート作成・経費の分類整理・決算準備をAI自動化する方法を解説。中小企業・個人事業主向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × 食べログ連携で口コミ返信・予約対応・メニュー紹介文をAI自動化！飲食店の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-tabelog-integration.html) (2026-06-28): Claude Codeと食べログ（店舗管理画面）を連携し、口コミ返信・予約対応・メニュー紹介文・再来店促進・データ分析をAI自動化する方法を解説。レストラン・居酒屋・カフェ・専門店など飲食業界向けに、活用5選・業態別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文・サロンブログをAI自動化！美容室・サロンの集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-hotpepper-beauty-integration.html) (2026-06-26): Claude Codeとホットペッパービューティー（サロンボード）を連携し、口コミ返信・クーポン文・サロンブログ・リピート促進・予約データ分析をAI自動化する方法を解説。美容室・ネイル・エステ・整体院など美容業界向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-peraichi-integration.html) (2026-06-25): Claude Codeとペライチを連携し、ランディングページ・ホームページの作成・更新・分析をAI自動化する方法を解説。Web知識のない小規模事業者・個人事業主向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化！飲食店・小売店の店舗運営効率化ガイド](https://www.piste-ai.com/blog/claude-code-airregi-integration.html) (2026-06-24): Claude CodeとAirレジの売上データを連携し、日次・月次の売上集計、売れ筋分析、在庫の発注候補出し、日報・月次レポート作成をAIで自動化する方法を解説。飲食店・小売店など実店舗を運営する中小事業者向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × STORES連携でネットショップ・予約・POSをAI自動化！実店舗＆EC両立の中小事業者向け運営効率化ガイド](https://www.piste-ai.com/blog/claude-code-stores-integration.html) (2026-06-23): Claude CodeとSTORESを連携し、ネットショップ・予約・POSレジ・在庫を横断してAI自動化する方法を解説。実店舗とECを両立する中小事業者向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。
+- [Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化！中小ショップの売上アップガイド](https://www.piste-ai.com/blog/claude-code-rakuten-integration.html) (2026-06-21): Claude Codeと楽天市場の店舗運営を組み合わせ、商品ページの文章づくり、受注メール・問い合わせ返信、レビュー整理、セール案内文作成、売上・在庫データ集計を非エンジニアでも効率化する方法を解説。中小ショップ・個人店向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Amazonセラーセントラル連携で出品・注文・レビュー対応をAI自動化！中小ECの売上アップガイド](https://www.piste-ai.com/blog/claude-code-amazon-seller-integration.html) (2026-06-20): Claude CodeとAmazonセラーセントラルを組み合わせ、商品ページの文章づくり、注文対応・問い合わせ返信、レビュー整理、売上・在庫データ集計、販促文作成を非エンジニアでも効率化する方法を解説。中小EC・個人セラー向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化！中小企業の文書業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-google-docs-integration.html) (2026-06-19): Claude CodeとGoogleドキュメントを組み合わせ、議事録の下書き作成、契約書・提案書の雛形づくり、長い文書の要約、文章のトーン統一と校正、定型文書の作成を非エンジニアでも効率化する方法を解説。中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × メルカリShops連携で出品・注文対応・分析をAI自動化！個人・小規模事業者の売上アップガイド](https://www.piste-ai.com/blog/claude-code-mercari-shops-integration.html) (2026-06-18): Claude Codeとメルカリ Shopsを組み合わせ、商品説明文の作成、出品企画、注文・発送連絡の下書き、レビュー分析、売上レポート作成を非エンジニアでも効率化する方法を解説。個人・小規模事業者向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Facebookページ連携で投稿・コメント・広告文をAI自動化！中小企業・店舗の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-facebook-integration.html) (2026-06-17): Claude CodeとFacebookページを組み合わせ、投稿文の作成、投稿企画、コメント・メッセージ返信の下書き、広告文づくり、インサイト分析を非エンジニアでも効率化する方法を解説。中小企業・店舗経営者向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × X（旧Twitter）連携で投稿・返信・分析をAI自動化！中小企業・店舗の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-x-twitter-integration.html) (2026-06-16): Claude CodeとX（旧Twitter）を組み合わせ、投稿文の作成、投稿企画、リプライ返信の下書き、スレッド構成案づくり、反応データの分析を非エンジニアでも効率化する方法を解説。中小企業・店舗経営者向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Indeed連携で求人・採用業務をAI自動化！中小企業の採用効率化ガイド](https://www.piste-ai.com/blog/claude-code-indeed-integration.html) (2026-06-15): Claude CodeとIndeedを組み合わせ、求人原稿の作成、応募者対応の下書き、選考管理、面接質問づくり、採用レポート作成を非エンジニアでも効率化する方法を解説。採用担当を兼務する中小企業経営者・一人社長向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Instagram連携で投稿・コメント・分析をAI自動化！中小企業・店舗の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-instagram-integration.html) (2026-06-14): Claude CodeとInstagramを組み合わせ、投稿キャプション・ハッシュタグの作成、投稿企画、コメント返信の下書き、ストーリーズ/リール構成、インサイト分析、月次レポート作成を非エンジニアでも効率化する方法を解説。SNS運用が後回しになりがちな中小企業・店舗向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Googleサーチコンソール連携で検索順位・SEO改善をAI自動化！中小企業の検索流入アップガイド](https://www.piste-ai.com/blog/claude-code-search-console-integration.html) (2026-06-13): Claude CodeとGoogleサーチコンソールを連携し、検索キーワードの分析・順位レポートの自動作成・改善すべきページの抽出・記事リライト提案・インデックス状況の確認を非エンジニアでも自動化する方法を解説。SEOが後回しになりがちな中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Wix連携でホームページ運用・更新をAI自動化！中小企業のWebサイト管理効率化ガイド](https://www.piste-ai.com/blog/claude-code-wix-integration.html) (2026-06-12): Claude CodeとノーコードのWebサイトビルダーWixを連携し、ブログ更新・お知らせ投稿・商品情報の更新・問い合わせ対応・SEO文面づくりを非エンジニアでも自動化する方法を解説。ホームページ運用が後回しになりがちな中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × ジョブカン連携で勤怠管理・シフト・残業アラートをAI自動化！中小企業の労務効率化ガイド](https://www.piste-ai.com/blog/claude-code-jobcan-integration.html) (2026-06-11): Claude Codeとジョブカン勤怠管理を連携し、勤怠データの集計・残業アラート・シフト作成支援・月次勤怠レポートを非エンジニアでも自動化する方法を解説。打刻管理や労務の手間を減らしたい中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Zendesk連携で問い合わせ・カスタマーサポートをAI自動化！中小企業の顧客対応効率化ガイド](https://www.piste-ai.com/blog/claude-code-zendesk-integration.html) (2026-06-10): Claude CodeとZendeskを連携し、問い合わせ返信の下書き作成・チケットの自動分類・FAQ整備・対応状況のレポート化を非エンジニアでも効率化する方法を解説。カスタマーサポートの負担を減らしたい中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × クラウドサイン連携で電子契約をAI自動化！中小企業の契約締結・書類管理効率化ガイド](https://www.piste-ai.com/blog/claude-code-cloudsign-integration.html) (2026-06-09): Claude Codeとクラウドサインを連携し、契約書のたたき台づくり・送付前チェック・締結後の台帳管理・更新解約の期限管理を非エンジニアでも効率化する方法を解説。契約業務の負担を減らしたい中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Google広告連携で広告運用・レポート作成をAI自動化！中小企業のリスティング広告効率化ガイド](https://www.piste-ai.com/blog/claude-code-google-ads-integration.html) (2026-06-07): Claude CodeとGoogle広告を連携し、キーワード調査・除外、広告文づくり、月次レポート集計、改善提案を非エンジニアでも効率化する方法を解説。代理店任せから脱却したい中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × YouTube連携で動画運用をAI自動化！中小企業の概要欄・字幕・分析レポート作成ガイド](https://www.piste-ai.com/blog/claude-code-youtube-integration.html) (2026-06-06): Claude CodeとYouTubeを連携し、概要欄・タグ作成、タイトル案、字幕・チャプター整形、コメント返信、動画台本、再生分析を非エンジニアでも自動化する方法を解説。動画運用が続かない中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × WordPress連携でブログ・HP更新をAI自動化！中小企業のオウンドメディア運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-wordpress-integration.html) (2026-06-05): Claude CodeとWordPressを連携し、記事の下書き作成、既存記事のリライト・SEOチェック、カテゴリ・タグ整理、お知らせ更新、アクセス分析と改善提案を非エンジニアでも自動化する方法を解説。ブログ・HP更新が止まりがちな中小企業向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × BASE連携でネットショップ運営をAI自動化！個人・小規模事業者の売上アップガイド](https://www.piste-ai.com/blog/claude-code-base-integration.html) (2026-06-04): Claude Codeと無料ネットショップBASEを連携し、注文対応、在庫管理、商品説明文の作成、リピート客へのフォローを非エンジニアでも自動化する方法を解説。個人事業主・副業オーナー・小規模ショップ向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化！実店舗・小売店の運営効率化ガイド](https://www.piste-ai.com/blog/claude-code-square-integration.html) (2026-06-03): Claude CodeとPOS・決済サービスSquareを連携し、売上集計、在庫管理、予約対応、リピート顧客へのフォロー文面作成を非エンジニアでも自動化する方法を解説。実店舗・小売店・サロン向けの活用シーンと導入4ステップを紹介。
+- [Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化！中小企業の営業リード活用ガイド](https://www.piste-ai.com/blog/claude-code-sansan-integration.html) (2026-06-02): Claude Codeと名刺管理サービスSansanを連携し、名刺の自動分類、フォロー連絡のドラフト作成、見込み先の優先リスト化、人脈の棚卸しを非エンジニアでも自動化する方法を解説。業種別の活用シーンと導入4ステップを紹介。
+- [Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化！店舗集客・MEO効率化ガイド](https://www.piste-ai.com/blog/claude-code-google-business-profile-integration.html) (2026-06-01): Claude CodeとGoogleビジネスプロフィールを連携し、口コミ返信・店舗投稿・MEO運用を非エンジニアでも半自動化する方法を解説。業種別の活用シーンと導入4ステップ、運用上の注意点を紹介。
+- [Claude Code × Googleフォーム連携でアンケート・問い合わせ・申込対応をAI自動化！中小企業のフォーム業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-googleform-integration.html) (2026-06-01): Claude CodeとGoogleフォームを連携し、回答の自動集計・分類、問い合わせへの返信ドラフト作成、申込対応、アンケート分析レポートを非エンジニアでも自動化する方法を解説。業種別の活用シーンと導入4ステップを紹介。
+- [Claude Code × マネーフォワード クラウド連携で請求・経費・会計をAI自動化！中小企業の経理効率化ガイド](https://www.piste-ai.com/blog/claude-code-moneyforward-integration.html) (2026-06-01): Claude Codeとマネーフォワード クラウドを連携し、請求書作成・経費整理・月次サマリーを非エンジニアでも自動化する方法を解説。業種別の活用シーンと導入4ステップ、運用上の注意点を紹介。
+- [Claude Code × Googleアナリティクス（GA4）連携でアクセス解析・改善提案をAI自動化！中小企業のWebデータ活用ガイド](https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration.html) (2026-05-31): Claude CodeとGoogleアナリティクス（GA4）を連携し、アクセス解析・週次レポート・改善提案を非エンジニアでも自動化する方法を解説。数字が読めない中小企業向け活用6選と4ステップ導入を紹介。
+- [Claude Code × Dropbox連携で社内ファイル管理・共有・自動整理をAI自動化！中小企業のクラウドストレージ運用ガイド](https://www.piste-ai.com/blog/claude-code-dropbox-integration.html) (2026-05-29): Claude CodeとDropboxを連携し、ファイル整理・共有リンク発行・契約書管理・バックアップ運用を非エンジニアでも自動化できる方法を解説。資料が散らかりがちな中小企業向け活用7選と4ステップ導入。
+- [Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化！中小企業のスケジュール管理効率化ガイド](https://www.piste-ai.com/blog/claude-code-google-calendar-integration.html) (2026-05-28): Claude CodeとGoogleカレンダーを連携し、日程調整・会議準備・リマインド・スケジュール分析を非エンジニアでも自動化できる方法を解説。商談・打ち合わせが多い中小企業向け活用7選と4ステップ導入。
+- [Claude Code × LINE公式アカウント連携で顧客対応・配信・予約案内をAI自動化！中小企業・店舗の集客効率化ガイド](https://www.piste-ai.com/blog/claude-code-line-official-integration.html) (2026-05-27): Claude CodeとLINE公式アカウントを連携し、配信文作成・問い合わせ返信・予約案内・反応分析を非エンジニアでも自動化できる方法を解説。店舗・サービス業向け活用7選と4ステップ導入。
+- [Claude Code × Canva連携でバナー・SNS画像・チラシ制作をAI自動化！中小企業のデザイン業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-canva-integration.html) (2026-05-26): Claude CodeとCanvaを連携し、SNS画像・バナー・チラシ・資料デザインの制作を半自動化する方法を、デザイン業務を片手間でこなす中小企業向けに解説します。
+- [Claude Code × SmartHR連携で人事労務をAI自動化！中小企業の入退社手続き・年末調整・勤怠管理ガイド](https://www.piste-ai.com/blog/claude-code-smarthr-integration.html) (2026-05-25): Claude CodeとSmartHRを連携し、入退社手続き・年末調整・勤怠データ集計・労務書類作成までを一括自動化する方法を、人事担当が一人の中小企業向けに解説します。
+- [Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化！中小企業のメールマーケティング効率化ガイド](https://www.piste-ai.com/blog/claude-code-mailchimp-integration.html) (2026-05-24): Claude CodeとMailchimpを連携し、メルマガ企画・原稿作成・セグメント抽出・配信予約・効果測定までを一括自動化する方法を、中小企業向けに解説します。
+- [Claude Code × Airtable連携でデータベース業務をAI自動化！中小企業の顧客・案件・在庫管理ガイド](https://www.piste-ai.com/blog/claude-code-airtable-integration.html) (2026-05-22): Claude CodeとAirtableを連携し、顧客管理・案件管理・在庫管理などのデータベース業務をAIで自動化する方法を中小企業向けに解説します。
+- [Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド](https://www.piste-ai.com/blog/claude-code-zoom-integration.html) (2026-05-21): Claude CodeとZoomを連携し、議事録自動生成・録画資産化・商談トーク分析・経営レポートを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と4ステップ導入。
+- [Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化！中小企業の予約業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-calendly-integration.html) (2026-05-20): Claude CodeとCalendlyを連携し、商談予約の事前案内・前日リマインド・キャンセル分析・経営レポート生成を非エンジニアでも自動化する方法を解説。中小企業向け活用5選と4ステップ導入。
+- [Claude Code × Trello連携でカンバン式タスク管理をAI自動化！中小企業のビジュアル業務管理ガイド](https://www.piste-ai.com/blog/claude-code-trello-integration.html) (2026-05-19): Claude CodeとTrelloを連携し、カード自動起票・移動・負荷バランス分析・週次レポートを非エンジニアでも自動化する方法を解説。中小企業向け活用5選と4ステップ導入。
+- [Claude Code × Backlog連携でプロジェクト管理をAI自動化！日本企業向けタスク・課題管理AI化ガイド](https://www.piste-ai.com/blog/claude-code-backlog-integration.html) (2026-05-18): Claude CodeとBacklogを連携し、課題自動起票・進捗ダイジェスト・週次レポート・ガントチャート更新までを非エンジニアでも自動化する方法を解説。中小企業向け活用5選と4ステップ導入。
+- [Claude Code × Asana連携でタスク管理をAI自動化！中小企業のプロジェクト進行効率化ガイド](https://www.piste-ai.com/blog/claude-code-asana-integration.html) (2026-05-17): Claude CodeとAsanaを連携し、議事録からのタスク自動切り出し・進捗ダイジェスト・週次レポートまで非エンジニアでも導入できる方法を解説。中小企業向け活用5選と4ステップ導入。
+- [Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客管理ガイド](https://www.piste-ai.com/blog/claude-code-salesforce-integration.html) (2026-05-16): Claude CodeとSalesforceを連携し、リードスコアリング・営業日報の自動要約・商談ステージ更新提案までを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と導入4ステップを紹介。
+- [Claude Code × Shopify連携でECサイト運営をAI自動化！中小企業のオンライン売上アップガイド](https://www.piste-ai.com/blog/claude-code-shopify-integration.html) (2026-05-14): Claude CodeとShopifyを連携し、商品登録・受注処理・在庫管理・顧客対応・レビュー分析までEC運営をAI自動化する方法を解説。中小企業向け活用5選と導入5ステップ、実践プロンプト例を紹介。
+- [Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客育成ガイド](https://www.piste-ai.com/blog/claude-code-hubspot-integration.html) (2026-05-13): Claude CodeとHubSpotを連携し、見込み顧客の自動育成・商談ステージ管理・営業日報の自動生成までを非エンジニアでも実装できる方法を解説。中小企業向け活用5選と導入4ステップを紹介。
+- [Claude Code × Chatwork連携で社内コミュニケーションをAI自動化！中小企業のChatwork運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-chatwork-integration.html) (2026-05-12): Claude CodeとChatworkを連携し、メッセージ要約・タスク自動化・FAQ返信・日報集計をAIに任せる方法を解説。中小企業向けの活用5選と非エンジニア向け導入4ステップを紹介。
+- [Claude Code × freee連携で経理業務をAI自動化！中小企業の請求書・仕訳・月次決算ガイド](https://www.piste-ai.com/blog/claude-code-freee-integration.html) (2026-05-12): Claude Codeとfreeeを連携し、月次仕訳・請求書発行・月次レポート・決算前準備までを非エンジニアでも自動化できる方法を解説。中小企業向け活用5選と導入4ステップを紹介。
+- [Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用！中小企業のオフィス効率化ガイド](https://www.piste-ai.com/blog/claude-code-microsoft365-integration.html) (2026-05-09): Claude CodeとMicrosoft 365を連携し、Excel・Word・PowerPoint・Outlookの定型業務をAIに任せる方法を解説。中小企業向け活用5選と非エンジニア向け導入4ステップを紹介。
+- [Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド](https://www.piste-ai.com/blog/claude-code-kintone-integration.html) (2026-05-08): Claude Codeとkintoneを連携し、レコード自動登録・横断集計レポート・他SaaS同期までAIで自動運用する方法を解説。中小企業の活用事例5選と導入5ステップ、月数千円〜の運用コストで実現できるポイントを紹介。
+- [Claude Code × Zapier連携で業務自動化を10倍加速！中小企業のノーコード×AI活用ガイド](https://www.piste-ai.com/blog/claude-code-zapier-integration.html) (2026-05-07): Claude CodeとZapierを連携し、メール・SaaS・スプレッドシート・SNSを横断する業務自動化を一気に拡張する方法を解説。中小企業のノーコード×AI活用5選と非エンジニア向け導入4ステップを紹介。
+- [Claude Code × Slack連携で社内コミュニケーションをAI自動化！中小企業のSlack運用効率化ガイド](https://www.piste-ai.com/blog/claude-code-slack-integration.html) (2026-05-06): Claude CodeとSlackを連携し、通知集約・要約・自動応答・リマインドを自動化する方法を解説。中小企業向けSlack運用効率化の活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude Code × Gmail連携でメール業務を完全自動化！中小企業の問い合わせ対応・営業フォロー・社内連絡ガイド](https://www.piste-ai.com/blog/claude-code-gmail-integration.html) (2026-05-05): Claude Code と Gmail を連携し、受信メールのAI仕分け・返信ドラフト自動生成・営業フォロー自動送信を実現する実践ガイド。MCP経由で非エンジニアでも構築できる中小企業のメール業務自動化パターンと事例を解説します。
+- [Claude Code × Discord連携で社内通知をAI化！中小企業のリアルタイム業務通知ガイド](https://www.piste-ai.com/blog/claude-code-discord-notification.html) (2026-05-04): Claude Code と Discord を連携し、売上速報・問い合わせ仕分け・異常検知などの社内通知をAIで自動化する実践ガイド。Webhook・Bot・AI要約通知の3パターンと中小企業の活用事例を解説します。
+- [Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド](https://www.piste-ai.com/blog/claude-code-notion-integration.html) (2026-05-01): Claude CodeとNotion MCPを連携させ、社内Wiki・議事録・タスク管理・顧客台帳・週次レポートをAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップ・運用上の注意点を紹介。
+- [Claude Code × Stripe連携で決済・サブスク管理を自動化！中小企業の課金業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-stripe-integration.html) (2026-04-25): Claude CodeとStripe MCPを連携させ、サブスク管理・カード期限切れ通知・解約理由集計・月次MRRレポートまで自動化する方法を解説。中小企業の経理・カスタマーサクセス業務をAIに任せる活用5選と非エンジニア向け4ステップを紹介。
+- [Claude CodeのMCP連携で業務ツールを統合！Notion・Googleドライブ・Gmailを繋ぐ中小企業の自動化ガイド](https://www.piste-ai.com/blog/claude-code-mcp-integration.html) (2026-04-18): Claude CodeのMCP連携でNotion・Googleドライブ・Gmailをつなぎ、業務を劇的に効率化する方法を解説。中小企業の経営者向けに、導入手順と具体的な活用事例を紹介します。
+- [マネーフォワード×MCP連携でClaude Codeが会計業務を自動化！仕訳・決算書作成をAIに任せる時代へ](https://www.piste-ai.com/blog/moneyforward-mcp-accounting.html) (2026-04-12): マネーフォワードがMCP（Model Context Protocol）に対応。Claude Codeから直接仕訳入力・決算書作成が可能に。中小企業の会計業務を劇的に効率化する方法を解説。
+
+### Claude Codeの使い方
+
+CLAUDE.md・権限・スキル・サブエージェントなど、Claude Code を業務で安全に使いこなすための基礎。一覧: https://www.piste-ai.com/blog/category-claude-code-basics.html
+
+- [Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド](https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html) (2026-08-12): Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。
+- [Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド](https://www.piste-ai.com/blog/claude-code-automation-handover.html) (2026-08-11): Claude Codeで組んだ自動化が「作った本人しか動かせない」状態になるのを防ぐ設計を解説。引き継ぎに本当に必要な3つ、決めごとファイルに書く5行、入口を1つに固定する考え方、止まったときの3つの確認、一人社長の備え方を中小企業向けに整理します。
+- [Claude Codeが出した成果物は誰がどう確認する？中小企業のための検収チェック体制づくりガイド](https://www.piste-ai.com/blog/claude-code-deliverable-review-process.html) (2026-08-10): Claude Codeの自動化で見落とされがちな「出てきたものを世に出す前の確認」を体系化。全数確認をやめる3段階の仕分け、5分で終わるチェックリストの作り方、抜き取り確認の割合の決め方、確認記録の残し方を中小企業・一人社長向けに解説します。
+- [Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド](https://www.piste-ai.com/blog/claude-code-backup-and-recovery.html) (2026-08-09): Claude Codeの自動化で最後まで残る不安「戻せるのか」を解消。実際に起きる3つの失敗パターン、戻す手段を3層で持つ考え方、半日で終わる4つの準備、事故時の復旧3ステップを中小企業・一人社長向けに解説します。
+- [Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド](https://www.piste-ai.com/blog/claude-code-confidential-data-rules.html) (2026-08-08): Claude Codeに渡してよい情報と止めたほうがよい情報の線引きを解説。手元で動く仕組みの正しい理解、情報の3分類、伏せて渡す3つの工夫、社内で決める4行のルールを中小企業・一人社長向けに整理します。
+- [Claude Codeに任せる仕事・人がやる仕事をどう分ける？中小企業のための線引き判断ガイド](https://www.piste-ai.com/blog/claude-code-task-delegation-boundary.html) (2026-08-07): Claude Codeにどこまで任せてよいかを判断する基準を解説。任せてよい仕事の3条件、人が持つべき3つの領域、迷ったときの4つの問い、線引きを社内で共有する方法を中小企業・一人社長向けに整理します。
+- [Claude Codeの自動化は結局どれだけ効いた？中小企業のための削減時間の記録と社内共有ガイド](https://www.piste-ai.com/blog/claude-code-automation-effect-tracking.html) (2026-08-06): Claude Codeの自動化効果を数字で残す方法を解説。測るのは前の時間・今の時間・人が直した回数の3つだけ。そのまま使える記録の型、月1回15分の振り返り4項目、数字が伸びないときに疑う3点を中小企業向けに整理します。
+- [Claude Codeの自動化が止まった・結果がおかしいときの対処法！中小企業のための切り分け手順と再発防止ガイド](https://www.piste-ai.com/blog/claude-code-troubleshooting-guide.html) (2026-08-05): Claude Codeの自動化が途中で止まる、結果が意図と違うといったトラブルは原因が3つに絞れます。非エンジニアでもできる4つの確認手順、やり直す前に実物を確認する事故防止策、再発を防ぐ4つの備えを中小企業向けに解説します。
+- [Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド](https://www.piste-ai.com/blog/claude-code-context-management.html) (2026-08-03): Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。その原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。コンテキスト管理の3原則を非エンジニア向けに整理しました。
+- [Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド](https://www.piste-ai.com/blog/claude-code-claude-md-rules.html) (2026-08-02): Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分け、更新の回し方まで非エンジニア向けに整理しました。
+- [Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える！中小企業のための自動化コスト管理ガイド](https://www.piste-ai.com/blog/claude-code-model-cost-optimization.html) (2026-08-01): Claude Codeは使うモデルによって費用が10倍以上変わります。Opus・Sonnet・Haikuの違いと業務ごとの使い分け、月額を予測可能にする運用ルール、コストが膨らむ典型パターンと対策まで、非エンジニアの経営者・担当者向けに整理しました。
+- [Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ！中小企業のための安全な業務自動化ルールづくりガイド](https://www.piste-ai.com/blog/claude-code-permission-security-guide.html) (2026-07-31): Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、ID・パスワードの渡し方、作業範囲の限定、記録の残し方まで、非エンジニアの経営者・担当者が今日から使える形でまとめました。
+- [Claude Codeのチーム機能で複数業務を画面分割で同時稼働！中小企業のAI並列ワークフロー活用ガイド](https://www.piste-ai.com/blog/claude-code-team-parallel-execution.html) (2026-04-30): Claude Codeのチーム機能（TeamCreate）と画面分割（tmux連携）で、複数のAIワーカーに別業務を同時並行で担当させる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのWeb検索機能で市場調査・競合分析を自動化！中小企業のリサーチ業務効率化ガイド](https://www.piste-ai.com/blog/claude-code-websearch-research-automation.html) (2026-04-29): Claude CodeのWebSearch・WebFetch機能で、競合価格モニタリング・市場調査・トレンドリサーチを自動化する方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのPlanモードで業務改革プロジェクトをAIに計画させる！中小企業の戦略立案AI活用ガイド](https://www.piste-ai.com/blog/claude-code-plan-mode-business.html) (2026-04-28): Claude CodeのPlanモードを使い、業務改革プロジェクト・新規事業・SOP整備の計画立案をAIに任せる方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのRemote Controlでスマホから業務指示！中小企業のモバイル経営AI活用ガイド](https://www.piste-ai.com/blog/claude-code-remote-control-mobile.html) (2026-04-27): Claude CodeのRemote Control機能を使い、外出先のスマホから業務指示・進捗確認・承認まで完結させる方法を解説。中小企業向けモバイル経営AI活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのSkill機能で社内ノウハウを資産化！中小企業の業務スキル再利用ガイド](https://www.piste-ai.com/blog/claude-code-skills-knowledge.html) (2026-04-26): Claude CodeのSkill機能を使い、社内のベテランノウハウ・業務手順・チェックリストをAIに記憶させて誰でも再利用できる『社内スキル資産』に変える方法を解説。中小企業向け活用5選・業種別シーン・非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのCLAUDE.md（メモリ機能）で業務ルールをAIに記憶させる！中小企業のAI社内標準化ガイド](https://www.piste-ai.com/blog/claude-code-claudemd-memory-guide.html) (2026-04-24): Claude CodeのCLAUDE.md（メモリ機能）で社内の業務ルール・命名規則・顧客対応マナーをAIに記憶させる方法を解説。中小企業のAI社内標準化と属人化解消を実現する非エンジニア向け導入ガイド。
+- [Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド](https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation.html) (2026-04-23): Claude Codeの/loopとCronCreate（スケジュール機能）で業務を24時間自動運転する方法を解説。中小企業が夜間・早朝・休日の定型業務を無人で回すAI常駐ワーカーの作り方と非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのPlaywright連携でブラウザ業務を自動化！WordPress投稿・予約管理・SNS運用を丸ごと任せる中小企業ガイド](https://www.piste-ai.com/blog/claude-code-playwright-automation.html) (2026-04-22): Claude CodeとPlaywright MCPを組み合わせてブラウザ操作を自動化する方法を解説。中小企業がWordPress投稿・SNS運用・予約管理サイト操作などのルーチンを丸ごと任せる5つの活用例と非エンジニア向け導入4ステップを紹介。
+- [Claude CodeのHook機能で業務イベントを自動化！中小企業向けイベント駆動型AIワークフローガイド](https://www.piste-ai.com/blog/claude-code-hooks-automation.html) (2026-04-21): Claude CodeのHook機能で業務イベントに応じてAI処理を自動実行する方法を解説。中小企業がルーチン業務を自動化する5つの活用例と非エンジニア向け導入4ステップを紹介。
+- [Claude Codeのスラッシュコマンドで社内業務を1行化！中小企業の業務テンプレート自動化ガイド](https://www.piste-ai.com/blog/claude-code-slash-commands.html) (2026-04-20): Claude Codeのスラッシュコマンド機能で繰り返し業務を1行で呼び出す方法を解説。中小企業が定型業務を標準テンプレート化する5つの活用例と導入4ステップを紹介。
+- [Claude Codeのサブエージェント機能で業務を自動分担！中小企業のAIチーム編成ガイド](https://www.piste-ai.com/blog/claude-code-subagent-team.html) (2026-04-19): Claude Codeのサブエージェント機能で業務をAIチームに分担させる方法を解説。中小企業が複数タスクを並列処理するためのエージェント設計5選と導入ステップを紹介。
+- [Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命](https://www.piste-ai.com/blog/claude-code-business-guide.html) (2026-03-28): Claude Codeは自然言語でプログラミングができるAIツールです。ITに詳しくない経営者でも業務自動化が実現できるClaude Codeの魅力と活用法を解説します。
+
+### 経理・財務・資金
+
+資金繰り・粗利・固定費・請求書・インボイス・補助金など、お金まわりの整理と判断材料づくり。一覧: https://www.piste-ai.com/blog/category-finance.html
+
+- [Claude Codeで受け取った請求書のインボイス対応を確かめる！中小企業のための登録番号チェックと保存整理ガイド](https://www.piste-ai.com/blog/claude-code-invoice-registration-check.html) (2026-09-04): Claude Codeで受け取った請求書のインボイス要件を一枚ずつ確かめる手順を解説。記載項目の写し取り、登録番号の形式確認、不足一覧と取引先への確認、確認結果を添えた保存まで5ステップを中小企業向けに整理します。
+- [Claude Codeで借入の返済予定を整理する！中小企業のための返済一覧づくりと金利負担の見える化ガイド](https://www.piste-ai.com/blog/claude-code-loan-repayment-overview.html) (2026-08-31): Claude Codeで散らばった借入の情報を一枚の返済一覧にまとめ、金利負担を見える化する手順を解説。九項目の型づくり、返済予定表の写し替え、毎月の返済合計と年間利息の算出、完済時期の一覧化、繰り上げ返済や借り換えの選択肢づくりまで5ステップを中小企業向けに整理します。
+- [Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド](https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html) (2026-08-30): Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
+- [Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド](https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html) (2026-08-29): Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。
+- [Claude Codeで商品・取引先ごとの粗利を出す！中小企業のためのもうけの出どころを見つける利益率整理ガイド](https://www.piste-ai.com/blog/claude-code-gross-margin-analysis.html) (2026-08-28): Claude Codeで商品ごと・取引先ごとの粗利を出す手順を解説。十二か月分の売上と原価の集め方、先に決める五つの計算ルール、紐づかない行の扱い、額と率の二軸での並べ方、四区分への仕分けまで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
+- [Claude Codeで毎月の固定費を洗い出す！中小企業・一人社長のための経費削減の判断材料づくりガイド](https://www.piste-ai.com/blog/claude-code-fixed-cost-review.html) (2026-08-27): Claude Codeで毎月の固定費を洗い出す手順を解説。十二か月分の支払い記録の集め方、六項目の一覧の型、用途不明の残し方、年額換算と種類別集計、止める・切り替える・残すの仕分けまで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
+- [Claude Codeで資金繰りの見通しを立てる！中小企業・一人社長のための入出金予定の整理と資金ショート予防ガイド](https://www.piste-ai.com/blog/claude-code-cashflow-forecast.html) (2026-08-25): Claude Codeで資金繰りの見通しを立てる手順を解説。通帳残高を起点に確定・見込みを分けて並べる、13週先まで週単位で残高を追う、底が来る週を先に見つける、手当ての選択肢を金額と期日で比べるまでの5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
+- [Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド](https://www.piste-ai.com/blog/claude-code-price-revision-preparation.html) (2026-08-24): Claude Codeで価格改定の根拠を整理する手順を解説。比べる二時点の固定・品目別の増減を率と額で出す・商品別の原価構成への割り戻し・据え置き案を含む複数案の試算・ご案内文の下書きまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド](https://www.piste-ai.com/blog/claude-code-quote-comparison.html) (2026-08-23): Claude Codeで相見積もりを比較する手順を解説。六項目の型づくり・共通の型への写し替え・「記載なし」の残し方・項目ごとの差額分解・条件を揃えた聞き直しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで補助金申請の準備を効率化！中小企業のための要件整理・事業計画書ドラフトづくりガイド](https://www.piste-ai.com/blog/claude-code-subsidy-application-support.html) (2026-08-19): Claude Codeで補助金申請の準備を効率化する手順を解説。申請の手引きの読み込み・要件チェックリスト化・自社情報の棚卸し・事業計画書ドラフト作成・提出前チェックの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド](https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation.html) (2026-08-18): Claude Codeで請求内容と発注内容の食い違いを見つける突合の手順を解説。合計・明細・条件の3階層の分け方、機械と人の役割分担、差分の3区分での出し方、単位や税など5つのつまずきまで中小企業向けに整理します。
+- [Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド](https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html) (2026-08-04): 電子帳簿保存法の対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeで自動化する方法を、中小企業・一人社長向けに非エンジニアにも分かる言葉で解説します。
+- [経理業務をAIで自動化！請求書処理・仕訳入力を効率化する実践ガイド](https://www.piste-ai.com/blog/ai-accounting-automation.html) (2026-04-06): 請求書の自動読み取り、仕訳の自動入力、経費精算の自動化など、AIで経理業務を効率化する具体的な方法を解説。中小企業の経営者・経理担当者向け実践ガイド。
+- [AI導入コストはいくら？中小企業のリアルな費用と投資対効果](https://www.piste-ai.com/blog/ai-cost-roi-for-sme.html) (2026-04-01): AI導入にかかる費用を月額・初期・運用コストに分けて徹底解説。中小企業400社以上の実績データから、投資対効果（ROI）のリアルな数字を公開します。
+
+### 営業・顧客対応
+
+失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方。一覧: https://www.piste-ai.com/blog/category-sales-customer.html
+
+- [Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド](https://www.piste-ai.com/blog/claude-code-lost-deal-review.html) (2026-09-07): Claude Codeで失注した見積もりの経緯を集め、断られた理由を値段・納期・内容・対応・相手側の事情の五つに仕分け、繰り返しを数えて次の提案に活かす記録として残す手順を解説。相手の言葉を原文で残す方法から改善候補の決め方まで5ステップを中小企業向けに整理します。
+- [Claude Codeでお客様のお叱りに落ち着いて対応する！中小企業のための一次回答の下書きと再発防止の記録づくりガイド](https://www.piste-ai.com/blog/claude-code-complaint-first-response.html) (2026-08-26): Claude Codeでクレーム対応の初動を整える手順を解説。受けた内容の時系列化、事実と解釈の切り分け、お相手が求めていることの見極め、一次回答の下書き3案、再発防止メモの残し方まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
+- [Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド](https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis.html) (2026-08-22): Claude Codeでアンケートの自由記述を集計する手順を解説。仕分けの箱の決め方・理由付きの分類・良い/困っている/要望の3区分集計・原文の抜き出しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで契約・サブスクの更新期限を見落とさない！中小企業のための期限一覧づくりと更新可否の判断ガイド](https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline.html) (2026-08-21): Claude Codeで契約・サブスクの更新期限を一覧にする手順を解説。契約書からの項目抽出・次回更新日と解約申し出期限の算出・情報不足の切り分け・3か月ごとの見直しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド](https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation.html) (2026-08-20): Claude Codeで休眠顧客の掘り起こしリストをつくる手順を解説。休眠の基準づくり・名簿からの抽出とグループ分け・グループ別の案内文下書き・結果の記録までの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。
+- [Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド](https://www.piste-ai.com/blog/claude-code-customer-list-deduplication.html) (2026-08-17): Claude Codeで顧客名簿や取引先リストの重複・表記ゆれを整える手順を解説。散らかり方の4つの型、機械と人の役割分担、控えの取り方から統合の基準づくりまで、名寄せの進め方を中小企業向けに整理します。
+- [AIで競合分析・市場調査を自動化！中小企業のデータドリブン経営入門ガイド](https://www.piste-ai.com/blog/ai-competitor-analysis.html) (2026-04-17): 競合の動向が見えない、市場調査に時間が取れない——中小企業の悩みをAIで解決。競合分析・市場調査を自動化し、データドリブン経営を実現する実践ガイド。
+- [生成AIで売上アップ！中小企業の具体的な活用事例5選](https://www.piste-ai.com/blog/ai-sales-growth-examples.html) (2026-04-17): 生成AIを活用して売上を伸ばしている中小企業の具体的な成功事例5選。チャットボット導入、EC商品説明文の自動生成、SNS運用など、すぐに始められる方法をご紹介します。
+- [AIで営業メールを自動作成！商談獲得率を高めるメール文面の作り方](https://www.piste-ai.com/blog/ai-sales-email-automation.html) (2026-04-11): AIで営業メールの作成時間を1/10に短縮しながら、商談獲得率を高める実践ノウハウ。プロンプトテンプレート、業種別の工夫ポイント、導入時の注意点まで、AI導入コンサルタントが解説。
+- [AIで顧客対応を自動化！問い合わせ対応・予約管理を効率化する実践ガイド](https://www.piste-ai.com/blog/ai-customer-support-automation.html) (2026-04-09): AIを活用すれば顧客対応の8割は自動化できます。問い合わせ対応・予約管理・顧客フォローをAIで効率化する具体的な方法を、AI導入の支援経験をもつAIコンサルタントが解説。
+- [AIでSNS集客を自動化！個人店・中小企業のInstagram・LINE運用術](https://www.piste-ai.com/blog/ai-sns-marketing-automation.html) (2026-04-07): SNS運用に時間がかかりすぎていませんか？生成AIを活用すればInstagram・LINE公式アカウントの運用を大幅に効率化できます。投稿文の自動生成からスケジュール投稿まで、具体的な方法を解説。
+
+### 業務記録・現場改善
+
+ヒヤリハット・不良品・点検・納期・外注先・仕様変更など、現場の記録を一覧にして改善につなげる方法。一覧: https://www.piste-ai.com/blog/category-operations.html
+
+- [Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-subcontractor-track-record.html) (2026-09-10): Claude Codeで外注先・協力会社への過去の依頼を一覧にそろえ、外注先名の表記ゆれと仕事の種類を整理し、納期・金額・手直しの三つの実績を数えて同じ種類の仕事で比べる手順を解説。新しい依頼を一言で足す運用まで5ステップを中小企業向けに整理します。
+- [Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド](https://www.piste-ai.com/blog/claude-code-returns-defect-log.html) (2026-09-09): Claude Codeで返品・不良品の発生記録を一覧にそろえ、原因の言葉を十個以内に統一し、一件ごとの損失額と原因別・相手先別の集計で同じ失敗の繰り返しを見える化する手順を解説。新しい不良を一言で足す運用まで5ステップを中小企業向けに整理します。
+- [Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド](https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning.html) (2026-09-08): Claude Codeで受注案件の状況を一覧に整え、待ち日数の計算と三つの遅れ基準で止まっている案件に印をつけ、納期遅れの兆候を毎朝つかめる状態にする手順を解説。遅れの原因を四つに仕分けて月に一度数える方法まで5ステップを中小企業向けに整理します。
+- [Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド](https://www.piste-ai.com/blog/claude-code-near-miss-records.html) (2026-09-06): Claude Codeで現場のヒヤリハット（あと一歩で事故だった気づき）を軽い手間で集め、場所・作業・時間帯で数えて繰り返しを見つけ、事故を防ぐ対策一覧として残す手順を解説。報告の入口を四点に絞る方法から対策の結果を現場に返す運用まで5ステップを中小企業向けに整理します。
+- [Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド](https://www.piste-ai.com/blog/claude-code-spec-change-log.html) (2026-09-05): Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。
+- [Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド](https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness.html) (2026-09-03): Claude Codeで社内に散らばる情報からBCPの下地を短時間で組み立てる手順を解説。緊急連絡網づくり、業務の棚卸しと影響整理、守る業務の決定、代替手段の候補出し、年一回の鮮度確認まで5ステップを中小企業向けに整理します。
+- [Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド](https://www.piste-ai.com/blog/claude-code-equipment-inspection-records.html) (2026-09-01): Claude Codeで散らばった設備・備品の情報を一枚の点検一覧にまとめ、故障を先回りで防ぐ手順を解説。十項目の型づくり、納品書・保証書の写し替え、次回点検時期の計算、点検結果の追記、修理と買い替えの判断材料づくりまで5ステップを中小企業向けに整理します。
+- [Claude Codeで紙の書類・PDF・手書きメモをデータ化する！中小企業のための紙業務デジタル化ガイド](https://www.piste-ai.com/blog/claude-code-paper-document-digitization.html) (2026-08-15): Claude Codeで紙の請求書・PDF・手書きメモを読み取り、表や台帳に流し込む手順を解説。データ化の3段階、書類別の着手順、読み取り間違いを前提にした二重チェックの設計、現場でつまずく5つの落とし穴まで中小企業向けに整理します。
+- [AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド](https://www.piste-ai.com/blog/ai-contract-review-automation.html) (2026-04-16): AIで契約書の一次レビュー・リーガルチェックを自動化。NDA・業務委託・下請法チェックのプロンプト例、LegalOn Cloud・Claude・ChatGPT活用事例、顧問弁護士費用の削減方法まで、中小企業向けに徹底解説。
+- [AIで社内マニュアル・ナレッジ管理を自動化！属人化を解消する実践ガイド](https://www.piste-ai.com/blog/ai-knowledge-management.html) (2026-04-14): 「ベテラン社員が辞めたら業務が回らなくなる」「マニュアルが古くて誰も見ていない」そんな悩みをAIで解決。社内ナレッジの自動整理・共有で属人化を根本から解消する方法を解説。
+- [AIでデータ分析を自動化！売上データから経営判断を支援するダッシュボード活用術](https://www.piste-ai.com/blog/ai-data-analysis-dashboard.html) (2026-04-13): 「データは溜まっているのに、活用できていない」——そんな悩みを抱えていませんか？
+- [AIでプレゼン資料を自動作成！中小企業の資料作成を10分の1にする実践ガイド](https://www.piste-ai.com/blog/ai-presentation-automation.html) (2026-04-13): 「プレゼン資料の作成に毎回3時間以上かかっている」「デザインに自信がなくて、見栄えの良い資料が作れない」
+- [AIで在庫管理を最適化！中小企業の欠品・過剰在庫を防ぐ実践ガイド](https://www.piste-ai.com/blog/ai-inventory-management.html) (2026-04-12): AIによる需要予測と在庫管理で、欠品と過剰在庫をゼロに近づける実践ノウハウ。中小企業・EC・小売店向けの導入ステップ、業種別の工夫、注意点までAI導入コンサルタントが解説。
+- [人材採用にAIを活用！中小企業の採用業務を効率化する実践テクニック](https://www.piste-ai.com/blog/ai-recruitment-efficiency.html) (2026-04-04): 求人原稿の作成からスカウトメール、面接質問設計まで。中小企業がすぐに実践できるAI×採用の効率化テクニック5選を現役AIコンサルタントが解説。
+- [AI議事録で会議の生産性を3倍に！音声認識×要約AIの実践活用ガイド](https://www.piste-ai.com/blog/ai-meeting-minutes-automation.html) (2026-04-02): AIの音声認識と要約機能を活用して議事録作成を自動化。おすすめツール比較、導入ステップ、注意点まで中小企業向けに徹底解説します。
+
+### AI導入の基礎
+
+AI導入の失敗パターン・費用対効果・プロンプト術・ツール選定など、これから AI を使う中小企業向けの入門。一覧: https://www.piste-ai.com/blog/category-ai-basics.html
+
+- [一人社長・フリーランス必見！AIで「自分の分身」を作る業務自動化術](https://www.piste-ai.com/blog/ai-automation-one-person-business.html) (2026-04-15): 人を雇う余裕がなくても大丈夫。AIを活用して自分の分身を作り、一人で月100名の顧客対応を実現する業務自動化の方法を実体験をもとに解説します。
+- [ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術](https://www.piste-ai.com/blog/ai-prompt-techniques-business.html) (2026-04-06): ChatGPTやClaudeへの指示の出し方（プロンプト）を変えるだけで、AIの回答品質は劇的に変わります。中小企業の経営者・ビジネスパーソン向けに、今すぐ使えるプロンプト術を解説。
+- [中小企業のAI導入で失敗しない5つのポイント](https://www.piste-ai.com/blog/ai-adoption-mistakes.html) (2026-03-25): AI導入で失敗する中小企業には共通点があります。400社以上のAI導入支援実績をもつコンサルタントが、よくある失敗パターンと成功のポイントを解説します。
+- [ChatGPTだけじゃない！2026年注目のビジネス向け生成AIツール5選](https://www.piste-ai.com/blog/ai-tools-for-business-2026.html) (2026-03-15): ChatGPT以外にもビジネスで使える生成AIツールは多数あります。2026年注目の5ツールを業務別に比較し、中小企業での具体的な活用法を解説します。
+
+## 利用上の注意
+
+- 記事の内容は公開日時点の情報です。引用する際は記事URLと公開日を併記してください。
+- 会社情報・法的表記: [特定商取引法に基づく表記](https://www.piste-ai.com/tokushoho.html) / [プライバシーポリシー](https://www.piste-ai.com/privacy.html) / [利用規約](https://www.piste-ai.com/terms.html)

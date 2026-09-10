@@ -2,16 +2,117 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
-  <title>AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド | Piste AI EVANGELISTS</title>
+  <title>AIで契約書レビュー・リーガルチェックを効率化 | Piste AI EVANGELISTS</title>
   <meta name="description" content="AIで契約書の一次レビュー・リーガルチェックを自動化。NDA・業務委託・下請法チェックのプロンプト例、LegalOn Cloud・Claude・ChatGPT活用事例、顧問弁護士費用の削減方法まで、中小企業向けに徹底解説。">
   <meta name="keywords" content="AI契約書レビュー, リーガルチェック, LegalOn Cloud, NDA, 業務委託契約, Claude, ChatGPT, 中小企業, 法務自動化">
-  <meta property="og:title" content="AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド">
-  <meta property="og:description" content="顧問弁護士費用を圧縮しつつ契約書チェックを90%削減。AIプロンプト例と実践事例を現役AIコンサルタントが解説。">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="../images/blog-thumb-04.jpg">
+  
+  
+  
+  
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,19 +190,67 @@
       .prompt-box { font-size: 0.78rem; padding: 16px; }
     }
   </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/ai-contract-review-automation.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AIで契約書レビュー・リーガルチェックを効率化">
+  <meta property="og:description" content="AIで契約書の一次レビュー・リーガルチェックを自動化。NDA・業務委託・下請法チェックのプロンプト例、LegalOn Cloud・Claude・ChatGPT活用事例、顧問弁護士費用の削減方法まで、中小企業向けに徹底解説。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/ai-contract-review-automation.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-ai-contract-review-automation-og.jpg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-04-16T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="業務記録・現場改善">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AIで契約書レビュー・リーガルチェックを効率化">
+  <meta name="twitter:description" content="AIで契約書の一次レビュー・リーガルチェックを自動化。NDA・業務委託・下請法チェックのプロンプト例、LegalOn Cloud・Claude・ChatGPT活用事例、顧問弁護士費用の削減方法まで、中小企業向けに徹底解説。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-ai-contract-review-automation-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/ai-contract-review-automation.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/ai-contract-review-automation.html"},"url":"https://www.piste-ai.com/blog/ai-contract-review-automation.html","headline":"AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド","alternativeHeadline":"AIで契約書レビュー・リーガルチェックを効率化","description":"AIで契約書の一次レビュー・リーガルチェックを自動化。NDA・業務委託・下請法チェックのプロンプト例、LegalOn Cloud・Claude・ChatGPT活用事例、顧問弁護士費用の削減方法まで、中小企業向けに徹底解説。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-ai-contract-review-automation-og.jpg","width":640,"height":640},"datePublished":"2026-04-16T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"業務記録・現場改善","keywords":["AI契約書レビュー","リーガルチェック","LegalOn Cloud","NDA","業務委託契約","Claude","ChatGPT","中小企業","法務自動化"],"wordCount":5025,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"業務記録・現場改善","item":"https://www.piste-ai.com/blog/category-operations.html"},{"@type":"ListItem","position":4,"name":"AIで契約書レビュー・リーガルチェックを効率化","item":"https://www.piste-ai.com/blog/ai-contract-review-automation.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/ai-contract-review-automation.html#faq","mainEntity":[{"@type":"Question","name":"AI契約書レビューの費用はどのくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"ChatGPTやClaudeの有料プランは月額20ドル程度から利用できます。日本の契約書に特化したLegalOn Cloudは月額数万円〜ですが、法務担当者を新たに置くよりも低いコストで一次レビュー体制を作れます。"}},{"@type":"Question","name":"契約書をAIに読み込ませても機密情報は守られますか？","acceptedAnswer":{"@type":"Answer","text":"入力データが学習に利用されない法人プラン（ChatGPT Team、Claude for Work等）を使い、個人情報はマスキングしてから入力してください。M&Aや係争中の案件など機密性の高い契約は、AIに任せず弁護士に相談するのが安全です。"}},{"@type":"Question","name":"どの契約類型から始めるのがよいですか？","acceptedAnswer":{"@type":"Answer","text":"NDA、業務委託、売買基本契約など、件数が多く定型的な契約類型を1つ選び、レビュープロンプトを標準化して社内で共有するところから始めるのがおすすめです。1,000万円超の取引など重要契約の最終承認は、必ず人（できれば弁護士）が行ってください。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 
   <header class="header">
     <div class="header-inner">
-      <a href="../index.html" class="header-logo">
-        <img src="../images/logo.png" alt="Piste AI EVANGELISTS">
+      <a href="../" class="header-logo">
+        <img src="../images/logo.webp" alt="Piste AI EVANGELISTS" loading="eager" fetchpriority="high" width="240" height="240">
       </a>
       <nav class="header-nav">
-        <a href="../index.html#consulting">導入コンサル</a>
-        <a href="../index.html#plans">料金プラン</a>
-        <a href="../index.html#blog">ブログ</a>
-        <a href="../index.html#contact" class="header-cta">無料相談</a>
+        <a href="../#services">導入コンサル</a>
+        <a href="../#plans">料金プラン</a>
+        <a href="../#blog">ブログ</a>
+        <a href="../#contact" class="header-cta">無料相談</a>
       </nav>
     </div>
   </header>
@@ -109,10 +258,17 @@
   <section class="article-hero">
     <span class="label">契約書レビュー × AI</span>
     <h1>AIで契約書レビュー・リーガルチェックを効率化！<br>中小企業のリスク回避と契約業務自動化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-operations.html">業務記録・現場改善</a></nav>
+<p class="seo-postmeta"><time datetime="2026-04-16">公開日：2026年4月16日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>法務部がなく、社長や総務担当者が契約書チェックを兼務している中小企業</li><li><strong>できるようになること：</strong>AIツールとプロンプト例でNDAや業務委託契約の一次レビューを社内で行い、弁護士に相談する論点を絞れる</li><li><strong>必要なもの：</strong>ChatGPT・Claudeなどの生成AI（機密扱いは法人プラン）と契約書データ</li></ul></div>
+<!-- /seo:points -->
     <p class="meta">2026.04.16 / 読了目安 10分</p>
   </section>
 
-  <article class="article-body">
+  <article class="article-body" role="main">
 
     <p>「契約書のチェックに毎回何時間もかかる」<br>「顧問弁護士に相談する前に、社内で一次レビューを終わらせたい」<br>「NDAや業務委託契約のひな形確認に時間を取られて、本業が進まない」</p>
     <p>中小企業の経営者・法務担当者・総務担当者から、こうした声をよく聞きます。契約書レビューは<strong>ミスが許されないのに、知識と経験が必要</strong>な、属人化しやすい業務の代表格です。</p>
@@ -123,13 +279,14 @@
       <h4>目次</h4>
       <ol>
         <li><a href="#why">なぜ今、中小企業こそAIリーガルチェックなのか</a></li>
-        <li><a href="#tools">AI契約書レビューで使える主要ツール</a></li>
+        <li><a href="#tools">AI契約書レビューにはどのツールが使えますか？</a></li>
         <li><a href="#prompts">コピペで使えるAIレビュープロンプト</a></li>
         <li><a href="#case1">事例1：製造業 ― 契約チェック時間90%削減</a></li>
         <li><a href="#case2">事例2：IT企業 ― NDAを当日返送</a></li>
         <li><a href="#case3">事例3：不動産業 ― 契約トラブル激減</a></li>
-        <li><a href="#caution">AIに任せてはいけないこと</a></li>
+        <li><a href="#caution">契約書レビューでAIに任せてはいけないことは何ですか？</a></li>
         <li><a href="#summary">まとめ</a></li>
+        <li><a href="#faq">よくある質問</a></li>
       </ol>
     </div>
 
@@ -150,7 +307,7 @@
 
     <p>これにより、<strong>社内で判断できる契約は社内で完結し、本当に重要な契約だけを弁護士に回す</strong>という最適化が実現します。</p>
 
-    <h2 id="tools">AI契約書レビューで使える主要ツール</h2>
+    <h2 id="tools">AI契約書レビューにはどのツールが使えますか？</h2>
 
     <h3>1. ChatGPT（GPT-5）／Claude（Opus 4.6）</h3>
     <p>最も汎用的で、コストパフォーマンスに優れる選択肢です。契約書PDFをアップロードするだけで、不利な条項の抽出、曖昧な表現の指摘、欠落している標準条項の検出、修正案の提示までこなします。</p>
@@ -163,7 +320,7 @@
     <p>Google WorkspaceとGoogle Driveに統合されているため、ドライブ上の契約書をそのまま分析できるのが強み。Googleドキュメントで契約書を管理している企業なら、導入ハードルが最も低い選択肢です。</p>
 
     <h3>4. Claude Code + MCP（上級者向け）</h3>
-    <p>自社の過去契約書データを大量に学習させ、「自社専用の契約書AIレビュアー」を構築することも可能です。Claude Code経由で社内フォルダを参照させれば、<strong>過去案件と矛盾のない条件で新規契約をレビュー</strong>できます。</p>
+    <p>自社の過去契約書データを大量に学習させ、「自社専用の契約書AIレビュアー」を構築することも可能です。<a href="https://code.claude.com/docs/ja/overview" target="_blank" rel="noopener">Claude Code</a>経由で社内フォルダを参照させれば、<strong>過去案件と矛盾のない条件で新規契約をレビュー</strong>できます。紙の契約書が多い場合は、先に<a href="claude-code-paper-document-digitization.html">紙の書類やPDFをデータ化する</a>ところから始めると参照しやすくなります。</p>
 
     <h2 id="prompts">コピペで使えるAIレビュープロンプト</h2>
 
@@ -294,7 +451,7 @@
       <p>AIに「このオーナーとの過去契約履歴」「この物件の特殊条件」を参照させることで、<strong>人間が気づきにくい条件の齟齬まで検出</strong>できるようになりました。</p>
     </div>
 
-    <h2 id="caution">導入時の注意点：AIに任せてはいけないこと</h2>
+    <h2 id="caution">契約書レビューでAIに任せてはいけないことは何ですか？</h2>
     <p>AIは強力ですが、<strong>最終判断を任せてはいけません</strong>。以下は必ず人間（できれば弁護士）が確認すべきポイントです。</p>
 
     <div class="highlight-box">
@@ -319,27 +476,38 @@
       </ol>
     </div>
 
-    <p>契約業務は「知識の属人化」が最も進みやすい領域です。AI導入によって、<strong>誰でも一定品質のチェックができる体制</strong>を作ることが、リスク回避と経営スピードの両立につながります。</p>
+    <p>契約業務は「知識の属人化」が最も進みやすい領域です。AI導入によって、<strong>誰でも一定品質のチェックができる体制</strong>を作ることが、リスク回避と経営スピードの両立につながります。同じく属人化しやすい会議記録についても、<a href="ai-meeting-minutes-automation.html">AI議事録で会議の生産性を上げる方法</a>を合わせてご覧ください。</p>
 
+    <h2 id="faq">よくある質問</h2>
+    <h3>AI契約書レビューの費用はどのくらいかかりますか？</h3>
+    <p>ChatGPTやClaudeの有料プランは月額20ドル程度から利用できます。日本の契約書に特化したLegalOn Cloudは月額数万円〜ですが、法務担当者を新たに置くよりも低いコストで一次レビュー体制を作れます。</p>
+    <h3>契約書をAIに読み込ませても機密情報は守られますか？</h3>
+    <p>入力データが学習に利用されない法人プラン（ChatGPT Team、Claude for Work等）を使い、個人情報はマスキングしてから入力してください。M&amp;Aや係争中の案件など機密性の高い契約は、AIに任せず弁護士に相談するのが安全です。</p>
+    <h3>どの契約類型から始めるのがよいですか？</h3>
+    <p>NDA、業務委託、売買基本契約など、件数が多く定型的な契約類型を1つ選び、レビュープロンプトを標準化して社内で共有するところから始めるのがおすすめです。1,000万円超の取引など重要契約の最終承認は、必ず人（できれば弁護士）が行ってください。</p>
     <div class="article-cta" id="cta">
       <span style="display:inline-block; background:#e74c3c; color:#fff; font-size:0.8rem; font-weight:700; padding:4px 18px; border-radius:20px; margin-bottom:16px;">初回無料</span>
       <h2>AI契約業務 導入コンサルティング</h2>
       <p>「うちの契約書もAIでチェックできる？」「社内ひな形をAIに学習させたい」<br>ヒアリングから導入・運用まで、ワンストップでサポートします。</p>
       <p class="price">&yen;0<span>（初回ヒアリング無料）</span></p>
       <p class="note">オンライン（Zoom）で実施 / 約30分</p>
-      <a href="../index.html#contact" class="btn-primary">無料相談を申し込む</a>
+      <a href="../#contact" class="btn-primary">無料相談を申し込む</a>
     </div>
 
     <p style="text-align: center; color: var(--text-light); margin-top: 40px;">
-      契約業務のAI導入でお悩みの方は、<a href="../index.html#contact" style="color: var(--gold); font-weight: 600;">無料相談</a>からお気軽にお問い合わせください。<br>
-      70社以上のAI導入実績をもとに、あなたの契約業務に最適なご提案をいたします。
+      契約業務のAI導入でお悩みの方は、<a href="../#contact" style="color: var(--gold); font-weight: 600;">無料相談</a>からお気軽にお問い合わせください。<br>
+      AI導入の支援経験をもとに、あなたの契約業務に最適なご提案をいたします。
     </p>
 
   </article>
 
-  <footer class="footer">
-    <p><a href="../index.html">&larr; トップページに戻る</a></p>
-    <p style="margin-top: 16px;">&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+  <!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="ai-recruitment-efficiency.html"><img src="../images/blog-ai-recruitment-efficiency-card.webp" alt="" loading="lazy" width="640" height="357"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">人材採用にAIを活用！中小企業の採用業務を効率化する実践テクニック</span></a><a class="seo-related-card" href="ai-meeting-minutes-automation.html"><img src="../images/blog-ai-meeting-minutes-automation-card.webp" alt="" loading="lazy" width="640" height="357"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">AI議事録で会議の生産性を3倍に！音声認識×要約AIの実践活用ガイド</span></a><a class="seo-related-card" href="claude-code-paper-document-digitization.html"><img src="../images/blog-claude-code-paper-document-digitization-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで紙の書類・PDF・手書きメモをデータ化する</span></a></div>
+<p class="seo-related-more"><a href="category-operations.html">「業務記録・現場改善」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer class="footer">
+    <p><a href="../">&larr; トップページに戻る</a></p>
+    <p style="margin-top: 16px;">&copy; 2026 株式会社Piste. All rights reserved.</p>
   </footer>
 
 </body>

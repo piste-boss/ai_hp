@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化！小売店・飲食店の店舗運営効率化ガイド</title>
+<meta name="description" content="Claude Codeとクラウドスマレジを組み合わせ、日次の売上集計・在庫の減り方チェック・売れ筋分析・顧客の購買傾向整理・月次レポートづくりをAI自動化する方法を解説。小売店・飲食店向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,スマレジ,POSレジ,売上集計,在庫管理,顧客管理,店舗運営,小売,飲食店,業務自動化,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化！小売店・飲食店の店舗運営効率化ガイド</h1>
+
+<p class="lead">「レジは締められるけれど、売上データを分析するところまで手が回らない」「在庫の減り方を見て発注したいのに、数字を集めるだけで一日が終わる」「常連さんの購買傾向を活かしたいけれど、データがバラバラで使えていない」——クラウドPOSレジ<strong>スマレジ</strong>を導入している小売店や飲食店ほど、この“データはあるのに活かせない”壁に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、多くの店舗で使われているクラウドPOSレジ<strong>スマレジ</strong>を組み合わせ、売上集計・在庫管理・顧客分析・日報づくりまでをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ「スマレジ × Claude Code」なのか</a></li>
+<li><a href="#s2">2. Claude Codeとは（おさらい）</a></li>
+<li><a href="#s3">3. 連携でできること・活用5選</a></li>
+<li><a href="#s4">4. 業種別の活用シーン</a></li>
+<li><a href="#s5">5. 非エンジニアのための導入4ステップ</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ「スマレジ × Claude Code」なのか</h2>
+<p>スマレジは、iPadなどで手軽に使えるクラウドPOSレジとして、小売店・飲食店・サロンなど幅広い店舗で導入が進んでいます。会計・在庫・顧客情報がクラウドにたまっていくため、データそのものは日々自然と蓄積されていきます。ところが実際に運用してみると、「売上データを分析するところまで手が回らない」「在庫の動きを見て発注したいのに集計に時間がかかる」「常連さんの傾向を活かしきれていない」といった課題が次々に出てきます。</p>
+<p>Claude Codeは、こうした「集める・整理する・まとめる」作業を日本語の指示だけでAIに任せられるツールです。日々の売上をまとめて傾向を整理したり、在庫の減り方から発注の目安を提案したり、顧客の購買傾向をわかりやすく整理したりといった作業を横断的にサポートできます。プログラミングの知識は不要で、やりたいことを言葉で伝えるだけです。</p>
+<p>つまり、スマレジという「データがたまる場所」に対して、Claude Codeを「集計と分析を支える専属アシスタント」として配置するイメージです。</p>
+
+<h2 id="s2">2. Claude Codeとは（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツールです。最大の特徴は、専門用語を覚えなくても「〇〇して」と日本語で頼むだけで、データ集計・要約・情報整理・分類までこなしてくれる点にあります。</p>
+<ul>
+<li>ノーコードに近い操作感：コードを書かずに業務指示が出せる</li>
+<li>面倒な集計の自動化：売上や在庫の数字を決まった形にまとめる作業を任せられる</li>
+<li>繰り返し作業の型化：一度作った日報や月次レポートの型を毎回の集計に再利用できる</li>
+</ul>
+<p>スマレジ単体では「会計・在庫・顧客のデータをためる仕組み」は手に入りますが、「そのデータをどう読み、どう次の一手につなげるか」は自分で行う必要があります。そこをClaude Codeが補うことで、店舗運営のいちばん重い「集計と分析」が一気に軽くなります。</p>
+
+<h2 id="s3">3. 連携でできること・活用5選</h2>
+<h3>① 日次・週次の売上集計と日報づくり</h3>
+<p>その日の売上データを渡すだけで、時間帯別・商品別の売れ行きや前日比・前週比を整理し、そのまま使える日報の下書きにまとめます。閉店後に数字を並べるだけで終わっていた作業を短縮できます。</p>
+<h3>② 在庫の減り方チェックと発注メモの作成</h3>
+<p>在庫データをもとに「減りが早い商品」「動きの鈍い商品」を整理し、発注の目安や欠品リスクのある商品をわかりやすくまとめます。勘に頼りがちだった発注判断を、数字に基づいて後押しします。</p>
+<h3>③ 売れ筋・死に筋の分析と品揃えの見直し</h3>
+<p>一定期間の販売データから、よく売れている商品と動きの少ない商品を整理し、品揃えやフェイスの見直しに使える形にまとめます。感覚ではなく数字で棚づくりを考えられるようになります。</p>
+<h3>④ 顧客の購買傾向の整理</h3>
+<p>会員や購買履歴のデータを渡すと、リピート傾向やよく一緒に買われる商品の組み合わせなどを、わかりやすく整理します。次のキャンペーンやおすすめ提案のヒントとして活用できます。</p>
+<h3>⑤ 月次レポートと改善提案の下書き</h3>
+<p>月間の売上・客数・客単価などの数字をもとに、「今月の傾向」「伸びた要因・落ちた要因」「来月に向けた打ち手」を整理し、月次レポートの下書きとしてまとめます。振り返りと計画づくりの負担を大きく減らせます。</p>
+
+<h2 id="s4">4. 業種別の活用シーン</h2>
+<table>
+<thead><tr><th>業種</th><th>活用シーン</th></tr></thead>
+<tbody>
+<tr><td>小売・物販</td><td>売れ筋・死に筋の分析と発注メモづくりで、在庫の最適化を支援</td></tr>
+<tr><td>飲食店・カフェ</td><td>時間帯別・メニュー別の売上集計と日報づくりを時短</td></tr>
+<tr><td>美容室・サロン</td><td>来店周期や物販の購買傾向を整理し、リピート施策のヒントに活用</td></tr>
+<tr><td>アパレル</td><td>シーズンごとの売れ筋分析と品揃え見直しの下書きを効率化</td></tr>
+<tr><td>食品・惣菜店</td><td>曜日別・天候別の売れ行き傾向を整理し、仕込み・発注の判断を後押し</td></tr>
+</tbody>
+</table>
+
+<h2 id="s5">5. 非エンジニアのための導入4ステップ</h2>
+<ol>
+<li>目的を1つに絞る：まずは「日報づくりを楽にしたい」「発注の判断材料がほしい」など、効果が見えやすい作業を一つ選びます。</li>
+<li>Claude Codeを用意する：PCにClaude Codeを導入し、「どの数字を・どんな形で・何のために整理したいか」を日本語で伝えられる状態にします。</li>
+<li>つなぎ方を決める：スマレジからエクスポートした売上や在庫のデータをClaude Codeに渡して集計・整理し、活用は手作業から始めると安全です。慣れてきたら毎日の締め作業に組み込みます。</li>
+<li>小さく試して広げる：1つの作業でうまく回ったら、在庫チェック・顧客分析・月次レポートへと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり全自動化を狙わず、「まず一つの作業を確実に楽にする」こと。小さな成功体験が、運用の定着と継続につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li>認証情報の管理：スマレジや各アカウントのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li>個人情報の取り扱い：顧客データを扱う際は、社内でルールを決め、必要な範囲だけを使うようにします。</li>
+<li>公開前・実行前は必ず人が確認する：発注メモやレポートはAIに下書きまで任せ、実際の判断は必ず人が最終チェックする設計にします。</li>
+<li>数字の前提をそろえる：集計期間や対象店舗などの条件を明確に伝えることで、ズレのない結果になります。</li>
+<li>現場感覚との照らし合わせ：データだけで決めきらず、店長やスタッフの肌感覚と突き合わせて最終判断する工程を残します。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「今日の売上を日報にまとめて」といった頼み方で十分です。</p>
+<h3>Q. スマレジのデータをそのまま使えますか？</h3>
+<p>スマレジからエクスポートした売上や在庫のデータをClaude Codeに渡して整理・分析するところから始めるのが安全です。まずは手元のデータで試し、慣れてきたら日々の締め作業に組み込んでいくとスムーズです。</p>
+<h3>Q. どのくらいの作業から始めるのがおすすめですか？</h3>
+<p>まずは「日次の売上集計と日報づくり」から始めるのがおすすめです。毎日発生する作業なので効果を実感しやすく、その後の在庫チェックや顧客分析にもスムーズに広げられます。</p>
+<h3>Q. すでにスマレジを使っていますが、何か入れ替えが必要ですか？</h3>
+<p>入れ替えは不要です。今の運用はそのままに、集計や分析という「手が回りにくい部分」だけをClaude Codeが補う形なので、無理なく始められます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「スマレジのデータを活かしたいけれど、集計や分析まで手が回らない」。そんな方に向けて、Claude Codeの導入から最初の店舗データ活用の自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">3,000円〜</div>
+<p>これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った「ちょうどいい自動化」をご提案します。</p>
+<a href="../index.html#contact">導入サポートを相談する</a>
+</div>
+
+</div>
+
+<footer>
+&copy; Piste — AIコンサルティング. All rights reserved.
+</footer>
+</body>
+</html>

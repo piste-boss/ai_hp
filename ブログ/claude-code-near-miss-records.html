@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド</title>
+<meta name="description" content="Claude Codeで現場のヒヤリハット（あと一歩で事故だった気づき）を軽い手間で集め、場所・作業・時間帯で数えて繰り返しを見つけ、事故を防ぐ対策一覧として残す手順を解説。報告の入口を四点に絞る方法から対策の結果を現場に返す運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,ヒヤリハット,労働安全,事故防止,安全対策,現場改善,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド</h1>
+<p class="lead">脚立が少しぐらついた。フォークリフトの死角に人が立っていた。熱い鍋を持ったまま、通路で人とすれ違いかけた。事故にはならなかったけれど、あと一歩で事故だった。こうした出来事は「ヒヤリハット」と呼ばれ、どの現場でも毎週のように起きています。ところが<strong>その気づきを記録として残している中小企業は、ごくわずか</strong>です。</p>
+<p>その場で「気をつけよう」と声をかけて終わり。同じ場所で同じことが何度か繰り返され、ある日、本当の事故になる。けがをした人の治療と休業、行政への届出、取引先への説明、そして会社への信用。<strong>一人の事故が会社の存続に関わるのが、中小企業の現実</strong>です。大きな会社には安全の専任担当がいますが、小さな会社では社長か現場の責任者が兼任で、記録をまとめる時間がありません。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、現場の「あと一歩」の気づきを軽い手間で集め、場所・作業・原因で整理し、事故を防ぐための対策一覧として残すまでの手順を、非エンジニアの方向けに整理します。対策を決め、現場に指示するのは人。機械に任せるのは、<strong>散らばった気づきを集めて、並べて、繰り返しを見つける作業</strong>です。</p>
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">ヒヤリハットが記録に残らない3つの理由</a></li>
+<li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li>
+<li><a href="#s3">実務5ステップ</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+
+<h2 id="s1">ヒヤリハットが記録に残らない3つの理由</h2>
+<p>記録が残らないのは、現場の人が安全に無関心だからではありません。記録が続かない構造が、仕組みの側にあります。</p>
+<h3>1. 報告する側に「面倒」と「気まずさ」がある</h3>
+<p>多くの会社のヒヤリハット報告書は、書く項目が多すぎます。日時、場所、作業内容、状況、原因、対策、所感。忙しい現場で、ペンを持って十行埋めるのは重い作業です。加えて、<strong>自分の不注意を書類に残すことへの気まずさ</strong>があります。書く側の負担と心理の両方が、報告を遠ざけます。</p>
+<h3>2. 集めても、まとめる人がいない</h3>
+<p>報告書を回収しても、それを一覧にして傾向を見る人がいません。紙の報告書は箱に溜まり、パソコンの中の報告は開かれないまま増えていきます。<strong>集めることと、活かすことのあいだに、大きな空白</strong>があります。</p>
+<h3>3. 記録と対策がつながっていない</h3>
+<p>報告したのに、何も変わらなかった。この経験が一度あると、次から誰も報告しなくなります。<strong>報告が対策に変わり、その結果が現場に返ってくる</strong>という循環がないかぎり、記録は続きません。</p>
+<blockquote>記録が残らないのは、書くのが重く、まとめる人がおらず、報告しても変わらないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>どの対策を採るか、費用をかけるか、作業の手順を変えるかは経営の判断</strong>であり、人が決めることです。機械に任せるのは、気づきを受け取って定型に整え、一覧にして、繰り返しを見つけ、対策の候補を並べるところまでです。</p>
+<table>
+<tr><th>工程</th><th>担当</th><th>内容</th></tr>
+<tr><td>気づきの受け取り</td><td>機械</td><td>短いメモや音声の文字起こしを、決まった形に整える</td></tr>
+<tr><td>一覧化</td><td>機械</td><td>日付・場所・作業・何が起きかけたかを一行ずつ並べる</td></tr>
+<tr><td>分類</td><td>機械</td><td>場所別・作業別・時間帯別・原因別に数える</td></tr>
+<tr><td>繰り返しの検出</td><td>機械</td><td>同じ場所や同じ作業で複数回起きているものに印をつける</td></tr>
+<tr><td>対策候補の下書き</td><td>機械</td><td>すぐできる対策・費用のかかる対策・手順の変更に分けて並べる</td></tr>
+<tr><td>対策の決定と優先順位</td><td><strong>人</strong></td><td>現場の実情と費用を見て決める</td></tr>
+<tr><td>現場への周知</td><td><strong>人</strong></td><td>朝礼や掲示で伝え、確認する</td></tr>
+<tr><td>結果の共有</td><td><strong>人</strong></td><td>対策後に報告が減ったかを現場に返す</td></tr>
+</table>
+<p>線引きはこれまでの記事と同じです。<strong>集めて、数えて、並べるのが機械。決めて、伝えるのが人</strong>。この順番を守ると、報告する側の手間はほとんど増えず、まとめる側の時間は大きく減ります。</p>
+
+<h2 id="s3">実務5ステップ</h2>
+<h3>ステップ1：報告の入口を軽くする</h3>
+<p>報告に求める項目を、<strong>「いつ・どこで・何をしていて・何が起きかけたか」の四点</strong>に絞ります。整った文章である必要はなく、短いメモや、スマートフォンに吹き込んだ音声の文字起こしで十分です。それをClaude Codeに渡し、決まった形に整えさせます。名前は必須にしません。誰が、よりも、どこで何が起きかけたかのほうが、事故を防ぐうえで大切だからです。</p>
+<h3>ステップ2：一覧に集め、原文を残す</h3>
+<p>整えた報告を、一つの一覧に一行ずつ足していきます。<strong>現場の言葉はそのまま残し、機械には「場所」「作業」「原因の候補」の列を補わせる</strong>のが要点です。原因の候補はあくまで機械の推定なので、「推定」と明記させ、断定させません。読み取れない箇所は「判読不能」と書かせ、想像で埋めさせないようにします。</p>
+<h3>ステップ3：繰り返しを見つけさせる</h3>
+<p>一覧がある程度たまったら、場所別・作業別・時間帯別に数えさせます。<strong>同じ場所で三回起きているなら、それは個人の不注意ではなく、場所の問題</strong>です。通路の幅、照明の暗さ、物の置き場所、時間帯による人の混み方。数えることで、個人の反省では見えなかった構造が浮かび上がります。</p>
+<h3>ステップ4：対策の候補を並べさせ、人が決める</h3>
+<p>繰り返しの多い項目について、対策の候補を<strong>「今日からできること」「費用がかかること」「作業手順を変えること」の三段</strong>で出させます。たとえば「通路に線を引く」「ミラーを設置する」「フォークリフトの走行時間帯を分ける」といった具合です。どれを採るかは人が決め、決めた内容と期日を一覧に書き戻します。現場への周知も人が行います。</p>
+<h3>ステップ5：対策のあとを追い、現場に返す</h3>
+<p>対策を実施したあと、同じ場所・同じ作業の報告が減ったかを機械に数えさせます。月に一度、その結果を現場に共有します。<strong>「報告したら、変わった」という実感が、次の報告を生みます</strong>。この循環ができると、記録は仕組みとして回り始めます。</p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<p><strong>1. 責める言葉を使わせない</strong></p>
+<p>「誰が悪いか」ではなく「何があれば防げたか」で整えるよう、方針を先に渡します。機械は指示がなければ「確認不足」「注意不足」という言葉で片づけてしまいます。<strong>個人の注意に頼る対策は、対策ではありません</strong>。設備・配置・手順のどこを変えるかを候補にさせます。</p>
+<p><strong>2. 現場の言葉を言い換えさせない</strong></p>
+<p>「脚立がぐらついた」を「設備の不安定性」と整えられると、現場の人が読んでも自分の報告だとわかりません。原文はそのまま残し、分類の列だけを機械が足す。<strong>読むのは現場の人であることを忘れない</strong>ようにします。</p>
+<p><strong>3. 数を突き合わせる</strong></p>
+<p>受け取った報告の件数と、一覧の行数が一致しているかを確かめます。場所別の集計の合計が、全体の行数と一致しているかも同様です。<strong>数が合わなければ、取りこぼしか二重登録がある</strong>。この突き合わせを毎回入れるだけで、一覧の信頼度が大きく変わります。</p>
+
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>1. 立派な書式をつくって、報告が来なくなる</h3>
+<p>安全の取り組みを始めるとき、項目の多い報告書をつくりがちです。書式が重いほど、報告は減ります。<strong>入口は四点だけ。整えるのは機械</strong>。この分担を守ります。</p>
+<h3>2. 大きな出来事だけを記録する</h3>
+<p>けがに近かった出来事は誰でも覚えています。困るのは「ちょっとつまずいた」程度の小さな気づきです。<strong>小さな気づきこそ、大きな事故の前兆</strong>です。大小を問わず一覧に入れ、数えてから判断します。</p>
+<h3>3. 個人の反省文にしてしまう</h3>
+<p>「私の不注意でした。今後は気をつけます」で終わる報告は、次の事故を防ぎません。反省ではなく、<strong>何があれば防げたかを残す</strong>ものだと、現場に繰り返し伝えます。</p>
+<h3>4. 記録して満足し、対策に進まない</h3>
+<p>一覧ができると、それだけで安心してしまいます。一覧は出発点であって、目的ではありません。<strong>繰り返しの多い項目から、一つずつ対策を決めて実行する</strong>ところまでが一組です。</p>
+<h3>5. 対策の結果を現場に返さない</h3>
+<p>対策をしても、現場に「あの報告のおかげでミラーが付いた」と伝わらなければ、報告する意味を誰も感じません。<strong>月に一度、何が変わったかを短く共有する</strong>。この習慣が、記録の続く期間を決めます。</p>
+
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>製造業</strong> — 機械への巻き込まれ、はさまれ、工具の落下。設備別に数えると、特定の機械に気づきが集中していることが見えます。</p>
+<p><strong>建設・設備工事</strong> — 高所作業、脚立、重機の死角。現場別に整理し、朝礼で「この現場で先週こういう気づきがあった」と共有する運用が効きます。</p>
+<p><strong>飲食店</strong> — 火傷、転倒、刃物。時間帯別に数えると、混雑する時間に集中していることがわかり、その時間帯の動線や人の配置を見直す材料になります。</p>
+<p><strong>運送・配送</strong> — 荷下ろし時の腰、後退時の死角、特定の納品先の狭い搬入口。場所別の集計が、納品先ごとの注意点の整理につながります。</p>
+<p><strong>介護・福祉</strong> — 移乗、入浴介助、夜間の見回り。時間帯と人の配置の関係を数えることで、無理のかかっている時間帯が見えます。</p>
+
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 報告に名前は必要ですか</h3>
+<p>必須にしないことをおすすめします。名前を書かせると、気まずさから報告が減ります。<strong>必要なのは「どこで、何が」であって「誰が」ではありません</strong>。対策を決める段階で詳しく聞きたい場合は、人が個別に確かめれば十分です。</p>
+<h3>Q. 手書きの報告書が箱に溜まっています</h3>
+<p>写真に撮ってClaude Codeに読ませ、データ化するところから始めます。読めない箇所は「判読不能」と残させ、想像で埋めさせません。過去の報告を一覧にして数えるだけで、<strong>すでに繰り返している場所や作業が見つかる</strong>ことがよくあります。</p>
+<h3>Q. 実際に事故が起きたときの届出と、この記録は同じものですか</h3>
+<p>別のものです。実際にけがや災害が起きた場合の行政への届出は、法令の定めに従って行うものです。この記事で扱うヒヤリハットの記録は、事故を防ぐために会社が自主的に残すものです。届出の要否や様式については、社会保険労務士など専門家に確かめてください。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>報告の入口と一覧の形を整えるのに半日ほど、以後は週に十数分が目安です。<strong>事故が起きてからの対応にかかる時間と費用と比べると、はるかに小さな投資</strong>です。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>ヒヤリハットが記録に残らないのは、書くのが重く、まとめる人がおらず、報告しても変わらないからです。裏を返せば、受け取って、並べて、数える作業を機械に任せてしまえば、残るのは「どの対策を採るか」という判断だけになります。</p>
+<p>入口を四点に絞る。原文を残して一覧にする。場所と作業で数える。候補を並べ、人が決める。結果を現場に返す。この順番なら、現場の手間を増やさずに、記録は続きます。</p>
+<p>集めて、数えて、並べるのは機械。決めて、伝えるのは人。<strong>事故が起きてから経緯を探すのではなく、あと一歩の段階で構造を直せている状態</strong>が、小さな会社が人と信用を守る、いちばん確実な方法です。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

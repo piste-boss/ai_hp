@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで売掛金の未入金を見逃さない | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,売掛金,未入金,入金確認,督促,資金繰り,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで売掛金の未入金を見逃さない">
+  <meta property="og:description" content="Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-receivables-payment-check-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-29T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで売掛金の未入金を見逃さない">
+  <meta name="twitter:description" content="Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-receivables-payment-check-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html"},"url":"https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html","headline":"Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド","alternativeHeadline":"Claude Codeで売掛金の未入金を見逃さない","description":"Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-receivables-payment-check-og.jpg","width":1200,"height":800},"datePublished":"2026-08-29T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","売掛金","未入金","入金確認","督促","資金繰り","業務効率化","中小企業"],"wordCount":5062,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで売掛金の未入金を見逃さない","item":"https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html#faq","mainEntity":[{"@type":"Question","name":"口座の明細を渡しても大丈夫ですか","acceptedAnswer":{"@type":"Answer","text":"渡す前に、この作業に関係のない出金の明細や、個人にかかわる行は外しておくと安心です。また、取引先名を記号に置き換えて渡し、手元で対応表を持っておく方法も有効です。"}},{"@type":"Question","name":"会計ソフトに入金消込の機能があります。それとの違いは","acceptedAnswer":{"@type":"Answer","text":"会計ソフトの機能で足りているなら、そのままで構いません。効くのは、請求の記録がソフトの外にある場合です。手書きに近い請求書の控え、独自の受注表、複数の販売経路。形式がばらばらな記録同士を突き合わせられるのが、この方法の持ち味です。"}},{"@type":"Question","name":"督促のご案内は自動で送ってよいですか","acceptedAnswer":{"@type":"Answer","text":"おすすめしません。下書きまでを機械、送る判断と最終の文面は必ず人。相手の事情を知らない自動送信は、回収より先に信頼を損ないます。"}},{"@type":"Question","name":"どのくらいの時間短縮になりますか","acceptedAnswer":{"@type":"Answer","text":"月に数十件の請求を通帳と突き合わせる作業は、半日仕事になりがちです。型ができれば毎週十分ほどの確認で回るようになります。時間の短縮以上に、「気づくのが二か月後」がなくなることの価値が大きい作業です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-29">公開日：2026年8月29日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-receivables-payment-check.webp" alt="Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>請求は出しているが入金の突き合わせまで手が回らない中小企業・一人社長</li><li><strong>できるようになること：</strong>請求一覧と口座明細を照合ルールに沿って突き合わせ、未入金一覧を経過日数順に出し、段階別のご案内文を下書きできる</li><li><strong>必要なもの：</strong>Claude Code と、直近数か月分の請求一覧と口座明細（控えを取ったもの）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">請求書は出した。仕事も納めた。ところが入金日を過ぎても振り込まれていない——そのことに気づいたのが二か月後だった。中小企業や一人社長の現場で、これは決して珍しい話ではありません。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">未入金の確認が後手に回る3つの理由</a></li>
+<li><a href="#s2">未入金の確認でAIに任せてよい作業はどこまでですか？</a></li>
+<li><a href="#s3">未入金はどんな手順で見つければよいですか？</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい4つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<p>売った瞬間ではなく、入金された瞬間に初めてお金は手元に来ます。ところが多くの会社では、<strong>請求を出すまでの流れはあっても、入金を確かめる流れがありません</strong>。請求書の控えは綴じてあるのに、それが振り込まれたかどうかは誰も突き合わせていない。未入金は、この隙間で静かに積み上がります。</p>
+<p>厄介なのは、<strong>未入金は放っておくほど回収しづらくなる</strong>ことです。入金予定日の翌週に「行き違いでしたら恐縮ですが」とお伝えするのは簡単です。しかし三か月経ってからでは、先方も事情を確かめるところからになり、こちらも切り出しにくくなります。早く気づくことが、そのまま回収のしやすさになります。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong><a href="https://code.claude.com/docs/ja/overview" target="_blank" rel="noopener">Claude Code</a></strong> を使って、請求の一覧と入金の記録を突き合わせ、未入金を早く見つけて、角の立たないご案内文まで用意する手順を、非エンジニアの方向けに整理します。</p>
+<h2 id="s1">未入金の確認が後手に回る3つの理由</h2>
+<p>だらしないから起こるのではありません。作業の側に、後回しを生む構造があります。</p>
+<h3>1. 請求の記録と入金の記録が別の場所にある</h3>
+<p>請求は請求書の控えや販売の記録に、入金は通帳や口座の明細に入っています。<strong>この二つを一件ずつ突き合わせる作業が、そもそも重い</strong>。月末の忙しい時期に回ってくるため、ざっと眺めて終わりになります。</p>
+<h3>2. 名前と金額が、きれいに一致しない</h3>
+<p>振込名義は請求先の正式名と違うことがよくあります。カタカナ表記、代表者の個人名、複数の請求をまとめた合算振込、振込手数料が引かれた端数違い。<strong>機械的に一致しない行だらけ</strong>なので、目視に頼ることになり、目視は漏れます。</p>
+<h3>3. 気づいても、切り出し方に迷って止まる</h3>
+<p>未入金に気づいたあと、どう伝えるかで手が止まります。大事なお客様ほど角を立てたくない。文面を考えているうちに数日経ち、そのうち別の仕事に流されます。<strong>確認と連絡のあいだにも、隙間がある</strong>のです。</p>
+<blockquote>未入金が積み上がるのは、確認が難しいからではありません。突き合わせる工程が重く、切り出す文面に迷うからです。この二つは、どちらも機械に任せられます。</blockquote>
+<h2 id="s2">未入金の確認でAIに任せてよい作業はどこまでですか？</h2>
+<p>大前提として、<strong>どのお客様に、いつ、どんな調子でお伝えするかは人が決めること</strong>です。事情のあるお客様への配慮、長い付き合いの中での判断は、一覧からは読み取れません。機械に任せるのは、その手前の「気づく」までです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>請求一覧の読み取り</td><td>機械</td><td>請求先・金額・入金予定日を取り出す</td></tr><tr><td>入金記録の読み取り</td><td>機械</td><td>口座明細から日付・名義・金額を取り出す</td></tr><tr><td>二つの突き合わせ</td><td>機械</td><td>名義のゆれや手数料の端数を考慮して照合する</td></tr><tr><td>照合できない行の分離</td><td>機械</td><td>自動で結べなかった行を理由付きで別に出す</td></tr><tr><td>照合できない行の確認</td><td>人</td><td>どの請求への入金なのかを確かめる</td></tr><tr><td>未入金一覧と経過日数の算出</td><td>機械</td><td>予定日からの経過日数順に並べる</td></tr><tr><td>ご案内文の下書き</td><td>機械</td><td>経過段階に応じた文面の案を作る</td></tr><tr><td>誰にいつ伝えるかの判断</td><td><strong>人</strong></td><td>相手との関係と事情を踏まえて決める</td></tr><tr><td>実際のやり取り</td><td><strong>人</strong></td><td>文面を確認・修正して送る</td></tr></tbody></table>
+<p>線引きは単純です。<strong>突き合わせて、並べて、下書きするまでが機械。判断して、伝えるのは人</strong>。この順番を守ると、「気づいたときには三か月前」がなくなります。</p>
+<h2 id="s3">未入金はどんな手順で見つければよいですか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-receivables-payment-check-01.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：請求の一覧と入金の記録を集める</h3>
+<p>まず、直近数か月分の請求の一覧と、同じ期間の口座の明細を一つのフォルダにまとめます。請求の一覧は、請求書の控えでも、販売管理の書き出しでも構いません。</p>
+<p>このとき必ず<strong>元のファイルは触らず、控えを取ってから作業します</strong>。照合の途中で元の記録を書き換えてしまうと、あとから確かめられなくなります。</p>
+<h3>ステップ2：照合のルールを先に決める</h3>
+<p>集めてから考えると迷います。先にルールを決めて、そこへ当てはめさせます。</p>
+<ol><li>何をもって「一致」とするか（名義と金額、または金額と日付の近さ）</li><li>振込手数料ぶんの端数をどこまで許すか（数百円までの差は同一とみなす、など）</li><li>合算振込の扱い（複数の請求の合計額と一致したら候補として出す）</li><li>入金予定日の基準（請求書の支払期日か、締めと支払いの取り決めか）</li></ol>
+<p><strong>最初から完璧なルールを目指さないこと</strong>が大切です。まずは大まかに決めて一度回し、照合できなかった行を見てからルールを足すほうが、結果的に早く仕上がります。</p>
+<h3>ステップ3：突き合わせて、未入金一覧を出させる</h3>
+<p>決めたルールを渡し、請求の一覧と入金の記録を照合させます。ここで最も重要な指示は、<strong>自動で結べなかった行を、勝手に近そうな請求へ寄せないこと</strong>です。「照合できなかった行は、推測で当てはめず、理由を添えて別の一覧に出してください」と最初に伝えます。</p>
+<p>出てくるのは三つの一覧です。<strong>照合できた入金、照合できなかった入金、そして入金が見つからない請求</strong>。三つ目が未入金の候補であり、この一覧が毎週自動で手元に届く状態が目標です。この未入金一覧は、<a href="claude-code-cashflow-forecast.html">資金繰りの見通し</a>に載せる入金予定を修正する材料にもなります。</p>
+<h3>ステップ4：経過日数で段階を分ける</h3>
+<p>未入金の候補を、入金予定日からの経過日数で並べ、段階に分けます。</p>
+<ul>
+<li><strong>予定日前</strong>：何もしない（一覧で見えていればよい）</li>
+<li><strong>予定日から一週間</strong>：行き違いの可能性が高い。軽い確認のご案内</li>
+<li><strong>二週間から一か月</strong>：あらためてのご案内と、お支払い予定のおうかがい</li>
+<li><strong>一か月超</strong>：個別の相談ごととして、責任者が直接対応する</li>
+</ul>
+<p>段階を先に決めておく利点は、<strong>迷いが消える</strong>ことです。「もう少し待つべきか」を毎回考えるのではなく、決めた段階に来たら決めた対応をする。気まずさで判断が鈍るのを、仕組みで防ぎます。</p>
+<h3>ステップ5：段階に応じたご案内文を下書きさせる</h3>
+<p>最後に、各段階の文面の型を作らせます。最初の段階は「行き違いでしたら恐縮です」から始まる柔らかい確認。次の段階は、請求内容とお支払い予定のおうかがい。<strong>宛先や金額を差し込めば送れる状態まで下書き</strong>させ、送る前に必ず人が読んで整えます。</p>
+<p>一度型ができると、切り出し方に迷う時間がなくなります。文面に悩んで三日寝かせる、が消えるだけで、確認から連絡までの間隔は大きく縮まります。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<p>同じ道具を使っても、頼み方で結果が変わります。</p>
+<p><strong>1. 照合のルールを、こちらから言葉で指定する</strong></p>
+<p>「未入金を見つけて」だけでは、何をもって一致とみなしたかが毎回変わります。ステップ2で決めたルールを明示して渡せば、出力が安定し、毎週同じ形で比べられます。</p>
+<p><strong>2. 書かれていないことを補わせない</strong></p>
+<p>推測での紐づけは、この作業で最も危険です。金額が近いだけの別の入金に結ばれると、<strong>本当は未入金なのに入金済みに見える</strong>という、いちばん怖い間違いが起こります。「確信が持てない照合は、候補として分けて出してください」と最初に伝えます。</p>
+<p><strong>3. 合計を必ず突き合わせる</strong></p>
+<p>照合できた入金の合計と、口座明細の入金合計を照らし合わせます。ずれていれば、拾い漏れか二重照合があります。この一手間が、一覧全体の信頼を支えます。</p>
+<h2 id="s5">つまずきやすい4つの型</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-receivables-payment-check-02.webp" alt="つまずきやすい4つの型" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>1. 完全一致だけで照合して、大量の「未入金」が出る</h3>
+<p>名義のゆれと手数料の端数を考慮しないと、実際には入金済みの行が未入金側に山ほど並びます。一覧が信用できなくなり、誰も見なくなります。<strong>ゆれと端数のルールを先に渡す</strong>のが肝心です。</p>
+<h3>2. 逆に、ゆるく照合して取りこぼす</h3>
+<p>「近い金額があれば一致」とすると、別の請求への入金と結ばれます。<strong>確実な照合と、候補どまりの照合を分けて出させる</strong>。この二段構えが、厳しすぎず、ゆるすぎずの落としどころです。</p>
+<h3>3. 一覧を作って満足し、送る段階で止まる</h3>
+<p>未入金一覧ができても、ご案内を送らなければ一円も入ってきません。<strong>段階と文面まで先に決めておく</strong>ことで、気づきから行動までがつながります。</p>
+<h3>4. 一度きりで終わりにする</h3>
+<p>未入金の確認は、一度やって終わりでは意味がありません。<strong>毎週決まった曜日に同じ型で回す</strong>。そのために、手順を型として残しておき、翌週は記録を差し替えるだけで動く状態にしておきます。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>建設・工務店</strong> — 工事代金の分割払い。着手金・中間金・完成金のどこまで入金済みかを現場ごとに並べると、抜けがすぐ見えます。</p>
+<p><strong>卸売・製造</strong> — 締め払いの合算振込。複数の請求がまとめて振り込まれるため、どの請求分が含まれているかの分解に照合の価値が出ます。</p>
+<p><strong>士業・コンサル</strong> — 顧問料の月額。毎月同じ金額だからこそ、一か月抜けても気づきにくい。月ごとの入金の並びで抜けを見つけます。</p>
+<p><strong>広告・制作</strong> — 案件ごとの請求。納品から支払いまでの期間が長く、案件が重なると管理が追いつかなくなります。案件と入金の対応表が効きます。</p>
+<p><strong>教室・スクール</strong> — 月謝の未納。人数が増えるほど目視では追えなくなり、名簿と入金の突き合わせが月次の定型作業になります。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 口座の明細を渡しても大丈夫ですか</h3>
+<p>渡す前に、この作業に関係のない出金の明細や、個人にかかわる行は外しておくと安心です。また、取引先名を記号に置き換えて渡し、手元で対応表を持っておく方法も有効です。</p>
+<h3>Q. 会計ソフトに入金消込の機能があります。それとの違いは</h3>
+<p>会計ソフトの機能で足りているなら、そのままで構いません。効くのは、請求の記録がソフトの外にある場合です。手書きに近い請求書の控え、独自の受注表、複数の販売経路。<strong>形式がばらばらな記録同士を突き合わせられる</strong>のが、この方法の持ち味です。</p>
+<h3>Q. 督促のご案内は自動で送ってよいですか</h3>
+<p>おすすめしません。下書きまでを機械、<strong>送る判断と最終の文面は必ず人</strong>。相手の事情を知らない自動送信は、回収より先に信頼を損ないます。</p>
+<h3>Q. どのくらいの時間短縮になりますか</h3>
+<p>月に数十件の請求を通帳と突き合わせる作業は、半日仕事になりがちです。型ができれば<strong>毎週十分ほどの確認で回る</strong>ようになります。時間の短縮以上に、「気づくのが二か月後」がなくなることの価値が大きい作業です。</p>
+<h2 id="s8">まとめ</h2>
+<p>未入金が積み上がるのは、お客様のせいでも、担当のだらしなさのせいでもありません。<strong>請求と入金を突き合わせる流れが、仕組みとして存在しないから</strong>です。</p>
+<p>記録を集め、照合のルールを決め、未入金一覧を毎週出し、経過日数で段階を分け、文面の型を用意する。ここまで整えば、未入金は「たまに発覚する事故」から「毎週確認する項目」に変わります。</p>
+<p>突き合わせるのは機械、判断して伝えるのは人。この線引きを守れば、<strong>売上はきちんと、手元のお金に変わっていきます</strong>。入金の見通しが立ったら、<a href="claude-code-loan-repayment-overview.html">借入の返済予定を整理する</a>ことで、月ごとの資金の出入りが一つの表にそろいます。</p>
+
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-cashflow-forecast.html"><img src="../images/blog-claude-code-cashflow-forecast-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで資金繰りの見通しを立てる</span></a><a class="seo-related-card" href="claude-code-loan-repayment-overview.html"><img src="../images/blog-claude-code-loan-repayment-overview-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで借入の返済予定を整理する</span></a><a class="seo-related-card" href="claude-code-subsidy-application-support.html"><img src="../images/blog-claude-code-subsidy-application-support-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで補助金申請の準備を効率化</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

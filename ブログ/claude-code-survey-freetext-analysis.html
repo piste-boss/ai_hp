@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド</title>
+<meta name="description" content="Claude Codeでアンケートの自由記述を集計する手順を解説。仕分けの箱の決め方・理由付きの分類・良い/困っている/要望の3区分集計・原文の抜き出しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,アンケート,自由記述,集計,顧客の声,テキスト分析,業務効率化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド</h1>
+
+<p class="lead">アンケートを配って、点数の集計まではやった。けれど、最後の「ご意見・ご感想」の欄に書かれた文章は、印刷したまま棚に置いてある——中小企業の現場で、非常によく見かける状態です。点数は平均を出せば形になりますが、自由記述は<strong>一件ずつ読まないと意味が分からない</strong>うえに、読んだところで「なんとなくこういう傾向かな」で終わってしまう。この記事では、Anthropic社の公式AIコーディングツール Claude Code を使って、アンケートの自由記述を集計し、改善点として取り出すまでの手順を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<a href="#s1">自由記述が放置される3つの理由</a><br>
+<a href="#s2">Claude Codeに任せる範囲と、人が決める範囲</a><br>
+<a href="#s3">実務は5つのステップで回る</a><br>
+<a href="#s4">頼み方の3原則</a><br>
+<a href="#s5">現場でつまずく5つの型</a><br>
+<a href="#s6">業種別に、どこで効くか</a><br>
+<a href="#s7">よくある質問</a><br>
+<a href="#s8">まとめ</a><br>
+</div>
+
+<h2 id="s1">自由記述が放置される3つの理由</h2>
+<p>読む気がないから放置されるわけではありません。構造的に続かない理由が3つあります。</p>
+<h3>1. 読む作業と考える作業が混ざっている</h3>
+<p>自由記述を読みながら「これは接客の話」「これは価格の話」と頭の中で仕分けし、同時に「じゃあどうするか」まで考えようとします。<strong>3つの作業を同時にやろうとして、途中で疲れて終わります。</strong></p>
+<h3>2. 数えられる形になっていない</h3>
+<p>「感じが良かった」「気持ちよく対応してもらえた」「スタッフさんが親切」——この3つは同じことを言っていますが、文字としては全部違います。だから数えられない。数えられないと、<strong>多い意見なのか一人の意見なのか判断がつきません。</strong></p>
+<h3>3. まとめても、次に活かす形になっていない</h3>
+<p>苦労して「接客への満足が多い」とまとめても、それは分かっていたことだったりします。<strong>すでに知っていることの確認で終わると、次から誰もやらなくなります。</strong></p>
+<p>この3つは、いずれも判断力の問題ではなく<strong>作業の設計の問題</strong>です。だから手順を変えれば解決できます。</p>
+
+<h2 id="s2">Claude Codeに任せる範囲と、人が決める範囲</h2>
+<p>先に線を引いておきます。ここを曖昧にしたまま進めると、出てきた結果を信じてよいのか分からなくなります。</p>
+<table>
+<tr><th>工程</th><th>担当</th><th>理由</th></tr>
+<tr><td>文章の書き起こし・整形</td><td>Claude Code</td><td>手を動かすだけの作業</td></tr>
+<tr><td>内容ごとの仕分けと件数集計</td><td>Claude Code</td><td>基準を渡せば揺れずに実行できる</td></tr>
+<tr><td>気になる記述の抜き出し</td><td>Claude Code</td><td>見落としが起きやすい部分</td></tr>
+<tr><td>何を課題と見るかの決定</td><td>人</td><td>会社の方針と資源の問題</td></tr>
+<tr><td>改善策の決定と実行</td><td>人</td><td>責任が伴う判断</td></tr>
+</table>
+<p>とくに<strong>4行目</strong>が要点です。「駐車場が停めにくい」が5件あったとして、それを課題として扱うかどうかは、立地や賃料や来店手段の内訳を知っている人でなければ判断できません。<strong>機械が出すのは材料であって、結論ではありません。</strong></p>
+
+<h2 id="s3">実務は5つのステップで回る</h2>
+<p>特別な準備は要りません。手元にアンケート用紙か回答データがあれば始められます。</p>
+<h3>ステップ1｜元のデータを1か所にまとめ、控えを取る</h3>
+<p>紙のアンケートなら写真かスキャンで画像にします。回答フォームの結果なら書き出したファイルを使います。<strong>必ず元のデータの控えを別に残してください。</strong> 作業中に上書きしても戻せる状態にしておくのが最初の一歩です。氏名など個人が特定できる欄は、あらかじめ削っておくことをおすすめします。</p>
+<h3>ステップ2｜仕分けの箱を先に決める</h3>
+<p>ここが結果を大きく左右します。仕分けの箱を決めずに「うまくまとめて」と頼むと、Claude Codeが勝手にカテゴリをつくり、毎回違う分類になります。<strong>次の月と比べられなくなるので、箱は自分で決めます。</strong></p>
+<table>
+<tr><th>箱</th><th>中身の例</th></tr>
+<tr><td>人・応対</td><td>スタッフの態度、説明の分かりやすさ</td></tr>
+<tr><td>商品・サービス</td><td>品質、種類、内容そのもの</td></tr>
+<tr><td>価格</td><td>金額、コース設定、支払い方法</td></tr>
+<tr><td>場所・設備</td><td>駐車場、清潔さ、待合、動線</td></tr>
+<tr><td>時間</td><td>待ち時間、営業時間、予約の取りやすさ</td></tr>
+</table>
+<p>どれにも入らないものは「その他」に置き、<strong>その他が全体の2割を超えたら箱を1つ足す</strong>という運用にすると、無理なく育っていきます。</p>
+<h3>ステップ3｜1件ずつ仕分けさせ、理由も書かせる</h3>
+<p>「この記述はどの箱か、そう判断した理由も一緒に出してください」と頼みます。<strong>理由を書かせるのが重要です。</strong> 理由の欄を見れば、仕分けが妥当かどうかを一目で確認できます。1つの記述が2つの箱にまたがる場合は<strong>両方に数えてよい</strong>と最初に伝えておきます。</p>
+<h3>ステップ4｜箱ごとの件数と、良い・悪いの内訳を出させる</h3>
+<p>件数だけでは足りません。「場所・設備が20件」と言われても、褒められているのか困られているのかが分かりません。<strong>箱ごとに、良い評価・困っている・要望の3区分で内訳を出させます。</strong> 件数が多くて「困っている」の比率が高い箱が、最優先です。</p>
+<h3>ステップ5｜代表的な記述を、書かれたままの言葉で抜き出させる</h3>
+<p>数字だけで終わらせないでください。<strong>要約せず、原文のまま</strong>代表的な記述を3〜5件、箱ごとに抜き出させます。「駐車場が狭い」より「2回まわって停められず、そのまま帰りました」のほうが、社内の誰が読んでも動く気になります。<strong>社内で共有するときに効くのは、いつも生の言葉のほうです。</strong></p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1｜箱の名前を、こちらから渡す</h3>
+<p>「適当にカテゴリ分けして」ではなく、ステップ2で決めた5つの箱の名前をそのまま渡します。<strong>こちらが決めた枠に入れさせることで、月をまたいでも比較できます。</strong></p>
+<h3>原則2｜書かれていないことを補わせない</h3>
+<p>「意図を推測して」と頼むと、書かれていない内容が結果に混ざります。<strong>判断がつかない記述は「判断不能」として、理由と一緒に分けて出してください</strong>と最初に指示します。判断不能が10件あるなら、その10件だけ自分の目で見ればよいことになります。</p>
+<h3>原則3｜件数を必ず突き合わせる</h3>
+<p>集計が終わったら、<strong>全体の件数が元のデータの件数と合っているか</strong>を確認します。この確認を毎回入れるだけで、静かに件数が減っていく事故を防げます。</p>
+
+<h2 id="s5">現場でつまずく5つの型</h2>
+<h3>型1｜無記入と「特になし」を数に入れてしまう</h3>
+<p>自由記述の欄は、半分近くが空欄か「特になし」です。これを母数に入れると、<strong>どの箱の比率も実態より低く見えます。</strong> 最初に除外し、除外した件数も記録しておきます。</p>
+<h3>型2｜声の大きい1件に引っ張られる</h3>
+<p>長文で強い調子の記述が1件あると、それが全体の傾向のように見えてしまいます。<strong>必ず件数と並べて読むこと。</strong> 1件は1件です。</p>
+<h3>型3｜箱を細かくしすぎる</h3>
+<p>15個も箱をつくると、1つあたり1〜2件になり、傾向が見えなくなります。<strong>5つから始めて、必要になったら増やす。</strong> 最初から作り込まないほうが続きます。</p>
+<h3>型4｜要望と苦情を一緒くたにする</h3>
+<p>「もっと種類があると嬉しい」と「頼んだものが違っていた」は、緊急度がまったく違います。前者は検討事項、後者は即対応です。<strong>同じ箱に入れても、区分は分けて数えてください。</strong></p>
+<h3>型5｜前月と比べていない</h3>
+<p>一度きりの集計では、「多い・少ない」の基準がありません。<strong>2回目からが本番です。</strong> 同じ箱で3か月並べると、増えている箱と減っている箱がはっきり出ます。</p>
+
+<h2 id="s6">業種別に、どこで効くか</h2>
+<table>
+<tr><th>業種</th><th>効きどころ</th></tr>
+<tr><td>美容室・治療院</td><td>施術内容と応対の評価を分けて追える。指名や再来の判断材料になる</td></tr>
+<tr><td>飲食店</td><td>味・提供時間・席まわりの3点が分離でき、どこから直すか決めやすい</td></tr>
+<tr><td>小売・通販</td><td>商品説明の不足と在庫切れの不満が数で見え、掲載内容の改善につながる</td></tr>
+<tr><td>教室・スクール</td><td>講師別・クラス別に分けると、進度や説明の課題が具体的に出る</td></tr>
+<tr><td>士業・コンサルティング</td><td>報告の分かりやすさと対応速度への評価が分かれ、業務の型づくりに使える</td></tr>
+<tr><td>宿泊・観光</td><td>設備と接遇が混ざりやすいので、箱を分けるだけで打ち手が変わる</td></tr>
+</table>
+<p>どの業種でも共通するのは、<strong>「うすうす感じていたこと」が件数として出た瞬間に社内が動き出す</strong>という点です。感覚のままだと反対意見が出ますが、数字になると議論の対象が変わります。</p>
+
+<h2 id="s7">よくある質問</h2>
+<h3>Q. 手書きのアンケートでも使えますか。</h3>
+<p>使えます。写真やスキャン画像から文字を読み取らせて、そこから仕分けに進めます。ただし読み取りの精度は文字の丁寧さに左右されるため、読み取り結果を一度目で確認する工程は残してください。</p>
+<h3>Q. 何件くらいから意味がありますか。</h3>
+<p>30件を超えたあたりから、箱ごとの傾向が見えてきます。10件程度なら自分で読んだほうが早いです。100件を超えると、手作業との差が決定的になります。</p>
+<h3>Q. お客様の個人情報を渡してよいのでしょうか。</h3>
+<p>氏名など個人が特定できる欄は、渡す前に削ってください。自由記述の中に個人を特定できる内容が含まれることもあるので、気になる場合は伏せ字にしてから渡す運用にすると安全です。</p>
+<h3>Q. どのくらい時間が短縮できますか。</h3>
+<p>100件の自由記述を読んで仕分けし、集計表にまとめる作業は、慣れた方でも2時間前後かかります。手順を整えておけば、確認の時間を含めて30分前後まで縮むケースが多いです。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>アンケートの自由記述をまとめる作業について、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>放置されるのは<strong>やる気ではなく作業設計の問題</strong>。読む・仕分ける・考えるを分ければ回る</li>
+<li>仕分けの箱は<strong>自分で先に決める</strong>。機械に決めさせると月ごとに比較できない</li>
+<li>仕分けには<strong>理由を必ず書かせる</strong>。理由があるから確認できる</li>
+<li>件数だけでなく、<strong>良い・困っている・要望の3区分</strong>まで出して初めて動く場所が見える</li>
+<li>社内で効くのは要約ではなく<strong>原文のままの言葉</strong></li>
+<li>2回目からが本番。<strong>同じ箱で並べる</strong>と手を打った結果が数字で見える</li>
+</ul>
+<p>棚に置いたままのアンケート用紙は、実際には<strong>すでに集めたのに使っていない資産</strong>です。集める手間はもう払い終わっています。あとは、読める形に変えるだけです。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「自社のアンケートで試してみたいが、どこから手を付ければよいか分からない」という方に、Claude Codeの導入から集計の運用まで、非エンジニアの方にも分かりやすく伴走支援します。70社以上のAI導入・業務自動化の支援実績があります。</p>
+<p class="price">¥3,000〜</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+</div>
+
+<footer>&copy; Piste AI Consulting</footer>
+</body>
+</html>

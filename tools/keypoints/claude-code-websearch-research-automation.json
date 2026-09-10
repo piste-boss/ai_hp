@@ -1,0 +1,1 @@
+{"target": "競合価格や業界ニュースのリサーチを毎週手作業でしている中小企業の担当者", "outcome": "WebSearch と WebFetch で検索・抽出・比較表化を定型化し、スラッシュコマンドで毎週自動実行できる", "requirement": "Claude Code と、出力フォーマットを書いた CLAUDE.md"}

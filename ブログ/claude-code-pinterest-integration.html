@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化！ネットショップ・店舗のビジュアル集客効率化ガイド</title>
+<meta name="description" content="Claude Codeとビジュアル検索プラットフォームPinterest（ピンタレスト）を組み合わせ、ピンの説明文づくり・ボード設計・投稿カレンダー・分析レポート・ECサイトへの送客導線づくりをAI自動化する方法を解説。ネットショップ・店舗・ハンドメイド作家向けに活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+<meta name="keywords" content="Claude Code,Pinterest,ピンタレスト,ビジュアル集客,ネットショップ,EC集客,ピン作成,ハンドメイド,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化！ネットショップ・店舗のビジュアル集客効率化ガイド</h1>
+
+<p class="lead">「Pinterestが集客に効くと聞いて始めたけれど、ピンを作り続ける時間がない」「ボードをどう整理すればいいのか分からず、なんとなく投稿している」「保存はされても、肝心のネットショップへのアクセスにつながっている実感がない」——そんな悩みを抱えるネットショップ・店舗・ハンドメイド作家の方に向けて、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、ビジュアル検索プラットフォームとして人気の<strong>Pinterest（ピンタレスト）</strong>を組み合わせ、ピンづくりからボード運用・分析までを効率化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. Pinterest集客でつまずきがちな3つの壁</a></li>
+<li><a href="#s2">2. Claude CodeでPinterest運用のどこを自動化できるのか</a></li>
+<li><a href="#s3">3. 業種別・ビジュアル集客AI活用シーン</a></li>
+<li><a href="#s4">4. 導入の4ステップ</a></li>
+<li><a href="#s5">5. 運用で押さえておきたい注意点</a></li>
+<li><a href="#s6">6. 他のツールとの違い</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. Pinterest集客でつまずきがちな3つの壁</h2>
+<p>Pinterestは、気になった画像を「ピン」として保存し、テーマごとの「ボード」に集めていくビジュアル検索プラットフォームです。投稿がタイムラインで流れて消えていくタイプのSNSと違い、保存されたピンは検索経由で長く見られ続けるため、じっくり資産として積み上がるのが特長です。ただし運用を続けようとすると、次のような壁にぶつかりがちです。</p>
+<ul>
+<li><strong>ピンを作り続ける手間が大きい</strong>：1枚ごとにタイトルと説明文を考える必要があり、量を出そうとすると負担が重くのしかかります。</li>
+<li><strong>ボード設計がちぐはぐになりやすい</strong>：思いつきでボードを増やすと全体の見通しが悪くなり、検索でも見つけてもらいにくくなります。</li>
+<li><strong>保存されても送客につながらない</strong>：ピンは保存されるのに、リンク先のネットショップや予約ページまで進んでもらえず、成果が見えにくくなります。</li>
+</ul>
+<p>これらは「センスが足りない」からではなく、企画・言語化・分析といった地道な作業に手が回らないことが原因です。ここはまさにAIが得意とする領域です。</p>
+
+<h2 id="s2">2. Claude CodeでPinterest運用のどこを自動化できるのか</h2>
+<p>Claude Codeは、Pinterestの公式API（Pinterest API for business）を介して、自然言語の指示だけで次のような作業を手伝ってくれます。</p>
+<ul>
+<li><strong>ピンの説明文・タイトルの下書き作成</strong>：商品や写真の内容を伝えると、検索を意識したキーワード入りの説明文とタイトルを複数案で提案します。</li>
+<li><strong>ボード設計・カテゴリ分けの提案</strong>：扱う商品やテーマを整理し、探されやすいボード構成と分類のたたき台をつくります。</li>
+<li><strong>投稿カレンダーづくり</strong>：季節・イベント・新商品に合わせて、いつ何をピンするかの予定表を提案します。</li>
+<li><strong>分析レポートの自動作成</strong>：保存数・クリック数・表示回数などの数値を読み取り、伸びたピンの傾向や次に強化すべきテーマをまとめます。</li>
+<li><strong>ネットショップへの送客導線づくり</strong>：ピンからリンク先ページへ自然に進んでもらうための、説明文の締めや誘導文の言い回しを整えます。</li>
+</ul>
+<p>いずれも「AIがたたき台を高速でつくり、人が仕上げて公開を判断する」という役割分担が基本です。作業のスピードは上がりつつ、最終的なブランドの世界観は自分の手で守れます。</p>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-pinterest-integration-01.jpg" alt="Claude CodeでPinterestのピン作成・ボード運用を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h2 id="s3">3. 業種別・ビジュアル集客AI活用シーン</h2>
+<h3>ネットショップ・EC</h3>
+<p>商品写真ごとに説明文を量産し、カテゴリ別のボードへ整理していくことで、検索から商品ページへの流入を増やせます。季節商戦に合わせたピンのカレンダーづくりも任せられます。</p>
+<h3>ハンドメイド作家・クリエイター</h3>
+<p>作品の世界観を言葉にするのが苦手でも、写真から魅力を引き出す説明文を提案してもらえます。作品テーマごとのボード設計で、ファンが回遊しやすい導線をつくれます。</p>
+<h3>美容室・サロン・ネイル</h3>
+<p>施術写真やスタイル集をボードにまとめ、「なりたいイメージ」を探すお客様に見つけてもらえます。予約ページへの誘導文づくりまで手伝ってもらえます。</p>
+<h3>カフェ・飲食店・レシピ発信</h3>
+<p>メニュー写真やレシピは保存されやすい鉄板テーマです。季節の食材やイベントに合わせた投稿計画で、来店やお取り寄せにつなげられます。</p>
+<h3>インテリア・住宅・リフォーム</h3>
+<p>施工事例やコーディネートは、じっくり検討する読者に長く見られます。テーマ別ボードと事例の説明文づくりで、反響や来店につながる情報発信を続けられます。</p>
+
+<h2 id="s4">4. 導入の4ステップ</h2>
+<p>専門的なプログラミングは不要です。次の4ステップで、無理なく始められます。</p>
+<h3>ステップ1：目的を1つに絞る</h3>
+<p>まずは「ピンを量産したい」「ボードを整理したい」「ネットショップへの送客を増やしたい」など、困りごとを1つに絞ります。効果を感じやすい一点から始めるのがおすすめです。</p>
+<h3>ステップ2：材料の準備</h3>
+<p>商品や作品の写真、伝えたい魅力、よく検索されそうな言葉、リンク先ページの情報などをまとめておきます。AIに渡す材料が多いほど、自店らしいピンになります。</p>
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「この商品でピンの説明文を3案」「この10枚をテーマ別のボードに分類して」といった具体的な指示を、日本語で伝えます。出力を見ながら指示を調整し、自店のトーンに合わせていきます。</p>
+<h3>ステップ4：小さく試して広げる</h3>
+<p>まずは数枚から試し、保存数やクリックの手応えを確かめてから本数を増やします。公開前の最終確認と、どの表現を使うかの判断は、必ず人が行います。</p>
+
+<h2 id="s5">5. 運用で押さえておきたい注意点</h2>
+<ul>
+<li><strong>公開前の確認は人が行う</strong>：AIはあくまで下書き役です。事実関係や表現の最終確認は、公開前に人が行います。</li>
+<li><strong>誇大な表現・断定を避ける</strong>：「必ず売れる」「絶対に効果がある」など、業種によっては使えない表現があります。生成された文章はこの観点で必ず見直します。</li>
+<li><strong>ブランドの世界観を守る</strong>：AIの文章は整いすぎて無個性になりがちです。言い回しやトーンに手を入れ、自店ならではの雰囲気を残します。</li>
+<li><strong>画像・権利の取り扱いに配慮する</strong>：使用する写真は自社に権利があるものを使い、他者の作品の無断転載は避けます。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：Pinterestの投稿・分析の権限は、必要な範囲に絞って安全に管理します。</li>
+</ul>
+<p>AIはあくまで「発信を続けるための手伝い役」です。誰に何を届けたいのかという想いは、人が持ち続けることが大切です。</p>
+
+<h2 id="s6">6. 他のツールとの違い</h2>
+<p>Instagramのようなタイムライン型のSNSは、その瞬間の投稿を届ける瞬発的な拡散に強みがあります。一方Pinterestは、保存されたピンが検索から長く見られ続ける「ストック型のビジュアル検索」に強く、時間が経つほど資産として積み上がっていくのが特長です。今すぐの反応より、じっくりとネットショップや予約ページへ送客したいときに力を発揮します。</p>
+<p>Claude Codeを使えば、Pinterestのピンづくりからボード設計、投稿カレンダー、分析、送客導線づくりまでを幅広く手伝ってもらえます。今使っているPinterestアカウントはそのままに、その周辺の手間だけをAIに任せる、という始め方であれば、大きな入れ替えをせずに効率化を進められます。まずは負担に感じているピンの説明文づくりなど、一点から取り入れてみるのがおすすめです。</p>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. パソコンやAIの専門知識がなくても導入できますか？</h3>
+<p>最初の環境づくりだけ少しハードルを感じるかもしれません。設定に不安がある場合は、導入部分だけサポートを受けることで、スムーズに始められます。</p>
+<h3>Q. AIが書いた説明文をそのまま公開して大丈夫ですか？</h3>
+<p>事実確認や表現のチェックが必要なため、そのままの公開はおすすめしません。公開前に人が目を通し、自店らしさを加える運用にすることで、安心して活用できます。</p>
+<h3>Q. どこまでを任せられますか？</h3>
+<p>ピンの説明文・タイトルづくり、ボード設計、投稿カレンダー、分析レポート、送客導線の文章づくりまでを任せられます。公開の可否と最終確認は人が行う前提で組み立てると安心です。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p>「Pinterestでの集客を続けたいけれど、ピンづくりや分析の時間が取れない」「Claude Codeの導入や使い方が不安」というネットショップ・店舗・ハンドメイド作家の方に向けて、導入から自店に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

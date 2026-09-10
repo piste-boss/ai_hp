@@ -2,10 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
-<title>Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド | Piste</title>
+<title>Claude Code × kintone連携で業務アプリをAI自動運用 | Piste AI EVANGELISTS</title>
 <meta name="description" content="Claude Codeとkintoneを連携し、レコード自動登録・横断集計レポート・他SaaS同期までAIで自動運用する方法を解説。中小企業の活用事例5選と導入5ステップ、月数千円〜の運用コストで実現できるポイントを紹介。">
 <meta name="keywords" content="Claude Code,kintone連携,業務自動化,kintone API,中小企業,DX,生成AI,業務アプリ">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -30,22 +131,77 @@ th{background:var(--dark);color:var(--gold-light);}
 .cta h2{color:var(--black);border:none;padding:0;}
 .cta a{display:inline-block;background:var(--black);color:var(--gold);padding:12px 30px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:15px;}
 </style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-kintone-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × kintone連携で業務アプリをAI自動運用">
+  <meta property="og:description" content="Claude Codeとkintoneを連携し、レコード自動登録・横断集計レポート・他SaaS同期までAIで自動運用する方法を解説。中小企業の活用事例5選と導入5ステップ、月数千円〜の運用コストで実現できるポイントを紹介。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-kintone-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-kintone-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-05-08T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × kintone連携で業務アプリをAI自動運用">
+  <meta name="twitter:description" content="Claude Codeとkintoneを連携し、レコード自動登録・横断集計レポート・他SaaS同期までAIで自動運用する方法を解説。中小企業の活用事例5選と導入5ステップ、月数千円〜の運用コストで実現できるポイントを紹介。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-kintone-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-kintone-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-kintone-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-kintone-integration.html","headline":"Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド","alternativeHeadline":"Claude Code × kintone連携で業務アプリをAI自動運用","description":"Claude Codeとkintoneを連携し、レコード自動登録・横断集計レポート・他SaaS同期までAIで自動運用する方法を解説。中小企業の活用事例5選と導入5ステップ、月数千円〜の運用コストで実現できるポイントを紹介。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-kintone-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-05-08T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","kintone連携","業務自動化","kintone API","中小企業","DX","生成AI","業務アプリ"],"wordCount":4758,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × kintone連携で業務アプリをAI自動運用","item":"https://www.piste-ai.com/blog/claude-code-kintone-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-kintone-integration.html#faq","mainEntity":[{"@type":"Question","name":"プログラミング知識がなくても本当に構築できますか？","acceptedAnswer":{"@type":"Answer","text":"はい、Claude Codeは日本語の指示だけでスクリプトを生成・実行・修正してくれます。中小企業の経営者・現場担当者がご自身でセットアップする事例が増えています。1度動かすと2回目以降は数分で構築できます。"}},{"@type":"Question","name":"kintone以外の業務基盤、サイボウズOfficeやSharePointでも同じことができますか？","acceptedAnswer":{"@type":"Answer","text":"可能です。サイボウズOffice・SharePoint・Salesforce・HubSpotなど主要な業務基盤はAPIが公開されているため、Claude Codeから操作できます。同じ要領で「kintoneと他SaaSを横断する自動化」も構築できます。"}},{"@type":"Question","name":"既存のkintoneプラグインやJavaScriptカスタマイズと共存できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Claude Codeは外部からAPI経由で操作するため、kintone内部のプラグインやJSカスタマイズと干渉しません。プラグインで実現できない複雑なロジックや横断集計をClaude Codeに任せる、という役割分担が現実的です。"}},{"@type":"Question","name":"月額費用はどれくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"kintoneのAPI利用は基本的に追加料金なし（プランの範囲内）。Claude Codeの利用料は個人プランで月額数千円〜、業務用途でも月額1〜2万円台が一般的です。kintone専用の連携ツールを別途契約すると月数万円〜が相場ですが、月額1〜2万円で同等の自動化が運用できる時代になりました。"}},{"@type":"Question","name":"AIによる自動操作のミスが心配です。安全に運用できますか？","acceptedAnswer":{"@type":"Answer","text":"「読み込み専用」で運用を始め、慣れたら「追加・更新」に段階的に拡張する運用が現実的です。書き込み操作には承認ステップを挟む設計（Claude Codeが下書きレコードを作り、人が確認後に本登録）にすれば、誤動作リスクをほぼゼロにできます。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
 </head>
 <body>
 <header>
-<a href="../index.html"><img src="../images/logo.png" alt="Piste"></a>
+<a href="../"><img src="../images/logo.webp" alt="Piste" loading="eager" fetchpriority="high" width="240" height="240"></a>
 <nav>
-<a href="../index.html#service">サービス</a>
-<a href="../index.html#contact">お問い合わせ</a>
+<a href="../#services">サービス</a>
+<a href="../#contact">お問い合わせ</a>
 </nav>
 </header>
 <main>
 <h1>Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-05-08">公開日：2026年5月8日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
 
 <div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
-  <img src="../images/blog-claude-code-kintone-integration.jpg" alt="Claude Code × kintone連携で業務アプリをAI自動運用" style="width: 100%; height: auto; display: block;">
+  <img src="../images/blog-claude-code-kintone-integration.webp" alt="Claude Code × kintone連携で業務アプリをAI自動運用" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
 </div>
 
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>kintone 導入済みだが転記や横断集計が手作業のまま残っている中小企業</li><li><strong>できるようになること：</strong>kintone REST API でレコードの自動登録・更新、複数アプリの横断集計、他SaaSとの定期同期を組める</li><li><strong>必要なもの：</strong>Claude Code と、最小権限で発行した kintone の APIトークンとアプリID</li></ul></div>
+<!-- /seo:points -->
 <p>「kintoneを導入したけれど活用しきれていない」「日報や案件管理アプリの入力作業が結局手作業」「kintoneのデータを集計してレポート化する時間がない」——中小企業でkintoneを使っている経営者・担当者の多くが抱える課題です。</p>
 
 <p>そこで活用したいのが、AnthropicのAIコーディングツール <strong>Claude Code</strong> と <strong>kintone</strong> の連携です。kintone REST APIをClaude Codeから直接操作することで、レコード自動登録・集計レポート自動生成・他SaaSとの連携を <strong>非エンジニアでも対話形式の指示だけで構築</strong> できる時代になりました。本記事では、Claude Code × kintone連携で中小企業のkintone活用度を一気に引き上げる実践パターンと、すぐに導入できる活用例を解説します。</p>
@@ -53,20 +209,20 @@ th{background:var(--dark);color:var(--gold-light);}
 <h2>1. なぜ今 Claude Code × kintone 連携なのか</h2>
 <p>中小企業のkintone運用には、以下のような共通の課題があります。</p>
 <ul>
-<li><strong>入力業務の手作業残り</strong>：紙やExcelからkintoneへの転記が結局アナログ</li>
+<li><strong>入力業務の手作業残り</strong>：紙やExcelからkintoneへの転記が結局アナログ（Excel側の処理は<a href="claude-code-microsoft365-integration.html">Microsoft 365 との連携</a>で扱えます）</li>
 <li><strong>アプリ乱立による集計地獄</strong>：複数アプリのレコードを横断集計する負担が大きい</li>
 <li><strong>レポート化の属人化</strong>：ベテラン担当者が手作業で経営会議資料を作成</li>
 <li><strong>他SaaSとの連携不足</strong>：kintoneと会計・受発注システムが分断されている</li>
 </ul>
 <p>ここに <strong>Claude Code</strong> を組み合わせると、レコード作成・更新・検索を日本語の指示だけで実行、複数アプリを横断した集計レポートをAIが自動生成、他SaaSとkintoneを橋渡しする連携スクリプトを数分で構築、kintoneの異常値検知をAIが担当し関係者に要約通知——といった業務が、月数千円〜の運用コストで実現できます。</p>
 
-<h2>2. Claude Code × kintone連携の3つの基本パターン</h2>
+<h2>2. Claude Code は kintone の何を自動化できますか？</h2>
 
 <h3>パターン1: レコード自動登録＋更新</h3>
 <p>kintone REST APIをClaude Codeに接続することで、外部データから自動的にレコードを登録できます。「ECサイトの新規受注をkintoneの案件管理アプリにレコード登録し、担当者を自動アサインして」と指示すれば、必要なスクリプトが数分で完成。受注のたびに手作業で転記していた30分が、完全にゼロになります。</p>
 
 <h3>パターン2: 横断集計レポート自動生成</h3>
-<p>「日報アプリ」「商談アプリ」「経費アプリ」といった複数アプリのレコードを横断集計し、AIが日本語で要約したレポートを毎朝指定の保存先に出力できます。担当者は内容を確認するだけで、経営会議資料・週次振り返り・部門別パフォーマンスレポートを即座に共有可能。レポート作成時間が2時間→10分に短縮できます。</p>
+<p>「日報アプリ」「商談アプリ」「経費アプリ」といった複数アプリのレコードを横断集計し、AIが日本語で要約したレポートを毎朝指定の保存先や<a href="claude-code-slack-integration.html">Slack のチャンネル</a>に出力できます。担当者は内容を確認するだけで、経営会議資料・週次振り返り・部門別パフォーマンスレポートを即座に共有可能。レポート作成時間が2時間→10分に短縮できます。</p>
 
 <h3>パターン3: 他SaaS連携の自動化</h3>
 <p>会計SaaS・受発注システム・出勤管理ツールなど、kintoneと別管理になっている他SaaSのデータを定期同期する仕組みもClaude Codeで構築できます。「freeeの請求データをkintoneの請求管理アプリに毎日同期」「Googleカレンダーの予定をkintoneの工数アプリに転記」といった連携を、専用ツールを買わずに自社で運用できます。</p>
@@ -88,10 +244,10 @@ th{background:var(--dark);color:var(--gold-light);}
 <h3>事例5: BtoBサービスの解約予兆アプリ</h3>
 <p>利用ログ・サポート受付・契約期間をkintoneに集約し、Claude Codeが解約予兆スコアを算出。スコアが高い顧客のレコードに「リスクラベル」を自動付与し、カスタマーサクセス担当のkintone画面に表示。能動的なフォローで解約率が前年比15%改善しました。</p>
 
-<h2>4. 導入の具体的なステップ</h2>
+<h2>4. Claude Code と kintone の連携はどう設定しますか？</h2>
 <ol>
 <li><strong>kintone APIトークンの発行（30分）</strong>：kintoneの該当アプリ設定から「APIトークン」を発行。読み込み・書き込み権限を必要な範囲だけ付与し、サブドメイン名・アプリIDも併せてメモ。</li>
-<li><strong>Claude Codeへのkintone接続準備（30分）</strong>：kintone REST APIをHTTPリクエストで叩く設計でClaude Codeから直接操作。設定ファイルにAPIトークン・サブドメイン・アプリIDを保管し、Claude Codeから安全に参照できる状態に。</li>
+<li><strong>Claude Codeへのkintone接続準備（30分）</strong>：<a href="https://cybozu.dev/ja/kintone/docs/" target="_blank" rel="noopener">kintone REST API</a>をHTTPリクエストで叩く設計でClaude Codeから直接操作。設定ファイルにAPIトークン・サブドメイン・アプリIDを保管し、Claude Codeから安全に参照できる状態に。</li>
 <li><strong>自動化ロジックの作成（1〜2時間）</strong>：「こういう条件のレコードを、こう操作して、こんなレポートを出して」と日本語で依頼すれば、必要なスクリプトが数分で完成。</li>
 <li><strong>定期実行のセットアップ（30分）</strong>：Claude Codeのスケジュール機能や定時実行コマンドで、毎朝8時・毎時0分・営業時間中5分おきなど、自由に定時実行を設定。</li>
 <li><strong>運用しながらチューニング（継続）</strong>：「集計の粒度を変えたい」「レポートのトーンをもっとフラットに」など、運用で気付いた点をClaude Codeに伝えれば即時修正。1週間の運用で自社業務に最適化されたkintone自動運用システムが完成。</li>
@@ -127,10 +283,14 @@ th{background:var(--dark);color:var(--gold-light);}
 <h3>Q. AIによる自動操作のミスが心配です。安全に運用できますか？</h3>
 <p>「読み込み専用」で運用を始め、慣れたら「追加・更新」に段階的に拡張する運用が現実的です。書き込み操作には承認ステップを挟む設計（Claude Codeが下書きレコードを作り、人が確認後に本登録）にすれば、誤動作リスクをほぼゼロにできます。</p>
 
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-slack-integration.html"><img src="../images/blog-claude-code-slack-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Slack連携で社内コミュニケーションをAI自動化</span></a><a class="seo-related-card" href="claude-code-zapier-integration.html"><img src="../images/blog-claude-code-zapier-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Zapier連携で業務自動化を10倍加速</span></a><a class="seo-related-card" href="claude-code-microsoft365-integration.html"><img src="../images/blog-claude-code-microsoft365-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
 <div class="cta">
 <h2>Claude Code × kintone連携 導入サポート（¥10,000）</h2>
 <p>kintoneアプリ構成の棚卸し → Claude Code環境設定 → kintone API接続設計 → 1業務の自動化までをまとめてサポート。中小企業の経営者・担当者から多数の導入実績があります。</p>
-<a href="../index.html#contact">お問い合わせはこちら</a>
+<a href="../#contact">お問い合わせはこちら</a>
 </div>
 
 <p>kintoneは中小企業の業務アプリ基盤として広く普及していますが、活用度に大きな差がある分野です。Claude Code × kintone連携で、レコード自動登録・更新による入力業務ゼロ化、横断集計レポートの完全自動生成、他SaaSとの定期連携による業務分断の解消——といった仕組みを月数千円〜の投資で構築できます。社員が転記・集計・レポート作成に追われる時間を、本来やるべき提案・改善・顧客接点に振り向けるDX投資を、ぜひ今月から始めてみてください。</p>

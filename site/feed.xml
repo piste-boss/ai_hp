@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Piste AI EVANGELISTS ブログ</title>
+  <link>https://www.piste-ai.com/blog/</link>
+  <atom:link href="https://www.piste-ai.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>中小企業のための Claude Code・AI活用ガイド。ツール連携、経理・財務、営業・顧客対応、業務記録・現場改善、AI導入の基礎を毎日更新。</description>
+  <language>ja</language>
+  <lastBuildDate>Thu, 10 Sep 2026 17:42:05 +0900</lastBuildDate>
+  <item>
+    <title>Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-subcontractor-track-record.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-subcontractor-track-record.html</guid>
+    <pubDate>Thu, 10 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで外注先・協力会社への過去の依頼を一覧にそろえ、外注先名の表記ゆれと仕事の種類を整理し、納期・金額・手直しの三つの実績を数えて同じ種類の仕事で比べる手順を解説。新しい依頼を一言で足す運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-subcontractor-track-record-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-returns-defect-log.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-returns-defect-log.html</guid>
+    <pubDate>Wed, 09 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで返品・不良品の発生記録を一覧にそろえ、原因の言葉を十個以内に統一し、一件ごとの損失額と原因別・相手先別の集計で同じ失敗の繰り返しを見える化する手順を解説。新しい不良を一言で足す運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-returns-defect-log-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning.html</guid>
+    <pubDate>Tue, 08 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで受注案件の状況を一覧に整え、待ち日数の計算と三つの遅れ基準で止まっている案件に印をつけ、納期遅れの兆候を毎朝つかめる状態にする手順を解説。遅れの原因を四つに仕分けて月に一度数える方法まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-delivery-delay-early-warning-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-lost-deal-review.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-lost-deal-review.html</guid>
+    <pubDate>Mon, 07 Sep 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeで失注した見積もりの経緯を集め、断られた理由を値段・納期・内容・対応・相手側の事情の五つに仕分け、繰り返しを数えて次の提案に活かす記録として残す手順を解説。相手の言葉を原文で残す方法から改善候補の決め方まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-lost-deal-review-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-near-miss-records.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-near-miss-records.html</guid>
+    <pubDate>Sun, 06 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで現場のヒヤリハット（あと一歩で事故だった気づき）を軽い手間で集め、場所・作業・時間帯で数えて繰り返しを見つけ、事故を防ぐ対策一覧として残す手順を解説。報告の入口を四点に絞る方法から対策の結果を現場に返す運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-near-miss-records-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-spec-change-log.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-spec-change-log.html</guid>
+    <pubDate>Sat, 05 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-spec-change-log-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで受け取った請求書のインボイス対応を確かめる！中小企業のための登録番号チェックと保存整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-invoice-registration-check.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-invoice-registration-check.html</guid>
+    <pubDate>Fri, 04 Sep 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで受け取った請求書のインボイス要件を一枚ずつ確かめる手順を解説。記載項目の写し取り、登録番号の形式確認、不足一覧と取引先への確認、確認結果を添えた保存まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-invoice-registration-check-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness.html</guid>
+    <pubDate>Thu, 03 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで社内に散らばる情報からBCPの下地を短時間で組み立てる手順を解説。緊急連絡網づくり、業務の棚卸しと影響整理、守る業務の決定、代替手段の候補出し、年一回の鮮度確認まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-bcp-emergency-preparedness-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-equipment-inspection-records.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-equipment-inspection-records.html</guid>
+    <pubDate>Tue, 01 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで散らばった設備・備品の情報を一枚の点検一覧にまとめ、故障を先回りで防ぐ手順を解説。十項目の型づくり、納品書・保証書の写し替え、次回点検時期の計算、点検結果の追記、修理と買い替えの判断材料づくりまで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-equipment-inspection-records-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで借入の返済予定を整理する！中小企業のための返済一覧づくりと金利負担の見える化ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-loan-repayment-overview.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-loan-repayment-overview.html</guid>
+    <pubDate>Mon, 31 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで散らばった借入の情報を一枚の返済一覧にまとめ、金利負担を見える化する手順を解説。九項目の型づくり、返済予定表の写し替え、毎月の返済合計と年間利息の算出、完済時期の一覧化、繰り上げ返済や借り換えの選択肢づくりまで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-loan-repayment-overview-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html</guid>
+    <pubDate>Sun, 30 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-new-client-credit-check-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-receivables-payment-check.html</guid>
+    <pubDate>Sat, 29 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-receivables-payment-check-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで商品・取引先ごとの粗利を出す！中小企業のためのもうけの出どころを見つける利益率整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-gross-margin-analysis.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-gross-margin-analysis.html</guid>
+    <pubDate>Fri, 28 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで商品ごと・取引先ごとの粗利を出す手順を解説。十二か月分の売上と原価の集め方、先に決める五つの計算ルール、紐づかない行の扱い、額と率の二軸での並べ方、四区分への仕分けまで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-gross-margin-analysis-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで毎月の固定費を洗い出す！中小企業・一人社長のための経費削減の判断材料づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-fixed-cost-review.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-fixed-cost-review.html</guid>
+    <pubDate>Thu, 27 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで毎月の固定費を洗い出す手順を解説。十二か月分の支払い記録の集め方、六項目の一覧の型、用途不明の残し方、年額換算と種類別集計、止める・切り替える・残すの仕分けまで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-fixed-cost-review-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeでお客様のお叱りに落ち着いて対応する！中小企業のための一次回答の下書きと再発防止の記録づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-complaint-first-response.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-complaint-first-response.html</guid>
+    <pubDate>Wed, 26 Aug 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeでクレーム対応の初動を整える手順を解説。受けた内容の時系列化、事実と解釈の切り分け、お相手が求めていることの見極め、一次回答の下書き3案、再発防止メモの残し方まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-complaint-first-response-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで資金繰りの見通しを立てる！中小企業・一人社長のための入出金予定の整理と資金ショート予防ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-cashflow-forecast.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-cashflow-forecast.html</guid>
+    <pubDate>Tue, 25 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで資金繰りの見通しを立てる手順を解説。通帳残高を起点に確定・見込みを分けて並べる、13週先まで週単位で残高を追う、底が来る週を先に見つける、手当ての選択肢を金額と期日で比べるまでの5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-cashflow-forecast-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-price-revision-preparation.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-price-revision-preparation.html</guid>
+    <pubDate>Mon, 24 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで価格改定の根拠を整理する手順を解説。比べる二時点の固定・品目別の増減を率と額で出す・商品別の原価構成への割り戻し・据え置き案を含む複数案の試算・ご案内文の下書きまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-price-revision-preparation-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-quote-comparison.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-quote-comparison.html</guid>
+    <pubDate>Sun, 23 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで相見積もりを比較する手順を解説。六項目の型づくり・共通の型への写し替え・「記載なし」の残し方・項目ごとの差額分解・条件を揃えた聞き直しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-quote-comparison-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis.html</guid>
+    <pubDate>Sat, 22 Aug 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeでアンケートの自由記述を集計する手順を解説。仕分けの箱の決め方・理由付きの分類・良い/困っている/要望の3区分集計・原文の抜き出しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-survey-freetext-analysis-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで契約・サブスクの更新期限を見落とさない！中小企業のための期限一覧づくりと更新可否の判断ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline.html</guid>
+    <pubDate>Fri, 21 Aug 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeで契約・サブスクの更新期限を一覧にする手順を解説。契約書からの項目抽出・次回更新日と解約申し出期限の算出・情報不足の切り分け・3か月ごとの見直しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-contract-renewal-deadline-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation.html</guid>
+    <pubDate>Thu, 20 Aug 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeで休眠顧客の掘り起こしリストをつくる手順を解説。休眠の基準づくり・名簿からの抽出とグループ分け・グループ別の案内文下書き・結果の記録までの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-dormant-customer-reactivation-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで補助金申請の準備を効率化！中小企業のための要件整理・事業計画書ドラフトづくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-subsidy-application-support.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-subsidy-application-support.html</guid>
+    <pubDate>Wed, 19 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで補助金申請の準備を効率化する手順を解説。申請の手引きの読み込み・要件チェックリスト化・自社情報の棚卸し・事業計画書ドラフト作成・提出前チェックの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-subsidy-application-support-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation.html</guid>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで請求内容と発注内容の食い違いを見つける突合の手順を解説。合計・明細・条件の3階層の分け方、機械と人の役割分担、差分の3区分での出し方、単位や税など5つのつまずきまで中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-invoice-amount-reconciliation-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-customer-list-deduplication.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-customer-list-deduplication.html</guid>
+    <pubDate>Mon, 17 Aug 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeで顧客名簿や取引先リストの重複・表記ゆれを整える手順を解説。散らかり方の4つの型、機械と人の役割分担、控えの取り方から統合の基準づくりまで、名寄せの進め方を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-customer-list-deduplication-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで紙の書類・PDF・手書きメモをデータ化する！中小企業のための紙業務デジタル化ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-paper-document-digitization.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-paper-document-digitization.html</guid>
+    <pubDate>Sat, 15 Aug 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで紙の請求書・PDF・手書きメモを読み取り、表や台帳に流し込む手順を解説。データ化の3段階、書類別の着手順、読み取り間違いを前提にした二重チェックの設計、現場でつまずく5つの落とし穴まで中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-paper-document-digitization-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html</guid>
+    <pubDate>Wed, 12 Aug 2026 09:00:00 +0900</pubDate>
+    <category>Claude Codeの使い方</category>
+    <description>Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-automation-handover.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-automation-handover.html</guid>
+    <pubDate>Tue, 11 Aug 2026 09:00:00 +0900</pubDate>
+    <category>Claude Codeの使い方</category>
+    <description>Claude Codeで組んだ自動化が「作った本人しか動かせない」状態になるのを防ぐ設計を解説。引き継ぎに本当に必要な3つ、決めごとファイルに書く5行、入口を1つに固定する考え方、止まったときの3つの確認、一人社長の備え方を中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-automation-handover-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeが出した成果物は誰がどう確認する？中小企業のための検収チェック体制づくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-deliverable-review-process.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-deliverable-review-process.html</guid>
+    <pubDate>Mon, 10 Aug 2026 09:00:00 +0900</pubDate>
+    <category>Claude Codeの使い方</category>
+    <description>Claude Codeの自動化で見落とされがちな「出てきたものを世に出す前の確認」を体系化。全数確認をやめる3段階の仕分け、5分で終わるチェックリストの作り方、抜き取り確認の割合の決め方、確認記録の残し方を中小企業・一人社長向けに解説します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-deliverable-review-process-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-backup-and-recovery.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-backup-and-recovery.html</guid>
+    <pubDate>Sun, 09 Aug 2026 09:00:00 +0900</pubDate>
+    <category>Claude Codeの使い方</category>
+    <description>Claude Codeの自動化で最後まで残る不安「戻せるのか」を解消。実際に起きる3つの失敗パターン、戻す手段を3層で持つ考え方、半日で終わる4つの準備、事故時の復旧3ステップを中小企業・一人社長向けに解説します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-backup-and-recovery-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-confidential-data-rules.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-confidential-data-rules.html</guid>
+    <pubDate>Sat, 08 Aug 2026 09:00:00 +0900</pubDate>
+    <category>Claude Codeの使い方</category>
+    <description>Claude Codeに渡してよい情報と止めたほうがよい情報の線引きを解説。手元で動く仕組みの正しい理解、情報の3分類、伏せて渡す3つの工夫、社内で決める4行のルールを中小企業・一人社長向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-confidential-data-rules-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+</channel>
+</rss>

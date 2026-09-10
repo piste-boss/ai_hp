@@ -15,3 +15,8 @@ site/.netlify/v1/
 
 # Logs
 *.log
+
+# Generated SEO release snapshots
+audit/20260910/release/public/
+audit/20260910/pre-implementation/
+tools/__pycache__/

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Peatix連携でイベント・セミナー集客をAI自動化！中小企業・講師・コンサルの集客効率化ガイド</title>
+<meta name="description" content="Claude Codeとイベント管理プラットフォームPeatixを組み合わせ、イベントページの文章づくり・集客メッセージ・参加者フォロー・アンケート集計・次回企画をAI自動化する方法を解説。非エンジニアの中小企業・講師・コンサルでも取り組める活用シーン・導入ステップ・手作業運用との違いを紹介します。">
+<meta name="keywords" content="Claude Code,Peatix,イベント集客,セミナー運営,ワークショップ,講師,コンサル,中小企業,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Peatix連携でイベント・セミナー集客をAI自動化！中小企業・講師・コンサルの集客効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-peatix-integration.jpg" alt="Claude Code × Peatixでイベント・セミナー集客を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「セミナーを開きたいけれど、告知文を書くのも参加者への連絡も手間がかかる」「イベントページを作るたびに、毎回ゼロから文章を考えている」「開催後のアンケート集計や次回の企画づくりまで手が回らない」——集客のためにイベントやセミナー、ワークショップを開く中小企業・講師・コンサルは増えていますが、その運営には想像以上の細かな作業がつきまといます。この記事では、Anthropic公式のAIコーディングツール Claude Code と、国内最大級のイベント管理プラットフォーム Peatix を組み合わせ、イベント集客・運営の周辺業務をまるごと自動化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Codeとは何か</a></li>
+<li><a href="#sec2">2. Peatix連携で何が自動化できるのか</a></li>
+<li><a href="#sec3">3. イベント運営を自動化する5つの活用シーン</a></li>
+<li><a href="#sec4">4. 業種・目的別の活用シーン</a></li>
+<li><a href="#sec5">5. 導入のステップ</a></li>
+<li><a href="#sec6">6. 手作業での運営との違い</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">8. よくある質問</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Codeとは何か</h2>
+<p>Claude Codeは、Anthropicが提供するAIコーディングツールです。最大の特徴は、プログラミングの知識がなくても、日本語で指示するだけで実際の作業をこなしてくれる点にあります。</p>
+<p>一般的な生成AIが「文章やアイデアの答えを返す」ところで止まるのに対し、Claude Codeは「情報を読み込む」「外部サービスと通信する」「結果を整えて保存する」といった一連の作業まで自分で実行します。つまり、指示を出すだけで手を動かしてくれる、AIアシスタントのような存在です。</p>
+<p>そしてClaude Codeは、Peatixのようなイベント管理サービスと組み合わせることで、イベント告知から参加者フォロー、開催後の振り返りまでの一連の業務を効率化できます。</p>
+
+<h2 id="sec2">2. Peatix連携で何が自動化できるのか</h2>
+<p>Peatixは、イベントページの作成・チケット販売・参加者管理を一つでまかなえる、国内で広く使われているイベント管理プラットフォームです。セミナー、ワークショップ、勉強会、交流会など、集客を目的としたあらゆるイベントで活用されています。</p>
+<p>Claude CodeとPeatixを組み合わせると、次のような流れを効率化できるようになります。</p>
+<ul>
+<li>イベントの趣旨を伝えるだけで、集客力のあるイベントページの文章を作成する</li>
+<li>告知用のSNS投稿文やメッセージのたたき台を用意する</li>
+<li>参加者への案内・前日リマインド・お礼の文面を準備する</li>
+<li>開催後のアンケート結果を集計し、要点をまとめる</li>
+<li>参加データや反応をもとに、次回イベントの企画案を整理する</li>
+</ul>
+<p>ポイントは、「イベントページを作る」という単発の作業だけでなく、その前後にある「告知」「参加者対応」「振り返り」「次回企画」まで含めて一気通貫でサポートできることです。運営者は、面倒な文章づくりや集計作業から解放され、イベントの中身づくりに集中できます。</p>
+
+<h2 id="sec3">3. イベント運営を自動化する5つの活用シーン</h2>
+<h3>シーン1：集客できるイベントページの文章づくり</h3>
+<p>「どんな人に、何を、なぜ届けたいのか」を伝えるだけで、Claude Codeが参加したくなるイベント説明文を作成します。タイトル案、キャッチコピー、当日の流れ、参加するメリット、こんな方におすすめ、といった構成をそろえたうえで、Peatixのページに載せやすい形に整えます。毎回ゼロから文章を考える負担がなくなります。</p>
+<h3>シーン2：告知メッセージ・SNS投稿文の準備</h3>
+<p>イベントの内容をもとに、告知用の投稿文を複数パターン用意します。開催の1か月前・1週間前・前日と、タイミングごとにトーンを変えた文面をそろえておけば、告知のたびに悩む時間がなくなります。ターゲットに合わせた訴求ポイントの出し分けも任せられます。</p>
+<h3>シーン3：参加者への案内・リマインド・お礼文の作成</h3>
+<p>申込者への受付確認、開催前日のリマインド、当日のアクセス案内、終了後のお礼メッセージなど、参加者とのやり取りに必要な文面をあらかじめ準備します。会場やオンラインの案内、持ち物、注意事項なども盛り込んだ丁寧な連絡文を、短時間で用意できます。</p>
+<h3>シーン4：開催後アンケートの集計・要約</h3>
+<p>参加者から集めたアンケートの自由記述を、テーマごとに分類し、良かった点・改善点・次回への要望として整理します。数十件の回答も、要点を押さえたレポートにまとめられるため、開催の振り返りがぐっと楽になります。満足度の傾向もひと目で把握できます。</p>
+<h3>シーン5：参加データをもとにした次回イベントの企画</h3>
+<p>過去の参加者数、申込のタイミング、アンケートの声などをもとに、次はどんなテーマ・形式・時間帯が良さそうか、企画のたたき台を整理します。人気だった内容の深掘り、新しいテーマの提案など、次の一手を考えるヒントを得られます。</p>
+
+<h2 id="sec4">4. 業種・目的別の活用シーン</h2>
+<p>イベント・セミナーを集客に使う場面は、業種によってさまざまです。</p>
+<ul>
+<li><strong>士業・コンサル</strong>：無料セミナーや勉強会で見込み客と接点をつくり、告知文づくりからフォローまでを効率化して、本業の相談対応に時間を回す。</li>
+<li><strong>教室・スクール</strong>：体験レッスンや説明会の案内・リマインド・お礼を仕組み化し、申込から参加までの離脱を減らす。</li>
+<li><strong>美容室・サロン・治療院</strong>：セルフケア講座やワークショップを開き、常連さんとの関係づくりや新規集客のきっかけをつくる。</li>
+<li><strong>小売・メーカー</strong>：新商品の体験会やファンイベントの告知・アンケート集計を整理し、商品づくりや販促に活かす。</li>
+<li><strong>地域団体・コミュニティ</strong>：交流会やマルシェの運営連絡・参加者管理の手間を減らし、少人数の運営でも無理なく続ける。</li>
+</ul>
+
+<h2 id="sec5">5. 導入のステップ</h2>
+<p>Claude CodeとPeatixの活用は、次の流れで進めます。専門知識がなくても、手順に沿えば始められます。</p>
+<ol>
+<li>まずは「イベント告知文づくり」「アンケート集計」など、自動化したい業務を1つに絞る</li>
+<li>Claude Codeを利用できる環境を用意する</li>
+<li>過去のイベント情報やアンケート結果など、材料となるデータを準備する</li>
+<li>「このイベントの告知文を作って」といった日本語の指示で、たたき台を作ってもらう</li>
+<li>小さく試して、自社らしい表現に整えながら、少しずつ任せる範囲を広げる</li>
+</ol>
+<p>最初から完璧を目指す必要はありません。まずは一番手間に感じている作業から始めるのが、失敗しないコツです。</p>
+
+<h2 id="sec6">6. 手作業での運営との違い</h2>
+<p>「イベント運営くらい、これまで通り自分でやればいいのでは？」と思う方もいるかもしれません。手作業とAI活用の違いを整理します。</p>
+<table>
+<tr><th>比較項目</th><th>これまでの手作業</th><th>Claude Code × Peatix活用</th></tr>
+<tr><td>イベントページ文章</td><td>毎回ゼロから考える</td><td>趣旨を伝えるだけでたたき台が完成</td></tr>
+<tr><td>告知メッセージ</td><td>その都度悩んで書く</td><td>タイミング別に複数パターン用意</td></tr>
+<tr><td>参加者への連絡</td><td>一件ずつ文面を考える</td><td>案内・リマインド・お礼を事前準備</td></tr>
+<tr><td>アンケート集計</td><td>手作業で読み込み整理</td><td>分類・要約まで自動でサポート</td></tr>
+<tr><td>次回の企画</td><td>感覚と記憶に頼る</td><td>参加データをもとに企画案を整理</td></tr>
+</table>
+<p>手作業でもイベントは開けますが、実際には告知・連絡・集計といった周辺作業に多くの時間を取られます。Claude Codeと組み合わせることで、その周辺作業をまるごと軽くし、イベントの中身と参加者体験の向上に集中できるのが最大の違いです。</p>
+
+<h2 id="sec7">7. 運用上の注意点</h2>
+<p>便利な仕組みだからこそ、いくつか気をつけたいポイントがあります。</p>
+<ul>
+<li><strong>公開・送信前は必ず人が確認する</strong>：告知文や参加者への連絡は、AIが用意したたたき台を人の目でチェックしてから公開・送信します。</li>
+<li><strong>参加者の個人情報は丁寧に扱う</strong>：申込者の氏名や連絡先などは、取り扱う範囲を決め、慎重に管理します。</li>
+<li><strong>誇大な表現は避ける</strong>：集客を意識するあまり、実態と合わない表現にならないよう、事実に基づいた案内を心がけます。</li>
+<li><strong>自社らしさを手放さない</strong>：AIの文章はあくまで下敷き。自分たちの言葉やトーンに整えることで、参加者に伝わる案内になります。</li>
+<li><strong>認証情報は最小限の権限で</strong>：外部サービスと連携する際は、必要な範囲にとどめて安全に運用します。</li>
+</ul>
+
+<h2 id="sec8">8. よくある質問</h2>
+<h3>Q. プログラミングの知識がないと使えませんか？</h3>
+<p>いいえ。初期の準備さえ済ませれば、あとはすべて日本語での指示だけで操作できます。設定作業自体も、手順に沿えば専門知識は不要です。導入サポートを利用すれば、準備から運用開始までスムーズに進められます。</p>
+<h3>Q. Peatixを使ったことがなくても始められますか？</h3>
+<p>はい。Peatixはイベントページ作成やチケット管理を直感的に行えるサービスです。Claude Codeは、そのページに載せる文章づくりや、参加者対応・振り返りといった周辺業務をサポートするため、はじめての方でも取り組みやすくなります。</p>
+<h3>Q. 小さなイベントや少人数でも効果はありますか？</h3>
+<p>むしろ少人数で運営しているほど効果を実感しやすい仕組みです。運営に専任の担当を置けない一人社長や小さなチームでも、告知や連絡、集計をAIが肩代わりすることで、無理なくイベントを続けられます。</p>
+<h3>Q. どんなイベントに向いていますか？</h3>
+<p>セミナー、ワークショップ、勉強会、体験会、交流会など、集客や関係づくりを目的としたイベント全般に活用できます。オンライン・オフラインを問いません。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「イベントやセミナーで集客したいけれど、運営の手間に時間が取られてしまう」「Claude CodeやPeatixの活用・連携の始め方が不安」という中小企業・講師・コンサルの方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

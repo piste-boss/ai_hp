@@ -1,0 +1,1 @@
+{"target": "Trelloでカンバン管理をしている中小企業の経営者・現場マネージャー", "outcome": "議事録からのカード起票、完了報告によるカード移動、担当者別の負荷集計を Claude Code に任せる手順を組める", "requirement": "Claude Code と、Trello開発者ページで発行したAPIキー・トークン"}

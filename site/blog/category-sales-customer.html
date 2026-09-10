@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+    <!-- Google Analytics -->
+  <!-- Microsoft Clarity -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+  <title>営業・顧客対応の記事一覧 | Piste AI EVANGELISTS</title>
+  <meta name="description" content="失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方。Piste AI EVANGELISTS のブログ「営業・顧客対応」カテゴリの記事一覧です。">
+  <link rel="canonical" href="https://www.piste-ai.com/blog/category-sales-customer.html">
+  <meta property="og:title" content="営業・顧客対応の記事一覧 | Piste AI EVANGELISTS">
+  <meta property="og:description" content="失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/category-sales-customer.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta property="og:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"CollectionPage","@id":"https://www.piste-ai.com/blog/category-sales-customer.html","url":"https://www.piste-ai.com/blog/category-sales-customer.html","name":"営業・顧客対応の記事一覧","description":"失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方","isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"営業・顧客対応","item":"https://www.piste-ai.com/blog/category-sales-customer.html"}]}]}</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #1a1a1a;
+      --dark: #2c2c2c;
+      --white: #ffffff;
+      --off-white: #f8f7f4;
+      --gold: #c4a24e;
+      --gold-light: #d4b96a;
+      --text: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* --- Header --- */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(196, 162, 78, 0.2);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-logo img {
+      height: 36px;
+    }
+
+    .header-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85em;
+      margin-left: 28px;
+      transition: color 0.3s;
+    }
+
+    .header-nav a:hover {
+      color: var(--gold);
+    }
+
+    .header-cta {
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 24px !important;
+      border-radius: 4px;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 1px;
+    }
+
+    .header-cta:hover {
+      background: #a8882e !important;
+    }
+
+    /* --- Main --- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    .page-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      color: #aaa;
+      font-size: 1em;
+    }
+
+    .section-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 5px;
+    }
+
+    /* --- Blog Grid --- */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .blog-card {
+      background: var(--dark);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-card a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .blog-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover .blog-thumb img {
+      transform: scale(1.05);
+    }
+
+    .blog-body {
+      padding: 20px;
+    }
+
+    .blog-date {
+      font-size: 0.8em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .blog-body h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .blog-body p {
+      font-size: 0.85em;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(196, 162, 78, 0.2);
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.8em;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 50px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Hamburger --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: 0.3s;
+    }
+
+    /* --- Mobile Nav --- */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 90;
+    }
+
+    .mobile-overlay.open { display: block; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100%;
+      background: var(--dark);
+      z-index: 95;
+      padding: 80px 30px 30px;
+      transition: right 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-nav.open { right: 0; }
+
+    .mobile-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    .mobile-nav a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .header-nav { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .page-hero h1 {
+        font-size: 1.6rem;
+      }
+    }
+  
+    /* seo:catnav */
+    .cat-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0 8px}
+    .cat-nav a{font-size:0.85em;padding:7px 16px;border:1px solid rgba(196,162,78,0.5);border-radius:999px;color:#e0e0e0;text-decoration:none;background:rgba(196,162,78,0.06)}
+    .cat-nav a:hover,.cat-nav a.is-current{background:var(--gold);color:#1a1a1a;border-color:var(--gold)}
+    .cat-count{font-size:0.8em;color:#9a9a9a;text-align:center;margin-top:12px}
+  </style>
+  <script defer src="/js/analytics.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="../" class="header-logo">
+        <img src="../images/logo.png" alt="Piste AI EVANGELISTS" style="width:auto;max-width:100%" width="640" height="640">
+      </a>
+      <nav class="header-nav">
+        <a href="../#services">導入コンサル</a>
+        <a href="../#flow">ご利用の流れ</a>
+        <a href="../#plans">料金プラン</a>
+        <a href="../blog/">ブログ</a>
+        <a href="../#profile">プロフィール</a>
+        <a href="../#contact" class="header-cta">無料相談</a>
+      </nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav">
+    <a href="../#services">導入コンサル</a>
+    <a href="../#flow">ご利用の流れ</a>
+    <a href="../#plans">料金プラン</a>
+    <a href="../blog/">ブログ</a>
+    <a href="../#profile">プロフィール</a>
+    <a href="../#contact">無料相談</a>
+    <a href="../#line-cta">LINE友だち追加</a>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-title">Category</p>
+      <h1>営業・顧客対応</h1>
+      <p>失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方</p>
+    </div>
+  </div>
+
+  <!-- Blog Grid -->
+  <div class="container">
+    <nav class="cat-nav" aria-label="カテゴリ"><a href="index.html">すべて（155）</a><a href="category-tool-integration.html">ツール連携（87）</a><a href="category-claude-code-basics.html">Claude Codeの使い方（24）</a><a href="category-finance.html">経理・財務・資金（14）</a><a href="category-sales-customer.html" class="is-current">営業・顧客対応（11）</a><a href="category-operations.html">業務記録・現場改善（15）</a><a href="category-ai-basics.html">AI導入の基礎（4）</a></nav>
+    <div class="blog-grid">
+    </div>
+
+    <div style="text-align: center;">
+      <a href="../" class="back-link">← トップページに戻る</a>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileOverlay.classList.toggle('open');
+      });
+      mobileOverlay.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        mobileOverlay.classList.remove('open');
+      });
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          mobileOverlay.classList.remove('open');
+        });
+      });
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 株式会社Piste. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

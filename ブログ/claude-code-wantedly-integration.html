@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Wantedly連携で採用広報・ストーリー記事・カジュアル面談対応をAI自動化！中小企業・一人社長の採用ブランディング効率化ガイド</title>
+<meta name="description" content="Claude Codeと共感採用の求人サービスWantedlyを組み合わせ、募集記事・ストーリー記事・スカウト文・カジュアル面談準備・反響データ整理をAI自動化する方法を解説。中小企業・一人社長の採用ブランディングに向けて、活用例・業種別シーン・導入4ステップ・注意点を非エンジニア向けに紹介します。">
+<meta name="keywords" content="Claude Code,Wantedly,ウォンテッドリー,採用広報,採用ブランディング,ストーリー記事,スカウト,カジュアル面談,中小企業,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Wantedly連携で採用広報・ストーリー記事・カジュアル面談対応をAI自動化！中小企業・一人社長の採用ブランディング効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-wantedly-integration.jpg" alt="Claude Code × Wantedlyで採用広報・ストーリー記事づくりを自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「人を採りたいけれど、会社の魅力を言葉にするのが難しい」「募集記事やストーリーを書く時間が取れず、募集ページが放置ぎみ」「カジュアル面談の準備や候補者へのお返事に手が回らない」——そんな悩みを抱える中小企業の経営者・一人社長の方に向けて、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、共感採用の求人サービス<strong>Wantedly</strong>を組み合わせ、採用広報から候補者対応までを効率化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. Wantedlyの採用でつまずきがちな3つの壁</a></li>
+<li><a href="#s2">2. Claude CodeでWantedly運用のどこを自動化できるのか</a></li>
+<li><a href="#s3">3. 業種別・採用広報の活用シーン</a></li>
+<li><a href="#s4">4. 導入の4ステップ</a></li>
+<li><a href="#s5">5. 運用で押さえておきたい注意点</a></li>
+<li><a href="#s6">6. 他の採用ツールとの違い</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. Wantedlyの採用でつまずきがちな3つの壁</h2>
+<p>Wantedlyは、給与や条件よりも「会社の想いやカルチャーへの共感」を軸に候補者と出会える採用サービスです。魅力を伝える発信が成果を左右する一方で、次のような壁にぶつかりがちです。</p>
+<ul>
+<li><strong>募集記事・ストーリー記事づくりが重い</strong>：会社の想いや仕事の魅力を文章にする作業は時間がかかり、後回しになりがちです。</li>
+<li><strong>発信を続けられない</strong>：一度つくって終わりになり、更新が止まって候補者の関心が離れてしまいます。</li>
+<li><strong>候補者対応に時間が取れない</strong>：スカウト文やカジュアル面談の準備を一人でこなすのは負担が大きいものです。</li>
+</ul>
+<p>これらは「発信力が足りない」からではなく、言語化と継続にかかる手間が原因です。ここはまさにAIが得意とする領域です。</p>
+
+<h2 id="s2">2. Claude CodeでWantedly運用のどこを自動化できるのか</h2>
+<p>Claude Codeは、会社の情報や過去の投稿を読み込ませることで、自然言語の指示だけで次のような作業を手伝ってくれます。</p>
+<ul>
+<li><strong>募集記事の下書き作成</strong>：仕事内容や求める人物像を伝えると、共感を呼ぶ募集文のたたき台を複数案で提案します。</li>
+<li><strong>ストーリー記事のネタ出しと構成</strong>：社員紹介・創業の想い・働く環境など、発信テーマの候補と記事の骨組みを用意します。</li>
+<li><strong>スカウト文の下書き</strong>：候補者の経歴に合わせた、丁寧で温度のあるスカウト文の下書きをつくります。</li>
+<li><strong>カジュアル面談の準備</strong>：聞くべき質問や自社の伝えどころを整理し、面談の進め方のたたき台を用意します。</li>
+<li><strong>反響データの整理</strong>：閲覧数やエントリーの傾向をまとめ、次に何を発信すべきかのヒントを示します。</li>
+</ul>
+<p>いずれも「AIがたたき台を高速でつくり、人が仕上げて発信を判断する」という役割分担が基本です。</p>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-wantedly-integration-01.jpg" alt="Claude Codeで採用の募集記事・スカウト文の下書きを効率化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h2 id="s3">3. 業種別・採用広報の活用シーン</h2>
+<h3>IT・Web制作会社</h3>
+<p>技術や社風の魅力を、専門外の候補者にも伝わる言葉に整えられます。エンジニア募集の記事づくりを効率化できます。</p>
+<h3>飲食店・小売・サービス業</h3>
+<p>現場の雰囲気や働きがいを、写真の説明文とあわせて魅力的に発信できます。アルバイトから正社員まで幅広い募集に対応します。</p>
+<h3>建設・製造・地域の中小企業</h3>
+<p>知名度が高くなくても、仕事の社会的な意義や技術力をストーリーで伝えることで、共感してくれる候補者と出会いやすくなります。</p>
+<h3>士業・コンサル・専門事務所</h3>
+<p>少人数だからこその働き方や成長環境を言語化し、価値観の合う人材へ届く発信を続けられます。</p>
+<h3>スタートアップ・一人社長の事業</h3>
+<p>創業の想いやビジョンを軸に、共感採用ならではの発信を無理なく継続できます。</p>
+
+<h2 id="s4">4. 導入の4ステップ</h2>
+<p>専門的なプログラミングは不要です。次の4ステップで無理なく始められます。</p>
+<h3>ステップ1：目的を1つに絞る</h3>
+<p>「募集記事を量産したい」「ストーリー発信を続けたい」「スカウト文を効率化したい」など、困りごとを1つに絞ります。</p>
+<h3>ステップ2：材料の準備</h3>
+<p>仕事内容・求める人物像・社風・働く環境・過去の投稿などを、日本語でまとめておきます。材料が多いほど自社らしい文章になります。</p>
+<h3>ステップ3：Claude Codeへの業務指示</h3>
+<p>「この職種で募集記事を3案」「この社員の紹介記事の構成を」といった具体的な指示を日本語で伝え、出力を見ながら自社のトーンに調整します。</p>
+<h3>ステップ4：小さく試して広げる</h3>
+<p>まずは1本から試し、閲覧数や反響を確かめてから発信の幅を広げます。公開前の最終確認は必ず人が行います。</p>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-wantedly-integration-02.jpg" alt="採用ブランディングを段階的に進める導入ステップのイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<h2 id="s5">5. 運用で押さえておきたい注意点</h2>
+<ul>
+<li><strong>公開前の確認は人が行う</strong>：AIはあくまで下書き役です。事実関係やトーンの最終確認は人が行います。</li>
+<li><strong>誇大な表現を避ける</strong>：働く環境や待遇について、実態と異なる表現にならないよう必ず見直します。</li>
+<li><strong>自社らしさを守る</strong>：AIの文章は整いすぎて無個性になりがちです。自分たちの言葉で温度を加えます。</li>
+<li><strong>候補者情報は丁寧に扱う</strong>：応募者の経歴や個人の情報は、社内で慎重に取り扱います。</li>
+<li><strong>認証情報は最小権限で管理する</strong>：採用サービスの操作権限は、必要な範囲に絞って安全に管理します。</li>
+</ul>
+<p>AIはあくまで「採用活動を続けるための手伝い役」です。会社の想いや人を大切にする姿勢は、人が持ち続けることが大切です。</p>
+
+<h2 id="s6">6. 他の採用ツールとの違い</h2>
+<p>一般的な求人サイトは、求人票を掲載して応募を集める「条件でのマッチング」が中心です。一方Wantedlyは、会社の想いやカルチャーへの共感を軸に候補者と出会う「発信型の採用」です。つまり「自社の魅力をどんな言葉で伝え続けるか」がカギになる点が、大きな違いです。</p>
+<p>Claude Codeを使えば、募集記事づくりからストーリー発信、スカウト文、カジュアル面談の準備まで幅広く手伝ってもらえます。今使っている採用の仕組みはそのままに、発信にかかる手間だけをAIに任せる、という始め方であれば、大きな入れ替えをせずに採用ブランディングを前に進められます。</p>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. 文章を書くのが苦手でも採用広報を始められますか？</h3>
+<p>はい。会社の想いや仕事内容を日本語で伝えれば、AIが共感を呼ぶ文章へ整えてくれます。最終確認は人が行うことで、安心して発信できます。</p>
+<h3>Q. AIが書いた記事をそのまま公開して大丈夫ですか？</h3>
+<p>事実確認や表現のチェックが必要なため、そのままの公開はおすすめしません。人が目を通し、自社らしさを加える運用にすると安心です。</p>
+<h3>Q. どこまでを任せられますか？</h3>
+<p>募集記事・ストーリー記事・スカウト文・面談準備・反響の整理まで任せられます。発信の可否と最終確認は人が行う前提で組み立てると安心です。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「採用を強化したいけれど、発信や候補者対応に時間が取れない」「Claude Codeの導入や使い方が不安」という中小企業・一人社長の方に向けて、導入から自分に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

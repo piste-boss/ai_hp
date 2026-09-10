@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド</title>
+<meta name="description" content="Claude Codeの自動化で最後まで残る不安「戻せるのか」を解消。実際に起きる3つの失敗パターン、戻す手段を3層で持つ考え方、半日で終わる4つの準備、事故時の復旧3ステップを中小企業・一人社長向けに解説します。">
+<meta name="keywords" content="Claude Code,バックアップ,復旧,元に戻す,業務自動化,中小企業,一人社長,運用ルール,誤操作対策">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド</h1>
+
+<p class="lead">Claude Code の導入で最後まで残る不安は、性能ではなく「間違えたときに戻せるのか」という一点です。人が手作業でやっていたころは、ファイルを1つ壊しても被害は1つで済みました。ところが自動化は速く、正確で、そして間違いも同じ速さで全部のファイルに広がります。この記事では、専門知識がなくても用意できる<strong>戻せる状態</strong>の作り方と、実際に何かが起きたときの手順を整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 自動化が怖いのは「戻せない」から</a></li>
+<li><a href="#sec2">2. 実際に起きるのは、この3つ</a></li>
+<li><a href="#sec3">3. 戻す手段は3層で持つ</a></li>
+<li><a href="#sec4">4. 戻せる状態を作る4つの準備</a></li>
+<li><a href="#sec5">5. 何かが起きたときの3ステップ</a></li>
+<li><a href="#sec6">6. 業種別の注意どころ</a></li>
+<li><a href="#sec7">よくある質問</a></li>
+<li><a href="#sec8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 自動化が怖いのは「戻せない」から</h2>
+<p>導入をためらう理由を掘り下げていくと、たいてい次のひと言に行き着きます。「もし変なことをされたら、元に戻せないでしょう」。</p>
+<p>これは正しい心配です。そして解決策は、AIに慎重になってもらうことではありません。<strong>戻せる状態を先に作っておくこと</strong>です。</p>
+<p>戻せる状態さえあれば、多少雑に任せても被害は数分で消えます。逆に戻せないままだと、どれだけ慎重に指示を書いても、いつかは必ず肝を冷やす日が来ます。順番が大切です。安全な指示の書き方を覚えるより先に、戻す準備を整えてください。</p>
+
+<h2 id="sec2">2. 実際に起きるのは、この3つ</h2>
+<p>現場で起きる失敗はほぼこの3パターンに収まります。逆に言えば、この3つに備えれば十分です。</p>
+<table>
+<tr><th>失敗パターン</th><th>起きること</th><th>気づくまでの時間</th></tr>
+<tr><td>上書き</td><td>元の内容が新しい内容に置き換わる</td><td>数分から数時間</td></tr>
+<tr><td>消える</td><td>整理のつもりで不要と判断され消える</td><td>数日後が多い</td></tr>
+<tr><td>大量に間違える</td><td>同じ間違いが数百のファイルに広がる</td><td>すぐ気づくが直すのが大変</td></tr>
+</table>
+<p>厄介なのは2番目です。上書きはその場で気づきますが、消えたことには当日気づきません。<strong>「まだ気づいていない失敗があるかもしれない」</strong>という前提で仕組みを作るのが要点になります。</p>
+
+<h2 id="sec3">3. 戻す手段は3層で持つ</h2>
+<p>1つの手段に頼ると、それが効かなかったときに打つ手がなくなります。次の3層を重ねてください。</p>
+<h3>第1層：作業前のコピー</h3>
+<p>その日いじるフォルダを、作業前にまるごと複製しておきます。日付を付けた名前で残すだけで十分です。一番原始的ですが、一番早く確実に戻せます。Claude Code に「今から触るフォルダを、日付を付けた名前で複製してから作業を始めて」と最初に伝えるだけで自動化できます。</p>
+<h3>第2層：変更履歴の記録</h3>
+<p>いつ、どのファイルが、どう変わったのかを記録に残す仕組みです。開発の現場では当たり前に使われている道具があり、非エンジニアでも導入できます。これがあると「1つ前の状態」だけでなく「3日前の状態」にも戻せます。第1層では戻せない、時間が経ってから見つかった失敗に効きます。</p>
+<h3>第3層：クラウド側の版</h3>
+<p>クラウドの保管サービスには、一定期間の過去の版を保持する機能が備わっています。手元のパソコンごと駄目になっても、ここが残っていれば復旧できます。</p>
+<p>3層のうち2層は自動で動かせます。人が覚えておく必要があるのは第1層の習慣だけです。</p>
+
+<h2 id="sec4">4. 戻せる状態を作る4つの準備</h2>
+<p>準備は半日で終わります。</p>
+<h3>準備1：触ってよい場所を1か所に集める</h3>
+<p>自動化に任せるファイルを1つの作業用フォルダに集め、そこだけを対象にします。範囲が決まっていれば、戻す対象も決まります。</p>
+<h3>準備2：原本を別の場所に置く</h3>
+<p>原本のフォルダは自動化の対象から外し、作業用フォルダには複製だけを置きます。原本が無事なら、最悪でも複製を作り直せば済みます。</p>
+<h3>準備3：作業前の複製を決めごとにする</h3>
+<p>Claude Code には、作業のたびに必ず読ませる決めごとのファイルを置く仕組みがあります。そこに「まとめて書き換える前に、対象フォルダの複製を作ること」と1行書いておきます。毎回口で指示する必要がなくなります。</p>
+<h3>準備4：戻し方を紙1枚に書いておく</h3>
+<p>いざというときは慌てます。複製がどこにあるか、どの順で戻すかを紙1枚にまとめ、パソコンの近くに置いてください。これだけで復旧にかかる時間が大きく変わります。</p>
+
+<h2 id="sec5">5. 何かが起きたときの3ステップ</h2>
+<p>慌てて直そうとすると、たいてい被害が広がります。順番を守ってください。</p>
+<blockquote>
+ステップ1：手を止める<br>
+ステップ2：被害の範囲を確かめる<br>
+ステップ3：層の浅いほうから戻す
+</blockquote>
+<p><strong>ステップ1：手を止める。</strong>まず自動化を止めます。動いたままでは、直した先から上書きされます。この段階で原因を調べる必要はありません。止めるのが先です。</p>
+<p><strong>ステップ2：被害の範囲を確かめる。</strong>いつの時点から、どのファイルがおかしいのかを確認します。ここで初めて Claude Code を使います。「このフォルダで昨日から今日にかけて変わったファイルを一覧にして」と頼めば、範囲がすぐ分かります。</p>
+<p><strong>ステップ3：層の浅いほうから戻す。</strong>第1層の複製があればそこから戻します。無ければ第2層の履歴、それも駄目ならクラウドの過去の版という順です。いきなり全部を戻さず、1つのファイルで試してから広げるのが安全です。</p>
+<p>戻し終えたら、同じことが起きた原因を1行だけ決めごとのファイルに書き足します。これで再発が止まります。</p>
+
+<h2 id="sec6">6. 業種別の注意どころ</h2>
+<p><strong>士業・コンサル</strong>：他社から預かった資料は、そもそも自動化の作業フォルダに入れないでください。戻すより、触れさせないほうが早いためです。</p>
+<p><strong>美容室・治療院</strong>：予約や来店の記録は日々更新されます。戻すと当日分が消えることがあるため、戻す前に当日入力分を控えておきます。</p>
+<p><strong>小売・EC</strong>：商品ページの一括書き換えは影響が外に出ます。まず10件だけで試し、表示を確認してから全件に広げてください。</p>
+<p><strong>建設・工務店</strong>：現場写真は撮り直しが利きません。写真フォルダは読むだけの扱いにし、並べ替えや改名は複製側で行います。</p>
+<p><strong>教室・スクール</strong>：名簿は複数の担当者が同時に触ります。自動化を動かす時間帯を決め、その間は手作業を止めるのが確実です。</p>
+
+<h2 id="sec7">よくある質問</h2>
+<p><strong>毎回フォルダを複製すると容量を圧迫しませんか。</strong></p>
+<p>作業用フォルダだけなら大きな負担にはなりません。1か月より古い複製をまとめて消す作業も自動化できます。</p>
+<p><strong>専門知識がなくても変更履歴の仕組みは使えますか。</strong></p>
+<p>使えます。最初の設定は必要ですが、動き始めてからは Claude Code に日本語で「今日の変更を記録して」と頼むだけで運用できます。</p>
+<p><strong>戻すのに失敗して、さらに悪化しませんか。</strong></p>
+<p>その心配があるからこそ、戻す作業も複製に対して行います。原本をそのままにして複製で試し、うまくいったものだけを本番に反映してください。</p>
+<p><strong>どこまで備えれば十分ですか。</strong></p>
+<p>まずは第1層の複製だけで構いません。それだけで実際の事故の大半は数分で戻せます。慣れてから第2層に進めば十分間に合います。</p>
+
+<h2 id="sec8">まとめ</h2>
+<p>自動化で本当に怖いのは、AIが間違えることではなく、<strong>間違いを戻せない状態のまま任せてしまうこと</strong>です。</p>
+<p>戻す手段は3層で持ち、原本は自動化の対象から外し、作業前の複製を決めごとにする。そして戻し方を紙1枚に書いておく。この4つが揃えば、任せるときの心理的な負担が大きく下がります。安心して任せられるようになると、自動化できる業務の範囲も自然に広がっていきます。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「自動化は魅力的だが、任せて壊れたときが怖い」「戻せる仕組みをどう作ればよいか分からない」という課題をお持ちの方に向けて、作業フォルダの分け方から複製の自動化、変更履歴の導入、復旧手順の整備までを、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った安全な自動化をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Piste AI EVANGELISTS トップ" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Piste AI EVANGELISTS" [ref=e5]
+      - navigation "メインナビゲーション" [ref=e6]:
+        - link "支援内容" [ref=e7] [cursor=pointer]:
+          - /url: index.html#services
+        - link "料金" [ref=e8] [cursor=pointer]:
+          - /url: index.html#plans
+        - link "助成金活用プラン" [ref=e9] [cursor=pointer]:
+          - /url: https://ai-training-ma.netlify.app
+        - link "流れ" [ref=e10] [cursor=pointer]:
+          - /url: index.html#flow
+        - link "メディア掲載" [ref=e11] [cursor=pointer]:
+          - /url: index.html#media
+        - link "ブログ" [ref=e12] [cursor=pointer]:
+          - /url: blog/
+        - link "講師プロフィール" [ref=e13] [cursor=pointer]:
+          - /url: index.html#profile
+        - link "LINE特典" [ref=e14] [cursor=pointer]:
+          - /url: index.html#line-cta
+        - link "無料相談" [ref=e15] [cursor=pointer]:
+          - /url: index.html#contact
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - paragraph [ref=e19]: About
+      - heading "石川 卓 代表プロフィール・会社概要" [level=1] [ref=e20]:
+        - text: 石川 卓
+        - generic [ref=e21]: 代表プロフィール・会社概要
+      - paragraph [ref=e22]: 株式会社Piste 代表取締役 / Piste AI EVANGELISTS 代表 / AIコンサルタント
+    - generic [ref=e23]:
+      - heading "代表プロフィール" [level=2] [ref=e24]
+      - generic [ref=e25]:
+        - img "石川 卓（株式会社Piste 代表取締役）" [ref=e26]
+        - generic [ref=e27]:
+          - paragraph [ref=e28]:
+            - strong [ref=e29]: 石川 卓
+            - text: （いしかわ すぐる）
+            - text: 株式会社Piste 代表取締役 / Piste AI EVANGELISTS 代表 / AIコンサルタント / フィットネスクラブ経営者
+          - paragraph [ref=e30]: 岐阜大学工学部修士課程修了後、大手鉄鋼メーカーにてエンジニアとして約8年間勤務。その後独立し、AIエンジニア・コンサルタントとして200社以上のAI導入を支援してきました。
+          - paragraph [ref=e31]: 自らもフィットネスクラブを経営し、予約管理、顧客対応、会計処理、SNS運用、集客施策をAIで自動化しています。技術を知っているだけでなく、実際の事業運営で使う視点から支援します。
+      - heading "実績・認定" [level=2] [ref=e32]
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - strong [ref=e35]: Anthropic 公式パートナーネットワーク認定企業
+          - text: 。Claude を開発する Anthropic のパートナーとして、最新のAI技術を活かした導入支援を提供しています。
+        - listitem [ref=e36]:
+          - strong [ref=e37]: 200社以上のAI導入支援
+          - text: 。製造業・建設業・飲食店・小売店・士業・ネットショップなど、幅広い業種の中小企業を支援。
+        - listitem [ref=e38]:
+          - strong [ref=e39]: 中部経済新聞に掲載
+          - text: （2026年5月26日付）。AI活用・業務効率化を支援する取り組みが紹介されました。
+          - link "掲載記事PDF" [ref=e40] [cursor=pointer]:
+            - /url: media/chubu-keizai-20260526-piste.pdf
+        - listitem [ref=e41]:
+          - strong [ref=e42]: 2026年7月に法人化
+          - text: し、株式会社Pisteとして体制を強化。
+      - heading "専門領域" [level=2] [ref=e43]
+      - list [ref=e44]:
+        - listitem [ref=e45]: Claude Code の導入・セットアップと、非エンジニア向けの操作レクチャー
+        - listitem [ref=e46]: 会計・EC・SNS・チャット・予約など業務ツールと Claude Code の連携による自動化
+        - listitem [ref=e47]: 資金繰り・粗利・請求書・現場記録など、中小企業の「記録を整えて判断材料にする」仕組みづくり
+        - listitem [ref=e48]: 従業員向けAI研修（人材開発支援助成金の活用）
+        - listitem [ref=e49]: 社内ルール（CLAUDE.md）・権限設定・機密情報の取り扱いなど、安全に使い続けるための運用設計
+      - heading "情報発信" [level=2] [ref=e50]
+      - list [ref=e51]:
+        - listitem [ref=e52]:
+          - link "ブログ「AI活用コラム」" [ref=e53] [cursor=pointer]:
+            - /url: blog/
+          - text: — 中小企業向けの Claude Code・AI活用ガイドを毎日更新
+        - listitem [ref=e54]:
+          - link "ココナラ" [ref=e55] [cursor=pointer]:
+            - /url: https://coconala.com/users/2208051
+          - text: — スポット相談・レクチャーの受付
+        - listitem [ref=e56]:
+          - link "LINE公式アカウント" [ref=e57] [cursor=pointer]:
+            - /url: index.html#line-cta
+          - text: — Claude Code セットアップガイド（PDF）を無料配布
+      - heading "会社概要" [level=2] [ref=e58]
+      - table [ref=e59]:
+        - rowgroup [ref=e60]:
+          - row "社名 株式会社Piste（Piste AI EVANGELISTS）" [ref=e61]:
+            - rowheader "社名" [ref=e62]
+            - cell "株式会社Piste（Piste AI EVANGELISTS）" [ref=e63]
+          - row "代表者 代表取締役 石川 卓" [ref=e64]:
+            - rowheader "代表者" [ref=e65]
+            - cell "代表取締役 石川 卓" [ref=e66]
+          - row "所在地 〒447-0042 愛知県碧南市中後町3-3 中央ビル1F" [ref=e67]:
+            - rowheader "所在地" [ref=e68]
+            - cell "〒447-0042 愛知県碧南市中後町3-3 中央ビル1F" [ref=e69]
+          - row "事業内容 AI導入コンサルティング、Claude Code 導入サポート、AI研修プログラム、業務自動化支援" [ref=e70]:
+            - rowheader "事業内容" [ref=e71]
+            - cell "AI導入コンサルティング、Claude Code 導入サポート、AI研修プログラム、業務自動化支援" [ref=e72]
+          - row "対応エリア 全国（オンライン）。愛知県・西三河エリアを拠点に活動。愛知県の企業様へ" [ref=e73]:
+            - rowheader "対応エリア" [ref=e74]
+            - cell "全国（オンライン）。愛知県・西三河エリアを拠点に活動。愛知県の企業様へ" [ref=e75]:
+              - text: 全国（オンライン）。愛知県・西三河エリアを拠点に活動。
+              - link "愛知県の企業様へ" [ref=e76] [cursor=pointer]:
+                - /url: aichi.html
+          - row "認定 Anthropic 公式パートナーネットワーク" [ref=e77]:
+            - rowheader "認定" [ref=e78]
+            - cell "Anthropic 公式パートナーネットワーク" [ref=e79]
+          - row "お問い合わせ お問い合わせフォーム（電話・メールでのやり取りはフォーム受付後にご案内します）" [ref=e80]:
+            - rowheader "お問い合わせ" [ref=e81]
+            - cell "お問い合わせフォーム（電話・メールでのやり取りはフォーム受付後にご案内します）" [ref=e82]:
+              - link "お問い合わせフォーム" [ref=e83] [cursor=pointer]:
+                - /url: index.html#contact
+              - text: （電話・メールでのやり取りはフォーム受付後にご案内します）
+      - paragraph [ref=e84]:
+        - link "無料相談を予約する" [ref=e85] [cursor=pointer]:
+          - /url: index.html#contact
+  - contentinfo [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - img "Piste AI EVANGELISTS" [ref=e89]
+        - paragraph [ref=e90]: AIの力で、ビジネスの未来を変える。企業のためのAI導入パートナー。
+      - navigation [ref=e91]:
+        - heading "サービス" [level=3] [ref=e92]
+        - link "支援内容" [ref=e93] [cursor=pointer]:
+          - /url: index.html#services
+        - link "料金プラン" [ref=e94] [cursor=pointer]:
+          - /url: index.html#plans
+        - link "AI研修プログラム" [ref=e95] [cursor=pointer]:
+          - /url: index.html#training
+        - link "ご利用の流れ" [ref=e96] [cursor=pointer]:
+          - /url: index.html#flow
+        - link "メディア掲載" [ref=e97] [cursor=pointer]:
+          - /url: index.html#media
+        - link "ブログ" [ref=e98] [cursor=pointer]:
+          - /url: blog/
+      - navigation [ref=e99]:
+        - heading "その他" [level=3] [ref=e100]
+        - link "ココナラで相談する" [ref=e101] [cursor=pointer]:
+          - /url: https://coconala.com/users/2208051
+        - link "プライバシーポリシー" [ref=e102] [cursor=pointer]:
+          - /url: privacy.html
+        - link "利用規約" [ref=e103] [cursor=pointer]:
+          - /url: terms.html
+        - link "特定商取引法に基づく表記" [ref=e104] [cursor=pointer]:
+          - /url: tokushoho.html
+    - generic [ref=e105]:
+      - paragraph [ref=e106]: © 2026 株式会社Piste. All rights reserved.
+      - paragraph [ref=e107]: 決済方法：クレジットカード（Stripe）/ 口座振込
+  - link "LINE友だち追加" [ref=e108] [cursor=pointer]:
+    - /url: https://lin.ee/Pul5f6V
+    - img [ref=e109]

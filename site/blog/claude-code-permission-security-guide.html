@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、ID・パスワードの渡し方、作業範囲の限定、記録の残し方まで、非エンジニアの経営者・担当者が今日から使える形でまとめました。">
+<meta name="keywords" content="Claude Code,権限設定,安全運用,業務自動化,AIエージェント,中小企業,情報管理,承認フロー,運用ルール,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-permission-security-guide.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ">
+  <meta property="og:description" content="Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、ID・パスワードの渡し方、作業範囲の限定、記録の残し方まで、非エンジニアの経営者・担当者が今日から使える形でまとめました。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-permission-security-guide.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-permission-security-guide-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-31T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="Claude Codeの使い方">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ">
+  <meta name="twitter:description" content="Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、ID・パスワードの渡し方、作業範囲の限定、記録の残し方まで、非エンジニアの経営者・担当者が今日から使える形でまとめました。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-permission-security-guide-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-permission-security-guide.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-permission-security-guide.html"},"url":"https://www.piste-ai.com/blog/claude-code-permission-security-guide.html","headline":"Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ！中小企業のための安全な業務自動化ルールづくりガイド","alternativeHeadline":"Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ","description":"Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、ID・パスワードの渡し方、作業範囲の限定、記録の残し方まで、非エンジニアの経営者・担当者が今日から使える形でまとめました。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-permission-security-guide-og.jpg","width":1200,"height":800},"datePublished":"2026-07-31T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"Claude Codeの使い方","keywords":["Claude Code","権限設定","安全運用","業務自動化","AIエージェント","中小企業","情報管理","承認フロー","運用ルール","AI活用"],"wordCount":4578,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude Codeの使い方","item":"https://www.piste-ai.com/blog/category-claude-code-basics.html"},{"@type":"ListItem","position":4,"name":"Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ","item":"https://www.piste-ai.com/blog/claude-code-permission-security-guide.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-permission-security-guide.html#faq","mainEntity":[{"@type":"Question","name":"設定が難しそうですが、専門知識は必要ですか。","acceptedAnswer":{"@type":"Answer","text":"最初の設定だけは手順に沿った作業が必要ですが、一度決めてしまえば日々の運用は日本語のやり取りだけです。設定の中身は「どの操作で確認を求めるか」「どのフォルダを使うか」といった業務の話なので、判断するのは経営者や担当者のほうが適しています。"}},{"@type":"Question","name":"確認が多いと、かえって手間になりませんか。","acceptedAnswer":{"@type":"Answer","text":"最初は多めにしておき、慣れてきたら安全な操作から順に確認を外していくのがおすすめです。逆の順番にすると、緩めた状態で問題が起きたときに気づけません。"}},{"@type":"Question","name":"社内の資料をAIに読ませても大丈夫ですか。","acceptedAnswer":{"@type":"Answer","text":"扱う範囲を決めることが前提になります。個人が特定できる情報や取引先の機密は、必要がなければ渡さない。渡す場合は目的と範囲を書き出しておく。この2点を守れば、通常の業務資料は問題なく扱えます。"}},{"@type":"Question","name":"何から手を付けるべきですか。","acceptedAnswer":{"@type":"Answer","text":"まず「取り消せない操作は何か」を書き出してください。送信・公開・削除・金額確定。この4つが自社のどの業務にあるかが分かれば、線引きの半分は終わっています。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ！中小企業のための安全な業務自動化ルールづくりガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-claude-code-basics.html">Claude Codeの使い方</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-31">公開日：2026年7月31日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-permission-security-guide.webp" alt="Claude Codeに任せる範囲と人が判断する範囲を線引きするイメージ" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Claude Code を業務に入れたいが勝手に動かれるのが不安な経営者・担当者</li><li><strong>できるようになること：</strong>業務を「任せる・確認する・人が決める」に仕分けし、確認・作業範囲・通信先の設定と運用ルールを決められる</li><li><strong>必要なもの：</strong>Claude Code と、任せたい業務1つ、練習用フォルダ、自動化専用アカウント</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「便利なのは分かったけれど、勝手に何かされたら怖い」。Claude Code を業務に入れようとする経営者の方から、いちばん多く出てくるのがこの不安です。実はこの不安は正しく、そして先に手当てができます。Claude Code には「どこまで自由に動かしてよいか」を決める仕組みがあり、設定さえ済ませておけば、危ない操作の手前で必ず人に確認が入るようになります。この記事では、Anthropic公式のAIコーディングツール Claude Code を安全に業務へ入れるための権限の考え方と運用ルールを、専門知識のない方にも分かる言葉で整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. なぜ「権限」の話を先にするのか</a></li>
+<li><a href="#sec2">2. Claude Code にはどんな安全装置がありますか？</a></li>
+<li><a href="#sec3">3. AIに任せてよい作業と人が決める作業はどう分けますか？</a></li>
+<li><a href="#sec4">4. IDとパスワードの渡し方で失敗しないために</a></li>
+<li><a href="#sec5">5. 業種別に決めておきたいルール</a></li>
+<li><a href="#sec6">6. ルールづくりの4ステップ</a></li>
+<li><a href="#sec7">7. 事故が起きたときの備え</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. なぜ「権限」の話を先にするのか</h2>
+<p>Claude Code は、日本語で頼むだけで資料を読み、文章をつくり、決まった手順を繰り返してくれます。手が速く、疲れず、深夜でも動きます。ここまでは良いことばかりです。</p>
+<p>問題は、その速さと範囲が「頼んだ以上のこと」にも及びうる点です。人の新人であれば、迷ったときに手が止まり、上司に聞きに来ます。ところが指示の受け取り方によっては、AIは迷わず最後までやり切ってしまうことがあります。ファイルの整理を頼んだつもりが、不要と判断されたファイルまで片付けられていた。取引先への案内文の準備を頼んだつもりが、送信まで進んでいた。こうしたずれは、能力不足ではなく「どこで止まるべきかを伝えていなかった」ことから起こります。</p>
+<p>だからこそ、使い方を覚えるより先に「止まる場所」を決めます。順番を逆にすると、慣れてきた頃にいちばん困ることになります。</p>
+
+<h2 id="sec2">2. Claude Code にはどんな安全装置がありますか？</h2>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-permission-security-guide-01.webp" alt="実行前の確認・作業範囲の限定・通信先の制限という3つの安全装置のイメージ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<h3>1. 実行前の確認（承認）</h3>
+<p>Claude Code は、ファイルを書き換える・外部に何かを送るといった影響のある操作をする前に、内容を示して<a href="https://code.claude.com/docs/ja/permissions" target="_blank" rel="noopener">確認を求める設定</a>にできます。「この操作をしてよいですか」と聞かれてから、人が判断する形です。読み取りだけの作業は確認を省き、書き換えや送信は必ず確認、といった具合に操作の種類ごとに分けられます。</p>
+<h3>2. 作業できる場所の限定</h3>
+<p>「この案件のフォルダの中だけ」というように、作業範囲をあらかじめ区切っておけます。範囲の外にあるファイルには触れないため、関係のない資料が巻き込まれる心配がありません。試すときは、本番の資料とは別に「練習用のフォルダ」を用意して、そこだけを範囲に指定するのが安全です。</p>
+<h3>3. 外部との通信の制限</h3>
+<p>インターネット上のどこに接続してよいかを、あらかじめ決めておくこともできます。許可した接続先以外には通信しない設定にしておけば、意図しない外部サービスへ情報が渡ることを防げます。社外に出したくない情報を扱う業務では、この設定が効いてきます。</p>
+<p>3つに共通しているのは「便利さを削る設定ではない」という点です。止めたいのは危ない操作だけで、資料を読む・文章をつくるといった作業の速さはそのまま残ります。</p>
+
+<h2 id="sec3">3. AIに任せてよい作業と人が決める作業はどう分けますか？</h2>
+
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-permission-security-guide-02.webp" alt="業務を「任せる・確認する・人が決める」の3つに仕分けるイメージ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>権限設定の中身を考える前に、業務そのものを3つに仕分けます。この仕分けができていれば、細かい設定は後からいくらでも調整できます。</p>
+<table><thead><tr><th>区分</th><th>考え方</th><th>具体例</th></tr></thead><tbody>
+<tr><td>そのまま任せてよい</td><td>間違えてもすぐ直せる。外に出ない</td><td>資料の要約、下書きの作成、データの集計、表記ゆれの整理</td></tr>
+<tr><td>実行前に確認する</td><td>元に戻すのに手間がかかる</td><td>ファイルの整理・削除、既存資料の書き換え、台帳への登録</td></tr>
+<tr><td>人が決める</td><td>外部に影響が出る。責任が伴う</td><td>顧客への送信、金額の確定、契約・法令に関わる判断、公開操作</td></tr>
+</tbody></table>
+<p>迷ったときの目安は「やり直しがきくかどうか」です。社内の下書きは何度でも書き直せますが、送信したメッセージは取り消せません。取り消せない操作は、必ず人の側に置いておきます。</p>
+
+<h2 id="sec4">4. IDとパスワードの渡し方で失敗しないために</h2>
+<p>業務を任せる以上、予約システムや会計サービスへの接続情報を扱う場面が出てきます。ここでの決め方が、安全度をいちばん大きく左右します。</p>
+<ul>
+<li><strong>自動化専用のアカウントを分ける</strong>：社長個人のアカウントをそのまま使わせないでください。自動化用のアカウントを別に作れば、万一のときも影響がそこで止まります。</li>
+<li><strong>必要な権限だけを与える</strong>：売上を集計したいだけなら「見るだけ」の権限で足ります。削除や設定変更の権限まで付ける必要はありません。</li>
+<li><strong>使う範囲を書き出しておく</strong>：どのサービスの、どの情報に、何のためにつないでいるかを一覧にしておきます。担当者が変わったときに引き継げますし、不要になった接続を切る判断もできます。</li>
+<li><strong>やめるときの手順も決めておく</strong>：接続情報は「発行して終わり」ではありません。使わなくなったら無効にする、担当者が交代したら差し替える。この手順まで決めて初めて運用になります。</li>
+</ul>
+<p>近年は、AIが保存済みのログイン情報を使って予約や申し込みまで代行する仕組みが広がっています。便利な半面、渡す情報の設計を怠ると影響も大きくなります。専用アカウントと最小限の権限、この2つを最初に決めておけば大きな失敗は避けられます。</p>
+
+<h2 id="sec5">5. 業種別に決めておきたいルール</h2>
+<table><thead><tr><th>業種</th><th>特に注意したい情報</th><th>先に決めておくルール</th></tr></thead><tbody>
+<tr><td>士業・コンサル</td><td>顧問先の書類、契約内容</td><td>顧問先名は伏せた形で扱い、外部送信は人が行う</td></tr>
+<tr><td>美容室・治療院</td><td>来店者の氏名・連絡先・施術履歴</td><td>個人が特定できる項目を渡さず、集計は件数のみ</td></tr>
+<tr><td>小売・EC</td><td>注文情報、在庫、価格</td><td>価格変更と発注確定は人の承認を必須にする</td></tr>
+<tr><td>建設・工務店</td><td>図面、見積金額、施主情報</td><td>金額に関わる書類は下書きまで。提出は人が確認する</td></tr>
+<tr><td>教室・スクール</td><td>生徒名簿、保護者連絡先</td><td>名簿は範囲外に置き、連絡文は下書きのみ生成する</td></tr>
+</tbody></table>
+
+<h2 id="sec6">6. ルールづくりの4ステップ</h2>
+<ol>
+<li><strong>任せたい業務を1つ選ぶ</strong>：まずは1業務だけです。日報の下書き、問い合わせの要約など、失敗しても困らないものから選びます。</li>
+<li><strong>その業務を3区分に仕分ける</strong>：先ほどの表に沿って「任せる・確認する・人が決める」に分けます。紙に書き出すだけで十分です。決めたルールを毎回守らせたい場合は、<a href="claude-code-claude-md-rules.html">CLAUDE.md に社内ルールを書いておく方法</a>があります。</li>
+<li><strong>作業範囲と接続先を決める</strong>：使うフォルダを1つに限定し、必要なサービスだけを専用アカウントでつなぎます。ここまでが設定作業です。</li>
+<li><strong>2週間試して見直す</strong>：確認が多すぎて手間なら少し緩め、ひやりとする場面があれば締めます。最初から完璧を目指さず、動かしながら調整します。</li>
+</ol>
+
+<h2 id="sec7">7. 事故が起きたときの備え</h2>
+<ul>
+<li><strong>元に戻せる状態を保つ</strong>：作業対象のフォルダは定期的に控えを取っておきます。戻せる状態さえあれば、たいていの失敗は取り返しがつきます。控えの取り方と戻し方は<a href="claude-code-backup-and-recovery.html">バックアップと復旧の記事</a>で詳しく説明しています。</li>
+<li><strong>作業の記録を残す</strong>：何をいつ実行したかが後から追える形にしておきます。原因の特定が早くなり、同じ失敗を繰り返さずに済みます。</li>
+<li><strong>責任者を1人決める</strong>：「気づいた人が対応する」では動きません。設定の変更と停止の判断ができる人を明確にしておきます。</li>
+<li><strong>止め方を全員が知っている状態にする</strong>：異変に気づいたときにすぐ止められること。これが最後の安全装置です。</li>
+</ul>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>設定が難しそうですが、専門知識は必要ですか。</strong></p>
+<p>最初の設定だけは手順に沿った作業が必要ですが、一度決めてしまえば日々の運用は日本語のやり取りだけです。設定の中身は「どの操作で確認を求めるか」「どのフォルダを使うか」といった業務の話なので、判断するのは経営者や担当者のほうが適しています。</p>
+<p><strong>確認が多いと、かえって手間になりませんか。</strong></p>
+<p>最初は多めにしておき、慣れてきたら安全な操作から順に確認を外していくのがおすすめです。逆の順番にすると、緩めた状態で問題が起きたときに気づけません。</p>
+<p><strong>社内の資料をAIに読ませても大丈夫ですか。</strong></p>
+<p>扱う範囲を決めることが前提になります。個人が特定できる情報や取引先の機密は、必要がなければ渡さない。渡す場合は目的と範囲を書き出しておく。この2点を守れば、通常の業務資料は問題なく扱えます。</p>
+<p><strong>何から手を付けるべきですか。</strong></p>
+<p>まず「取り消せない操作は何か」を書き出してください。送信・公開・削除・金額確定。この4つが自社のどの業務にあるかが分かれば、線引きの半分は終わっています。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>AIに業務を任せるときの不安は、「何をされるか分からない」ことから生まれます。裏を返せば、何をさせて何をさせないかが決まっていれば、不安は運用ルールに変わります。</p>
+<p>Claude Code には、実行前の確認・作業範囲の限定・通信先の制限という3つの安全装置があります。これらを業務の仕分け（任せる・確認する・人が決める）と組み合わせれば、少人数の会社でも安心して自動化を進められます。難しい設定を覚えることより、取り消せない操作を書き出すことのほうが先です。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、お気軽にご相談ください。導入サポート（1時間 ¥10,000 税込）で、御社の業務に合わせた自動化の第一歩をいっしょに設計します。</p>
+<p>これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「便利そうだけれど、勝手に動かれたら怖い」という不安をお持ちの方に向けて、任せる範囲の線引きから権限の設定、運用ルールづくりまで、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-backup-and-recovery.html"><img src="../images/blog-claude-code-backup-and-recovery-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeに任せた作業を元に戻せるバックアップと復旧</span></a><a class="seo-related-card" href="claude-code-claude-md-rules.html"><img src="../images/blog-claude-code-claude-md-rules-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる</span></a><a class="seo-related-card" href="claude-code-troubleshooting-guide.html"><img src="../images/blog-claude-code-troubleshooting-guide-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの自動化が止まった・結果がおかしいときの対処法</span></a></div>
+<p class="seo-related-more"><a href="category-claude-code-basics.html">「Claude Codeの使い方」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

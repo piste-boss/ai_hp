@@ -3,22 +3,11 @@
 <head>
   <meta charset="UTF-8">
     <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LR35246V7B');
-  </script>
+  
+  
 
   <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "w54yutjekb");
-  </script>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/images/logo.png">
@@ -29,6 +18,9 @@
   <meta property="og:description" content="AI導入・活用に関する最新情報をお届けするPiste AI EVANGELISTSのブログ。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.piste-ai.com/blog/">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta property="og:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"CollectionPage","@id":"https://www.piste-ai.com/blog/","url":"https://www.piste-ai.com/blog/","name":"ブログ | Piste AI EVANGELISTS","isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","description":"中小企業向けの Claude Code・AI活用ガイド。ツール連携、経理・財務、営業・顧客対応、業務記録・現場改善、AI導入の基礎を毎日更新。"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"}]}]}</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -304,7 +296,14 @@
         font-size: 1.6rem;
       }
     }
+  
+    /* seo:catnav */
+    .cat-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0 8px}
+    .cat-nav a{font-size:0.85em;padding:7px 16px;border:1px solid rgba(196,162,78,0.5);border-radius:999px;color:#e0e0e0;text-decoration:none;background:rgba(196,162,78,0.06)}
+    .cat-nav a:hover,.cat-nav a.is-current{background:var(--gold);color:#1a1a1a;border-color:var(--gold)}
+    .cat-count{font-size:0.8em;color:#9a9a9a;text-align:center;margin-top:12px}
   </style>
+  <script defer src="/js/analytics.js"></script>
 </head>
 <body>
 
@@ -312,10 +311,10 @@
   <header class="header">
     <div class="header-inner">
       <a href="../" class="header-logo">
-        <img src="../images/logo.png" alt="Piste AI EVANGELISTS">
+        <img src="../images/logo.png" alt="Piste AI EVANGELISTS" style="width:auto;max-width:100%" width="640" height="640">
       </a>
       <nav class="header-nav">
-        <a href="../#consulting">導入コンサル</a>
+        <a href="../#services">導入コンサル</a>
         <a href="../#flow">ご利用の流れ</a>
         <a href="../#plans">料金プラン</a>
         <a href="../blog/">ブログ</a>
@@ -333,7 +332,7 @@
   <!-- Mobile Nav -->
   <div class="mobile-overlay"></div>
   <nav class="mobile-nav">
-    <a href="../#consulting">導入コンサル</a>
+    <a href="../#services">導入コンサル</a>
     <a href="../#flow">ご利用の流れ</a>
     <a href="../#plans">料金プラン</a>
     <a href="../blog/">ブログ</a>
@@ -353,11 +352,753 @@
 
   <!-- Blog Grid -->
   <div class="container">
+    <nav class="cat-nav" aria-label="カテゴリ"><a href="index.html" class="is-current">すべて（155）</a><a href="category-tool-integration.html">ツール連携（87）</a><a href="category-claude-code-basics.html">Claude Codeの使い方（24）</a><a href="category-finance.html">経理・財務・資金（14）</a><a href="category-sales-customer.html">営業・顧客対応（11）</a><a href="category-operations.html">業務記録・現場改善（15）</a><a href="category-ai-basics.html">AI導入の基礎（4）</a></nav>
     <div class="blog-grid">
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-subcontractor-track-record">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-subcontractor-track-record-card.webp" alt="Claude Codeで外注先・協力会社の依頼記録を整える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.10</p>
+            <h3>Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド</h3>
+            <p>案件ごとに閉じて記憶頼みになる外注先の実績を一覧にそろえ、外注先名の表記ゆれと仕事の種類を整理し、納期・金額・手直しの三つを数えて同じ種類の仕事で外注先を比べる。新しい依頼を一言で足す運用まで5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-returns-defect-log">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-returns-defect-log-card.webp" alt="Claude Codeで返品・不良品の記録を整える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.09</p>
+            <h3>Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド</h3>
+            <p>対応と同時に消えてしまう返品・不良品の記録を一覧にそろえ、原因の言葉を十個以内に統一し、一件ごとの推定損失額と原因別・相手先別の集計で同じ失敗の繰り返しを見える化する。新しい不良を一言で足す運用まで5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
 
-      <div class="blog-card">
-        <a href="claude-code-peraichi-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-peraichi-integration.jpg" alt="Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-delivery-delay-early-warning">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-delivery-delay-early-warning-card.webp" alt="Claude Codeで納期遅れの兆候を早めに見つける" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.08</p>
+            <h3>Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド</h3>
+            <p>担当者ごとに散らばった受注案件の状況を一覧に集め、「誰の何を待っているか」と待ち日数を機械に数えさせ、三つの遅れ基準で印をつけて毎朝五分で確認する。納期遅れを当日ではなく数日前に見つける手順を5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-lost-deal-review">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-lost-deal-review-card.webp" alt="Claude Codeで失注した見積もりを振り返る" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.07</p>
+            <h3>Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド</h3>
+            <p>「予算の都合で」の一言で片づいていた失注の理由を、経緯を集めて相手の言葉を原文で残し、値段・納期・内容・対応・相手側の事情の五つに仕分けて数え、次の提案に活かす記録に変えるまでを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-near-miss-records">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-near-miss-records-card.webp" alt="Claude Codeでヒヤリハットの記録を整える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.06</p>
+            <h3>Claude Codeでヒヤリハットの記録を整える！中小企業のための現場の気づきの集め方と事故を防ぐ対策一覧づくりガイド</h3>
+            <p>脚立のぐらつき・死角・熱い鍋のすれ違い——現場の「あと一歩」の気づきを四点だけの報告で集め、場所・作業・時間帯で数えて繰り返しを見つけ、対策一覧として残し現場に返すまでを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-spec-change-log">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-spec-change-log-card.webp" alt="Claude Codeで仕様変更の記録を残す" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.05</p>
+            <h3>Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド</h3>
+            <p>打ち合わせや文面の途中で出た仕様変更を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として相手に示せる形に整えるまでを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-invoice-registration-check">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-invoice-registration-check-card.webp" alt="Claude Codeで受け取った請求書のインボイス対応を確かめる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.04</p>
+            <h3>Claude Codeで受け取った請求書のインボイス対応を確かめる！中小企業のための登録番号チェックと保存整理ガイド</h3>
+            <p>登録番号・税率区分・消費税額——月末に届く請求書がインボイスの要件を満たしているかを一枚ずつ確かめ、不足を取引先に確かめる材料に整え、探せる形で保存するまでを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-bcp-emergency-preparedness">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-bcp-emergency-preparedness-card.webp" alt="Claude CodeでBCP（事業継続計画）の下地をつくる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.03</p>
+            <h3>Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド</h3>
+            <p>9月は防災月間——地震・仕入先被災・社長の入院に備え、社内に散らばる情報から緊急連絡網・守るべき業務一覧・代替手段の候補を半日で組み立てる。BCPの下地づくりを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-equipment-inspection-records">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-equipment-inspection-records-card.webp" alt="Claude Codeで設備・備品の点検記録を整える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.09.01</p>
+            <h3>Claude Codeで設備・備品の点検記録を整える！中小企業のための点検一覧づくりと故障予防の記録ガイド</h3>
+            <p>設備トラブルはいちばん困る日にやってくる——散らばった設備・備品の情報を十項目の点検一覧にまとめ、次回の点検時期を先回りで見える化。修理と買い替えの判断材料づくりを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-loan-repayment-overview">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-loan-repayment-overview-card.webp" alt="Claude Codeで借入の返済予定を整理する" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.31</p>
+            <h3>Claude Codeで借入の返済予定を整理する！中小企業のための返済一覧づくりと金利負担の見える化ガイド</h3>
+            <p>何本あって、いくら残っていて、いつ終わるのか——散らばった借入を九項目の一覧にまとめ、毎月の返済合計と年間の利息負担を見える化。繰り上げ返済や借り換えを考える判断材料づくりを5ステップで解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-new-client-credit-check">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-new-client-credit-check-card.webp" alt="Claude Codeで新しい取引先を取引前に見極める" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.30</p>
+            <h3>Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド</h3>
+            <p>初めての大口注文、本当に払ってもらえるのか——確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、前受け・上限額など取引条件の設計まで、与信判断の材料をそろえる5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-receivables-payment-check">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-receivables-payment-check-card.webp" alt="Claude Codeで売掛金の未入金を見逃さない" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.29</p>
+            <h3>Claude Codeで売掛金の未入金を見逃さない！中小企業のための入金確認と督促のご案内文づくりガイド</h3>
+            <p>請求書は出したのに入金確認は二か月後——請求一覧と口座明細を突き合わせて未入金を早く見つけ、経過日数で段階を分け、角の立たないご案内文まで用意する5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-gross-margin-analysis">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-gross-margin-analysis-card.webp" alt="Claude Codeで商品・取引先ごとの粗利を出す" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.28</p>
+            <h3>Claude Codeで商品・取引先ごとの粗利を出す！中小企業のためのもうけの出どころを見つける利益率整理ガイド</h3>
+            <p>同じ百万円の売上でも、四十万円残る百万円と五万円しか残らない百万円がある——十二か月分の売上と原価をつなぎ、額と率の二軸で並べて、どこでもうけているのかを見つける5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-fixed-cost-review">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-fixed-cost-review-card.webp" alt="Claude Codeで毎月の固定費を洗い出す" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.27</p>
+            <h3>Claude Codeで毎月の固定費を洗い出す！中小企業・一人社長のための経費削減の判断材料づくりガイド</h3>
+            <p>売上を一万円増やすのは大変でも、固定費を一万円減らすのは一度で済み毎月続く——十二か月分の支払いを六項目の型で並べ、止める・切り替える・残すを決める5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-complaint-first-response">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-complaint-first-response-card.webp" alt="Claude Codeでお客様のお叱りに落ち着いて対応する" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.26</p>
+            <h3>Claude Codeでお客様のお叱りに落ち着いて対応する！中小企業のための一次回答の下書きと再発防止の記録づくりガイド</h3>
+            <p>お叱りを受けた日は他の仕事が手につかない——受けた内容の時系列化、事実と受け止めの切り分け、一次回答の下書き3案までを短時間で整える手順を解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-cashflow-forecast">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-cashflow-forecast-card.webp" alt="Claude Codeで資金繰りの見通しを立てる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.25</p>
+            <h3>Claude Codeで資金繰りの見通しを立てる！中小企業・一人社長のための入出金予定の整理と資金ショート予防ガイド</h3>
+            <p>帳簿は黒字なのに月末の通帳残高が気になる——入金と支払いのズレを13週先まで並べ、資金が底を打つ週を先に見つける5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-price-revision-preparation">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-price-revision-preparation-card.webp" alt="Claude Codeで価格改定の根拠を整理する" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.24</p>
+            <h3>Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド</h3>
+            <p>仕入も資材も上がったのに価格は据え置いたまま——品目別の増減を率と額で出し、商品の原価構成に割り戻して改定幅の根拠をつくる5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-quote-comparison">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-quote-comparison-card.webp" alt="Claude Codeで相見積もりを比べる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.23</p>
+            <h3>Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド</h3>
+            <p>三社から見積もりを取ったのに合計金額だけで決めていませんか——ばらばらの見積書を共通の型に写し替え、発注先を決める判断材料をつくる5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-survey-freetext-analysis">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-survey-freetext-analysis-card.webp" alt="Claude Codeでお客様アンケートの自由記述をまとめる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.22</p>
+            <h3>Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド</h3>
+            <p>点数の集計はしたのに「ご意見・ご感想」の欄が棚に置いたまま——アンケートの自由記述を仕分け・集計し、改善点として取り出すまでの5ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-contract-renewal-deadline">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-contract-renewal-deadline-card.webp" alt="Claude Codeで契約・サブスクの更新期限を見落とさない" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.21</p>
+            <h3>Claude Codeで契約・サブスクの更新期限を見落とさない！中小企業のための期限一覧づくりと更新可否の判断ガイド</h3>
+            <p>契約とサブスクの更新期限を一覧にして見落としをなくす手順を解説。控えを集める・項目を5つに絞る・解約申し出期限まで計算させる・情報不足を分ける・3か月ごとに見直すの5ステップを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-dormant-customer-reactivation">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-dormant-customer-reactivation-card.webp" alt="Claude Codeで休眠顧客の掘り起こしリストをつくる" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.20</p>
+            <h3>Claude Codeで休眠顧客の掘り起こしリストをつくる！中小企業のための再来店・再購入のご案内準備ガイド</h3>
+            <p>休眠顧客の掘り起こし準備をClaude Codeで軽くする手順を解説。休眠の基準づくり・名簿からの抽出・理由付きグループ分け・グループ別の案内文下書き・結果の記録の5ステップを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-subsidy-application-support">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-subsidy-application-support-card.webp" alt="Claude Codeで補助金申請の準備を効率化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.19</p>
+            <h3>Claude Codeで補助金申請の準備を効率化！中小企業のための要件整理・事業計画書ドラフトづくりガイド</h3>
+            <p>補助金申請の準備をClaude Codeで軽くする手順を解説。申請の手引きの読み込み・要件チェックリスト化・自社情報の棚卸し・計画書ドラフト・提出前チェックの5ステップを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-invoice-amount-reconciliation">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-invoice-amount-reconciliation-card.webp" alt="Claude Codeで請求書と発注内容の食い違いを見つける" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.18</p>
+            <h3>Claude Codeで請求書と発注内容の食い違いを見つける！中小企業のための金額突合チェック自動化ガイド</h3>
+            <p>請求内容と発注内容の突合手順を解説。合計・明細・条件の3階層の分け方、機械と人の役割分担、差分の3区分での出し方、単位や税など5つのつまずきを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="claude-code-customer-list-deduplication">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-customer-list-deduplication-card.webp" alt="Claude Codeで顧客名簿の重複と表記ゆれを整える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.17</p>
+            <h3>Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド</h3>
+            <p>顧客名簿や取引先リストの重複・表記ゆれを整える手順を解説。散らかり方の4つの型、機械と人の役割分担、控えの取り方から統合の基準づくりまで、名寄せの進め方を整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="operations">
+        <a href="claude-code-paper-document-digitization">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-paper-document-digitization-card.webp" alt="Claude Codeで紙の書類・PDF・手書きメモをデータ化する" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.15</p>
+            <h3>Claude Codeで紙の書類・PDF・手書きメモをデータ化する！中小企業のための紙業務デジタル化ガイド</h3>
+            <p>紙の請求書・PDF・手書きメモを読み取り、台帳に流し込む手順を解説。データ化の3段階、書類別の着手順、読み取り間違いを前提にした確認の型、現場でつまずく5つの落とし穴を整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-automation-inventory-cleanup">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-automation-inventory-cleanup-card.webp" alt="Claude Codeで増やした自動化の棚卸し" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.12</p>
+            <h3>Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド</h3>
+            <p>自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。1行7項目の一覧づくり、使われているかを出口で見分ける方法、止める・残すの4基準、安全な止め方3ステップを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-automation-handover">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-automation-handover-card.webp" alt="Claude Codeで組んだ自動化の引き継ぎ設計" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.11</p>
+            <h3>Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド</h3>
+            <p>自動化が「作った本人しか動かせない」状態になるのを防ぐ設計を解説。引き継ぎに必要な3つ、決めごとファイルの5行、入口を1つに固定する考え方、止まったときの3つの確認を整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-deliverable-review-process">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-deliverable-review-process-card.webp" alt="Claude Codeが出した成果物の検収チェック体制" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.10</p>
+            <h3>Claude Codeが出した成果物は誰がどう確認する？中小企業のための検収チェック体制づくりガイド</h3>
+            <p>自動化で見落とされがちな「世に出す前の確認」を体系化。全数確認をやめる3段階の仕分け、5分で終わるチェックリスト、抜き取り確認の割合の決め方、確認記録の残し方を解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-backup-and-recovery">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-backup-and-recovery-card.webp" alt="Claude Codeに任せた作業を元に戻すバックアップと復旧" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.09</p>
+            <h3>Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド</h3>
+            <p>自動化で最後まで残る不安「戻せるのか」を解消。実際に起きる3つの失敗パターン、戻す手段を3層で持つ考え方、半日で終わる4つの準備、事故時の復旧3ステップを解説します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-confidential-data-rules">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-confidential-data-rules-card.webp" alt="Claude Codeに渡してよい情報の線引き" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.08</p>
+            <h3>Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド</h3>
+            <p>Claude Codeに渡してよい情報と止めたほうがよい情報の線引きを解説。手元で動く仕組みの正しい理解、情報の3分類、伏せて渡す3つの工夫、社内で決める4行のルールを整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-task-delegation-boundary">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-task-delegation-boundary-card.webp" alt="Claude Codeに任せる仕事・人がやる仕事の線引き" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.07</p>
+            <h3>Claude Codeに任せる仕事・人がやる仕事をどう分ける？中小企業のための線引き判断ガイド</h3>
+            <p>Claude Codeにどこまで任せてよいかを判断する基準を解説。任せてよい仕事の3条件、人が持つべき3つの領域、迷ったときの4つの問い、線引きを社内で共有する方法を整理します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-automation-effect-tracking">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-automation-effect-tracking-card.webp" alt="Claude Codeの自動化の効果を数字で残す" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.06</p>
+            <h3>Claude Codeの自動化は結局どれだけ効いた？中小企業のための削減時間の記録と社内共有ガイド</h3>
+            <p>測るのは前の時間・今の時間・人が直した回数の3つだけ。1件1行で書ける記録の型と、月末15分の振り返り4項目で、続けるか広げるかを判断できるようにします。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-troubleshooting-guide">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-troubleshooting-guide-card.webp" alt="Claude Codeの自動化が止まったときの切り分け手順" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.05</p>
+            <h3>Claude Codeの自動化が止まった・結果がおかしいときの対処法！中小企業のための切り分け手順と再発防止ガイド</h3>
+            <p>自動化が途中で止まる、結果が意図と違うといったトラブルは原因が3つに絞れます。非エンジニアでもできる4つの確認手順と、二重実行を防ぐ再発防止策を整理しました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="finance">
+        <a href="claude-code-denshi-chobo-compliance">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-denshi-chobo-compliance-card.webp" alt="Claude Codeで電子帳簿保存法のファイル整理を自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.04</p>
+            <h3>Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド</h3>
+            <p>電帳法対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeに任せる方法を、中小企業・一人社長向けに整理しました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-context-management">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-context-management-card.webp" alt="Claude Codeのコンテキスト管理で精度低下を防ぐ" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.03</p>
+            <h3>Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド</h3>
+            <p>Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。この3原則を非エンジニア向けに整理しました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-claude-md-rules">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-claude-md-rules-card.webp" alt="Claude CodeのCLAUDE.mdで社内ルールを徹底する" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.02</p>
+            <h3>Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド</h3>
+            <p>Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分けまでまとめました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-model-cost-optimization">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-model-cost-optimization-card.webp" alt="Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.08.01</p>
+            <h3>Claude CodeのOpus・Sonnet・Haiku使い分けでAI運用コストを抑える！中小企業のための自動化コスト管理ガイド</h3>
+            <p>Claude Codeは使うモデルで費用が10倍以上変わります。Opus・Sonnet・Haikuの性格と業務別の選び方、費用が膨らむ典型パターン、月額を予測可能にする運用ルールを非エンジニア向けにまとめました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-permission-security-guide">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-permission-security-guide-card.webp" alt="Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ運用ルールづくり" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.31</p>
+            <h3>Claude Codeの権限設定で「勝手にやりすぎ」を防ぐ！中小企業のための安全な業務自動化ルールづくりガイド</h3>
+            <p>Claude Codeに業務を任せるとき、どこまで自由に動かしてよいのかを決める権限設定と運用ルールを解説。承認が必要な操作の線引き、接続情報の渡し方、作業範囲の限定、記録の残し方まで非エンジニア向けにまとめました。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-andpad-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-andpad-integration-card.webp" alt="Claude Code × ANDPADで工事日報・現場写真整理・工程管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.30</p>
+            <h3>Claude Code × ANDPAD連携で工事日報・現場写真整理・工程管理をAI自動化！建設・リフォーム会社の事務負担削減ガイド</h3>
+            <p>Claude Codeと施工管理アプリANDPADの運用を組み合わせ、工事日報の下書き・現場写真の整理・工程変更の案内文・案件データの集計をAI自動化する方法を解説。非エンジニアの建設・リフォーム会社の経営者や現場監督でも取り組める活用シーンと導入ステップを紹介します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-food-delivery-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-food-delivery-integration-card.webp" alt="Claude Code × フードデリバリーでメニュー文づくりと売上分析をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.29</p>
+            <h3>Claude Code × フードデリバリー連携でメニュー文・商品写真の説明・売上分析をAI自動化！飲食店の宅配売上アップガイド</h3>
+            <p>Claude Codeとフードデリバリー運用を組み合わせ、宅配向けメニュー説明文・商品写真に添える言葉・セット企画・評価への返信・売上データの集計をAI自動化する方法を解説。非エンジニアの飲食店経営者でも取り組める活用シーンと導入ステップを紹介します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-drive-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-google-drive-integration-card.webp" alt="Claude Code × Googleドライブで資料整理・ファイル検索・共有管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.28</p>
+            <h3>Claude Code × Googleドライブ連携で資料整理・ファイル検索・共有管理をAI自動化！中小企業・一人社長の「探す時間」削減ガイド</h3>
+            <p>Claude CodeとGoogleドライブを組み合わせ、散らかった資料の棚卸し・ファイル名の統一・目的の書類をすぐ見つける検索・共有設定の点検をAI自動化する方法を解説。非エンジニアでも取り組める活用シーンと導入ステップを紹介します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-reserva-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-reserva-integration-card.webp" alt="Claude Code × RESERVAで予約案内文・リマインド・キャンセル対策をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.27</p>
+            <h3>Claude Code × RESERVA連携で予約受付・リマインド・キャンセル対策をAI自動化！教室・サロン・士業の予約業務効率化ガイド</h3>
+            <p>Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-timee-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-timee-integration-card.webp" alt="Claude Code × タイミーで募集文・受け入れ手順書・稼働データ集計をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.27</p>
+            <h3>Claude Code × タイミー連携で募集文・受け入れ手順書・稼働データ集計をAI自動化！人手不足の飲食店・小売・物流の現場運用効率化ガイド</h3>
+            <p>Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-jalan-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-jalan-integration-card.webp" alt="Claude Code × じゃらんで宿泊プラン作成・口コミ返信・繁閑対策をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.26</p>
+            <h3>Claude Code × じゃらん連携で宿泊プラン作成・口コミ返信・繁閑対策をAI自動化！旅館・ホテル・民泊の集客効率化ガイド</h3>
+            <p>Claude Codeと宿泊予約サイトじゃらんを組み合わせ、宿泊プランの紹介文づくり・口コミ返信・繁閑期の販促・インバウンド対応をAI自動化する方法を解説。小規模な旅館・ホテル・民泊のオーナー向けに活用シーンと導入ステップを紹介。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-zoho-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-zoho-integration-card.webp" alt="Claude Code × Zohoで顧客管理・見積請求・連絡対応を統合しAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.25</p>
+            <h3>Claude Code × Zoho連携で顧客管理・見積請求・連絡対応をオールインワンでAI自動化！中小企業・一人社長の業務統合ガイド</h3>
+            <p>Claude Codeと統合ビジネススイートZohoを組み合わせ、顧客管理・見積請求・連絡対応・データ集計をオールインワンでAI自動化する方法を解説。ツールが分散しがちな中小企業・一人社長向けに活用シーンと導入手順を紹介。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-make-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Make連携で複数ステップの業務自動化をAI設計" width="640" height="640" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.24</p>
+            <h3>Claude Code × Make（旧Integromat）連携で複数ステップの業務自動化をAIに設計させる！中小企業のノーコード業務フロー効率化ガイド</h3>
+            <p>Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオ改善をAI自動化する方法を非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-peatix-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-peatix-integration-card.webp" alt="Claude Code × Peatix連携でイベント・セミナー集客をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.23</p>
+            <h3>Claude Code × Peatix連携でイベント・セミナー集客をAI自動化！中小企業・講師・コンサルの集客効率化ガイド</h3>
+            <p>Claude Codeとイベント管理プラットフォームPeatixを組み合わせ、イベントページ作成・告知・参加者フォロー・アンケート集計・次回企画をAI自動化する方法を非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-deepl-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-deepl-integration-card.webp" alt="Claude Code × DeepL連携で翻訳・多言語対応をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.22</p>
+            <h3>Claude Code × DeepL連携で翻訳・多言語対応をAI自動化！中小企業の海外取引・インバウンド接客効率化ガイド</h3>
+            <p>Claude Codeと翻訳サービスDeepLを組み合わせ、海外メール対応・越境ECの多言語化・インバウンド案内・資料翻訳をAI自動化する方法を非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-minne-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-minne-integration-card.webp" alt="Claude Code × minne連携でハンドメイド作家の運営をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.21</p>
+            <h3>Claude Code × minne（ミンネ）連携で作品説明文・オーダー相談・レビュー返信をAI自動化！ハンドメイド作家の国内ファン育成ガイド</h3>
+            <p>Claude Codeとハンドメイドマーケットminneの運営を組み合わせ、作品説明文づくり・オーダーメイド相談の返信・レビュー返信・販売データの振り返りをAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-colorme-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-colorme-integration-card.webp" alt="Claude Code × カラーミーショップ連携でネットショップ運営をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.20</p>
+            <h3>Claude Code × カラーミーショップ連携で商品ページ・受注対応・メルマガをAI自動化！ネットショップ運営者の売上アップガイド</h3>
+            <p>Claude Codeとカラーミーショップの運営を組み合わせ、商品ページの説明文づくり・受注対応の文面・メルマガづくりをAI自動化する方法を、ネットショップ運営者向けに非エンジニア視点で解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-paypay-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-paypay-integration-card.webp" alt="Claude Code × PayPay連携で店頭キャッシュレス集客をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.19</p>
+            <h3>Claude Code × PayPay連携で売上集計・キャッシュレス対応・クーポン販促をAI自動化！実店舗・小規模事業者の店頭集客効率化ガイド</h3>
+            <p>Claude CodeとQRコード決済PayPayの売上データを組み合わせ、売上集計・傾向の振り返り・クーポンや告知文づくりをAI自動化する方法を、実店舗・小規模事業者向けに非エンジニア視点で解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-threads-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-threads-integration-card.webp" alt="Claude Code × Threads連携でテキストSNS集客をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.18</p>
+            <h3>Claude Code × Threads連携で投稿・返信・分析をAI自動化！中小企業・店舗のテキストSNS集客効率化ガイド</h3>
+            <p>Claude CodeとテキストSNSのThreadsを組み合わせ、投稿づくり・返信対応・反応の分析をAI自動化する方法を、写真がなくても発信できる中小企業・店舗向けに非エンジニア視点で解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-linkedin-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-linkedin-integration-card.webp" alt="Claude Code × LinkedIn連携で経営者の情報発信・B2Bリード獲得をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.17</p>
+            <h3>Claude Code × LinkedIn連携で経営者の情報発信・B2Bリード獲得・プロフィール運用をAI自動化！中小企業・一人社長のビジネスSNS活用ガイド</h3>
+            <p>Claude Codeとビジネス特化SNSのLinkedInを組み合わせ、投稿文・プロフィール・つながり申請・発信テーマづくりをAI自動化する方法を、非エンジニアの経営者・一人社長向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-sheets-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-google-sheets-integration-card.webp" alt="Claude Code × Google Sheets連携で売上集計・在庫管理を自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.15</p>
+            <h3>Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド</h3>
+            <p>Claude CodeとGoogle SheetsをMCPで連携し、売上集計・在庫管理・発注アラート・月次レポート作成を自動化する具体的な手順と中小企業の活用事例3選を解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-wantedly-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-wantedly-integration-card.webp" alt="Claude Code × Wantedly連携で採用広報をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.14</p>
+            <h3>Claude Code × Wantedly連携で採用広報・ストーリー記事・カジュアル面談対応をAI自動化！中小企業・一人社長の採用ブランディング効率化ガイド</h3>
+            <p>Claude Codeと共感採用の求人サービスWantedlyを組み合わせ、募集記事・ストーリー記事・スカウト文・カジュアル面談準備・反響データ整理をAI自動化する方法を、非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-etsy-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-etsy-integration-card.webp" alt="Claude Code × Etsy連携で越境ECをAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.13</p>
+            <h3>Claude Code × Etsy連携で海外販売・英語の商品ページ・受注対応をAI自動化！ハンドメイド作家・中小事業者の越境EC売上アップガイド</h3>
+            <p>Claude Codeと海外向けハンドメイドマーケットEtsyを組み合わせ、英語の商品リスティング作成・海外顧客への返信・越境発送案内・レビュー分析・SEOタグ最適化をAI自動化する方法を、非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-pinterest-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-pinterest-integration-card.webp" alt="Claude Code × Pinterest連携でビジュアル集客をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.12</p>
+            <h3>Claude Code × Pinterest連携でピン作成・ボード運用・分析をAI自動化！ネットショップ・店舗のビジュアル集客効率化ガイド</h3>
+            <p>Claude CodeとビジュアルプラットフォームPinterestを組み合わせ、ピンの説明文づくり・ボード設計・投稿カレンダー・分析レポート・ECサイトへの送客導線づくりをAI自動化する方法を非エンジニア向けに解説。</p>
+          </div>
+        </a>
+      </div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-ameblo-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-ameblo-integration-card.webp" alt="Claude Code × アメブロ連携でブログ集客をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.11</p>
+            <h3>Claude Code × アメブロ連携でブログ集客をAI自動化！サロン・店舗・個人事業主の記事作成・投稿効率化ガイド</h3>
+            <p>Claude Codeと集客ブログとして人気のアメブロを連携し、ネタ出し・記事の下書き作成・タイトル改善・お客様の声の記事化・予約導線づくりを非エンジニアでもAI自動化する方法を、サロン・店舗・個人事業主向けに解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-miro-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-miro-integration-card.webp" alt="Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.10</p>
+            <h3>Claude Code × Miro連携でブレスト・業務図解・ワークショップ進行をAI自動化！中小企業のオンラインホワイトボード活用ガイド</h3>
+            <p>Claude Codeと人気のオンラインホワイトボードMiroを連携し、付箋の分類・ブレスト要約・アイデアのタスク化・業務図解・ワークショップ進行台本づくりを非エンジニアでもAI自動化する方法を中小企業向けに解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-todoist-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-todoist-integration-card.webp" alt="Claude Code × Todoist連携でToDo・タスク管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.09</p>
+            <h3>Claude Code × Todoist連携でToDo・タスク管理をAI自動化！一人社長・フリーランスのタスク整理効率化ガイド</h3>
+            <p>Claude Codeと個人向けタスク管理ツールTodoistを連携し、会話からのタスク抽出・優先順位づけ・仕事の細分化・週次の振り返りを非エンジニアでもAI自動化する方法を、一人社長・フリーランス向けに解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-rakuraku-seisan-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-rakuraku-seisan-integration-card.webp" alt="Claude Code × 楽楽精算連携で経費精算・交通費申請・請求書処理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.08</p>
+            <h3>Claude Code × 楽楽精算連携で経費精算・交通費申請・請求書処理をAI自動化！中小企業の経理・精算業務効率化ガイド</h3>
+            <p>Claude Codeと経費精算システム楽楽精算を連携し、経費申請の事前チェック・科目仕分け・差し戻し連絡・請求書整理・月次レポート作成を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-lineworks-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-lineworks-integration-card.webp" alt="Claude Code × LINE WORKS連携で社内チャット・掲示板・タスク管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.07</p>
+            <h3>Claude Code × LINE WORKS連携で社内チャット・掲示板・タスク管理をAI自動化！中小企業のビジネスチャット運用効率化ガイド</h3>
+            <p>Claude CodeとLINE WORKSを連携し、掲示板・お知らせ文づくり・定型返信・トークの要約・タスク整理を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-board-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-board-integration-card.webp" alt="Claude Code × board連携で見積書・請求書作成・入金管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.06</p>
+            <h3>Claude Code × board連携で見積書・請求書作成・入金管理をAI自動化！フリーランス・一人社長のバックオフィス効率化ガイド</h3>
+            <p>Claude Codeとboardを連携し、見積書・請求書の文面づくり・入金管理・督促文の下書き・取引先別の売上集計を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-cybozu-office-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-cybozu-office-integration-card.webp" alt="Claude Codeとサイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.05</p>
+            <h3>Claude Code × サイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化！中小企業のグループウェア運用効率化ガイド</h3>
+            <p>Claude Codeとサイボウズ Officeを連携し、会議の日程調整・ワークフロー申請文の下書き・掲示板やメッセージの要点整理・議事メモや報告書づくりを非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-note-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-note-integration-card.webp" alt="Claude Codeとnote連携で記事作成・発信・分析をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.04</p>
+            <h3>Claude Code × note連携で記事作成・発信・分析をAI自動化！中小企業・個人事業主のコンテンツ集客効率化ガイド</h3>
+            <p>Claude Codeとnoteを連携し、記事の企画・ネタ出し・構成案づくり・下書き作成・タイトル改善・過去記事の分析を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-smaregi-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-smaregi-integration-card.webp" alt="Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.03</p>
+            <h3>Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化！小売店・飲食店の店舗運営効率化ガイド</h3>
+            <p>Claude Codeとスマレジを連携し、日次の売上集計・在庫の減り方チェック・売れ筋分析・顧客の購買傾向整理・月次レポートづくりを非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-tiktok-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-tiktok-integration-card.webp" alt="Claude Code × TikTok連携でショート動画の企画・台本・分析をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.07.02</p>
+            <h3>Claude Code × TikTok連携でショート動画の企画・台本・分析をAI自動化！中小企業・店舗の集客効率化ガイド</h3>
+            <p>Claude CodeとTikTokを連携し、ショート動画の企画・台本づくり・キャプション作成・1か月分の投稿企画・コメント返信・反応データの分析を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-microsoft-teams-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化" width="640" height="640" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.06.30</p>
+            <h3>Claude Code × Microsoft Teams連携で会議要約・チャット・タスク管理をAI自動化！中小企業の社内コミュニケーション効率化ガイド</h3>
+            <p>Claude CodeとMicrosoft Teamsを連携し、会議の議事録自動作成・チャット要約・決定事項のタスク化・社内アナウンス下書き・週次サマリー作成を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-yahoo-shopping-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Yahoo!ショッピング連携で出店・商品ページ・受注対応をAI自動化" width="640" height="640" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.06.29</p>
+            <h3>Claude Code × Yahoo!ショッピング連携で出店・商品ページ・受注対応をAI自動化！中小ECの売上アップガイド</h3>
+            <p>Claude CodeとYahoo!ショッピング（ストアクリエイターPro）を連携し、商品ページの文章づくり・受注対応の返信下書き・レビュー整理・セール告知文・売上/在庫の集計を非エンジニアでも効率化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-yayoi-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-yayoi-integration-card.webp" alt="Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.06.29</p>
+            <h3>Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化！中小企業・個人事業主の経理効率化ガイド</h3>
+            <p>Claude Codeと弥生会計を連携し、仕訳の下書き・記帳チェック・月次レポート作成・経費の分類整理・決算準備を非エンジニアでもAI自動化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-tabelog-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-tabelog-integration-card.webp" alt="Claude Code × 食べログ連携で口コミ返信・メニュー紹介文をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.06.28</p>
+            <h3>Claude Code × 食べログ連携で口コミ返信・予約対応・メニュー紹介文をAI自動化！飲食店の集客効率化ガイド</h3>
+            <p>Claude Codeと食べログ（店舗管理画面）を連携し、口コミ返信・予約問い合わせ対応・季節メニューの紹介文・再来店促進メッセージ・口コミ/予約データの分析を非エンジニアでも効率化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-hotpepper-beauty-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-hotpepper-beauty-integration-card.webp" alt="Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文をAI自動化" width="640" height="427" loading="lazy"></div>
+          <div class="blog-body">
+            <p class="blog-date">2026.06.26</p>
+            <h3>Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文・サロンブログをAI自動化！美容室・サロンの集客効率化ガイド</h3>
+            <p>Claude Codeとホットペッパービューティー（サロンボード）を連携し、口コミ返信・クーポン文・サロンブログの下書き、リピート促進メッセージ、予約・口コミデータの分析を非エンジニアでも効率化する方法を解説。</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-peraichi-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-peraichi-integration-card.webp" alt="Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.25</p>
             <h3>Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化！小規模事業者・個人事業主のWeb集客効率化ガイド</h3>
@@ -366,9 +1107,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-airregi-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-airregi-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.24</p>
             <h3>Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化！飲食店・小売店の店舗運営効率化ガイド</h3>
@@ -377,9 +1118,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-stores-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-stores-integration.jpg" alt="Claude Code × STORES連携でネットショップ・予約・POSをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-stores-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-stores-integration-card.webp" alt="Claude Code × STORES連携でネットショップ・予約・POSをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.23</p>
             <h3>Claude Code × STORES連携でネットショップ・予約・POSをAI自動化！実店舗＆EC両立の中小事業者向け運営効率化ガイド</h3>
@@ -388,9 +1129,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-rakuten-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-rakuten-integration.jpg" alt="Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-rakuten-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-rakuten-integration-card.webp" alt="Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.21</p>
             <h3>Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化！中小ショップの売上アップガイド</h3>
@@ -399,9 +1140,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-amazon-seller-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-amazon-seller-integration.jpg" alt="Claude Code × Amazonセラーセントラル連携で出品・注文・レビュー対応をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-amazon-seller-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-amazon-seller-integration-card.webp" alt="Claude Code × Amazonセラーセントラル連携で出品・注文・レビュー対応をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.20</p>
             <h3>Claude Code × Amazonセラーセントラル連携で出品・注文・レビュー対応をAI自動化！中小ECの売上アップガイド</h3>
@@ -410,9 +1151,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-google-docs-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-google-docs-integration.jpg" alt="Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-docs-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-google-docs-integration-card.webp" alt="Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.19</p>
             <h3>Claude Code × Googleドキュメント連携で議事録・契約書・提案書づくりをAI自動化！中小企業の文書業務効率化ガイド</h3>
@@ -421,9 +1162,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-mercari-shops-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-mercari-shops-integration.jpg" alt="Claude Code × メルカリShops連携で出品・注文対応・分析をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-mercari-shops-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-mercari-shops-integration-card.webp" alt="Claude Code × メルカリShops連携で出品・注文対応・分析をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.18</p>
             <h3>Claude Code × メルカリShops連携で出品・注文対応・分析をAI自動化！個人・小規模事業者の売上アップガイド</h3>
@@ -432,9 +1173,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-facebook-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-facebook-integration.jpg" alt="Claude Code × Facebookページ連携で投稿・コメント・広告文をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-facebook-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-facebook-integration-card.webp" alt="Claude Code × Facebookページ連携で投稿・コメント・広告文をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.17</p>
             <h3>Claude Code × Facebookページ連携で投稿・コメント・広告文をAI自動化！中小企業・店舗の集客効率化ガイド</h3>
@@ -443,9 +1184,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-x-twitter-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-x-twitter-integration.jpg" alt="Claude Code × X（旧Twitter）連携で投稿・返信・分析をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-x-twitter-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-x-twitter-integration-card.webp" alt="Claude Code × X（旧Twitter）連携で投稿・返信・分析をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.16</p>
             <h3>Claude Code × X（旧Twitter）連携で投稿・返信・分析をAI自動化！中小企業・店舗の集客効率化ガイド</h3>
@@ -454,9 +1195,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-indeed-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-indeed-integration.jpg" alt="Claude Code × Indeed連携で求人・採用業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-indeed-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-indeed-integration-card.webp" alt="Claude Code × Indeed連携で求人・採用業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.15</p>
             <h3>Claude Code × Indeed連携で求人・採用業務をAI自動化！中小企業の採用効率化ガイド</h3>
@@ -465,9 +1206,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-instagram-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-instagram-integration.jpg" alt="Claude Code × Instagram連携で投稿・コメント・分析をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-instagram-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-instagram-integration-card.webp" alt="Claude Code × Instagram連携で投稿・コメント・分析をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.14</p>
             <h3>Claude Code × Instagram連携で投稿・コメント・分析をAI自動化！中小企業・店舗の集客効率化ガイド</h3>
@@ -476,9 +1217,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-search-console-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-search-console-integration.jpg" alt="Claude Code × Googleサーチコンソール連携で検索順位・SEO改善をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-search-console-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-search-console-integration-card.webp" alt="Claude Code × Googleサーチコンソール連携で検索順位・SEO改善をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.13</p>
             <h3>Claude Code × Googleサーチコンソール連携で検索順位・SEO改善をAI自動化！中小企業の検索流入アップガイド</h3>
@@ -487,9 +1228,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-wix-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-wix-integration.jpg" alt="Claude Code × Wix連携でホームページ運用をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-wix-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-wix-integration-card.webp" alt="Claude Code × Wix連携でホームページ運用をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.12</p>
             <h3>Claude Code × Wix連携でホームページ運用・更新をAI自動化！中小企業のWebサイト管理効率化ガイド</h3>
@@ -498,9 +1239,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-jobcan-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-jobcan-integration.jpg" alt="Claude Code × ジョブカン連携で勤怠管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-jobcan-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-jobcan-integration-card.webp" alt="Claude Code × ジョブカン連携で勤怠管理をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.11</p>
             <h3>Claude Code × ジョブカン連携で勤怠管理・シフト・残業アラートをAI自動化！中小企業の労務効率化ガイド</h3>
@@ -509,9 +1250,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-zendesk-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-zendesk-integration.jpg" alt="Claude Code × Zendesk連携で問い合わせ・カスタマーサポートをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-zendesk-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-zendesk-integration-card.webp" alt="Claude Code × Zendesk連携で問い合わせ・カスタマーサポートをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.10</p>
             <h3>Claude Code × Zendesk連携で問い合わせ・カスタマーサポートをAI自動化！中小企業の顧客対応効率化ガイド</h3>
@@ -520,9 +1261,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-cloudsign-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-cloudsign-integration.jpg" alt="Claude Code × クラウドサイン連携で電子契約をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-cloudsign-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-cloudsign-integration-card.webp" alt="Claude Code × クラウドサイン連携で電子契約をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.09</p>
             <h3>Claude Code × クラウドサイン連携で電子契約をAI自動化！中小企業の契約締結・書類管理効率化ガイド</h3>
@@ -531,9 +1272,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-google-ads-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-google-ads-integration.jpg" alt="Claude Code × Google広告連携で広告運用をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-ads-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-google-ads-integration-card.webp" alt="Claude Code × Google広告連携で広告運用をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.07</p>
             <h3>Claude Code × Google広告連携で広告運用・レポート作成をAI自動化！中小企業のリスティング広告効率化ガイド</h3>
@@ -542,9 +1283,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-youtube-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-youtube-integration.jpg" alt="Claude Code × YouTube連携で動画運用をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-youtube-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-youtube-integration-card.webp" alt="Claude Code × YouTube連携で動画運用をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.06</p>
             <h3>Claude Code × YouTube連携で動画運用をAI自動化！中小企業の概要欄・字幕・分析レポート作成ガイド</h3>
@@ -553,9 +1294,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-wordpress-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-wordpress-integration.jpg" alt="Claude Code × WordPress連携でブログ・HP更新をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-wordpress-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-wordpress-integration-card.webp" alt="Claude Code × WordPress連携でブログ・HP更新をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.05</p>
             <h3>Claude Code × WordPress連携でブログ・HP更新をAI自動化！中小企業のオウンドメディア運用効率化ガイド</h3>
@@ -564,9 +1305,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-base-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-base-integration.jpg" alt="Claude Code × BASE連携でネットショップ運営をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-base-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-base-integration-card.webp" alt="Claude Code × BASE連携でネットショップ運営をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.04</p>
             <h3>Claude Code × BASE連携でネットショップ運営をAI自動化！個人・小規模事業者の売上アップガイド</h3>
@@ -575,9 +1316,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-square-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-square-integration.jpg" alt="Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-square-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-square-integration-card.webp" alt="Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.03</p>
             <h3>Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化！実店舗・小売店の運営効率化ガイド</h3>
@@ -586,9 +1327,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-sansan-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-sansan-integration.jpg" alt="Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-sansan-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-sansan-integration-card.webp" alt="Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.02</p>
             <h3>Claude Code × Sansan連携で名刺管理・人脈情報をAI自動化！中小企業の営業リード活用ガイド</h3>
@@ -597,9 +1338,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-googleform-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-googleform-integration.jpg" alt="Claude Code × Googleフォーム連携でフォーム業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-googleform-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-googleform-integration-card.webp" alt="Claude Code × Googleフォーム連携でフォーム業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.01</p>
             <h3>Claude Code × Googleフォーム連携でアンケート・問い合わせ・申込対応をAI自動化！中小企業のフォーム業務効率化ガイド</h3>
@@ -608,9 +1349,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-google-business-profile-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-google-business-profile-integration.jpg" alt="Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-business-profile-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-google-business-profile-integration-card.webp" alt="Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.01</p>
             <h3>Claude Code × Googleビジネスプロフィール連携で口コミ返信・投稿をAI自動化！店舗集客・MEO効率化ガイド</h3>
@@ -619,9 +1360,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-moneyforward-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-moneyforward-integration.jpg" alt="Claude Code × マネーフォワード クラウド連携で経理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-moneyforward-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-moneyforward-integration-card.webp" alt="Claude Code × マネーフォワード クラウド連携で経理をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.06.01</p>
             <h3>Claude Code × マネーフォワード クラウド連携で請求・経費・会計をAI自動化！中小企業の経理効率化ガイド</h3>
@@ -630,9 +1371,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-ga4-analytics-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-ga4-analytics-integration.jpg" alt="Claude Code × GA4連携でアクセス解析をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-ga4-analytics-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-ga4-analytics-integration-card.webp" alt="Claude Code × GA4連携でアクセス解析をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.31</p>
             <h3>Claude Code × Googleアナリティクス（GA4）連携でアクセス解析・改善提案をAI自動化！中小企業のWebデータ活用ガイド</h3>
@@ -641,9 +1382,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-dropbox-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-dropbox-integration.jpg" alt="Claude Code × Dropbox連携でファイル管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-dropbox-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-dropbox-integration-card.webp" alt="Claude Code × Dropbox連携でファイル管理をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.29</p>
             <h3>Claude Code × Dropbox連携で社内ファイル管理・共有・自動整理をAI自動化！中小企業のクラウドストレージ運用ガイド</h3>
@@ -652,9 +1393,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-google-calendar-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code × Googleカレンダー連携でスケジュール管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-google-calendar-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Googleカレンダー連携でスケジュール管理をAI自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.28</p>
             <h3>Claude Code × Googleカレンダー連携で予定調整・会議準備・リマインドをAI自動化！中小企業のスケジュール管理効率化ガイド</h3>
@@ -663,9 +1404,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-line-official-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-line-official-integration.jpg" alt="Claude Code × LINE公式アカウント連携で顧客対応をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-line-official-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-line-official-integration-card.webp" alt="Claude Code × LINE公式アカウント連携で顧客対応をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.27</p>
             <h3>Claude Code × LINE公式アカウント連携で顧客対応・配信・予約案内をAI自動化！中小企業・店舗の集客効率化ガイド</h3>
@@ -674,9 +1415,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-canva-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-canva-integration.jpg" alt="Claude Code × Canva連携でデザイン業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-canva-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-canva-integration-card.webp" alt="Claude Code × Canva連携でデザイン業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.26</p>
             <h3>Claude Code × Canva連携でバナー・SNS画像・チラシ制作をAI自動化！中小企業のデザイン業務効率化ガイド</h3>
@@ -685,9 +1426,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-smarthr-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-smarthr-integration.jpg" alt="Claude Code × SmartHR連携で人事労務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-smarthr-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-smarthr-integration-card.webp" alt="Claude Code × SmartHR連携で人事労務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.25</p>
             <h3>Claude Code × SmartHR連携で人事労務をAI自動化！中小企業の入退社手続き・年末調整・勤怠管理ガイド</h3>
@@ -696,9 +1437,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-mailchimp-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-mailchimp-integration.jpg" alt="Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-mailchimp-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-mailchimp-integration-card.webp" alt="Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.24</p>
             <h3>Claude Code × Mailchimp連携でメルマガ配信業務をAI自動化！中小企業のメールマーケティング効率化ガイド</h3>
@@ -707,9 +1448,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-airtable-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-airtable-integration.jpg" alt="Claude Code × Airtable連携でデータベース業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-airtable-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-airtable-integration-card.webp" alt="Claude Code × Airtable連携でデータベース業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.22</p>
             <h3>Claude Code × Airtable連携でデータベース業務をAI自動化！中小企業の顧客・案件・在庫管理ガイド</h3>
@@ -718,9 +1459,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-zoom-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-zoom-integration.jpg" alt="Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-zoom-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-zoom-integration-card.webp" alt="Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.21</p>
             <h3>Claude Code × Zoom連携でオンライン会議・録画・議事録をAI自動化！中小企業のZoom活用効率化ガイド</h3>
@@ -729,9 +1470,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-calendly-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-calendly-integration.jpg" alt="Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-calendly-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-calendly-integration-card.webp" alt="Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.20</p>
             <h3>Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化！中小企業の予約業務効率化ガイド</h3>
@@ -740,9 +1481,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-trello-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code × Trello連携でカンバン式タスク管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-trello-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Trello連携でカンバン式タスク管理をAI自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.19</p>
             <h3>Claude Code × Trello連携でカンバン式タスク管理をAI自動化！中小企業のビジュアル業務管理ガイド</h3>
@@ -751,9 +1492,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-backlog-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Backlog連携でプロジェクト管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-backlog-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Backlog連携でプロジェクト管理をAI自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.18</p>
             <h3>Claude Code × Backlog連携でプロジェクト管理をAI自動化！日本企業向けタスク・課題管理AI化ガイド</h3>
@@ -762,9 +1503,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-asana-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-asana-integration.jpg" alt="Claude Code × Asana連携でタスク管理をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-asana-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-asana-integration-card.webp" alt="Claude Code × Asana連携でタスク管理をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.17</p>
             <h3>Claude Code × Asana連携でタスク管理をAI自動化！中小企業のプロジェクト進行効率化ガイド</h3>
@@ -773,9 +1514,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-salesforce-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-salesforce-integration.jpg" alt="Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-salesforce-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-salesforce-integration-card.webp" alt="Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.16</p>
             <h3>Claude Code × Salesforce連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客管理ガイド</h3>
@@ -784,9 +1525,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-shopify-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-shopify-integration.jpg" alt="Claude Code × Shopify連携でECサイト運営をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-shopify-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-shopify-integration-card.webp" alt="Claude Code × Shopify連携でECサイト運営をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.14</p>
             <h3>Claude Code × Shopify連携でECサイト運営をAI自動化！中小企業のオンライン売上アップガイド</h3>
@@ -795,9 +1536,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-hubspot-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-hubspot-integration.jpg" alt="Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-hubspot-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-hubspot-integration-card.webp" alt="Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.13</p>
             <h3>Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用！中小企業の見込み顧客育成ガイド</h3>
@@ -806,9 +1547,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-freee-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-freee-integration.jpg" alt="Claude Code × freee連携で経理業務をAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-freee-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-freee-integration-card.webp" alt="Claude Code × freee連携で経理業務をAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.12</p>
             <h3>Claude Code × freee連携で経理業務をAI自動化！中小企業の請求書・仕訳・月次決算ガイド</h3>
@@ -817,9 +1558,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-chatwork-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-chatwork-integration.jpg" alt="Claude Code × Chatwork連携で社内コミュニケーションをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-chatwork-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-chatwork-integration-card.webp" alt="Claude Code × Chatwork連携で社内コミュニケーションをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.12</p>
             <h3>Claude Code × Chatwork連携で社内コミュニケーションをAI自動化！中小企業のChatwork運用効率化ガイド</h3>
@@ -828,9 +1569,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-microsoft365-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-microsoft365-integration.jpg" alt="Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-microsoft365-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-microsoft365-integration-card.webp" alt="Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.09</p>
             <h3>Claude Code × Microsoft 365連携でExcel・Word・PowerPointをAI自動運用！中小企業のオフィス効率化ガイド</h3>
@@ -839,9 +1580,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-kintone-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-kintone-integration.jpg" alt="Claude Code × kintone連携で業務アプリをAI自動運用"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-kintone-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-kintone-integration-card.webp" alt="Claude Code × kintone連携で業務アプリをAI自動運用" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.08</p>
             <h3>Claude Code × kintone連携で業務アプリをAI自動運用！中小企業のkintone活用AI化ガイド</h3>
@@ -850,9 +1591,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-zapier-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-zapier-integration.jpg" alt="Claude Code × Zapier連携で業務自動化を10倍加速"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-zapier-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-zapier-integration-card.webp" alt="Claude Code × Zapier連携で業務自動化を10倍加速" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.07</p>
             <h3>Claude Code × Zapier連携で業務自動化を10倍加速！中小企業のノーコード×AI活用ガイド</h3>
@@ -861,9 +1602,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-slack-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-slack-integration.jpg" alt="Claude Code × Slack連携で社内コミュニケーションをAI自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-slack-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-slack-integration-card.webp" alt="Claude Code × Slack連携で社内コミュニケーションをAI自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.06</p>
             <h3>Claude Code × Slack連携で社内コミュニケーションをAI自動化！中小企業のSlack運用効率化ガイド</h3>
@@ -872,9 +1613,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-gmail-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-gmail-integration.jpg" alt="Claude Code × Gmail連携でメール業務を完全自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-gmail-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-gmail-integration-card.webp" alt="Claude Code × Gmail連携でメール業務を完全自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.05</p>
             <h3>Claude Code × Gmail連携でメール業務を完全自動化！中小企業の問い合わせ対応・営業フォロー・社内連絡ガイド</h3>
@@ -883,9 +1624,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-discord-notification.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-discord-notification.jpg" alt="Claude Code × Discord連携で社内通知をAI化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-discord-notification">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-discord-notification-card.webp" alt="Claude Code × Discord連携で社内通知をAI化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.04</p>
             <h3>Claude Code × Discord連携で社内通知をAI化！中小企業のリアルタイム業務通知ガイド</h3>
@@ -894,20 +1635,10 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-google-sheets-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-google-sheets-integration.jpg" alt="Claude Code × Google Sheets連携で売上集計・在庫管理を自動化"></div>
-          <div class="blog-body">
-            <p class="blog-date">2026.05.03</p>
-            <h3>Claude Code × Google Sheets連携で売上集計・在庫管理を自動化！中小企業のスプレッドシート業務AI化ガイド</h3>
-            <p>Claude CodeとGoogle SheetsをMCPで連携し、売上集計・在庫管理・月次レポート作成を自動化する具体的な手順と中小企業の活用事例を解説。</p>
-          </div>
-        </a>
-      </div>
 
-      <div class="blog-card">
-        <a href="claude-code-notion-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-notion-integration.jpg" alt="Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-notion-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-notion-integration-card.webp" alt="Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.05.01</p>
             <h3>Claude Code × Notion連携で社内Wiki・議事録・タスク管理を完全自動化！中小企業のNotion運用AI化ガイド</h3>
@@ -916,9 +1647,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-team-parallel-execution.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-team-parallel-execution.jpg" alt="Claude Codeのチーム機能で複数業務を画面分割で同時稼働"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-team-parallel-execution">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-team-parallel-execution-card.webp" alt="Claude Codeのチーム機能で複数業務を画面分割で同時稼働" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.30</p>
             <h3>Claude Codeのチーム機能で複数業務を画面分割で同時稼働！中小企業のAI並列ワークフロー活用ガイド</h3>
@@ -927,9 +1658,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-websearch-research-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-websearch-research-automation.jpg" alt="Claude CodeのWeb検索機能で市場調査・競合分析を自動化"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-websearch-research-automation">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-websearch-research-automation-card.webp" alt="Claude CodeのWeb検索機能で市場調査・競合分析を自動化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.29</p>
             <h3>Claude CodeのWeb検索機能で市場調査・競合分析を自動化！中小企業のリサーチ業務効率化ガイド</h3>
@@ -938,9 +1669,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-plan-mode-business.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-plan-mode-business.jpg" alt="Claude CodeのPlanモードで業務改革プロジェクトをAIに計画"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-plan-mode-business">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-plan-mode-business-card.webp" alt="Claude CodeのPlanモードで業務改革プロジェクトをAIに計画" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.28</p>
             <h3>Claude CodeのPlanモードで業務改革プロジェクトをAIに計画させる！中小企業の戦略立案AI活用ガイド</h3>
@@ -949,9 +1680,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-remote-control-mobile.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-remote-control-mobile.jpg" alt="Claude CodeのRemote Controlでスマホから業務指示"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-remote-control-mobile">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-remote-control-mobile-card.webp" alt="Claude CodeのRemote Controlでスマホから業務指示" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.27</p>
             <h3>Claude CodeのRemote Controlでスマホから業務指示！中小企業のモバイル経営AI活用ガイド</h3>
@@ -960,9 +1691,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-skills-knowledge.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-skills-knowledge.jpg" alt="Claude CodeのSkill機能で社内ノウハウを資産化"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-skills-knowledge">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-skills-knowledge-card.webp" alt="Claude CodeのSkill機能で社内ノウハウを資産化" width="640" height="427" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.26</p>
             <h3>Claude CodeのSkill機能で社内ノウハウを資産化！中小企業の業務スキル再利用ガイド</h3>
@@ -971,9 +1702,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-stripe-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Stripe連携で決済・サブスク管理を自動化"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-stripe-integration">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Stripe連携で決済・サブスク管理を自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.25</p>
             <h3>Claude Code × Stripe連携で決済・サブスク管理を自動化！中小企業の課金業務効率化ガイド</h3>
@@ -982,9 +1713,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-claudemd-memory-guide.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-03.jpg" alt="Claude CodeのCLAUDE.mdで業務ルールをAIに記憶させる"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-claudemd-memory-guide">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude CodeのCLAUDE.mdで業務ルールをAIに記憶させる" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.24</p>
             <h3>Claude CodeのCLAUDE.md（メモリ機能）で業務ルールをAIに記憶させる！中小企業のAI社内標準化ガイド</h3>
@@ -993,9 +1724,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-loop-scheduler-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-loop-scheduler-automation">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code /loop・スケジュール機能で24時間業務を自動運転" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.23</p>
             <h3>Claude Codeの/loop・スケジュール機能で24時間業務を自動運転！中小企業向けAI常駐ワーカー構築ガイド</h3>
@@ -1004,9 +1735,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-playwright-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="Claude Code × Playwright でブラウザ業務を自動化"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-playwright-automation">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code × Playwright でブラウザ業務を自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.22</p>
             <h3>Claude CodeのPlaywright連携でブラウザ業務を自動化！WordPress投稿・予約管理・SNS運用を丸ごと任せる中小企業ガイド</h3>
@@ -1015,9 +1746,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-hooks-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Code Hook機能で業務イベント自動化"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-hooks-automation">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Code Hook機能で業務イベント自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.21</p>
             <h3>Claude CodeのHook機能で業務イベントを自動化！中小企業向けイベント駆動型AIワークフローガイド</h3>
@@ -1026,9 +1757,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-slash-commands.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-slash-commands.jpg" alt="Claude Codeのスラッシュコマンドで業務を1行化"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-slash-commands">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-slash-commands-card.webp" alt="Claude Codeのスラッシュコマンドで業務を1行化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.20</p>
             <h3>Claude Codeのスラッシュコマンドで社内業務を1行化！中小企業の業務テンプレート自動化ガイド</h3>
@@ -1037,9 +1768,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-subagent-team.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-subagent-team.jpg" alt="Claude Codeサブエージェントで業務分担"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-subagent-team">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-subagent-team-card.webp" alt="Claude Codeサブエージェントで業務分担" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.19</p>
             <h3>Claude Codeのサブエージェント機能で業務を自動分担！中小企業のAIチーム編成ガイド</h3>
@@ -1048,9 +1779,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-mcp-integration.html">
-          <div class="blog-thumb"><img src="../images/blog-claude-code-mcp-integration.jpg" alt="Claude Code × MCP連携で業務ツール統合"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="claude-code-mcp-integration">
+          <div class="blog-thumb"><img src="../images/blog-claude-code-mcp-integration-card.webp" alt="Claude Code × MCP連携で業務ツール統合" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.18</p>
             <h3>Claude CodeのMCP連携で業務ツールを統合！Notion・Googleドライブ・Gmailを繋ぐ中小企業の自動化ガイド</h3>
@@ -1059,9 +1790,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-competitor-analysis.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-competitor-analysis.jpg" alt="AI競合分析・市場調査自動化"></div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="ai-competitor-analysis">
+          <div class="blog-thumb"><img src="../images/blog-ai-competitor-analysis-card.webp" alt="AI競合分析・市場調査自動化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.17</p>
             <h3>AIで競合分析・市場調査を自動化！中小企業のデータドリブン経営入門ガイド</h3>
@@ -1070,9 +1801,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-sales-growth-examples.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-sales-growth-examples.jpg" alt="生成AIで売上アップ"></div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="ai-sales-growth-examples">
+          <div class="blog-thumb"><img src="../images/blog-ai-sales-growth-examples-card.webp" alt="生成AIで売上アップ" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.17</p>
             <h3>生成AIで売上アップ！中小企業の具体的な活用事例5選</h3>
@@ -1081,9 +1812,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-contract-review-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-contract-review-automation.jpg" alt="AI契約書レビュー"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-contract-review-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-contract-review-automation-card.webp" alt="AI契約書レビュー" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.16</p>
             <h3>AIで契約書レビュー・リーガルチェックを効率化！中小企業のリスク回避と契約業務自動化ガイド</h3>
@@ -1092,9 +1823,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-automation-one-person-business.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-automation-one-person-business.jpg" alt="一人社長AI自動化"></div>
+      <div class="blog-card" data-category="ai-basics">
+        <a href="ai-automation-one-person-business">
+          <div class="blog-thumb"><img src="../images/blog-ai-automation-one-person-business-card.webp" alt="一人社長AI自動化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.15</p>
             <h3>一人社長・フリーランス必見！AIで「自分の分身」を作る業務自動化術</h3>
@@ -1103,9 +1834,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-knowledge-management.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-knowledge-management.jpg" alt="AI社内ナレッジ管理"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-knowledge-management">
+          <div class="blog-thumb"><img src="../images/blog-ai-knowledge-management-card.webp" alt="AI社内ナレッジ管理" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.14</p>
             <h3>AIで社内マニュアル・ナレッジ管理を自動化！属人化を解消する実践ガイド</h3>
@@ -1114,9 +1845,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-presentation-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-presentation-automation.jpg" alt="AIプレゼン資料作成"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-presentation-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-presentation-automation-card.webp" alt="AIプレゼン資料作成" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.13</p>
             <h3>AIでプレゼン資料を自動作成！中小企業の資料作成を10分の1にする実践ガイド</h3>
@@ -1125,9 +1856,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-data-analysis-dashboard.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-data-analysis-dashboard.jpg" alt="AIデータ分析ダッシュボード"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-data-analysis-dashboard">
+          <div class="blog-thumb"><img src="../images/blog-ai-data-analysis-dashboard-card.webp" alt="AIデータ分析ダッシュボード" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.13</p>
             <h3>AIでデータ分析を自動化！売上データから経営判断を支援するダッシュボード活用術</h3>
@@ -1136,9 +1867,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="moneyforward-mcp-accounting.html">
-          <div class="blog-thumb"><img src="../images/blog-moneyforward-mcp-accounting.jpg" alt="マネーフォワード×MCP連携"></div>
+      <div class="blog-card" data-category="tool-integration">
+        <a href="moneyforward-mcp-accounting">
+          <div class="blog-thumb"><img src="../images/blog-moneyforward-mcp-accounting-card.webp" alt="マネーフォワード×MCP連携" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.12</p>
             <h3>マネーフォワード×MCP連携でClaude Codeが会計業務を自動化！仕訳・決算書作成をAIに任せる時代へ</h3>
@@ -1147,9 +1878,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-inventory-management.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-inventory-management.jpg" alt="AI在庫管理"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-inventory-management">
+          <div class="blog-thumb"><img src="../images/blog-ai-inventory-management-card.webp" alt="AI在庫管理" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.12</p>
             <h3>AIで在庫管理を最適化！中小企業の欠品・過剰在庫を防ぐ実践ガイド</h3>
@@ -1158,9 +1889,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-sales-email-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-sales-email-automation.jpg" alt="AI営業メール自動化"></div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="ai-sales-email-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-sales-email-automation-card.webp" alt="AI営業メール自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.11</p>
             <h3>AIで営業メールを自動作成！商談獲得率を高めるメール文面の作り方</h3>
@@ -1169,9 +1900,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-customer-support-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-customer-support-automation.jpg" alt="AI顧客対応自動化"></div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="ai-customer-support-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-customer-support-automation-card.webp" alt="AI顧客対応自動化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.09</p>
             <h3>AIで顧客対応を自動化！問い合わせ対応・予約管理を効率化する実践ガイド</h3>
@@ -1180,9 +1911,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-accounting-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-accounting-automation.jpg" alt="経理業務AI自動化"></div>
+      <div class="blog-card" data-category="finance">
+        <a href="ai-accounting-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-accounting-automation-card.webp" alt="経理業務AI自動化" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.06</p>
             <h3>経理業務をAIで自動化！請求書処理・仕訳入力を効率化する実践ガイド</h3>
@@ -1191,9 +1922,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-sns-marketing-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-sns-marketing-automation.jpg" alt="AI×SNS集客自動化"></div>
+      <div class="blog-card" data-category="sales-customer">
+        <a href="ai-sns-marketing-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-sns-marketing-automation-card.webp" alt="AI×SNS集客自動化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.07</p>
             <h3>AIでSNS集客を自動化！個人店・中小企業のInstagram・LINE運用術</h3>
@@ -1202,9 +1933,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-prompt-techniques-business.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-prompt-techniques-business.jpg" alt="プロンプト術ビジネス活用"></div>
+      <div class="blog-card" data-category="ai-basics">
+        <a href="ai-prompt-techniques-business">
+          <div class="blog-thumb"><img src="../images/blog-ai-prompt-techniques-business-card.webp" alt="プロンプト術ビジネス活用" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.06</p>
             <h3>ChatGPTへの指示の出し方で成果が10倍変わる！ビジネスで使えるプロンプト術</h3>
@@ -1213,9 +1944,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-recruitment-efficiency.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-recruitment-efficiency.jpg" alt="AI採用効率化"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-recruitment-efficiency">
+          <div class="blog-thumb"><img src="../images/blog-ai-recruitment-efficiency-card.webp" alt="AI採用効率化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.04</p>
             <h3>人材採用にAIを活用！中小企業の採用業務を効率化す���実践テクニック</h3>
@@ -1224,9 +1955,9 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-meeting-minutes-automation.html">
-          <div class="blog-thumb"><img src="../images/blog-ai-meeting-minutes-automation.jpg" alt="AI議事録自動化"></div>
+      <div class="blog-card" data-category="operations">
+        <a href="ai-meeting-minutes-automation">
+          <div class="blog-thumb"><img src="../images/blog-ai-meeting-minutes-automation-card.webp" alt="AI議事録自動化" width="640" height="357" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.02</p>
             <h3>AI議事録で会議の生産性を3倍に！音声認識×要約AIの実践活用ガイド</h3>
@@ -1235,20 +1966,20 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-cost-roi-for-sme.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="AI導入コストとROI"></div>
+      <div class="blog-card" data-category="finance">
+        <a href="ai-cost-roi-for-sme">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="AI導入コストとROI" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.04.01</p>
             <h3>AI導入コストはいくら？中小企業のリアルな費用と投資対効果</h3>
-            <p>AI導入にかかる費用を月額・初期・運用コストに分けて徹底解説。中小企業70社以上の実績データから、投資対効果（ROI）のリアルな数字を公開します。</p>
+            <p>AI導入にかかる費用を月額・初期・運用コストに分けて徹底解説。中小企業400社以上の実績データから、投資対効果（ROI）のリアルな数字を公開します。</p>
           </div>
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="claude-code-business-guide.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="Claude Codeとは"></div>
+      <div class="blog-card" data-category="claude-code-basics">
+        <a href="claude-code-business-guide">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="Claude Codeとは" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.03.28</p>
             <h3>Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命</h3>
@@ -1257,20 +1988,20 @@
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-adoption-mistakes.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-02.jpg" alt="AI導入の失敗"></div>
+      <div class="blog-card" data-category="ai-basics">
+        <a href="ai-adoption-mistakes">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="AI導入の失敗" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.03.25</p>
             <h3>中小企業のAI導入で失敗しない5つのポイント</h3>
-            <p>AI導入で失敗する中小企業には共通点があります。70社以上の支援実績から、よくある失敗パターンと成功のポイントを解説。</p>
+            <p>AI導入で失敗する中小企業には共通点があります。400社以上の支援実績から、よくある失敗パターンと成功のポイントを解説。</p>
           </div>
         </a>
       </div>
 
-      <div class="blog-card">
-        <a href="ai-tools-for-business-2026.html">
-          <div class="blog-thumb"><img src="../images/blog-thumb-01.jpg" alt="ビジネスAIツール"></div>
+      <div class="blog-card" data-category="ai-basics">
+        <a href="ai-tools-for-business-2026">
+          <div class="blog-thumb"><img src="../images/ogp.jpg" alt="ビジネスAIツール" width="640" height="640" loading="lazy"></div>
           <div class="blog-body">
             <p class="blog-date">2026.03.15</p>
             <h3>ChatGPTだけじゃない！2026年注目のビジネス向け生成AIツール5選</h3>
@@ -1311,7 +2042,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Piste AI EVANGELISTS. All rights reserved.</p>
+      <p>&copy; 2026 株式会社Piste. All rights reserved.</p>
     </div>
   </footer>
 

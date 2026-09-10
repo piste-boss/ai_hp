@@ -1,412 +1,90 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI研修プログラム（人材開発支援助成金 活用可能・全12コマ） | Piste AI EVANGELISTS</title>
-<meta name="description" content="従業員向け Claude Code 実践研修（全12コマ／60分）。厚生労働省「人材開発支援助成金」を活用すれば、研修費の最大75%が経費助成され、自己負担を大幅に圧縮できます。">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="canonical" href="https://www.piste-ai.com/training.html">
-<style>
-  :root{
-    --ink:#1a2332;
-    --sub:#55617a;
-    --accent:#e07b1a;
-    --accent-dark:#c75b07;
-    --line:#ece2d6;
-    --bg:#faf6f1;
-    --card:#ffffff;
-    --soft:#fbf1e4;
-    --code-bg:#2b2f3a;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",Meiryo,sans-serif;
-    line-height:1.9;
-    -webkit-font-smoothing:antialiased;
-  }
-  .sheet{
-    max-width:960px;
-    margin:40px auto;
-    background:var(--card);
-    border-radius:14px;
-    box-shadow:0 10px 40px rgba(20,30,50,.10);
-    overflow:hidden;
-  }
-  .head{
-    background:linear-gradient(135deg,#f0921f 0%,#c75b07 100%);
-    color:#fff;
-    padding:48px 56px 40px;
-  }
-  .head .label{
-    font-size:13px;
-    letter-spacing:.32em;
-    opacity:.85;
-    margin:0 0 16px;
-  }
-  .head h1{
-    margin:0;
-    font-size:32px;
-    font-weight:700;
-    letter-spacing:.03em;
-    line-height:1.5;
-  }
-  .head .meta{
-    font-size:14px;
-    opacity:.9;
-    margin:18px 0 0;
-    letter-spacing:.04em;
-  }
-  .body{padding:46px 56px 54px;}
+  <meta charset="UTF-8">
+  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{background:#15171a}body{margin:0;background:#fffdf8}</style>
 
-  h2{
-    font-size:22px;
-    margin:54px 0 22px;
-    padding:14px 0 14px 18px;
-    border-left:6px solid var(--accent);
-    background:linear-gradient(90deg,var(--soft),transparent);
-    letter-spacing:.04em;
-  }
-  h2:first-of-type{margin-top:8px;}
-  h3{
-    font-size:17px;
-    margin:32px 0 14px;
-    color:var(--accent-dark);
-    letter-spacing:.04em;
-    border-bottom:2px dotted var(--line);
-    padding-bottom:6px;
-  }
-  h4{
-    font-size:15px;
-    margin:22px 0 10px;
-    color:var(--ink);
-  }
-  p{margin:0 0 16px;font-size:15px;}
-  strong{color:var(--accent-dark);font-weight:700;}
+  
+  
 
-  .lesson-tag{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    font-size:13px;
-    font-weight:700;
-    padding:3px 12px;
-    border-radius:6px;
-    margin-right:10px;
-    letter-spacing:.05em;
-    vertical-align:middle;
-  }
-  .goal{
-    background:var(--soft);
-    border-radius:10px;
-    padding:14px 20px;
-    margin:18px 0 22px;
-    font-size:15px;
-  }
-  .goal strong{color:var(--accent-dark);}
+  
 
-  table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:14px;
-    margin:18px 0 24px;
-    background:#fff;
-  }
-  th,td{
-    text-align:left;
-    padding:12px 15px;
-    border:1px solid var(--line);
-    vertical-align:top;
-  }
-  thead th{
-    background:var(--accent);
-    color:#fff;
-    font-weight:700;
-    white-space:nowrap;
-  }
-  tbody th{
-    background:var(--soft);
-    color:var(--accent-dark);
-    font-weight:700;
-    white-space:nowrap;
-    width:120px;
-  }
-  tbody tr:nth-child(even) td{background:#fcf9f5;}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
+  <title>AI研修プログラム（人材開発支援助成金 活用可能・全12コマ） | Piste AI EVANGELISTS</title>
+  <meta name="description" content="従業員向け Claude Code 実践研修（全12コマ／60分）。厚生労働省「人材開発支援助成金」を活用すれば、研修費の最大75%が経費助成され、自己負担を大幅に圧縮できます。">
+  <link rel="canonical" href="https://www.piste-ai.com/training">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","@id":"https://www.piste-ai.com/training#course","name":"Claude Code 実践活用 AI研修プログラム（全12コマ）","url":"https://www.piste-ai.com/training","description":"従業員向け Claude Code 実践研修（全12コマ／各60分）。厚生労働省「人材開発支援助成金」を活用すれば研修費の最大75%が経費助成の対象になります。","provider":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja","courseWorkload":"PT12H","audience":{"@type":"BusinessAudience","audienceType":"中小企業の従業員"},"hasCourseInstance":[{"@type":"CourseInstance","courseMode":["online","onsite"],"courseWorkload":"PT12H","instructor":{"@id":"https://www.piste-ai.com/about#person"}}],"teaches":["Claude Code の基本操作とセットアップ","業務文書・データ整理の自動化","社内ルール（CLAUDE.md）の設計","安全な権限設定と運用"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"AI研修プログラム","item":"https://www.piste-ai.com/training"}]},{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","telephone":"+81-566-48-6580","alternateName":"Piste AI EVANGELISTS","legalName":"株式会社Piste","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。","knowsAbout":["AI導入コンサルティング","Claude Code","ChatGPT","業務自動化","AI研修","中小企業のDX"],"priceRange":"¥5,000〜¥40,000","hasOfferCatalog":{"@type":"OfferCatalog","name":"サービス一覧","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Claude Code 導入サポート","url":"https://www.piste-ai.com/claude-code-support","description":"Claude Code をPCに導入し、基本操作までマンツーマンでレクチャー（1時間）","provider":{"@id":"https://www.piste-ai.com/#organization"}},"price":"10000","priceCurrency":"JPY"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"動画レッスン「Claude Code 基礎＆セットアップ」","provider":{"@id":"https://www.piste-ai.com/#organization"}},"price":"5000","priceCurrency":"JPY"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ライトプラン（月額）","description":"週1時間×2回のマンツーマン指導","provider":{"@id":"https://www.piste-ai.com/#organization"}},"price":"20000","priceCurrency":"JPY"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"スタンダードプラン（月額）","description":"週1時間×4回のマンツーマン相談・AI導入のハンズオン支援・業務テンプレート作成","provider":{"@id":"https://www.piste-ai.com/#organization"}},"price":"40000","priceCurrency":"JPY"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI研修プログラム（全12コマ）","url":"https://www.piste-ai.com/training","description":"従業員向け Claude Code 実践研修。人材開発支援助成金の活用が可能","provider":{"@id":"https://www.piste-ai.com/#organization"}}}]}},{"@type":"Person","@id":"https://www.piste-ai.com/about#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。"}]}</script>
 
-  ul,ol{margin:10px 0 20px;padding-left:26px;}
-  li{margin:7px 0;font-size:15px;}
+  <meta property="og:title" content="AI研修プログラム（人材開発支援助成金 活用可能） | Piste AI EVANGELISTS">
+  <meta property="og:description" content="従業員向け Claude Code 実践研修（全12コマ／60分）。助成金活用で最大75%OFF。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.piste-ai.com/training">
+  <meta property="og:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
 
-  pre{
-    background:var(--code-bg);
-    color:#e8eaf0;
-    padding:20px 22px;
-    border-radius:10px;
-    overflow-x:auto;
-    font-size:13px;
-    line-height:1.7;
-    font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
-    margin:18px 0 24px;
-  }
-  code{
-    background:var(--soft);
-    color:var(--accent-dark);
-    padding:2px 6px;
-    border-radius:4px;
-    font-size:.9em;
-    font-family:"SFMono-Regular",Consolas,Menlo,monospace;
-  }
-  pre code{background:none;color:inherit;padding:0;}
-
-  blockquote{
-    margin:18px 0;
-    padding:12px 20px;
-    border-left:4px solid var(--accent);
-    background:#fcf9f5;
-    color:var(--sub);
-    font-size:14px;
-    border-radius:0 8px 8px 0;
-  }
-  blockquote p{margin:6px 0;}
-
-  .check{list-style:none;padding-left:4px;}
-  .check li{position:relative;padding-left:30px;}
-  .check li::before{
-    content:"";
-    position:absolute;
-    left:0;top:5px;
-    width:18px;height:18px;
-    border:2px solid var(--accent);
-    border-radius:4px;
-    background:#fff;
-  }
-
-  hr{border:none;border-top:1px solid var(--line);margin:46px 0;}
-
-  .roadmap{
-    background:#1f2530;
-    color:#dfe4ee;
-    border-radius:10px;
-    padding:22px 24px;
-    font-size:13px;
-    line-height:1.8;
-    overflow-x:auto;
-    font-family:"SFMono-Regular",Consolas,Menlo,monospace;
-    margin:18px 0 24px;
-  }
-  .roadmap b{color:var(--accent);}
-
-  .note-section{
-    background:#fff8ef;
-    border:1px solid #f0d9b8;
-    border-radius:12px;
-    padding:28px 32px;
-    margin-top:24px;
-  }
-  .note-section h2{
-    margin-top:0;
-    background:none;
-    border-left:6px solid var(--accent);
-  }
-  .risk{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:6px 22px;
-    margin:16px 0;
-  }
-  .risk h4{
-    color:var(--accent-dark);
-    border-bottom:1px solid var(--line);
-    padding-bottom:8px;
-  }
-  .foot-note{
-    text-align:center;
-    color:var(--sub);
-    font-size:13px;
-    font-style:italic;
-    margin-top:36px;
-  }
-  @media print{
-    @page{ size:A4; margin:14mm 13mm; }
-    body{background:#fff;}
-    /* 内容を10%スケールダウンして1ページに収まる量を増やす */
-    .sheet{box-shadow:none;margin:0 auto;border-radius:0;max-width:none;zoom:0.9;}
-    .body{padding:0;}
-    .head{padding:26px 4px 22px;}
-    /* 各コマ（h2）を必ずA4の新しいページから始める。概要だけは表紙と同じページに置く */
-    h2{ page-break-before:always; break-before:page; }
-    h2:first-of-type{ page-break-before:avoid; break-before:avoid; }
-    /* 画面用の区切り線は印刷では非表示（ページ区切りが代替） */
-    hr{ display:none; }
-    /* 見出し直後での改ページや、ブロック途中での分断を避ける */
-    h2,h3,h4{ page-break-after:avoid; break-after:avoid; }
-    table,pre,blockquote,.goal,.risk,.roadmap,li{ page-break-inside:avoid; break-inside:avoid; }
-    .note-section{ page-break-before:always; break-before:page; }
-  }
-  @media(max-width:640px){
-    .head,.body{padding-left:24px;padding-right:24px;}
-    .head h1{font-size:24px;}
-  }
-
-  .training-page-header{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:#fff;
-    border-bottom:1px solid var(--line);
-    box-shadow:0 2px 12px rgba(20,30,50,.05);
-  }
-  .training-page-header-inner{
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:14px 24px;
-    gap:18px;
-  }
-  .training-page-logo img{height:36px;display:block;}
-  .training-page-nav{display:flex;align-items:center;gap:16px;}
-  .training-page-nav a{
-    color:var(--ink);
-    text-decoration:none;
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:.04em;
-  }
-  .training-page-nav a:hover{color:var(--accent-dark);}
-  .training-page-cta{
-    background:var(--accent);
-    color:#fff !important;
-    padding:9px 18px;
-    border-radius:999px;
-    transition:background .2s;
-  }
-  .training-page-cta:hover{background:var(--accent-dark);color:#fff !important;}
-
-  .training-page-bottom-cta{
-    background:linear-gradient(135deg,#fff8ef 0%,#fbe5c8 100%);
-    padding:64px 24px;
-  }
-  .training-page-bottom-inner{
-    max-width:780px;
-    margin:0 auto;
-    text-align:center;
-  }
-  .training-page-eyebrow{
-    color:var(--accent-dark);
-    font-size:13px;
-    letter-spacing:.32em;
-    font-weight:800;
-    margin:0 0 12px;
-  }
-  .training-page-bottom-cta h2{
-    background:none;
-    border:none;
-    padding:0;
-    margin:0 0 16px;
-    font-size:24px;
-    letter-spacing:.04em;
-  }
-  .training-page-bottom-cta p{
-    color:var(--sub);
-    font-size:15px;
-    margin:0 0 28px;
-  }
-  .training-page-bottom-actions{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-  .training-page-bottom-btn{
-    display:inline-block;
-    padding:14px 26px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:14px;
-    letter-spacing:.06em;
-    min-width:220px;
-    transition:transform .15s, box-shadow .15s;
-  }
-  .training-page-bottom-btn.primary{
-    background:var(--accent);
-    color:#fff;
-    box-shadow:0 8px 22px rgba(224,123,26,.32);
-  }
-  .training-page-bottom-btn.primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(224,123,26,.42);
-  }
-  .training-page-bottom-btn.outline{
-    background:#fff;
-    color:var(--accent-dark);
-    border:1.5px solid var(--accent);
-  }
-  .training-page-bottom-btn.outline:hover{
-    background:var(--soft);
-  }
-
-  .training-page-footer{
-    background:#1a2332;
-    color:#dfe4ee;
-    padding:32px 24px;
-  }
-  .training-page-footer-inner{
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:18px;
-    flex-wrap:wrap;
-  }
-  .training-page-footer p{
-    margin:0;
-    font-size:13px;
-    opacity:.75;
-  }
-  .training-page-footer nav{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
-  }
-  .training-page-footer nav a{
-    color:#dfe4ee;
-    text-decoration:none;
-    font-size:13px;
-    opacity:.85;
-  }
-  .training-page-footer nav a:hover{opacity:1;text-decoration:underline;}
-
-  @media print{
-    .training-page-header,
-    .training-page-bottom-cta,
-    .training-page-footer{display:none !important;}
-  }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Noto+Sans+JP:wght@400;700;800&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Noto+Sans+JP:wght@400;700;800&display=optional"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=20260910-1">
+  <script defer src="/js/analytics.js"></script>
 </head>
 <body>
-<header class="training-page-header">
-  <div class="training-page-header-inner">
-    <a href="index.html" class="training-page-logo" aria-label="Piste AI EVANGELISTS トップへ">
-      <img src="images/logo.png" alt="Piste AI EVANGELISTS">
-    </a>
-    <nav class="training-page-nav" aria-label="トップに戻る">
-      <a href="index.html">← トップへ戻る</a>
-      <a href="index.html#contact" class="training-page-cta">無料相談を予約</a>
-    </nav>
-  </div>
-</header>
+  <header class="header">
+    <div class="header-inner">
+      <a href="./" class="header-logo" aria-label="Piste AI EVANGELISTS トップ">
+        <img src="images/logo.webp" alt="Piste AI EVANGELISTS" loading="eager" width="240" height="240">
+      </a>
+      <nav class="header-nav" aria-label="メインナビゲーション">
+        <a href="./#services">支援内容</a>
+        <a href="./#plans">料金</a>
+        <a href="https://ai-training-ma.netlify.app" target="_blank" rel="noopener" class="header-subsidy">助成金活用プラン</a>
+        <a href="./#flow">流れ</a>
+        <a href="./#media">メディア掲載</a>
+        <a href="blog/">ブログ</a>
+        <a href="./#profile">講師プロフィール</a>
+        <a href="./#line-cta" class="header-bonus" title="LINE友だち追加で無料特典がもらえます">LINE特典</a>
+        <a href="./#contact" class="header-cta">無料相談</a>
+      </nav>
+      <button class="hamburger" type="button" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+    <a href="./#services">支援内容</a>
+    <a href="./#plans">料金</a>
+    <a href="https://ai-training-ma.netlify.app" target="_blank" rel="noopener" class="mobile-subsidy">助成金活用プラン</a>
+    <a href="./#flow">流れ</a>
+    <a href="./#media">メディア掲載</a>
+    <a href="blog/">ブログ</a>
+    <a href="./#profile">講師プロフィール</a>
+    <a href="./#line-cta" class="mobile-bonus">LINE特典<span>友だち追加で無料プレゼント</span></a>
+    <a href="./#contact">無料相談</a>
+  </nav>
+
+  <main class="training-doc">
+    <div class="training-doc-hero">
+      <div class="container">
+        <p class="training-doc-eyebrow" style="color:#fff;">カリキュラム詳細</p>
+        <h1 class="training-doc-title" style="color:#fff;">AI研修プログラム<br><span style="color:#fff;">（全12コマ・60分／コマ）</span></h1>
+        <p class="training-doc-lead" style="color:#fff;">人材開発支援助成金 活用対応カリキュラム　／　講師：石川 卓（いしかわ すぐる）</p>
+      </div>
+    </div>
+
+    <div class="container training-doc-body">
 <div class="sheet">
   <div class="head">
     <p class="label">人材開発支援助成金 活用事業 ／ 研修カリキュラム</p>
-    <h1>Claude Code 実践活用<br>AI研修プログラム（全12コマ）</h1>
+    <h2 style="margin-top:0;">Claude Code 実践活用<br>AI研修プログラム（全12コマ）</h2>
     <p class="meta">人材開発支援助成金 活用対応カリキュラム　／　講師：石川 卓（いしかわ すぐる）</p>
   </div>
 
@@ -418,8 +96,8 @@
         <tr><th>目的</th><td>ChatGPT・Claude Code を中核に、受講者が自社の業務を自ら AI 化・自動化できる状態を作る</td></tr>
         <tr><th>対象</th><td>管理職・現場担当者（プログラミング未経験者を含む）</td></tr>
         <tr><th>形式</th><td>講義＋ハンズオン（PC実機操作）＋グループワーク</td></tr>
-        <tr><th>1コマ</th><td>60分（休憩・質疑含む）／全12コマ</td></tr>
-        <tr><th>到達像</th><td>「おはよう」の一言で日次業務が自動実行され、ランディングページの制作・公開や外部API連携システムまで自走開発できる組織人材を育成する</td></tr>
+        <tr><th>1コマ</th><td>60分（質疑含む）／全12コマ</td></tr>
+        <tr><th>到達像</th><td>AIに一言で日次業務を自動実行させ、LPの制作・公開や外部API連携システムまで自走開発できる組織人材を育成</td></tr>
       </tbody>
     </table>
 
@@ -440,6 +118,8 @@
       <li>Google アカウント（または Microsoft 365 アカウント）</li>
       <li>※APIキーやアカウント作成は各コマで案内（無料枠で進行可能な範囲を中心に構成）</li>
     </ul>
+
+    <div class="curriculum-note">※下記は基本カリキュラム例（10コマ構成）です。1社単位でテーマや時間配分を調整し、全12コマ（60分／コマ）に再構成して開講します。</div>
 
     <hr>
 
@@ -936,31 +616,65 @@
     </table>
 
   </div>
-</div>
-
-<section class="training-page-bottom-cta">
-  <div class="training-page-bottom-inner">
-    <p class="training-page-eyebrow">Next Step</p>
-    <h2>助成金を活用したAI研修の導入をご検討中ですか？</h2>
-    <p>カリキュラムのカスタマイズや、人材開発支援助成金の申請可否確認も無料相談で承ります。<br>1社単位での開講、オンライン／対面いずれも対応します。</p>
-    <div class="training-page-bottom-actions">
-      <a href="index.html#contact" class="training-page-bottom-btn primary">無料相談を予約する</a>
-      <a href="index.html#training" class="training-page-bottom-btn outline">助成金活用プランの概要に戻る</a>
     </div>
-  </div>
-</section>
+  </main>
 
-<footer class="training-page-footer">
-  <div class="training-page-footer-inner">
-    <p>&copy; Piste AI EVANGELISTS</p>
-    <nav>
-      <a href="index.html">トップ</a>
-      <a href="index.html#training">助成金活用プラン</a>
-      <a href="index.html#contact">お問い合わせ</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="tokushoho.html">特定商取引法</a>
-    </nav>
-  </div>
-</footer>
+  <section class="section training-doc-cta">
+    <div class="container">
+      <div class="training-doc-cta-inner fade-in">
+        <p class="section-title">Next Step</p>
+        <h2 class="section-heading">助成金を活用したAI研修の導入を検討中ですか？</h2>
+        <p>カリキュラムのカスタマイズや、人材開発支援助成金の申請可否確認も無料相談で承ります。1社単位での開講、オンライン／対面いずれも対応します。</p>
+        <div class="training-doc-cta-actions">
+          <a href="./#contact" class="btn-primary">無料相談を予約する</a>
+          <a href="./#training" class="btn-outline dark">助成金活用プランの概要に戻る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="images/logo.webp" alt="Piste AI EVANGELISTS" class="footer-logo" loading="lazy" width="240" height="240">
+        <p>AIの力で、ビジネスの未来を変える。企業のためのAI導入パートナー。</p>
+        <p class="footer-address"><strong>株式会社Piste</strong><br>〒447-0042 愛知県碧南市中後町3-3 中央ビル1F<br>TEL <a href="tel:+81566486580" style="color:inherit;">0566-48-6580</a><br>全国オンライン対応</p>
+      </div>
+      <nav>
+        <h3>サービス</h3>
+        <a href="claude-code-support">Claude Code 導入サポート</a>
+        <a href="./#services">支援内容</a>
+        <a href="./#plans">料金プラン</a>
+        <a href="./#training">AI研修プログラム</a>
+        <a href="./#flow">ご利用の流れ</a>
+        <a href="./#media">メディア掲載</a>
+        <a href="blog/">ブログ</a>
+        <a href="about">代表プロフィール</a>
+        <a href="aichi">愛知県の企業様へ</a>
+      </nav>
+      <nav>
+        <h3>その他</h3>
+        <a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラで相談する</a>
+        <a href="https://x.com/piste_ai_boss" target="_blank" rel="noopener">X（旧Twitter）</a>
+        <a href="https://www.instagram.com/piste_ai" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.threads.com/@piste_ai" target="_blank" rel="noopener">Threads</a>
+        <a href="privacy">プライバシーポリシー</a>
+        <a href="terms">利用規約</a>
+        <a href="tokushoho">特定商取引法に基づく表記</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 株式会社Piste. All rights reserved.</p>
+      <p>決済方法：クレジットカード（Stripe）/ 口座振込</p>
+    </div>
+  </footer>
+
+  <a href="https://lin.ee/Pul5f6V" class="line-float" target="_blank" rel="noopener" aria-label="LINE友だち追加">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

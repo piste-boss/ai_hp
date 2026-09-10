@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで電子帳簿保存法のファイル名づけを自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="電子帳簿保存法の対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeで自動化する方法を、中小企業・一人社長向けに非エンジニアにも分かる言葉で解説します。">
+<meta name="keywords" content="Claude Code,電子帳簿保存法,電帳法,請求書,領収書,索引簿,業務自動化,中小企業,一人社長,経理効率化">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで電子帳簿保存法のファイル名づけを自動化">
+  <meta property="og:description" content="電子帳簿保存法の対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeで自動化する方法を、中小企業・一人社長向けに非エンジニアにも分かる言葉で解説します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-denshi-chobo-compliance-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-04T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで電子帳簿保存法のファイル名づけを自動化">
+  <meta name="twitter:description" content="電子帳簿保存法の対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeで自動化する方法を、中小企業・一人社長向けに非エンジニアにも分かる言葉で解説します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-denshi-chobo-compliance-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html"},"url":"https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html","headline":"Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド","alternativeHeadline":"Claude Codeで電子帳簿保存法のファイル名づけを自動化","description":"電子帳簿保存法の対応でつらいのは保存ではなく「探せる状態」を保ち続けることです。請求書や領収書のファイル名づけと索引簿づくりをClaude Codeで自動化する方法を、中小企業・一人社長向けに非エンジニアにも分かる言葉で解説します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-denshi-chobo-compliance-og.jpg","width":1200,"height":800},"datePublished":"2026-08-04T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","電子帳簿保存法","電帳法","請求書","領収書","索引簿","業務自動化","中小企業","一人社長","経理効率化"],"wordCount":3162,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで電子帳簿保存法のファイル名づけを自動化","item":"https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance.html#faq","mainEntity":[{"@type":"Question","name":"紙で受け取った領収書はどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"読み取ってデータにしたあとは、同じ流れで処理できます。名づけと一覧化の部分は変わりません。"}},{"@type":"Question","name":"会計ソフトを使っていても意味がありますか。","acceptedAnswer":{"@type":"Answer","text":"あります。会計ソフトに取り込む前の、書類そのものの整理と保存の部分を担う使い方になります。両方を使い分けるのが現実的です。"}},{"@type":"Question","name":"専門知識がなくても運用できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。指示は日本語の文章で出せます。最初の形式決めだけ支援を受ければ、あとは同じ言葉を繰り返すだけです。"}},{"@type":"Question","name":"過去の分もさかのぼって整理できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。ただし件数が多くなるため、年度単位や月単位で区切って進めるほうが確認しやすくなります。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-04">公開日：2026年8月4日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-denshi-chobo-compliance.webp" alt="Claude Codeで電子帳簿保存法のファイル名づけと索引簿づくりを自動化！中小企業・一人社長の電帳法対応ガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>請求書・領収書のデータ保存を自分で回している中小企業・一人社長</li><li><strong>できるようになること：</strong>受領書類のPDFから日付・金額・取引先を読み取り、ファイル名の統一と索引簿への追記を一度の指示で済ませられる</li><li><strong>必要なもの：</strong>Claude Code と、受領書類を入れたフォルダ、ファイル名形式のルール</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「請求書や領収書のデータ保存、正直ちゃんとできている自信がない」。電子帳簿保存法（電帳法）の話になると、多くの経営者からこの言葉が返ってきます。制度そのものは理解していても、日々流れてくる取引書類を決まった形で保存し続けるのは、想像以上に手間のかかる作業だからです。 この記事では、Anthropic公式のAIコーディングツール Claude Code を使って、<strong>電帳法対応でいちばん面倒な「ファイルの名づけ」と「索引簿づくり」を自動化する方法</strong>を、専門知識のない方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 電子帳簿保存法で本当に求められているのは何ですか？</a></li>
+<li><a href="#sec2">2. 手作業だと何が起きるか</a></li>
+<li><a href="#sec3">3. Claude Code は電帳法のファイル名づけと索引簿づくりをどう自動化しますか？</a></li>
+<li><a href="#sec4">4. 一度決めれば毎月同じ品質で回る</a></li>
+<li><a href="#sec5">5. 業種別の使いどころ</a></li>
+<li><a href="#sec6">6. 導入は3ステップ</a></li>
+<li><a href="#sec7">よくある質問</a></li>
+<li><a href="#sec8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 電子帳簿保存法で本当に求められているのは何ですか？</h2>
+<p>取引先から受け取ったデータの請求書や領収書は、印刷して紙で保管するのではなく、データのまま保存することが求められています。ここまでは多くの会社ができています。</p>
+<p>問題はその先です。保存したデータは、<strong>税務調査などの場面ですぐに取り出せる状態</strong>でなければ意味がありません。具体的には、次の3つの情報で探し出せる必要があります。</p>
+<ul>
+<li>取引年月日</li>
+<li>取引金額</li>
+<li>取引先の名称</li>
+</ul>
+<p>つまり、フォルダに放り込んでおくだけでは足りません。ファイル名にこの3点を入れておくか、別途「索引簿」と呼ばれる一覧表を作っておくか、どちらかの対応が要ります。要件の詳細は国税庁の<a href="https://www.nta.go.jp/law/joho-zeikaishaku/sonota/jirei/index.htm" target="_blank" rel="noopener">電子帳簿保存法関係のページ</a>で確認できます。</p>
+
+<h2 id="sec2">2. 手作業だと何が起きるか</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-denshi-chobo-compliance-01.webp" alt="手作業だと何が起きるか" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>実際に手作業でやろうとすると、こうなります。</p>
+<ul>
+<li>届いたデータを開いて、日付・金額・取引先を目で読み取る</li>
+<li>決められた形式に沿ってファイル名を打ち直す</li>
+<li>一覧表に1行ずつ転記する</li>
+</ul>
+<p>1件あたり2〜3分。月に100件あれば、それだけで4〜5時間です。しかも単調な作業なので、<strong>忙しい月ほど後回しになり、気づくと数か月分がたまっている</strong>というのが典型的な失敗パターンです。</p>
+<p>さらに厄介なのが表記のゆれです。「株式会社山田商事」「(株)山田商事」「山田商事」が混在すると、あとから取引先で絞り込めなくなります。</p>
+
+<h2 id="sec3">3. Claude Code は電帳法のファイル名づけと索引簿づくりをどう自動化しますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-denshi-chobo-compliance-02.webp" alt="読み取りから名づけ・一覧化までがひと続きになる" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>Claude Code は、パソコンの中のファイルを直接見て、中身を読み、名前を変え、一覧表を作るところまでを一度の指示でこなせます。ここが表計算ソフトの関数やマクロとの決定的な違いです。</p>
+<p>依頼のしかたは、こんな日本語で構いません。</p>
+<blockquote><p>受領書類フォルダにあるPDFを1件ずつ開いて、取引年月日・取引金額・取引先名を読み取って。ファイル名を「20260804_150000_山田商事」の形に変えて、同時に一覧表へ1行ずつ追記して。取引先名は正式名称に統一して。</p></blockquote>
+<p>これだけで、読み取りから名づけ、一覧への追記までが通しで走ります。100件あっても、待っている間に別の仕事ができます。</p>
+
+<h2 id="sec4">4. 一度決めれば毎月同じ品質で回る</h2>
+<p>Claude Code には、<strong>毎回守ってほしいルールを書いた設定ファイル</strong>を置いておけます。ここに自社の取り決めを書いておけば、担当者が変わっても同じ結果になります。</p>
+<p>書いておくとよい内容の例です。</p>
+<table>
+<thead><tr><th>決めておくこと</th><th>記入例</th></tr></thead>
+<tbody>
+<tr><td>ファイル名の形式</td><td>日付_金額_取引先名 の順、区切りは下線</td></tr>
+<tr><td>日付の書き方</td><td>西暦8桁。20260804 のように書く</td></tr>
+<tr><td>金額の書き方</td><td>数字のみ、円マークや桁区切りは入れない</td></tr>
+<tr><td>取引先名の統一</td><td>正式名称。略称や記号は使わない</td></tr>
+<tr><td>判断に迷ったとき</td><td>勝手に決めず、確認してから進める</td></tr>
+</tbody>
+</table>
+<p>最後の1行が実務では効きます。金額が読み取れない、日付が2つ書いてあるといった書類は必ず出てきます。<strong>迷ったら止めて聞く</strong>というルールを入れておくことで、間違ったまま大量処理される事故を防げます。</p>
+
+<h2 id="sec5">5. 業種別の使いどころ</h2>
+<p><strong>建設・工務店</strong>：現場ごとに書類が分かれるため、ファイル名に現場名を足すと後の原価管理が楽になります。</p>
+<p><strong>飲食店</strong>：仕入れの受領書類が毎日発生します。日次でまとめて処理する運用にすると、月末の負担がなくなります。</p>
+<p><strong>小売・EC</strong>：仕入先が多く表記ゆれが起きやすい業種です。取引先名の統一ルールを先に決めておく効果が最も大きく出ます。</p>
+<p><strong>士業・コンサル</strong>：自分で発行する請求書の控えも保存対象です。発行と保存を同じ流れにしておくと漏れません。</p>
+
+<h2 id="sec6">6. 導入は3ステップ</h2>
+<ol>
+<li><strong>1か月分だけ試す</strong>。いきなり全期間をやろうとせず、直近1か月で形式を固めます</li>
+<li><strong>出てきた結果を目で確認する</strong>。読み取りが正しいか、名づけが意図通りかを10件ほど抜き取ります</li>
+<li><strong>設定ファイルにルールを書く</strong>。確認して問題なければ、その形式をルールとして残します</li>
+</ol>
+<p>3ステップ目まで進めば、翌月からは「先月分をお願い」の一言で終わります。同じ流れで整えた請求書のデータは、<a href="claude-code-invoice-amount-reconciliation.html">請求書と発注内容の突き合わせ</a>や<a href="claude-code-fixed-cost-review.html">固定費の洗い出し</a>の材料にもなります。</p>
+
+<h2 id="sec7">よくある質問</h2>
+<p><strong>紙で受け取った領収書はどうなりますか。</strong></p>
+<p>読み取ってデータにしたあとは、同じ流れで処理できます。名づけと一覧化の部分は変わりません。</p>
+<p><strong>会計ソフトを使っていても意味がありますか。</strong></p>
+<p>あります。会計ソフトに取り込む前の、書類そのものの整理と保存の部分を担う使い方になります。両方を使い分けるのが現実的です。</p>
+<p><strong>専門知識がなくても運用できますか。</strong></p>
+<p>できます。指示は日本語の文章で出せます。最初の形式決めだけ支援を受ければ、あとは同じ言葉を繰り返すだけです。</p>
+<p><strong>過去の分もさかのぼって整理できますか。</strong></p>
+<p>できます。ただし件数が多くなるため、年度単位や月単位で区切って進めるほうが確認しやすくなります。</p>
+
+<h2 id="sec8">まとめ</h2>
+<p>電帳法対応でつらいのは、保存することではなく<strong>探せる状態を保ち続けること</strong>です。ファイルの名づけと索引簿づくりという地味な作業を Claude Code に任せてしまえば、月4〜5時間かかっていた作業が待ち時間だけになります。</p>
+<p>まずは直近1か月分から試してみてください。形式さえ固まれば、来月以降はひと声で終わります。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「請求書や領収書のデータ保存が追いついていない」「電帳法の要件を満たせているか不安」という課題をお持ちの方に向けて、ファイル名の形式決めから索引簿づくりの自動化、毎月の運用の定着までを、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-invoice-amount-reconciliation.html"><img src="../images/blog-claude-code-invoice-amount-reconciliation-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで請求書と発注内容の食い違いを見つける</span></a><a class="seo-related-card" href="claude-code-cashflow-forecast.html"><img src="../images/blog-claude-code-cashflow-forecast-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで資金繰りの見通しを立てる</span></a><a class="seo-related-card" href="claude-code-fixed-cost-review.html"><img src="../images/blog-claude-code-fixed-cost-review-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで毎月の固定費を洗い出す</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

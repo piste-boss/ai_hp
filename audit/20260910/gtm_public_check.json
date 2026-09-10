@@ -1,0 +1,59 @@
+[
+  {
+    "url": "https://www.piste-ai.com/",
+    "status": 200,
+    "gtm": [],
+    "gtm_js": false,
+    "gtag": [
+      "G-LR35246V7B",
+      "G-LR35246V7B"
+    ],
+    "scripts": [
+      "https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B",
+      "js/main.js"
+    ]
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/",
+    "status": 200,
+    "gtm": [],
+    "gtm_js": false,
+    "gtag": [
+      "G-LR35246V7B",
+      "G-LR35246V7B"
+    ],
+    "scripts": [
+      "https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"
+    ]
+  },
+  {
+    "url": "https://www.piste-ai.com/training",
+    "status": 200,
+    "gtm": [],
+    "gtm_js": false,
+    "gtag": [
+      "G-LR35246V7B",
+      "G-LR35246V7B"
+    ],
+    "scripts": [
+      "https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B",
+      "js/main.js"
+    ]
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+    "status": 200,
+    "gtm": [],
+    "gtm_js": false,
+    "gtag": [],
+    "scripts": []
+  },
+  {
+    "url": "https://www.piste-ai.com/blog/claude-code-subcontractor-track-record",
+    "status": 200,
+    "gtm": [],
+    "gtm_js": false,
+    "gtag": [],
+    "scripts": []
+  }
+]

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分け、更新の回し方まで非エンジニア向けに整理しました。">
+<meta name="keywords" content="Claude Code,CLAUDE.md,社内ルール,業務自動化,中小企業,AI導入,属人化解消,運用ルール">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-claude-md-rules.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる">
+  <meta property="og:description" content="Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分け、更新の回し方まで非エンジニア向けに整理しました。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-claude-md-rules.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-claude-md-rules-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-02T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="Claude Codeの使い方">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる">
+  <meta name="twitter:description" content="Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分け、更新の回し方まで非エンジニア向けに整理しました。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-claude-md-rules-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-claude-md-rules.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-claude-md-rules.html"},"url":"https://www.piste-ai.com/blog/claude-code-claude-md-rules.html","headline":"Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド","alternativeHeadline":"Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる","description":"Claude Codeに毎回同じ注意書きを添えていませんか。CLAUDE.mdに社内ルールを書いておけば、担当者が変わっても同じ品質で作業が進みます。何を書くべきか・書いてはいけないか、階層の使い分け、更新の回し方まで非エンジニア向けに整理しました。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-claude-md-rules-og.jpg","width":1200,"height":800},"datePublished":"2026-08-02T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"Claude Codeの使い方","keywords":["Claude Code","CLAUDE.md","社内ルール","業務自動化","中小企業","AI導入","属人化解消","運用ルール"],"wordCount":5150,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude Codeの使い方","item":"https://www.piste-ai.com/blog/category-claude-code-basics.html"},{"@type":"ListItem","position":4,"name":"Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる","item":"https://www.piste-ai.com/blog/claude-code-claude-md-rules.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-claude-md-rules.html#faq","mainEntity":[{"@type":"Question","name":"専門知識がなくても書けますか。","acceptedAnswer":{"@type":"Answer","text":"書けます。中身はただの日本語の箇条書きで、書式の決まりもありません。社内向けの注意書きをそのまま写す感覚で始められます。"}},{"@type":"Question","name":"どのくらいの分量が適切ですか。","acceptedAnswer":{"@type":"Answer","text":"4で1枚程度が目安です。数ページに膨らむと重要な項目が埋もれ、守られにくくなります。増やすより、優先度の低い行を削るほうが効果的です。"}},{"@type":"Question","name":"書いたルールが守られないことはありますか。","acceptedAnswer":{"@type":"Answer","text":"あります。多くは分量が多すぎるか、書き方が曖昧か、置き場所が違うかのいずれかです。この3点を確認すればたいてい解決します。"}},{"@type":"Question","name":"顧客ごとに違うルールがある場合はどうしますか。","acceptedAnswer":{"@type":"Answer","text":"案件ごとの作業フォルダに、その案件用のルールを置いてください。全社共通のルールと両方が効き、案件側が優先されます。"}},{"@type":"Question","name":"秘密情報は書いてもよいですか。","acceptedAnswer":{"@type":"Answer","text":"書かないでください。「顧客名は社外向け資料では伏せる」というルールは書いても、実際の顧客名や認証情報は書き込まない、という線引きが必要です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-claude-code-basics.html">Claude Codeの使い方</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-02">公開日：2026年8月2日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-claude-md-rules.webp" alt="Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる！同じ指示を繰り返さない設定ガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Claude Code に毎回同じ注意書きを添えている中小企業の担当者・経営者</li><li><strong>できるようになること：</strong>表記ルール・禁止事項・成果物の型を CLAUDE.md に A4 1枚で書き、誰が指示しても同じ前提で作業させられる</li><li><strong>必要なもの：</strong>Claude Code と、直近1週間に繰り返した指示の書き出し</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「毎回おなじ注意書きを添えている」「担当者が変わったら出てくるものが変わった」。Claude Code をしばらく使っている会社から、いちばん多く出てくるのがこの2つです。原因はほとんどの場合、指示の出し方ではなく<strong>会社のルールがどこにも書かれていないこと</strong>にあります。Anthropic公式のAIコーディングツール Claude Code には、作業を始めるたびに自動で読み込まれる「CLAUDE.md」というルールの置き場が用意されています。ここに社名の表記や禁止事項、成果物の書式を書いておけば、誰が指示を出しても同じ前提で作業が進みます。この記事では、何を書くべきか・書くと逆効果になるものは何か、そして無視されないルールの書き方までを、専門知識のない方にも分かる言葉で整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 「毎回同じ指示」が消えない本当の理由</a></li>
+<li><a href="#sec2">2. CLAUDE.md とは何ですか？</a></li>
+<li><a href="#sec3">3. CLAUDE.md には何を書き、何を書かないほうがよいですか？</a></li>
+<li><a href="#sec4">4. 中小企業でそのまま使える記載例</a></li>
+<li><a href="#sec5">5. 全社共通と案件別 — 2階層の使い分け</a></li>
+<li><a href="#sec6">6. ルールが守られないときの3つの原因</a></li>
+<li><a href="#sec7">7. スキル・スラッシュコマンドとの役割分担</a></li>
+<li><a href="#sec8">8. 社内に定着させる4手順</a></li>
+<li><a href="#sec9">よくある質問</a></li>
+<li><a href="#sec10">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 「毎回同じ指示」が消えない本当の理由</h2>
+<p>Claude Code に作業を頼むとき、こんな一文を毎回添えていないでしょうか。</p>
+<blockquote>「社名は正式名称で書いてください」「金額は税込で統一してください」「顧客名は伏せ字にしてください」</blockquote>
+<p>これは指示ではなく<strong>会社の決まりごと</strong>です。決まりごとは、本来なら毎回伝えるものではありません。新しく入った社員に、朝礼のたびに「弊社は金額を税込表記します」と言い続ける会社はないはずです。一度どこかに書いて、それを読んでもらえば済みます。</p>
+<p>ところが多くの現場では、この決まりごとが担当者の頭の中にしかありません。だから毎回打ち直すことになり、打ち忘れた回だけ違うものが出てきます。担当者が変われば当然、出てくるものも変わります。<strong>品質のばらつきは指示の巧拙ではなく、前提の置き場がないことから生まれている</strong>わけです。</p>
+
+<h2 id="sec2">2. CLAUDE.md とは何ですか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-claude-md-rules-01.webp" alt="2. CLAUDE.md とは何か — 作業前に必ず読まれるルール帳" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>Claude Code には、作業を始めるときに自動で読み込まれるファイルがあります。それが <a href="https://code.claude.com/docs/ja/memory" target="_blank" rel="noopener">CLAUDE.md</a> です。作業フォルダに置いておくだけで、以降のすべての指示にその内容が前提として効きます。</p>
+<p>難しい設定は要りません。中身はただの文章で、箇条書きで構いません。プログラムでも設定ファイルでもなく、<strong>「うちの会社ではこうします」を書いた紙</strong>だと考えてください。</p>
+<table><thead><tr><th></th><th>毎回指示に書く場合</th><th>CLAUDE.md に書く場合</th></tr></thead><tbody>
+<tr><td>手間</td><td>作業のたびに打ち直す</td><td>一度書けば以降は不要</td></tr>
+<tr><td>抜け漏れ</td><td>打ち忘れた回だけ崩れる</td><td>常に効く</td></tr>
+<tr><td>担当交代</td><td>引き継がれず品質が変わる</td><td>ファイルごと引き継がれる</td></tr>
+<tr><td>ルール変更</td><td>全員に周知が必要</td><td>1か所を直せば全員に反映</td></tr>
+</tbody></table>
+<p>効果がいちばん分かりやすいのは、担当が変わったときです。前任者の頭の中にあった決まりごとがファイルとして残っていれば、後任は初日から同じ品質で作業を進められます。属人化の解消という意味では、マニュアル整備よりも先に効く一手です。</p>
+
+<h2 id="sec3">3. CLAUDE.md には何を書き、何を書かないほうがよいですか？</h2>
+<h3>書くべきこと</h3>
+<ul>
+<li><strong>表記の統一ルール</strong>：社名・商品名の正式表記、金額の税込／税別、日付の書式、敬称の付け方</li>
+<li><strong>禁止事項</strong>：外部に出してはいけない情報、勝手に消してはいけないファイル、確認なしに実行してはいけない操作</li>
+<li><strong>成果物の型</strong>：報告書の見出し構成、保存先のフォルダ、ファイル名の付け方</li>
+<li><strong>使う言葉づかい</strong>：社外向けは丁寧体、社内向けは簡潔に、といった文体の方針</li>
+<li><strong>判断に迷ったときの動き</strong>：「分からない場合は勝手に決めず、確認を求める」という一文</li>
+</ul>
+<h3>書かないほうがよいこと</h3>
+<ul>
+<li><strong>その日限りの指示</strong>：「今回は3ページで」といった一回きりの条件は、その場で伝えるべきものです</li>
+<li><strong>秘密情報そのもの</strong>：認証情報や顧客の個人情報を書き込んではいけません。ルールは書いても、中身は書かない</li>
+<li><strong>長すぎる説明</strong>：会社案内や事業の背景を延々と書くと、肝心のルールが埋もれます</li>
+<li><strong>守らせる気のない努力目標</strong>：「なるべく丁寧に」のような曖昧な文は、あってもなくても結果が変わりません</li>
+</ul>
+<p>目安として、<strong>A4で1枚に収まる分量</strong>から始めるのが現実的です。長ければ効くというものではなく、むしろ短く具体的なほうが確実に守られます。</p>
+
+<h2 id="sec4">4. 中小企業でそのまま使える記載例</h2>
+<p>実際にどう書けばよいのか、業種を問わず使える形で挙げます。そのまま写して、自社の事情に合わせて言葉を差し替えてください。</p>
+<blockquote>
+・当社の正式名称は「株式会社〇〇」。略称は社外向け文書では使わない<br>
+・金額はすべて税込で記載する<br>
+・日付は「2026年8月2日」の形式で書く<br>
+・顧客名は社外向け資料では「A社」「B社」と伏せる<br>
+・報告書は「結論・根拠・次の行動」の3見出しで構成する<br>
+・作成した資料は「案件名_日付」の形式で名前を付ける<br>
+・ファイルを削除・上書きする前は必ず確認を取る<br>
+・判断に迷ったら勝手に決めず、選択肢を出して確認を求める
+</blockquote>
+<p>8行です。これだけでも、毎回打ち直していた注意書きのほとんどが不要になります。最初から完璧を目指す必要はありません。<strong>「またこれを打っているな」と気づいた指示を、その都度1行ずつ足していく</strong>だけで、1か月もあれば実用的な分量になります。</p>
+
+<h2 id="sec5">5. 全社共通と案件別 — 2階層の使い分け</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-claude-md-rules-02.webp" alt="5. 全社共通と案件別 — 2階層の使い分け" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>会社全体で共通のルールと、案件ごとに違うルールは分けて置けます。</p>
+<table><thead><tr><th>階層</th><th>置き場</th><th>書く内容</th></tr></thead><tbody>
+<tr><td>全社共通</td><td>個人の設定フォルダ</td><td>社名表記、金額の書式、禁止事項など、どの案件でも変わらないもの</td></tr>
+<tr><td>案件・部署別</td><td>その案件の作業フォルダ</td><td>この顧客だけの呼称、この案件だけの提出形式、担当者名など</td></tr>
+</tbody></table>
+<p>両方が置かれている場合、<strong>案件側のルールが優先されます</strong>。「全社では税込表記だが、この顧客だけは税別で出す」といった例外を、全社ルールを崩さずに扱えるということです。階層の仕組みは<a href="claude-code-claudemd-memory-guide.html">CLAUDE.md のメモリ機能ガイド</a>でも整理しています。</p>
+<p>最初から2階層で組む必要はありません。まず作業フォルダに1つ置いて運用し、「これはどの案件でも同じだ」と分かったものを全社側に移す。この順番のほうが、実態に合ったルールになります。</p>
+
+<h2 id="sec6">6. ルールが守られないときの3つの原因</h2>
+<h3>原因1：分量が多すぎる</h3>
+<p>数ページにわたる長文になると、重要な項目が埋もれます。守ってほしい順に並べ替え、優先度の低い項目は思い切って削るほうが、結果として守られる率は上がります。</p>
+<h3>原因2：書き方が曖昧</h3>
+<p>「読みやすく書く」は守りようがありません。「1段落は3文以内」「見出しは必ず付ける」のように、<strong>守れたかどうかを後から判定できる形</strong>に直します。曖昧な努力目標を具体的な条件に書き換えるだけで、効き方が変わります。</p>
+<h3>原因3：置き場所が違う</h3>
+<p>作業しているフォルダと、ファイルを置いたフォルダがずれていると、当然読み込まれません。「ルールを書いたのに効かない」という相談の多くは、この単純な取り違えです。まず置き場所を確認してください。</p>
+
+<h2 id="sec7">7. スキル・スラッシュコマンドとの役割分担</h2>
+<p>Claude Code には、決めごとを登録する仕組みが複数あります。混同すると「どこに書けばいいのか分からない」状態になるので、役割を整理しておきます。</p>
+<table><thead><tr><th>仕組み</th><th>役割</th><th>たとえるなら</th></tr></thead><tbody>
+<tr><td>CLAUDE.md</td><td>常に効いている前提・禁止事項・書式</td><td>就業規則</td></tr>
+<tr><td>スキル</td><td>特定業務の手順をまとめたもの</td><td>業務マニュアル</td></tr>
+<tr><td>スラッシュコマンド</td><td>よく使う作業の呼び出し</td><td>作業指示書のショートカット</td></tr>
+</tbody></table>
+<p>判断基準はシンプルです。<strong>「どの作業でも守ってほしいこと」は CLAUDE.md、「この作業のやり方」はスキル</strong>。金額を税込で書くのはどの業務でも同じなので CLAUDE.md、月次報告書の作り方はその業務固有なのでスキル、という切り分けになります。スキルの作り方は<a href="claude-code-skills-knowledge.html">スキルで社内ノウハウを登録する方法</a>で解説しています。</p>
+<p>順番としては、CLAUDE.md を先に整えるのが正解です。土台となる前提がない状態で個別の手順だけ増やすと、手順書ごとに同じ注意書きを書き足すことになり、結局は元の問題に戻ります。</p>
+
+<h2 id="sec8">8. 社内に定着させる4手順</h2>
+<ol>
+<li><strong>直近1週間の指示を見返す</strong>：繰り返し書いていた注意書きを抜き出します。ここが最初のルールの原案になります。3〜5行で十分です。</li>
+<li><strong>作業フォルダに置いて1週間試す</strong>：いきなり全社展開せず、まず1人・1業務で回します。効いているか、余計な制約になっていないかを見ます。</li>
+<li><strong>守られなかった項目を書き直す</strong>：無視された項目は、たいてい曖昧か長すぎるかのどちらかです。判定できる書き方に直します。</li>
+<li><strong>更新の責任者を1人決める</strong>：全員が自由に書き換えると内容が矛盾します。追記の提案は誰でも、確定は1人。この形が最も崩れません。</li>
+</ol>
+<p>4手順目まで進めて、はじめて「会社のルール」になります。ここまでやらないと、結局は誰かの個人メモのまま終わります。</p>
+
+<h2 id="sec9">よくある質問</h2>
+<p><strong>専門知識がなくても書けますか。</strong></p>
+<p>書けます。中身はただの日本語の箇条書きで、書式の決まりもありません。社内向けの注意書きをそのまま写す感覚で始められます。</p>
+<p><strong>どのくらいの分量が適切ですか。</strong></p>
+<p>A4で1枚程度が目安です。数ページに膨らむと重要な項目が埋もれ、守られにくくなります。増やすより、優先度の低い行を削るほうが効果的です。</p>
+<p><strong>書いたルールが守られないことはありますか。</strong></p>
+<p>あります。多くは分量が多すぎるか、書き方が曖昧か、置き場所が違うかのいずれかです。この3点を確認すればたいてい解決します。</p>
+<p><strong>顧客ごとに違うルールがある場合はどうしますか。</strong></p>
+<p>案件ごとの作業フォルダに、その案件用のルールを置いてください。全社共通のルールと両方が効き、案件側が優先されます。</p>
+<p><strong>秘密情報は書いてもよいですか。</strong></p>
+<p>書かないでください。「顧客名は社外向け資料では伏せる」というルールは書いても、実際の顧客名や認証情報は書き込まない、という線引きが必要です。</p>
+
+<h2 id="sec10">まとめ</h2>
+<p>Claude Code に毎回同じ注意書きを添えているなら、それは指示ではなく会社のルールです。ルールは頭の中ではなく、読み込まれる場所に置く。それだけで、打ち忘れによるばらつきも、担当交代による品質の変化もなくなります。</p>
+<p>始め方は簡単です。今週書いた指示を見返して、繰り返していた一文を3行だけ書き出す。それを作業フォルダに置く。守られなかった行を具体的に書き直す。更新の担当を1人決める。この4つで、頭の中にあった決まりごとが会社の資産に変わります。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、お気軽にご相談ください。導入サポート（1時間 ¥10,000 税込）で、御社の業務に合わせた自動化の第一歩をいっしょに設計します。</p>
+<p>これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「毎回同じことを打ち直している」「担当が変わると品質が変わる」という課題をお持ちの方に向けて、社内ルールの洗い出しから記載内容の設計、運用の定着までを、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-claudemd-memory-guide.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude CodeのCLAUDE.md（メモリ機能）で業務ルールをAIに記憶させる</span></a><a class="seo-related-card" href="claude-code-business-guide.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命</span></a><a class="seo-related-card" href="claude-code-skills-knowledge.html"><img src="../images/blog-claude-code-skills-knowledge-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude CodeのSkill機能で社内ノウハウを資産化</span></a></div>
+<p class="seo-related-more"><a href="category-claude-code-basics.html">「Claude Codeの使い方」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

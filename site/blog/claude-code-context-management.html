@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで作業が長引くと精度が落ちる原因とコンテキスト管理 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。その原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。コンテキスト管理の3原則を非エンジニア向けに整理しました。">
+<meta name="keywords" content="Claude Code,コンテキスト管理,精度低下,業務自動化,中小企業,AI導入,会話のリセット,品質のばらつき">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-context-management.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで作業が長引くと精度が落ちる原因とコンテキスト管理">
+  <meta property="og:description" content="Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。その原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。コンテキスト管理の3原則を非エンジニア向けに整理しました。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-context-management.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-context-management-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-08-03T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="Claude Codeの使い方">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで作業が長引くと精度が落ちる原因とコンテキスト管理">
+  <meta name="twitter:description" content="Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。その原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。コンテキスト管理の3原則を非エンジニア向けに整理しました。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-context-management-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-context-management.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-context-management.html"},"url":"https://www.piste-ai.com/blog/claude-code-context-management.html","headline":"Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド","alternativeHeadline":"Claude Codeで作業が長引くと精度が落ちる原因とコンテキスト管理","description":"Claude Codeの出来が夕方になると落ちる、前に却下した案が復活する。その原因はやり取りに不要な前提が積み上がっていることです。用件で区切る、要点だけ残す、前提はルールファイルへ。コンテキスト管理の3原則を非エンジニア向けに整理しました。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-context-management-og.jpg","width":1200,"height":800},"datePublished":"2026-08-03T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"Claude Codeの使い方","keywords":["Claude Code","コンテキスト管理","精度低下","業務自動化","中小企業","AI導入","会話のリセット","品質のばらつき"],"wordCount":4672,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"Claude Codeの使い方","item":"https://www.piste-ai.com/blog/category-claude-code-basics.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで作業が長引くと精度が落ちる原因とコンテキスト管理","item":"https://www.piste-ai.com/blog/claude-code-context-management.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-context-management.html#faq","mainEntity":[{"@type":"Question","name":"区切ると作業が遅くなりませんか。","acceptedAnswer":{"@type":"Answer","text":"体感ではむしろ速くなります。区切る手間は数秒ですが、ずれた成果物を直す手間は数十分かかります。差し引きでは区切ったほうが早く終わります。"}},{"@type":"Question","name":"どのくらいの長さで区切るのが適切ですか。","acceptedAnswer":{"@type":"Answer","text":"時間より用件で判断してください。同じ案件なら1時間続いても問題ありません。逆に5分でも、別件に移るなら区切ります。"}},{"@type":"Question","name":"専門知識がなくても運用できますか。","acceptedAnswer":{"@type":"Answer","text":"できます。覚えることは「用件が変わったら新しく始める」の一文だけです。操作も画面上の指示に従うだけで、設定ファイルを書く必要はありません。"}},{"@type":"Question","name":"複数人で使う場合はどうしますか。","acceptedAnswer":{"@type":"Answer","text":"担当者ごとに別の作業として進めてください。同じ会話を複数人で共有すると、互いの前提が混ざります。共通で守らせたいことは、会話ではなくルールファイルに書きます。"}},{"@type":"Question","name":"区切るタイミングを忘れてしまいそうです。","acceptedAnswer":{"@type":"Answer","text":"「案件名を口に出したら区切る」といった合図を決めておくと定着しやすくなります。慣れるまでは、朝と昼の1日2回だけでも効果があります。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-claude-code-basics.html">Claude Codeの使い方</a></nav>
+<p class="seo-postmeta"><time datetime="2026-08-03">公開日：2026年8月3日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-context-management.webp" alt="Claude Codeで作業が長引くと精度が落ちる原因と対策！コンテキスト管理で品質を保つガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>Claude Code を毎日使い、夕方になると出来が落ちると感じている担当者</li><li><strong>できるようになること：</strong>用件ごとに会話を区切り、要点だけ残し、前提はルールファイルに書く運用で精度を保てる</li><li><strong>必要なもの：</strong>Claude Code の会話リセット操作と、ルールファイルの置き場。設定変更は不要</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「朝は的確だったのに、夕方になると同じ人に頼んでいるとは思えない出来になる」。Claude Code を毎日使っている会社から、最近よく出てくる相談です。指示の出し方は変えていないのに、後半だけ精度が落ちる。この現象には、はっきりした理由があります。 原因は<strong>やり取りが長くなりすぎていること</strong>です。Anthropic公式のAIコーディングツール Claude Code は、それまでの会話をすべて覚えたまま次の作業に進みます。便利な仕組みですが、朝の雑談や中断した別件、試して捨てた案まで抱えたままだと、いま優先すべき指示が埋もれてしまいます。 この記事では、作業が長引くと品質が落ちる仕組みと、その対策である「コンテキスト管理」を、専門知識のない方にも分かる言葉で整理します。設定を触る話ではなく、<strong>作業の区切り方を変えるだけの運用の工夫</strong>です。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code は長く使うとなぜ精度が落ちるのですか？</a></li>
+<li><a href="#sec2">2. 精度が落ちているサイン</a></li>
+<li><a href="#sec3">3. Claude Code の精度低下を防ぐ対策は何ですか？</a></li>
+<li><a href="#sec4">4. 1日の使い方をどう区切るか</a></li>
+<li><a href="#sec5">5. 業種別・区切りどころの例</a></li>
+<li><a href="#sec6">6. よくある勘違い</a></li>
+<li><a href="#sec7">7. 社内に定着させる4手順</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code は長く使うとなぜ精度が落ちるのですか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-context-management-01.webp" alt="1. なぜ後半になるほど出来が悪くなるのか" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>Claude Code は、ひとつの作業画面を開いている間、そこで交わしたやり取りを全部覚えています。この記憶の置き場のことを、ここでは「作業机」と呼びます。</p>
+<p>朝いちばんに開いた机はきれいです。頼んだ内容だけが載っているので、指示は正確に伝わります。ところが午前中に3件、午後に2件と別々の用件を同じ机で扱っていくと、机の上は書類だらけになります。</p>
+<ul><li>午前に作った請求書の書式</li><li>途中で中断した見積書の下書き</li><li>「やっぱりこの案はなし」と捨てたはずの文面</li><li>参考までに読み込ませた昨年の資料</li></ul>
+<p>これらが全部載ったままです。夕方に「お礼状を書いて」と頼むと、机の上にある他の書類の影響を受けます。<strong>古い前提を引きずった答えが返ってくる</strong>わけです。</p>
+<p>人間なら「それはもう終わった話です」と切り分けられますが、机の上に置きっぱなしの書類は、置いた本人が片づけない限り残り続けます。</p>
+<h2 id="sec2">2. 精度が落ちているサイン</h2>
+<p>次のような兆候が出たら、机が散らかっている合図です。</p>
+<ul><li><strong>前に却下した案が復活してくる</strong>：捨てたはずの下書きを参照している</li><li><strong>今回関係ない案件の名前が混ざる</strong>：午前中に扱った別件を引きずっている</li><li><strong>同じ指示への反応が朝と夕方で違う</strong>：判断材料が増えすぎている</li><li><strong>返事が来るまでが妙に遅い</strong>：抱えている情報量が多い</li><li><strong>指示していない余計な作業までする</strong>：過去の会話を「まだ続いている依頼」と解釈している</li></ul>
+<p>いちばん多い誤解は、これを<strong>AIの性能の問題</strong>だと思ってしまうことです。実際は使い方の問題なので、机を片づければその場で解決します。</p>
+<h2 id="sec3">3. Claude Code の精度低下を防ぐ対策は何ですか？</h2>
+<p>難しい設定は要りません。覚えることは3つです。</p>
+<h3>① 用件が変わったら机を片づける</h3>
+<p>別の案件に移るときは、それまでのやり取りを終わりにして新しい状態から始めます。Claude Code には会話をリセットする操作が用意されているので、それを使うだけです。操作の詳しい説明は、<a href="https://code.claude.com/docs/ja/costs" target="_blank" rel="noopener">公式ドキュメントの「コンテキストを積極的に管理する」</a>にあります。</p>
+<p>判断の目安は単純で、<strong>「これは前の話の続きか、それとも別の話か」</strong>だけを考えます。別の話なら片づける。同じ話なら続ける。それだけです。</p>
+<h3>② 長い作業は途中で要点だけ残す</h3>
+<p>同じ案件でもやり取りが長引くことはあります。その場合は、<strong>それまでの結論だけを残して途中の試行錯誤を捨てる</strong>操作を使います。「ここまでで決まったこと」を短くまとめ直してから続きに入る、というイメージです。</p>
+<p>議事録に例えると分かりやすいでしょう。会議が3時間に及んでも、次の会議に持っていくのは決定事項の数行だけです。途中の言い合いまで全部持っていく人はいません。</p>
+<h3>③ 毎回必要な前提はルールファイルに書く</h3>
+<p>「毎回この前提を伝えている」というものがあるなら、それは会話に書くべき内容ではありません。作業開始時に自動で読み込まれるルールの置き場（<a href="claude-code-claude-md-rules.html">CLAUDE.md</a>）に移します。会話が短くなり、しかも伝え忘れがなくなります。</p>
+<table><thead><tr><th></th><th>会話で毎回伝える</th><th>ルールファイルに書く</th></tr></thead><tbody><tr><td>会話の長さ</td><td>毎回長くなる</td><td>短いまま保てる</td></tr><tr><td>片づけた後</td><td>消えるので再入力が必要</td><td>自動で効き続ける</td></tr><tr><td>伝え忘れ</td><td>起こる</td><td>起こらない</td></tr></tbody></table>
+<h2 id="sec4">4. 1日の使い方をどう区切るか</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-context-management-02.webp" alt="4. 1日の使い方をどう区切るか" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+
+<p>実務では、次のような区切り方が現実的です。</p>
+<table><thead><tr><th>場面</th><th>どうするか</th></tr></thead><tbody><tr><td>朝いちばん</td><td>まっさらな状態で始める</td></tr><tr><td>案件が変わったとき</td><td>前の会話を終わりにして始め直す</td></tr><tr><td>同じ案件で1時間以上続いたとき</td><td>要点だけ残して整理する</td></tr><tr><td>昼休みをはさむとき</td><td>午後は新しく始める</td></tr><tr><td>「なんだかおかしい」と感じたとき</td><td>迷わず片づける</td></tr></tbody></table>
+<p><strong>迷ったら片づける</strong>、が原則です。片づけて困ることはほとんどありません。せいぜい前提をもう一度伝える手間がかかる程度で、それも重要な前提ならルールファイルに書いてあるはずです。</p>
+<p>逆に、片づけずに続けたときの損失は見えにくいのが厄介です。出てきた成果物が微妙にずれていても、その場では気づかず、後工程で手直しが発生します。</p>
+<h2 id="sec5">5. 業種別・区切りどころの例</h2>
+<p><strong>士業・コンサル</strong>：顧客ごとに区切ります。A社の資料を扱った会話でB社の文書を作らないこと。顧客情報が混ざる事故を防ぐ意味でも、案件をまたがない運用が安全です。</p>
+<p><strong>美容室・治療院</strong>：用途で区切ります。予約案内の文面づくりと、月次の売上まとめは別の会話にします。数字を扱う作業に接客文のトーンが混ざると、報告書が妙に柔らかくなります。</p>
+<p><strong>小売・EC</strong>：商品カテゴリで区切ります。50点の商品説明を一度に頼むと後半ほど精度が落ちるため、10点ずつ区切って進めるほうが、結果的に手直しが減ります。</p>
+<p><strong>建設・工務店</strong>：現場ごとに区切ります。複数現場の日報を同じ会話で扱うと、現場名や工程が混線します。</p>
+<p><strong>教室・スクール</strong>：クラス単位で区切ります。学年の違う案内文を続けて作ると、対象年齢の前提が引きずられます。</p>
+<h2 id="sec6">6. よくある勘違い</h2>
+<p><strong>「一度にまとめて頼んだほうが効率がいい」</strong></p>
+<p>短時間で終わる作業ならその通りです。ただし件数が多い作業は、後半ほど精度が落ちます。<strong>10件ずつ区切って5回頼むほうが、50件を一度に頼むより手直しが少なく済みます</strong>。</p>
+<p><strong>「片づけると学習した内容が消える」</strong></p>
+<p>消えて困る内容は、そもそも会話に置いておくべきではありません。残したい決まりごとはルールファイルへ、残したい成果物はファイルとして保存する。この2つを守っていれば、会話を片づけても失うものはありません。</p>
+<p><strong>「上位のモデルを使えば解決する」</strong></p>
+<p>改善はしますが、根本解決にはなりません。散らかった机の上でどれだけ優秀な人が作業しても、間違った書類を参照するリスクは残ります。<strong>先に片づけるほうが、費用も手間もかかりません</strong>。モデルの使い分けと費用の考え方は<a href="claude-code-model-cost-optimization.html">Opus・Sonnet・Haiku の使い分け</a>で整理しています。</p>
+<h2 id="sec7">7. 社内に定着させる4手順</h2>
+<p>1. <strong>「案件が変わったら区切る」だけを最初のルールにする</strong>。細かい基準を先に決めても覚えられません</p>
+<p>2. <strong>1週間、担当者に体感してもらう</strong>。区切った日と区切らなかった日で、手直しの量を比べます</p>
+<p>3. <strong>毎回伝えている前提を書き出す</strong>。3行でも構いません。ルールファイルに移します</p>
+<p>4. <strong>区切りどころを業務ごとに1行で決める</strong>。「商品説明は10点ごと」「日報は現場ごと」のように、迷わない形で残します</p>
+<p>ポイントは、<strong>最初から完璧な運用を目指さないこと</strong>です。区切る習慣がつくだけで、手直しの量は目に見えて減ります。</p>
+<h2 id="sec8">よくある質問</h2>
+<p><strong>区切ると作業が遅くなりませんか。</strong></p>
+<p>体感ではむしろ速くなります。区切る手間は数秒ですが、ずれた成果物を直す手間は数十分かかります。差し引きでは区切ったほうが早く終わります。</p>
+<p><strong>どのくらいの長さで区切るのが適切ですか。</strong></p>
+<p>時間より用件で判断してください。同じ案件なら1時間続いても問題ありません。逆に5分でも、別件に移るなら区切ります。</p>
+<p><strong>専門知識がなくても運用できますか。</strong></p>
+<p>できます。覚えることは「用件が変わったら新しく始める」の一文だけです。操作も画面上の指示に従うだけで、設定ファイルを書く必要はありません。</p>
+<p><strong>複数人で使う場合はどうしますか。</strong></p>
+<p>担当者ごとに別の作業として進めてください。同じ会話を複数人で共有すると、互いの前提が混ざります。共通で守らせたいことは、会話ではなくルールファイルに書きます。</p>
+<p><strong>区切るタイミングを忘れてしまいそうです。</strong></p>
+<p>「案件名を口に出したら区切る」といった合図を決めておくと定着しやすくなります。慣れるまでは、朝と昼の1日2回だけでも効果があります。</p>
+<h2 id="sec9">まとめ</h2>
+<p>Claude Code の精度が後半になるほど落ちるのは、性能の問題ではなく、会話に不要な前提が積み上がっているためです。対策は、用件が変わったら区切る、長引いたら要点だけ残す、毎回必要な前提はルールファイルに書く。この3つだけです。</p>
+<p>まずは今日の作業から、案件が変わるたびに区切ってみてください。手直しの量が変われば、それが答えです。<strong>片づけた机の上でこそ、指示は正確に伝わります</strong>。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、ぜひご相談ください。導入サポート（1時間 ¥10,000 税込）で、御社の業務に合わせた自動化の第一歩をいっしょに設計します。</p>
+<p>これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。ご相談・お申し込みは、このページの購入画面に進むボタンからお進みください。ご不明な点は、ココナラのメッセージ機能でお気軽にお尋ねください。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「朝と夕方で出来が変わる」「前に却下した案が戻ってくる」という課題をお持ちの方に向けて、作業の区切り方の設計から社内ルールへの落とし込み、運用の定着までを、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-business-guide.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeとは？プログラミング不要で業務自動化ができるAIコーディング革命</span></a><a class="seo-related-card" href="claude-code-model-cost-optimization.html"><img src="../images/blog-claude-code-model-cost-optimization-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude CodeのOpus・Sonnet・Haiku使い分けでコスト削減</span></a><a class="seo-related-card" href="claude-code-claude-md-rules.html"><img src="../images/blog-claude-code-claude-md-rules-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">Claude Codeの使い方</span><span class="seo-related-title">Claude Codeの「CLAUDE.md」で社内ルールを毎回守らせる</span></a></div>
+<p class="seo-related-more"><a href="category-claude-code-basics.html">「Claude Codeの使い方」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド</title>
+<meta name="description" content="Claude Codeで価格改定の根拠を整理する手順を解説。比べる二時点の固定・品目別の増減を率と額で出す・商品別の原価構成への割り戻し・据え置き案を含む複数案の試算・ご案内文の下書きまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,価格改定,値上げ,原価管理,コスト上昇,価格転嫁,業務効率化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで価格改定の根拠を整理する！中小企業のための値上げ準備とご案内文づくりガイド</h1>
+
+<p class="lead">仕入れも、資材も、光熱費も上がった。人件費も上げざるを得なかった。それでも自社の価格は、三年前のまま据え置いている——中小企業の現場で、これは珍しいことではありません。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">価格改定に踏み切れない3つの理由</a></li>
+<li><a href="#s2">機械に渡してよい範囲と、人が決める範囲</a></li>
+<li><a href="#s3">実務は5つのステップで回る</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくある質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<p>上げたくないわけではなく、<strong>上げる根拠を組み立てる時間がない</strong>というのが実情です。どの品目がいくら上がったのか、それが自社のどの商品にどれだけ効いているのか。調べようとすれば数日仕事になり、その数日が取れないまま次の月が来ます。</p>
+<p>そして厄介なのは、この状態を続けると、<strong>あるとき一気に大きく上げざるを得なくなる</strong>ことです。小さく刻めば受け入れられたはずの改定が、まとめて出すと取引そのものを揺らします。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、価格改定の根拠を整理し、お取引先へお伝えする文面の下書きまでを準備する手順を、非エンジニアの方向けに整理します。</p>
+<h2 id="s1">価格改定に踏み切れない3つの理由</h2>
+<p>気持ちの問題ではありません。作業の側に、着手を妨げる構造があります。</p>
+<h3>1. コストの上がり方が品目ごとにばらばら</h3>
+<p>同じ時期に仕入れていても、上がった品目と据え置きの品目が混ざっています。<strong>全体で何パーセント上がったのか</strong>を出すには、品目ごとの数量と単価を掛け戻す必要があり、これが手作業では重い。</p>
+<h3>2. どの商品にどれだけ効いているかが見えない</h3>
+<p>材料Aが二割上がったとして、それが商品Xの原価に占める割合は一割かもしれないし、六割かもしれません。<strong>構成比を通さないと、改定すべき幅が出てきません。</strong></p>
+<h3>3. 伝える文面を考える時間がない</h3>
+<p>根拠が出ても、それをお取引先に伝わる言葉にする工程が残ります。ここで止まり、<strong>根拠だけが手元に残って改定が先送りになる</strong>というのが、いちばん多い止まり方です。</p>
+<p>この三つは、いずれも判断ではなく作業です。<strong>作業だから、渡せます。</strong></p>
+<h2 id="s2">機械に渡してよい範囲と、人が決める範囲</h2>
+<p>ここを曖昧にすると、出てきた数字をどこまで信じてよいのか分からなくなります。先に線を引きます。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>理由</th></tr></thead><tbody><tr><td>仕入実績の読み取り・書き起こし</td><td>機械</td><td>手を動かすだけの作業</td></tr><tr><td>品目ごとの増減率の算出</td><td>機械</td><td>件数が多く見落としが起きやすい計算</td></tr><tr><td>商品別の原価構成への割り戻し</td><td>機械</td><td>型を渡せば揺れずに実行できる</td></tr><tr><td>改定幅の候補と影響額の試算</td><td>機械</td><td>条件を変えた繰り返し計算</td></tr><tr><td>ご案内文の下書き作成</td><td>機械</td><td>材料がそろえば書ける文章作業</td></tr><tr><td><strong>改定幅と実施時期の決定</strong></td><td><strong>人</strong></td><td>取引関係と経営判断の問題</td></tr><tr><td><strong>お取引先への提示と交渉</strong></td><td><strong>人</strong></td><td>責任と関係性が伴う判断</td></tr></tbody></table>
+<p>要点は<strong>下の二行</strong>です。「原価が一割上がったから一割上げる」で済む取引先ばかりではありません。長い付き合いの一社を今回は据え置くという判断は、事情を知っている人にしか下せません。<strong>機械が出すのは材料であって、結論ではありません。</strong></p>
+<h2 id="s3">実務は5つのステップで回る</h2>
+<p>特別な準備は要りません。手元に仕入の実績があれば始められます。</p>
+<h3>ステップ1｜比べる二つの時点を先に決める</h3>
+<p>「前回改定した月」と「直近の月」のように、<strong>二つの時点を先に固定します。</strong> ここが曖昧なまま集計を始めると、途中で範囲が動いて数字が合わなくなります。データの控えは必ず別に残してください。</p>
+<h3>ステップ2｜品目ごとの増減を、率と額の両方で出させる</h3>
+<p>率だけを見ると、<strong>単価の安い品目の大きな上昇に引っ張られます。</strong> 逆に額だけを見ると、数量の多い品目しか目に入りません。率と額を並べて出させ、金額インパクトの大きい上位から順に並べ替えます。</p>
+<h3>ステップ3｜商品ごとの原価構成に割り戻す</h3>
+<p>自社の商品が、どの材料をどれだけ使っているかの表を渡します。そのうえで、<strong>ステップ2で出た増減を商品側へ割り戻させます。</strong> ここで初めて「商品Xは原価が七パーセント上がっている」という、改定幅の根拠になる数字が出ます。</p>
+<p>構成表が手元にない場合は、主力の三品目だけ手で書き出すところから始めて構いません。全品目そろえようとすると、また着手が遅れます。</p>
+<h3>ステップ4｜改定幅の候補を複数出させ、影響額を並べる</h3>
+<p>一案だけ出させても比べられません。<strong>「据え置き」「原価上昇分のみ転嫁」「原価上昇分＋一定幅」の三案</strong>のように、幅の異なる案を並べさせます。各案について、年間の売上影響額と粗利影響額を出させると、社内で議論できる形になります。</p>
+<p>ここで大事なのは、<strong>据え置き案も必ず並べる</strong>ことです。上げない選択の損失額が見えて、初めて判断になります。</p>
+<h3>ステップ5｜ご案内文の下書きをつくらせ、人が仕上げる</h3>
+<p>改定幅が決まったら、お取引先へお伝えする文面の下書きをつくらせます。渡す材料は、改定の対象、改定後の価格、実施時期、そして<strong>上がった理由の要約</strong>です。</p>
+<p>下書きは必ず人が手を入れてください。数字の確認はもちろん、<strong>謝意と今後の姿勢の部分は自社の言葉</strong>にする必要があります。ここを機械の言い回しのまま出すと、伝わり方が薄くなります。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<p>同じ材料を渡しても、頼み方で出てくるものが変わります。</p>
+<h3>原則1｜取り出す項目を名前で指定する</h3>
+<p>「分析して」ではなく、<strong>「品目名・数量・単価・金額・前回単価・増減率・増減額の七項目を、この順で表にして」</strong>と指定します。項目を任せると、都合のよい切り口で丸められます。</p>
+<h3>原則2｜推測で埋めさせない</h3>
+<p>前回単価が不明な品目は、<strong>空欄ではなく『前回データなし』と文字で残させます。</strong> 推測値が混ざった瞬間、その表は根拠資料として使えなくなります。</p>
+<h3>原則3｜合計を必ず突き合わせる</h3>
+<p>出てきた表の合計金額を、<strong>元の仕入実績の合計と突き合わせてください。</strong> 一致しなければ、どこかで行が落ちています。この確認を飛ばした表は、社内でも取引先でも通りません。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<p>同じところで止まる方が多いので、先に並べておきます。</p>
+<h3>型1｜全品目をそろえようとして着手が遅れる</h3>
+<p>主力の三品目から始めれば十分です。<strong>完璧な表より、動き出した改定のほうが利益を守ります。</strong></p>
+<h3>型2｜率だけで改定幅を決めてしまう</h3>
+<p>原価が一割上がったからといって、価格を一割上げれば粗利が守れるとは限りません。<strong>粗利額と粗利率のどちらを守るのかを、先に決めてください。</strong></p>
+<h3>型3｜一度に大きく上げようとする</h3>
+<p>据え置いた期間が長いほど、一度の改定幅は大きくなります。取引を揺らさないために、<strong>二段階に分けて実施時期をずらす</strong>案も併せて試算しておくと、選択肢が増えます。</p>
+<h3>型4｜実施時期を伝えるのが直前になる</h3>
+<p>お取引先にも、社内での手続きがあります。<strong>実施の一定期間前にお伝えする</strong>という前提で逆算し、根拠の整理から始める日を決めてください。</p>
+<h3>型5｜今回の根拠を残さない</h3>
+<p>次の改定は必ず来ます。<strong>使ったデータの範囲、計算の型、決めた理由を1枚に残しておく</strong>と、次回は集計から始められます。ここを残すかどうかで、二回目以降の負担がまったく変わります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>製造業</td><td>材料費と外注加工費の上昇を、製品別の原価構成に割り戻す</td></tr><tr><td>建設・工務店</td><td>資材と労務の上昇を、工種ごとの歩掛に反映して見積単価を更新</td></tr><tr><td>飲食店</td><td>食材の上昇を、メニュー別の原価率に割り戻して改定対象を絞る</td></tr><tr><td>小売・通販</td><td>仕入単価と送料の上昇を、商品カテゴリ別に整理して改定幅を分ける</td></tr><tr><td>美容室・治療院</td><td>材料費と光熱費の上昇を、施術メニュー別の所要時間で按分する</td></tr><tr><td>士業・コンサル</td><td>作業時間の実績を集計し、業務区分ごとの報酬水準を見直す</td></tr></tbody></table>
+<p>いずれも共通するのは、<strong>上がったコストを、売る単位まで割り戻す</strong>という一点です。ここを通すかどうかで、改定の説明力が変わります。</p>
+<h2 id="s7">よくある質問</h2>
+<h3>仕入実績が紙の請求書しかありません</h3>
+<p>写真かスキャンで画像にすれば読み取らせられます。<strong>枚数が多い場合は、金額の大きい取引先から順に</strong>着手してください。全部そろってから始める必要はありません。</p>
+<h3>取引先ごとに価格が違うのですが、まとめて計算できますか</h3>
+<p>できます。ただし、<strong>取引先ごとの一覧と、全体の一覧を分けて出させて</strong>ください。混ぜると、平均に埋もれて個別の事情が見えなくなります。改定を見送る先がある場合も、この分け方が前提になります。</p>
+<h3>どのくらい時間が短縮できますか</h3>
+<p>品目数にもよりますが、集計と割り戻しに数日かけていた作業が、<strong>材料をそろえたあとは半日程度</strong>まで縮む例が多いところです。短縮の大部分は、集計そのものよりも<strong>やり直しが減ること</strong>から生まれます。</p>
+<h3>仕入価格を読み取らせても差し支えありませんか</h3>
+<p>社内の取り扱いルールに従ってください。判断に迷う場合は、<strong>取引先名を伏せて品目と金額だけを渡す</strong>方法があります。増減率と割り戻しの計算には、取引先名は不要です。</p>
+<h2 id="s8">まとめ</h2>
+<p>価格改定の準備について、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>踏み切れないのは覚悟の問題ではなく、<strong>根拠を組み立てる作業が重い</strong>という構造の問題</li>
+<li>比べる<strong>二つの時点を先に固定</strong>してから集計を始める</li>
+<li>増減は<strong>率と額の両方</strong>で出す。どちらか一方では判断を誤る</li>
+<li>商品ごとの<strong>原価構成に割り戻して</strong>初めて、改定幅の根拠になる</li>
+<li>改定案は<strong>据え置き案を含めて複数</strong>並べ、影響額で比べる</li>
+<li>今回の<strong>データ範囲・計算の型・決めた理由を1枚に残す</strong>と、次回は集計から始められる</li>
+</ul>
+<p>上がったコストの記録は、すでに手元にあります。集める手間はもう払い終わっています。あとは、売る単位まで割り戻すだけです。</p>
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「自社の仕入データで試してみたいが、どこから手を付ければよいか分からない」という方に、Claude Codeの導入から価格改定の根拠づくりの組み立てまで、非エンジニアの方にも分かりやすく伴走支援します。70社以上のAI導入・業務自動化の支援実績があります。</p>
+<p class="price">¥3,000〜</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste AI Consulting</footer>
+</body>
+</html>

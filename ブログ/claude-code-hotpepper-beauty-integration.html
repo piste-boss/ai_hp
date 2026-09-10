@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文・サロンブログをAI自動化！美容室・サロンの集客効率化ガイド</title>
+<meta name="description" content="Claude Codeとホットペッパービューティー（サロンボード）を連携し、口コミ返信・クーポン文・サロンブログ・リピート促進・予約データ分析をAI自動化する方法を解説。美容室・ネイル・エステ・整体院など美容業界向けに、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,ホットペッパービューティー,サロンボード,口コミ返信,クーポン,サロンブログ,美容室,ネイル,エステ,整体,集客,業務自動化,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × ホットペッパービューティー連携で口コミ返信・クーポン文・サロンブログをAI自動化！美容室・サロンの集客効率化ガイド</h1>
+
+<p class="lead">「口コミへの返信が後回しになって溜まっていく」「クーポンやキャンペーンの説明文を毎回ゼロから考えるのがつらい」「サロンのブログを更新したいのに、施術が終わるとそんな余力は残っていない」——美容室・サロン・整体院など、ホットペッパービューティーで集客している店舗ほど、この“集客の文章づくりに手が回らない”壁に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、美容・サロン業界の集客媒体である<strong>ホットペッパービューティー</strong>（管理画面のサロンボード）を組み合わせ、口コミ返信からクーポン文・サロンブログまでをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ「ホットペッパービューティー × Claude Code」なのか</a></li>
+<li><a href="#s2">2. Claude Codeとは？（おさらい）</a></li>
+<li><a href="#s3">3. 連携でできること・活用5選</a></li>
+<li><a href="#s4">4. 業種別の活用シーン</a></li>
+<li><a href="#s5">5. 非エンジニアのための導入4ステップ</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ「ホットペッパービューティー × Claude Code」なのか</h2>
+<p>ホットペッパービューティーは、美容室・ネイル・まつげ・エステ・整体など、美容と癒やしの業界で圧倒的な集客力を持つ予約媒体です。掲載すれば予約は入りやすくなりますが、実際に運用してみると<strong>「口コミ返信」「クーポン設計」「サロンブログ更新」「キャンペーン告知」</strong>といった文章づくりの作業が次々と発生し、施術の合間に手が回らなくなります。</p>
+<p>Claude Codeは、こうした「考えて・書いて・整える」作業を日本語の指示だけでAIに任せられるツールです。お客様の口コミへの返信文、季節に合わせたクーポンの説明、リピートを促すメッセージの下書きまでを横断的にサポートできます。プログラミングの知識は不要で、やりたいことを言葉で伝えるだけです。つまり、ホットペッパービューティーという「予約と集客の入り口」に対して、Claude Codeを「サロン専属のライター兼アシスタント」として配置するイメージです。</p>
+
+<h2 id="s2">2. Claude Codeとは？（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツール（CLI）です。最大の特徴は、専門用語を覚えなくても<strong>「〇〇して」と日本語で頼むだけ</strong>で、文章作成・情報整理・構成立案・ブラウザ操作までこなしてくれる点にあります。</p>
+<ul>
+<li><strong>ノーコードに近い操作感</strong>：コードを書かずに業務指示が出せる</li>
+<li><strong>外部サービスとの連携</strong>：ブラウザ操作などで他ツールとつながる</li>
+<li><strong>繰り返し作業の自動化</strong>：一度作った手順を何度でも再利用できる</li>
+</ul>
+<p>ホットペッパービューティー単体では「予約が入る仕組み」は手に入りますが、「お客様に届く言葉」は自分で考える必要があります。そこをClaude Codeが補うことで、集客の文章づくりのいちばん重い部分が一気に軽くなります。</p>
+
+<h2 id="s3">3. 連携でできること・活用5選</h2>
+
+<h3>① 口コミへの返信文づくり</h3>
+<p>来店したお客様の口コミに対して、内容に合わせたていねいな返信文の下書きを作成します。良い評価には感謝を、厳しい意見には誠実なお詫びと改善姿勢を、それぞれサロンのトーンを保ったまま用意できます。溜まりがちな返信を、短時間でさばけるようになります。</p>
+
+<h3>② クーポン・キャンペーン文の作成</h3>
+<p>「梅雨時期のうるおいトリートメント」「新規限定カット＋カラー」など、テーマを伝えるだけでクーポンの魅力的な説明文を複数パターン生成します。季節やターゲットに合わせた打ち出しを、迷わず量産できます。</p>
+
+<h3>③ サロンブログ記事の下書き</h3>
+<p>ヘアケアのコツ、季節のおすすめメニュー、スタッフ紹介など、ネタを伝えるだけで読みやすいブログ記事の下書きを作成します。更新が止まりがちなサロンブログを、無理なく続けられる仕組みに変えられます。</p>
+
+<h3>④ リピート促進・再来店メッセージの作成</h3>
+<p>「前回から2か月たったお客様への再来店のお誘い」といった目的を伝えれば、押しつけがましくない案内文の下書きを用意します。お客様との関係を保ち、再来店につなげる声かけを効率化します。</p>
+
+<h3>⑤ 予約・口コミデータの整理と分析</h3>
+<p>蓄積した予約状況や口コミの傾向を読み取り、「人気メニュー」「来店が伸びる曜日」「よく挙がる要望」などを整理し、次の施策のヒントとして提案します。数字を眺めるだけで終わらず、打ち手につなげられます。</p>
+
+<h2 id="s4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>活用シーン</th></tr>
+<tr><td>美容室・ヘアサロン</td><td>口コミ返信とサロンブログの下書き、季節キャンペーンのクーポン文を量産</td></tr>
+<tr><td>ネイル・まつげサロン</td><td>デザイン紹介文とリピート促進メッセージの作成、新規限定クーポンの説明づくり</td></tr>
+<tr><td>エステ・リラクサロン</td><td>コース説明文とお客様の声のまとめ、季節メニューの告知文を効率化</td></tr>
+<tr><td>整体・整骨・治療院</td><td>症状別メニューの説明文と再来店の案内づくり、口コミへのていねいな返信</td></tr>
+<tr><td>個人サロン・一人店舗</td><td>限られた時間で口コミ返信・ブログ・クーポン文をまとめて準備</td></tr>
+</table>
+
+<h2 id="s5">5. 非エンジニアのための導入4ステップ</h2>
+<ol>
+<li><strong>目的を1つに絞る</strong>：まずは「口コミ返信の下書きを作りたい」など、効果が見えやすい作業を一つ選びます。</li>
+<li><strong>Claude Codeを用意する</strong>：PCにClaude Codeを導入し、「どんなお客様に・どんなトーンで届けたいか」を日本語で伝えられる状態にします。</li>
+<li><strong>つなぎ方を決める</strong>：文章づくりはClaude Codeで行い、サロンボードへの貼り付けは手作業から始めると安全です。慣れてきたらブラウザ操作で更新作業まで広げます。</li>
+<li><strong>小さく試して広げる</strong>：1つの作業でうまく回ったら、クーポン文・ブログ・データ分析へと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり全自動化を狙わず、<strong>「まず一つの作業を確実に楽にする」</strong>こと。小さな成功体験が、集客運用への自信と継続につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li><strong>認証情報の管理</strong>：サロンボードのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li><strong>公開前は必ず人が確認する</strong>：料金・クーポン条件・予約ルールなど重要な情報は、AIに下書きまで任せ、最終チェックは人が行う設計にします。</li>
+<li><strong>事実と異なる表現に注意</strong>：効果や実績をうたう文章は、誇張や不正確な記載がないか確認し、景品表示法や薬機法など関連ルールに配慮します。</li>
+<li><strong>お客様情報の取り扱い</strong>：口コミや予約データを扱う際は、個人が特定される情報の管理に十分注意します。</li>
+<li><strong>ブランドの一貫性</strong>：返信や告知のトーン・言い回しのルールを記録に残し、担当者が変わっても世界観がぶれないようにしておきます。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この口コミへの返信文を作って」といった頼み方で十分です。</p>
+<h3>Q. 口コミ返信をすべて自動で送ってしまわないか心配です。</h3>
+<p>ご安心ください。AIには下書きの作成までを任せ、実際に公開・送信する前に人が確認する運用にできます。サロンの言葉として違和感がないかを最後にチェックできます。</p>
+<h3>Q. どのくらいの作業から始めるのがおすすめですか？</h3>
+<p>まずは「口コミ返信の下書き」から始めるのがおすすめです。毎日のように発生する作業なので効果を実感しやすく、その後のクーポン文やブログにもスムーズに広げられます。</p>
+<h3>Q. サロンらしい言葉づかいを保てますか？</h3>
+<p>保てます。最初に希望するトーンや言い回しのルールを伝えておけば、お店の雰囲気を保ったまま返信や告知の文章を作成できます。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「ホットペッパービューティーには掲載しているけれど、口コミ返信やクーポン文づくりで手が止まっている」——そんな方に向けて、Claude Codeの導入から最初の集客作業の自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">¥3,000〜</div>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+
+<p style="text-align:center;color:#aaa;font-size:14px;margin-top:24px;">これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った“ちょうどいい自動化”をご提案します。</p>
+
+</div>
+
+<footer>
+&copy; 2026 Piste. All rights reserved.
+</footer>
+</body>
+</html>

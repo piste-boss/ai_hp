@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × じゃらん連携で宿泊プラン作成・口コミ返信・繁閑対策をAI自動化！旅館・ホテル・民泊の集客効率化ガイド</title>
+<meta name="description" content="Claude Codeと宿泊予約サイトじゃらんを組み合わせ、宿泊プランの紹介文づくり・口コミ返信・繁閑期の販促・インバウンド対応をAI自動化する方法を解説。小規模な旅館・ホテル・ペンション・民泊のオーナーでも取り組める活用シーンと導入ステップを紹介します。">
+<meta name="keywords" content="Claude Code,じゃらん,宿泊予約,旅館,ホテル,民泊,口コミ返信,宿泊プラン,インバウンド,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × じゃらん連携で宿泊プラン作成・口コミ返信・繁閑対策をAI自動化！旅館・ホテル・民泊の集客効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-jalan-integration.jpg" alt="Claude Code × じゃらんで宿泊プラン作成・口コミ返信・繁閑対策を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「宿泊プランの紹介文を書く時間がない」「口コミへの返信が溜まっている」「平日や閑散期の予約が埋まらない」——小規模な旅館・ホテル・ペンション・民泊を運営していると、接客や清掃に追われて、集客のための文章づくりが後回しになりがちです。この記事では、Anthropic公式のAIコーディングツール Claude Code と、宿泊予約サイト じゃらん の運用を組み合わせ、プラン紹介文・口コミ返信・繁閑対策をまるごと仕組み化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code とは何か</a></li>
+<li><a href="#sec2">2. 宿泊施設の運用でなぜ「文章づくり」が重荷になるのか</a></li>
+<li><a href="#sec3">3. じゃらん運用で自動化できる5つの活用シーン</a></li>
+<li><a href="#sec4">4. 施設タイプ別の活用シーン</a></li>
+<li><a href="#sec5">5. 導入の4ステップ</a></li>
+<li><a href="#sec6">6. 手作業運用との違い</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code とは何か</h2>
+<p>Claude Code は、Anthropic が公式に提供している AI コーディングツールです。「コーディング」という名前がついていますが、実際にできることはプログラム作成だけではありません。パソコンの中にあるファイルを読み取り、内容を理解し、文章を書き、表にまとめ、決まった手順を繰り返し実行してくれます。</p>
+<p>操作は日本語の会話だけで完結します。「この予約データを月別に集計して、閑散期がいつか教えて」「この口コミに対する返信の下書きを3パターン作って」と伝えるだけで、Claude Code が作業を進めます。専門知識がなくても扱えるため、宿の現場でパソコンを使う方であれば十分に活用できます。</p>
+
+<h2 id="sec2">2. 宿泊施設の運用でなぜ「文章づくり」が重荷になるのか</h2>
+<p>じゃらんのような宿泊予約サイトでは、宿の魅力が伝わるかどうかが予約数を大きく左右します。しかし小規模施設ほど、その文章づくりに時間を割けないという構造的な問題があります。</p>
+<ul>
+<li>プラン紹介文は季節・客層ごとに書き分けが必要で、点数が増えるほど更新が追いつかない</li>
+<li>口コミ返信は1件ずつ丁寧に書きたいが、繁忙期ほど手が回らない</li>
+<li>閑散期の販促プランを考えたいのに、企画を練る時間がとれない</li>
+<li>海外からのお客様向けの案内文を用意したいが、翻訳の手間が大きい</li>
+<li>担当者が変わると文章のトーンが揺れ、宿の印象が安定しない</li>
+</ul>
+<p>これらはいずれも「考える・書く・整える」という作業です。まさに Claude Code が得意とする領域であり、下書きづくりを任せて人は確認と仕上げに集中する、という分担が有効です。</p>
+
+<h2 id="sec3">3. じゃらん運用で自動化できる5つの活用シーン</h2>
+
+<h3>3-1. 宿泊プランの紹介文づくり</h3>
+<p>「露天風呂付き客室・2名・夕食は地の魚のコース」といった素材を渡すだけで、宿泊プランのタイトル案と紹介文の下書きを複数パターン作成できます。カップル向け、家族向け、一人旅向けなど、客層別の書き分けもまとめて依頼できます。</p>
+
+<h3>3-2. 口コミへの返信文づくり</h3>
+<p>いただいた口コミの内容を読み取り、感謝を伝える返信の下書きを作れます。お褒めの声には具体的にどこを喜んでいただけたのかを踏まえた返信を、厳しいご指摘には改善の姿勢が伝わる誠実な返信を、宿のトーンに合わせて整えられます。投稿する前に必ず人が確認する運用にすれば安心です。</p>
+
+<h3>3-3. 繁閑対策・販促企画のたたき台づくり</h3>
+<p>過去の予約実績をまとめたファイルを読み込ませ、「どの月・どの曜日が弱いか」を整理させます。そのうえで、平日限定プラン、連泊割、地域行事に合わせた企画など、閑散期を埋めるためのアイデアを出させ、有望なものだけを人が選んで形にします。</p>
+
+<h3>3-4. 海外のお客様向け案内文づくり</h3>
+<p>館内の使い方、温泉の入り方、食事の時間、周辺の交通案内といった案内文を、やさしい日本語と外国語の両方で用意できます。訪日のお客様が増える施設では、事前に案内を整えておくだけで当日の説明負担が大きく減ります。</p>
+
+<h3>3-5. 予約データの集計と日報・月報づくり</h3>
+<p>予約データをまとめたファイルを渡せば、稼働率、平均単価、客層の傾向などを集計し、読みやすい月次レポートに整えられます。数字が並んだ表ではなく「今月はこういう傾向でした」という文章にまとめてくれるため、家族経営の宿でも共有しやすくなります。</p>
+
+<h2 id="sec4">4. 施設タイプ別の活用シーン</h2>
+<table>
+<tr><th>施設タイプ</th><th>主な悩み</th><th>Claude Code の使いどころ</th></tr>
+<tr><td>小規模旅館・温泉宿</td><td>季節ごとのプラン更新が追いつかない</td><td>旬の食材・行事に合わせたプラン文を季節ごとに一括作成</td></tr>
+<tr><td>ビジネスホテル</td><td>平日は埋まるが週末が弱い</td><td>予約実績から弱い曜日を特定し、観光客向け企画を立案</td></tr>
+<tr><td>ペンション・民宿</td><td>オーナー一人で運営し文章を書く時間がない</td><td>口コミ返信とプラン文の下書きをまとめて用意</td></tr>
+<tr><td>民泊・一棟貸し</td><td>海外ゲストからの質問対応が多い</td><td>多言語の案内文とよくある質問集を整備</td></tr>
+<tr><td>グランピング・体験型宿</td><td>体験の魅力が文章で伝わらない</td><td>体験内容を情景が浮かぶ紹介文に変換し訴求力を高める</td></tr>
+</table>
+
+<h2 id="sec5">5. 導入の4ステップ</h2>
+<ol>
+<li><strong>目的を1つに絞る</strong>：最初から全部を自動化しようとせず、「口コミ返信の下書き」など一番つらい業務を1つ選びます。</li>
+<li><strong>材料を用意する</strong>：宿の特徴、こだわり、これまでの返信文の例、予約データなどを1つのフォルダにまとめます。過去の良い文章がそのまま「宿らしさ」の見本になります。</li>
+<li><strong>Claude Code に日本語で指示する</strong>：「このフォルダの内容をふまえて、この口コミへの返信を3案作って」と伝えるだけです。出てきた案を見ながら「もう少し丁寧に」「短くして」と調整します。</li>
+<li><strong>小さく試して広げる</strong>：1週間ほど運用して手応えがあれば、プラン文づくり、月次レポートへと対象を広げます。うまくいった指示は保存しておくと、次回から同じ品質で再現できます。</li>
+</ol>
+
+<h2 id="sec6">6. 手作業運用との違い</h2>
+<table>
+<tr><th>項目</th><th>これまでの手作業</th><th>Claude Code を使った運用</th></tr>
+<tr><td>プラン文の作成</td><td>1本あたり30〜60分かかる</td><td>下書きが数分で出るため確認と仕上げに集中できる</td></tr>
+<tr><td>口コミ返信</td><td>繁忙期に溜まりやすい</td><td>まとめて下書きを作り、確認して投稿できる</td></tr>
+<tr><td>文章のトーン</td><td>書く人によってばらつく</td><td>見本を読み込ませることで宿らしさを保てる</td></tr>
+<tr><td>閑散期の企画</td><td>思いつきに頼りがち</td><td>実績データを踏まえた案を複数比較できる</td></tr>
+<tr><td>多言語対応</td><td>その都度翻訳に手間がかかる</td><td>案内文を事前にまとめて整備できる</td></tr>
+</table>
+
+<h2 id="sec7">7. 運用上の注意点</h2>
+<ul>
+<li><strong>公開前は必ず人が確認する</strong>：料金、食事の内容、送迎の可否など、事実に関わる部分は必ず自分の目で確かめてから公開します。</li>
+<li><strong>誇大な表現を避ける</strong>：「日本一」「絶対に満足」といった表現は使わず、実際に提供できる価値を正確に伝えます。</li>
+<li><strong>お客様の個人情報を扱わない</strong>：氏名や連絡先などが含まれるデータは、そのまま読み込ませないよう運用ルールを決めておきます。</li>
+<li><strong>宿らしさを失わない</strong>：整いすぎた文章はどの宿でも同じに見えます。オーナーの言葉を1〜2行足すだけで印象が変わります。</li>
+<li><strong>アカウント情報の管理</strong>：予約サイトの管理画面情報は必要最小限の担当者のみが扱い、共有の範囲を明確にします。</li>
+</ul>
+<p>これらを押さえておけば、AIに任せる部分と人が判断する部分の線引きが明確になり、安心して運用を続けられます。</p>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>パソコンが得意ではありませんが使えますか。</strong></p>
+<p>日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。</p>
+<p><strong>予約サイトの管理画面と直接つながるのですか。</strong></p>
+<p>下書きの作成や整理を Claude Code が担当し、最終的な登録・公開は人が管理画面で行う運用が安全です。事実確認の工程を残せるためです。</p>
+<p><strong>宿の個性が消えてしまいませんか。</strong></p>
+<p>これまで書いてきた文章を見本として読み込ませることで、宿らしい言い回しを保てます。仕上げにオーナーの一言を足すのがおすすめです。</p>
+<p><strong>何から始めるのがよいですか。</strong></p>
+<p>失敗しても影響の小さい「口コミ返信の下書き」から始めると安心です。ひとつ成功体験をつくることが定着への近道です。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>宿泊施設の集客は、プラン紹介文と口コミ返信という「文章」の積み重ねで決まります。しかし現場は接客と運営で手一杯で、そこに時間を割くのは簡単ではありません。Claude Code に下書きづくりと集計を任せ、人は事実確認と仕上げに集中する。この分担ができれば、少人数の宿でも継続的に情報を発信し続けられます。</p>
+<p>大切なのは、いきなり完璧を目指さず、効果を感じやすい業務から小さく始めることです。ひとつの仕組みが動き出せば、そこを起点に宿全体の運営効率化が広がっていきます。</p>
+<p>Claude Code を活用した業務自動化の導入について、もっと詳しく知りたい方や、自社に合った始め方を相談したい方は、ココナラのメッセージ機能からお気軽にご相談ください。導入サポート 税込3,000円では、あなたの業務に合わせた自動化の第一歩を、いっしょに設計します。まずは購入画面からお進みください。これまで多くの中小企業・個人事業主の業務自動化をお手伝いしてきた実績をもとに、ていねいにサポートいたします。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「プラン文や口コミ返信を書く時間がない」「Claude Codeの始め方が不安」という宿泊施設・小規模事業者の方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

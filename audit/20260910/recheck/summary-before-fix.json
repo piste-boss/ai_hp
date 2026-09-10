@@ -1,0 +1,32 @@
+{
+  "sitemap_urls": 170,
+  "duplicate_sitemap_urls": 0,
+  "statuses": {
+    "200": 170
+  },
+  "bad_canonical": [],
+  "bad_h1": [],
+  "missing_description": [],
+  "missing_og_image": [
+    "https://www.piste-ai.com/privacy",
+    "https://www.piste-ai.com/terms",
+    "https://www.piste-ai.com/tokushoho"
+  ],
+  "bad_measurement_loader": [],
+  "noindex": [],
+  "invalid_json_ld": [],
+  "missing_alt_pages": [],
+  "missing_dimensions_pages": [
+    "https://www.piste-ai.com/blog/category-ai-basics",
+    "https://www.piste-ai.com/blog/category-claude-code-basics",
+    "https://www.piste-ai.com/blog/category-finance",
+    "https://www.piste-ai.com/blog/category-operations",
+    "https://www.piste-ai.com/blog/category-sales-customer",
+    "https://www.piste-ai.com/blog/category-tool-integration",
+    "https://www.piste-ai.com/blog/",
+    "https://www.piste-ai.com/privacy",
+    "https://www.piste-ai.com/terms",
+    "https://www.piste-ai.com/tokushoho"
+  ],
+  "broken_fragments": []
+}

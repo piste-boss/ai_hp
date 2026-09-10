@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド</title>
+<meta name="description" content="Claude Codeで顧客名簿や取引先リストの重複・表記ゆれを整える手順を解説。散らかり方の4つの型、機械と人の役割分担、控えの取り方から統合の基準づくりまで、名寄せの進め方を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,名寄せ,顧客名簿,重複データ,表記ゆれ,データ整理,業務自動化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで顧客名簿の重複と表記ゆれを整える！中小企業のための名寄せ・データ整理ガイド</h1>
+
+<p class="lead">「同じお客様が名簿に3件登録されている」「株式会社の書き方がバラバラで、集計すると別々の取引先になってしまう」——手元にデータはあるのに、そのままでは数えられない。中小企業の現場で、地味に効いてくるのがこの<strong>名寄せ</strong>の問題です。この記事では、散らかった顧客名簿や取引先リストを Claude Code で整えていく手順を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<a href="#s1">名簿は「増やす仕組み」はあっても「整える仕組み」がない</a><br>
+<a href="#s2">散らかり方は、だいたい4つの型に分かれる</a><br>
+<a href="#s3">Claude Codeが効くのは「候補を出すところ」まで</a><br>
+<a href="#s4">実際の進め方は5ステップ</a><br>
+<a href="#s5">つまずきやすい5つの落とし穴</a><br>
+<a href="#s6">業種別・どこから手を付けると効くか</a><br>
+<a href="#s7">よくある質問</a><br>
+<a href="#s8">まとめ</a><br>
+</div>
+
+<h2 id="s1">名簿は「増やす仕組み」はあっても「整える仕組み」がない</h2>
+<p>多くの会社が、顧客名簿を複数の場所に持っています。表計算ソフトの台帳、予約システムの登録者、会計ソフトの取引先、名刺を打ち込んだリスト。どれも仕事の中で自然に増えていきます。</p>
+<p>問題は、<strong>増やす作業には担当も手順もあるのに、整える作業には誰も割り当てられていない</strong>ことです。結果として、名簿は増え続けながら、少しずつ使えなくなっていきます。</p>
+<blockquote>ご相談を受けた設備会社では、取引先の一覧が1,800件ほどありました。実際に整えてみると、同じ会社が別々に登録されていたものが200件以上。「取引先は何社ですか」という単純な質問に、正確に答えられない状態でした。</blockquote>
+<p>散らかっていること自体は、誰のミスでもありません。<strong>入力する人が違い、入力する時期が違えば、書き方は必ずずれます。</strong> これは仕組みの問題です。</p>
+<h2 id="s2">散らかり方は、だいたい4つの型に分かれる</h2>
+<p>整える前に、何が起きているのかを分けて考えます。まとめて「汚い」と捉えると手が止まりますが、型に分ければ対処はそれぞれ違います。</p>
+<h3>型1：完全な重複</h3>
+<p>まったく同じ内容が2件以上ある状態です。台帳を統合したときや、取り込みを二度実行したときに発生します。<strong>いちばん見つけやすく、いちばん安全に消せる</strong>型です。</p>
+<h3>型2：表記ゆれ</h3>
+<p>同じ相手を指しているのに、書き方が違う状態です。中小企業の名簿でもっとも多いのがこれです。</p>
+<table>
+<tr><th>ゆれの種類</th><th>例</th></tr>
+<tr><td>法人格の位置</td><td>前に付くか、後ろに付くか、省略されているか</td></tr>
+<tr><td>全角と半角</td><td>数字・英字・記号がどちらで入力されているか</td></tr>
+<tr><td>空白の有無</td><td>姓と名の間に空白があるか、ないか</td></tr>
+<tr><td>旧字と新字</td><td>同じ読みで字体だけが違う</td></tr>
+<tr><td>支店名の扱い</td><td>会社名に支店名まで含めているか、別欄か</td></tr>
+</table>
+<h3>型3：情報の食い違い</h3>
+<p>同じ相手の登録が複数あり、それぞれ内容が違う状態です。片方に住所が入っていて、もう片方には取引条件だけが入っている。片方が古い担当者名のまま、といったケースです。<strong>これは自動では決められません。</strong> どちらを残すかは人が決める必要があります。</p>
+<h3>型4：そもそも別人</h3>
+<p>似ているだけで別の相手、という場合です。同姓同名、同じ苗字の家族、同じ屋号の別店舗。<strong>まとめてはいけないもの</strong>です。</p>
+<p>型1と型2は仕組みで大きく減らせます。型3は候補を出すところまで、型4は間違えないための線引きが要ります。この違いを最初に押さえておくと、進め方が決まります。</p>
+<h2 id="s3">Claude Codeが効くのは「候補を出すところ」まで</h2>
+<p>ここが誤解されやすい点なので、先にはっきり書いておきます。</p>
+<p><strong>名寄せは、全自動にしてはいけない作業です。</strong></p>
+<p>理由は単純で、間違えて統合すると元に戻せないからです。2件を1件にまとめた時点で、片方の情報は消えます。あとから「やっぱり別の会社だった」と気づいても、手遅れになります。</p>
+<p>そこで、役割をこう分けます。</p>
+<table>
+<tr><th>工程</th><th>担当</th></tr>
+<tr><td>全件を突き合わせて、重複の候補を洗い出す</td><td>Claude Code</td></tr>
+<tr><td>書き方のゆれを揃えて、比べられる形にする</td><td>Claude Code</td></tr>
+<tr><td>候補を「確実」「要確認」に分けて並べる</td><td>Claude Code</td></tr>
+<tr><td>どちらを残すか、統合してよいかを決める</td><td>人</td></tr>
+<tr><td>決定にそって実際に統合する</td><td>Claude Code</td></tr>
+</table>
+<p>人がやるのは<strong>判断だけ</strong>です。1,800件を目で突き合わせる作業はしません。かわりに、機械が出した200件の候補を確認します。この差が、着手できるかどうかの分かれ目になります。</p>
+<h2 id="s4">実際の進め方は5ステップ</h2>
+<h3>ステップ1：整える前に、そのままの控えを取っておく</h3>
+<p><strong>これが最重要です。</strong> 何をするより先に、いまの名簿をそのままの形で別名保存します。日付を付けたファイル名にしておけば十分です。</p>
+<p>整える作業は、必ずどこかで「やりすぎた」が起きます。控えがあれば戻せます。控えがなければ戻せません。この1手間を省いて後悔した現場を、実際に何度も見てきました。</p>
+<h3>ステップ2：どの欄で同一と判断するかを先に決める</h3>
+<p>名寄せは、比べる欄を決めないと始まりません。ここを曖昧にしたまま頼むと、機械はそれらしい候補を大量に出してきます。</p>
+<p>会社の名簿なら、次のような組み合わせが実務的です。</p>
+<ul>
+<li>法人名だけで判断する。支店違いはまとめない</li>
+<li>法人名と所在地の市区町村までが一致したら同一とみなす</li>
+<li>個人のお客様なら、氏名と生年月日、または氏名と住所の組み合わせ</li>
+</ul>
+<p><strong>「どこまで一致したら同じとみなすか」を1行で言えるようにしてから頼む。</strong> これだけで、出てくる候補の質が変わります。</p>
+<h3>ステップ3：書き方を揃える</h3>
+<p>比べる前に、ゆれを吸収します。ここは機械の得意分野です。</p>
+<p>頼み方は、やってほしい変換を具体的に並べる形にします。</p>
+<ul>
+<li>全角の英数字と記号を半角に揃える</li>
+<li>氏名の間にある空白を取り除く</li>
+<li>法人格の表記を統一する</li>
+<li>前後に入っている余分な空白を削る</li>
+<li>住所の丁目・番地の書き方を揃える</li>
+</ul>
+<p>このとき必ず添えるのが、<strong>「元の値は別の欄に残しておいてください」</strong>という一言です。揃えた値だけにしてしまうと、あとで確認できなくなります。</p>
+<h3>ステップ4：候補を「確実」と「要確認」に分けて出してもらう</h3>
+<p>ここが本題です。ひとまとめの一覧を受け取っても、判断は進みません。分けて出してもらいます。</p>
+<table>
+<tr><th>区分</th><th>中身</th><th>その後</th></tr>
+<tr><td>確実</td><td>揃えたあとの値が完全に一致</td><td>まとめて統合してよい</td></tr>
+<tr><td>要確認</td><td>一部が一致、一部が違う</td><td>1件ずつ人が見る</td></tr>
+<tr><td>別扱い</td><td>似ているが決め手がない</td><td>触らずに残す</td></tr>
+</table>
+<p><strong>要確認の一覧には、どこが違うのかを1列足してもらう</strong>と、確認の速度がまったく変わります。「所在地だけ違う」「担当者名だけ違う」と書かれていれば、判断は数秒で済みます。</p>
+<h3>ステップ5：統合の決まりを決めてから、実行する</h3>
+<p>統合するときは、どちらの値を残すかの基準を先に決めます。</p>
+<ul>
+<li>新しく登録されたほうを残す</li>
+<li>情報が多く埋まっているほうを残す</li>
+<li>取引実績がひもづいているほうを残す</li>
+<li>空欄になっている欄だけ、もう片方から埋める</li>
+</ul>
+<p>最後の考え方が実務では便利です。<strong>片方を消すのではなく、足りない欄を補ってから消す。</strong> これなら情報が減りません。</p>
+<h2 id="s5">つまずきやすい5つの落とし穴</h2>
+<h3>落とし穴1：一度に全部やろうとする</h3>
+<p>1,800件を一度に整えようとすると、確認だけで疲れて止まります。<strong>取引が続いている先だけ、直近2年だけ、というように範囲を切って</strong>始めるのが現実的です。使っていない部分は、あとで構いません。</p>
+<h3>落とし穴2：似ている度合いを機械に任せすぎる</h3>
+<p>「よく似ているものを探して」とだけ頼むと、判断の基準が見えないまま候補が出てきます。<strong>どの欄が一致したから候補になったのか</strong>を必ず出してもらってください。理由が見えない候補は、確認できません。</p>
+<h3>落とし穴3：支店・営業所をまとめてしまう</h3>
+<p>同じ会社の別拠点は、まとめてよい場合と、絶対にまとめてはいけない場合があります。請求先が分かれているなら別です。<strong>「拠点が違うものは統合しない」を最初のルールに入れておく</strong>と事故が減ります。</p>
+<h3>落とし穴4：整えた名簿を、元の場所に戻していない</h3>
+<p>手元で整えて満足してしまい、実際に使っているシステム側は散らかったまま、という状態がよくあります。<strong>どこを正とするかを決めて、そこに反映するまでが作業です。</strong></p>
+<h3>落とし穴5：整えたあと、また散らかる</h3>
+<p>いちばん多いのがこれです。整えても、入力の仕方が変わらなければ半年で元に戻ります。対策は難しくありません。<strong>入力する欄に書き方の例を1行添える</strong>、または<strong>登録時に既存の名簿を先に検索する手順を決める</strong>。この2つで、増え方はかなり抑えられます。</p>
+<h2 id="s6">業種別・どこから手を付けると効くか</h2>
+<table>
+<tr><th>業種</th><th>効きどころ</th></tr>
+<tr><td>建設・工務店</td><td>協力会社の一覧。同じ会社が屋号違いで複数登録されがち</td></tr>
+<tr><td>士業・コンサル</td><td>顧問先の法人名。決算資料の集計時に効いてくる</td></tr>
+<tr><td>美容室・治療院</td><td>来店者の名簿。同一人物の二重登録で来店回数が正しく出ない</td></tr>
+<tr><td>小売・通販</td><td>購入者の住所。表記ゆれで同一世帯が別扱いになる</td></tr>
+<tr><td>教室・スクール</td><td>受講者と保護者の関係。家族の名寄せを間違えない設計が要る</td></tr>
+</table>
+<p>共通しているのは、<strong>「何件あるか」を正しく数えたい場面で最初に困る</strong>という点です。逆に言えば、数を報告する必要がある業務から手を付けると、効果がすぐ見えます。</p>
+<h2 id="s7">よくある質問</h2>
+<h3>Q. 名簿が数千件あります。時間はどれくらいかかりますか。</h3>
+<p>書き方を揃えて候補を出すところまでは、数千件でも短時間で終わります。時間がかかるのは<strong>人が確認する工程</strong>です。候補が200件出たとして、1件10秒で判断できれば1時間かからない計算になります。確認しやすい形で出してもらうことが、そのまま所要時間になります。</p>
+<h3>Q. 途中で間違えて統合してしまったら戻せますか。</h3>
+<p>ステップ1の控えがあれば戻せます。控えがなければ戻せません。<strong>作業前の控えを取ることが、この作業でいちばん大事な手順</strong>だとお考えください。</p>
+<h3>Q. 顧客の個人情報を扱うことになりますが、大丈夫でしょうか。</h3>
+<p>扱う内容には氏名や住所が含まれるため、この懸念はもっともです。何をどこまで渡してよいかを先に社内で決めておくこと、判断に不要な欄は渡す前に外しておくことの2点を、着手前に整理しておくことをおすすめします。<strong>ルールを決めてから始めるほうが、後から止まるより結果的に早い</strong>です。</p>
+<h3>Q. 表記ゆれを完全になくすことはできますか。</h3>
+<p>できません。人が入力する限り、新しいゆれは生まれ続けます。目指すのは<strong>ゼロにすることではなく、定期的に整える形をつくること</strong>です。半年に一度、範囲を決めて見直す。それだけで、名簿は使える状態に保てます。</p>
+<h2 id="s8">まとめ</h2>
+<p>顧客名簿の名寄せについて、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>名簿は<strong>増やす仕組みはあっても、整える仕組みがない</strong>。散らかるのは必然</li>
+<li>散らかり方は<strong>完全重複・表記ゆれ・情報の食い違い・そもそも別人</strong>の4型に分かれる</li>
+<li>Claude Codeが担うのは<strong>候補を出すところまで</strong>。統合の判断は人がする</li>
+<li>手順は<strong>控えを取る・基準を決める・書き方を揃える・候補を分けて出す・決まりを決めて統合する</strong>の5つ</li>
+<li>つまずきは<strong>やりすぎ・理由の見えない候補・拠点の統合・反映漏れ・再発</strong>に集中する</li>
+<li>完全になくすのではなく、<strong>定期的に整える形をつくる</strong>のが現実的な着地点</li>
+</ul>
+<p>名簿が散らかっていること自体は、事業が続いてきた証拠でもあります。ただ、そのままだと「何件あるか」すら答えられません。<strong>整えるのは1回では終わりません。終わらせない形にするのが、いちばん効きます。</strong></p>
+
+<div class="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p>「同じ取引先が何件も登録されている」「集計するたびに数が合わない」「整えたいが、どこから手を付ければよいか分からない」という課題をお持ちの方に向けて、比べる欄の決め方から書き方の揃え方、候補の出し方、統合の基準づくり、再発を防ぐ入力の形まで、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、いま使っている名簿の形を変えずに進められる方法をご提案します。</p>
+<p>導入サポートは3,000円からご用意しています。ご相談は、ココナラのメッセージ機能からお気軽にどうぞ。ご依頼の際は、購入画面に進むボタンからお進みください。</p>
+<div class="price">3,000円〜</div>
+<a href="../index.html#contact">導入サポートに申し込む</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

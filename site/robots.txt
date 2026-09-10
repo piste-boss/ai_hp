@@ -1,4 +1,24 @@
+# Piste AI EVANGELISTS - https://www.piste-ai.com/
 User-agent: *
 Allow: /
 
+# AI クローラー（検索・引用用途）も明示的に許可
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://www.piste-ai.com/sitemap.xml
+# LLM 向けサイト概要: https://www.piste-ai.com/llms.txt

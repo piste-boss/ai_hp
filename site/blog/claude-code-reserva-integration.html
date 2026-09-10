@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × RESERVA連携で予約受付・リマインドをAI自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。">
+<meta name="keywords" content="Claude Code,RESERVA,予約管理,予約システム,リマインド,キャンセル対策,教室,サロン,士業,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-reserva-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × RESERVA連携で予約受付・リマインドをAI自動化">
+  <meta property="og:description" content="Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-reserva-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-reserva-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-27T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × RESERVA連携で予約受付・リマインドをAI自動化">
+  <meta name="twitter:description" content="Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-reserva-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-reserva-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-reserva-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-reserva-integration.html","headline":"Claude Code × RESERVA連携で予約受付・リマインド・キャンセル対策をAI自動化！教室・サロン・士業の予約業務効率化ガイド","alternativeHeadline":"Claude Code × RESERVA連携で予約受付・リマインドをAI自動化","description":"Claude Codeと予約管理システムRESERVAを組み合わせ、予約枠の案内文づくり・前日リマインド・キャンセル対策・予約データ集計をAI自動化する方法を解説。教室・サロン・士業でも取り組める活用シーンと導入ステップを紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-reserva-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-27T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","RESERVA","予約管理","予約システム","リマインド","キャンセル対策","教室","サロン","士業","業務自動化","AI活用"],"wordCount":4340,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × RESERVA連携で予約受付・リマインドをAI自動化","item":"https://www.piste-ai.com/blog/claude-code-reserva-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-reserva-integration.html#faq","mainEntity":[{"@type":"Question","name":"パソコンが得意ではありませんが使えますか。","acceptedAnswer":{"@type":"Answer","text":"日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。"}},{"@type":"Question","name":"予約システムの管理画面と直接つながるのですか。","acceptedAnswer":{"@type":"Answer","text":"下書きの作成や整理を Claude Code が担当し、最終的な登録・公開は人が管理画面で行う運用が安全です。事実確認の工程を残せるためです。"}},{"@type":"Question","name":"教室の個性が消えてしまいませんか。","acceptedAnswer":{"@type":"Answer","text":"これまで書いてきた案内文を見本として読み込ませることで、自店らしい言い回しを保てます。仕上げに担当者の一言を足すのがおすすめです。"}},{"@type":"Question","name":"何から始めるのがよいですか。","acceptedAnswer":{"@type":"Answer","text":"失敗しても影響の小さいよくある質問集の整備から始めると安心です。ひとつ成功体験をつくることが定着への近道です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × RESERVA連携で予約受付・リマインド・キャンセル対策をAI自動化！教室・サロン・士業の予約業務効率化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-27">公開日：2026年7月27日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-reserva-integration.webp" alt="Claude Code × RESERVAで予約案内文・リマインド・キャンセル対策を自動化するイメージ" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>RESERVAで予約を受け付けている教室・サロン・士業などの少人数事業者</li><li><strong>できるようになること：</strong>予約枠の案内文と前日リマインド文の型を作り、予約データからキャンセル傾向や枠の埋まり具合を月次レポートにまとめられる</li><li><strong>必要なもの：</strong>Claude Code と、これまでの案内文・予約枠一覧・予約データをまとめたフォルダ</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「予約の確認作業に毎日追われている」「当日キャンセルが多くて枠が埋まらない」「レッスンごとの案内文を毎回書き直している」。予約システムを導入したのに、その周辺の文章づくりと確認作業が減らないという声をよく聞きます。 この記事では、Anthropic公式のAIコーディングツール Claude Code と、予約管理システム RESERVA の運用を組み合わせ、案内文づくり・リマインド・キャンセル対策をまるごと仕組み化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code とは何か</a></li>
+<li><a href="#sec2">2. 予約システムを入れても手間が減らない理由</a></li>
+<li><a href="#sec3">3. Claude Code は RESERVA の予約運用で何を自動化できますか？</a></li>
+<li><a href="#sec4">4. 業種別の活用シーン</a></li>
+<li><a href="#sec5">5. 導入の4ステップ</a></li>
+<li><a href="#sec6">6. 手作業の予約運用と何が違いますか？</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code とは何か</h2>
+<p><a href="https://code.claude.com/docs/ja/overview" target="_blank" rel="noopener">Claude Code</a> は、Anthropic が公式に提供している AI コーディングツールです。名前に「コーディング」とありますが、できることはプログラム作成だけではありません。パソコンの中にあるファイルを読み取り、内容を理解し、文章を書き、表にまとめ、決まった手順を繰り返し実行してくれます。</p>
+<p>操作は日本語の会話だけで完結します。「先月の予約データから曜日別の埋まり具合を出して」「このレッスンの案内文を3パターン作って」と伝えるだけで作業が進みます。専門知識がなくても扱えるため、教室やサロンでパソコンを使う方であれば十分に活用できます。</p>
+<h2 id="sec2">2. 予約システムを入れても手間が減らない理由</h2>
+<p>RESERVA のような予約システムは、受付そのものを自動化してくれます。しかし現場の手間は、受付の前後に残ったままです。</p>
+<ul><li>レッスンや講座ごとに案内文を書き分ける必要があり、数が増えると更新が追いつかない</li><li>前日の確認案内を手作業で送っており、毎日の固定作業になっている</li><li>当日キャンセルや無断欠席が続いても、原因を整理する時間がとれない</li><li>予約データが溜まっているのに、埋まりやすい枠と埋まりにくい枠を把握できていない</li><li>担当者が変わると案内文のトーンが揺れ、教室の印象が安定しない</li></ul>
+<p>いずれも「考える・書く・整える」作業です。まさに Claude Code が得意とする領域であり、下書きづくりと集計を任せて人は確認と仕上げに集中する分担が有効です。</p>
+<h2 id="sec3">3. Claude Code は RESERVA の予約運用で何を自動化できますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-reserva-integration-01.webp" alt="週次の予約枠を管理する予約台帳のイメージ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>1. 予約枠ごとの案内文づくり</h3>
+<p>「初心者向けヨガ・90分・定員8名・マット貸出あり」といった素材を渡すだけで、予約ページに載せる説明文の下書きを複数パターン作成できます。初回の方向け、経験者向けなど、対象別の書き分けもまとめて依頼できます。一度うまくいった文章は型として保存し、次回は条件だけ差し替えれば数分で用意できます。</p>
+<h3>2. 前日リマインドと当日案内の文面づくり</h3>
+<p>前日の確認案内、持ち物の案内、道順の説明、雨天時の対応。毎回同じことを伝えているなら、テンプレートを整えてしまうのが早道です。季節や時間帯に応じた差分だけを変える形にすれば、送る作業だけが残ります。予約枠を自分の予定表と合わせて管理したい場合は、<a href="claude-code-google-calendar-integration.html">Googleカレンダーとの連携</a>も参考になります。</p>
+<h3>3. キャンセル対策の振り返りと文面改善</h3>
+<p>予約データをもとに、どの曜日・どの時間帯にキャンセルが多いかを整理させます。そのうえで、前日案内の出し方、キャンセル規定の伝え方、振替のご案内といった打ち手の候補を出させ、有望なものだけを人が選んで試します。数字を見ながら文面を改善する流れがつくれます。</p>
+<h3>4. 予約データの集計と月次レポートづくり</h3>
+<p>予約データをまとめたファイルを渡せば、枠ごとの埋まり具合、リピート率、時間帯の傾向などを集計し、読みやすい月次レポートに整えられます。数字が並んだ表ではなく「火曜午前が慢性的に空いています」という文章にまとめてくれるため、少人数の教室でも共有しやすくなります。会計や決済の数字も合わせて見たい場合は、<a href="claude-code-square-integration.html">Squareとの連携</a>で売上データを同じレポートに載せることもできます。</p>
+<h3>5. よくある質問集の整備</h3>
+<p>初回の方から寄せられる同じ質問は、あらかじめ答えを用意しておけば説明の手間が消えます。過去のやりとりを読み込ませれば、質問と答えの一覧に整えられます。予約ページに載せておくだけで、当日の説明が短くなります。</p>
+<h2 id="sec4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>主な悩み</th><th>Claude Code の使いどころ</th></tr>
+<tr><td>ヨガ・フィットネス教室</td><td>クラスごとの説明文づくりが追いつかない</td><td>対象者別の案内文を型にして条件差し替えで再利用</td></tr>
+<tr><td>美容室・サロン</td><td>当日キャンセルで枠が空く</td><td>予約データから傾向を整理し前日案内の文面を改善</td></tr>
+<tr><td>学習塾・スクール</td><td>保護者への案内文づくりに時間がかかる</td><td>定型案内をテンプレート化し季節ごとに差分だけ更新</td></tr>
+<tr><td>士業・コンサル</td><td>初回相談前の事前確認が毎回手作業</td><td>事前確認事項の案内文とよくある質問集を整備</td></tr>
+<tr><td>整体・治療院</td><td>初回の方への説明を毎回繰り返している</td><td>施術内容と流れを1枚にまとめた案内文を用意</td></tr>
+</table>
+<h2 id="sec5">5. 導入の4ステップ</h2>
+<ol><li><strong>目的を1つに絞る</strong>：最初から全部を自動化しようとせず、案内文づくりなど一番つらい業務を1つ選びます。</li><li><strong>材料を用意する</strong>：これまでの案内文、予約枠の一覧、予約データを1つのフォルダにまとめます。過去の良い文章がそのまま「自店らしさ」の見本になります。</li><li><strong>Claude Code に日本語で指示する</strong>：「このフォルダの内容をふまえて、初心者向けクラスの案内文を3案作って」と伝えるだけです。出てきた案を見ながら「もう少し丁寧に」「短くして」と調整します。</li><li><strong>小さく試して広げる</strong>：2週間ほど運用して手応えがあれば、リマインド文面、月次レポートへと対象を広げます。うまくいった指示は保存しておくと、次回から同じ品質で再現できます。</li></ol>
+<h2 id="sec6">6. 手作業の予約運用と何が違いますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-reserva-integration-02.webp" alt="前日リマインドの案内をお客様へ届けるイメージ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<table>
+<tr><th>項目</th><th>これまでの手作業</th><th>Claude Code を使った運用</th></tr>
+<tr><td>案内文の作成</td><td>1本あたり20〜40分かかる</td><td>下書きが数分で出るため確認と仕上げに集中できる</td></tr>
+<tr><td>前日の確認案内</td><td>毎日その都度書いている</td><td>テンプレートを整え差分だけ変えて送れる</td></tr>
+<tr><td>文章のトーン</td><td>書く人によってばらつく</td><td>見本を読み込ませることで自店らしさを保てる</td></tr>
+<tr><td>キャンセル対策</td><td>思いつきに頼りがち</td><td>予約データを踏まえた打ち手を複数比較できる</td></tr>
+<tr><td>枠の埋まり具合</td><td>感覚で判断している</td><td>曜日・時間帯ごとの傾向を数字で把握できる</td></tr>
+</table>
+<h2 id="sec7">7. 運用上の注意点</h2>
+<ul><li><strong>公開前は必ず人が確認する</strong>：料金、所要時間、定員、キャンセル規定など事実に関わる部分は、自分の目で確かめてから公開します。</li><li><strong>誇大な表現を避ける</strong>：「必ず効果が出る」といった表現は使わず、実際に提供できる価値を正確に伝えます。</li><li><strong>お客様の個人情報を扱わない</strong>：氏名などの個人情報が含まれるデータは、そのまま読み込ませないよう運用ルールを決めておきます。</li><li><strong>自店らしさを失わない</strong>：整いすぎた文章はどの教室でも同じに見えます。担当者の言葉を1〜2行足すだけで印象が変わります。</li><li><strong>管理画面の権限管理</strong>：予約システムの管理画面を扱う担当者は必要最小限にとどめ、共有の範囲を明確にします。</li></ul>
+<h2 id="sec8">よくある質問</h2>
+<p><strong>パソコンが得意ではありませんが使えますか。</strong></p>
+<p>日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。</p>
+<p><strong>予約システムの管理画面と直接つながるのですか。</strong></p>
+<p>下書きの作成や整理を Claude Code が担当し、最終的な登録・公開は人が管理画面で行う運用が安全です。事実確認の工程を残せるためです。</p>
+<p><strong>教室の個性が消えてしまいませんか。</strong></p>
+<p>これまで書いてきた案内文を見本として読み込ませることで、自店らしい言い回しを保てます。仕上げに担当者の一言を足すのがおすすめです。</p>
+<p><strong>何から始めるのがよいですか。</strong></p>
+<p>失敗しても影響の小さいよくある質問集の整備から始めると安心です。ひとつ成功体験をつくることが定着への近道です。</p>
+<h2 id="sec9">まとめ</h2>
+<p>予約業務の負担は、受付そのものではなく「案内文」と「確認作業」に集中しています。しかし現場は日々の施術やレッスンで手一杯で、そこに時間を割くのは簡単ではありません。Claude Code に下書きづくりと集計を任せ、人は事実確認と仕上げに集中する。この分担ができれば、少人数の教室やサロンでも予約枠を安定して埋め続けられます。</p>
+<p>大切なのは、いきなり完璧を目指さず、効果を感じやすい業務から小さく始めることです。ひとつの仕組みが動き出せば、そこを起点に運営全体の効率化が広がっていきます。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方は、ココナラのメッセージ機能からお気軽にご相談ください。導入サポート（1時間 ¥10,000 税込）で、あなたの業務に合わせた自動化の第一歩をいっしょに設計します。まずは購入画面に進むボタンからお進みください。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「案内文を毎回書き直すのがつらい」「当日キャンセルで枠が空いてしまう」という教室・サロン・士業の方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラで相談する</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-calendly-integration.html"><img src="../images/blog-claude-code-calendly-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Calendly連携で予約管理・商談スケジュールをAI自動化</span></a><a class="seo-related-card" href="claude-code-google-calendar-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Googleカレンダー連携で予定調整を自動化</span></a><a class="seo-related-card" href="claude-code-square-integration.html"><img src="../images/blog-claude-code-square-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Square連携でPOS・決済・予約・在庫管理をAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

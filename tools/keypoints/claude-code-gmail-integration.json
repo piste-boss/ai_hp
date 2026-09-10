@@ -1,0 +1,1 @@
+{"target": "問い合わせや営業フォローのメール対応に追われている中小企業の経営者・担当者", "outcome": "Gmail の受信メールをAIで仕分けし、返信ドラフトの自動作成とフォローメールの送信予約まで組める", "requirement": "Claude Code と、Gmail API の有効化と Gmail MCP サーバーの設定"}

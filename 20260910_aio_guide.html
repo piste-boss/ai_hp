@@ -1,0 +1,880 @@
+<title>AIに引用される7か条</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --ground: #F3F5F7;
+    --surface: #FFFFFF;
+    --ink: #16202B;
+    --muted: #5F6B78;
+    --accent: #1F5FA8;
+    --accent-soft: #E3EDF8;
+    --marker: #FFE38A;
+    --marker-ink: #16202B;
+    --line: #D7DDE3;
+    --ok: #1E7A4C;
+    --ok-soft: #DDF1E5;
+    --warn: #A8641C;
+    --warn-soft: #FBEBD3;
+    --ng: #B33A3A;
+    --ng-soft: #F8DEDE;
+    --code-bg: #EAEEF2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0E141B;
+      --surface: #161D26;
+      --ink: #E7ECF1;
+      --muted: #98A4B1;
+      --accent: #7AB4F5;
+      --accent-soft: #1C2B3F;
+      --marker: #5A4A12;
+      --marker-ink: #F3E6B4;
+      --line: #2A3441;
+      --ok: #6FD39A;
+      --ok-soft: #14301F;
+      --warn: #E8B36A;
+      --warn-soft: #3A2A12;
+      --ng: #F08A8A;
+      --ng-soft: #3D1C1C;
+      --code-bg: #1F2833;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0E141B;
+    --surface: #161D26;
+    --ink: #E7ECF1;
+    --muted: #98A4B1;
+    --accent: #7AB4F5;
+    --accent-soft: #1C2B3F;
+    --marker: #5A4A12;
+    --marker-ink: #F3E6B4;
+    --line: #2A3441;
+    --ok: #6FD39A;
+    --ok-soft: #14301F;
+    --warn: #E8B36A;
+    --warn-soft: #3A2A12;
+    --ng: #F08A8A;
+    --ng-soft: #3D1C1C;
+    --code-bg: #1F2833;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    padding-block: 48px 96px;
+    padding-inline: 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .mono {
+    font-family: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .eyebrow {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 12px 0 16px;
+    text-wrap: balance;
+  }
+  .lead { font-size: 17px; color: var(--ink); margin: 0; max-width: 40em; }
+  .lead b { font-weight: 700; }
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  h3 { font-size: 17px; font-weight: 700; margin: 0 0 8px; line-height: 1.4; }
+  p { margin: 0 0 14px; }
+  section { margin-top: 64px; scroll-margin-top: 24px; }
+  .sec-label {
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .sub { color: var(--muted); font-size: 15px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* 目次 */
+  .toc { margin-top: 28px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 20px; font-size: 14px; }
+  .toc a { text-decoration: none; color: var(--ink); display: flex; gap: 8px; }
+  .toc a:hover { color: var(--accent); }
+  .toc .n { color: var(--muted); font-size: 12px; padding-top: 2px; }
+  @media (max-width: 560px) { .toc { grid-template-columns: 1fr 1fr; } }
+
+  /* 要点3行 */
+  .keypoints {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 20px 24px;
+    margin: 32px 0 0;
+    display: grid;
+    gap: 10px;
+  }
+  .keypoints div { display: grid; grid-template-columns: 6em 1fr; gap: 12px; align-items: baseline; }
+  .keypoints dt { font-size: 12px; color: var(--muted); }
+  .keypoints dd { margin: 0; }
+  @media (max-width: 480px) { .keypoints div { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* 引用モチーフ */
+  .ai-answer {
+    margin: 24px 0 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 18px 22px;
+    font-size: 15px;
+  }
+  .ai-answer .q { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .ai-answer p { margin: 0 0 8px; }
+  .ai-answer cite {
+    display: inline-block;
+    font-style: normal;
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 1px 8px;
+    border-radius: 3px;
+    margin-left: 4px;
+    white-space: nowrap;
+  }
+  mark { background: var(--marker); color: var(--marker-ink); padding: 0 2px; }
+
+  /* 表 */
+  .tbl-wrap { overflow-x: auto; margin: 0 0 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.6; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  thead th { font-size: 12px; color: var(--muted); font-weight: 500; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  tbody th { font-weight: 700; white-space: nowrap; }
+  td.num { font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; font-size: 12px; padding: 1px 9px; border-radius: 999px; white-space: nowrap; font-weight: 500; }
+  .pill.ok { background: var(--ok-soft); color: var(--ok); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill.ng { background: var(--ng-soft); color: var(--ng); }
+  .tbl-note { font-size: 13px; color: var(--muted); margin: 0; }
+
+  /* 調査カード */
+  .studies { display: grid; gap: 12px; margin: 16px 0 20px; }
+  .study { background: var(--surface); border: 1px solid var(--line); padding: 16px 20px; display: grid; grid-template-columns: 9.5em 1fr; gap: 14px; }
+  .study .who { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .study .who b { display: block; color: var(--ink); font-size: 14px; font-family: "Zen Kaku Gothic New", sans-serif; letter-spacing: 0; }
+  .study .fig { font-size: 26px; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+  .study .fig small { font-size: 13px; color: var(--muted); margin-left: 6px; }
+  .study p { margin: 0; font-size: 14.5px; }
+  .study .so { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
+  .study .so b { color: var(--ink); }
+  @media (max-width: 520px) { .study { grid-template-columns: 1fr; gap: 6px; } }
+  .implications { background: var(--accent-soft); padding: 18px 22px; border-radius: 4px; }
+  .implications h3 { margin-bottom: 8px; }
+  .implications ol { margin: 0; padding-left: 1.3em; }
+  .implications li { margin-bottom: 6px; }
+
+  /* 7か条 */
+  .rule { display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 28px 0; border-top: 1px solid var(--line); }
+  .rule:last-of-type { border-bottom: 1px solid var(--line); }
+  .rule .no { font-size: 28px; line-height: 1; color: var(--accent); padding-top: 4px; }
+  .rule h3 { font-size: 19px; margin-bottom: 10px; }
+  .rule .why { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+  .rule ul { margin: 0 0 8px; padding-left: 1.2em; }
+  .rule li { margin-bottom: 4px; }
+  .rule li::marker { color: var(--muted); }
+  .todo { font-size: 12px; color: var(--muted); margin-right: 6px; }
+  @media (max-width: 480px) { .rule { grid-template-columns: 1fr; gap: 6px; } .rule .no { font-size: 22px; } }
+
+  /* Before / After */
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0 8px; }
+  .ba > div { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; font-size: 14px; line-height: 1.7; }
+  .ba .tag { font-size: 11px; margin-bottom: 6px; }
+  .ba .before .tag { color: var(--ng); }
+  .ba .after .tag { color: var(--ok); }
+  .ba p { margin: 0; }
+  @media (max-width: 560px) { .ba { grid-template-columns: 1fr; } }
+
+  /* 構造化データ */
+  .schema-list { display: grid; gap: 0; }
+  .schema-list > div { display: grid; grid-template-columns: 9em 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .schema-list > div:last-child { border-bottom: 1px solid var(--line); }
+  .schema-list .t { font-size: 13px; line-height: 1.5; }
+  .schema-list .t small { display: block; color: var(--muted); font-family: "Zen Kaku Gothic New", sans-serif; letter-spacing: 0; font-size: 12px; }
+  .schema-list p { margin: 0 0 4px; font-size: 14.5px; }
+  .schema-list ul { margin: 0; padding-left: 1.2em; font-size: 14px; }
+  @media (max-width: 480px) { .schema-list > div { grid-template-columns: 1fr; gap: 4px; } }
+  pre { background: var(--code-bg); border: 1px solid var(--line); padding: 14px 16px; overflow-x: auto; font-family: "IBM Plex Mono", Menlo, monospace; font-size: 12.5px; line-height: 1.6; margin: 12px 0 8px; border-radius: 4px; }
+  pre .c { color: var(--muted); }
+  .verdict { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0 18px; }
+  .verdict > div { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; font-size: 14px; }
+  .verdict .tag { font-size: 11px; margin-bottom: 6px; }
+  .verdict .yes .tag { color: var(--ok); }
+  .verdict .no .tag { color: var(--ng); }
+  .verdict p { margin: 0 0 6px; }
+  @media (max-width: 560px) { .verdict { grid-template-columns: 1fr; } }
+
+  /* やらなくていい */
+  .dont { display: grid; gap: 12px; }
+  .dont div { display: grid; grid-template-columns: 1.2em 1fr; gap: 10px; }
+  .dont .x { color: var(--ng); font-weight: 700; }
+  .dont b { font-weight: 700; }
+
+  /* チェックリスト */
+  .check { list-style: none; padding: 0; margin: 0; background: var(--surface); border: 1px solid var(--line); }
+  .check li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+  .check li:last-child { border-bottom: 0; }
+  .check input { width: 18px; height: 18px; margin: 5px 0 0; accent-color: var(--accent); }
+  .check label { cursor: pointer; }
+  .check small { display: block; color: var(--muted); font-size: 13px; }
+
+  /* 順番 */
+  .plan { display: grid; gap: 0; }
+  .plan > div { display: grid; grid-template-columns: 7em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .plan > div:first-child { border-top: 1px solid var(--line); }
+  .plan .when { font-size: 12px; color: var(--muted); padding-top: 4px; }
+  .plan ul { margin: 0; padding-left: 1.2em; }
+  @media (max-width: 480px) { .plan > div { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* ホットペッパー */
+  .hpb-lever { display: grid; gap: 0; }
+  .hpb-lever > div { display: grid; grid-template-columns: 8em 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .hpb-lever > div:last-child { border-bottom: 1px solid var(--line); }
+  .hpb-lever h4 { margin: 0; font-size: 15px; font-weight: 700; line-height: 1.5; }
+  .hpb-lever h4 small { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+  .hpb-lever ul { margin: 0; padding-left: 1.2em; font-size: 14.5px; }
+  .hpb-lever li { margin-bottom: 3px; }
+  .ai-tag { display: inline-block; font-size: 11px; color: var(--accent); background: var(--accent-soft); padding: 0 7px; border-radius: 3px; margin-left: 4px; vertical-align: 1px; }
+  @media (max-width: 480px) { .hpb-lever > div { grid-template-columns: 1fr; gap: 4px; } }
+
+  code { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 0.9em; background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  .src { font-size: 13px; color: var(--muted); margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .src h2 { font-size: 15px; color: var(--ink); margin-bottom: 8px; }
+  .src ol { margin: 6px 0 0; padding-left: 1.4em; }
+  .src li { margin-bottom: 4px; }
+  .src a { word-break: break-all; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow mono"><span>Piste AI EVANGELISTS</span><span>piste-ai.com</span><span>2026-09-10</span></div>
+    <h1>AIに引用される7か条</h1>
+    <p class="lead">AIO（AI検索最適化）とは、Google の AI による概要・AIモード、ChatGPT search、Perplexity、Copilot が回答を組み立てるときに、<b>自社ページが「出典」として選ばれる</b>ための対策です。順位を上げるSEOとは、見られる単位も評価される点も違います。</p>
+
+    <dl class="keypoints">
+      <div><dt class="mono">対象</dt><dd>piste-ai.com の運営者（石川さん）と、ブログ記事を書く人。9章はサロン顧客への提案用</dd></div>
+      <div><dt class="mono">得られること</dt><dd>記事1本を「AIが引用しやすい形」に直す判断基準、構造化データの作り方、再調査で見つかった修正点と着手順</dd></div>
+      <div><dt class="mono">前提</dt><dd>2026-09-10 の診断・実装と、同日夕方に全155記事を機械判定した再調査（audit/20260910/aio_summary.json）、および 2025〜2026 年の米国調査</dd></div>
+    </dl>
+
+    <ol class="toc">
+      <li><a href="#s1"><span class="n mono">01</span>SEOとの違い</a></li>
+      <li><a href="#s2"><span class="n mono">02</span>米国の最新調査</a></li>
+      <li><a href="#s3"><span class="n mono">03</span>再調査の結果</a></li>
+      <li><a href="#s4"><span class="n mono">04</span>7か条</a></li>
+      <li><a href="#s5"><span class="n mono">05</span>構造化データの作り方</a></li>
+      <li><a href="#s6"><span class="n mono">06</span>やらなくていいこと</a></li>
+      <li><a href="#s7"><span class="n mono">07</span>公開前チェック</a></li>
+      <li><a href="#s8"><span class="n mono">08</span>修正の順番</a></li>
+      <li><a href="#s9"><span class="n mono">09</span>ホットペッパー×AI</a></li>
+    </ol>
+
+    <div class="ai-answer" aria-label="AI回答のイメージ">
+      <div class="q mono">例：ChatGPT に「愛知県で Claude Code の導入支援をしている会社は？」と聞いたとき</div>
+      <p>愛知県碧南市の株式会社Piste が、Claude Code の導入サポートを1時間1万円（税込）で提供しています。<mark>従業員向けの研修は人材開発支援助成金の対象</mark>で、全12コマ構成です。<cite>piste-ai.com</cite></p>
+      <p style="font-size:13px;color:var(--muted);margin:0">AIは記事全体ではなく、<b>言い切った一文・一段落</b>を抜いて出典を付けます。この「抜かれる一文」を各ページに用意するのがAIO対策の中心です。</p>
+    </div>
+  </header>
+
+  <section id="s1">
+    <div class="sec-label mono">01 / 違い</div>
+    <h2>SEOとAIOは、何が違うのか</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th></th><th>検索SEO</th><th>AIO</th></tr></thead>
+        <tbody>
+          <tr><th>ゴール</th><td>検索結果で上位に出て、クリックされる</td><td>AIの回答文の中で、出典として名前が出る</td></tr>
+          <tr><th>見られる単位</th><td>ページ全体</td><td>段落・一文・表の1行</td></tr>
+          <tr><th>評価されるもの</th><td>キーワード、被リンク、内部導線</td><td>言い切りの明確さ、一次情報、著者と日付の信頼性、表記の一貫性</td></tr>
+          <tr><th>前提</th><td>インデックスされていること</td><td>同じ。加えて AI クローラーが読めること</td></tr>
+          <tr><th>計測</th><td>Search Console の検索パフォーマンス</td><td>Search Console「生成AI機能」＋ GA4 の参照元（chatgpt.com など）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">Google は公式ガイドで「AI機能に出るために新しい機械可読ファイルや AI 用テキストファイル、マークアップを作る必要はない。追加すべき特別な構造化データもない」と明言しています（出典1）。土台はSEOと同じで、その上に「引用される書き方」を足すのがAIOです。</p>
+  </section>
+
+  <section id="s2">
+    <div class="sec-label mono">02 / 調査</div>
+    <h2>米国の最新調査が示していること</h2>
+    <p class="sub">2025年7月〜2026年6月に公開された調査から、小規模サイトの運用判断に直結するものを選びました。数字はすべて米国の英語検索が対象で、日本語検索でそのまま同じ値になるわけではありません。方向性の根拠として使います。</p>
+
+    <div class="studies">
+      <div class="study">
+        <div class="who mono"><b>Ahrefs</b>2026年2月<br>30万キーワード<br>2025年12月データ</div>
+        <div>
+          <div class="fig">−58%<small>1位のクリック率</small></div>
+          <p>AIによる概要が表示される検索では、1位ページのクリック率が58%下がる。2025年4月の同調査では34.5%減だったので、8か月で影響がほぼ倍になった。</p>
+          <p class="so"><b>含意:</b> 上位に出ても、クリックは以前の半分以下。引用されること自体を「認知の獲得」と捉え、料金と問い合わせ先をAIが読める形でページに置く。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>Pew Research</b>2025年7月<br>米国成人900人<br>68,879検索を追跡</div>
+        <div>
+          <div class="fig">8% <small>対 15%</small></div>
+          <p>AI要約があるページでは通常の検索結果をクリックした割合が8%、ない場合は15%。AI要約の中のリンクをクリックしたのは全体の1%。AI要約を見た後に検索を終えた割合は26%（通常は16%）。質問文の検索では60%でAI要約が出た。</p>
+          <p class="so"><b>含意:</b> 「〜とは」「〜できますか」の質問文で AI 要約はほぼ出る。ブログの見出しを質問文にする根拠。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>AirOps</b>2026年3月<br>15,000プロンプト<br>548,534ページ</div>
+        <div>
+          <div class="fig">15%<small>取得されたページのうち引用された割合</small></div>
+          <p>ChatGPT が回答生成時に読んだページのうち、実際に出典として出たのは15%。引用されたページの55.8%は Google 上位20位以内で、1位ページは21位以下の3.5倍引用された。プロンプトの89.6%で追加検索（ファンアウト）が起き、引用の32.9%はその追加検索でしか見つからないページだった。追加検索の95%は検索ボリュームがゼロの質問。</p>
+          <p class="so"><b>含意:</b> Google で上位にいることが引用の前提。同時に「碧南 建設業 日報 AI」のような検索数ゼロの具体的な質問に答える記事が、追加検索で拾われる。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>AirOps</b>2026年4月<br>16,851クエリ×3回<br>353,799ページ</div>
+        <div>
+          <div class="fig">41.0% <small>対 約30%</small></div>
+          <p>見出しが質問文と強く一致するページは41.0%の確率で引用され、弱いページは約30%。見出しの一致が最も強いページ内要因だった。文字量は500〜2,000語が最良で、5,000語超は500語未満より劣る。公開後30〜89日のページが最も引用され、2年以上前のものは減る。JSON-LD のあるページは38.5%、ないページは32.0%。</p>
+          <p class="so"><b>含意:</b> 長い網羅記事より、1つの質問に答える中くらいの記事を分けて書く。主力記事は3か月ごとに実質更新する。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>HubSpot × Wix</b>2026年6月<br>100万件超の引用<br>5つのAIエンジン</div>
+        <div>
+          <div class="fig">更新日<small>公開日より強い予測因子</small></div>
+          <p>引用と相関したページ内要素は、統計・数値データ、目に見える「最終更新日」、著者プロフィール、外部への出典リンク、FAQ セクション（構造化データ付きだとより強い）。H2 が7〜15個のページが最も引用された。タイトルは「〜とは」が Google 系で、「X vs Y」が ChatGPT で、「〜する方法」が AIモードと Perplexity で強い。</p>
+          <p class="so"><b>含意:</b> 7か条の 4・6 の裏付け。更新日は構造化データだけでなく本文に表示する。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>Ahrefs</b>2026年5月<br>1,885ページ＋対照4,000<br>前後30日を比較</div>
+        <div>
+          <div class="fig">±2%<small>構造化データ追加後の引用の変化</small></div>
+          <p>JSON-LD を新たに追加した1,885ページを対照群と比べたところ、AIによる概要では−4.6%、AIモードでは+2.4%、ChatGPT では+2.2%。後者2つは誤差の範囲。結論は「すでにAIに見えているページに構造化データを足しても引用は増えない」。</p>
+          <p class="so"><b>含意:</b> AirOps の「JSON-LD ありは引用率が高い」は相関で、ちゃんと運用されたサイトほど構造化データもあるというだけの可能性が高い。構造化データは引用を増やす道具ではなく、事実を誤読させない保険として作る（5章）。</p>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="who mono"><b>Semrush</b>2026年<br>60万キーワード<br>2025年11月〜2026年4月</div>
+        <div>
+          <div class="fig">+71%<small>商用検索でのAI概要の出現</small></div>
+          <p>AIによる概要の出現率は2025年7月に約25%でピーク、11月に15.69%まで調整された。その後6か月で、購入・比較目的の商用検索に出る割合が71%増えた。</p>
+          <p class="so"><b>含意:</b> 「Claude Code 導入 費用」「AI研修 助成金 いくら」のような比較・料金の検索でも AI 要約が出る。サービスページに料金・所要時間・対象を明記する。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="implications">
+      <h3>調査から、このサイトが変えること</h3>
+      <ol>
+        <li>Google 上位が引用の前提。SEOの基本（計測・canonical・サイトマップ・内部リンク）は維持する。</li>
+        <li>答えは冒頭に置く。AIはページ冒頭30%を優先的に抜く（AirOps）。</li>
+        <li>H2 を読者の質問文にそろえる。見出しの一致が最強のページ内要因。</li>
+        <li>1記事500〜2,000語で1つの質問に答える。長い網羅記事は分割する。</li>
+        <li>主力記事は3か月ごとに実質更新し、更新日を本文に表示する。</li>
+        <li>検索数ゼロの具体的な質問（業種×地域×業務）に答える記事を書く。追加検索で拾われる。</li>
+        <li>構造化データは正確さのために作り、引用増を期待しない。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-label mono">03 / 再調査</div>
+    <h2>piste-ai.com の再調査結果（2026-09-10 夕方）</h2>
+    <p class="sub">7か条と米国調査の含意を、本番サイトと <code>site/</code> の全171ページ（ブログ155記事）に当てて機械判定しました。判定スクリプトと記事ごとの結果は <code>audit/20260910/audit_aio.py</code> と <code>aio_articles.csv</code> にあります。</p>
+
+    <h3>本番で起きていた2つの事故（同日 17:30 頃に解消済み）</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>事象</th><th>確認した事実</th><th></th></tr></thead>
+        <tbody>
+          <tr><th>GA4 の二重発火</th><td class="num">ブログ155記事が、集約用の <code>/js/analytics.js</code>（GA4 設定入り）と直書きの gtag の両方を読み込んでいる。本番の記事URLで確認済み。トップページは単発。14:56 から再デプロイまでの約2時間半、ブログのページビューが2倍で記録された</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>正規URLの不整合</th><td class="num">本番では <code>.html</code> 付きURLが拡張子なしへ 301 する。一方、ブログ161記事の canonical・og:url・JSON-LD の @id、サイトマップ168 URL、feed、llms.txt 160件、記事内の関連記事リンク465本は <code>.html</code> 付きのまま。canonical がリダイレクト先を指していた。トップ5ページの canonical だけ拡張子なし</td><td><span class="pill ok">解消</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>原因は1つです。公開手順書（<code>.Codex/commands/seo-publish.md</code>）では <code>tools/release_build.py</code> で変換した <code>audit/20260910/release/public</code> からデプロイする決まりで、10:59 のリリース（deploy 6aa20f07）はそのとおりでした。ところが 14:56 のデプロイ「add phone, GSC verification meta, SNS sameAs」（deploy 6aa2469f）は <code>site/</code> 直下から行われ、変換前のファイルで本番を上書きしました。本番のトップページは <code>site/index.html</code> と完全一致します。</p>
+    <p>再調査ののち、手順書どおり <code>seo_build.py</code> → <code>release_build.py</code> → <code>verify_release.py</code>（エラー0）→ テスト4件合格 → 確認URLで検証 → 本番デプロイ（deploy 6aa25188）を実行しました。本番で確認した結果は、記事の canonical が拡張子なし、旧 <code>.html</code> は 301、GA4 は analytics.js の1回だけ（直書き0）、サイトマップ170 URL すべて拡張子なし、feed と llms.txt も同形式、電話番号は保持。GA4 のブログ計測は <b>9/10 14:56〜17:30 頃だけ二重</b>なので、分析時はこの区間を除外してください。あわせて CLAUDE.md の「正規URLは .html 付き」「site/ から直接デプロイ」の記述を公開手順に書き換えました。</p>
+
+    <h3>7か条ごとの判定（155記事）</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>結果</th><th></th></tr></thead>
+        <tbody>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">1. 見つかる状態</th></tr>
+          <tr><th>canonical / OGP / Article / BreadcrumbList</th><td class="num">155記事すべてに設置。author は Person の @id 参照、パンくずは4階層。JSON-LD の構文エラー 0</td><td><span class="pill ok">済み</span></td></tr>
+          <tr><th>Organization / Person</th><td>@id で連携済み。about.html に Person（ProfilePage）。住所・電話・sameAs（X・Instagram・Threads・ココナラ・LINE）あり。YouTube が sameAs にない</td><td><span class="pill ok">済み</span></td></tr>
+          <tr><th>FAQPage</th><td class="num">再調査時点で54記事が未設置だった。原因は seo_build.py が h3 形式の FAQ しか読めなかったこと。<code>.faq-item</code> 形式と <code>&lt;p&gt;&lt;strong&gt;</code> 形式に対応させ、151記事に設置済み（同日夕方）。残り4記事は FAQ 節がないか見出しが「よくある質問」でない</td><td><span class="pill ok">ほぼ解消</span></td></tr>
+          <tr><th>robots.txt / llms.txt / feed</th><td class="num">AIクローラー許可、llms.txt 162記事、feed 30件。URL は再デプロイで拡張子なしに統一</td><td><span class="pill ok">済み</span></td></tr>
+          <tr><th>Bing Webmaster Tools</th><td>未登録のまま</td><td><span class="pill ng">未対応</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">2. 冒頭で言い切る</th></tr>
+          <tr><th>要点3行</th><td class="num">再調査時点では155記事すべてが目次のコピーだった。同日夜に全155記事を「対象・できるようになること・必要なもの」の3行に書き換え（tools/keypoints/{slug}.json を seo_build.py が読む方式）</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>最初の H2 までの前置き</th><td class="num">中央値497字。600字超が22記事</td><td><span class="pill ok">おおむね良</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">3. 質問と答えの形</th></tr>
+          <tr><th>質問形の H2</th><td class="num">再調査時点では150記事でゼロ。同日夜に全155記事で H2 を2本ずつ読者の質問文に書き換え、目次も同期</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>本文量 / H2 数</th><td class="num">1,500〜5,000字が146記事、5,000〜8,000字が9記事（中央値3,502字）。H2 は全記事 7〜15 個（中央値10）。米国調査の最適レンジに収まっている</td><td><span class="pill ok">良好</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">4. 一次情報</th></tr>
+          <tr><th>実測・検証の記述</th><td class="num">「検証」「実測」「〜分に短縮」などの語が1つもない記事が80。数値の根拠となる独自事例は0本。実測データは石川さんの案件からしか出せないため未着手</td><td><span class="pill warn">要データ</span></td></tr>
+          <tr><th>外部の一次資料リンク</th><td class="num">再調査時点では60記事がゼロ。同日夜に該当記事すべてへ公式サイト・公式ドキュメント（実在を確認済み）へのリンクを1本ずつ追加。あわせて全155記事の本文中に関連記事リンクを1〜2本追加</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">5. 表記をそろえる</th></tr>
+          <tr><th>支援実績</th><td class="num">再調査時点では JSON-LD が「200社以上」、本文は「70社以上」77記事・「110社以上」6記事で不一致だった。石川さんの指示で全ページ・JSON-LD・llms.txt を「400社以上」に統一</td><td><span class="pill ok">統一済み</span></td></tr>
+          <tr><th>料金</th><td class="num">「導入サポート 税込3,000円」「3,000円〜」が23記事に残っていた。トップの「1時間 ¥10,000（税込）」に統一</td><td><span class="pill ok">統一済み</span></td></tr>
+          <tr><th>CTA</th><td class="num">「ココナラで相談する」が自社フォームへ飛んでいた17記事を、ココナラのプロフィール（coconala.com/users/2208051）へ変更</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>電話番号</th><td>再調査時点では全ページが 090 番号、特商法ページだけ 0566 番号だった。石川さんの指示で 0566-48-6580 に統一（フッター・about・aichi・特商法・JSON-LD）</td><td><span class="pill ok">統一済み</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">6. 誰が・いつ</th></tr>
+          <tr><th>著者・公開日の表示</th><td class="num">155記事すべてに本文表示あり（著者は about.html へリンク）</td><td><span class="pill ok">済み</span></td></tr>
+          <tr><th>更新日</th><td class="num">今回の書き換えは実質的な内容変更なので、全155記事の dateModified を 2026-09-10 にし、本文にも「更新日」を表示（tools/modified.json で管理）。以後は内容を変えた記事だけ更新する</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>title</th><td class="num">短縮済み（中央値59字、接尾辞込み）。本体が35字を超えるものが79記事。検索結果では末尾が切れる</td><td><span class="pill warn">一部</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">導線・画像</th></tr>
+          <tr><th>関連記事</th><td class="num">全記事に関連カード3枚に加え、本文中のリンクも全155記事に追加済み</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>色コントラスト</th><td class="num">ヘッドレスブラウザで実測。実害は「白文字×LINE緑（2.3:1）」と「白文字×金色バッジ（2.9:1）」の2種類で、LINE緑を #05823a（4.9:1）、バッジ背景を濃い金（5.8:1）に変更</td><td><span class="pill ok">解消</span></td></tr>
+          <tr><th>画像</th><td class="num">width / height / alt は全記事OK。非 WebP が1記事（moneyforward-mcp-accounting）</td><td><span class="pill ok">ほぼ済み</span></td></tr>
+          <tr><th colspan="3" style="font-weight:500;color:var(--muted);font-size:12px;padding-top:14px">7. 計測</th></tr>
+          <tr><th>Google 生成AI機能での表示</th><td class="num">28日間で119表示・29ページ（Instagram 記事53、トップ7、スマレジ7）</td><td><span class="pill ok">露出あり</span></td></tr>
+          <tr><th>ChatGPT・Perplexity・Claude での引用</th><td>未確認。GA4 の AI 参照元レポートも未作成</td><td><span class="pill warn">未計測</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">午前の CLAUDE.md にあった「137記事に GA4 未設置」「/about/ 未作成」「正規URLは .html 付き」などは同日中の実装で古くなっており、後者は今回の事故の遠因でした。CLAUDE.md は夕方に公開手順・残タスクの現状に書き換え済みです。</p>
+  </section>
+
+  <section id="s4">
+    <div class="sec-label mono">04 / 要点</div>
+    <h2>7か条（優先順）</h2>
+    <p class="sub">番号は取り組む順番です。上ほど効果が大きく、下は上ができてから効きます。</p>
+
+    <article class="rule">
+      <div class="no mono">1</div>
+      <div>
+        <h3>まず「見つかる」状態を切らさない</h3>
+        <p class="why">インデックスされていないページは、どんなに良い文章でも引用されません。AirOps の調査でも引用の55.8%は Google 上位20位以内のページでした。新しい記事ほど見えていなかったのが、これまでの最大の損失です。</p>
+        <ul>
+          <li>新規記事は公開時に canonical・OGP・Article スキーマ・サイトマップ・feed を必ず付ける（公開ルールどおり）</li>
+          <li><span class="todo mono">15分</span>Bing Webmaster Tools に登録し、Search Console からインポートしてサイトマップを提出する</li>
+          <li><span class="todo mono">済</span>FAQPage は151記事に設置済み（seo_build.py が3形式の FAQ を読めるよう拡張）。残り4記事は FAQ 節を書けば自動生成される</li>
+          <li><span class="todo mono">済</span>GA4 二重発火と canonical の不整合は 9/10 夕方の再デプロイで解消（3章）。以後は必ず <code>release/public</code> からデプロイする</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">2</div>
+      <div>
+        <h3>冒頭3行で答えを言い切る</h3>
+        <p class="why">AIは記事を最後まで読んで要約するのではなく、質問に直接答えている段落を抜きます。AirOps によれば引用はページ冒頭30%に偏ります。前置きが長い記事は、本文がよくても抜く場所がありません。</p>
+        <ul>
+          <li>H1 の直下に「誰向けか」「何ができるようになるか」「必要なもの」を3行で書く</li>
+          <li>1段落に1つの主張。「〜できます」「〜が必要です」と言い切る。「〜かもしれません」は根拠がある箇所だけ</li>
+          <li>「連携」「自動化」が具体的に何を指すかを冒頭で定義する</li>
+        </ul>
+        <div class="ba">
+          <div class="before"><div class="tag mono">BEFORE</div><p>近年、Instagram を活用したマーケティングは中小企業にとって欠かせないものとなっています。しかし、投稿の作成や分析には多くの時間がかかり……</p></div>
+          <div class="after"><div class="tag mono">AFTER</div><p>Claude Code に Instagram の投稿データ（CSV）を渡すと、反応の良い投稿の傾向を表にまとめ、次週の投稿案を下書きできます。対象は投稿を週3回以上している事業者。必要なのは Claude Code と、インサイトの CSV エクスポートです。</p></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">3</div>
+      <div>
+        <h3>質問と答えの形にする</h3>
+        <p class="why">AIへの入力は「質問文」です。見出しが質問そのもので、直下に答えがある記事は、質問と一致しやすく抜かれやすくなります。見出しの一致は AirOps が測った中で最も強いページ内要因でした。</p>
+        <ul>
+          <li>H2 を読者の質問文にする（例：「Claude Code は Instagram に直接投稿できますか？」）</li>
+          <li>記事末尾の FAQ は本文と重複してよい。むしろ同じ答えを短く言い直す場所</li>
+          <li>比較・条件は表にする。「CSV を渡して分析する」「API で直接取得する」「人が画面から公開する」の3つは表で分けると誤解が消える</li>
+          <li>1記事は500〜2,000語（日本語なら1,500〜5,000字）で1つの質問に絞る。長くなるなら分割して相互リンクする</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">4</div>
+      <div>
+        <h3>一次情報を入れる</h3>
+        <p class="why">一般論はどのサイトにもあり、AIは選ぶ理由を持ちません。「この会社で実際にやった結果」だけが、他サイトではなくここを引用する理由になります。統計・数値データは HubSpot × Wix の調査で全エンジン共通の相関要素でした。</p>
+        <ul>
+          <li>実施前後の作業時間、対象件数、検証日、使ったツールのバージョンや条件を書く</li>
+          <li>数字を作らない。測っていないなら「未計測」と書くか、書かない</li>
+          <li><span class="todo mono">今月</span>条件・手順・結果・制約・根拠のそろった独自事例を3本つくる（Instagram 分析、会計連携、現場記録のいずれか）</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">5</div>
+      <div>
+        <h3>数字と表記をサイト全体でそろえる</h3>
+        <p class="why">AIは複数ページを横断して読みます。ページごとに実績や料金が違うと「どれが正しいか分からない情報源」と判定され、引用を避けられます。</p>
+        <ul>
+          <li>支援実績は「社数」「件数」「集計時点」を1つに決め、古い紹介文を書き換える</li>
+          <li>料金はトップの「導入サポート 1時間 1万円（税込）」に合わせ、「3,000円〜」の記述を整理する</li>
+          <li>CTA の文言と遷移先を一致させる。「ココナラで相談する」なら実際にココナラへ</li>
+          <li>会社名・サービス名・代表名の表記ゆれをなくす（Piste / 株式会社Piste / Piste AI EVANGELISTS の使い分けを決める）</li>
+          <li>2026-09-10 夕方に統一した「正」: 支援実績「400社以上」、導入サポート「1時間 ¥10,000（税込）」、電話番号「0566-48-6580」。以後この表記だけを使う</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">6</div>
+      <div>
+        <h3>誰が、いつ書いたかを示す</h3>
+        <p class="why">AIは「経験・専門性・権威・信頼」を手がかりに出典を選びます。著者が誰か、情報がいつのものか分からないページは、同じ内容でも後回しになります。目に見える更新日は、公開日より強い予測因子でした。</p>
+        <ul>
+          <li>各記事に著者名・公開日・実質的な更新日を本文に表示する（構造化データだけでなく、見える形で）</li>
+          <li>著者ページ about.html と Person スキーマ、Article の author の <code>@id</code> 参照は設置済み。次は Person の description にある「200社以上」を本文と一致させる（5章）</li>
+          <li>公的な制度や公式機能に触れるときは、一次資料（厚労省、Anthropic 公式ドキュメントなど）へリンクする</li>
+          <li>主力記事は公開後3か月をめどに内容を見直し、変えたときだけ dateModified を更新する</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="rule">
+      <div class="no mono">7</div>
+      <div>
+        <h3>引用されたかを毎月確認する</h3>
+        <p class="why">対策の効果は検索順位のようには見えません。引用されるページの約半分は毎月入れ替わる（AirOps）ので、見る場所を決めておかないと、やりっぱなしになります。</p>
+        <ul>
+          <li>Search Console → 検索パフォーマンス → 「生成AI機能」フィルタで、表示回数と表示されたページを月1回記録する</li>
+          <li>GA4 の参照元で <code>chatgpt.com</code> <code>perplexity.ai</code> <code>copilot.microsoft.com</code> <code>gemini.google.com</code> を探索レポートに登録する</li>
+          <li>月1回、ChatGPT・Perplexity・Google AIモードで実際に「碧南 AI導入 支援」「Claude Code 導入 サポート 愛知」などと聞き、出典に出るかを記録する</li>
+          <li>タグ設置範囲を広げた日（2026-09-10）を記録し、その前後の数字をそのまま伸び率として扱わない</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="s5">
+    <div class="sec-label mono">05 / 構造化データ</div>
+    <h2>構造化データの作り方</h2>
+    <p class="sub">構造化データ（JSON-LD）は、ページに書いてある事実を「会社名はこれ、著者はこの人、料金はこれ」と機械に読める形で添える仕組みです。まず期待値を正しく置きます。</p>
+
+    <div class="verdict">
+      <div class="yes"><div class="tag mono">効くこと</div>
+        <p>会社名・住所・代表・料金・公開日といった<b>事実をAIに誤読させない</b>。複数ページで同じ組織・同じ人物だと機械的に確定できる。</p>
+        <p>Google のリッチリザルト（パンくず・記事の日付など）と Bing / Copilot の理解を助ける。</p>
+      </div>
+      <div class="no"><div class="tag mono">効かないこと</div>
+        <p><b>それ自体で引用を増やす力はほぼない</b>。Ahrefs が2026年5月に1,885ページで検証し、追加後30日の引用変化は誤差の範囲だった。</p>
+        <p>本文に書いていない情報を構造化データにだけ入れても無視され、不一致はむしろ信頼を下げる。</p>
+      </div>
+    </div>
+
+    <h3>原則4つ</h3>
+    <ul>
+      <li><b>本文に見える事実だけ</b>を入れる。本文に無い料金・実績・住所を構造化データにだけ書かない。</li>
+      <li><b>JSON-LD を <code>&lt;head&gt;</code> に1種類1回</b>。同じ型を二重に入れない。</li>
+      <li><b><code>@id</code> でつなぐ</b>。Organization と Person に固定の <code>@id</code> を持たせ、全記事の Article からそこを参照する。AIが「著者＝この人＝この会社の代表」を横断して確定できる。</li>
+      <li><b>公開前に検証</b>する。Google の「リッチリザルト テスト」と schema.org の「Schema Markup Validator」でエラーゼロにしてからデプロイ。</li>
+    </ul>
+
+    <h3>このサイトで作る6種類</h3>
+    <div class="schema-list">
+      <div>
+        <div class="t mono">Organization<small>トップページ</small></div>
+        <div>
+          <p>会社の正体を1か所で定義する。@id・legalName 相当（name 株式会社Piste / alternateName Piste AI EVANGELISTS）・住所・areaServed・founder・sameAs は設置済み。残りは次の3点。</p>
+          <ul>
+            <li><code>sameAs</code> に YouTube チャンネルを追加する</li>
+            <li><code>telephone</code> は 0566-48-6580 に統一済み</li>
+            <li><code>description</code> と Person の description の実績は「400社以上」に統一済み。集計時点（2026年9月時点）の追記が残り</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="t mono">Person<small>about.html（設置済み）</small></div>
+        <div>
+          <p>設置済み。<code>@id</code> は <code>https://www.piste-ai.com/about.html#person</code> で、全155記事の author がここを指している。name・jobTitle・worksFor・alumniOf・knowsAbout・sameAs も入っている。</p>
+          <ul>
+            <li>正規URLが拡張子なしになるため、リリースビルドで <code>@id</code> が <code>/about#person</code> に変換されることを確認する（release_build.py が担当）</li>
+            <li>description の「200社以上」を本文と一致させる</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="t mono">Service<small>サービスページ3つ</small></div>
+        <div>
+          <p>「何を・いくらで・どこで」を機械に読ませる。商用検索での AI 要約増加（Semrush）に対応する部分。</p>
+          <ul>
+            <li>導入サポート: <code>offers.price</code> 10000、<code>priceCurrency</code> JPY、<code>name</code> に「1時間」を含める</li>
+            <li>AI研修プログラム: <code>description</code> に「全12コマ」「人材開発支援助成金の対象」を本文どおりに</li>
+            <li>継続プラン: ライト 20000 / スタンダード 40000（月額）</li>
+            <li><code>provider</code> は Organization の <code>@id</code>、<code>areaServed</code> は Organization と同じ</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="t mono">Article<small>全155記事（設置済み）</small></div>
+        <div>
+          <p>BlogPosting として設置済み。author・publisher は <code>@id</code> 参照、wordCount・articleSection・audience まで入っている。</p>
+          <ul>
+            <li><code>dateModified</code> が全記事 datePublished と同値。内容を見直したときだけ更新し、本文の「更新日」表示と一致させる</li>
+            <li>url・mainEntityOfPage・@id は <code>site/</code> では <code>.html</code> 付き。リリースビルドが拡張子なしに変換するので、必ずビルド経由で公開する</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="t mono">FAQPage<small>残り54記事＋不一致14記事</small></div>
+        <div>
+          <p>Google のリッチリザルトとしては2023年8月以降ほぼ表示されないが、HubSpot × Wix の調査では FAQ セクション＋構造化データの組み合わせが引用と相関している。本文の Q/A をそのまま入れる。</p>
+          <ul>
+            <li>51記事: 本文に FAQ 節はあるがスキーマがない。h3 を「Q. 〜？」形式にそろえれば seo_build.py が自動生成できる</li>
+            <li>17記事: FAQ 節そのものがない。記事末尾に3〜4問を新設する</li>
+            <li>14記事: スキーマの Q 数と本文の Q 数が違う。本文側を「Q.」形式に直す</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="t mono">BreadcrumbList<small>全ページ</small></div>
+        <div>
+          <p>設置済み。ブログをカテゴリ化したら、ホーム → ブログ → カテゴリ → 記事 の4階層に更新する。</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:24px">つなぎ方の見本（Organization と Person）</h3>
+    <p class="sub">トップページの <code>&lt;head&gt;</code> に置く形。住所は本文に表示してから有効にします。</p>
+<pre>{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.piste-ai.com/#organization",
+      "name": "Piste AI EVANGELISTS",
+      "legalName": "株式会社Piste",
+      "url": "https://www.piste-ai.com/",
+      "logo": "https://www.piste-ai.com/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "447-0042",
+        "addressRegion": "愛知県",
+        "addressLocality": "碧南市",
+        "streetAddress": "中後町3-3 中央ビル1F",
+        "addressCountry": "JP"
+      },
+      "areaServed": ["愛知県", "西三河", "日本（オンライン）"],
+      "founder": { "@id": "https://www.piste-ai.com/about/#person" },
+      "sameAs": [
+        "https://x.com/…", "https://www.threads.net/@…",
+        "https://www.instagram.com/…", "https://www.youtube.com/@…",
+        "https://coconala.com/users/…"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.piste-ai.com/about/#person",
+      "name": "石川 卓",
+      "jobTitle": "AIコンサルタント",
+      "url": "https://www.piste-ai.com/about/",
+      "worksFor": { "@id": "https://www.piste-ai.com/#organization" },
+      "alumniOf": "岐阜大学大学院",
+      "knowsAbout": ["Claude Code", "中小企業のAI導入", "業務自動化"]
+    }
+  ]
+}
+<span class="c">// 各記事側は "author": { "@id": "https://www.piste-ai.com/about/#person" } に変える</span></pre>
+    <p class="tbl-note">sameAs の「…」は実際のプロフィールURLに差し替える。存在しないURLを入れると検証で落ちる。</p>
+  </section>
+
+  <section id="s6">
+    <div class="sec-label mono">06 / 誤解</div>
+    <h2>やらなくていいこと</h2>
+    <div class="dont">
+      <div><span class="x">×</span><p><b>llms.txt を置けば載る。</b>Google は必須ではないと明言しています。設置済みなので、これ以上手をかけるより記事の冒頭を直すほうが効きます。</p></div>
+      <div><span class="x">×</span><p><b>構造化データを増やせば引用が増える。</b>Ahrefs の追跡調査では増えていません。5章の6種類を正確に作ったら、それ以上の型を追加するより本文を直します。</p></div>
+      <div><span class="x">×</span><p><b>AI向けの隠しテキストやキーワードの詰め込み。</b>通常のスパム判定と同じ扱いで、逆効果です。</p></div>
+      <div><span class="x">×</span><p><b>投稿頻度を上げれば引用される。</b>頻度は評価要因ではありません。公開後30日未満の記事はむしろ引用されにくい（AirOps）。当面は新記事より、すでに表示のある Instagram・スマレジ・PayPay 記事の改善を優先します。</p></div>
+      <div><span class="x">×</span><p><b>1本に全部詰め込んだ長大な完全ガイド。</b>5,000語を超えると500語未満より引用されません。分けて相互リンクします。</p></div>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-label mono">07 / チェック</div>
+    <h2>記事1本を公開する前の8項目</h2>
+    <p class="sub">7か条を記事単位に落としたものです。全部に印が付かない記事は、公開を1日遅らせてでも直す価値があります。</p>
+    <ul class="check">
+      <li><input type="checkbox" id="c1"><label for="c1">冒頭3行で「誰向け・何ができる・何が必要」を言い切っている<small>7か条の 2</small></label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">H2 のうち少なくとも2つが、読者の質問文になっている<small>7か条の 3</small></label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">1つの質問に絞れていて、本文は1,500〜5,000字に収まっている<small>7か条の 3</small></label></li>
+      <li><input type="checkbox" id="c4"><label for="c4">実際にやった結果（時間・件数・日付・条件）が1つ以上ある<small>7か条の 4</small></label></li>
+      <li><input type="checkbox" id="c5"><label for="c5">料金・実績・サービス名がトップページと一致している<small>7か条の 5</small></label></li>
+      <li><input type="checkbox" id="c6"><label for="c6">著者名・公開日・更新日が本文に見える形で入っている<small>7か条の 6</small></label></li>
+      <li><input type="checkbox" id="c7"><label for="c7">FAQ の Q/A が本文と一致し、FAQPage スキーマにも同じ文で入っている<small>7か条の 1・3</small></label></li>
+      <li><input type="checkbox" id="c8"><label for="c8">canonical・OGP・Article（author は @id 参照）・サイトマップ・feed に反映し、検証ツールでエラーがない<small>7か条の 1、5章</small></label></li>
+    </ul>
+  </section>
+
+  <section id="s8">
+    <div class="sec-label mono">08 / 順番</div>
+    <h2>修正の順番（再調査版）</h2>
+    <p class="sub">3章の結果を、直す手段と対象数つきで並べ替えました。「済」は 2026-09-10 中に本番反映したもの。P2 は今月、P3 は判断待ち。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>優先</th><th>修正</th><th>対象</th><th>手段</th></tr></thead>
+        <tbody>
+          <tr><th>済</th><td>GA4 二重発火と正規URL不整合を解消</td><td class="num">本番171ページ</td><td>9/10 17:30 頃、手順書どおり再デプロイ（deploy 6aa25188）。本番で gtag 1回・canonical 拡張子なし・旧URL 301 を確認済み</td></tr>
+          <tr><th>済</th><td>再発防止</td><td>CLAUDE.md</td><td>公開手順・URL方針・残タスクを書き換え済み。GA4 の注釈（9/10 14:56〜17:30 ブログ二重計測）は石川さんが管理画面で追加</td></tr>
+          <tr><th>済</th><td>実績・料金・CTA の統一、FAQPage</td><td class="num">実績86記事、料金23記事、CTA 17記事、FAQPage 151記事</td><td>本文を「200社以上」「1時間 ¥10,000（税込）」に統一、ココナラ CTA をココナラへ。seo_build.py の FAQ 抽出を3形式対応に拡張</td></tr>
+          <tr><th>済</th><td>要点欄・質問形H2・一次資料リンク・本文内リンク・FAQ・更新日・コントラスト</td><td class="num">155記事＋CSS</td><td>9/10 夜に一括実施し本番反映（deploy 6aa260e4）。要点は tools/keypoints/、更新日は tools/modified.json で管理</td></tr>
+          <tr><th>済</th><td>実績数字の「集計時点」を明記</td><td class="num">トップ・about・JSON-LD・llms.txt</td><td>「400社以上（2026年9月時点）」に統一済み</td></tr>
+          <tr><th>P1</th><td>Bing Webmaster Tools</td><td>サイト全体</td><td>Search Console からインポート、サイトマップ提出。ChatGPT search と Copilot の入口</td></tr>
+          <tr><th>P1</th><td>sameAs に YouTube</td><td>JSON-LD 171ページ</td><td>YouTube チャンネルの URL を受け取り、seo_build.py の SAME_AS に追加（電話番号は 0566 で統一済み）</td></tr>
+          <tr><th>済</th><td>FAQ 節の新設と FAQPage</td><td class="num">155記事すべて</td><td>FAQ 節がなかった4記事に新設。FAQPage スキーマは155/155</td></tr>
+          <tr><th>P2</th><td>独自事例3本</td><td>新規</td><td>条件・手順・結果・制約・根拠のそろった実測つき記事。石川さんの案件の実測データ（作業時間・件数・日付）が必要</td></tr>
+          <tr><th>P2</th><td>計測</td><td>GA4 / Search Console</td><td>AI 参照元の探索レポート（API 認可待ち）、生成AI機能の月次記録、3つの AI への月次質問テスト。Bing は登録済み・IndexNow 送信済みで索引待ち</td></tr>
+          <tr><th>P2</th><td>3か月ごとの見直し</td><td class="num">全記事</td><td>次回は 2026年12月。見直した記事だけ tools/modified.json の日付を更新する</td></tr>
+          <tr><th>済</th><td>アフィリエイトリンクの撤去</td><td class="num">moneyforward-mcp-accounting</td><td>A8 のリンク5本・バナー2枚・計測ピクセルを削除し、マネーフォワード クラウド公式サイトへのリンクに置換（石川さんの判断）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="sec-label mono">09 / 提案</div>
+    <h2>ホットペッパービューティーの店舗情報を、ChatGPT・Gemini・Claude に優先的に引用させる施策</h2>
+    <p class="sub">顧客サロン（ネイル・美容室など）への提案用です。ホットペッパー内の順位を上げる話ではなく、「碧南 ネイルサロン おすすめ」と AI に聞かれたときに、ホットペッパーに載せた店舗情報が出典として選ばれるための施策です。</p>
+
+    <h3>前提：3つの AI は、それぞれ別の索引を見ている</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>AI</th><th>店舗情報の入手元</th><th>効く対策</th></tr></thead>
+        <tbody>
+          <tr><th>ChatGPT</th><td>Bing の索引。米国では Yelp の口コミ・Foursquare のデータを提携で取り込んでいるが、日本ではその代わりがなく、Bing に索引されたホットペッパー・自社サイト・まとめ記事が主な情報源。Whitespark の2025年9月の調査では、地域推薦の根拠は Bing Places と口コミサイトで、Google の口コミは目立たなかった</td><td>Bing Places 登録、自社サイトの Bing 登録、ホットペッパー掲載ページが Bing に索引されているか確認</td></tr>
+          <tr><th>Gemini / Google AIモード</th><td>Google 検索と Google ビジネスプロフィール（マップ）の情報、口コミ本文、写真、サービス一覧。2026年にビジネスプロフィールを Gemini に接続する機能が追加され、マップ内の「Ask Maps」も2026年8月に150か国超へ拡大</td><td>ビジネスプロフィールの完成度と口コミ本文。サロンボードからの日次連携でホットペッパーの情報を Google に流す</td></tr>
+          <tr><th>Claude</th><td>Brave Search の独自索引（Anthropic の再委託先一覧に記載。Google・Bing の結果は使わない）</td><td>自社サイトとホットペッパー掲載ページが Brave に索引されているか <code>site:</code> 検索で確認。未索引なら Brave の URL 送信</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>共通するのは、どの AI も「ホットペッパーの中」を直接見るのではなく、<b>索引に載ったページの本文と、口コミの文章</b>を読んで店を選ぶことです。米国の SOCi の2026年調査では、ChatGPT が推薦した店舗は調査対象の1.2%（Google の地図上位3件は35.9%）で、推薦されること自体が希少です。逆に言えば、地域×業態で先に整えた店がほぼ独占します。</p>
+
+    <h3>確認した事実：ホットペッパーは AI に読ませている</h3>
+    <ul>
+      <li>ホットペッパービューティーの robots.txt は、AI クローラー（GPTBot・ClaudeBot・PerplexityBot 等）を個別に禁止していない。<code>User-agent: *</code> で予約画面・フリーワード検索結果・条件検索ページだけを Disallow。<b>サロン掲載ページは AI が読める</b>。</li>
+      <li>ただし <code>bingbot</code> に <code>Crawl-delay: 10</code> が設定されている。Bing の索引更新が遅いため、ChatGPT に情報が届くまで時間がかかる。ホットペッパー側の変更は「Bing には1〜2か月遅れる」前提で、自社サイトにも同じ情報を置く。</li>
+      <li>掲載ページには JSON-LD がない。AI が読むのは「サロン紹介（150〜200字）」「こだわり（3項目×100〜150字）」「クーポン」「サロンデータ」「メニュー」「口コミ」のテキストそのもの。この文章が抜かれる。</li>
+    </ul>
+
+    <h3>施策（優先順）</h3>
+    <div class="hpb-lever">
+      <div>
+        <h4>1. 「抜かれる一文」をサロン紹介の冒頭に<small>ホットペッパー・ビジネスプロフィール・自社サイト共通</small></h4>
+        <ul>
+          <li>地域・最寄駅・業態・強み・代表メニューの価格と所要時間・設備を1文で言い切る。例：「碧南市・碧南中央駅徒歩3分のネイルサロン。パラジェル専門、ワンカラー60分オフ込み5,500円、駐車場2台、日曜営業」</li>
+          <li>「こだわり」3項目も同じ形。「〇〇が得意」ではなく「〇〇を△△の条件で提供」と条件つきで書く</li>
+          <li>AI が回答に使うのは100〜300トークンの自己完結した段落。詩的なキャッチコピーは抜かれない<span class="ai-tag">Claude Code で3媒体の文面を生成</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>2. 3媒体の表記を完全に一致させる<small>店名・住所・電話・メニュー名・価格</small></h4>
+        <ul>
+          <li>ホットペッパー／Google ビジネスプロフィール／自社サイト／Instagram で、店名の表記（英字・カナ・記号）、住所、電話、メニュー名、価格を一字一句そろえる。AI は不一致があると「同じ店か確信できない」として引用を避ける</li>
+          <li>サロンボードから Google ビジネスプロフィールへの連携を申請すると、店名・写真・カテゴリ・住所・説明が日次で同期され、予約リンクにホットペッパーが設定される。ホットペッパーを「正」にして運用が楽になる</li>
+          <li>自社サイトに <code>NailSalon</code>（または BeautySalon）スキーマを置き、<code>sameAs</code> にホットペッパー掲載ページ・Google マップ・Instagram の URL を入れる。3媒体が同一店舗だと機械的に確定する<span class="ai-tag">Claude Code で差分チェック</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>3. Gemini 対策 = Google ビジネスプロフィール<small>日本で最も効く</small></h4>
+        <ul>
+          <li>カテゴリ（ネイルサロン）、サービス一覧と価格、属性（駐車場・子連れ可・予約必須）、営業時間を全部埋める。AI は「質問の条件」とプロフィールの項目を照合して店を選ぶ</li>
+          <li>週3回の投稿（施術例・新メニュー・キャンペーン）、口コミ返信は48時間以内・返信率100%</li>
+          <li>予約リンクにホットペッパーの掲載ページ。「Googleで予約」との直接連携はできないので、リンク方式にする</li>
+        </ul>
+      </div>
+      <div>
+        <h4>4. ChatGPT 対策 = Bing<small>索引に載っていなければ存在しない</small></h4>
+        <ul>
+          <li>Bing Places for Business に登録（無料）。Google ビジネスプロフィールからのインポートが使える</li>
+          <li>自社サイトを Bing Webmaster Tools に登録し、サイトマップを提出</li>
+          <li>Bing で <code>site:beauty.hotpepper.jp 店名</code> を検索し、掲載ページが索引されているか確認。載っていなければ自社サイトからホットペッパーページへリンクして発見させる</li>
+        </ul>
+      </div>
+      <div>
+        <h4>5. 口コミを「引用できる文」にしてもらう<small>件数より中身</small></h4>
+        <ul>
+          <li>Gemini は口コミの本文を読んで「この店は何が良いか」を判断する。「パラジェルで3週間持った」「駐車場があって子連れでも行けた」のように施術名・条件が入った口コミが引用される</li>
+          <li>依頼時に「よければ受けた施術名を書いてください」と添えるのは可。内容の指定、来店実態のない依頼、自演は不可（ホットペッパー・Google とも掲載停止の対象）</li>
+          <li>返信にも施術名と条件を含める。返信文も AI に読まれる<span class="ai-tag">Claude Code で返信下書き</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>6. 第三者のまとめ記事に載る<small>AI はリスト記事を好む</small></h4>
+        <ul>
+          <li>HubSpot × Wix の調査で、リスト記事・比較記事は最も引用される形式。「碧南 ネイルサロン おすすめ」系の地域メディア・まとめ記事に掲載を依頼する</li>
+          <li>自社ブログで自店を含む比較記事を書くのは自作自演になりやすく、AI が信頼しにくい。第三者媒体を優先する</li>
+        </ul>
+      </div>
+      <div>
+        <h4>7. 自社サイトの FAQ<small>AI の質問形に合わせる</small></h4>
+        <ul>
+          <li>「料金はいくら？」「所要時間は？」「駐車場は？」「子連れで行ける？」「予約方法は？」の5問を本文と FAQPage スキーマの両方に置く。AI に来る質問は、ほぼこの5つ</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:24px">計測：月1回、3つの AI に同じ質問をする</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>質問</th><th>ChatGPT</th><th>Gemini</th><th>Claude</th><th>記録すること</th></tr></thead>
+        <tbody>
+          <tr><th>碧南 ネイルサロン おすすめ</th><td>—</td><td>—</td><td>—</td><td>店名が出たか、何番目か、出典URL</td></tr>
+          <tr><th>碧南 パラジェル 上手い店</th><td>—</td><td>—</td><td>—</td><td>同上。施術名で拾われるか</td></tr>
+          <tr><th>碧南中央駅 ネイル 駐車場あり</th><td>—</td><td>—</td><td>—</td><td>同上。条件で拾われるか</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">あわせて Google ビジネスプロフィールのインサイト（閲覧数・経路検索）、サロンボードの閲覧数と予約数を月次で表にする。AI 回答はゆらぎが大きいので、同じ質問を3回ずつ投げて「3回中何回出たか」で記録する。<span class="ai-tag">Claude Code で月次の記録表を自動生成</span></p>
+
+    <h3>ホットペッパーグルメの場合</h3>
+    <p>考え方は同じで、媒体が食べログ・ホットペッパーグルメ・Google ビジネスプロフィールに変わる。ChatGPT は米国では Yelp と提携しているが日本には相当するものがなく、Bing の索引が主。2026年1月29日にホットペッパーグルメの口コミ機能が刷新され、審査基準を満たした投稿は良い体験も悪い体験もすべて掲載される方式になったため、口コミ本文の「具体性」がそのまま AI の材料になる。</p>
+  </section>
+
+  <div class="src">
+    <h2>出典</h2>
+    <ol>
+      <li>Google 検索セントラル「AI 機能と Google 検索」 <a href="https://developers.google.com/search/docs/appearance/ai-features">developers.google.com/search/docs/appearance/ai-features</a></li>
+      <li>Ahrefs「Update: AI Overviews Reduce Clicks by 58%」2026-02 <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">ahrefs.com/blog/ai-overviews-reduce-clicks-update/</a>（2025-04 の前回調査 <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks/">ai-overviews-reduce-clicks/</a>）</li>
+      <li>Pew Research Center「Google users are less likely to click on links when an AI summary appears」2025-07-22 <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">pewresearch.org</a></li>
+      <li>AirOps「The Influence of Retrieval, Fan-out, and Google SERPs on ChatGPT Citations」2026-03、Search Engine Land の報道 <a href="https://searchengineland.com/chatgpt-retrieved-vs-citations-study-471606">searchengineland.com/chatgpt-retrieved-vs-citations-study-471606</a></li>
+      <li>AirOps 2026-04 調査、Search Engine Land「ChatGPT citations reward ranking and precision over length」 <a href="https://searchengineland.com/chatgpt-citations-ranking-precision-length-study-474538">searchengineland.com/chatgpt-citations-ranking-precision-length-study-474538</a>、および AirOps ブログ <a href="https://www.airops.com/blog/chatgpt-decides-sources-cite">airops.com/blog/chatgpt-decides-sources-cite</a></li>
+      <li>HubSpot「On-page content formats answer engines actually favor」2026-06-03（HubSpot State of AEO 2026 と Wix Studio AI Search Lab のデータ） <a href="https://blog.hubspot.com/marketing/content-format-types-that-earn-citations">blog.hubspot.com/marketing/content-format-types-that-earn-citations</a></li>
+      <li>Ahrefs「We Tracked 1,885 Pages Adding Schema. AI Citations Barely Moved.」2026-05-11 <a href="https://ahrefs.com/blog/schema-ai-citations/">ahrefs.com/blog/schema-ai-citations/</a></li>
+      <li>Semrush「AI Overviews are expanding across commercial intent search」2026 <a href="https://www.semrush.com/blog/ai-overviews-commercial-search-study/">semrush.com/blog/ai-overviews-commercial-search-study/</a></li>
+      <li>フォーデザイン「ホットペッパービューティー上位表示の方法と掲載順位の仕組み」 <a href="https://four-design.co.jp/hot-pepper-top-ranking-21635/">four-design.co.jp</a></li>
+      <li>ワークピーアールティー「ホットペッパービューティーの検索表示は評価順？人気順？」 <a href="https://www.work-prt.com/blog/3681">work-prt.com/blog/3681</a></li>
+      <li>StylePilot「ホットペッパービューティーの並び順を決める要素を分解する」 <a href="https://note.com/stylepilot/n/nb1fedbc27b10">note.com/stylepilot</a></li>
+      <li>Google ビジネスプロフィール コミュニティ「オンラインで予約にホットペッパービューティーを反映させたい」、フォーデザイン「ホットペッパービューティーと連携させるメリット」 <a href="https://four-design.co.jp/hotpepper-collaboration/">four-design.co.jp/hotpepper-collaboration/</a></li>
+      <li>口コミアカデミー「ホットペッパーグルメのランキングはどう決まる？」 <a href="https://academy.kutikomi.com/news/restaurant_hotpeppergourmet/">academy.kutikomi.com</a>、リクルート プレスリリース「『ホットペッパーグルメ』口コミ・評点機能をリニューアル」2026-01-29 <a href="https://www.recruit.co.jp/newsroom/pressrelease/2026/0129_146600.html">recruit.co.jp</a></li>
+      <li>2026-09-10 SEO・MEO・AIO 診断レポート（20260910_seo_analysis_report.md）。Search Console「生成AI機能」の実測値はこのレポートによる</li>
+      <li>再調査の一次データ: <code>audit/20260910/audit_aio.py</code>（判定スクリプト）、<code>aio_articles.csv</code>（記事ごとの結果）、<code>aio_summary.json</code>（集計）。本番の確認は 2026-09-10 夕方に curl と Netlify のデプロイ一覧で実施</li>
+      <li>公開手順書 <code>.Codex/commands/seo-publish.md</code>、実装報告 <code>20260910_implementation_report.md</code>、実装ログ <code>20260910_seo_implementation_log.md</code></li>
+      <li>SOCi「Local Visibility Index 2026」の数値は HousingWire の報道による <a href="https://www.housingwire.com/articles/google-business-profile-ai-search/">housingwire.com/articles/google-business-profile-ai-search/</a></li>
+      <li>Whitespark「Want to Rank in ChatGPT? Focus on These Review Sites」2025-09-15 <a href="https://whitespark.ca/blog/want-to-rank-in-chatgpt-focus-on-these-review-sites-new-research/">whitespark.ca</a></li>
+      <li>Search Engine Roundtable「Connect your Google Business Profile to Gemini」 <a href="https://www.seroundtable.com/google-business-profile-integrated-gemini-41484.html">seroundtable.com</a>、RankFuse「Google Ask Maps」 <a href="https://rankfuse.com/blog/googles-ask-maps-update-what-business-owners-need-to-know/">rankfuse.com</a></li>
+      <li>TechCrunch「Anthropic appears to be using Brave to power web search」2025-03-21 <a href="https://techcrunch.com/2025/03/21/anthropic-appears-to-be-using-brave-to-power-web-searches-for-its-claude-chatbot/">techcrunch.com</a>、Profound「Claude web search explained」 <a href="https://www.tryprofound.com/blog/what-is-claude-web-search-explained">tryprofound.com</a></li>
+      <li>0120.co.jp「美容サロンAIO対策｜AI検索からの新規予約獲得手順」2026-05-26（更新 2026-07-25） <a href="https://0120.co.jp/blog/aio-93/">0120.co.jp/blog/aio-93/</a></li>
+      <li>ホットペッパービューティー robots.txt（2026-09-10 取得） <a href="https://beauty.hotpepper.jp/robots.txt">beauty.hotpepper.jp/robots.txt</a>。掲載ページの構造は千葉県のサロン1件（slnH000333924）で確認</li>
+    </ol>
+  </div>
+</div>

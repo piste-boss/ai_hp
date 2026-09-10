@@ -1,0 +1,102 @@
+{
+ "articles": 155,
+ "title_core_over_35": 79,
+ "title_full_over_60": 51,
+ "title_suffix": 155,
+ "h1_not_1": 0,
+ "h2_question_zero": 150,
+ "h2_numbered_any": 112,
+ "h2_count_dist": {
+  "<7": 0,
+  "7-15": 155,
+  ">15": 0
+ },
+ "keypoints_present": 155,
+ "keypoints_is_toc_copy": 155,
+ "keypoints_has_target": 16,
+ "visible_pubdate": 155,
+ "visible_moddate": 7,
+ "visible_author": 155,
+ "faqpage_missing": 4,
+ "faq_h2_but_no_schema": 1,
+ "faq_h2_missing": 17,
+ "faq_q_mismatch": 64,
+ "author_by_id": 155,
+ "tel_in_ld": 155,
+ "mod_eq_pub": 154,
+ "age_over_90": 70,
+ "age_over_180": 0,
+ "age_under_30": 26,
+ "related_lt_2": 0,
+ "inbody_blog_links_zero": 155,
+ "ext_domains_zero": 60,
+ "cta_coconala_to_contact": 0,
+ "img_no_wh_any": 0,
+ "img_non_webp_any": 1,
+ "img_no_lazy_any": 85,
+ "ga4_not_1": 0,
+ "clarity_not_1": 0,
+ "canonical_bad": 0,
+ "ld_json_error": 0,
+ "body_chars_dist": {
+  "<1500": 0,
+  "1500-5000": 146,
+  "5000-8000": 9,
+  ">8000": 0
+ },
+ "intro_chars_over_600": 22,
+ "n_200社_any": 86,
+ "n_70社_any": 0,
+ "n_110社_any": 0,
+ "n_3000yen_any": 0,
+ "n_10000_any": 103,
+ "both_70_and_200": 0,
+ "evidence_zero": 80,
+ "examples": {
+  "faqpage_missing": [
+   "ai-competitor-analysis",
+   "ai-contract-review-automation",
+   "ai-sales-growth-examples",
+   "claude-code-mcp-integration"
+  ],
+  "faq_h2_missing": [
+   "ai-competitor-analysis",
+   "ai-contract-review-automation",
+   "ai-sales-growth-examples",
+   "claude-code-bcp-emergency-preparedness",
+   "claude-code-delivery-delay-early-warning",
+   "claude-code-equipment-inspection-records",
+   "claude-code-fixed-cost-review",
+   "claude-code-gross-margin-analysis"
+  ],
+  "title_core_over_35": [
+   "ai-sns-marketing-automation",
+   "ai-tools-for-business-2026",
+   "claude-code-airregi-integration",
+   "claude-code-airtable-integration",
+   "claude-code-amazon-seller-integration"
+  ],
+  "ext_domains_zero": [
+   "claude-code-airtable-integration",
+   "claude-code-amazon-seller-integration",
+   "claude-code-asana-integration",
+   "claude-code-backlog-integration",
+   "claude-code-base-integration"
+  ],
+  "body_over_8000": [],
+  "cta_coconala_to_contact": [],
+  "n_3000yen": [],
+  "n_110社": [],
+  "ga4_not_1": [],
+  "img_non_webp": [
+   "moneyforward-mcp-accounting"
+  ]
+ },
+ "medians": {
+  "body_chars": 3503,
+  "title_len": 59,
+  "h2_count": 10,
+  "intro_chars": 497,
+  "age_days": 83
+ }
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × タイミー連携で募集文・手順書をAI自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。">
+<meta name="keywords" content="Claude Code,タイミー,スキマバイト,人手不足,募集文,受け入れ手順書,飲食店,小売,物流倉庫,シフト,業務自動化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-timee-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × タイミー連携で募集文・手順書をAI自動化">
+  <meta property="og:description" content="Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-timee-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-timee-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-27T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × タイミー連携で募集文・手順書をAI自動化">
+  <meta name="twitter:description" content="Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-timee-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-timee-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-timee-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-timee-integration.html","headline":"Claude Code × タイミー連携で募集文・受け入れ手順書・稼働データ集計をAI自動化！人手不足の飲食店・小売・物流の現場運用効率化ガイド","alternativeHeadline":"Claude Code × タイミー連携で募集文・手順書をAI自動化","description":"Claude Codeとスキマバイトサービスのタイミーを組み合わせ、募集文の作成・受け入れ手順書の整備・評価コメント・稼働データ集計をAI自動化する方法を解説。人手不足の飲食店・小売店・物流倉庫でも取り組める活用シーンと導入ステップを紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-timee-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-27T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","タイミー","スキマバイト","人手不足","募集文","受け入れ手順書","飲食店","小売","物流倉庫","シフト","業務自動化","AI活用"],"wordCount":4604,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × タイミー連携で募集文・手順書をAI自動化","item":"https://www.piste-ai.com/blog/claude-code-timee-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-timee-integration.html#faq","mainEntity":[{"@type":"Question","name":"パソコンが得意ではありませんが使えますか。","acceptedAnswer":{"@type":"Answer","text":"日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。"}},{"@type":"Question","name":"サービスの管理画面と直接つながるのですか。","acceptedAnswer":{"@type":"Answer","text":"下書きの作成や整理を Claude Code が担当し、最終的な掲載・送信は人が管理画面で行う運用が安全です。条件の事実確認の工程を残せるためです。"}},{"@type":"Question","name":"募集文がどの店も同じような文章になりませんか。","acceptedAnswer":{"@type":"Answer","text":"これまで書いてきた募集文を見本として読み込ませることで、自店らしい言い回しを保てます。仕上げに現場の一言を足すのがおすすめです。"}},{"@type":"Question","name":"何から始めるのがよいですか。","acceptedAnswer":{"@type":"Answer","text":"失敗しても影響の小さい受け入れ手順書の作成から始めると安心です。ひとつ成功体験をつくることが定着への近道です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × タイミー連携で募集文・受け入れ手順書・稼働データ集計をAI自動化！人手不足の飲食店・小売・物流の現場運用効率化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-27">公開日：2026年7月27日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-timee-integration.webp" alt="Claude Code × タイミーで募集文・受け入れ手順書・稼働データ集計を自動化するイメージ" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>タイミーで急な欠員を補っている飲食店・小売店・物流倉庫の店長・現場責任者</li><li><strong>できるようになること：</strong>募集文の型・受け入れ手順書・評価コメントの下書き・稼働データの曜日別集計をClaude Codeで用意できる</li><li><strong>必要なもの：</strong>Claude Code と、過去の募集文・業務手順メモ・稼働実績データ（個人情報は除く）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「急な欠員が出たのに募集文を書く時間がない」「毎回同じ説明を口頭で繰り返している」「来てくれた方への評価コメントが溜まっている」。スキマバイトサービスを使い始めた飲食店・小売店・物流倉庫では、募集そのものは簡単になった一方で、その前後の「文章づくりと現場の受け入れ準備」が新しい負担になっています。 この記事では、Anthropic公式のAIコーディングツール Claude Code と、スキマバイトサービス <a href="https://timee.co.jp/" target="_blank" rel="noopener">タイミー</a> の運用を組み合わせ、募集文・受け入れ手順書・稼働データの集計をまるごと仕組み化する方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. Claude Code とは何か</a></li>
+<li><a href="#sec2">2. スキマバイト活用でなぜ「現場の準備」が重荷になるのか</a></li>
+<li><a href="#sec3">3. タイミー運用でClaude Codeは何を自動化できますか？</a></li>
+<li><a href="#sec4">4. 業種別の活用シーン</a></li>
+<li><a href="#sec5">5. タイミー運用にClaude Codeを導入するには何から始めますか？</a></li>
+<li><a href="#sec6">6. 手作業運用との違い</a></li>
+<li><a href="#sec7">7. 運用上の注意点</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. Claude Code とは何か</h2>
+<p>Claude Code は、Anthropic が公式に提供している AI コーディングツールです。名前に「コーディング」とありますが、できることはプログラム作成だけではありません。パソコンの中にあるファイルを読み取り、内容を理解し、文章を書き、表にまとめ、決まった手順を繰り返し実行してくれます。</p>
+<p>操作は日本語の会話だけで完結します。「この募集条件で募集文を3パターン作って」「先月の稼働データから曜日別に人手が足りない時間帯を出して」と伝えるだけで作業が進みます。専門知識がなくても扱えるため、店舗や倉庫の現場でパソコンを使う方であれば十分に活用できます。</p>
+<h2 id="sec2">2. スキマバイト活用でなぜ「現場の準備」が重荷になるのか</h2>
+<p>スキマバイトは、人手が足りない時間帯だけ働き手を確保できる仕組みです。募集のハードルは下がりましたが、そのぶん現場側では別の負担が生まれます。</p>
+<ul><li>募集文を毎回ゼロから書いていて、急な欠員のときに時間がとれない</li><li>初めて来る方が毎回入れ替わるため、同じ説明を口頭で繰り返している</li><li>業務の手順書がないまま感覚で教えており、教える人によって内容がぶれる</li><li>働いてくれた方への評価コメントが後回しになり、まとめて書く羽目になる</li><li>どの曜日・時間帯に人手が足りないのかを、感覚でしか把握できていない</li></ul>
+<p>いずれも「考える・書く・整える」作業です。まさに Claude Code が得意とする領域であり、下書きづくりと集計を任せて人は現場の判断に集中する分担が有効です。</p>
+<h2 id="sec3">3. タイミー運用でClaude Codeは何を自動化できますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-timee-integration-01.webp" alt="タイミー運用で自動化できる5つの活用シーン" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>1. 募集文の作成と使い回せる型づくり</h3>
+<p>「土曜のランチ帯・ホール2名・接客経験不問」といった条件を渡すだけで、仕事内容・持ち物・服装・当日の流れが伝わる募集文の下書きを複数パターン作成できます。一度うまくいった募集文は型として保存しておけば、次回は条件だけ差し替えて数分で用意できます。応募が集まりにくい時間帯向けに、魅力の伝え方を変えた案を並べて比較することもできます。</p>
+<h3>2. 受け入れ手順書・当日マニュアルの整備</h3>
+<p>初めて来る方に必要な情報は、実はほぼ決まっています。入り口の場所、更衣室、タイムカードの押し方、休憩の取り方、任せる業務の手順。これらを箇条書きで渡すだけで、初見の方でも読める1枚の手順書に整えられます。口頭説明を紙に置き換えるだけで、現場の教える負担が大きく減ります。</p>
+<h3>3. 業務説明の言い換えと写真つき手順の下書き</h3>
+<p>「ドリンクを作る」だけでは伝わりません。器具の場所、氷の量、提供までの流れといった具体的な手順に分解した説明文を作れます。既にある社内資料を読み込ませれば、初見の方向けにやさしく書き直した版を用意することもできます。</p>
+<h3>4. 評価コメント・お礼メッセージの下書き</h3>
+<p>働いてくださった方への評価コメントを、その日の様子を数語伝えるだけで下書きにできます。良かった点を具体的に書いた文章は、また来てもらえる関係づくりにつながります。人手が足りる店ほど、こうした一言を欠かさず続けている店です。公開前に必ず人が確認する運用にすれば安心です。</p>
+<h3>5. 稼働データの集計と募集計画づくり</h3>
+<p>稼働実績をまとめたファイルを渡せば、曜日別・時間帯別に人手が足りていない箇所を集計し、読みやすいレポートに整えられます。数字が並んだ表ではなく「土曜の11時から14時が慢性的に不足しています」という文章にまとめてくれるため、店長交代があっても引き継ぎやすくなります。売上データと突き合わせて人手の過不足を見たい場合は、<a href="claude-code-airregi-integration.html">Airレジとの連携</a>や<a href="claude-code-smaregi-integration.html">スマレジとの連携</a>の記事も参考になります。</p>
+<h2 id="sec4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>主な悩み</th><th>Claude Code の使いどころ</th></tr>
+<tr><td>飲食店・カフェ</td><td>繁忙時間帯だけ人手が足りず募集文を毎回書き直す</td><td>時間帯別の募集文を型にして条件差し替えだけで再利用</td></tr>
+<tr><td>小売店・スーパー</td><td>初めて来る方への売場説明に時間がかかる</td><td>売場ごとの受け入れ手順書を1枚にまとめて渡せる形に整備</td></tr>
+<tr><td>物流倉庫・軽作業</td><td>作業手順の教え方が担当者によってぶれる</td><td>標準手順書を作成し誰が教えても同じ内容にそろえる</td></tr>
+<tr><td>ホテル・宿泊施設</td><td>客室清掃の品質を短時間で伝えたい</td><td>チェック項目つきの清掃手順書と確認リストを作成</td></tr>
+<tr><td>イベント運営・設営</td><td>当日限りの現場で説明の時間がとれない</td><td>当日の流れと持ち物を1枚に集約した案内文を事前準備</td></tr>
+</table>
+<h2 id="sec5">5. タイミー運用にClaude Codeを導入するには何から始めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-timee-integration-02.webp" alt="Claude Code 導入の4ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<ol><li><strong>目的を1つに絞る</strong>：最初から全部を自動化しようとせず、募集文の作成など一番つらい業務を1つ選びます。</li><li><strong>材料を用意する</strong>：これまでの募集文、業務の手順メモ、稼働実績のデータを1つのフォルダにまとめます。過去にうまくいった募集文がそのまま「自店らしさ」の見本になります。</li><li><strong>Claude Code に日本語で指示する</strong>：「このフォルダの内容をふまえて、土曜ランチのホール募集文を3案作って」と伝えるだけです。出てきた案を見ながら「もう少し具体的に」「短くして」と調整します。</li><li><strong>小さく試して広げる</strong>：2週間ほど運用して手応えがあれば、受け入れ手順書、評価コメント、稼働レポートへと対象を広げます。うまくいった指示は保存しておくと、次回から同じ品質で再現できます。</li></ol>
+<h2 id="sec6">6. 手作業運用との違い</h2>
+<table>
+<tr><th>項目</th><th>これまでの手作業</th><th>Claude Code を使った運用</th></tr>
+<tr><td>募集文の作成</td><td>1本あたり20〜40分かかる</td><td>下書きが数分で出るため確認と仕上げに集中できる</td></tr>
+<tr><td>初見の方への説明</td><td>毎回口頭で15分程度かかる</td><td>手順書を渡すだけで済み現場の負担が減る</td></tr>
+<tr><td>教える内容の統一</td><td>担当者によって説明がぶれる</td><td>標準手順書を用意し誰が教えても同じ内容になる</td></tr>
+<tr><td>評価コメント</td><td>後回しになり溜まりやすい</td><td>まとめて下書きを作り確認して送れる</td></tr>
+<tr><td>人手不足の把握</td><td>感覚で判断している</td><td>稼働データを踏まえて不足する曜日と時間帯を特定できる</td></tr>
+</table>
+<h2 id="sec7">7. 運用上の注意点</h2>
+<ul><li><strong>公開前は必ず人が確認する</strong>：時給、業務内容、持ち物、休憩の扱いなど条件に関わる部分は、自分の目で確かめてから掲載します。</li><li><strong>働く方の個人情報を扱わない</strong>：氏名や連絡先が含まれるデータは、そのまま読み込ませないよう運用ルールを決めておきます。</li><li><strong>労務のルールは自分で確認する</strong>：休憩時間や割増賃金など法令に関わる部分は、AIの出力をそのまま信じず所定のルールに沿って確認します。</li><li><strong>現場らしさを失わない</strong>：整いすぎた募集文はどの店でも同じに見えます。自店の雰囲気が伝わる一言を足すだけで応募の印象が変わります。</li><li><strong>アカウント情報の管理</strong>：管理画面の認証情報は必要最小限の担当者のみが扱い、共有の範囲を明確にします。</li></ul>
+<h2 id="sec8">よくある質問</h2>
+<p><strong>パソコンが得意ではありませんが使えますか。</strong></p>
+<p>日本語で「こうしたい」と伝えるだけで進められます。専門的な操作を覚える必要はありません。</p>
+<p><strong>サービスの管理画面と直接つながるのですか。</strong></p>
+<p>下書きの作成や整理を Claude Code が担当し、最終的な掲載・送信は人が管理画面で行う運用が安全です。条件の事実確認の工程を残せるためです。</p>
+<p><strong>募集文がどの店も同じような文章になりませんか。</strong></p>
+<p>これまで書いてきた募集文を見本として読み込ませることで、自店らしい言い回しを保てます。仕上げに現場の一言を足すのがおすすめです。</p>
+<p><strong>何から始めるのがよいですか。</strong></p>
+<p>失敗しても影響の小さい受け入れ手順書の作成から始めると安心です。ひとつ成功体験をつくることが定着への近道です。</p>
+<h2 id="sec9">まとめ</h2>
+<p>スキマバイトの活用は、募集を出すこと自体ではなく「募集文の質」と「受け入れの準備」で成果が変わります。しかし現場は日々の営業で手一杯で、そこに時間を割くのは簡単ではありません。Claude Code に下書きづくりと集計を任せ、人は現場の判断と仕上げに集中する。この分担ができれば、少人数の店舗や倉庫でも安定して人手を確保し続けられます。</p>
+<p>大切なのは、いきなり完璧を目指さず、効果を感じやすい業務から小さく始めることです。ひとつの仕組みが動き出せば、そこを起点に現場運営全体の効率化が広がっていきます。</p>
+<p>Claude Code を活用した業務自動化について詳しく知りたい方、自社に合った始め方を相談したい方は、ココナラのメッセージ機能からお気軽にご相談ください。導入サポート（1時間 ¥10,000 税込）で、あなたの業務に合わせた自動化の第一歩をいっしょに設計します。まずは購入画面に進むボタンからお進みください。これまで多くの中小企業・個人事業主の業務自動化を支援してきた実績をもとに、ていねいにサポートいたします。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「募集文を毎回書き直すのがつらい」「初めて来る方への説明に時間がかかる」という飲食店・小売店・物流現場の方に向けて、導入から自社に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="https://coconala.com/users/2208051" target="_blank" rel="noopener">ココナラで相談する</a>
+</div>
+</div>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-airregi-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Airレジ連携で売上集計・在庫・日報をAI自動化</span></a><a class="seo-related-card" href="claude-code-smaregi-integration.html"><img src="../images/blog-claude-code-smaregi-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × スマレジ連携で売上集計・在庫・顧客管理をAI自動化</span></a><a class="seo-related-card" href="claude-code-food-delivery-integration.html"><img src="../images/blog-claude-code-food-delivery-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × フードデリバリー連携でメニュー文を自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

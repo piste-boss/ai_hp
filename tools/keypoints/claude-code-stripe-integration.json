@@ -1,0 +1,1 @@
+{"target": "Stripeの集計や督促を管理画面で手作業している中小企業の経営者・経理担当", "outcome": "MRRレポート・決済失敗者の抽出と督促文・解約理由の集計・請求書発行を日本語指示で回せる", "requirement": "Claude Code、Stripe MCPコネクタ、権限を絞った制限付きAPIキー"}

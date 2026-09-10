@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Make連携で複数ステップの業務自動化を設計 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオの改善をAI自動化する方法を解説。Zapierとの使い分けや、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,Make,Integromat,ノーコード,業務自動化,シナリオ,Zapier,ワークフロー,中小企業,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-make-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × Make連携で複数ステップの業務自動化を設計">
+  <meta property="og:description" content="Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオの改善をAI自動化する方法を解説。Zapierとの使い分けや、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-make-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <meta property="og:image:width" content="640">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-24T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × Make連携で複数ステップの業務自動化を設計">
+  <meta name="twitter:description" content="Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオの改善をAI自動化する方法を解説。Zapierとの使い分けや、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/ogp.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-make-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-make-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-make-integration.html","headline":"Claude Code × Make（旧Integromat）連携で複数ステップの業務自動化をAIに設計させる！中小企業のノーコード業務フロー効率化ガイド","alternativeHeadline":"Claude Code × Make連携で複数ステップの業務自動化を設計","description":"Claude Codeとノーコード自動化ツールMake（旧Integromat）を組み合わせ、複数ステップの業務フロー設計・条件分岐の整理・データ受け渡し・エラー対応・既存シナリオの改善をAI自動化する方法を解説。Zapierとの使い分けや、活用5選・業種別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/ogp.jpg","width":640,"height":640},"datePublished":"2026-07-24T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","Make","Integromat","ノーコード","業務自動化","シナリオ","Zapier","ワークフロー","中小企業","AI"],"wordCount":3915,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × Make連携で複数ステップの業務自動化を設計","item":"https://www.piste-ai.com/blog/claude-code-make-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-make-integration.html#faq","mainEntity":[{"@type":"Question","name":"プログラミングができなくても使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この業務の流れを整理して」といった頼み方で十分です。"}},{"@type":"Question","name":"すでにZapierを使っていますが、Makeに変える必要がありますか？","acceptedAnswer":{"@type":"Answer","text":"必ずしも変える必要はありません。単純な自動化はZapierのまま、条件分岐や複数ステップの複雑なフローはMakeで、といった使い分けもできます。どちらを使う場合でも、フローの設計をClaude Codeに相談できる点は共通です。"}},{"@type":"Question","name":"複雑なシナリオでも相談できますか？","acceptedAnswer":{"@type":"Answer","text":"はい。むしろ複雑なフローほど、設計の整理や分岐の抜け漏れチェックにClaude Codeが役立ちます。やりたいことを言葉で伝えれば、実行できるステップの並びとして整理してもらえます。"}},{"@type":"Question","name":"自動化に失敗して業務が止まらないか心配です。","acceptedAnswer":{"@type":"Answer","text":"ご安心ください。AIには設計と整理までを任せ、実際に本番で動かす前に人がテストする運用にできます。エラー時の対応方針もあらかじめ用意しておくことで、安心して任せられる状態をつくれます。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × Make（旧Integromat）連携で複数ステップの業務自動化をAIに設計させる！中小企業のノーコード業務フロー効率化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-24">公開日：2026年7月24日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>条件分岐や複数アプリをまたぐ自動化の設計で手が止まる中小企業</li><li><strong>できるようになること：</strong>Make のシナリオ設計・条件分岐・エラー対応を Claude Code と整理し、本番前に人がテストする流れを組める</li><li><strong>必要なもの：</strong>Claude Code と Make のアカウント、自動化したい業務の流れを日本語で説明できること</li></ul></div>
+<!-- /seo:points -->
+
+<p class="lead">「Zapierは使っているけれど、条件分岐や複数アプリをまたぐ処理になると急に難しくなる」「せっかく自動化を始めたのに、シナリオの設計や見直しに時間がかかって手が止まる」「もっと複雑な業務フローを自動化したいのに、どう組めばいいのか分からない」——ノーコードで自動化を進めている中小企業ほど、この“複雑なシナリオ設計の壁”に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、ノーコード自動化ツールとして高い自由度を持つ<strong>Make（旧Integromat）</strong>を組み合わせ、複数ステップの業務フロー設計から見直し・エラー対応までをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ Make と Claude Code を組み合わせるのですか？</a></li>
+<li><a href="#s2">2. Claude Codeとは（おさらい）</a></li>
+<li><a href="#s3">3. Make × Claude Code の連携で何ができますか？</a></li>
+<li><a href="#s4">4. 業種別の活用シーン</a></li>
+<li><a href="#s5">5. 非エンジニアのための導入4ステップ</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ Make と Claude Code を組み合わせるのですか？</h2>
+<p><a href="https://help.make.com/" target="_blank" rel="noopener">Make</a>は、複数のアプリやサービスをつないで、条件分岐・繰り返し・データ加工まで含んだ<strong>「シナリオ」</strong>を組めるノーコード自動化ツールです。単純な「トリガーとアクションを1つずつつなぐ自動化」を超えて、業務の実態に沿った複雑なフローを表現できるのが強みです。一方で、その自由度の高さゆえに「どのモジュールを・どんな順番で・どんな条件でつなぐか」を設計する段階でつまずきやすいのも事実です。</p>
+<p>Claude Codeは、こうした「シナリオの設計と整理」を日本語の指示だけでAIに相談できるツールです。「受注メールが来たら、内容を整理して、担当者に通知し、台帳にも追記したい」といった要望を伝えるだけで、必要なステップや分岐の考え方を筋道立てて提案してもらえます。つまり、Makeという「自由に組める土台」に対して、Claude Codeを「フロー設計の相談役」として配置するイメージです。ネットショップの受注処理を自動化したい場合は、<a href="claude-code-stores-integration.html">STORESとの連携</a>も同じ考え方で組み立てられます。</p>
+
+<h2 id="s2">2. Claude Codeとは（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツールです。最大の特徴は、専門用語を覚えなくても<strong>「〇〇して」と日本語で頼むだけ</strong>で、文章作成・情報整理・分類・手順の設計までこなしてくれる点にあります。</p>
+<ul>
+<li><strong>ノーコードに近い操作感</strong>：コードを書かずに業務の要望を伝えられる</li>
+<li><strong>手順の設計・整理</strong>：やりたいことを、実行できるステップの並びに落とし込める</li>
+<li><strong>繰り返し作業の型化</strong>：一度整理した業務フローを、別の業務にも応用できる</li>
+</ul>
+<p>Make単体では「自由にシナリオを組める仕組み」は手に入りますが、「どう組み立てるか」の設計は自分で考える必要があります。そこをClaude Codeが補うことで、自動化のいちばん重い“フローを考えて形にする”部分が一気に軽くなります。</p>
+
+<h2 id="s3">3. Make × Claude Code の連携で何ができますか？</h2>
+
+<h3>① 業務フロー（シナリオ）の設計サポート</h3>
+<p>「問い合わせフォームの回答を、内容ごとに振り分けて、担当者に通知したい」といった要望を伝えるだけで、必要なステップや分岐の考え方を整理して提案します。Makeでシナリオを組む前の設計図づくりを、AIと相談しながら進められます。</p>
+
+<h3>② 条件分岐・振り分けルールの整理</h3>
+<p>「金額が一定以上なら承認者を追加する」「地域ごとに通知先を変える」といった、複雑になりがちな条件分岐のルールを、抜け漏れが起きにくい形に整理します。分岐の考え方を言葉で明文化できるので、後から見直すときにも迷いません。</p>
+
+<h3>③ データの受け渡し・加工内容の下書き</h3>
+<p>アプリ間でデータを渡すときに必要な「項目の対応づけ」や「日付・金額の整形ルール」を下書きします。どの情報を・どの形に整えて次のステップへ渡すかを、あらかじめ言葉で確認できるため、組み立て時のミスを減らせます。</p>
+
+<h3>④ エラー時の対応方針づくり</h3>
+<p>「途中で処理が止まったらどうするか」「通知が届かなかったときの控えをどう残すか」といった、見落としがちなエラー時の対応方針をチェックリストとして整理します。自動化を安心して任せられる土台を、あらかじめ用意できます。</p>
+
+<h3>⑤ 既存シナリオの棚卸し・改善提案</h3>
+<p>すでに動いているシナリオの内容を説明すると、「重複している処理はないか」「まとめられるステップはないか」といった改善の観点を提案します。増えすぎた自動化を整理し、管理しやすい状態に保つのに役立ちます。</p>
+
+<h2 id="s4">4. 業種別の活用シーン</h2>
+<table>
+<tr><th>業種</th><th>活用シーン</th></tr>
+<tr><td>Web制作・広告・フリーランス</td><td>問い合わせ受付から見積・台帳追記までの一連の流れを設計・整理</td></tr>
+<tr><td>士業・コンサル</td><td>顧問先ごとの連絡・書類作成・リマインドの分岐フローを組み立て</td></tr>
+<tr><td>小売・EC</td><td>受注データの振り分け、在庫・発送・顧客通知の連携フローを整理</td></tr>
+<tr><td>店舗・サービス業</td><td>予約受付から確認連絡・前日リマインドまでの流れを自動化</td></tr>
+<tr><td>製造・卸売業</td><td>発注・入荷・請求に関わる情報の受け渡しと通知の設計を効率化</td></tr>
+</table>
+
+<h2 id="s5">5. 非エンジニアのための導入4ステップ</h2>
+<ol>
+<li><strong>目的を1つに絞る</strong>：まずは「問い合わせの振り分けを自動化したい」など、効果が見えやすい業務を一つ選びます。</li>
+<li><strong>Claude Codeを用意する</strong>：PCにClaude Codeを導入し、「どんな業務を・どんな流れで自動化したいか」を日本語で伝えられる状態にします。</li>
+<li><strong>つなぎ方を決める</strong>：フローの設計や分岐の整理はClaude Codeで行い、Make側での組み立ては簡単なシナリオから始めると安全です。慣れてきたら分岐や加工の多い処理へ広げます。</li>
+<li><strong>小さく試して広げる</strong>：1つのシナリオがうまく回ったら、条件分岐・データ加工・エラー対応へと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり複雑な全自動化を狙わず、<strong>「まず一つの流れを確実に動かす」</strong>こと。小さな成功体験が、自動化を広げていく自信につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li><strong>認証情報の管理</strong>：各アプリやサービスのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li><strong>本番前に必ず人が確認する</strong>：シナリオはAIに設計・整理まで任せ、実際に動かす前に必ず人がテストと最終チェックをする設計にします。</li>
+<li><strong>権限は必要な範囲に絞る</strong>：連携する各サービスの権限は、その業務に必要な範囲だけに限定します。</li>
+<li><strong>顧客・取引先情報の取り扱い</strong>：データを扱う際は、個人や取引先が特定される情報の管理に十分注意します。</li>
+<li><strong>処理ルールの明文化</strong>：分岐の条件やデータの整え方を記録に残し、担当者が変わってもフローがぶれないようにしておきます。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この業務の流れを整理して」といった頼み方で十分です。</p>
+<h3>Q. すでにZapierを使っていますが、Makeに変える必要がありますか？</h3>
+<p>必ずしも変える必要はありません。単純な自動化は<a href="claude-code-zapier-integration.html">Zapier</a>のまま、条件分岐や複数ステップの複雑なフローはMakeで、といった使い分けもできます。どちらを使う場合でも、フローの設計をClaude Codeに相談できる点は共通です。</p>
+<h3>Q. 複雑なシナリオでも相談できますか？</h3>
+<p>はい。むしろ複雑なフローほど、設計の整理や分岐の抜け漏れチェックにClaude Codeが役立ちます。やりたいことを言葉で伝えれば、実行できるステップの並びとして整理してもらえます。</p>
+<h3>Q. 自動化に失敗して業務が止まらないか心配です。</h3>
+<p>ご安心ください。AIには設計と整理までを任せ、実際に本番で動かす前に人がテストする運用にできます。エラー時の対応方針もあらかじめ用意しておくことで、安心して任せられる状態をつくれます。</p>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-cybozu-office-integration.html"><img src="../images/blog-claude-code-cybozu-office-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × サイボウズ Office連携で申請・掲示板を自動化</span></a><a class="seo-related-card" href="claude-code-zapier-integration.html"><img src="../images/blog-claude-code-zapier-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Zapier連携で業務自動化を10倍加速</span></a><a class="seo-related-card" href="claude-code-stores-integration.html"><img src="../images/blog-claude-code-stores-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × STORES連携でネットショップ・予約・POSをAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「ノーコード自動化に興味はあるけれど、複雑なフローの設計で手が止まっている」——そんな方に向けて、Claude Codeの導入から最初の業務フロー自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">¥3,000〜</div>
+<a href="../#contact">導入サポートの詳細を見る</a>
+</div>
+
+<p style="text-align:center;color:#aaa;font-size:14px;margin-top:24px;">これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った“ちょうどいい自動化”をご提案します。</p>
+
+</div>
+
+<footer>
+&copy; 2026 Piste. All rights reserved.
+</footer>
+</body>
+</html>

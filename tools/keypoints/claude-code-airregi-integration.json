@@ -1,0 +1,1 @@
+{"target": "Airレジで会計をしている飲食店・小売店・サロンなどの店舗オーナー", "outcome": "Airレジの売上データをClaude Codeに読み込ませ、日次・月次の集計や売れ筋分析、日報の下書きを自動化できる", "requirement": "Claude Codeを入れたPCと、AirレジからCSV等で出力した売上データ"}

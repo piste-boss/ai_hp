@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド</title>
+<meta name="description" content="Claude Codeで組んだ自動化が「作った本人しか動かせない」状態になるのを防ぐ設計を解説。引き継ぎに本当に必要な3つ、決めごとファイルに書く5行、入口を1つに固定する考え方、止まったときの3つの確認、一人社長の備え方を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,引き継ぎ,業務自動化,属人化,運用設計,中小企業,一人社長,決めごとファイル,自動化 運用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド</h1>
+
+<p class="lead">Claude Code で業務の自動化を組み、毎日きちんと動くようになった。ここまで来た方から次に出てくるのが、「これ、私がいなくなったらどうなるんだろう」という不安です。作った本人は迷いなく動かせるのに、別の人に代わった途端どこを開けばいいのかも分からない。この記事では、<strong>組んだ自動化そのものを、作った本人以外でも動かせる状態にしておくための設計</strong>を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#sec1">1. 引き継げない自動化はなぜ生まれるのか</a></li>
+<li><a href="#sec2">2. 引き継ぎで本当に必要なのは3つだけ</a></li>
+<li><a href="#sec3">3. 決めごとファイルに書くべき5行</a></li>
+<li><a href="#sec4">4. 動かし方は「手順」ではなく「入口」を1つに絞る</a></li>
+<li><a href="#sec5">5. 止まったときに誰でもできる3つの確認</a></li>
+<li><a href="#sec6">6. 一人社長が自分の代わりを用意する方法</a></li>
+<li><a href="#sec7">7. 業種別の引き継ぎどころ</a></li>
+<li><a href="#sec8">よくある質問</a></li>
+<li><a href="#sec9">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="sec1">1. 引き継げない自動化はなぜ生まれるのか</h2>
+<p>引き継げなくなる原因は、能力の差ではありません。<strong>作った過程が本人の頭の中にしか残っていない</strong>ことです。</p>
+<p>自動化は少しずつ育ちます。最初は簡単な指示から始まり、うまくいかない部分を直し、例外に対応し、気づけば細かい調整が積み重なっています。この積み重ねは、作業しながら判断しているため、わざわざ書き残されません。</p>
+<p>そして厄介なことに、<strong>動いている間は誰も困りません</strong>。困るのは、担当が変わったときと、止まったときだけです。だから後回しになり、後回しにしたまま必要な日が来ます。</p>
+<p>もう一つ見落とされがちなのが、<strong>引き継ぎを「全部の説明」だと思ってしまう</strong>ことです。作った経緯から設定の意味まで全部伝えようとすると、量が多すぎて着手できません。実際に必要なのは、そこまで多くありません。</p>
+
+<h2 id="sec2">2. 引き継ぎで本当に必要なのは3つだけ</h2>
+<p>別の人がその自動化を動かすために要るのは、次の3つです。</p>
+<table>
+<thead><tr><th>必要なもの</th><th>中身</th><th>ないとどうなるか</th></tr></thead>
+<tbody>
+<tr><td>何のための仕組みか</td><td>どの業務を、どこからどこまで肩代わりしているか</td><td>使ってよい場面が分からず、結局手作業に戻る</td></tr>
+<tr><td>どうやって動かすか</td><td>決まった入口を1つ。開く場所と、打つ言葉</td><td>触るのが怖くなり、誰も動かさなくなる</td></tr>
+<tr><td>おかしいときどうするか</td><td>止める合図と、最初に見る場所3つ</td><td>異変に気づかず、間違ったまま出てしまう</td></tr>
+</tbody>
+</table>
+<p>逆に言えば、<strong>設定の細かい意味や、作った経緯は引き継ぎに要りません</strong>。それは直すときに必要な情報であって、動かすときには不要です。ここを分けて考えると、引き継ぎの分量は一気に減ります。</p>
+<p>分量の目安は、<strong>紙1枚</strong>です。1枚に収まらないなら、動かし方が複雑すぎるというサインだと考えてください。</p>
+
+<h2 id="sec3">3. 決めごとファイルに書くべき5行</h2>
+<p>Claude Code には、毎回同じ前提を読ませておくための決めごとファイルを置けます。ここに引き継ぎ用の記述をまとめておくと、<strong>指示を出す人が変わっても同じ動きになります</strong>。</p>
+<p>書く内容は次の5行で足ります。</p>
+<ul>
+<li>この自動化が担当している業務の名前と範囲</li>
+<li>触ってよい場所（作業用のフォルダ名を1つ）</li>
+<li>触ってはいけない場所（原本や台帳の置き場）</li>
+<li>出てきたものを世に出す前に、誰が何を見るか</li>
+<li>迷ったら止めて確認する、という一文</li>
+</ul>
+<p>とくに最後の1行は必ず入れてください。<strong>引き継いだ人がいちばん怖いのは、判断してよいかどうか分からない場面</strong>です。「迷ったら止める」が明文化されていれば、そこで手が止まるだけで済みます。書かれていないと、勝手に判断するか、何も触らなくなるかのどちらかになります。</p>
+
+<h2 id="sec4">4. 動かし方は「手順」ではなく「入口」を1つに絞る</h2>
+<p>引き継ぎ資料を作るとき、多くの方が手順書を書こうとします。ところが手順書は、書いた翌月にはもう古くなります。自動化は少しずつ変わっていくからです。</p>
+<p>現実的なのは、<strong>入口を1つに固定してしまう</strong>やり方です。</p>
+<ul>
+<li>開く場所を1か所に決める（作業用フォルダを1つ）</li>
+<li>打つ言葉を決める（毎回同じ短い指示を1つ）</li>
+<li>その言葉を、決めごとファイルの先頭に書いておく</li>
+</ul>
+<p>こうしておけば、引き継ぐ人が覚えるのは<strong>場所1つと言葉1つ</strong>だけになります。中身の作りが変わっても、入口が同じなら引き継ぎ資料を作り直す必要がありません。</p>
+<p>「毎回同じ短い指示」は、たとえば作業の名前をそのまま書くだけで構いません。決めごとファイル側に詳しい前提が書いてあれば、指示は短くて済みます。</p>
+
+<h2 id="sec5">5. 止まったときに誰でもできる3つの確認</h2>
+<p>引き継いだ人がいちばん困るのが、いつもと違う動きをしたときです。ここで「詳しい人を待つ」しかない状態だと、業務が止まります。</p>
+<p>技術が分からなくてもできる確認を、3つだけ決めておきます。</p>
+<ol>
+<li><strong>いつもと違うのはどこか</strong>を一言で書き出す（出てこない／数が合わない／文面が変、など）</li>
+<li><strong>直前に何が変わったか</strong>を確かめる（元になる資料の形式、置き場所、件数）</li>
+<li><strong>同じ指示をもう一度</strong>出してみる（一時的な不調であれば、これで戻ることが多い）</li>
+</ol>
+<p>この3つで戻らなければ、<strong>そこで止めて詳しい人に渡す</strong>。これを最初から決めておけば、引き継いだ人は「自分の判断で無理に直そうとして事態を悪くする」ことを避けられます。</p>
+<blockquote>ここでも大事なのは、戻すのではなく止めること。元に戻す操作は、慣れていない人がやると被害を広げます。止めて渡すまでが引き継いだ人の役割、と線を引いてください。</blockquote>
+
+<h2 id="sec6">6. 一人社長が自分の代わりを用意する方法</h2>
+<p>社員がいない場合、「引き継ぐ相手がいないから関係ない」と思われるかもしれません。ところが一人だからこそ、この準備が効きます。</p>
+<p>理由は2つあります。1つは、<strong>数か月後の自分は他人だから</strong>です。毎日触っていない自動化は、3か月も空けば作った本人でも思い出せません。もう1つは、<strong>体調を崩したときに業務が完全に止まるから</strong>です。</p>
+<p>一人の場合の現実的な進め方は、こうです。</p>
+<ul>
+<li>決めごとファイルの5行だけ先に書く。30分ほどで終わります</li>
+<li>入口を1つに固定し、その言葉を先頭行に書く</li>
+<li>家族や、業務を手伝ってもらえる人に、<strong>入口を打つところだけ</strong>見せておく</li>
+<li>止まったときは「止めて連絡をもらう」と伝えておく</li>
+</ul>
+<p>全部を理解してもらう必要はありません。<strong>動かす操作と、止める判断だけ</strong>渡っていれば、最悪の事態は防げます。</p>
+
+<h2 id="sec7">7. 業種別の引き継ぎどころ</h2>
+<ul>
+<li><strong>士業・コンサル</strong>：預かり資料の置き場と作業用の場所を必ず分ける。引き継ぐ人には作業用の場所しか教えない</li>
+<li><strong>美容室・治療院</strong>：予約に関わる自動化は、止めたときに手作業へ戻す方法を1行で書いておく</li>
+<li><strong>小売・EC</strong>：在庫や価格に触れる部分は、引き継ぐ人が単独で動かさない範囲としてはっきり書く</li>
+<li><strong>建設・工務店</strong>：現場写真や日報は元データの形式が崩れやすいので、確認3つの1番目に「形式が変わっていないか」を入れる</li>
+<li><strong>教室・スクール</strong>：名簿を扱う自動化は、氏名を伏せた状態で動かす前提を決めごとファイルに書いておく</li>
+</ul>
+<p>共通しているのは、<strong>触ってはいけない場所を先に決めておく</strong>ことです。やってよいことを増やすより、やらない場所を1つ決めるほうが、引き継ぎははるかに安全になります。</p>
+
+<h2 id="sec8">よくある質問</h2>
+<p><strong>引き継ぎ資料はどれくらいの分量が適切ですか。</strong></p>
+<p>紙1枚です。それ以上になる場合は、動かし方が複雑になっている可能性があります。資料を増やすより、入口を1つに絞る方向で見直すことをおすすめします。</p>
+<p><strong>専門的な知識がない人に任せて大丈夫でしょうか。</strong></p>
+<p>動かすだけであれば問題ありません。ただし「迷ったら止める」「止まったら渡す」の2つを必ず伝えてください。直そうとしなくてよい、と明言しておくことが大切です。</p>
+<p><strong>決めごとファイルは、どのくらいの頻度で見直すべきですか。</strong></p>
+<p>普段は不要です。触ってよい場所を変えたときと、確認する人が変わったときだけ直せば十分です。動かし方を変えたときも、入口を固定していれば書き直しは要りません。</p>
+<p><strong>引き継ぎの準備には、どれくらい時間がかかりますか。</strong></p>
+<p>決めごとファイルの5行と、入口の固定で半日ほどです。確認3つを決める作業を含めても1日あれば形になります。すでに動いている自動化があるなら、そこから始めるのがいちばん早いです。</p>
+
+<h2 id="sec9">まとめ</h2>
+<p>Claude Code で組んだ自動化を引き継げる状態にするために、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>引き継げなくなるのは能力差ではなく、<strong>作った過程が頭の中にしか残っていない</strong>から</li>
+<li>引き継ぎに必要なのは<strong>「何のため」「どう動かす」「おかしいときどうする」の3つだけ</strong></li>
+<li>決めごとファイルに<strong>5行</strong>書く。最後の「迷ったら止めて確認」は必須</li>
+<li>手順書ではなく<strong>入口を1つに固定</strong>する。場所1つと言葉1つだけ覚えてもらう</li>
+<li>止まったときの確認は<strong>3つ</strong>。戻すのではなく<strong>止めて渡す</strong>まで</li>
+<li>一人でも準備する価値がある。<strong>数か月後の自分は他人</strong>だから</li>
+</ul>
+<p>動いているうちは、誰も困りません。だからこそ、動いている今のうちに紙1枚だけ作っておく。これだけで、その自動化は「あの人の仕組み」から「うちの仕組み」に変わります。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「自動化はできたが、自分しか動かせない状態になっている」「担当が変わったときに止まってしまいそうで不安」という課題をお持ちの方に向けて、業務の切り出しから決めごとファイルの書き方、引き継ぎ用の入口の設計、止まったときの確認手順づくりまでを、非エンジニアの方にも分かりやすく伴走支援します。これまで70社以上のAI導入・業務自動化を支援してきた実績をもとに、動かす人が変わっても止まらない形をご提案します。</p>
+<p>ご相談・お申し込みは、下のボタンからお進みください。</p>
+<a href="../index.html#contact">お問い合わせはこちら</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

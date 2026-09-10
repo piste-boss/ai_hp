@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド</title>
+<meta name="description" content="Claude Codeで相見積もりを比較する手順を解説。六項目の型づくり・共通の型への写し替え・「記載なし」の残し方・項目ごとの差額分解・条件を揃えた聞き直しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,相見積もり,見積比較,発注先,調達,コスト管理,業務効率化,中小企業,一人社長">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで相見積もりを比べる！中小企業のための条件そろえと発注先の判断材料づくりガイド</h1>
+
+<p class="lead">三社から見積もりを取った。書類は机の上に揃っている。けれど結局、いちばん下の合計金額だけを見て決めた——中小企業の現場で、これは珍しいことではありません。比べなかったわけではなく、<strong>比べられる形になっていなかった</strong>というのが実情です。この記事では、Anthropic社の公式AIコーディングツール Claude Code を使って、ばらばらの見積書を同じ土俵に乗せ、発注先を決めるための判断材料をつくるまでの手順を、非エンジニアの方向けに整理します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<a href="#s1">相見積もりが比べられなくなる3つの理由</a><br>
+<a href="#s2">Claude Codeに任せる範囲と、人が決める範囲</a><br>
+<a href="#s3">実務は5つのステップで回る</a><br>
+<a href="#s4">頼み方の3原則</a><br>
+<a href="#s5">現場でつまずく5つの型</a><br>
+<a href="#s6">業種別に、どこで効くか</a><br>
+<a href="#s7">よくある質問</a><br>
+<a href="#s8">まとめ</a><br>
+</div>
+
+<h2 id="s1">相見積もりが比べられなくなる3つの理由</h2>
+<p>担当者の能力の問題ではありません。書類の側に、比較を妨げる構造があります。</p>
+<h3>1. 項目の粒度が会社ごとに違う</h3>
+<p>同じ工事や同じ制作物でも、A社は八項目に分け、B社は三項目にまとめ、C社は「一式」で出してきます。<strong>分け方が違うものは、そのままでは引き算ができません。</strong></p>
+<h3>2. 含まれている範囲が違う</h3>
+<p>運搬費、諸経費、廃材処分、初期設定、保証期間、納品後の修正回数——このあたりは、書いてある会社と書いていない会社があります。書いていないのは費用がかからないからではなく、<strong>単に見積書に載せていないだけ</strong>のことが多く、ここが後の追加費用になります。</p>
+<h3>3. 前提条件がそろっていない</h3>
+<p>数量、納期、支払条件、作業日、使用する材料の等級。これらが違えば金額が違うのは当たり前です。<strong>条件が違うまま金額だけを比べると、必ず判断を誤ります。</strong></p>
+<p>この三つは、いずれも読み手の努力では埋まりません。<strong>先に型を決めて、そこに写し替える</strong>という工程を挟むことでしか解決しないものです。</p>
+
+<h2 id="s2">Claude Codeに任せる範囲と、人が決める範囲</h2>
+<p>ここを曖昧にすると、出てきた比較表をどこまで信じてよいのか分からなくなります。先に線を引きます。</p>
+<table>
+<tr><th>工程</th><th>担当</th><th>理由</th></tr>
+<tr><td>見積書の読み取り・書き起こし</td><td>Claude Code</td><td>手を動かすだけの作業</td></tr>
+<tr><td>共通の型への写し替え</td><td>Claude Code</td><td>型を渡せば揺れずに実行できる</td></tr>
+<tr><td>項目ごとの差額の抽出</td><td>Claude Code</td><td>見落としが起きやすい計算作業</td></tr>
+<tr><td>記載がない項目の洗い出し</td><td>Claude Code</td><td>網羅性が要る確認作業</td></tr>
+<tr><td>どの条件を重く見るかの決定</td><td>人</td><td>会社の事情と優先順位の問題</td></tr>
+<tr><td>発注先の決定と交渉</td><td>人</td><td>責任と関係性が伴う判断</td></tr>
+</table>
+<p>要点は五行目です。「二十万円高いが納期が二週間早い」という状態で、どちらを取るかは、繁忙期かどうか、現場が空いているかどうかを知っている人にしか決められません。<strong>Claude Codeが出すのは材料であって、結論ではありません。</strong></p>
+
+<h2 id="s3">実務は5つのステップで回る</h2>
+<p>特別な準備は要りません。手元に見積書があれば始められます。</p>
+<h3>ステップ1｜見積書を1か所に集め、控えを取る</h3>
+<p>紙で届いたものは写真かスキャンで画像にします。データで届いたものはそのまま使えます。<strong>必ず元の見積書の控えを別に残してください。</strong> 書き写す過程で数字を触ってしまっても、原本に戻れる状態にしておきます。</p>
+<p>このとき、各社の見積書に受け取った日付を添えておきます。有効期限が切れているものを比較表に混ぜてしまう事故は、意外と多く起きます。</p>
+<h3>ステップ2｜比較の型を先に決める</h3>
+<p>ここが結果を大きく左右します。型を決めずに「三社を比較して」と頼むと、Claude Codeが各社の書き方に合わせた表をつくり、<strong>結局ばらばらのまま並ぶだけ</strong>になります。業種を問わず、まずはこの六項目で足ります。</p>
+<table>
+<tr><th>型の項目</th><th>中身</th></tr>
+<tr><td>本体費用</td><td>主たる商品・作業そのものの金額</td></tr>
+<tr><td>付帯費用</td><td>運搬、設置、廃棄、初期設定など</td></tr>
+<tr><td>諸経費・管理費</td><td>現場管理費、事務手数料など</td></tr>
+<tr><td>値引き</td><td>名目と金額</td></tr>
+<tr><td>税の扱い</td><td>税抜か税込か、税額はいくらか</td></tr>
+<tr><td>条件</td><td>納期、支払条件、保証、修正回数</td></tr>
+</table>
+<h3>ステップ3｜共通の型に写し替えさせ、「記載なし」を残させる</h3>
+<p>「この見積書を、渡した型の項目に振り分けてください」と頼みます。ここでいちばん大事なのは、<strong>書かれていない項目を空欄ではなく『記載なし』と明記させる</strong>ことです。</p>
+<p>空欄だと、読む側は無意識に「かからない」と解釈します。しかし実際は「書いていないだけ」であることがほとんどです。『記載なし』と文字で出ていれば、それは確認すべき項目だと分かります。「一式」としか書かれていない項目も同じで、金額を項目数で割って推測させてはいけません。<strong>『一式・内訳なし』と、そのまま残させます。</strong></p>
+<h3>ステップ4｜項目ごとの差額と、その出どころを出させる</h3>
+<p>合計の差ではなく、<strong>どの項目で差がついたのか</strong>を出させます。「A社がB社より十八万円高い。うち十二万円は諸経費、四万円は運搬費、二万円は本体」という形まで分解されて初めて、交渉の余地がある部分と、動かない部分が分かれます。</p>
+<p>このとき、税の扱いをそろえてから比較するよう指示してください。税抜と税込を並べたままの比較表は、それ自体が誤りです。</p>
+<h3>ステップ5｜各社に聞き直す質問リストをつくらせる</h3>
+<p>比較表を眺めて終わりにしないでください。ステップ3で出た『記載なし』と『一式・内訳なし』を材料に、各社に条件を揃えて聞き直すための質問リストをつくらせます。</p>
+<p>「廃材処分は含まれますか」「保証期間は何か月ですか」「修正は何回まで含まれますか」——この確認を全社に同じ内容で投げると、<strong>二回目の見積もりは初めて同じ土俵に乗ります。</strong> 相見積もりの本番は、実はここからです。</p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1｜型をこちらから渡す</h3>
+<p>「いい感じに比較表にして」ではなく、ステップ2で決めた六項目の名前をそのまま渡します。こちらが決めた枠に入れさせることで、案件をまたいでも同じ形の表が残ります。</p>
+<h3>原則2｜書かれていないことを補わせない</h3>
+<p>推測を許すと、記載のない項目に相場らしき金額が入ります。これがいちばん危険です。<strong>『記載がないものは記載なしと書き、金額を推測しないでください』</strong>と最初に指示してください。判断がつかない項目も、理由と一緒に分けて出させます。</p>
+<h3>原則3｜合計を必ず突き合わせる</h3>
+<p>写し替えが終わったら、型に振り分けた金額の合計が、元の見積書の合計と一致しているかを確認します。合わなければどこかで落ちているか、二重に数えています。この確認を毎回入れるだけで、静かに数字がずれる事故を防げます。</p>
+
+<h2 id="s5">現場でつまずく5つの型</h2>
+<h3>型1｜合計金額だけで決めてしまう</h3>
+<p>いちばん多い型です。合計は、含まれている範囲が違えば比較できません。<strong>合計を見る前に、範囲がそろっているかを見る。</strong> 順番が逆になると判断を誤ります。</p>
+<h3>型2｜「一式」を金額で割って推測する</h3>
+<p>一式二百万円を八項目で割って二十五万円ずつと見なす——やってはいけない処理です。一式は情報がないという事実であって、埋めるべき空欄ではありません。聞き直す対象として残します。</p>
+<h3>型3｜値引きと税の扱いがそろっていない</h3>
+<p>「端数値引き」を本体から引いている会社と、合計から引いている会社では、同じ金額でも意味が変わります。税抜表示と税込表示の混在も同様です。そろえてから比べるという一手間を省かないでください。</p>
+<h3>型4｜納期と支払条件を金額に換算していない</h3>
+<p>納期が二週間早いこと、支払いが翌々月末でよいこと。これらは金額欄に出てきませんが、<strong>現場が空くかどうか、資金繰りが楽になるかどうかという実質的な差</strong>です。条件欄を必ず表に残し、金額と並べて見てください。</p>
+<h3>型5｜比較表を残さない</h3>
+<p>決まった瞬間に比較表を捨ててしまうと、次に同じものを発注するとき、またゼロから始めることになります。<strong>型は使い回せます。</strong> 一度つくった六項目の型と、前回の各社の金額を残しておけば、次回は写し替えるだけで済みます。</p>
+
+<h2 id="s6">業種別に、どこで効くか</h2>
+<table>
+<tr><th>業種</th><th>効きどころ</th></tr>
+<tr><td>建設・工務店</td><td>一式表記と諸経費率の差が可視化され、値引き交渉の材料になる</td></tr>
+<tr><td>製造業</td><td>数量・材料等級・型費の前提差が分離でき、単価の比較が成立する</td></tr>
+<tr><td>小売・通販</td><td>仕入先ごとのロット・送料・返品条件が並び、実質原価で選べる</td></tr>
+<tr><td>飲食店</td><td>食材と資材の納入条件の差が見え、頻度と最低ロットで判断できる</td></tr>
+<tr><td>士業・コンサル</td><td>作業範囲と修正回数の含みが明確になり、追加請求の予防になる</td></tr>
+<tr><td>教室・サロン</td><td>設備導入や改装の付帯費用の抜けが事前に分かる</td></tr>
+</table>
+<p>どの業種でも共通するのは、<strong>「安いと思って選んだら後から増えた」という失敗が減る</strong>という点です。金額を下げるより先に、範囲をそろえる。効くのはいつもこの順番です。</p>
+
+<h2 id="s7">よくある質問</h2>
+<h3>Q. 紙の見積書しかない場合でも使えますか。</h3>
+<p>使えます。写真やスキャン画像から文字を読み取らせ、そこから型への写し替えに進めます。ただし読み取りの精度は書式や手書き部分に左右されるため、金額欄だけは目で突き合わせる工程を残してください。桁の読み違いは起こり得ます。</p>
+<h3>Q. 三社ではなく二社でも意味がありますか。</h3>
+<p>あります。むしろ二社のほうが差の出どころが見やすいことも多いです。ただし二社だと両社に共通して抜けている項目に気づきにくくなります。型をこちらで先に決めておくことが、二社の場合はより重要になります。</p>
+<h3>Q. どのくらい時間が短縮できますか。</h3>
+<p>三社分の見積書を読み込み、項目を揃えて比較表にまとめる作業は、慣れた方でも一時間から二時間かかります。型が決まっていれば、確認の時間を含めて二十分前後まで縮むケースが多いです。二回目以降は型の使い回しで、さらに短くなります。</p>
+<h3>Q. 取引先の見積書をClaude Codeに渡してよいのでしょうか。</h3>
+<p>社名や担当者名など、比較に不要な情報は伏せてから渡すのが安全です。比較に必要なのは項目名と金額と条件だけで、どの会社かはA社・B社・C社と置き換えても成立します。社内の取り扱いルールがある場合は、そちらを優先してください。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>相見積もりの比較について、この記事でお伝えしたことを整理します。</p>
+<ul>
+<li>比べられないのは能力の問題ではなく、<strong>書類の粒度と範囲がそろっていない</strong>という構造の問題</li>
+<li>先に<strong>六項目の型を決めて渡す</strong>。型がないと、ばらばらのまま並ぶだけになる</li>
+<li>書かれていない項目は空欄にせず、<strong>『記載なし』と文字で残す</strong></li>
+<li>「一式」は<strong>埋めずに残す</strong>。割って推測した瞬間に比較は壊れる</li>
+<li>合計ではなく<strong>項目ごとの差額</strong>まで分解して、初めて交渉できる部分が分かる</li>
+<li>相見積もりの本番は、<strong>条件を揃えて聞き直した二回目</strong>から</li>
+</ul>
+<p>机の上に並んだ三社の見積書は、すでに手に入っている情報です。取り寄せる手間はもう払い終わっています。あとは、比べられる形に変えるだけです。</p>
+
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「自社の見積書で試してみたいが、どこから手を付ければよいか分からない」という方に、Claude Codeの導入から比較運用の組み立てまで、非エンジニアの方にも分かりやすく伴走支援します。70社以上のAI導入・業務自動化の支援実績があります。</p>
+<p class="price">¥3,000〜</p>
+<a href="../index.html#contact">導入サポートの詳細を見る</a>
+</div>
+</div>
+
+<footer>&copy; Piste AI Consulting</footer>
+</body>
+</html>

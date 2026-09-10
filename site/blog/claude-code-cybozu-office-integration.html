@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × サイボウズ Office連携で申請・掲示板を自動化 | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeと国産グループウェア サイボウズ Officeを組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくり・社内情報のまとめをAI自動化する方法を解説。中小企業向けに、活用5選・部門別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+<meta name="keywords" content="Claude Code,サイボウズ,サイボウズ Office,グループウェア,スケジュール共有,ワークフロー,掲示板,社内情報共有,中小企業,業務自動化,AI">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Code × サイボウズ Office連携で申請・掲示板を自動化">
+  <meta property="og:description" content="Claude Codeと国産グループウェア サイボウズ Officeを組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくり・社内情報のまとめをAI自動化する方法を解説。中小企業向けに、活用5選・部門別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-cybozu-office-integration-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-07-05T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="ツール連携">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code × サイボウズ Office連携で申請・掲示板を自動化">
+  <meta name="twitter:description" content="Claude Codeと国産グループウェア サイボウズ Officeを組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくり・社内情報のまとめをAI自動化する方法を解説。中小企業向けに、活用5選・部門別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-cybozu-office-integration-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html"},"url":"https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html","headline":"Claude Code × サイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化！中小企業のグループウェア運用効率化ガイド","alternativeHeadline":"Claude Code × サイボウズ Office連携で申請・掲示板を自動化","description":"Claude Codeと国産グループウェア サイボウズ Officeを組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくり・社内情報のまとめをAI自動化する方法を解説。中小企業向けに、活用5選・部門別シーン・非エンジニアの導入4ステップ・運用上の注意点を紹介します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-cybozu-office-integration-og.jpg","width":1200,"height":800},"datePublished":"2026-07-05T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"ツール連携","keywords":["Claude Code","サイボウズ","サイボウズ Office","グループウェア","スケジュール共有","ワークフロー","掲示板","社内情報共有","中小企業","業務自動化","AI"],"wordCount":4050,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"ツール連携","item":"https://www.piste-ai.com/blog/category-tool-integration.html"},{"@type":"ListItem","position":4,"name":"Claude Code × サイボウズ Office連携で申請・掲示板を自動化","item":"https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-cybozu-office-integration.html#faq","mainEntity":[{"@type":"Question","name":"プログラミングができなくても使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この稟議の申請文を書いて」といった頼み方で十分です。"}},{"@type":"Question","name":"サイボウズ Officeの情報をそのまま使えますか？","acceptedAnswer":{"@type":"Answer","text":"掲示板やメッセージの文面、メモなどをClaude Codeに渡して整理・下書きするところから始めるのが安全です。まずは手元の文面で試し、慣れてきたら日々の申請や報告に組み込んでいくとスムーズです。"}},{"@type":"Question","name":"どのくらいの作業から始めるのがおすすめですか？","acceptedAnswer":{"@type":"Answer","text":"まずは「ワークフロー申請文の下書き」から始めるのがおすすめです。繰り返し発生する作業なので効果を実感しやすく、その後の議事メモや報告書づくりにもスムーズに広げられます。"}},{"@type":"Question","name":"すでにサイボウズ Officeを使っていますが、何か入れ替えが必要ですか？","acceptedAnswer":{"@type":"Answer","text":"入れ替えは不要です。今の運用はそのままに、文章づくりや情報整理という「手が回りにくい部分」だけをClaude Codeが補う形なので、無理なく始められます。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Code × サイボウズ Office連携でスケジュール共有・ワークフロー申請・掲示板をAI自動化！中小企業のグループウェア運用効率化ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-tool-integration.html">ツール連携</a></nav>
+<p class="seo-postmeta"><time datetime="2026-07-05">公開日：2026年7月5日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-cybozu-office-integration.webp" alt="Claude Code × サイボウズ Office連携" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>サイボウズ Office の申請文や掲示板整理に手間がかかる中小企業の担当者</li><li><strong>できるようになること：</strong>会議案内・申請文・議事メモの下書きと掲示板の要点整理を Claude Code に任せ、人が確認して提出できる</li><li><strong>必要なもの：</strong>Claude Code と、サイボウズ Office の掲示板・メッセージの文面（貼り付けで可）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「サイボウズ Officeでスケジュールも申請も掲示板も一通りそろっているのに、日々の入力や文章づくりで手が止まる」「稟議や休暇の申請文をゼロから書くのが地味に面倒」「掲示板やメッセージが増えすぎて、誰が何を決めたのか追いきれない」——国産グループウェアの定番<strong>サイボウズ Office</strong>を使っている中小企業ほど、この“仕組みはあるのに運用に手間がかかる”壁に当たりがちです。本記事では、Anthropic公式のAIコーディングツール<strong>Claude Code</strong>と、多くの企業で使われている<strong>サイボウズ Office</strong>を組み合わせ、スケジュール調整・ワークフロー申請の下書き・掲示板の要点整理・報告書づくりまでをAIに任せる方法を、非エンジニアの方にも分かるように解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. なぜ「サイボウズ Office × Claude Code」なのか</a></li>
+<li><a href="#s2">2. Claude Codeとは（おさらい）</a></li>
+<li><a href="#s3">3. Claude Code はサイボウズ Office の何を自動化できますか？</a></li>
+<li><a href="#s4">4. 部門別の活用シーン</a></li>
+<li><a href="#s5">5. サイボウズ Office と Claude Code の連携はどう始めますか？</a></li>
+<li><a href="#s6">6. 運用上の注意点</a></li>
+<li><a href="#s7">7. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. なぜ「サイボウズ Office × Claude Code」なのか</h2>
+<p><a href="https://office.cybozu.co.jp/" target="_blank" rel="noopener">サイボウズ Office</a>は、スケジュール・掲示板・ワークフロー（申請・承認）・メッセージ・ファイル共有などを1つにまとめた、中小企業に人気の国産グループウェアです。社内の予定や申請、情報共有がクラウドにたまっていくため、「何を・いつ・誰が」といった情報そのものは自然と蓄積されていきます。ところが実際に運用してみると、「予定調整の連絡だけで午前中が終わる」「稟議や休暇の申請文を毎回ゼロから書くのが手間」「掲示板やメッセージが増えて要点を追いきれない」といった課題が次々に出てきます。</p>
+<p>Claude Codeは、こうした「書く・まとめる・整理する」作業を日本語の指示だけでAIに任せられるツールです。会議の候補日を整理して調整文をつくったり、申請理由の下書きを整えたり、掲示板やメッセージの流れから決定事項を抜き出したりといった作業を横断的にサポートできます。プログラミングの知識は不要で、やりたいことを言葉で伝えるだけです。</p>
+<p>つまり、サイボウズ Officeという「情報が集まる場所」に対して、Claude Codeを「文章づくりと情報整理を支える専属アシスタント」として配置するイメージです。</p>
+
+<h2 id="s2">2. Claude Codeとは（おさらい）</h2>
+<p>Claude Codeは、AI開発企業Anthropicが提供するAIコーディングツールです。最大の特徴は、専門用語を覚えなくても「〇〇して」と日本語で頼むだけで、文章作成・要約・情報整理・分類までこなしてくれる点にあります。</p>
+<ul>
+<li>ノーコードに近い操作感：コードを書かずに業務指示が出せる</li>
+<li>面倒な文章づくりの自動化：申請文や報告書を決まった形にまとめる作業を任せられる</li>
+<li>繰り返し作業の型化：一度つくった申請文や議事メモの型を毎回の入力に再利用できる</li>
+</ul>
+<p>サイボウズ Office単体では「予定・申請・情報共有をまとめる仕組み」は手に入りますが、「そこに入れる文章をどう書き、たまった情報をどう読み解くか」は自分で行う必要があります。そこをClaude Codeが補うことで、グループウェア運用のいちばん手間な「入力と整理」が一気に軽くなります。</p>
+
+<h2 id="s3">3. Claude Code はサイボウズ Office の何を自動化できますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-cybozu-office-integration-01.webp" alt="Claude Code × サイボウズ Office連携" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>① 会議の日程調整と案内文づくり</h3>
+<p>参加メンバーと候補日時を伝えるだけで、空き状況をふまえた調整のたたき台や、分かりやすい会議案内文の下書きをまとめます。「何日が良いですか」のやり取りに追われる時間を短縮できます。</p>
+<h3>② ワークフロー申請文の下書き作成</h3>
+<p>稟議・経費精算・休暇・備品購入などの申請理由を、要点を伝えるだけで過不足のない文章に整えます。毎回ゼロから書いていた申請文を、型に沿ってすばやく用意できます。</p>
+<h3>③ 掲示板・メッセージの要点整理</h3>
+<p>やり取りが長くなった掲示板やメッセージの内容を渡すと、「決まったこと」「保留のこと」「次にやること」を整理してまとめます。後から参加した人でも流れをすぐ把握できます。社内チャットの要点整理は<a href="claude-code-lineworks-integration.html">LINE WORKS との連携</a>でも同じ形で行えます。</p>
+<h3>④ 議事メモ・報告書の下書き作成</h3>
+<p>会議や打ち合わせのメモを渡すだけで、社内で共有しやすい議事録や日報・週報の下書きに整えます。掲示板やメッセージへそのまま貼れる形にまとめられます。</p>
+<h3>⑤ 社内問い合わせ・ルール説明の下書き</h3>
+<p>「経費精算の締め日はいつ？」「有休の申請手順は？」といった繰り返し聞かれる質問に対して、掲示板やファイルの情報をもとに、分かりやすい説明文の下書きを用意します。総務・管理部門の問い合わせ対応を軽くします。</p>
+
+<h2 id="s4">4. 部門別の活用シーン</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-cybozu-office-integration-02.webp" alt="Claude Code × サイボウズ Office連携" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<table>
+<thead><tr><th>部門</th><th>活用シーン</th></tr></thead>
+<tbody>
+<tr><td>総務・管理部門</td><td>社内ルール説明や申請手順の案内文を整え、問い合わせ対応を効率化</td></tr>
+<tr><td>経理・財務</td><td>稟議・経費精算の申請文や、月次報告のたたき台づくりを時短</td></tr>
+<tr><td>営業部門</td><td>商談メモから報告書・日報の下書きを作成し、共有をスムーズに</td></tr>
+<tr><td>人事・労務</td><td>休暇・勤怠に関する申請文や社内お知らせの下書きを効率化</td></tr>
+<tr><td>経営・管理職</td><td>掲示板やメッセージの要点整理で、意思決定に必要な情報を素早く把握</td></tr>
+</tbody>
+</table>
+
+<h2 id="s5">5. サイボウズ Office と Claude Code の連携はどう始めますか？</h2>
+<ol>
+<li>目的を1つに絞る：まずは「申請文づくりを楽にしたい」「掲示板の要点をまとめたい」など、効果が見えやすい作業を一つ選びます。</li>
+<li>Claude Codeを用意する：PCにClaude Codeを導入し、「どの情報を・どんな形で・何のために整理したいか」を日本語で伝えられる状態にします。</li>
+<li>つなぎ方を決める：サイボウズ Officeの掲示板やメッセージの文面をClaude Codeに渡して整理・下書きし、活用は手作業（コピー＆ペースト）から始めると安全です。慣れてきたら日々の運用に組み込み、複数の仕組みをまたぐ自動連携まで進めたい場合は<a href="claude-code-make-integration.html">Make との連携</a>が選択肢になります。</li>
+<li>小さく試して広げる：1つの作業でうまく回ったら、日程調整・議事メモ・報告書づくりへと対象を増やしていきます。</li>
+</ol>
+<p>大切なのは、いきなり全自動化を狙わず、「まず一つの作業を確実に楽にする」こと。小さな成功体験が、運用の定着と継続につながります。</p>
+
+<h2 id="s6">6. 運用上の注意点</h2>
+<ul>
+<li>認証情報の管理：サイボウズ Officeや各アカウントのログイン情報は、誰でも見られる場所に置かず、安全に保管します。</li>
+<li>社内情報の取り扱い：人事情報や取引先情報など機微な内容を扱う際は、社内でルールを決め、必要な範囲だけを使うようにします。</li>
+<li>公開前・提出前は必ず人が確認する：申請文や報告書はAIに下書きまで任せ、実際の提出・承認は必ず人が最終チェックする設計にします。</li>
+<li>前提条件をそろえる：対象期間や部門などの条件を明確に伝えることで、ズレのない結果になります。</li>
+<li>現場のニュアンスとの照らし合わせ：文章づくりをAIに任せても、社内の言い回しや温度感は担当者が最終調整する工程を残します。</li>
+</ul>
+
+<h2 id="s7">7. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングができなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示を出すだけで動くため、コードを書く必要はありません。「この稟議の申請文を書いて」といった頼み方で十分です。</p>
+<h3>Q. サイボウズ Officeの情報をそのまま使えますか？</h3>
+<p>掲示板やメッセージの文面、メモなどをClaude Codeに渡して整理・下書きするところから始めるのが安全です。まずは手元の文面で試し、慣れてきたら日々の申請や報告に組み込んでいくとスムーズです。</p>
+<h3>Q. どのくらいの作業から始めるのがおすすめですか？</h3>
+<p>まずは「ワークフロー申請文の下書き」から始めるのがおすすめです。繰り返し発生する作業なので効果を実感しやすく、その後の議事メモや報告書づくりにもスムーズに広げられます。</p>
+<h3>Q. すでにサイボウズ Officeを使っていますが、何か入れ替えが必要ですか？</h3>
+<p>入れ替えは不要です。今の運用はそのままに、文章づくりや情報整理という「手が回りにくい部分」だけをClaude Codeが補う形なので、無理なく始められます。</p>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-lineworks-integration.html"><img src="../images/blog-claude-code-lineworks-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × LINE WORKS連携で社内チャットを自動化</span></a><a class="seo-related-card" href="claude-code-make-integration.html"><img src="../images/ogp.webp" alt="" loading="lazy" width="640" height="640"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × Make連携で複数ステップの業務自動化を設計</span></a><a class="seo-related-card" href="claude-code-stores-integration.html"><img src="../images/blog-claude-code-stores-integration-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">ツール連携</span><span class="seo-related-title">Claude Code × STORES連携でネットショップ・予約・POSをAI自動化</span></a></div>
+<p class="seo-related-more"><a href="category-tool-integration.html">「ツール連携」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code導入サポート</h2>
+<p>「サイボウズ Officeは使いこなしたいけれど、申請文づくりや情報整理まで手が回らない」。そんな方に向けて、Claude Codeの導入から最初の社内業務の自動化までを伴走支援します。非エンジニアの方でも安心して始められます。</p>
+<div class="price">1時間 ¥10,000（税込）</div>
+<p>これまで400社以上のAI導入・業務自動化を支援してきた実績をもとに、御社の現場に合った「ちょうどいい自動化」をご提案します。</p>
+<a href="../#contact">導入サポートを相談する</a>
+</div>
+
+</div>
+
+<footer>
+&copy; 株式会社Piste — AIコンサルティング. All rights reserved.
+</footer>
+</body>
+</html>

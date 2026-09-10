@@ -1,0 +1,17 @@
+{
+  "sitemap_urls": 170,
+  "duplicate_sitemap_urls": 0,
+  "statuses": {
+    "200": 170
+  },
+  "bad_canonical": [],
+  "bad_h1": [],
+  "missing_description": [],
+  "missing_og_image": [],
+  "bad_measurement_loader": [],
+  "noindex": [],
+  "invalid_json_ld": [],
+  "missing_alt_pages": [],
+  "missing_dimensions_pages": [],
+  "broken_fragments": []
+}

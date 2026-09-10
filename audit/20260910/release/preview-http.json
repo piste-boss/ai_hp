@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/about.html",
+    "status": 301,
+    "location": "/about"
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/index.html",
+    "status": 301,
+    "location": "/"
+  },
+  {
+    "path": "/blog/index.html",
+    "status": 301,
+    "location": "/blog/"
+  },
+  {
+    "path": "/blog/claude-code-instagram-integration.html",
+    "status": 301,
+    "location": "/blog/claude-code-instagram-integration"
+  },
+  {
+    "path": "/blog/claude-code-instagram-integration",
+    "status": 200,
+    "location": null
+  },
+  {
+    "path": "/api/contact",
+    "status": 405,
+    "location": null
+  },
+  {
+    "path": "/gas/Code.gs",
+    "status": 404,
+    "location": null
+  },
+  {
+    "path": "/nothing-seo-check",
+    "status": 404,
+    "location": null
+  }
+]

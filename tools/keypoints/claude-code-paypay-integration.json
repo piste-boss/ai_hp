@@ -1,0 +1,1 @@
+{"target": "PayPayを導入している飲食店・サロン・小売店などの実店舗経営者", "outcome": "PayPayの売上データを曜日別・時間帯別に整理し、クーポンや告知文の下書きを用意できる", "requirement": "Claude Code と、PayPay管理画面から書き出した売上データ"}

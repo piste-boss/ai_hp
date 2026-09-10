@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで仕様変更の記録を残す | Piste AI EVANGELISTS</title>
+<meta name="description" content="Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,仕様変更,変更履歴,追加費用,追加工事,変更管理,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<link rel="stylesheet" href="/css/blog-accessibility.css">
+  <script defer src="/js/analytics.js"></script>
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-spec-change-log.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで仕様変更の記録を残す">
+  <meta property="og:description" content="Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-spec-change-log.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-spec-change-log-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-05T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="業務記録・現場改善">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで仕様変更の記録を残す">
+  <meta name="twitter:description" content="Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-spec-change-log-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-spec-change-log.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-spec-change-log.html"},"url":"https://www.piste-ai.com/blog/claude-code-spec-change-log.html","headline":"Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド","alternativeHeadline":"Claude Codeで仕様変更の記録を残す","description":"Claude Codeで散らばった仕様変更の指示を一覧に集め、当初の約束と照らして追加・削除・置き換え・明確化に仕分け、追加費用の根拠として示せる形に整える手順を解説。基準の版づくりから版管理まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-spec-change-log-og.jpg","width":1200,"height":800},"datePublished":"2026-09-05T09:00:00+09:00","dateModified":"2026-09-10T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"業務記録・現場改善","keywords":["Claude Code","仕様変更","変更履歴","追加費用","追加工事","変更管理","業務効率化","中小企業"],"wordCount":5326,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"業務記録・現場改善","item":"https://www.piste-ai.com/blog/category-operations.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで仕様変更の記録を残す","item":"https://www.piste-ai.com/blog/claude-code-spec-change-log.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-spec-change-log.html#faq","mainEntity":[{"@type":"Question","name":"口頭で出た変更はどう記録すればよいですか","acceptedAnswer":{"@type":"Answer","text":"その日のうちに担当者が短いメモを残し、それを機械に渡します。「何月何日、誰が、何と言ったか」の三点があれば十分です。整った文章である必要はありません。整えるのは機械の仕事です。"}},{"@type":"Question","name":"変更の一覧を相手に見せると、関係が悪くなりませんか","acceptedAnswer":{"@type":"Answer","text":"出し方によります。最後にまとめて請求の根拠として出すと身構えられますが、変更が出るたびに「このように受け取っています」と確かめる形なら、むしろ丁寧な仕事として受け取られます。一覧は請求書ではなく、認識を揃えるための道具として使います。"}},{"@type":"Question","name":"どのくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"案件の立ち上げで基準の版をつくるのに一時間ほど、以後は変更が出るたびに数分が目安です。納品後に揉めてから経緯を掘り起こす時間と比べると、はるかに短く済みます。"}},{"@type":"Question","name":"過去の案件にもさかのぼって使えますか","acceptedAnswer":{"@type":"Answer","text":"やり取りの記録が残っていれば可能です。ただし、すでに完了した案件で追加費用を請求し直すのは関係上むずかしい場合が多いため、過去案件は「どこで変更が漏れたか」を学ぶ材料として使い、次の案件から運用を始めるのが現実的です。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+</head>
+<body>
+<header>
+<a href="../"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../#profile">私たちについて</a>
+<a href="../#services">サービス</a>
+<a href="../#blog">ブログ</a>
+<a href="../#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-operations.html">業務記録・現場改善</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-05">公開日：2026年9月5日</time><time datetime="2026-09-10">更新日：2026年9月10日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-spec-change-log.webp" alt="Claude Codeで仕様変更の記録を残す！中小企業のための変更履歴づくりと追加費用の根拠整理ガイド" style="width: 100%; height: auto; display: block;" loading="eager" fetchpriority="high" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>打ち合わせや現場で小さな仕様変更を口頭で受けている建設・製造・制作・士業の担当者</li><li><strong>できるようになること：</strong>当初仕様の基準版を作り、やり取りから変更を原文で抜き出して4つに仕分けた一覧を残せる</li><li><strong>必要なもの：</strong>Claude Code と、見積書・注文書・打ち合わせ記録などの当初仕様の書類</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">打ち合わせの席で「ここ、やっぱりこうしてほしい」と言われる。やり取りの文面の途中で「前に話した件、少し変えたい」と書き添えられる。現場で「ついでにこれも」と頼まれる。仕事を進めるうちに仕様は少しずつ変わっていきますが、<strong>その変更がいつ・誰から・どんな言葉で出たのかを残している会社は多くありません</strong>。</p>
+<p>その結果、納品や引き渡しの段になって「そんな話は聞いていない」「これは最初から含まれているはず」というすれ違いが起きます。追加の手間はこちらが負ったのに、費用として請求する根拠が手元にない。あるいは、請求はしたものの相手が納得せず、関係だけが悪くなる。中小企業の現場で繰り返されている損失です。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、散らばった変更の指示を一覧に集め、当初の約束と照らして「追加にあたるもの」を仕分け、追加費用の根拠として相手に示せる形に整えるまでの手順を、非エンジニアの方向けに整理します。請求するか、無償で受けるかを決めるのは人。機械に任せるのは、<strong>あとから探すと見つからない変更の痕跡を、起きたときに残す作業</strong>です。</p>
+
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">仕様変更が「なかったこと」になる3つの理由</a></li>
+<li><a href="#s2">仕様変更の記録で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</a></li>
+<li><a href="#s3">Claude Codeで仕様変更の記録を残す手順はどう進めますか？</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="s1">仕様変更が「なかったこと」になる3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-spec-change-log-01.webp" alt="仕様変更が「なかったこと」になる3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>変更を記録していないのは、担当者が不注意だからではありません。記録が残りにくい構造が、仕事の側にあります。</p>
+<h3>1. 変更の指示が、やり取りの途中で出る</h3>
+<p>仕様変更は「変更依頼書」の形で届くことはまれです。打ち合わせの雑談、文面の追伸、現場での立ち話。<strong>本題とは別の場所で、ついでのように出てきます</strong>。その場で受けた担当者の記憶にはあっても、書類にはなりません。</p>
+<h3>2. 一つひとつが小さく、その場で受けてしまう</h3>
+<p>「棚の位置を十センチずらす」「色を少し明るくする」「項目を一つ足す」。一つの変更は小さく、断る理由もないので、その場で「わかりました」と受けます。ところが<strong>小さな変更が十も二十も重なると、工期も費用もはっきり変わります</strong>。積み重なった全体を、あとから誰も説明できません。</p>
+<h3>3. 「当初の仕様」がどこにあるか、即答できない</h3>
+<p>変更を変更だと言うためには、変更前の約束が必要です。ところが見積書、注文書、打ち合わせのメモ、図面の版がばらばらの場所にあり、<strong>どれが最終の合意だったかを即答できる人がいない</strong>。基準がなければ、変更は変更として扱えません。</p>
+<blockquote>記録が残らないのは、変更が本題の外で、小さく、基準の見えない状態で出てくるからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+
+<h2 id="s2">仕様変更の記録で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</h2>
+<p>大前提として、<strong>追加費用を請求するか、関係を考えて無償で受けるか、工期をどう調整するかは経営の判断</strong>であり、人が決めることです。機械に任せるのは、変更の痕跡を集め、当初の約束と照らし、根拠として示せる形に並べるところまでです。</p>
+<table>
+<tr><th>工程</th><th>担当</th><th>内容</th></tr>
+<tr><td>当初仕様の整理</td><td>機械</td><td>見積・注文・打ち合わせ記録から基準となる版をまとめる</td></tr>
+<tr><td>変更の抽出</td><td>機械</td><td>やり取りの文面や議事メモから、変更にあたる発言を抜き出す</td></tr>
+<tr><td>一覧化</td><td>機械</td><td>日付・相手・内容・出どころを一行ずつ並べる</td></tr>
+<tr><td>当初仕様との照合</td><td>機械</td><td>追加・削除・置き換え・明確化に仕分ける</td></tr>
+<tr><td>影響の見立て</td><td>機械</td><td>費用と工期に影響しうる行に印をつける</td></tr>
+<tr><td>確認文面の下書き</td><td>機械</td><td>相手に確かめる文面と、追加項目の見積の下書きをつくる</td></tr>
+<tr><td>請求か無償かの判断</td><td><strong>人</strong></td><td>相手との関係と金額を見て決める</td></tr>
+<tr><td>相手への説明と合意</td><td><strong>人</strong></td><td>一覧を見せ、認識を揃える</td></tr>
+</table>
+<p>線引きはこれまでの記事と同じです。<strong>集めて、照らして、並べるのが機械。決めて、伝えるのが人</strong>。この順番を守ると、変更のたびに記録を残しても、担当者の手間はほとんど増えません。</p>
+
+<h2 id="s3">Claude Codeで仕様変更の記録を残す手順はどう進めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-spec-change-log-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：当初の仕様を一か所に集め、基準の版をつくる</h3>
+<p>見積書、注文書、契約書、初回の打ち合わせ記録、図面や仕様書の最初の版。案件の出発点にあたる書類を一つの場所に集め、<strong>必ず控えを別の場所に取ります</strong>。そのうえで<a href="https://code.claude.com/docs/ja/overview" target="_blank" rel="noopener">Claude Code</a>に読ませ、「何を、いつまでに、いくらで」を一覧にまとめさせます。これが変更を照らすための基準の版になります。ここで曖昧な箇所があれば、それ自体を「未確定」として書き出させておきます。</p>
+<h3>ステップ2：やり取りから変更にあたる発言を抜き出させる</h3>
+<p>打ち合わせの議事メモ、やり取りの文面、現場写真に添えた説明、担当者の手書きメモ。変更が出てきそうな記録をClaude Codeに渡し、「仕様・数量・期日・金額に関わる発言」を抜き出させます。<strong>一行ごとに、日付・相手・発言の原文・出どころを添えさせる</strong>のが要点です。要約ではなく原文を残します。読み取れない箇所は「判読不能」と書かせ、推測で埋めさせません。</p>
+<h3>ステップ3：基準の版と照らし、四つに仕分けさせる</h3>
+<p>抜き出した一覧の各行を、ステップ1の基準の版と突き合わせさせます。仕分けは四つ。<strong>「追加」「削除」「置き換え」「明確化」</strong>です。明確化とは、当初から含まれていたことを言葉で具体的にしただけのもので、変更ではありません。ここを分けておかないと、あとで相手と揉めます。あわせて、費用か工期に影響しうる行に印をつけさせ、理由を添えさせます。</p>
+<h3>ステップ4：影響のある行について、確認の文面と見積の下書きをつくらせる</h3>
+<p>印のついた行を取引先ごとにまとめ、「この変更はこのように受け取っていますが、合っていますか」と確かめる文面を下書きさせます。あわせて、追加費用が発生しうる行について、追加項目の見積の下書きも用意させます。<strong>請求するか、無償で受けるか、工期を延ばすかは人が決め、決めた内容を一覧に書き戻します</strong>。相手への説明も人が行います。</p>
+<h3>ステップ5：決めた結果を添えて、版番号を付けて保存する</h3>
+<p>判断を書き戻した一覧に版番号と日付を付け、基準の版と一緒に保存させます。次に変更が出たときは、この一覧に行を足すだけです。<strong>納品時には、当初の約束・変更の一覧・合意した追加費用が一つの流れで見える状態</strong>になっているため、引き渡しの場での「聞いていない」がなくなります。</p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<p><strong>1. 「変更」の定義をこちらから渡す</strong></p>
+<p>「変更点を抜き出して」と丸投げすると、機械は感想や質問まで変更として拾ってしまいます。<strong>「仕様・数量・期日・金額のいずれかが当初と違う発言」と定義を先に渡し、それに当てはまるものだけを抜かせる</strong>。基準を渡すのは人の仕事です。</p>
+<p><strong>2. 発言をまとめ直させない</strong></p>
+<p>「棚を右に寄せてほしい」を「配置変更の要望」と要約されると、あとで相手に示したときに伝わりません。原文のまま、日付と出どころを添えて残させます。<strong>根拠になるのは、要約ではなく原文です</strong>。</p>
+<p><strong>3. 件数と合計を突き合わせる</strong></p>
+<p>変更一覧の「追加」行の費用合計と、追加見積の合計が一致しているかを確かめます。件数も同様です。<strong>数が合わなければ、一覧か見積のどちらかに漏れがある</strong>。この突き合わせを毎回入れるだけで、根拠の信頼度が大きく変わります。</p>
+
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>1. 大きな変更だけを記録する</h3>
+<p>金額の大きい変更は誰でも覚えています。困るのは小さな変更の積み重ねです。<strong>大小を問わず、変更にあたる発言はすべて一覧に入れる</strong>。請求するかどうかは、あとで人が決めればよいことです。</p>
+<h3>2. 一覧を請求のためだけに使い、相手に見せない</h3>
+<p>変更の一覧を、追加費用を取るための武器として最後に出すと、相手は身構えます。<strong>変更が出た時点で一覧を共有し、「このように受け取っています」と確かめる</strong>。合意を積み重ねる道具として使うほうが、結果として請求も通りやすくなります。</p>
+<h3>3. 明確化を変更として請求してしまう</h3>
+<p>当初から含まれていたことを具体的にしただけの話を「追加」として請求すると、信頼を失います。ステップ3の四分類で明確化を分けておくのは、このためです。<strong>迷う行は、請求前に必ず人が読み直します</strong>。</p>
+<h3>4. 記録が担当者の手元にだけある</h3>
+<p>一覧が担当者の個人の手元にあるだけでは、担当が変わった瞬間に消えます。案件ごとの決まった場所に、基準の版と一緒に置く。<strong>誰が見ても同じものが見える状態</strong>にしておきます。置き場所を決めて一覧を育てる考え方は、<a href="claude-code-equipment-inspection-records.html">設備・備品の点検記録</a>や<a href="claude-code-near-miss-records.html">ヒヤリハットの記録</a>を整えるときと同じです。</p>
+<h3>5. 完了後にまとめて作ろうとする</h3>
+<p>納品直前に「変更の一覧をつくろう」と思い立っても、やり取りは散らばり、記憶は薄れています。<strong>変更が出たその週のうちに一覧に足す</strong>。この習慣が、記録の価値のほぼすべてを決めます。</p>
+
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>建設・リフォーム</strong> — 現場での「ついでに」がもっとも多い業種です。現場写真に添えた説明と打ち合わせ記録から変更を抜き出す工程が、追加工事の根拠づくりに直結します。</p>
+<p><strong>製造業（受注生産）</strong> — 図面の版が重なるうちに、どの版が合意済みかが曖昧になります。基準の版を先に固め、差分だけを一覧にする流れが効きます。</p>
+<p><strong>制作・デザイン</strong> — 「もう少しこんな感じに」という修正依頼が繰り返されます。修正回数と範囲を一覧にしておくと、契約に含まれる修正と追加の修正の線引きが明確になります。</p>
+<p><strong>士業・コンサルタント</strong> — 相談の範囲が少しずつ広がりやすい仕事です。当初の依頼範囲を基準の版として持っておくと、範囲外の依頼を丁寧に切り分けられます。</p>
+<p><strong>設備・システム工事</strong> — 仕様の追加が工期に直結します。費用だけでなく工期への影響を印として残す運用が、納期の説明を支えます。</p>
+
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 口頭で出た変更はどう記録すればよいですか</h3>
+<p>その日のうちに担当者が短いメモを残し、それを機械に渡します。<strong>「何月何日、誰が、何と言ったか」の三点があれば十分</strong>です。整った文章である必要はありません。整えるのは機械の仕事です。</p>
+<h3>Q. 変更の一覧を相手に見せると、関係が悪くなりませんか</h3>
+<p>出し方によります。最後にまとめて請求の根拠として出すと身構えられますが、変更が出るたびに「このように受け取っています」と確かめる形なら、むしろ丁寧な仕事として受け取られます。<strong>一覧は請求書ではなく、認識を揃えるための道具</strong>として使います。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>案件の立ち上げで基準の版をつくるのに一時間ほど、以後は変更が出るたびに数分が目安です。<strong>納品後に揉めてから経緯を掘り起こす時間と比べると、はるかに短く済みます</strong>。</p>
+<h3>Q. 過去の案件にもさかのぼって使えますか</h3>
+<p>やり取りの記録が残っていれば可能です。ただし、すでに完了した案件で追加費用を請求し直すのは関係上むずかしい場合が多いため、<strong>過去案件は「どこで変更が漏れたか」を学ぶ材料として使い、次の案件から運用を始める</strong>のが現実的です。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>仕様変更が「なかったこと」になるのは、変更が本題の外で、小さく、基準の見えない状態で出てくるからです。裏を返せば、集めて、照らして、並べる作業を機械に任せてしまえば、残るのは「請求するか、無償で受けるか」という判断だけになります。</p>
+<p>基準の版をつくる。変更を原文で抜き出す。四つに仕分ける。確かめて、決めて、書き戻す。版を付けて保存する。この順番なら、変更のたびに記録を残しても、仕事は重くなりません。</p>
+<p>集めて、照らして、並べるのは機械。決めて、伝えるのは人。<strong>引き渡しの場で「聞いていない」と言われるのではなく、変更が出たその週に認識が揃っている状態</strong>が、追加の手間を損失にしない唯一の方法です。</p>
+
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-equipment-inspection-records.html"><img src="../images/blog-claude-code-equipment-inspection-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで設備・備品の点検記録を整える</span></a><a class="seo-related-card" href="claude-code-bcp-emergency-preparedness.html"><img src="../images/blog-claude-code-bcp-emergency-preparedness-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude CodeでBCP（事業継続計画）の下地をつくる</span></a><a class="seo-related-card" href="claude-code-near-miss-records.html"><img src="../images/blog-claude-code-near-miss-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeでヒヤリハットの記録を整える</span></a></div>
+<p class="seo-related-more"><a href="category-operations.html">「業務記録・現場改善」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

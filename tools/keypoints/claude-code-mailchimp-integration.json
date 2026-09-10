@@ -1,0 +1,1 @@
+{"target": "Mailchimpでメルマガを配信している中小企業の経営者・担当者", "outcome": "件名・本文の下書き、セグメント抽出、配信予約、開封率レポートを任せ、配信承認だけを人が行える", "requirement": "Claude Code と Mailchimp アカウント（APIキー発行・配信元アドレス認証済み）"}

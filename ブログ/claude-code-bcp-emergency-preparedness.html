@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド</title>
+<meta name="description" content="Claude Codeで社内に散らばる情報からBCPの下地を短時間で組み立てる手順を解説。緊急連絡網づくり、業務の棚卸しと影響整理、守る業務の決定、代替手段の候補出し、年一回の鮮度確認まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,BCP,事業継続計画,緊急連絡網,防災月間,災害対策,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude CodeでBCP（事業継続計画）の下地をつくる！中小企業のための緊急連絡網と事業継続の備えガイド</h1>
+
+<p class="lead">地震で事務所が使えなくなった朝、まず誰に連絡するか。仕入先が被災して材料が届かない週、どの仕事から守るか。社長が入院した月、支払いと納品は誰が回すか。中小企業の緊急事態は、準備した会社としていない会社の差が、そのまま再開までの日数の差になります。</p>
+
+<p>9月は防災月間です。とはいえ「BCP（事業継続計画）をつくりましょう」と言われて、すぐ手が動く中小企業は多くありません。書式が大げさで、平時の仕事を止めてまで取り組む余裕がなく、<strong>どこから手を付ければよいか分からないまま毎年9月が過ぎていく</strong>。これが実情ではないでしょうか。</p>
+
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、社内に散らばっている情報からBCPの下地──緊急連絡網、守るべき業務の一覧、代わりの手段の候補──を短時間で組み立てる手順を、非エンジニアの方向けに整理します。立派な計画書ではなく、<strong>緊急の朝に実際に開ける一枚</strong>をつくるのが目的です。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">BCPが後回しになる3つの理由</a></li>
+<li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li>
+<li><a href="#s3">実務5ステップ</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+<h2 id="s1">BCPが後回しになる3つの理由</h2>
+<p>防災意識が低いから後回しになるのではありません。計画づくりという仕事の側に、進まなくなる構造があります。</p>
+<h3>1. 材料が社内のあちこちに散っている</h3>
+<p>従業員の名簿は事務の引き出し、取引先の窓口は担当者の頭の中、保険の証書は金庫、システムの復旧手順は業者との契約書類。BCPに必要な情報は<strong>すでに社内にあるのに、一か所にまとまっていません</strong>。集める作業の面倒さが、最初の一歩を止めます。</p>
+<h3>2. 書式が大げさで、自社に合わない</h3>
+<p>公開されているBCPの雛形は、部署がいくつもある会社を想定したものが多く、従業員数人の会社が埋めようとすると空欄だらけになります。<strong>自社の規模に合った形に直すところで力尽きる</strong>のが、よくある挫折の型です。</p>
+<h3>3. 完成しても、見直されずに古びる</h3>
+<p>一度つくった計画は、人の入れ替わりや取引先の変更を反映されないまま古びます。緊急の日に開いたら、<strong>辞めた人の名前と終わった取引先が載っていた</strong>。これでは作らなかったのと変わりません。</p>
+<blockquote>BCPが進まないのは、経営者の意識の問題ではありません。材料集めが面倒で、書式が合わず、更新の仕組みがないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>緊急時に何を守り、何を後回しにするかは経営判断そのもの</strong>です。機械が決めることではありません。機械に任せるのは、判断の材料をそろえ、決めた内容を整った形に書き起こし、古びていないかを確かめるところまでです。</p>
+<table>
+<tr><th>工程</th><th>担当</th><th>内容</th></tr>
+<tr><td>材料の洗い出し</td><td>機械</td><td>名簿・契約書類・業務の記録から必要な情報を集めて一覧化</td></tr>
+<tr><td>連絡網の組み立て</td><td>機械</td><td>誰から誰へ伝えるかの流れを図と表に整理</td></tr>
+<tr><td>業務の棚卸し</td><td>機械</td><td>日々の業務を書き出し、止まったときの影響を並べる</td></tr>
+<tr><td>優先順位の決定</td><td><strong>人</strong></td><td>どの業務から守るかを決める</td></tr>
+<tr><td>代替手段の候補出し</td><td>機械</td><td>事務所が使えない・仕入が止まる場合の選択肢を列挙</td></tr>
+<tr><td>代替手段の選択</td><td><strong>人</strong></td><td>費用と現実性を見て、どの備えを持つかを決める</td></tr>
+<tr><td>訓練・声かけ</td><td><strong>人</strong></td><td>従業員への周知と年に一度の見直しの号令</td></tr>
+<tr><td>定期的な鮮度確認</td><td>機械</td><td>名簿や取引先の変更が反映されているかを照合</td></tr>
+</table>
+<p>線引きはこれまでの記事と同じです。<strong>集めて、並べて、書き起こすのが機械。決めて、伝えるのが人</strong>。この順番を守ると、BCPづくりは「数か月がかりの一大事業」から「半日の整理仕事」に変わります。</p>
+
+<h2 id="s3">実務5ステップ</h2>
+<h3>ステップ1：緊急連絡網を最初につくる</h3>
+<p>BCPの全体像から入ると挫折します。まず<strong>緊急の朝に最初に必要になる一枚、連絡網から</strong>つくります。従業員の名簿、主要な取引先の窓口一覧、保険会社・銀行・ビルの管理会社などの緊急窓口をClaude Codeに渡し、「誰から誰へ、どの順で伝えるか」を一枚の表に整理させます。個人の情報を扱うので、<strong>作業は社内の管理者だけが行い、出来上がった一枚の保管場所も決めておきます</strong>。</p>
+<h3>ステップ2：業務を書き出し、止まったときの影響を並べさせる</h3>
+<p>次に、自社の業務を思いつく限り書き出して渡し、「一週間止まったら何が起きるか」を業務ごとに整理させます。売上が消える、信頼を失う、法令に触れる、実は何も起きない。<strong>影響の大きさで並べ替えた一覧</strong>ができると、守るべき業務がどれかが見えてきます。</p>
+<h3>ステップ3：守る業務を人が決める</h3>
+<p>一覧を見て、<strong>緊急時にも続ける業務と、いったん止める業務を人が決めます</strong>。全部を守ろうとする計画は、結局どれも守れません。「納品と支払いだけは止めない」のように、指を折って数えられる数まで絞るのがコツです。決めた結果は理由とともに書き起こさせます。理由が残っていると、次の見直しのときに議論をやり直さずに済みます。</p>
+<h3>ステップ4：代わりの手段の候補を出させ、選ぶ</h3>
+<p>守ると決めた業務について、「事務所が使えないとき」「仕入先が止まったとき」「担当者が動けないとき」の三つの場合ごとに、代わりの手段の候補を挙げさせます。自宅での作業、別の仕入先、外部への一時委託。<strong>候補ごとに費用の目安と準備しておくべきことを添えさせ、どれを備えとして持つかは人が選びます</strong>。</p>
+<h3>ステップ5：年に一度、鮮度を確かめさせる</h3>
+<p>出来上がった一式は、防災月間の9月を見直しの月と決めて、最新の名簿・取引先一覧と突き合わせさせます。<strong>変わった箇所だけを直せばよい</strong>ので、二年目からの見直しは三十分で終わります。緊急連絡網は人の入れ替わりがあった月にも都度直します。</p>
+
+<h2 id="s4">頼み方の3原則</h2>
+<p><strong>1. 自社の規模に合わせた書式を先に決める</strong></p>
+<p>雛形をそのまま埋めさせるのではなく、「従業員○名・拠点一つの会社に合う形で」と最初に伝えます。ページ数の多い立派な計画書より、<strong>壁に貼れる一枚と引き出しの数枚</strong>のほうが、緊急の朝には役に立ちます。</p>
+<p><strong>2. 分からない項目は空欄のまま残させる</strong></p>
+<p>保険の補償範囲や契約の解除条件など、資料から読み取れないことを推測で埋めさせないようにします。「不明の項目は不明と書き、誰に確かめれば埋まるかを添えてください」と伝えます。<strong>もっともらしく埋まった計画がいちばん危険</strong>です。</p>
+<p><strong>3. 従業員の個人情報の扱いを決めてから渡す</strong></p>
+<p>連絡網づくりでは従業員の個人情報を扱います。作業する人を限定し、出来上がった連絡網の配り方（紙で誰に渡すか、社外に持ち出すか）を先に決めてから作業に入ります。</p>
+
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>1. 完璧な計画書を目指して、着手できない</h3>
+<p>BCPは完成度を競う文書ではありません。<strong>連絡網一枚だけでも、無いよりはるかに強い</strong>。まず一枚、次に業務の一覧、と積み上げる順番にすると止まりません。</p>
+<h3>2. 社長の頭の中にだけ計画がある</h3>
+<p>計画を書き起こす最大の理由は、<strong>社長自身が動けない場合に備えるため</strong>です。頭の中の段取りは、その頭が使えない日には存在しないのと同じです。書いて、保管場所を従業員と共有して、初めて備えになります。</p>
+<h3>3. 連絡網をつくって、一度も試さない</h3>
+<p>連絡網は、一度も流したことがなければ緊急の日にも流れません。年に一度、<strong>訓練として一巡だけ回してみる</strong>。つながらなかった箇所が、直すべき箇所です。</p>
+<h3>4. データの控えを同じ場所に置く</h3>
+<p>顧客名簿や会計データの控えを事務所のパソコンの隣に置いていては、事務所ごと使えなくなったときに共倒れです。<strong>控えは別の場所に</strong>。この確認も一覧に一行入れておきます。</p>
+<h3>5. 取引先との約束を確かめていない</h3>
+<p>「緊急時は納期を延ばしてもらえるだろう」という見込みは、約束ではありません。主要な取引先とは、緊急時の連絡窓口と納期の扱いを<strong>平時のうちにひと言確かめておく</strong>。確認済みかどうかの欄を一覧に設けると、抜けが見えます。</p>
+
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>飲食店</strong> — 食材の仕入先が止まる事態が最も重い。仕入先ごとに代わりの候補を書き出しておくと、休業か縮小営業かの判断が早くなります。</p>
+<p><strong>製造業</strong> — 設備と材料の両方に備えが要ります。守る受注先を先に決めておくと、限られた生産能力の振り向け先で迷いません。</p>
+<p><strong>建設・工務店</strong> — 現場が複数あるぶん、従業員の安否確認の流れが要です。現場ごとの連絡網と、元請・施主への報告の順番を一枚にしておきます。</p>
+<p><strong>美容室・治療院</strong> — 予約のお客様への連絡が最初の仕事になります。予約台帳の控えの置き場所と、お客様への連絡の文面の雛形を用意しておくと、当日の朝に迷いません。</p>
+<p><strong>士業・コンサルタント</strong> — 一人事業ほど、本人が動けない場合の備えが重くなります。進行中の案件の一覧と、家族や提携先に渡す引き継ぎの一枚が、信頼を守ります。</p>
+
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. BCPの専門家に頼むのと何が違いますか</h3>
+<p>専門家の支援は、リスクの評価や訓練の設計まで踏み込める点で優れています。この記事の手順は、その手前の<strong>材料集めと下地づくりを自社で済ませる</strong>ものです。下地があれば、専門家に頼む場合も費用と期間を抑えられます。</p>
+<h3>Q. 従業員数人の会社でも必要ですか</h3>
+<p>人数が少ないほど、一人が動けなくなったときの影響は大きくなります。数人の会社なら、つくるべきものも連絡網一枚と業務の一覧一枚で足ります。<strong>半日の作業で、再開までの日数が変わります</strong>。</p>
+<h3>Q. 従業員の個人情報を渡して大丈夫ですか</h3>
+<p>扱いのルールを決めるのが先です。作業する人を限定し、控えの保管場所と配り方を決めてから着手してください。渡す情報は連絡網づくりに必要な最小限に絞ります。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>材料が手元にそろっていれば、連絡網と業務の一覧までで半日ほどです。代わりの手段の検討まで含めても、<strong>週をまたぐ仕事ではありません</strong>。二年目からの見直しは三十分ほどで済みます。</p>
+
+<h2 id="s8">まとめ</h2>
+<p>BCPづくりが進まないのは、材料が散らばり、書式が大げさで、更新の仕組みがないからです。裏を返せば、集めて、並べて、書き起こす作業を機械に任せてしまえば、残るのは「何を守るか」という経営判断だけになります。</p>
+<p>連絡網を一枚つくる。業務を並べて、守るものを決める。代わりの手段を選んで、年に一度確かめる。この順番なら、防災月間の9月のうちに下地が整います。</p>
+<p>集めて、並べて、書き起こすのは機械。決めて、伝えるのは人。<strong>緊急の朝に開ける一枚があるかどうか</strong>が、再開までの日数を決めます。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

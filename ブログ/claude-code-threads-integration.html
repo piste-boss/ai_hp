@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code × Threads連携で投稿・返信・分析をAI自動化！中小企業・店舗のテキストSNS集客効率化ガイド</title>
+<meta name="description" content="Claude CodeとテキストSNSのThreads（スレッズ）を組み合わせ、投稿づくり・返信対応・反応の分析をAI自動化する方法を解説。写真がなくても言葉で発信できるThreadsを、中小企業・店舗が非エンジニアでも効率よく運用するための活用例・業種別シーン・導入4ステップ・注意点を紹介します。">
+<meta name="keywords" content="Claude Code,Threads,スレッズ,テキストSNS,SNS集客,投稿自動化,中小企業,店舗,個人事業主,業務効率化,AI活用">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Code × Threads連携で投稿・返信・分析をAI自動化！中小企業・店舗のテキストSNS集客効率化ガイド</h1>
+
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-threads-integration.jpg" alt="Claude Code × Threadsでテキストの投稿・返信・分析を自動化するイメージ" style="width: 100%; height: auto; display: block;">
+</div>
+
+<p class="lead">「Threads（スレッズ）を始めてみたけれど、何を投稿すればいいか分からない」「毎日続ける時間がない」——そんな悩みを抱える中小企業の経営者や店舗オーナーは少なくありません。Threadsは、Instagramと連携したテキスト会話型のSNSで、写真や動画がなくても言葉だけで気軽に発信できるのが特徴です。本記事では、Anthropic公式のAIコーディングエージェント<strong>Claude Code</strong>とテキストSNS<strong>Threads</strong>を組み合わせ、投稿づくり・返信対応・分析を、プログラミング不要で効率化する方法を解説します。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">1. Threadsが中小企業の集客に向いている理由</a></li>
+<li><a href="#s2">2. Claude Codeと組み合わせてできること</a></li>
+<li><a href="#s3">3. 業種別の活用シーン</a></li>
+<li><a href="#s4">4. 導入までの4ステップ</a></li>
+<li><a href="#s5">5. 運用で気をつけたいこと</a></li>
+<li><a href="#s6">6. よくある質問（FAQ）</a></li>
+</ul>
+</div>
+
+<h2 id="s1">1. Threadsが中小企業の集客に向いている理由</h2>
+<p>Threadsは、テキストを中心とした会話型のSNSです。Instagramのアカウントをそのまま使えるため、すでにInstagramを運用している店舗なら追加の登録なしで始められます。</p>
+<p>写真映えを気にせず、日々の出来事やちょっとした気づきを言葉で発信できるので、「きれいな写真を用意する余裕がない」という個人事業主でも続けやすいのが強みです。ゆるやかな会話が生まれやすく、フォロワーとの距離を縮めながらファンを育てていくのに向いています。</p>
+<p>一方で、続けるには「毎日ネタを考える」「コメントに返信する」「反応を振り返る」といった地道な作業が欠かせません。この繰り返し作業こそ、Claude Codeで効率化できる部分です。</p>
+
+<h2 id="s2">2. Claude Codeと組み合わせてできること</h2>
+<p>Claude Codeは、自然言語で指示するだけで文章づくりやデータ整理を手伝ってくれるAIツールです。Threads運用では、次のような場面で力を発揮します。</p>
+<table>
+<thead>
+<tr><th>作業</th><th>Claude Codeでできること</th></tr>
+</thead>
+<tbody>
+<tr><td>投稿文づくり</td><td>店舗の出来事やお知らせから、Threadsらしい会話調の投稿文を複数パターン下書き</td></tr>
+<tr><td>ネタ出し</td><td>業種・季節・客層に合わせた1週間分の投稿テーマ案を提案</td></tr>
+<tr><td>返信の下書き</td><td>寄せられたコメントへの返信文を、丁寧でやわらかいトーンで作成</td></tr>
+<tr><td>投稿カレンダー</td><td>曜日ごとの発信テーマを整理し、続けやすい投稿計画に落とし込み</td></tr>
+<tr><td>反応の振り返り</td><td>手元にまとめた反応データから、伸びた投稿の傾向を整理して次の改善案を提示</td></tr>
+</tbody>
+</table>
+<p>ポイントは、Claude Codeが作るのはあくまで「たたき台」だということです。最終的な言葉選びや投稿の判断は人が行うことで、自分らしさを保ちながら手間だけを大きく減らせます。</p>
+
+<h2 id="s3">3. 業種別の活用シーン</h2>
+<ul>
+<li><strong>飲食店・カフェ</strong>：本日のおすすめや仕込みの裏側を、写真なしでも会話調で発信。常連さんとのやりとりを楽しみながら再来店を促す。</li>
+<li><strong>美容室・サロン</strong>：スタッフの人柄が伝わる日常のひとことや、季節のケアのコツを発信して予約前の安心感につなげる。</li>
+<li><strong>小売店・雑貨店</strong>：入荷したての商品の紹介や、選び方のちょっとしたアドバイスを短文で発信。</li>
+<li><strong>士業・コンサル</strong>：専門知識をやさしくかみくだいた一言解説を続け、信頼と親近感を積み重ねる。</li>
+<li><strong>教室・スクール</strong>：生徒の成長エピソードやレッスンの雰囲気を言葉で伝え、体験申込のきっかけをつくる。</li>
+</ul>
+<p>いずれも、「発信を続けたいが手が回らない」という共通の課題を、Claude Codeの下書き力で乗り越えるイメージです。</p>
+
+<h2 id="s4">4. 導入までの4ステップ</h2>
+<h3>ステップ1：目的を1つに絞る</h3>
+<p>「新規のフォロワーを増やす」「常連との関係を深める」など、まずは狙いを1つに決めます。目的が定まると、Claude Codeへの指示も明確になり、投稿の方向性がぶれません。</p>
+<h3>ステップ2：材料を準備する</h3>
+<p>店舗の基本情報、これまでの投稿、伝えたいことのメモなどを手元にまとめます。Claude Codeにこうした材料を渡すことで、自社らしい言葉づかいの投稿がつくりやすくなります。</p>
+<h3>ステップ3：Claude Codeに業務を指示する</h3>
+<p>「この内容をThreads向けに、親しみやすい会話調で3パターン書いて」といった形で、日本語で指示します。出てきた下書きを見ながら、良い部分を選んで整えていきます。</p>
+<h3>ステップ4：小さく試して広げる</h3>
+<p>まずは週に数回の投稿から始め、反応を見ながら少しずつ発信のリズムをつかみます。うまくいったやり方を、返信や分析にも広げていきましょう。</p>
+
+<h2 id="s5">5. 運用で気をつけたいこと</h2>
+<ul>
+<li><strong>公開前に必ず人が確認する</strong>：AIの下書きをそのまま出すのではなく、事実関係やトーンを人の目でチェックします。</li>
+<li><strong>誇大な表現を避ける</strong>：「必ず」「絶対」といった断定は控え、誠実な発信を心がけます。</li>
+<li><strong>自社らしさを大切にする</strong>：便利さを優先しすぎて、お店の個性が薄れないよう、言葉の温度感は自分で調整します。</li>
+<li><strong>お客様の情報の扱いに配慮する</strong>：コメントのやりとりで得た個人的な情報は、慎重に取り扱います。</li>
+<li><strong>認証は最小限の権限で</strong>：各種の連携設定は、必要な範囲にとどめて安全に運用します。</li>
+</ul>
+
+<h2 id="s6">6. よくある質問（FAQ）</h2>
+<h3>Q. プログラミングの知識がなくても使えますか？</h3>
+<p>はい。Claude Codeは日本語で指示するだけで使えます。専門的なコードを書く必要はなく、パソコンでのやりとりに慣れていれば十分に活用できます。</p>
+<h3>Q. 写真がなくても集客に役立ちますか？</h3>
+<p>Threadsはテキスト中心のSNSなので、言葉だけの発信でも十分に伝わります。むしろ人柄や考え方が伝わりやすく、ファンづくりに向いています。</p>
+<h3>Q. どのくらいの頻度で投稿すればよいですか？</h3>
+<p>最初は週に数回で構いません。無理なく続けられるペースを見つけることが、長く運用するコツです。Claude Codeで下書きをまとめて用意しておくと、続けやすくなります。</p>
+
+<div class="cta" id="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p class="price">導入サポート ¥3,000〜</p>
+<p>「Threadsで発信を続けたいけれど、投稿や返信に時間が取れない」「Claude Codeの導入や使い方が不安」という中小企業・店舗の方に向けて、導入から自分に合わせた活用の始め方まで、非エンジニアの方にも分かりやすく伴走支援します。これまで110社以上のAI導入・業務自動化を支援してきた実績をもとに、御社に合った「ちょうどいい自動化」をご提案します。</p>
+<p>ご相談・お申し込みは、購入画面に進むボタン、またはココナラのメッセージ機能からお気軽にご相談ください。</p>
+<a href="../index.html#contact">ココナラで相談する</a>
+</div>
+</div>
+
+<footer>
+&copy; Piste. Claude Code導入・業務自動化サポート
+</footer>
+</body>
+</html>

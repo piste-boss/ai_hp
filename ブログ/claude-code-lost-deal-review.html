@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド</title>
+<meta name="description" content="Claude Codeで失注した見積もりの経緯を集め、断られた理由を値段・納期・内容・対応・相手側の事情の五つに仕分け、繰り返しを数えて次の提案に活かす記録として残す手順を解説。相手の言葉を原文で残す方法から改善候補の決め方まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,失注,見積もり,商談,営業改善,提案書,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+</head>
+<body>
+<header>
+<a href="../index.html"><img src="../images/logo.png" alt="Piste ロゴ"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap">
+<h1>Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド</h1>
+<p class="lead">見積もりを出したのに、返事がないまま日が過ぎた。「今回は見送ります」の一言だけが届いた。別の会社に決まったと、あとから人づてに聞いた。中小企業の商談では、こうした「決まらなかった案件」が、決まった案件の何倍もあります。ところが<strong>決まらなかった理由を記録として残している会社は、ほとんどありません</strong>。</p>
+<p>決まった案件は請求書や納品の記録が残ります。決まらなかった案件は、見積書の控えが一枚残るだけで、なぜ選ばれなかったのか、どこで相手の気持ちが離れたのかは、担当者の記憶の中にしかありません。<strong>同じ理由で何度も断られているのに、その繰り返しに誰も気づかない</strong>。これが小さな会社の商談で起きている損失です。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、失注した見積もりの経緯を集め、断られた理由を種類ごとに整え、次の提案に活かせる記録として残すまでの手順を、非エンジニアの方向けに整理します。値下げするか、提案の中身を変えるか、その相手を追わないと決めるかは人の判断。機械に任せるのは、<strong>散らばった経緯を集めて、理由を仕分けて、繰り返しを見つける作業</strong>です。</p>
+
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">失注の理由が残らない3つの理由</a></li>
+<li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li>
+<li><a href="#s3">実務5ステップ</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+
+
+<h2 id="s1">失注の理由が残らない3つの理由</h2>
+<p>理由が残らないのは、担当者が怠けているからではありません。残らない構造が、仕事の側にあります。</p>
+<h3>1. 断られた案件を振り返る気になれない</h3>
+<p>断られた直後は、誰でも気持ちが沈みます。経緯を書き出すのは、自分の至らなさを見つめる作業に感じられます。<strong>受注した案件の対応に気持ちを切り替えたくなるのが自然</strong>で、失注の記録は後回しになり、そのまま忘れられます。</p>
+<h3>2. 「予算が合わなかった」の一言で片づく</h3>
+<p>相手からの断りの言葉は、たいてい短く、遠慮がちです。「予算の都合で」「今回は別の形で」。この言葉をそのまま理由として書くと、<strong>すべての失注が「値段」に見えてしまいます</strong>。本当は納期、提案の伝わりにくさ、担当者の対応の遅さ、相手側の事情の変化など、値段以外の理由が多く隠れています。</p>
+<h3>3. 経緯が一か所にない</h3>
+<p>見積書は見積ソフトの中、やり取りの文面は担当者の手元、打ち合わせの内容は手帳のメモ。失注した案件の経緯は、複数の場所に散らばっています。<strong>集めるところから始めなければならないので、集める前に気力が尽きます</strong>。</p>
+<blockquote>理由が残らないのは、振り返る気になれず、短い断り文句で片づき、経緯が散らばっているからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+
+
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>値下げするか、提案の中身を変えるか、その相手を今後どう扱うかは経営の判断</strong>であり、人が決めることです。機械に任せるのは、経緯を集めて並べ、理由を仕分け、繰り返しを見つけ、次の提案の改善候補を並べるところまでです。</p>
+<table>
+<thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td>経緯の収集</td><td>機械</td><td>見積書・やり取りの文面・打ち合わせメモを日付順に並べる</td></tr>
+<tr><td>断りの言葉の抜き出し</td><td>機械</td><td>相手の言葉を原文のまま抜き出し、日付と一緒に残す</td></tr>
+<tr><td>理由の仕分け</td><td>機械</td><td>値段・納期・内容・対応・相手側の事情の五つに分け、推定と明記する</td></tr>
+<tr><td>一覧化</td><td>機械</td><td>案件ごとに一行にまとめ、金額・相手・理由の列をそろえる</td></tr>
+<tr><td>繰り返しの検出</td><td>機械</td><td>同じ理由・同じ相手の種類・同じ金額帯で複数回起きているものに印をつける</td></tr>
+<tr><td>改善候補の下書き</td><td>機械</td><td>提案の順番・見積書の見せ方・返答の速さなどの候補を並べる</td></tr>
+<tr><td>対応方針の決定</td><td><strong>人</strong></td><td>値段を変えるか、内容を変えるか、追わないかを決める</td></tr>
+<tr><td>相手への働きかけ</td><td><strong>人</strong></td><td>再提案するか、時期を置くかを判断し、実行する</td></tr>
+</tbody>
+</table>
+<p>線引きはこれまでの記事と同じです。<strong>集めて、仕分けて、数えるのが機械。決めて、動くのが人</strong>。この順番を守ると、振り返りにかかる時間は大きく減り、担当者の気持ちの負担も軽くなります。</p>
+
+
+<h2 id="s3">実務5ステップ</h2>
+<h3>ステップ1：失注した案件の経緯を一か所に集める</h3>
+<p>まず、過去半年ほどの失注案件について、見積書の控え、相手とのやり取りの文面、打ち合わせのメモを一つのフォルダに集めます。整っていなくて構いません。Claude Codeに読ませ、<strong>案件ごとに「いつ・誰に・いくらで・何を提案し・いつどう断られたか」を日付順に並べさせます</strong>。この段階では、理由の判断はさせません。事実の並び替えだけです。</p>
+<h3>ステップ2：断りの言葉を原文のまま抜き出させる</h3>
+<p>次に、相手の断りの言葉を、要約させずに原文のまま抜き出させます。「予算の都合で」なのか「上と相談した結果」なのか「今回は社内で対応することに」なのか。<strong>短い言葉の違いに、本当の理由の手がかりがあります</strong>。あわせて、断りの言葉が届くまでに何日かかったか、こちらからの返答に何日かかっていたかも数えさせます。返答の遅さは、相手の言葉には出てこない失注の理由です。</p>
+<h3>ステップ3：理由を五つに仕分けさせ、「推定」と明記させる</h3>
+<p>抜き出した言葉と経緯をもとに、理由を<strong>「値段」「納期」「提案の内容」「こちらの対応」「相手側の事情」の五つ</strong>に仕分けさせます。一つの案件に複数の理由がついても構いません。大切なのは、機械の仕分けはあくまで推定であると明記させ、根拠となった言葉や事実を横に添えさせることです。根拠のない仕分けは「不明」と書かせ、想像で埋めさせません。</p>
+<h3>ステップ4：数えて、繰り返しを見つけさせる</h3>
+<p>一覧がそろったら、理由別・相手の業種別・金額帯別に数えさせます。<strong>「値段」で断られた案件が実は二割しかなく、「対応の遅さ」が四割だった</strong>という結果は、珍しくありません。特定の金額帯だけ失注が集中している、初回の提案から見積提出まで十日以上かかった案件はほぼ失注している、といった構造が数えることで見えてきます。</p>
+<h3>ステップ5：改善の候補を並べさせ、人が決める</h3>
+<p>繰り返しの多い理由について、改善の候補を<strong>「今日から変えられること」「見積書や提案書の形を変えること」「値段や条件を変えること」の三段</strong>で出させます。どれを採るかは人が決め、決めた内容と試す期間を一覧に書き戻します。三か月後に同じ集計をして、その理由での失注が減ったかを数える。この繰り返しが、記録を提案の改善につなげます。</p>
+
+
+<h2 id="s4">頼み方の3原則</h2>
+<p><strong>1. 相手の言葉を言い換えさせない</strong></p>
+<p>「予算の都合で」を「価格競争力の不足」と整えられると、相手が本当に言ったことがわからなくなります。原文はそのまま残し、仕分けの列だけを機械が足す。<strong>読み返すときに、相手の声がそのまま聞こえる形</strong>を保ちます。</p>
+<p><strong>2. 理由を一つに決めさせない</strong></p>
+<p>機械は指示がなければ、最も目立つ言葉から理由を一つ選んでしまいます。複数の理由を並べさせ、それぞれに根拠を添えさせます。<strong>一つに絞るのは、数えたあとの人の仕事</strong>です。</p>
+<p><strong>3. 件数と金額を突き合わせる</strong></p>
+<p>失注案件の件数と一覧の行数、理由別の集計の合計と全体の行数、失注した見積金額の合計と個別金額の合計。<strong>数が合わなければ、取りこぼしか二重登録がある</strong>。この突き合わせを毎回入れるだけで、一覧の信頼度が大きく変わります。</p>
+
+
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>1. すべてを「値段」のせいにする</h3>
+<p>断りの言葉が値段に触れていると、そこで考えるのをやめてしまいます。値段は言いやすい理由であって、本当の理由とは限りません。<strong>対応の速さ、提案の伝わりやすさを先に疑う</strong>習慣をつけます。</p>
+<h3>2. 大きな案件だけ振り返る</h3>
+<p>金額の大きい失注は誰でも覚えています。困るのは、小さな案件で同じ理由の失注が積み重なっている場合です。<strong>小さな失注の積み重ねが、年間ではいちばん大きな損失</strong>になっていることがよくあります。大小を問わず一覧に入れます。</p>
+<h3>3. 担当者の反省文にしてしまう</h3>
+<p>「私の説明が足りませんでした」で終わる記録は、次の提案を変えません。個人の反省ではなく、<strong>見積書の形、提案の順番、返答までの日数といった仕組みの側で何を変えるか</strong>を残すものだと、担当者に繰り返し伝えます。</p>
+<h3>4. 一覧をつくって満足する</h3>
+<p>一覧は出発点であって、目的ではありません。<strong>繰り返しの多い理由から、一つずつ改善を決めて試す</strong>ところまでが一組です。</p>
+<h3>5. 断られた相手を二度と見ない</h3>
+<p>失注した相手は、こちらの提案を一度は真剣に検討した相手です。相手側の事情で見送りになった案件は、時期を置けば再び機会が来ることがあります。<strong>「追わない」と「時期を置く」を分けて記録し</strong>、時期を置く相手には人が判断して働きかけます。</p>
+
+
+<h2 id="s6">業種別の効きどころ</h2>
+<p><strong>建設・リフォーム</strong> — 相見積もりで負けた案件を金額帯別・工事種別に数えると、特定の工事で提案の見せ方に弱さがあることが見えてきます。</p>
+<p><strong>製造業・受注生産</strong> — 納期で断られた案件を集めると、繁忙期の見積回答の遅さが原因になっていることがわかり、回答の順番を見直す材料になります。</p>
+<p><strong>制作・デザイン</strong> — 「イメージと違った」という断りの言葉を原文で集めると、初回提案での確認不足の型が見え、提案前のすり合わせ項目を整えられます。</p>
+<p><strong>士業・コンサルティング</strong> — 「今回は社内で対応する」という断りが多ければ、提案の内容が相手にとって自分でもできそうに見えている可能性があり、価値の伝え方を変える手がかりになります。</p>
+<p><strong>設備・保守サービス</strong> — 更新時期に他社へ切り替えられた案件を集めると、切り替え前の数か月に対応の遅れが集中していることが見えることがあります。</p>
+
+
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 相手に断られた理由を聞いても、本当のことを言ってもらえません</h3>
+<p>そのとおりで、相手の言葉だけに頼らないのがこの記事の考え方です。相手の言葉は原文で残しつつ、<strong>こちらの返答日数や提案の回数といった、こちら側の事実</strong>を並べて見ます。相手が言わない理由の多くは、こちらの事実の側に出ています。</p>
+<h3>Q. 失注案件の資料がほとんど残っていません</h3>
+<p>まずは直近の三か月分、見積書の控えだけからでも始められます。見積金額と提出日と相手の種類だけでも数えれば、金額帯や業種の偏りは見えます。<strong>今日から残す仕組みをつくるほうが、過去を掘り起こすより大切</strong>です。</p>
+<h3>Q. 担当者が振り返りを嫌がります</h3>
+<p>反省を求める場ではなく、仕組みを直す場であることを先に伝えます。名前ではなく案件で一覧をつくり、個人の評価には使わないと決めておきます。<strong>「見積書の形を変えたら失注が減った」という体験</strong>が一度あれば、担当者の受け止め方は変わります。</p>
+<h3>Q. どのくらいの時間がかかりますか</h3>
+<p>最初に過去の案件を集めて一覧にするのに半日ほど、以後は案件が決まらなかった時点で十分ほど書き足すだけです。<strong>失注一件の金額と比べれば、はるかに小さな投資</strong>です。</p>
+
+
+<h2 id="s8">まとめ</h2>
+<p>失注の理由が残らないのは、振り返る気になれず、短い断り文句で片づき、経緯が散らばっているからです。裏を返せば、集めて、仕分けて、数える作業を機械に任せてしまえば、残るのは「何を変えるか」という判断だけになります。</p>
+<p>経緯を集める。相手の言葉を原文で残す。五つに仕分けて推定と明記する。数えて繰り返しを見つける。候補を並べ、人が決めて試す。この順番なら、担当者の気持ちの負担を増やさずに、記録は続きます。</p>
+<p>集めて、仕分けて、数えるのは機械。決めて、動くのは人。<strong>断られてから理由を探すのではなく、次の提案を出す前に前回の理由が手元にある状態</strong>が、小さな会社が同じ失注を繰り返さない、いちばん確実な方法です。</p>
+
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>
