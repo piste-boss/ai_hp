@@ -198,7 +198,7 @@ GA4/Clarity・canonical・OGP・Article(BlogPosting)・BreadcrumbList（4階層�
 - 外部の一次資料リンク（公式サイト・公式ドキュメント、実在確認済み）と本文中の関連記事リンク（全155記事）
 - FAQ 節と FAQPage スキーマ（155/155。seo_build.py は h3 形式・`.faq-item` 形式・`<p><strong>` 形式の3種を読む）
 - 更新日: `tools/modified.json`（{slug: "YYYY-MM-DD"}）で管理。内容を変えた記事だけ日付を更新すると dateModified と本文の「更新日」に反映される。タグ追加だけでは更新しない
-- 表記の統一: 支援実績「400社以上（2026年9月時点）」、導入サポート「1時間 ¥10,000（税込）」、電話「0566-48-6580」、「ココナラで相談する」はココナラへ
+- 表記の統一: 肩書き「株式会社Piste 代表取締役」（CEO 表記や「Piste AI EVANGELISTS 代表 / AIコンサルタント / フィットネスクラブ経営者」の併記はしない。JSON-LD の jobTitle は「代表取締役 / AIコンサルタント」）、支援実績「400社以上（2026年9月時点）」、導入サポート「1時間 ¥10,000（税込）」、電話「0566-48-6580」、「ココナラで相談する」はココナラへ
 - アフィリエイトリンク（A8）は 2026-09-10 に全廃し公式サイトへのリンクに置換。以後、記事にアフィリエイトを入れない
 - 色コントラスト: LINE緑 `--line-green: #05823a`、金色バッジは `--gold-dark` 背景（WCAG AA）
 
@@ -218,7 +218,7 @@ GA4/Clarity・canonical・OGP・Article(BlogPosting)・BreadcrumbList（4階層�
 残り:
 
 - Bing Webmaster Tools は 2026-09-10 に石川さんが登録済み（Search Console からインポート）。同日時点で Bing の索引は0件。IndexNow で170 URL 送信済み。数日後に `site:piste-ai.com` を Bing で検索して索引数を確認する
-- `sameAs` に YouTube（URL 未提供）
+- `sameAs` に YouTube → チャンネルを持っていないため不要（2026-09-10 石川さん確認）
 - http→https→www の2段リダイレクトを1段に（Netlify 側の仕様）
 - GA4 Data API / Search Console API のトークンを `~/.claude/credentials/` に用意し月次レポートを自動化
   （`tools/google_oauth_gsc.py` を石川さんがターミナルで実行すると `google_searchconsole_token.json` が保存される）
