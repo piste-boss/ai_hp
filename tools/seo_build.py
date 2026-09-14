@@ -77,7 +77,7 @@ CAT_RULES = {
     "finance": [
         "cashflow", "gross-margin", "fixed-cost", "loan-repayment", "receivables", "invoice-amount",
         "invoice-registration", "denshi-chobo", "price-revision", "quote-comparison", "subsidy",
-        "new-client-credit", "ai-accounting-automation", "ai-cost-roi",
+        "new-client-credit", "ai-accounting-automation", "ai-cost-roi", "discount-records", "purchase-price",
     ],
     "sales-customer": [
         "lost-deal", "dormant-customer", "complaint-first", "customer-list", "survey-freetext",
@@ -85,7 +85,7 @@ CAT_RULES = {
         "ai-competitor",
     ],
     "operations": [
-        "near-miss", "returns-defect", "equipment-inspection", "spec-change", "subcontractor",
+        "near-miss", "returns-defect", "equipment-inspection", "spec-change", "subcontractor", "license-expiry", "waste-loss",
         "delivery-delay", "paper-document", "bcp-", "ai-inventory", "ai-meeting-minutes", "ai-knowledge",
         "ai-contract-review", "ai-presentation", "ai-data-analysis", "ai-recruitment",
     ],
@@ -361,13 +361,13 @@ class Article:
 
 def load_dates() -> dict:
     idx = (BLOG / "index.html").read_text(encoding="utf-8")
-    return {m.group(1): m.group(2) for m in re.finditer(r'<a href="([a-z0-9-]+)(?:\.html)?">.*?class="blog-date">([0-9.]+)<', idx, re.S)}
+    return {m.group(1): m.group(2) for m in re.finditer(r'<div class="blog-card"[^>]*>\s*<a href="([a-z0-9-]+)(?:\.html)?">.*?class="blog-date">([0-9.]+)<', idx, re.S)}
 
 def load_thumbs() -> dict:
     """ブログ一覧のカード画像からスラッグ→画像ベース名を得る（jpg / -card.webp どちらでも）"""
     idx = (BLOG / "index.html").read_text(encoding="utf-8")
     out = {}
-    for m in re.finditer(r'<a href="([a-z0-9-]+)(?:\.html)?">\s*<div class="blog-thumb"><img src="\.\./images/([^"]+?)(?:-card)?\.(?:jpg|webp)"', idx, re.S):
+    for m in re.finditer(r'<div class="blog-card"[^>]*>\s*<a href="([a-z0-9-]+)(?:\.html)?">\s*<div class="blog-thumb"><img src="\.\./images/([^"]+?)(?:-card)?\.(?:jpg|webp)"', idx, re.S):
         out[m.group(1)] = m.group(2)
     return out
 

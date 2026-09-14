@@ -6,7 +6,43 @@
   <atom:link href="https://www.piste-ai.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>中小企業のための Claude Code・AI活用ガイド。ツール連携、経理・財務、営業・顧客対応、業務記録・現場改善、AI導入の基礎を毎日更新。</description>
   <language>ja</language>
-  <lastBuildDate>Thu, 10 Sep 2026 17:59:54 +0900</lastBuildDate>
+  <lastBuildDate>Mon, 14 Sep 2026 07:00:16 +0900</lastBuildDate>
+  <item>
+    <title>Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-purchase-price-history.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-purchase-price-history.html</guid>
+    <pubDate>Mon, 14 Sep 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで請求書・納品書に散らばった仕入単価を品目ごとにそろえ、表記ゆれをまとめて仕入先別に日付順の推移を並べ、一年前との値上がり幅を年間の影響額に換算して金額の大きい順に見直し、品目ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-purchase-price-history-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-waste-loss-records.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-waste-loss-records.html</guid>
+    <pubDate>Sun, 13 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで日報・仕込み表・棚卸表に散らばった廃棄・ロスの記録を一覧にそろえ、期限切れ・作りすぎ・作り損じ・保管傷み・仕様変更・理由不明の六つに型分けして仕入れ値に換算し、品目別・曜日別・場所別に集計して繰り返し廃棄に印をつけ、品目ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-waste-loss-records-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-discount-records.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-discount-records.html</guid>
+    <pubDate>Sat, 12 Sep 2026 09:00:00 +0900</pubDate>
+    <category>経理・財務・資金</category>
+    <description>Claude Codeで見積書・請求書に散らばった値引きを一覧にそろえ、端数調整・数量・競合対抗・関係維持・条件引き換え・理由不明の六つに型分けして値引き後の利益に換算し、お客様別・担当者別に集計して定価化した値引きに印をつけ、型ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-discount-records-og.jpg" type="image/jpeg" length="0"/>
+  </item>
+  <item>
+    <title>Claude Codeで従業員の資格・免許・講習の有効期限を切らさない！中小企業のための期限一覧づくりと更新手配の判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-license-expiry-tracking.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-license-expiry-tracking.html</guid>
+    <pubDate>Fri, 11 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで従業員の資格・免許・講習の記録を一覧にそろえ、更新型・定期講習型・年数失効型・期限なし型の四つに型分けして期限日を計算し、作業ごとの必要人数と照らして切れると仕事が止まる資格に印をつけ、月に一度三か月以内の期限を確かめる運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-license-expiry-tracking-og.jpg" type="image/jpeg" length="0"/>
+  </item>
   <item>
     <title>Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド</title>
     <link>https://www.piste-ai.com/blog/claude-code-subcontractor-track-record.html</link>
@@ -240,42 +276,6 @@
     <category>Claude Codeの使い方</category>
     <description>Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。</description>
     <enclosure url="https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeで組んだ自動化を担当者以外でも動かせるようにする！中小企業のための引き継ぎ設計ガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-automation-handover.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-automation-handover.html</guid>
-    <pubDate>Tue, 11 Aug 2026 09:00:00 +0900</pubDate>
-    <category>Claude Codeの使い方</category>
-    <description>Claude Codeで組んだ自動化が「作った本人しか動かせない」状態になるのを防ぐ設計を解説。引き継ぎに本当に必要な3つ、決めごとファイルに書く5行、入口を1つに固定する考え方、止まったときの3つの確認、一人社長の備え方を中小企業向けに整理します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-automation-handover-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeが出した成果物は誰がどう確認する？中小企業のための検収チェック体制づくりガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-deliverable-review-process.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-deliverable-review-process.html</guid>
-    <pubDate>Mon, 10 Aug 2026 09:00:00 +0900</pubDate>
-    <category>Claude Codeの使い方</category>
-    <description>Claude Codeの自動化で見落とされがちな「出てきたものを世に出す前の確認」を体系化。全数確認をやめる3段階の仕分け、5分で終わるチェックリストの作り方、抜き取り確認の割合の決め方、確認記録の残し方を中小企業・一人社長向けに解説します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-deliverable-review-process-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeに任せた作業をいつでも元に戻せるようにする！中小企業のためのバックアップと復旧ルールづくりガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-backup-and-recovery.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-backup-and-recovery.html</guid>
-    <pubDate>Sun, 09 Aug 2026 09:00:00 +0900</pubDate>
-    <category>Claude Codeの使い方</category>
-    <description>Claude Codeの自動化で最後まで残る不安「戻せるのか」を解消。実際に起きる3つの失敗パターン、戻す手段を3層で持つ考え方、半日で終わる4つの準備、事故時の復旧3ステップを中小企業・一人社長向けに解説します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-backup-and-recovery-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeに社内のどの情報まで渡してよい？中小企業のための機密・個人情報の取り扱いルールガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-confidential-data-rules.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-confidential-data-rules.html</guid>
-    <pubDate>Sat, 08 Aug 2026 09:00:00 +0900</pubDate>
-    <category>Claude Codeの使い方</category>
-    <description>Claude Codeに渡してよい情報と止めたほうがよい情報の線引きを解説。手元で動く仕組みの正しい理解、情報の3分類、伏せて渡す3つの工夫、社内で決める4行のルールを中小企業・一人社長向けに整理します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-confidential-data-rules-og.jpg" type="image/jpeg" length="0"/>
   </item>
 </channel>
 </rss>

@@ -164,3 +164,7 @@
 | 2026-09-08 | Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド | claude-code-delivery-delay-early-warning.md |
 | 2026-09-09 | Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド | claude-code-returns-defect-log.md |
 | 2026-09-10 | Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド | claude-code-subcontractor-track-record.md |
+| 2026-09-11 | Claude Codeで従業員の資格・免許・講習の有効期限を切らさない！中小企業のための期限一覧づくりと更新手配の判断材料整理ガイド | claude-code-license-expiry-tracking.md |
+| 2026-09-12 | Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド | claude-code-discount-records.md |
+| 2026-09-13 | Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド | claude-code-waste-loss-records.md |
+| 2026-09-14 | Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド | claude-code-purchase-price-history.md |

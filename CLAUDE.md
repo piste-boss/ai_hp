@@ -220,9 +220,8 @@ GA4/Clarity・canonical・OGP・Article(BlogPosting)・BreadcrumbList（4階層�
 - Bing Webmaster Tools は 2026-09-10 に石川さんが登録済み（Search Console からインポート）。同日時点で Bing の索引は0件。IndexNow で170 URL 送信済み。数日後に `site:piste-ai.com` を Bing で検索して索引数を確認する
 - `sameAs` に YouTube → チャンネルを持っていないため不要（2026-09-10 石川さん確認）
 - http→https→www の2段リダイレクトを1段に（Netlify 側の仕様）
-- GA4 Data API / Search Console API のトークンを `~/.claude/credentials/` に用意し月次レポートを自動化
-  （`tools/google_oauth_gsc.py` を石川さんがターミナルで実行すると `google_searchconsole_token.json` が保存される）
-- AI 参照元（chatgpt.com / perplexity.ai / copilot.microsoft.com / gemini.google.com）の GA4 探索レポート
+- ~~API トークン~~ → 2026-09-10 18:27 に `google_searchconsole_token.json` 保存済み（analytics.readonly + webmasters）。Search Console の `https://www.piste-ai.com/` は所有者権限で取得可。**GA4 プロパティ 531067300 は 403**（認可アカウントが閲覧者に入っていない。GA4 管理画面で閲覧者追加、または所有アカウントで再認可が必要）
+- 月次記録: `python3 tools/ai_referral_report.py`（直近28日。引数で期間指定可）→ `audit/reports/ai_referral_*.md`。GA4 の AI 参照元（chatgpt / perplexity / copilot / gemini / claude）と GSC の上位ページ・クエリ・サイトマップ状況を出す。毎月1日に実行し、手動項目（3つの AI への質問テスト、生成AI機能フィルタ、Bing の site: 件数）を追記する
 
 ---
 

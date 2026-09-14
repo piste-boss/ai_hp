@@ -9,7 +9,7 @@
 - [AI研修プログラム](https://www.piste-ai.com/training.html): 従業員向け Claude Code 実践研修（全12コマ）。厚生労働省「人材開発支援助成金」の対象
 - [愛知県・西三河の中小企業向けAI導入支援](https://www.piste-ai.com/aichi.html): 地域の事業者向けの案内
 - [代表プロフィール](https://www.piste-ai.com/about.html): 石川 卓（岐阜大学大学院修了、大手鉄鋼メーカーで約8年勤務、400社以上のAI導入支援（2026年9月時点））
-- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。155記事
+- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。159記事
 - [RSS](https://www.piste-ai.com/feed.xml) / [サイトマップ](https://www.piste-ai.com/sitemap.xml)
 
 ## 料金（税込）
@@ -146,6 +146,8 @@ CLAUDE.md・権限・スキル・サブエージェントなど、Claude Code �
 
 資金繰り・粗利・固定費・請求書・インボイス・補助金など、お金まわりの整理と判断材料づくり。一覧: https://www.piste-ai.com/blog/category-finance.html
 
+- [Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-purchase-price-history.html) (2026-09-14): Claude Codeで請求書・納品書に散らばった仕入単価を品目ごとにそろえ、表記ゆれをまとめて仕入先別に日付順の推移を並べ、一年前との値上がり幅を年間の影響額に換算して金額の大きい順に見直し、品目ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。
+- [Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-discount-records.html) (2026-09-12): Claude Codeで見積書・請求書に散らばった値引きを一覧にそろえ、端数調整・数量・競合対抗・関係維持・条件引き換え・理由不明の六つに型分けして値引き後の利益に換算し、お客様別・担当者別に集計して定価化した値引きに印をつけ、型ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで受け取った請求書のインボイス対応を確かめる！中小企業のための登録番号チェックと保存整理ガイド](https://www.piste-ai.com/blog/claude-code-invoice-registration-check.html) (2026-09-04): Claude Codeで受け取った請求書のインボイス要件を一枚ずつ確かめる手順を解説。記載項目の写し取り、登録番号の形式確認、不足一覧と取引先への確認、確認結果を添えた保存まで5ステップを中小企業向けに整理します。
 - [Claude Codeで借入の返済予定を整理する！中小企業のための返済一覧づくりと金利負担の見える化ガイド](https://www.piste-ai.com/blog/claude-code-loan-repayment-overview.html) (2026-08-31): Claude Codeで散らばった借入の情報を一枚の返済一覧にまとめ、金利負担を見える化する手順を解説。九項目の型づくり、返済予定表の写し替え、毎月の返済合計と年間利息の算出、完済時期の一覧化、繰り上げ返済や借り換えの選択肢づくりまで5ステップを中小企業向けに整理します。
 - [Claude Codeで新しい取引先を取引前に見極める！中小企業のための与信チェックと判断材料づくりガイド](https://www.piste-ai.com/blog/claude-code-new-client-credit-check.html) (2026-08-30): Claude Codeで新規取引先の与信チェックを仕組み化する手順を解説。確認項目の型づくり、手元情報の仕分け、公開情報との突き合わせ、3区分での一覧化、前受け・上限額など取引条件の設計まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
@@ -181,6 +183,8 @@ CLAUDE.md・権限・スキル・サブエージェントなど、Claude Code �
 
 ヒヤリハット・不良品・点検・納期・外注先・仕様変更など、現場の記録を一覧にして改善につなげる方法。一覧: https://www.piste-ai.com/blog/category-operations.html
 
+- [Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-waste-loss-records.html) (2026-09-13): Claude Codeで日報・仕込み表・棚卸表に散らばった廃棄・ロスの記録を一覧にそろえ、期限切れ・作りすぎ・作り損じ・保管傷み・仕様変更・理由不明の六つに型分けして仕入れ値に換算し、品目別・曜日別・場所別に集計して繰り返し廃棄に印をつけ、品目ごとの基準を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。
+- [Claude Codeで従業員の資格・免許・講習の有効期限を切らさない！中小企業のための期限一覧づくりと更新手配の判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-license-expiry-tracking.html) (2026-09-11): Claude Codeで従業員の資格・免許・講習の記録を一覧にそろえ、更新型・定期講習型・年数失効型・期限なし型の四つに型分けして期限日を計算し、作業ごとの必要人数と照らして切れると仕事が止まる資格に印をつけ、月に一度三か月以内の期限を確かめる運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで外注先・協力会社の依頼記録を整える！中小企業のための取引実績の一覧づくりと次に頼む先の判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-subcontractor-track-record.html) (2026-09-10): Claude Codeで外注先・協力会社への過去の依頼を一覧にそろえ、外注先名の表記ゆれと仕事の種類を整理し、納期・金額・手直しの三つの実績を数えて同じ種類の仕事で比べる手順を解説。新しい依頼を一言で足す運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで返品・不良品の記録を整える！中小企業のための発生一覧づくりと原因別の再発防止整理ガイド](https://www.piste-ai.com/blog/claude-code-returns-defect-log.html) (2026-09-09): Claude Codeで返品・不良品の発生記録を一覧にそろえ、原因の言葉を十個以内に統一し、一件ごとの損失額と原因別・相手先別の集計で同じ失敗の繰り返しを見える化する手順を解説。新しい不良を一言で足す運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで納期遅れの兆候を早めに見つける！中小企業のための受注案件の進捗一覧づくりと遅れの原因整理ガイド](https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning.html) (2026-09-08): Claude Codeで受注案件の状況を一覧に整え、待ち日数の計算と三つの遅れ基準で止まっている案件に印をつけ、納期遅れの兆候を毎朝つかめる状態にする手順を解説。遅れの原因を四つに仕分けて月に一度数える方法まで5ステップを中小企業向けに整理します。

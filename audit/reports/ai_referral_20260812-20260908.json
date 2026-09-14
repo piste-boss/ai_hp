@@ -1,0 +1,41 @@
+{
+ "start": "2026-08-12",
+ "end": "2026-09-08",
+ "ga4": {
+  "error": {
+   "error": 403,
+   "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permissions for this property. To learn more about Property ID, see https://developers.google.com/analytics/devguides/reporting/data/v1/property-id.\",\n    \"status\": \"PERMISSION_DENIED\"\n  }\n}\n"
+  },
+  "ai_sessions": [],
+  "ai_pages": [],
+  "total_sessions": null,
+  "sources": []
+ },
+ "gsc": {
+  "https://www.piste-ai.com/": {
+   "total": {},
+   "searchAppearance": [],
+   "top_pages": [],
+   "top_queries": [],
+   "sitemaps": [
+    {
+     "path": "https://www.piste-ai.com/sitemap.xml",
+     "lastDownloaded": "2026-09-10",
+     "errors": "0",
+     "submitted": [
+      "170"
+     ],
+     "indexed": [
+      "0"
+     ]
+    }
+   ]
+  },
+  "sc-domain:piste-ai.com": {
+   "error": {
+    "error": 403,
+    "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'sc-domain:piste-ai.com'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"errors\": [\n      {\n        \"message\": \"User does not have sufficient permission for site 'sc-domain:piste"
+   }
+  }
+ }
+}

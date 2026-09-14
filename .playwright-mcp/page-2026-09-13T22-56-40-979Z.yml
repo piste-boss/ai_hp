@@ -1,0 +1,458 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Piste AI EVANGELISTS トップ" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e5]:
+          - text: PISTE AI
+          - generic [ref=e6]: EVANGELISTS
+      - navigation "メインナビゲーション" [ref=e7]:
+        - link "支援内容" [ref=e8] [cursor=pointer]:
+          - /url: "#services"
+        - link "料金プラン" [ref=e9] [cursor=pointer]:
+          - /url: "#plans"
+        - link "私たちについて" [ref=e10] [cursor=pointer]:
+          - /url: "#profile"
+        - link "AI活用コラム" [ref=e11] [cursor=pointer]:
+          - /url: /blog/
+        - link "無料相談" [ref=e12] [cursor=pointer]:
+          - /url: "#contact"
+          - text: 無料相談
+          - generic [ref=e13]: ↗
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - paragraph [ref=e18]: YOUR AI IMPLEMENTATION PARTNER
+          - heading "AIを、 仕事の力に。" [level=1] [ref=e20]:
+            - text: AIを、
+            - text: 仕事の力に。
+          - paragraph [ref=e21]:
+            - text: 企業のAI導入を、現場で使える形まで。
+            - text: 相談から実装、運用の定着まで、
+            - text: あなたの隣で、一緒に進めます。
+          - generic [ref=e22]:
+            - link "まずは無料で相談する" [ref=e23] [cursor=pointer]:
+              - /url: "#contact"
+              - text: まずは無料で相談する
+              - generic [ref=e24]: ↗
+            - link "支援内容を見る" [ref=e25] [cursor=pointer]:
+              - /url: "#services"
+              - text: 支援内容を見る ↓
+          - paragraph [ref=e26]: 中小企業・個人事業主のための、マンツーマンAI導入支援
+        - figure "TOGETHER, ONE STEP HIGHER. 01 — ∞" [ref=e27]:
+          - generic [ref=e28]: A NEW DIMENSION OF WORK
+          - generic [ref=e66]:
+            - generic [ref=e67]: 人と、AIと。
+            - strong [ref=e68]: その先の可能性へ。
+          - button "動きを止める" [ref=e69] [cursor=pointer]
+          - generic [ref=e70]:
+            - generic [ref=e71]: TOGETHER, ONE STEP HIGHER.
+            - generic [ref=e72]: 01 — ∞
+      - generic [ref=e73]:
+        - paragraph [ref=e74]: 愛知県碧南市から、全国へ。
+        - generic [ref=e75]:
+          - generic [ref=e76]: •全国オンライン対応
+          - generic [ref=e77]: •相談・実装・定着を一貫支援
+          - generic [ref=e78]: •Anthropic 公式パートナーネットワーク認定企業
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Why Piste
+        - heading "AIを「試した」から、 毎日の「使える」へ。" [level=2] [ref=e83]:
+          - text: AIを「試した」から、
+          - text: 毎日の「使える」へ。
+      - generic [ref=e84]:
+        - paragraph [ref=e85]: AI導入で大切なのは、ツールそのものよりも「どの業務の、どの判断や手作業を、どこまで任せるか」を見極めることです。Piste AI EVANGELISTSは、現場の手順・使用している資料・顧客対応の流れ・属人化している判断基準まで丁寧に分解し、AIで置き換える部分、人が確認すべき部分、運用ルールとして残す部分を一緒に設計します。
+        - paragraph [ref=e86]: 導入後も、実際に使ってみて出てきたつまずきや精度のばらつきを見直し、プロンプト、テンプレート、チェック手順を改善します。単発のレクチャーではなく、日々の業務の中で自然に使い続けられる状態まで伴走します。拠点は愛知県碧南市。西三河・名古屋エリアをはじめ、全国の中小企業にオンラインで対応しています。
+      - figure "大切なのは、あなたの業務に合うこと。 AI生成によるイメージ" [ref=e87]:
+        - img "ノートとパソコンを使って業務の流れを一緒に整理する様子を描いたイメージ" [ref=e88]
+        - generic [ref=e89]:
+          - text: 大切なのは、あなたの業務に合うこと。
+          - generic [ref=e90]: AI生成によるイメージ
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - paragraph [ref=e94]: Problems
+        - heading "こんな状態から相談できます" [level=2] [ref=e95]
+      - generic [ref=e96]:
+        - article [ref=e97]:
+          - heading "何から始めるべきか曖昧" [level=3] [ref=e98]
+          - paragraph [ref=e99]: AIツールが多すぎて、自社の業務に合う選択肢と優先順位が決められない。
+        - article [ref=e100]:
+          - heading "社内に詳しい人がいない" [level=3] [ref=e101]
+          - paragraph [ref=e102]: 担当者任せにできず、経営者自身もスタッフも同じ目線で学ぶ必要がある。
+        - article [ref=e103]:
+          - heading "費用対効果が見えない" [level=3] [ref=e104]
+          - paragraph [ref=e105]: どの業務からAI化すれば時間や売上に効くのか、投資判断の材料が足りない。
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Services
+        - heading "相談、実装、定着まで一続きで支援" [level=2] [ref=e110]
+      - generic [ref=e111]:
+        - article [ref=e112]:
+          - generic [ref=e113]: "01"
+          - generic [ref=e114]:
+            - heading "業務ヒアリング＆AI活用設計" [level=3] [ref=e115]
+            - paragraph [ref=e116]: 日々の作業、顧客対応、資料作成、集客、会計などを整理し、AI化する順番を決めます。いきなりツールを入れるのではなく、効果が出やすい業務から着手します。
+          - link "この支援について相談する ↗" [ref=e117] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e118]:
+          - generic [ref=e119]: "02"
+          - generic [ref=e120]:
+            - heading "AI導入・ハンズオン支援" [level=3] [ref=e121]
+            - paragraph [ref=e122]: ChatGPT、Claude、Claude Code、画像生成AI、自動化ツールなどを画面共有で一緒に設定。操作説明だけでなく、実務で使うテンプレートまで整えます。
+          - link "この支援について相談する ↗" [ref=e123] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e124]:
+          - generic [ref=e125]: "03"
+          - generic [ref=e126]:
+            - heading "運用改善・チーム定着" [level=3] [ref=e127]
+            - paragraph [ref=e128]: 導入後のつまずき、スタッフへの展開、プロンプト改善まで継続サポート。小さく始めて、使える業務を増やしていきます。
+          - link "この支援について相談する ↗" [ref=e129] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e131]:
+      - article [ref=e132]:
+        - paragraph [ref=e133]: Spot Support
+        - heading "Claude Code 導入サポート" [level=2] [ref=e134]
+        - paragraph [ref=e135]: 話題のAIコーディングツールを、あなたのPCに導入し、基本操作までマンツーマンでレクチャーします。
+        - generic [ref=e136]: ¥10,000税込 / 1時間
+        - link "相談して申し込む" [ref=e137] [cursor=pointer]:
+          - /url: "#contact"
+        - paragraph [ref=e138]:
+          - link "サポート内容の詳細を見る →" [ref=e139] [cursor=pointer]:
+            - /url: claude-code-support
+      - article [ref=e140]:
+        - paragraph [ref=e141]: Video Lesson
+        - heading "Claude Code 基礎＆セットアップ" [level=3] [ref=e142]
+        - paragraph [ref=e143]: 購入後すぐにメールで動画リンクをお届けします。
+        - generic [ref=e144]: ¥5,000税込
+        - link "相談して購入する" [ref=e145] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - paragraph [ref=e149]: Plans
+        - heading "継続プラン" [level=2] [ref=e150]
+        - paragraph [ref=e151]: スポット体験後、本格的にAI導入を進めたい方へ。
+      - generic [ref=e152]:
+        - article [ref=e153]:
+          - paragraph [ref=e154]: ライトプラン
+          - paragraph [ref=e155]: ¥20,000/月
+          - paragraph [ref=e156]: 税込
+          - list [ref=e157]:
+            - listitem [ref=e158]: 週1時間×2回 マンツーマン指導
+            - listitem [ref=e159]: Zoomでの実践レクチャー
+            - listitem [ref=e160]: 小さく試したい方向け
+          - link "相談して申し込む" [ref=e161] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e162]:
+          - generic [ref=e163]: おすすめ
+          - paragraph [ref=e164]: スタンダードプラン
+          - paragraph [ref=e165]: ¥40,000/月
+          - paragraph [ref=e166]: 税込
+          - list [ref=e167]:
+            - listitem [ref=e168]: 週1時間×4回 マンツーマン相談
+            - listitem [ref=e169]: AI導入・設定のハンズオン支援
+            - listitem [ref=e170]: 業務テンプレート作成
+          - link "相談して申し込む" [ref=e171] [cursor=pointer]:
+            - /url: "#contact"
+        - article [ref=e172]:
+          - paragraph [ref=e173]: プラチナプラン
+          - paragraph [ref=e174]: ¥100,000/月
+          - paragraph [ref=e175]: 税込
+          - list [ref=e176]:
+            - listitem [ref=e177]: 週2時間×4回 マンツーマン相談
+            - listitem [ref=e178]: 業務テンプレート作成
+            - listitem [ref=e179]: LINEサポート随時
+          - link "相談して申し込む" [ref=e180] [cursor=pointer]:
+            - /url: "#contact"
+      - paragraph [ref=e181]:
+        - text: カード決済対応。口座振込は別途ご相談ください。
+        - link "ココナラの評価・実績を見る" [ref=e182] [cursor=pointer]:
+          - /url: https://coconala.com/users/2208051
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - paragraph [ref=e186]: Flow
+        - heading "ご利用の流れ" [level=2] [ref=e187]
+      - list [ref=e188]:
+        - listitem [ref=e189]:
+          - text: "01"
+          - heading "無料相談" [level=3] [ref=e190]
+          - paragraph [ref=e191]: 現状の課題と目標を伺い、AI活用の方向性を整理します。
+        - listitem [ref=e192]:
+          - text: "02"
+          - heading "プラン提案" [level=3] [ref=e193]
+          - paragraph [ref=e194]: 優先順位、実施内容、料金を確認してからスタートします。
+        - listitem [ref=e195]:
+          - text: "03"
+          - heading "導入支援" [level=3] [ref=e196]
+          - paragraph [ref=e197]: 画面共有しながら設定、操作、テンプレート作成を進めます。
+        - listitem [ref=e198]:
+          - text: "04"
+          - heading "定着改善" [level=3] [ref=e199]
+          - paragraph [ref=e200]: 使いながら改善し、社内で回る形へ育てていきます。
+    - generic [ref=e202]:
+      - img "石川 卓 プロフィール写真" [ref=e205]
+      - generic [ref=e206]:
+        - paragraph [ref=e207]: About
+        - heading "石川 卓" [level=2] [ref=e208]
+        - paragraph [ref=e209]: 株式会社Piste 代表取締役
+        - paragraph [ref=e210]: 岐阜大学工学部修士課程修了後、大手鉄鋼メーカーにてエンジニアとして約8年間勤務。その後独立し、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。
+        - paragraph [ref=e211]: 自らもフィットネスクラブを経営し、予約管理、顧客対応、会計処理、SNS運用、集客施策をAIで自動化しています。技術を知っているだけでなく、実際の事業運営で使う視点から支援します。
+        - paragraph [ref=e212]:
+          - generic [ref=e213]: ✦
+          - text: Anthropic 公式パートナーネットワーク認定企業
+        - paragraph [ref=e214]:
+          - link "詳しいプロフィール・会社概要を見る" [ref=e215] [cursor=pointer]:
+            - /url: about
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - paragraph [ref=e219]: Media
+        - heading "中部経済新聞に掲載されました。" [level=2] [ref=e220]
+        - paragraph [ref=e221]: 2026年5月26日付の中部経済新聞で、Piste AI EVANGELISTSのAI導入支援についてご紹介いただきました。
+        - link "掲載記事PDFを見る" [ref=e222] [cursor=pointer]:
+          - /url: media/chubu-keizai-20260526-piste.pdf
+      - generic [ref=e223]:
+        - article [ref=e224]:
+          - paragraph [ref=e225]: 2026.07.18
+          - heading "法人化のお知らせ" [level=3] [ref=e226]
+          - paragraph [ref=e227]: このたびPisteは法人化し、「株式会社Piste」として新たなスタートを切りました。法人化を機に体制を強化し、企業のAI導入支援・業務自動化支援により一層尽力してまいります。今後とも変わらぬご愛顧を賜りますようお願い申し上げます。
+          - generic [ref=e228]: News Release
+        - article [ref=e229]:
+          - paragraph [ref=e230]: 2026.05.26
+          - heading "中部経済新聞 掲載" [level=3] [ref=e231]
+          - paragraph [ref=e232]: AI活用・業務効率化を支援する取り組みとして、Piste AI EVANGELISTSの活動が紹介されました。
+          - generic [ref=e233]: Chubu Keizai Shimbun
+        - article [ref=e234]:
+          - paragraph [ref=e235]: ✦ Certified Partner
+          - heading "Anthropic 公式パートナーネットワーク認定" [level=3] [ref=e236]
+          - paragraph [ref=e237]: Claudeを開発するAnthropicの公式パートナーネットワーク企業に認定されました。最新のAI技術を活かした導入支援を提供します。
+          - generic [ref=e238]: Anthropic Partner Network
+    - generic [ref=e240]:
+      - generic [ref=e241]:
+        - paragraph [ref=e242]: Training
+        - heading "AI研修プログラム （人材開発支援助成金 活用可能）" [level=2] [ref=e243]:
+          - text: AI研修プログラム
+          - generic [ref=e244]: （人材開発支援助成金 活用可能）
+        - paragraph [ref=e245]: 従業員向け Claude Code 実践研修（全12コマ／60分）。厚生労働省「人材開発支援助成金」を活用すれば、研修費の大半が経費助成され、社内へのAI定着コストを大幅に圧縮できます。
+      - article [ref=e246]:
+        - generic [ref=e247]: 助成金活用 NEW
+        - paragraph [ref=e248]: 中小企業・経費助成75%適用時の試算例
+        - generic [ref=e249]:
+          - generic [ref=e250]:
+            - paragraph [ref=e251]: 通常受講料
+            - paragraph [ref=e252]: ¥400,000/人
+          - generic [ref=e253]: →
+          - generic [ref=e254]:
+            - paragraph [ref=e255]: 助成金活用後の実質負担
+            - paragraph [ref=e256]: ¥100,000/人
+            - paragraph [ref=e257]: 最大 75% OFF
+        - paragraph [ref=e258]:
+          - generic [ref=e259]: 差額（受給見込額）
+          - generic [ref=e260]: ¥300,000/人
+        - paragraph [ref=e261]: ※ 経費助成75%が適用される場合（コース・対象要件の確認が必要）を適用した試算例。受講人数・研修時間・自社の状況により受給額は変動します。賃金助成の対象となる場合もあります。適用条件・金額は最新の制度をご確認ください。
+      - group [ref=e262]:
+        - generic "研修の概要・学習ロードマップを見る" [ref=e263] [cursor=pointer]
+      - paragraph [ref=e264]:
+        - link "カリキュラムの詳細を見る" [ref=e265] [cursor=pointer]:
+          - /url: training
+        - link "無料相談で助成金活用を相談する" [ref=e266] [cursor=pointer]:
+          - /url: "#contact"
+      - paragraph [ref=e267]: 助成金の申請可否は事業所所在地の労働局の判断に基づきます。社労士にご相談ください。
+    - generic [ref=e269]:
+      - generic [ref=e270]:
+        - paragraph [ref=e271]: Blog
+        - heading "AI活用コラム" [level=2] [ref=e272]
+      - generic [ref=e273]:
+        - article [ref=e274]:
+          - link "Claude Codeで仕入単価の推移を整える 2026.09.14 Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド" [ref=e275] [cursor=pointer]:
+            - /url: blog/claude-code-purchase-price-history
+            - img "Claude Codeで仕入単価の推移を整える" [ref=e276]
+            - generic [ref=e277]:
+              - paragraph [ref=e278]: 2026.09.14
+              - heading "Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド" [level=3] [ref=e279]
+        - article [ref=e280]:
+          - link "Claude Codeで廃棄・ロスの記録を整える 2026.09.13 Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド" [ref=e281] [cursor=pointer]:
+            - /url: blog/claude-code-waste-loss-records
+            - img "Claude Codeで廃棄・ロスの記録を整える" [ref=e282]
+            - generic [ref=e283]:
+              - paragraph [ref=e284]: 2026.09.13
+              - heading "Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド" [level=3] [ref=e285]
+        - article [ref=e286]:
+          - link "Claude Codeで値引きの記録を整える 2026.09.12 Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド" [ref=e287] [cursor=pointer]:
+            - /url: blog/claude-code-discount-records
+            - img "Claude Codeで値引きの記録を整える" [ref=e288]
+            - generic [ref=e289]:
+              - paragraph [ref=e290]: 2026.09.12
+              - heading "Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド" [level=3] [ref=e291]
+        - article [ref=e292]:
+          - link "Claude Codeで従業員の資格・免許・講習の有効期限を切らさない 2026.09.11 Claude Codeで従業員の資格・免許・講習の有効期限を切らさない！中小企業のための期限一覧づくりと更新手配の判断材料整理ガイド" [ref=e293] [cursor=pointer]:
+            - /url: blog/claude-code-license-expiry-tracking
+            - img "Claude Codeで従業員の資格・免許・講習の有効期限を切らさない" [ref=e294]
+            - generic [ref=e295]:
+              - paragraph [ref=e296]: 2026.09.11
+              - heading "Claude Codeで従業員の資格・免許・講習の有効期限を切らさない！中小企業のための期限一覧づくりと更新手配の判断材料整理ガイド" [level=3] [ref=e297]
+      - link "すべての記事を見る" [ref=e299] [cursor=pointer]:
+        - /url: blog/
+    - generic [ref=e301]:
+      - generic [ref=e302]:
+        - paragraph [ref=e303]: News
+        - heading "最新AIニュース" [level=2] [ref=e304]
+      - generic [ref=e305]:
+        - group [ref=e306]:
+          - generic "2026.09.14 ─ Claude Code / Anthropic Anthropic・OpenAI・Google が7月から非公開の作業部会で業界主導の AI 標準化団体を協議と The Information が報道。Amodei CEO は CBS で「進歩は想像より速かった」と減速を訴え、Anthropic は Nasdaq で10月 IPO を目指すと伝えられる +" [ref=e307] [cursor=pointer]:
+            - generic [ref=e308]: 2026.09.14 ─ Claude Code / Anthropic
+            - generic [ref=e309]: Anthropic・OpenAI・Google が7月から非公開の作業部会で業界主導の AI 標準化団体を協議と The Information が報道。Amodei CEO は CBS で「進歩は想像より速かった」と減速を訴え、Anthropic は Nasdaq で10月 IPO を目指すと伝えられる
+            - text: +
+        - group [ref=e310]:
+          - generic "2026.09.14 ─ Claude Code / Anthropic Claude Code の週間利用上限が本日9/14から標準比25%増へ恒久化（現状比では約17%減）。最新版は v2.1.270 のまま。Accomplish 社が Claude Code・Codex・Cursor のサンドボックス漏えいを開示、Anthropic の修正は約50日 +" [ref=e311] [cursor=pointer]:
+            - generic [ref=e312]: 2026.09.14 ─ Claude Code / Anthropic
+            - generic [ref=e313]: Claude Code の週間利用上限が本日9/14から標準比25%増へ恒久化（現状比では約17%減）。最新版は v2.1.270 のまま。Accomplish 社が Claude Code・Codex・Cursor のサンドボックス漏えいを開示、Anthropic の修正は約50日
+            - text: +
+        - group [ref=e314]:
+          - generic "2026.09.14 ─ ChatGPT / OpenAI Altman CEO が Amodei 氏の減速提言に「I agree with Dario」と同意。カリフォルニア州司法長官が Hugging Face 事案で OpenAI を正式調査、Microsoft 365 Copilot には xAI の Grok が追加され OpenAI 依存が一段と後退 +" [ref=e315] [cursor=pointer]:
+            - generic [ref=e316]: 2026.09.14 ─ ChatGPT / OpenAI
+            - generic [ref=e317]: Altman CEO が Amodei 氏の減速提言に「I agree with Dario」と同意。カリフォルニア州司法長官が Hugging Face 事案で OpenAI を正式調査、Microsoft 365 Copilot には xAI の Grok が追加され OpenAI 依存が一段と後退
+            - text: +
+        - group [ref=e318]:
+          - generic "2026.09.14 ─ Gemini / Google Google も業界主導の AI 標準化団体の協議に参加。Workspace 週次まとめでは Gemini のクロスアプリ・オーケストレーション、Gemini Enterprise のアクセス制御、Gemini Notebook の共有管理を公開。Gemini 4 は依然として日程未発表 +" [ref=e319] [cursor=pointer]:
+            - generic [ref=e320]: 2026.09.14 ─ Gemini / Google
+            - generic [ref=e321]: Google も業界主導の AI 標準化団体の協議に参加。Workspace 週次まとめでは Gemini のクロスアプリ・オーケストレーション、Gemini Enterprise のアクセス制御、Gemini Notebook の共有管理を公開。Gemini 4 は依然として日程未発表
+            - text: +
+        - group [ref=e322]:
+          - generic "2026.09.14 ─ 公式リリースまとめ Anthropic は本日 Claude Code の週間上限を改定、最新版は v2.1.270。OpenAI は GPT-Rosalind と Agents API、Google は Workspace 週次まとめと Windows 版 Gemini が最新。Microsoft 365 Copilot に Grok、DeepSeek-V4.1-Flash も公開 +" [ref=e323] [cursor=pointer]:
+            - generic [ref=e324]: 2026.09.14 ─ 公式リリースまとめ
+            - generic [ref=e325]: Anthropic は本日 Claude Code の週間上限を改定、最新版は v2.1.270。OpenAI は GPT-Rosalind と Agents API、Google は Workspace 週次まとめと Windows 版 Gemini が最新。Microsoft 365 Copilot に Grok、DeepSeek-V4.1-Flash も公開
+            - text: +
+        - group [ref=e326]:
+          - generic "2026.09.14 ─ 業界全体の動向 自主規制の枠組みが「提言」から「団体」へ。米下院議長は議会主導の AI 安全立法を拒否し「ラボが自ら取り締まるべき」、カリフォルニアは Adam Raine Act に署名。AI アドオン17,800件が未検証ソースから指示を取り込む調査も +" [ref=e327] [cursor=pointer]:
+            - generic [ref=e328]: 2026.09.14 ─ 業界全体の動向
+            - generic [ref=e329]: 自主規制の枠組みが「提言」から「団体」へ。米下院議長は議会主導の AI 安全立法を拒否し「ラボが自ら取り締まるべき」、カリフォルニアは Adam Raine Act に署名。AI アドオン17,800件が未検証ソースから指示を取り込む調査も
+            - text: +
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - paragraph [ref=e333]: LINE Official
+        - heading "まずは、無料ガイドから。" [level=2] [ref=e334]
+        - paragraph [ref=e335]: Claude Code を「自分の手で動かせる状態」まで持っていくための特典をお渡ししています。ご相談・お問い合わせも、このLINEからそのままどうぞ。
+      - article [ref=e337]:
+        - paragraph [ref=e338]: Free Bonus
+        - heading "Claude Code セットアップガイド 全11ページ／PDF・登録後すぐお渡し" [level=3] [ref=e339]:
+          - text: Claude Code セットアップガイド
+          - generic [ref=e340]: 全11ページ／PDF・登録後すぐお渡し
+        - paragraph [ref=e341]: 実際の画面つき・全8ステップ。今日中に、AIから「こんにちは」と返事が返ってくるところまで進められます。
+        - list [ref=e342]:
+          - listitem [ref=e343]: VS Code の導入と日本語化
+          - listitem [ref=e344]: Claude Code 拡張機能の入れ方（偽物の見分け方つき）
+          - listitem [ref=e345]: つまずきやすい認証の回避手順
+          - listitem [ref=e346]: うまくいかないときの確認表
+        - paragraph [ref=e347]: 「環境を作るところで止まってしまった」が、いちばん多いつまずきです。まずはここを、今日のうちに越えてしまいましょう。
+      - generic [ref=e348]:
+        - link "LINEで特典を受け取る" [ref=e349] [cursor=pointer]:
+          - /url: https://lin.ee/Pul5f6V
+          - img [ref=e350]
+          - text: LINEで特典を受け取る
+        - paragraph [ref=e352]:
+          - text: 友だち追加は無料です。追加後すぐにセットアップガイドが届きます。
+          - text: ご質問はそのまま返信いただければ、石川が直接お読みします。
+    - generic [ref=e354]:
+      - generic [ref=e355]:
+        - paragraph [ref=e356]: Contact
+        - heading "次の一歩を、 一緒に。" [level=2] [ref=e357]:
+          - text: 次の一歩を、
+          - text: 一緒に。
+        - paragraph [ref=e358]:
+          - text: 「何から始めればいい？」からで大丈夫です。
+          - text: いまの業務やお困りごとを、お聞かせください。
+        - paragraph [ref=e359]: ご相談内容を確認し、担当者よりご連絡します。
+        - link "LINEで気軽に相談する ↗" [ref=e360] [cursor=pointer]:
+          - /url: https://lin.ee/Pul5f6V
+      - generic [ref=e361]:
+        - generic [ref=e362]:
+          - generic [ref=e363]:
+            - text: お名前
+            - generic [ref=e364]: 必須
+          - textbox "お名前 必須" [ref=e365]:
+            - /placeholder: 山田 太郎
+        - generic [ref=e366]:
+          - generic [ref=e367]: 会社名
+          - textbox "会社名" [ref=e368]:
+            - /placeholder: 株式会社○○
+        - generic [ref=e369]:
+          - generic [ref=e370]:
+            - text: メールアドレス
+            - generic [ref=e371]: 必須
+          - textbox "メールアドレス 必須" [ref=e372]:
+            - /placeholder: info@example.com
+        - generic [ref=e373]:
+          - generic [ref=e374]: ご相談内容
+          - combobox "ご相談内容" [ref=e375]:
+            - option "選択してください" [selected]
+            - option "Claude Code 導入サポート"
+            - option "ライトプラン（月額20,000円）"
+            - option "スタンダードプラン（月額40,000円）"
+            - option "プラチナプラン（月額100,000円）"
+            - option "AI研修プログラム（人材開発支援助成金 活用）"
+            - option "AI導入について相談したい"
+            - option "その他"
+        - generic [ref=e376]:
+          - generic [ref=e377]:
+            - text: メッセージ
+            - generic [ref=e378]: 必須
+          - textbox "メッセージ 必須" [ref=e379]:
+            - /placeholder: ご相談内容をお書きください
+        - button "送信する" [ref=e380] [cursor=pointer]
+  - contentinfo [ref=e381]:
+    - generic [ref=e382]:
+      - generic [ref=e383]:
+        - img "Piste AI EVANGELISTS" [ref=e384]
+        - paragraph [ref=e385]: AIの力で、ビジネスの未来を変える。企業のためのAI導入パートナー。
+        - paragraph [ref=e386]:
+          - generic [ref=e387]: ✦
+          - text: Anthropic 公式パートナーネットワーク認定企業
+        - paragraph [ref=e388]:
+          - strong [ref=e389]: 株式会社Piste
+          - text: 〒447-0042 愛知県碧南市中後町3-3 中央ビル1F
+          - text: TEL
+          - link "0566-48-6580" [ref=e390] [cursor=pointer]:
+            - /url: tel:+81566486580
+          - text: 全国オンライン対応
+      - navigation [ref=e391]:
+        - heading "サービス" [level=3] [ref=e392]
+        - link "Claude Code 導入サポート" [ref=e393] [cursor=pointer]:
+          - /url: claude-code-support
+        - link "支援内容" [ref=e394] [cursor=pointer]:
+          - /url: "#services"
+        - link "料金プラン" [ref=e395] [cursor=pointer]:
+          - /url: "#plans"
+        - link "AI研修プログラム" [ref=e396] [cursor=pointer]:
+          - /url: "#training"
+        - link "ご利用の流れ" [ref=e397] [cursor=pointer]:
+          - /url: "#flow"
+        - link "メディア掲載" [ref=e398] [cursor=pointer]:
+          - /url: "#media"
+        - link "ブログ" [ref=e399] [cursor=pointer]:
+          - /url: blog/
+        - link "代表プロフィール" [ref=e400] [cursor=pointer]:
+          - /url: about
+        - link "愛知県の企業様へ" [ref=e401] [cursor=pointer]:
+          - /url: aichi
+      - navigation [ref=e402]:
+        - heading "その他" [level=3] [ref=e403]
+        - link "ココナラで相談する" [ref=e404] [cursor=pointer]:
+          - /url: https://coconala.com/users/2208051
+        - link "X（旧Twitter）" [ref=e405] [cursor=pointer]:
+          - /url: https://x.com/piste_ai_boss
+        - link "Instagram" [ref=e406] [cursor=pointer]:
+          - /url: https://www.instagram.com/piste_ai
+        - link "Threads" [ref=e407] [cursor=pointer]:
+          - /url: https://www.threads.com/@piste_ai
+        - link "プライバシーポリシー" [ref=e408] [cursor=pointer]:
+          - /url: privacy
+        - link "利用規約" [ref=e409] [cursor=pointer]:
+          - /url: terms
+        - link "特定商取引法に基づく表記" [ref=e410] [cursor=pointer]:
+          - /url: tokushoho
+    - generic [ref=e411]:
+      - paragraph [ref=e412]: © 2026 株式会社Piste. All rights reserved.
+      - paragraph [ref=e413]: 決済方法：クレジットカード（Stripe）/ 口座振込
+  - link "LINE友だち追加" [ref=e414] [cursor=pointer]:
+    - /url: https://lin.ee/Pul5f6V
+    - img [ref=e415]
