@@ -830,6 +830,8 @@ def main():
     n = build_sitemap(arts)
     build_feed(arts)
     build_llms(arts)
+    from theme_build import apply_theme
+    apply_theme()
     faq = sum(1 for a in arts if a.faq)
     print(f"articles: {len(arts)} / with FAQ schema: {faq} / sitemap urls: {n}")
     print("categories:", {CAT_BY_SLUG[k][1]: v for k, v in counts.items()})
