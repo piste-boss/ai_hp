@@ -82,7 +82,7 @@ CAT_RULES = {
     "sales-customer": [
         "lost-deal", "dormant-customer", "complaint-first", "customer-list", "survey-freetext",
         "contract-renewal", "ai-sales-email", "ai-customer-support", "ai-sns-marketing", "ai-sales-growth",
-        "ai-competitor",
+        "ai-competitor", "promotion-campaign",
     ],
     "operations": [
         "near-miss", "returns-defect", "equipment-inspection", "spec-change", "subcontractor", "license-expiry", "waste-loss",

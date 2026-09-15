@@ -157,5 +157,6 @@
   "claude-code-license-expiry-tracking": "2026-09-11",
   "claude-code-discount-records": "2026-09-12",
   "claude-code-waste-loss-records": "2026-09-13",
-  "claude-code-purchase-price-history": "2026-09-14"
+  "claude-code-purchase-price-history": "2026-09-14",
+  "claude-code-promotion-campaign-results": "2026-09-15"
 }

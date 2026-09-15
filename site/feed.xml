@@ -6,7 +6,16 @@
   <atom:link href="https://www.piste-ai.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>中小企業のための Claude Code・AI活用ガイド。ツール連携、経理・財務、営業・顧客対応、業務記録・現場改善、AI導入の基礎を毎日更新。</description>
   <language>ja</language>
-  <lastBuildDate>Mon, 14 Sep 2026 13:48:18 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 15 Sep 2026 06:53:32 +0900</lastBuildDate>
+  <item>
+    <title>Claude Codeで販促・キャンペーンの結果を整える！中小企業のための実施一覧づくりと次に打つ手の判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-promotion-campaign-results.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-promotion-campaign-results.html</guid>
+    <pubDate>Tue, 15 Sep 2026 09:00:00 +0900</pubDate>
+    <category>営業・顧客対応</category>
+    <description>Claude Codeで帳簿・レジ記録・売上集計・実施メモに散らばった販促の記録を施策ごとにそろえ、種類を分け、前年同期・直前期間を横に並べて費用と値引きを差し引いた利益を出し、翌月の反動まで見て続ける施策を決める運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-promotion-campaign-results-og.jpg" type="image/jpeg" length="0"/>
+  </item>
   <item>
     <title>Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド</title>
     <link>https://www.piste-ai.com/blog/claude-code-purchase-price-history.html</link>
@@ -267,15 +276,6 @@
     <category>業務記録・現場改善</category>
     <description>Claude Codeで紙の請求書・PDF・手書きメモを読み取り、表や台帳に流し込む手順を解説。データ化の3段階、書類別の着手順、読み取り間違いを前提にした二重チェックの設計、現場でつまずく5つの落とし穴まで中小企業向けに整理します。</description>
     <enclosure url="https://www.piste-ai.com/images/blog-claude-code-paper-document-digitization-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeで増やした自動化を棚卸しする！中小企業のための使われていない自動化の見つけ方と止め方ガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup.html</guid>
-    <pubDate>Wed, 12 Aug 2026 09:00:00 +0900</pubDate>
-    <category>Claude Codeの使い方</category>
-    <description>Claude Codeで自動化を増やしすぎて全体が見えなくなったときの棚卸し手順を解説。一覧の作り方、使われているかの見分け方、止める・残すの判断基準4つ、安全な止め方の3ステップ、年2回の見直しサイクルまで中小企業向けに整理します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-automation-inventory-cleanup-og.jpg" type="image/jpeg" length="0"/>
   </item>
 </channel>
 </rss>

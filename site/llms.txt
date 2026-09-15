@@ -9,7 +9,7 @@
 - [AI研修プログラム](https://www.piste-ai.com/training.html): 従業員向け Claude Code 実践研修（全12コマ）。厚生労働省「人材開発支援助成金」の対象
 - [愛知県・西三河の中小企業向けAI導入支援](https://www.piste-ai.com/aichi.html): 地域の事業者向けの案内
 - [代表プロフィール](https://www.piste-ai.com/about.html): 石川 卓（岐阜大学大学院修了、大手鉄鋼メーカーで約8年勤務、400社以上のAI導入支援（2026年9月時点））
-- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。159記事
+- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。160記事
 - [RSS](https://www.piste-ai.com/feed.xml) / [サイトマップ](https://www.piste-ai.com/sitemap.xml)
 
 ## 料金（税込）
@@ -167,6 +167,7 @@ CLAUDE.md・権限・スキル・サブエージェントなど、Claude Code �
 
 失注分析・休眠顧客・クレーム対応・顧客名簿・アンケートなど、売上と顧客に関わる記録の整え方。一覧: https://www.piste-ai.com/blog/category-sales-customer.html
 
+- [Claude Codeで販促・キャンペーンの結果を整える！中小企業のための実施一覧づくりと次に打つ手の判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-promotion-campaign-results.html) (2026-09-15): Claude Codeで帳簿・レジ記録・売上集計・実施メモに散らばった販促の記録を施策ごとにそろえ、種類を分け、前年同期・直前期間を横に並べて費用と値引きを差し引いた利益を出し、翌月の反動まで見て続ける施策を決める運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで失注した見積もりを振り返る！中小企業のための断られた理由の整理と次の提案に活かす記録づくりガイド](https://www.piste-ai.com/blog/claude-code-lost-deal-review.html) (2026-09-07): Claude Codeで失注した見積もりの経緯を集め、断られた理由を値段・納期・内容・対応・相手側の事情の五つに仕分け、繰り返しを数えて次の提案に活かす記録として残す手順を解説。相手の言葉を原文で残す方法から改善候補の決め方まで5ステップを中小企業向けに整理します。
 - [Claude Codeでお客様のお叱りに落ち着いて対応する！中小企業のための一次回答の下書きと再発防止の記録づくりガイド](https://www.piste-ai.com/blog/claude-code-complaint-first-response.html) (2026-08-26): Claude Codeでクレーム対応の初動を整える手順を解説。受けた内容の時系列化、事実と解釈の切り分け、お相手が求めていることの見極め、一次回答の下書き3案、再発防止メモの残し方まで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。
 - [Claude Codeでお客様アンケートの自由記述をまとめる！中小企業のための声の集計と改善点の見つけ方ガイド](https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis.html) (2026-08-22): Claude Codeでアンケートの自由記述を集計する手順を解説。仕分けの箱の決め方・理由付きの分類・良い/困っている/要望の3区分集計・原文の抜き出しまでの5ステップと、現場でつまずく5つの型を中小企業向けに整理します。

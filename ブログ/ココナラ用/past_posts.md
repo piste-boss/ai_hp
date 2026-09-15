@@ -168,3 +168,4 @@
 | 2026-09-12 | Claude Codeで値引きの記録を整える！中小企業のための値引き一覧づくりと利益の漏れを見つける判断材料整理ガイド | claude-code-discount-records.md |
 | 2026-09-13 | Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド | claude-code-waste-loss-records.md |
 | 2026-09-14 | Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド | claude-code-purchase-price-history.md |
+| 2026-09-15 | Claude Codeで販促・キャンペーンの結果を整える！中小企業のための実施一覧づくりと次に打つ手の判断材料整理ガイド | claude-code-promotion-campaign-results.md |
