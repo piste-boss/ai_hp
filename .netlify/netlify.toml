@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "/Users/ishikawasuguru/AI_コンサル"
+publish = "/Users/ishikawasuguru/Desktop/claude/AI"
 publishOrigin = "default"
 
 [build.environment]

@@ -135,6 +135,7 @@ SEOの後処理が組み込まれていないため、**新しい記事ほど検
 補足:
 
 - **title と H1 は分ける**。H1 は現状の長いタイトルのままでよい。`<title>` は 30〜35 文字の検索向け短縮版にする
+  （2026-09-17: それまで seo_build.py が付けていた ` | Piste AI EVANGELISTS` の接尾辞を記事 title から撤去。カテゴリ一覧・ブログ一覧は接尾辞あり）
   （例: `Claude Codeで外注先の依頼記録を整える｜中小企業向け`）。`| Piste AI EVANGELISTS` の接尾辞は文字数を圧迫するので付けない。
 - FAQPage の `mainEntity` には記事末尾の FAQ セクションの Q/A を**そのまま**入れる（本文と一致させる）。
 - 著者ページは `about.html`（公開URL `/about`）。Person の `@id` は `https://www.piste-ai.com/about.html#person`（release_build が拡張子なしに変換）。全記事の `author` はこの `@id` を参照する（設置済み）。
@@ -224,6 +225,8 @@ GA4/Clarity・canonical・OGP・Article(BlogPosting)・BreadcrumbList（4階層�
 - 月次記録: `python3 tools/ai_referral_report.py`（直近28日。引数で期間指定可）→ `audit/reports/ai_referral_*.md`。GA4 の AI 参照元（chatgpt / perplexity / copilot / gemini / claude）と GSC の上位ページ・クエリ・サイトマップ状況を出す。毎月1日に実行し、手動項目（3つの AI への質問テスト、生成AI機能フィルタ、Bing の site: 件数）を追記する
 
 ---
+
+- Clarity 日次採取: `python3 tools/clarity_export.py`（スキル `piste-ai-clarity-save`、スキルマネージャーで毎日 data-collector が実行）→ `audit/clarity/`。API 上限 10回/日・1回の実行で5回消費。トークンは `~/.claude/credentials/clarity_piste_ai_token.json`
 
 ## 効果測定の注意
 

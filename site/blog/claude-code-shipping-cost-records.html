@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで送料と配送の記録を整える｜中小企業向け</title>
+<meta name="description" content="Claude Codeで運送会社の請求書・送り状の控え・郵便の料金の記録・梱包資材の購入の控え・受注の記録に散らばった発送の記録を一回ごとにそろえ、送料と売上・粗利を並べて利益を削る発送と見直す発送を分け、送り状に目的の欄を足して月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,送料,配送費,荷造運賃,物流コスト,経費削減,経費管理,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで送料と配送の記録を整える｜中小企業向け">
+  <meta property="og:description" content="Claude Codeで運送会社の請求書・送り状の控え・郵便の料金の記録・梱包資材の購入の控え・受注の記録に散らばった発送の記録を一回ごとにそろえ、送料と売上・粗利を並べて利益を削る発送と見直す発送を分け、送り状に目的の欄を足して月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-shipping-cost-records-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-25T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで送料と配送の記録を整える｜中小企業向け">
+  <meta name="twitter:description" content="Claude Codeで運送会社の請求書・送り状の控え・郵便の料金の記録・梱包資材の購入の控え・受注の記録に散らばった発送の記録を一回ごとにそろえ、送料と売上・粗利を並べて利益を削る発送と見直す発送を分け、送り状に目的の欄を足して月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-shipping-cost-records-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html"},"url":"https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html","headline":"Claude Codeで送料と配送の記録を整える！中小企業のための発送ごとの送料一覧づくりと利益を削る発送・見直す発送を分ける判断材料整理ガイド","alternativeHeadline":"Claude Codeで送料と配送の記録を整える｜中小企業向け","description":"Claude Codeで運送会社の請求書・送り状の控え・郵便の料金の記録・梱包資材の購入の控え・受注の記録に散らばった発送の記録を一回ごとにそろえ、送料と売上・粗利を並べて利益を削る発送と見直す発送を分け、送り状に目的の欄を足して月に一度確かめる運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-shipping-cost-records-og.jpg","width":1200,"height":800},"datePublished":"2026-09-25T09:00:00+09:00","dateModified":"2026-09-25T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","送料","配送費","荷造運賃","物流コスト","経費削減","経費管理","業務効率化","中小企業"],"wordCount":7857,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで送料と配送の記録を整える｜中小企業向け","item":"https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-shipping-cost-records.html#faq","mainEntity":[{"@type":"Question","name":"発送は一日に数件しかありませんが、必要ですか","acceptedAnswer":{"@type":"Answer","text":"一日に数件でも、一年分を並べると同じ取引先への少額の発送や、急ぎの便の使いすぎがまとまって見えてきます。件数が少ないうちに送り状の欄を一行足し、月に一度の確認の決まりをつくっておく方が、注文が増えたときに楽です。最初の一覧は半日で終わります。"}},{"@type":"Question","name":"送り状の控えを捨ててしまい、どの注文の荷物か分かりません","acceptedAnswer":{"@type":"Answer","text":"運送会社の請求書に送り状の番号と届け先の地域と日付があれば、受注の記録の出荷日と届け先から、多くの発送は注文まで結びつけられます。運送会社のウェブの明細から一年分を取り出せる場合もあります。過去は分かる範囲で並べ、これからは発送のときに注文番号と目的を書く決まりを決めて残す、で十分です。"}},{"@type":"Question","name":"送料の負担を見直すと、取引先との関係が悪くならないか心配です","acceptedAnswer":{"@type":"Answer","text":"一覧は取引先に負担を押しつけるための道具ではなく、どの発送の送り方を変えれば双方の手間と費用が減るかを見えるようにするための道具です。まとめて送る日を決める、注文の単位を相談する、といった、送料の負担そのものを変えずに済む案から見ていきます。負担の話をするときも、数字を並べてから話す方が、取引先にも納得してもらいやすくなります。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"一年分の請求書と受注の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。発送ごとのまとめ直しと帳簿との突き合わせに数日、そのあとは月に一度、請求書が届いたらその月の発送を足して取引先ごとの累計と印を出させて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで送料と配送の記録を整える！中小企業のための発送ごとの送料一覧づくりと利益を削る発送・見直す発送を分ける判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-25">公開日：2026年9月25日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-shipping-cost-records.webp" alt="Claude Codeで送料と配送の記録を整える！中小企業のための発送ごとの送料一覧づくりと利益を削る発送・見直す発送を分ける判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>送料が運送会社の月ごとの請求書、送り状の控え、郵便の料金の記録、チャーター便の請求、梱包資材の購入の控えに分かれ、帳簿では荷造運賃の一行にまとまって消え、発送ごとの送料と売上を一覧で見たことがない製造加工・卸商社・通信販売・建設リフォーム・食品などの中小企業</li><li><strong>できるようになること：</strong>散らばった記録を送り状の番号で発送一回ごとにまとめ直し、通常出荷・再送・見本品・返品の引き取り・社内の移動の目的をつけ、送料をその発送の売上や粗利と並べ、送料が粗利の三割を超える発送や急ぎの便が続く取引先に印をつけて見直す発送を分け、送り状に注文番号と目的の欄を足して月に一度確かめる運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、過去一年分の運送会社の請求書・送り状の控え・郵便の料金の記録・チャーター便の請求・梱包資材の購入の控え、受注の記録（注文番号・売上・粗利）、帳簿の荷造運賃の年間合計（一覧との突き合わせ用）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「今月の運送会社の請求がまた増えた気がする」「送料込みの価格にしている商品で、本当に利益が残っているのか分からない」「急ぎの便を使うのが当たり前になっているが、誰がいつ決めたのか覚えていない」。中小企業では、商品や資材を送るための費用が、運送会社の月ごとの請求書、宅配の送り状の控え、郵便の料金の記録、チャーター便の請求、梱包資材の購入の控えに分かれ、帳簿では「荷造運賃」の一行にまとまって消えていきます。どの発送に、一回でいくらかかり、その発送でどれだけの売上と利益が動いたのかを一覧で見たことがある会社は、ほとんどありません。</p>
+<p>その結果、何が起きるか。決算のときに荷造運賃が去年より増えていることに気づいても、値上げのせいなのか、発送の回数が増えたのか、大きな箱で送るようになったのか説明できない。少額の注文に大きな箱と急ぎの便を使い、売上より送料の方が重い発送が毎月くり返される。送料を誰が負担するかの決まりが取引先ごとにばらばらで、担当者が替わるたびに変わっていく。<strong>送料の本当の問題は、金額が多いか少ないかではなく、発送ごとの送料と売上を並べて見たことがないため、利益を削っている発送と、見直せる発送を分けられないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、運送会社の請求書、送り状の控え、郵便の料金の記録、受注の記録に散らばった発送の記録を一回ごとの一覧にそろえ、送料と売上を並べ、利益を削っている発送と見直す発送を見分ける材料を整えるまでの手順を、非エンジニアの方向けに整理します。どの運送会社を使うか、送料をどちらが負担するか、送料込みにする線をどこに引くかを決めるのは人の判断。機械に任せるのは、<strong>散らばった記録を集めて、発送一回ごとにそろえて、送料と売上に分けて並べる作業</strong>です。</p>
+<div class="toc"><h2>目次</h2><ul><li><a href="#s1">送料が「見えない」3つの理由</a></li><li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li><li><a href="#s3">実務5ステップ</a></li><li><a href="#s4">頼み方の3原則</a></li><li><a href="#s5">つまずきやすい5つの型</a></li><li><a href="#s6">業種別の効きどころ</a></li><li><a href="#s7">よくあるご質問</a></li><li><a href="#s8">まとめ</a></li></ul></div>
+<h2 id="s1">送料が「見えない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-shipping-cost-records-01.webp" alt="送料が「見えない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>見えないのは、発送の担当者が記録をさぼっているからではありません。見えない構造が、仕事の側にあります。</p>
+<h3>1. 一回の発送の費用が、四つの記録に分かれる</h3>
+<p>一つの注文を送るだけでも、運賃は運送会社の月ごとの請求書、どの荷物だったかは送り状の控え、箱や緩衝材は梱包資材の購入の控え、急ぎの割増や時間指定の料金は請求書の別の行と、記録の置き場所が全部違います。<strong>運送会社の請求書は月ごとにまとめて届き、中身は送り状の番号と金額の羅列なので、どの注文の荷物にいくらかかったかは、受注の記録と突き合わせないと組み上がりません</strong>。運送会社を二社三社と使い分けていると、請求書の形まで違います。</p>
+<h3>2. 「どの注文の、何のための発送か」が、請求書のどこにも書かれていない</h3>
+<p>請求書に書かれているのは送り状の番号と届け先の地域と大きさまでです。<strong>その荷物が新規の注文だったのか、再送だったのか、見本品だったのか、返品の引き取りだったのかは、どこにも残っていません</strong>。急ぎの便を使った理由や、箱を大きくした理由は、その日に発送した担当者の記憶の中にしかなく、会社の判断材料になっていないのです。</p>
+<h3>3. 送料の決まりがなく、担当者と前例で決まる</h3>
+<p>いつもこの運送会社だから今回も同じ、あの取引先には昔から送料をこちらで持っている、お客様に急かされたので急ぎの便にした。<strong>送り方の多くは、送料と売上を比べたうえではなく、担当者の判断と前例で決まっています</strong>。決まりがないため、送料込みにする線も、急ぎの便を使う条件も説明できず、運賃の値上げが来たときには一律に価格を上げるか、黙って利益を削るかの二択になりがちです。</p>
+<blockquote>送料が見えないのは、一回の発送の費用が四つの記録に分かれ、どの注文の何のための発送かがどこにも書かれず、送り方の決まりが担当者と前例で決まっているからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>どの運送会社を使うか、送料をどちらが負担するか、送料込みにする線をどこに引くか、最低注文額を設けるかは会社の運営の判断</strong>であり、人が決めることです。機械に任せるのは、散らばった記録を集めて発送一回ごとにそろえ、送料と売上を横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>運送会社の請求書・送り状の控え・郵便の料金の記録・チャーター便の請求・梱包資材の購入の控え・受注の記録から、日付・送り状の番号・届け先・大きさ・便の種類・金額を拾い出す</td></tr><tr><td>発送一回ごとのまとめ直し</td><td>機械</td><td>送り状の番号を手がかりに、請求書の運賃と割増料金と受注の記録を一つの発送の下にまとめる</td></tr><tr><td>一覧化</td><td>機械</td><td>日付・取引先・注文番号・運送会社・便の種類・大きさ・送料・送料の負担先・売上を一行にそろえる</td></tr><tr><td>目的の種類づけ</td><td>機械</td><td>通常の出荷・再送・見本品・返品の引き取り・社内の移動のように、発送の目的を五つ前後に分ける</td></tr><tr><td>送料の集計</td><td>機械</td><td>取引先ごと、運送会社ごと、便の種類ごと、月ごとに、一年間の回数と合計と一回あたりの送料を出す</td></tr><tr><td>売上との突き合わせ</td><td>機械</td><td>発送ごとの売上と粗利を受注の記録から拾い、送料が売上や粗利の何割にあたるかを並べる</td></tr><tr><td>偏りの検出</td><td>機械</td><td>送料が粗利の三割を超える発送、急ぎの便が同じ取引先に続いている発送、再送が多い取引先や商品、同じ地域なのに運送会社によって送料が大きく違う発送に印をつける</td></tr><tr><td>見直し案の下書き</td><td>機械</td><td>印のついた発送について、便の種類を変える・まとめて送る・箱の大きさを変える・送料の負担を見直すの四つの案と、それぞれの年間の送料の差を並べる</td></tr><tr><td>送り方の判断</td><td>人</td><td>どの運送会社を使うか、送料をどちらが持つか、送料込みにする線をどこに引くか、取引先にどう伝えるかを決める</td></tr></tbody></table>
+<p>境界線は「並べる」と「決める」の間にあります。機械が出すのは、発送ごとの送料と売上の並びと、偏りの印までです。その先の、取引先との関係を考えて送料を持ち続けるか、条件を見直してもらうかの線は、人が引きます。</p>
+<h2 id="s3">実務5ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-shipping-cost-records-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：過去一年分の発送の記録を洗い出す</h3>
+<p>運送会社の請求書、送り状の控え、郵便の料金の記録、チャーター便の請求、梱包資材の購入の控え、受注の記録を一年分集め、Claude Codeに「この一年の発送を一回ごとの一覧にし、送料と売上を並べてほしい」と頼みます。年末の繁忙期や季節の商品のように発送の数に波があり、運賃の改定も年に一度前後のため、<strong>一年分が最初の単位</strong>です。注文番号と結びつかない送り状は、<strong>空欄のまま残させます</strong>。空欄の多さそのものが、記録の流れのどこが抜けているかを教えてくれます。</p>
+<h3>ステップ2：発送一回ごとにまとめ、目的の種類をつける</h3>
+<p>同じ発送が、請求書では送り状の番号、受注の記録では注文番号、出荷の予定表では取引先の略称と、三つの書き方で記録されています。<strong>送り状の番号を手がかりに三つを結びつけ、一回の発送の送料と売上を一行にまとめます</strong>。あわせて、通常の出荷・再送・見本品・返品の引き取り・社内の移動のように目的をつけます。再送や見本品は売上がないため、目的をつけずに並べると、送料の割合が異常に高い発送ばかりが目立ち、本当に見直すべき通常の出荷が埋もれます。</p>
+<h3>ステップ3：送料を、売上と粗利の大きさと並べる</h3>
+<p>一覧を取引先ごと、便の種類ごとにまとめ、一年間の回数と合計を出したら、発送ごとの売上と粗利を横に置きます。<strong>送料が、その発送で残る粗利の何割にあたるかが、送り方を見る物差しになります</strong>。一回の送料が安くても少額の注文が毎日続けば大きな額になり、一回の送料が高くても大口の注文なら軽い額です。回数と一回あたり、そして発送ごとの粗利を分けて見ると、減らすなら回数なのか、便の種類なのか、箱の大きさなのか、負担の決まりなのかが見えてきます。</p>
+<h3>ステップ4：偏りに印をつけ、利益を削る発送と見直す発送を分ける</h3>
+<p>送料が粗利の三割を超える発送、急ぎの便が続いている取引先、再送が多い商品、同じ地域なのに運送会社によって送料が大きく違う発送に印をつけます。<strong>印が一度きりの発送はその場の事情、同じ取引先や商品でくり返されている印は決まりの問題です</strong>。ここで初めて、「A社への発送は月に二十回あるが、半分は一万円未満の注文を急ぎの便で送っている」「B商品は再送が年に十二回あり、そのたびに送料を二重に払っている」という形が見えます。</p>
+<h3>ステップ5：送り状の控えに目的の欄を一行足し、月に一度だけ確かめる</h3>
+<p>一覧ができたら、発送のときに「注文番号」と「目的」を一行書き、急ぎの便を使ったときだけ理由を一言添えるという一つの決まりだけつくります。<strong>月に一度、運送会社の請求書が届いたら、その月の発送を一覧に足させ、取引先ごとの累計と印のついた発送を出させます</strong>。細かい報告書にすると続きません。一か月に一度、十五分で終わる形にします。運賃の改定の知らせが来たときは、改定後の料金で一年分を計算し直させ、影響の大きい取引先から先に確かめます。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「送料」に何を含めるかを、こちらから言葉で決める</h3>
+<p>運賃だけを見るか、急ぎや時間指定の割増、梱包資材、再送の運賃、返品の引き取りの運賃、倉庫から店舗への社内の移動まで含めるかで、数字は大きく変わります。機械に任せる前に、<strong>含めるものと含めないものをこちらから指定します</strong>。おすすめは、お客様への出荷にかかった運賃と割増料金と梱包資材の三つをまず一覧にし、社内の移動と返品の引き取りは別の欄に置くことです。混ぜると、売上につながる発送の費用と、売上につながらない発送の費用の区別がつかなくなります。</p>
+<h3>原則2：送料と注文の結びつきは「記録にある内容」で書かせ、推測で埋めさせない</h3>
+<p>注文番号のない送り状を、機械は届け先の地域や日付から「おそらくA社の注文だろう」と埋めたがります。<strong>記録で結びつかない送り状は空欄のまま残させ、推測で埋めさせません</strong>。推測で埋めた一覧は、見た目が整う分だけ、どの注文にも結びつかない発送の多さを見逃します。空欄は、次に確かめる発送を教えてくれる印です。</p>
+<h3>原則3：一覧の合計と、帳簿の荷造運賃を突き合わせる</h3>
+<p>一覧に並んだ送料の合計が、帳簿の荷造運賃の年間の合計と合っているかを突き合わせさせます。<strong>合計が帳簿より小さい場合、一覧に入っていない発送があります</strong>。たいていは、郵便局の窓口で現金で払った分か、梱包資材が消耗品として別の科目に入っている分です。逆に一覧の方が大きい場合は、仕入のときの運賃が仕入の金額に含まれて処理されているなど、科目の分け方の違いが混ざっています。差額の出どころを探すことが、記録の穴を見つける近道になります。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：請求書の合計だけ見て、発送ごとの内訳を見ない</h3>
+<p>運送会社の請求が増えたとき、運賃の値上げのせいにしがちですが、増えたのが発送の回数なのか、一回あたりの送料なのか、急ぎの便の割合なのかで打つ手は違います。<strong>回数、一回あたり、便の種類に分けて見ます</strong>。回数が増えたならまとめて送る工夫、一回あたりが増えたなら箱の大きさや運送会社の見直し、急ぎの便が増えたなら受注から出荷までの流れの見直しです。</p>
+<h3>型2：注文の大きさの違う発送どうしを送料の額で比べる</h3>
+<p>一件で数十万円の大口の注文と、数千円の少額の注文を、送料の額だけで比べても意味のある差は出ません。<strong>粗利に対する割合で比べるか、同じくらいの注文の大きさどうしで比べます</strong>。大きさを分けずに全部を一列に並べると、送料の高い発送と安い発送が分かるだけで、次の手が決まりません。</p>
+<h3>型3：再送や見本品を、通常の出荷と同じ物差しで測る</h3>
+<p>再送や見本品は売上がないため、送料の割合で測ると全部が赤字の発送に見えます。<strong>目的の種類ごとに、何をもって見直す理由とするかを先に決めます</strong>。通常の出荷なら粗利に対する割合、再送なら回数とその原因、見本品ならその後の注文の動き、という具合です。</p>
+<h3>型4：送料の負担の決まりを、取引先ごとの前例のまま放置する</h3>
+<p>あの取引先は昔から送料をこちらで持っている、という決まりは、運賃が何度値上がりしても見直されないまま続きがちです。<strong>取引先ごとに、送料の負担先と一年の送料の合計と粗利を並べ、負担が重くなっている取引先に印をつけさせます</strong>。見直すかどうかは人が決めますが、一覧を見てから話すのと、前例のまま送り続けるのとでは、翌年の数字が変わります。</p>
+<h3>型5：一覧をつくって、決まりを一つも変えない</h3>
+<p>一覧を眺めて「やっぱり急ぎの便が多い」と納得して終わると、次の月も同じように急ぎの便を使います。月に一度、送り状の目的の欄か、急ぎの便を使うときの理由の一言か、送料込みにする線か、一つでよいので決まりを変えます。変えた決まりが、次の月の数字の根拠になります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>製造・加工</td><td>得意先ごとの発送の回数と送料を受注の大きさと並べ、少量を小分けに急ぎで送っている得意先を見つけ、まとめて送る日を決める材料にする</td></tr><tr><td>卸・商社</td><td>取引先の数が多いため、送料が粗利の何割かで並べ替え、送料をこちらで持っている取引先のうち負担が重くなっている先を見つける</td></tr><tr><td>通信販売・ネットショップ</td><td>注文ごとの送料と粗利を並べ、送料込みにする線より少し上の注文で利益が残っているか、箱の大きさが一段大きくなる商品の組み合わせはどれかを確かめる</td></tr><tr><td>建設・リフォーム</td><td>資材の配送やチャーター便の費用を現場ごとにまとめ、見積もりに含めた運搬費と実際にかかった費用の差を並べる</td></tr><tr><td>食品・農産物</td><td>冷蔵や冷凍の便の割増料金を商品ごとに分け、季節ごとの発送の波と再送の原因を並べて、便の選び方と梱包を見直す材料にする</td></tr></tbody></table>
+<p>どの業種でも共通するのは、<strong>帳簿の荷造運賃の一行にまとまって消えていた送料を、発送ごとの送料と粗利という二つの物差しで並べ直すこと</strong>です。並べ直すと、そのままでよい発送と、まとめて送れる発送と、送料の負担を見直すべき取引先が分かれて見えてきます。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>発送は一日に数件しかありませんが、必要ですか</h3>
+<p>一日に数件でも、一年分を並べると同じ取引先への少額の発送や、急ぎの便の使いすぎがまとまって見えてきます。件数が少ないうちに送り状の欄を一行足し、月に一度の確認の決まりをつくっておく方が、注文が増えたときに楽です。最初の一覧は半日で終わります。</p>
+<h3>送り状の控えを捨ててしまい、どの注文の荷物か分かりません</h3>
+<p>運送会社の請求書に送り状の番号と届け先の地域と日付があれば、受注の記録の出荷日と届け先から、多くの発送は注文まで結びつけられます。運送会社のウェブの明細から一年分を取り出せる場合もあります。過去は分かる範囲で並べ、これからは発送のときに注文番号と目的を書く決まりを決めて残す、で十分です。</p>
+<h3>送料の負担を見直すと、取引先との関係が悪くならないか心配です</h3>
+<p>一覧は取引先に負担を押しつけるための道具ではなく、どの発送の送り方を変えれば双方の手間と費用が減るかを見えるようにするための道具です。まとめて送る日を決める、注文の単位を相談する、といった、送料の負担そのものを変えずに済む案から見ていきます。負担の話をするときも、数字を並べてから話す方が、取引先にも納得してもらいやすくなります。</p>
+<h3>どれくらいの時間がかかりますか</h3>
+<p>一年分の請求書と受注の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。発送ごとのまとめ直しと帳簿との突き合わせに数日、そのあとは月に一度、請求書が届いたらその月の発送を足して取引先ごとの累計と印を出させて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>送料が見えないのは、一回の発送の費用が四つの記録に分かれ、どの注文の何のための発送かがどこにも書かれず、送り方の決まりが担当者と前例で決まっているという構造の問題</li>
+<li>どの運送会社を使うか、送料をどちらが持つか、送料込みにする線をどこに引くかは人の判断。集めて、発送一回ごとにそろえて、送料と売上に分けて並べるのは機械の仕事</li>
+<li>実務は、一年分の洗い出し、発送一回ごとのまとめ直しと目的の種類づけ、送料を売上と粗利の大きさと並べる、偏りに印をつけて見直す発送を分ける、送り状に欄を足して月に一度確かめる、の五つ</li>
+<li>送料に何を含めるかをこちらから指定し、送料と注文の結びつきは記録にある内容で書かせ、帳簿の荷造運賃と突き合わせる</li>
+<li>合計だけでなく発送ごとの内訳を見る。注文の大きさの違う発送は比べない。再送や見本品は物差しを分け、負担の決まりは取引先ごとに見直し、月に一度、決まりを一つ変える</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-business-trip-records.html"><img src="../images/blog-claude-code-business-trip-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで出張の費用と目的を整える｜中小企業向け</span></a><a class="seo-related-card" href="claude-code-entertainment-expense-records.html"><img src="../images/blog-claude-code-entertainment-expense-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで交際費と手土産の記録を整える｜中小企業向け</span></a><a class="seo-related-card" href="claude-code-payment-fee-records.html"><img src="../images/blog-claude-code-payment-fee-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで支払手数料の記録を整える｜中小企業向け</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p>「自社の運送会社の請求書と受注の記録を、この記事の手順で一覧にしてみたい」「どの書類を渡せばよいか分からない」という方向けに、Claude Codeの導入サポートを承っています。</p>
+<p class="price">Claude Code導入サポート 税込3,000円</p>
+<p>セットアップから最初の発送ごとの送料一覧づくりまでを一緒に進め、自社の発送の種類に合わせた分け方と頼み方の言葉をその場で整理します。月に一度、取引先ごとの累計と見直す候補を出す運用を回すための簡単な形もご提案します。</p>
+<a href="../index.html#contact">導入サポートに申し込む</a>
+</div>
+<p>これまで多くの中小企業や一人社長の方の業務自動化をお手伝いしてきた経験をもとに、送料の記録に限らず、日々の事務の中で「並べていないから見えない」「見えないから決められない」仕事を減らすお手伝いをしています。</p>
+</div>
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

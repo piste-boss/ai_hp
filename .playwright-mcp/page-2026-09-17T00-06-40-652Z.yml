@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "コンテンツに移動" [ref=e3] [cursor=pointer]:
+      - generic [ref=e5]: コンテンツに移動
+    - button "アクセシビリティに関するフィードバック" [ref=e6] [cursor=pointer]:
+      - generic [ref=e8]: アクセシビリティに関するフィードバック
+    - generic [ref=e9]:
+      - link "Bing 検索に戻る" [ref=e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "Bing 検索に戻る" [level=1] [ref=e11]
+      - search [ref=e12]:
+        - button "検索" [ref=e15] [cursor=pointer]
+        - searchbox "ここに検索を入力 - 入力するごとに検索候補が表示されます" [ref=e16]: site:piste-ai.com
+        - button "画像を使用して検索" [ref=e19] [cursor=pointer]
+    - complementary "アカウント リワードと設定" [ref=e21]:
+      - button "Microsoft Rewards" [ref=e22] [cursor=pointer]
+      - link "ログイン" [ref=e23] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic "ログイン" [ref=e24]
+    - navigation "検索フィルター" [ref=e25]:
+      - list [ref=e26]:
+        - listitem [ref=e27]:
+          - link "すべて" [ref=e28] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=e29]:
+          - link "検索" [ref=e30] [cursor=pointer]:
+            - /url: /copilotsearch?q=site%3apiste-ai.com&FORM=CSSCOP
+            - img [ref=e31]
+            - text: 検索
+        - listitem [ref=e33]:
+          - link "画像" [ref=e34] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=4864cb2d33bf780b2418efe54542c5d088ff87ecb7a782cec1be6f135f8d0867JmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1L2ltYWdlcy9zZWFyY2g_cT1zaXRlJTNhcGlzdGUtYWkuY29tJkZPUk09SERSU0My&ntb=1
+        - listitem [ref=e35]:
+          - link "動画" [ref=e36] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=624ab8923871834f3da90a22d494b98860786fed499d3068bf1a17e688511e80JmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1L3ZpZGVvcy9zZWFyY2g_cT1zaXRlJTNhcGlzdGUtYWkuY29tJkZPUk09SERSU0Mz&ntb=1
+        - listitem [ref=e37]:
+          - link "地図" [ref=e38] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=bc61e978b3d958587a347ddd6b6d58918ed270f6af8cb3a29b4270bac5df0b36JmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1L21hcHM_cT1zaXRlJTNhcGlzdGUtYWkuY29tJkZPUk09SERSU0M0&ntb=1
+        - listitem [ref=e39]:
+          - link "ニュース" [ref=e40] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=9b121936c6149aabd92c8e35f73ace1c2522faa176bb6014f20795a181664f85JmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1L25ld3Mvc2VhcmNoP3E9c2l0ZSUzYXBpc3RlLWFpLmNvbSZGT1JNPUhEUlNDNg&ntb=1
+        - listitem [ref=e41]:
+          - button "さらに表示" [ref=e42] [cursor=pointer]:
+            - img [ref=e44]
+            - text: さらに表示
+  - contentinfo [ref=e46]:
+    - generic [ref=e47]:
+      - list:
+        - listitem [ref=e48]:
+          - link "プライバシー" [ref=e49] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=b7b39f0f57b6da20e893c73d4fcc569867c537e55a43548a1cdd5a10d69ec8aeJmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=e50]:
+          - link "使用条件" [ref=e51] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=22f749961ceb051ba27d4b003a46722c8ac448e9082b6b9e21c7daf1fbd72befJmltdHM9MTc4OTUxNjgwMA&ptn=3&ver=2&hsh=4&fclid=2a1e0159-7ce4-6e8d-3f87-16397d746f39&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1

@@ -60,7 +60,7 @@
   "claude-code-food-delivery-integration": "2026-09-10",
   "claude-code-freee-integration": "2026-09-10",
   "claude-code-ga4-analytics-integration": "2026-09-10",
-  "claude-code-gmail-integration": "2026-09-10",
+  "claude-code-gmail-integration": "2026-09-17",
   "claude-code-google-ads-integration": "2026-09-10",
   "claude-code-google-business-profile-integration": "2026-09-10",
   "claude-code-google-calendar-integration": "2026-09-10",
@@ -158,5 +158,17 @@
   "claude-code-discount-records": "2026-09-12",
   "claude-code-waste-loss-records": "2026-09-13",
   "claude-code-purchase-price-history": "2026-09-14",
-  "claude-code-promotion-campaign-results": "2026-09-15"
+  "claude-code-promotion-campaign-results": "2026-09-15",
+  "claude-code-lending-checkout-records": "2026-09-16",
+  "claude-code-customer-acquisition-channels": "2026-09-17",
+  "claude-code-job-hours-tracking": "2026-09-18",
+  "claude-code-consumables-purchase-records": "2026-09-19",
+  "claude-code-company-vehicle-cost-records": "2026-09-20",
+  "claude-code-utility-usage-records": "2026-09-21",
+  "claude-code-paid-leave-records": "2026-09-22",
+  "claude-code-business-trip-records": "2026-09-23",
+  "claude-code-entertainment-expense-records": "2026-09-24",
+  "claude-code-shipping-cost-records": "2026-09-25",
+  "claude-code-payment-fee-records": "2026-09-26",
+  "claude-code-insurance-coverage-records": "2026-09-27"
 }

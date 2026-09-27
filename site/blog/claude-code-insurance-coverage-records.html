@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで保険の加入状況を整える｜中小企業向け</title>
+<meta name="description" content="Claude Codeで保険証券・更新の案内・引き落としの明細・帳簿に散らばった会社の保険を保険ごとにそろえ、守っている物と出来事ごとに補償と保険料を並べて重なる補償と足りない補償を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,保険,損害保険,保険料,補償,リスク管理,総務,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで保険の加入状況を整える｜中小企業向け">
+  <meta property="og:description" content="Claude Codeで保険証券・更新の案内・引き落としの明細・帳簿に散らばった会社の保険を保険ごとにそろえ、守っている物と出来事ごとに補償と保険料を並べて重なる補償と足りない補償を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-insurance-coverage-records-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-27T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで保険の加入状況を整える｜中小企業向け">
+  <meta name="twitter:description" content="Claude Codeで保険証券・更新の案内・引き落としの明細・帳簿に散らばった会社の保険を保険ごとにそろえ、守っている物と出来事ごとに補償と保険料を並べて重なる補償と足りない補償を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-insurance-coverage-records-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html"},"url":"https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html","headline":"Claude Codeで保険の加入状況を整える！中小企業のための保険ごとの補償と保険料の一覧づくりと重なる補償・足りない補償を分ける判断材料整理ガイド","alternativeHeadline":"Claude Codeで保険の加入状況を整える｜中小企業向け","description":"Claude Codeで保険証券・更新の案内・引き落としの明細・帳簿に散らばった会社の保険を保険ごとにそろえ、守っている物と出来事ごとに補償と保険料を並べて重なる補償と足りない補償を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-insurance-coverage-records-og.jpg","width":1200,"height":800},"datePublished":"2026-09-27T09:00:00+09:00","dateModified":"2026-09-27T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","保険","損害保険","保険料","補償","リスク管理","総務","業務効率化","中小企業"],"wordCount":7681,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで保険の加入状況を整える｜中小企業向け","item":"https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html#faq","mainEntity":[{"@type":"Question","name":"入っている保険は数本しかありませんが、必要ですか","acceptedAnswer":{"@type":"Answer","text":"本数が少なくても、会社の資産と仕事の側から並べると、どの保険にも出てこない物や出来事が見えてくることがあります。本数が少ないうちに一覧の形をつくっておく方が、会社が大きくなったときに楽です。最初の一覧は半日で終わります。"}},{"@type":"Question","name":"保険証券が見つからない保険があります","acceptedAnswer":{"@type":"Answer","text":"引き落としの明細と帳簿から、保険会社と保険料と引き落としの月までは分かります。証券は、保険会社や担当者に再発行を頼めば取り寄せられることがほとんどです。見つからない保険は、一覧に空欄のまま残し、取り寄せる保険の一覧として使います。"}},{"@type":"Question","name":"保険の良し悪しまで機械に判断させてよいですか","acceptedAnswer":{"@type":"Answer","text":"機械に任せるのは、並べることと、重なりと抜けの印をつけることまでです。どの保険がよいか、補償を足すか減らすかは、会社がどこまでの損を抱えられるかで答えが変わるため、人が決めます。専門的な中身は、保険の担当者や専門家と一緒に確かめます。一覧があると、その話し合いが短く、具体的になります。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"保険証券と引き落としの明細と帳簿を渡して最初の一覧が出るまでは、本数にもよりますが一時間ほどです。会社の資産と仕事との突き合わせに数日、そのあとは三か月に一度、次に更新を迎える保険と会社の変化を並べさせて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで保険の加入状況を整える！中小企業のための保険ごとの補償と保険料の一覧づくりと重なる補償・足りない補償を分ける判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-27">公開日：2026年9月27日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-insurance-coverage-records.webp" alt="Claude Codeで保険の加入状況を整える！中小企業のための保険ごとの補償と保険料の一覧づくりと重なる補償・足りない補償を分ける判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>火災保険・自動車保険・賠償の保険・リースの付帯保険・経営者の保険などが保険証券・更新の案内・引き落としの明細・リース契約書に分かれ、帳簿では保険料の一行にまとまって消え、保険ごとの補償の中身と保険料を一枚に並べたことがない製造加工・建設改修・飲食小売・運送配送・士業などの中小企業</li><li><strong>できるようになること：</strong>散らばった保険の記録を証券番号で保険ごとにまとめ、建物と設備・車両・賠償・休業時の売上・人のけがや病気に種類づけし、固定資産台帳・車両一覧・リース一覧・取引先との契約と並べて、同じ物を二重に守る重なりとどの保険にも出てこない抜けに印をつけ、保険の担当者に確かめる項目と三か月に一度の確認運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、会社が入っている保険の保険証券・直近の更新の案内、一年分の口座の引き落とし明細、帳簿の保険料の元帳（一覧との突き合わせ用）、固定資産の台帳・車両の一覧・リースの一覧、主な取引先との契約の条件</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「会社で入っている保険が全部でいくつあるのか、すぐには答えられない」「工場の火災保険と、機械のリースについている保険と、どこまで同じものを守っているのか分からない」「保険料は毎年払っているが、何かあったときに本当に出るのか確かめたことがない」。中小企業では、会社が入っている保険の記録が、保険証券の束、更新のたびに届く案内の書類、口座の引き落としの明細、代理店の担当者の手帳、リースや借入の契約書の付帯の条項に分かれ、帳簿では「保険料」の一行にまとまって消えていきます。どの保険が何を、いくらまで守っていて、一年でいくら払っているのかを一覧で見たことがある会社は、ほとんどありません。</p>
+<p>その結果、何が起きるか。建物の火災保険と、設備の保険と、リース物件の保険で同じ機械を二重、三重に守っていることに気づかない。反対に、仕事の途中でお客様の物を壊したときの賠償や、工場が止まっている間の売上の穴は、どの保険でも守られていないことに、何かが起きてから気づく。更新の案内が来るたびに、前年と同じ内容でそのまま続けている。<strong>保険の本当の問題は、保険料が高いか安いかではなく、保険ごとの補償の中身を一枚に並べたことがないため、重なっている補償と足りない補償を分けられないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、保険証券、更新の案内、引き落としの明細、帳簿に散らばった保険の記録を一つの一覧にそろえ、守っている物と出来事ごとに補償を並べ、重なる補償と足りない補償を見分ける材料を整えるまでの手順を、非エンジニアの方向けに整理します。どの保険を続けるか、どこまでの損を会社で抱えるか、補償を足すか減らすかを決めるのは人の判断です。専門的な確認は、保険の担当者や専門家の力を借りて進めます。機械に任せるのは、<strong>散らばった記録を集めて、保険ごとにそろえて、守っているものと保険料に分けて並べる作業</strong>です。</p>
+<div class="toc"><h2>目次</h2><ul><li><a href="#s1">保険の中身が「見えない」3つの理由</a></li><li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li><li><a href="#s3">実務5ステップ</a></li><li><a href="#s4">頼み方の3原則</a></li><li><a href="#s5">つまずきやすい5つの型</a></li><li><a href="#s6">業種別の効きどころ</a></li><li><a href="#s7">よくあるご質問</a></li><li><a href="#s8">まとめ</a></li></ul></div>
+<h2 id="s1">保険の中身が「見えない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-insurance-coverage-records-01.webp" alt="保険の中身が「見えない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>見えないのは、総務の担当者が記録をさぼっているからではありません。見えない構造が、仕事の側にあります。</p>
+<h3>1. 一つの会社の保険が、五つの書類と三つの窓口に分かれる</h3>
+<p>火災保険は建物を建てたときに、自動車保険は車を買ったときに、賠償の保険は取引先に求められたときに、経営者の保険は借入のときにと、<strong>会社の保険は、必要になった時期も窓口もばらばらに入っています</strong>。保険証券は金庫に、更新の案内は総務の引き出しに、リースの付帯保険は契約書の後ろのページにと、置き場所も分かれています。全部を一度に机に並べた人が、社内に一人もいないのです。</p>
+<h3>2. 保険証券は「何を守るか」ではなく「何を約束するか」で書かれている</h3>
+<p>保険証券には、保険の対象、保険金額、支払われない場合、特約の名前が、保険会社ごとの言葉で並んでいます。<strong>同じ「設備の故障」でも、ある保険では対象に入り、別の保険では支払われない場合の欄に書かれている</strong>、ということが珍しくありません。書き方がそろっていないため、二つの証券を横に並べても、どこが重なり、どこが抜けているかは一目では分かりません。</p>
+<h3>3. 見直しのきっかけが「更新の案内」しかない</h3>
+<p>保険の中身を考えるのは、年に一度の更新の案内が届いたときだけ、という会社がほとんどです。<strong>しかも案内は保険ごとに別々の時期に届くため、会社全体の保険を一度に見直す機会がありません</strong>。その間に、工場を増やした、車を減らした、新しい仕事を始めた、という会社の変化があっても、保険の中身はそのまま残ります。</p>
+<blockquote>保険の中身が見えないのは、五つの書類と三つの窓口に分かれ、証券の書き方がそろっておらず、見直しのきっかけが保険ごとの更新の案内しかないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>どの保険を続けるか、どこまでの損を会社で抱えるか、補償を足すか減らすか、どの保険会社や担当者と付き合うかは会社の運営の判断</strong>であり、人が決めることです。補償の中身の最終的な確認は、保険の担当者や専門家と行います。機械に任せるのは、散らばった記録を集めて保険ごとにそろえ、守っている物と出来事ごとに横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>保険証券・更新の案内・引き落としの明細・リースや借入の契約書の付帯の条項・帳簿の保険料から、保険の名前・保険会社・対象・保険金額・期間・保険料を拾い出す</td></tr><tr><td>保険ごとのまとめ直し</td><td>機械</td><td>同じ保険の証券と案内と引き落としを、証券番号を手がかりに一つの保険の下にまとめる</td></tr><tr><td>一覧化</td><td>機械</td><td>保険の名前・保険会社・守っている物・守っている出来事・保険金額・期間・年間の保険料・更新月を一行にそろえる</td></tr><tr><td>守っているものの種類づけ</td><td>機械</td><td>建物と設備・車両・お客様や第三者への賠償・仕事が止まったときの売上・人のけがや病気のように、五つ前後に分ける</td></tr><tr><td>保険料の集計</td><td>機械</td><td>種類ごと、保険会社ごと、更新月ごとに、一年間の保険料の合計と会社全体に占める割合を出す</td></tr><tr><td>会社の資産と仕事との突き合わせ</td><td>機械</td><td>固定資産の台帳、車両の一覧、リースの一覧、取引先との契約の条件と、保険で守られている物を並べる</td></tr><tr><td>重なりと抜けの検出</td><td>機械</td><td>同じ物や出来事を二つ以上の保険が守っているもの、台帳にあるのにどの保険にも出てこない物、取引先との契約で求められている補償が見当たらないもの、手放した物にかかり続けている保険に印をつける</td></tr><tr><td>確認事項の下書き</td><td>機械</td><td>印のついた項目について、保険の担当者に確かめる質問の下書きを、保険ごとに並べる</td></tr><tr><td>補償の判断</td><td>人</td><td>どの保険を続けるか、補償を足すか減らすか、どこまでの損を会社で抱えるか、更新の時期をそろえるかを決める</td></tr></tbody></table>
+<p>境界線は「並べる」と「決める」の間にあります。機械が出すのは、守っているものごとの補償の並びと、重なりと抜けの印までです。その先の、この損は会社で抱えられるか、この補償は取引先との関係のために残すか、という線は人が引きます。</p>
+<h2 id="s3">実務5ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-insurance-coverage-records-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：会社が入っている保険の記録を全部洗い出す</h3>
+<p>保険証券、直近の更新の案内、一年分の引き落としの明細、帳簿の保険料の元帳、リースや借入の契約書を集め、Claude Codeに「会社が入っている保険を一覧にし、守っている物と出来事と保険料を並べてほしい」と頼みます。<strong>引き落としの明細と帳簿から先に拾うのが近道です</strong>。証券が見つからない保険も、毎月か毎年、お金が出ていれば必ず明細に残っています。証券と結びつかない引き落としは、<strong>空欄のまま残させます</strong>。その空欄が、証券を取り寄せる保険を教えてくれます。</p>
+<h3>ステップ2：保険ごとにまとめ、守っているものの種類をつける</h3>
+<p>同じ保険が、証券では証券番号、案内では保険の名前、口座の明細では保険会社の略称と、三つの書き方で記録されています。<strong>証券番号を手がかりに三つを結びつけ、一つの保険の中身と保険料を一行にまとめます</strong>。あわせて、建物と設備、車両、賠償、仕事が止まったときの売上、人のけがや病気のように種類をつけます。一つの保険がいくつもの種類を守っている場合は、種類ごとに行を分けます。分けずに並べると、どの出来事が二重に守られているかが見えません。</p>
+<h3>ステップ3：守られている物を、会社の資産と仕事と並べる</h3>
+<p>一覧ができたら、固定資産の台帳、車両の一覧、リースの一覧、主な取引先との契約の条件を横に置きます。<strong>会社にある物とやっている仕事の一つひとつについて、どの保険が守っているかを並べるのが、補償を見る物差しになります</strong>。保険の側から見ると抜けは見えませんが、会社の資産と仕事の側から見ると、どの保険にも出てこない物がはっきりします。</p>
+<h3>ステップ4：重なりと抜けに印をつけ、確かめる項目を分ける</h3>
+<p>同じ物や出来事を二つ以上の保険が守っているもの、台帳にあるのにどの保険にも出てこない物、取引先との契約で求められている補償が見当たらないもの、手放した車や設備にかかり続けている保険に印をつけます。<strong>印がついたものは、すぐにやめる・足すのではなく、保険の担当者に確かめる項目として一覧にします</strong>。ここで初めて、「A工場の機械は、建物の保険とリースの保険の両方に入っている」「お客様の現場で物を壊したときの賠償は、どの保険にも見当たらない」という形が見えます。</p>
+<h3>ステップ5：更新月を一覧に固定し、三か月に一度だけ確かめる</h3>
+<p>一覧ができたら、更新の案内が届いたら一覧の行を更新する、という一つの決まりだけつくります。<strong>三か月に一度、次の三か月に更新を迎える保険と、この間に増えた物や減った物、始めた仕事を並べさせます</strong>。細かい報告書にすると続きません。三か月に一度、十五分で終わる形にします。設備を買った、車を手放した、新しい取引先と契約した、というときは、その場で一覧に一行足させ、どの保険の範囲に入るかを確かめます。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「保険」に何を含めるかを、こちらから言葉で決める</h3>
+<p>損害保険だけを見るか、経営者や従業員の生命保険、共済、リースの付帯の保険、取引先と一緒に入っている保険、クレジットカードについている補償まで含めるかで、一覧の形は大きく変わります。機械に任せる前に、<strong>含めるものと含めないものをこちらから指定します</strong>。おすすめは、会社の物と仕事を守る保険と、人を守る保険を、まず別々の一覧にすることです。混ぜると、物の補償の重なりと、人の保障の厚さの話が一緒になり、どちらも判断しにくくなります。</p>
+<h3>原則2：補償の中身は「証券にある内容」で書かせ、推測で埋めさせない</h3>
+<p>保険の名前だけを見て、機械は「おそらくこの出来事も守られているだろう」と埋めたがります。<strong>証券や約款で確かめられない補償は空欄のまま残させ、推測で埋めさせません</strong>。推測で埋めた一覧は、見た目が整う分だけ、本当は守られていない出来事を見逃します。空欄は、次に保険の担当者に確かめる項目を教えてくれる印です。</p>
+<h3>原則3：一覧の保険料の合計と、帳簿の保険料を突き合わせる</h3>
+<p>一覧に並んだ保険料の合計が、帳簿の保険料の年間の合計と合っているかを突き合わせさせます。<strong>合計が帳簿より小さい場合、一覧に入っていない保険があります</strong>。たいていは、リース料や借入の返済にまとめて払っている保険料、車両の費用に入っている保険料、社長が個人で払っている保険の分です。差額の出どころを探すことが、忘れられた保険を見つける近道になります。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：保険料の合計だけ見て、補償の中身を見ない</h3>
+<p>保険料を下げたいとき、合計だけを見て高いものから削りがちですが、削った保険が守っていた出来事が、ほかのどの保険にも出てこないことがあります。<strong>保険料は、守っているものの種類ごとに並べて見ます</strong>。重なっている補償を減らすのか、抜けている補償を足すのかで、打つ手は正反対です。</p>
+<h3>型2：保険の名前が違うだけで、重なっていないと思い込む</h3>
+<p>火災の保険、動産の保険、機械の保険、リースの保険と名前が違っても、同じ機械を守っていることがあります。反対に、名前が似ていても守っている出来事が違うこともあります。<strong>名前ではなく、守っている物と出来事の二つで並べ直します</strong>。並べ直すと、名前だけでは見えなかった重なりが見えてきます。</p>
+<h3>型3：会社の変化を、保険の一覧に反映しない</h3>
+<p>工場を増やした、車を減らした、新しい仕事を始めた、取引先から補償を求められた、という変化があっても、保険の一覧はそのまま、ということがよくあります。<strong>変化のたびに一覧に一行足す、という決まりをつくります</strong>。反映しないまま一年たつと、手放した車にかかり続ける保険料と、新しい仕事の抜けた補償が、同時に積み上がります。</p>
+<h3>型4：更新の時期がばらばらで、全体を一度に見直せない</h3>
+<p>保険ごとに更新の月が違うと、一つずつ見直すたびに全体とのつり合いが分からなくなります。<strong>更新月を一覧に並べ、次の三か月に来るものをまとめて確かめる形にします</strong>。更新の時期をそろえるかどうかは人が決めますが、並べてから担当者と話すのと、案内が来るたびに前年どおりで続けるのとでは、翌年の中身が変わります。</p>
+<h3>型5：一覧をつくって、決まりを一つも変えない</h3>
+<p>一覧を眺めて「やっぱり重なっている保険がある」と納得して終わると、次の更新も前年どおりで続きます。三か月に一度、確かめる項目を一つ選び、保険の担当者に確かめて、結果を一覧に書き足します。書き足した結果が、次の更新の判断の根拠になります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>製造・加工</td><td>建物の保険と機械の保険とリースの保険を、固定資産の台帳の一台ずつと並べ、同じ機械の重なりと、工場が止まったときの売上の補償の有無を確かめる</td></tr><tr><td>建設・改修</td><td>お客様の現場で物を壊したときの賠償、預かった材料や道具の補償、下請けの方のけがの補償を、請け負う仕事の種類ごとに並べる</td></tr><tr><td>飲食・小売</td><td>店舗ごとの建物と設備の保険、食中毒などお客様への賠償、停電や設備の故障で店を閉めたときの補償を並べ、店舗ごとの抜けを確かめる</td></tr><tr><td>運送・配送</td><td>車両ごとの自動車保険と、運んでいる荷物の補償を並べ、車を入れ替えたときに外し忘れた保険と、荷物の種類に対して足りない補償を確かめる</td></tr><tr><td>士業・サービス</td><td>仕事の誤りでお客様に損を与えたときの賠償、預かった書類や情報の補償、事務所の設備の保険を並べ、取引先との契約で求められている補償と照らし合わせる</td></tr></tbody></table>
+<p>どの業種でも共通するのは、<strong>帳簿の保険料の一行にまとまって消えていた保険を、守っている物と守っている出来事という二つの物差しで並べ直すこと</strong>です。並べ直すと、そのままでよい保険と、重なっている補償と、足りない補償が分かれて見えてきます。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>入っている保険は数本しかありませんが、必要ですか</h3>
+<p>本数が少なくても、会社の資産と仕事の側から並べると、どの保険にも出てこない物や出来事が見えてくることがあります。本数が少ないうちに一覧の形をつくっておく方が、会社が大きくなったときに楽です。最初の一覧は半日で終わります。</p>
+<h3>保険証券が見つからない保険があります</h3>
+<p>引き落としの明細と帳簿から、保険会社と保険料と引き落としの月までは分かります。証券は、保険会社や担当者に再発行を頼めば取り寄せられることがほとんどです。見つからない保険は、一覧に空欄のまま残し、取り寄せる保険の一覧として使います。</p>
+<h3>保険の良し悪しまで機械に判断させてよいですか</h3>
+<p>機械に任せるのは、並べることと、重なりと抜けの印をつけることまでです。どの保険がよいか、補償を足すか減らすかは、会社がどこまでの損を抱えられるかで答えが変わるため、人が決めます。専門的な中身は、保険の担当者や専門家と一緒に確かめます。一覧があると、その話し合いが短く、具体的になります。</p>
+<h3>どれくらいの時間がかかりますか</h3>
+<p>保険証券と引き落としの明細と帳簿を渡して最初の一覧が出るまでは、本数にもよりますが一時間ほどです。会社の資産と仕事との突き合わせに数日、そのあとは三か月に一度、次に更新を迎える保険と会社の変化を並べさせて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>保険の中身が見えないのは、五つの書類と三つの窓口に分かれ、証券の書き方がそろっておらず、見直しのきっかけが保険ごとの更新の案内しかないという構造の問題</li>
+<li>どの保険を続けるか、補償を足すか減らすか、どこまでの損を会社で抱えるかは人の判断。集めて、保険ごとにそろえて、守っているものと保険料に分けて並べるのは機械の仕事</li>
+<li>実務は、全部の洗い出し、保険ごとのまとめ直しと種類づけ、会社の資産と仕事と並べる、重なりと抜けに印をつけて確かめる項目を分ける、更新月を固定して三か月に一度確かめる、の五つ</li>
+<li>保険に何を含めるかをこちらから指定し、補償の中身は証券にある内容で書かせ、帳簿の保険料と突き合わせる</li>
+<li>合計だけでなく補償の中身を見る。名前ではなく守っている物と出来事で並べる。会社の変化は一覧に一行足し、更新月をまとめて確かめ、三か月に一度、確かめる項目を一つ進める</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-subsidy-application-support.html"><img src="../images/blog-claude-code-subsidy-application-support-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで補助金申請の準備を効率化</span></a><a class="seo-related-card" href="claude-code-quote-comparison.html"><img src="../images/blog-claude-code-quote-comparison-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで相見積もりを比べる</span></a><a class="seo-related-card" href="claude-code-price-revision-preparation.html"><img src="../images/blog-claude-code-price-revision-preparation-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで価格改定の根拠を整理する</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code導入サポートのご案内</h2>
+<p>「自社の保険証券と帳簿を、この記事の手順で一覧にしてみたい」「どの書類を渡せばよいか分からない」という方向けに、Claude Codeの導入サポートを承っています。</p>
+<p class="price">Claude Code導入サポート 税込3,000円</p>
+<p>セットアップから最初の保険ごとの補償と保険料の一覧づくりまでを一緒に進め、自社の資産と仕事に合わせた分け方と頼み方の言葉をその場で整理します。三か月に一度、次に更新を迎える保険と確かめる項目を出す運用を回すための簡単な形もご提案します。</p>
+<a href="../index.html#contact">導入サポートに申し込む</a>
+</div>
+<p>これまで多くの中小企業や一人社長の方の業務自動化をお手伝いしてきた経験をもとに、保険の記録に限らず、日々の事務の中で「並べていないから見えない」「見えないから決められない」仕事を減らすお手伝いをしています。</p>
+</div>
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

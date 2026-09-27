@@ -6,7 +6,7 @@ with open('/Users/ishikawasuguru/.claude/credentials/.env') as f:
         if line.startswith('openai_apikey'):
             key = line.split('=', 1)[1].strip()
 KEY = key
-IMGDIR = '/Users/ishikawasuguru/AI_コンサル/HP作成/site/images'
+IMGDIR = '/Users/ishikawasuguru/Desktop/claude/AI/HP/site/images'
 SLUG = 'claude-code-instagram-integration'
 BASE = "Photorealistic professional business-technology photo, no text, no letters, no logos. Color tone: dark charcoal gray (#1a1a1a) with elegant gold (#c4a24e) accents, cinematic soft lighting, modern and clean atmosphere. "
 

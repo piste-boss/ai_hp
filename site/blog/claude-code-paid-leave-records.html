@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで有給休暇の記録を整える｜中小企業向け</title>
+<meta name="description" content="Claude Codeで届け出・出勤簿・給与の控え・カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとにそろえ、付与・取得・残日数を並べて年度末までの取得見込みを出し、取り残しと偏りを人の問題と仕組みの問題に分け、届け出の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,有給休暇,有給管理,取得記録,残日数,労務管理,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-paid-leave-records.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで有給休暇の記録を整える｜中小企業向け">
+  <meta property="og:description" content="Claude Codeで届け出・出勤簿・給与の控え・カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとにそろえ、付与・取得・残日数を並べて年度末までの取得見込みを出し、取り残しと偏りを人の問題と仕組みの問題に分け、届け出の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-paid-leave-records.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-paid-leave-records-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-22T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="業務記録・現場改善">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで有給休暇の記録を整える｜中小企業向け">
+  <meta name="twitter:description" content="Claude Codeで届け出・出勤簿・給与の控え・カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとにそろえ、付与・取得・残日数を並べて年度末までの取得見込みを出し、取り残しと偏りを人の問題と仕組みの問題に分け、届け出の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-paid-leave-records-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-paid-leave-records.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-paid-leave-records.html"},"url":"https://www.piste-ai.com/blog/claude-code-paid-leave-records.html","headline":"Claude Codeで有給休暇の取得記録を整える！中小企業のための従業員別の取得一覧づくりと取り残しと偏りを見つける判断材料整理ガイド","alternativeHeadline":"Claude Codeで有給休暇の記録を整える｜中小企業向け","description":"Claude Codeで届け出・出勤簿・給与の控え・カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとにそろえ、付与・取得・残日数を並べて年度末までの取得見込みを出し、取り残しと偏りを人の問題と仕組みの問題に分け、届け出の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-paid-leave-records-og.jpg","width":1200,"height":800},"datePublished":"2026-09-22T09:00:00+09:00","dateModified":"2026-09-22T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"業務記録・現場改善","keywords":["Claude Code","有給休暇","有給管理","取得記録","残日数","労務管理","業務効率化","中小企業"],"wordCount":7251,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"業務記録・現場改善","item":"https://www.piste-ai.com/blog/category-operations.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで有給休暇の記録を整える｜中小企業向け","item":"https://www.piste-ai.com/blog/claude-code-paid-leave-records.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-paid-leave-records.html#faq","mainEntity":[{"@type":"Question","name":"従業員が数人でも必要ですか","acceptedAnswer":{"@type":"Answer","text":"数人でも、人ごとに付与の基準日が違い、繰り越しがあり、半日の取得が混ざれば、頭の中では追い切れません。人数が少ないうちに届け出の置き場と月に一度の確認の決まりをつくっておく方が、人が増えたときに楽です。最初の一覧は半日で終わります。"}},{"@type":"Question","name":"届け出を紙で残しておらず、口頭で済ませてきました","acceptedAnswer":{"@type":"Answer","text":"出勤簿や勤怠の記録に休みの印があれば、まずそこから日付を拾います。給与の控えに月ごとの有給日数があれば、それを合計の当たりにします。過去は日付が分かる分だけ並べ、分からない分は月の合計だけを置き、これからは届け出の置き場を決めて日付を残す、で十分です。"}},{"@type":"Question","name":"残日数を本人に見せてもよいのでしょうか","acceptedAnswer":{"@type":"Answer","text":"本人の残日数を本人に伝えることは、取り残しを減らすうえでいちばん効きます。年度の途中で残日数と年度末までの見込みを添えて休みの予定を尋ねる文面は、機械に下書きさせられます。他の人の残日数は本人以外に見せない形にし、部署の偏りは日数の合計だけで扱います。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"二年分の届け出と出勤簿を渡して最初の一覧が出るまでは、人数にもよりますが一時間ほどです。氏名と年度のそろえ直しと給与の控えとの突き合わせに数日、そのあとは月に一度、その月の取得を反映させて残日数と見込みを出させて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで有給休暇の取得記録を整える！中小企業のための従業員別の取得一覧づくりと取り残しと偏りを見つける判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-operations.html">業務記録・現場改善</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-22">公開日：2026年9月22日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-paid-leave-records.webp" alt="Claude Codeで有給休暇の取得記録を整える！中小企業のための従業員別の取得一覧づくりと取り残しと偏りを見つける判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>有給休暇の申請が紙の届け出・口頭・カレンダーの書き込みで済まされ、取得の記録が届け出・出勤簿や勤怠の記録・給与計算の控えの三か所に分かれ、誰に何日残っていて誰が取り残していて誰に偏っているかを一覧で見たことがない製造加工・建設リフォーム・飲食小売・介護医療・士業サービスなどの中小企業</li><li><strong>できるようになること：</strong>散らばった記録を従業員ごと年度ごと（入社日から人ごとの付与の基準日）にそろえ、正社員・パート・週の勤務日数の区分をつけ、付与と繰り越しから取得を引いた残日数と年度末までに五日に届くかの見込みを出し、取り残しを本人の性格でなく仕事の代わりの有無という仕組みの問題として分け、取得が特定の月に集中する部署を見つけ、届け出の置き場を決めて月に一度確かめる運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、過去二年分（残っている期間だけでも可）の有給休暇の届け出・出勤簿か勤怠の記録・給与計算の控え・社内カレンダー、従業員ごとの入社日と勤務区分、給与の控えにある有給日数の合計（一覧との突き合わせ用）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「あの人、今年は有給を何日使ったんだっけ」「年に五日は取らせないといけないと聞いたが、誰が足りていないのか分からない」「いつも同じ人ばかり休んでいる気がする」。中小企業では、有給休暇の申請が紙の届け出や口頭のひと言、カレンダーの書き込みで済まされ、誰が何日使い、何日残っているかを一覧で見たことがある会社はほとんどありません。入社日ごとに付与される日数も時期も違い、前の年からの繰り越しがあり、半日の取得や時間単位の取得が混ざり、帳簿にも給与明細にも「有給」の一行はあっても、その中身は担当者の記憶と、机の引き出しの届け出の束にしか残っていません。</p>
+<p>その結果、何が起きるか。年度の終わりに「五日に足りない人がいる」と気づいて、あわてて三月に休ませる。同じ人が毎月きちんと使い、別の人はまったく使っておらず、その差が本人の性格の問題にされて終わる。退職の申し出があって初めて残日数を数え、最後の一か月がまるごと消化に充てられて現場が回らなくなる。<strong>有給休暇の本当の問題は、休みが多いか少ないかではなく、誰に何日残っていて、誰が取り残していて、誰に偏っているかを並べて見たことがないため、早めに調整する手が打てないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、届け出、勤怠の記録、給与明細の控え、カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとの一覧にそろえ、付与日数と取得日数と残日数を並べ、取り残しと偏りを見つける材料を整えるまでの手順を、非エンジニアの方向けに整理します。誰にいつ休んでもらうか、繁忙期をどう避けるか、取りにくい空気をどう変えるかを決めるのは人の判断。機械に任せるのは、<strong>散らばった記録を集めて、従業員と年度でそろえて、付与と取得と残りに分けて並べる作業</strong>です。</p>
+<div class="toc"><h2>目次</h2><ul><li><a href="#s1">有給休暇が「見えない」3つの理由</a></li><li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li><li><a href="#s3">実務5ステップ</a></li><li><a href="#s4">頼み方の3原則</a></li><li><a href="#s5">つまずきやすい5つの型</a></li><li><a href="#s6">業種別の効きどころ</a></li><li><a href="#s7">よくあるご質問</a></li><li><a href="#s8">まとめ</a></li></ul></div>
+<h2 id="s1">有給休暇が「見えない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-paid-leave-records-01.webp" alt="有給休暇が「見えない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>見えないのは、総務の担当者が記録をさぼっているからではありません。見えない構造が、仕事の側にあります。</p>
+<h3>1. 付与の日と日数が、人によって全部違う</h3>
+<p>有給休暇は入社から半年で最初の日数が付与され、その後は一年ごとに増えていきます。<strong>入社日が違えば付与の日も違い、勤続年数が違えば付与の日数も違い、週の勤務日数が少ない人はさらに別の日数になります</strong>。全員が四月に一斉に同じ日数というわけではないため、会社全体を一つの表で見ようとすると、人ごとに基準日が違う表になります。この違いが、一覧をつくる前に手を止めさせます。</p>
+<h3>2. 「取った記録」が三か所に分かれ、形がそろっていない</h3>
+<p>有給の取得は、紙の届け出、勤怠の打刻や出勤簿、給与計算のときの控えの三か所に残ります。<strong>紙は日付だけ、出勤簿は「有」の印だけ、給与の控えは月の合計日数だけで、三つを突き合わせないと一人の一年分が組み上がりません</strong>。半日の取得が紙には「半」と書かれ、出勤簿には出勤扱いで、給与の控えでは零点五日になっていることも珍しくありません。</p>
+<h3>3. 残日数の「当たり前の幅」を誰も知らない</h3>
+<p>年度の途中で残りが何日あるかを、本人も会社も知らないまま進みます。<strong>残りが十日ある人と一日しかない人が同じ職場にいて、その差がいつから広がったのかを数字で知っている会社はほとんどありません</strong>。残りの幅が分かっていないと、取り残しと偏りを分けられず、年度末に「使い切れないので買い取ってほしい」「今月は全員休みが重なって現場が回らない」という形で表に出ます。</p>
+<blockquote>有給休暇が見えないのは、付与の基準日が人ごとに違い、取得の記録が三か所に分かれ、残日数の幅を誰も知らないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>誰にいつ休んでもらうか、繁忙期をどう避けるか、休みにくい空気をどう変えるか、残日数の扱いをどうするかは会社の運営の判断</strong>であり、人が決めることです。機械に任せるのは、散らばった記録を集めて従業員と年度でそろえ、付与と取得と残りを横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>届け出・出勤簿・勤怠の記録・給与の控え・カレンダーから、氏名・日付・日数・半日か全日か・繰り越しの記載を拾い出す</td></tr><tr><td>氏名と年度のそろえ直し</td><td>機械</td><td>「山田」「山田さん」「Y」のような呼び方の違いを一人にまとめ、入社日から人ごとの基準日と年度の区切りをそろえる</td></tr><tr><td>一覧化</td><td>機械</td><td>氏名・年度・付与日・付与日数・繰り越し日数・取得日・取得日数を一行にそろえ、人ごと年度ごとに並べる</td></tr><tr><td>残日数の計算</td><td>機械</td><td>付与と繰り越しの合計から取得の合計を引き、年度の途中の残日数を月ごとに出す</td></tr><tr><td>取得の進み具合の集計</td><td>機械</td><td>年度の経過した割合と取得した割合を人ごとに並べ、年度末までに五日に届かない見込みの人を出す</td></tr><tr><td>偏りの検出</td><td>機械</td><td>取得日数が全体の平均の半分に届かない人、同じ月に取得が集まっている部署、残日数が二年分の上限に近づいている人に印をつける</td></tr><tr><td>時期の偏りの整理</td><td>機械</td><td>月ごと部署ごとの取得日数を並べ、繁忙期に重なっている月と、誰も取っていない月を出す</td></tr><tr><td>案内文の下書き</td><td>機械</td><td>印のついた人と部署について、残日数と年度末までの日数を添えた、休みの予定を尋ねる文面の案を書く</td></tr><tr><td>休みの調整と空気づくりの判断</td><td>人</td><td>誰にいつ休んでもらうか、繁忙期をどう避けるか、取りにくい理由に何をするかを決める</td></tr></tbody></table>
+<p>境界線は「並べる」と「決める」の間にあります。機械が出すのは、人ごと年度ごとの付与と取得と残りの並びと、取り残しと偏りの印までです。その先の、休みの順番をどう組むか、休みにくさをどう変えるかの線は、人が引きます。</p>
+<h2 id="s3">実務5ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-paid-leave-records-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：過去二年分の届け出と出勤簿を洗い出す</h3>
+<p>紙の届け出、出勤簿か勤怠の記録、給与計算の控え、社内のカレンダーを二年分集め、Claude Codeに「この二年の有給休暇を従業員ごと年度ごとの一覧にし、付与・取得・残りを並べてほしい」と頼みます。一年分では繰り越しの計算ができないため、<strong>二年分が最初の単位</strong>です。届け出が見つからない日は、<strong>空欄のまま残させます</strong>。出勤簿には印があるのに届け出がない日は、口頭で済ませた日です。空欄そのものが、記録の流れのどこが抜けているかを教えてくれます。</p>
+<h3>ステップ2：氏名と年度をそろえる</h3>
+<p>同じ人が「山田」「山田さん」「山田太郎」のように三通りで書かれていたり、部署の異動で別の出勤簿に移っていたりします。<strong>呼び名を一人にまとめ、入社日から人ごとの付与の基準日を出し、その基準日から一年を一つの年度としてそろえます</strong>。あわせて、正社員・パート・週の勤務日数の区分をつけます。区分が違えば付与される日数が違うため、区分をつけずに並べると、多い少ないに意味がなくなります。</p>
+<h3>ステップ3：残日数を出し、取り残しを「見込み」で見る</h3>
+<p>一覧を人ごと年度ごとにまとめ、付与と繰り越しの合計から取得を引いて残日数を出します。<strong>年度の何割が過ぎたかと、五日のうち何日を取ったかを並べ、このままの進み方で年度末までに五日に届かない人を出します</strong>。この見込みが、有給を見る物差しになります。年度末に足りないと気づいてからでは、繁忙期に休ませるしかありません。年度の半分が過ぎた時点で一日も取っていない人は、残りの半年で五日を組む必要があると分かります。同じ「まだ取っていない」でも、年度の始めと終わりでは打つ手がまったく違います。</p>
+<h3>ステップ4：偏りを出し、人の問題と仕組みの問題を分ける</h3>
+<p>月ごと部署ごとに取得日数を並べ、全体の平均の半分に届かない人と、取得が特定の月に集まっている部署を出します。<strong>特定の人だけが取れていないなら、その人の担当している仕事に代わりがいないという仕組みの問題</strong>であることがほとんどです。部署全体が取れていないなら、その部署の人数か繁忙期の組み方の問題です。逆に、残日数が二年分の上限に近づいている人は、次の付与で消えてしまう日数を抱えています。ここで初めて、「経理の担当者だけ二年間で三日しか取っていない」「工場は毎年八月に全員が集中して、七月と九月は誰も取っていない」という形が見えます。</p>
+<h3>ステップ5：届け出の置き場を決め、月に一度だけ確かめる</h3>
+<p>一覧ができたら、届け出を一つの箱か一つの表に必ず入れる、あるいは勤怠の記録に「有給」の欄を一つ足すという一つの決まりだけつくります。<strong>月に一度、その月の取得を反映させ、残日数と年度末までの見込みを人ごとに出させ、五日に届かない見込みの人と偏っている部署を出させます</strong>。細かい運用にすると続きません。一か月に一度、十五分で終わる形にします。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「有給」に何を含めるかを、こちらから言葉で決める</h3>
+<p>法律で決まった年次の有給休暇は分かりやすいですが、会社が独自に設けている夏季休暇や誕生日の休み、時間単位の取得、半日の取得、私傷病の欠勤を有給に振り替えた日を含めるかどうかで数字は変わります。機械に任せる前に、<strong>含めるものと含めないものをこちらから指定します</strong>。おすすめは、法律の年次有給休暇だけをまず一覧にし、会社独自の休みは別の欄に置くことです。混ぜると、五日の義務に届いているかが見えなくなります。</p>
+<h3>原則2：取得日は「届け出か出勤簿にある日付」で書かせ、推測で埋めさせない</h3>
+<p>給与の控えに月三日とあって届け出が二枚しかない月を、機械は「もう一日はどこかの平日だろう」と埋めたがります。<strong>記録にない日付は空欄のまま残させ、推測で埋めさせません</strong>。推測で埋めた一覧は、月ごとの偏りが整って見える分だけ、口頭で済ませている日の多さを見逃します。空欄は、次に確かめる相手を教えてくれる印です。</p>
+<h3>原則3：一覧の合計と、給与の控えの有給日数を突き合わせる</h3>
+<p>一覧に並んだ取得日数の合計が、給与計算の控えにある有給の日数の合計と合っているかを突き合わせさせます。<strong>合計が給与の控えより小さい場合、届け出のない取得があります</strong>。たいていは、口頭で済ませた半日か、退職者の消化分です。差額の出どころを探すことが、記録の穴を見つける近道になります。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：取得日数だけ見て、付与日数と年度の経過を見ない</h3>
+<p>年に三日しか取っていない人を「取れていない人」と決めがちですが、入社したばかりで付与がまだ十日に満たない人なら三日は十分です。<strong>付与日数と年度の経過と取得日数の三つを並べて見ます</strong>。付与が多いのに取得が少ない人と、付与そのものが少ない人は、責める相手も打つ手も違います。</p>
+<h3>型2：区分の違う人どうしを比べる</h3>
+<p>週五日の正社員と週三日のパートを取得日数で比べても、意味のある差は出ません。<strong>同じ区分の人どうし、あるいは同じ人の去年と今年で比べます</strong>。区分をつけずに全員を一列に並べると、多い人と少ない人が分かるだけで、次の手が決まりません。</p>
+<h3>型3：半日と時間単位を、全日と同じ一日に置く</h3>
+<p>半日の取得を一日と数えると、残日数が実際より少なく出て、年度末に「まだ残っていた」となります。<strong>半日は零点五日、時間単位は所定の時間で割った日数にそろえ、全日と同じ単位で並べます</strong>。そろえ直しは地味ですが、飛ばすと残日数も五日の判定も全部ずれます。</p>
+<h3>型4：取れていない理由を、全部「本人の性格」にする</h3>
+<p>休まない人を「真面目だから」で済ませると、その人の仕事に代わりがいないという仕組みの問題に気づけません。<strong>取れていない人の担当している仕事と、その仕事を他に誰ができるかを並べます</strong>。本人の性格の中に、仕組みの穴が隠れています。</p>
+<h3>型5：一覧をつくって、決まりを一つも変えない</h3>
+<p>一覧を眺めて「やっぱり経理が取れていない」と納得して終わると、次の年度も同じ人が取り残します。月に一度、届け出の置き場か、月初に休みの予定を尋ねる決まりか、一つでよいので決まりを変えます。変えた決まりが、次の月の数字の根拠になります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>製造・加工</td><td>工程ごとに取得の月を並べ、盆と年末に集中して他の月が空いている工程を見つける。交代で取る順番を組む材料にし、一人しかできない工程の担当者の取り残しを早めに見つける</td></tr><tr><td>建設・リフォーム</td><td>現場ごとの工期と取得日を並べ、工期の谷に休みを寄せられている職長とそうでない職長を分ける。現場の掛け持ちが多い人ほど残日数が積み上がる形を見つける</td></tr><tr><td>飲食・小売</td><td>店舗ごと曜日ごとの取得を並べ、特定の店だけ誰も休めていない月を見つける。店長の残日数と応援に入れる人の有無を並べ、応援の組み方の材料にする</td></tr><tr><td>介護・医療</td><td>夜勤の回数と取得日数を並べ、夜勤が多い人ほど取れていない形を見つける。シフトを組む前に残日数と見込みを出し、五日に届かない人を先に組み込む</td></tr><tr><td>士業・サービス</td><td>担当している顧客の数と取得日数を並べ、担当が多い人ほど取れていない形を見つける。繁忙期の前後に休みの予定を先に尋ねる材料にする</td></tr></tbody></table>
+<p>どの業種でも共通するのは、<strong>引き出しの届け出の束と出勤簿の印でしか残っていなかった有給休暇を、人ごとの付与と取得と残りという三つの物差しで並べ直すこと</strong>です。並べ直すと、本人に声をかければ済む分と、仕事の代わりを用意しないと減らない分と、繁忙期の組み方を変えないと直らない分が分かれて見えてきます。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>従業員が数人でも必要ですか</h3>
+<p>数人でも、人ごとに付与の基準日が違い、繰り越しがあり、半日の取得が混ざれば、頭の中では追い切れません。人数が少ないうちに届け出の置き場と月に一度の確認の決まりをつくっておく方が、人が増えたときに楽です。最初の一覧は半日で終わります。</p>
+<h3>届け出を紙で残しておらず、口頭で済ませてきました</h3>
+<p>出勤簿や勤怠の記録に休みの印があれば、まずそこから日付を拾います。給与の控えに月ごとの有給日数があれば、それを合計の当たりにします。過去は日付が分かる分だけ並べ、分からない分は月の合計だけを置き、これからは届け出の置き場を決めて日付を残す、で十分です。</p>
+<h3>残日数を本人に見せてもよいのでしょうか</h3>
+<p>本人の残日数を本人に伝えることは、取り残しを減らすうえでいちばん効きます。年度の途中で残日数と年度末までの見込みを添えて休みの予定を尋ねる文面は、機械に下書きさせられます。他の人の残日数は本人以外に見せない形にし、部署の偏りは日数の合計だけで扱います。</p>
+<h3>どれくらいの時間がかかりますか</h3>
+<p>二年分の届け出と出勤簿を渡して最初の一覧が出るまでは、人数にもよりますが一時間ほどです。氏名と年度のそろえ直しと給与の控えとの突き合わせに数日、そのあとは月に一度、その月の取得を反映させて残日数と見込みを出させて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>有給休暇が見えないのは、付与の基準日が人ごとに違い、取得の記録が三か所に分かれ、残日数の幅を誰も知らないという構造の問題</li>
+<li>誰にいつ休んでもらうか、繁忙期をどう避けるか、休みにくさをどう変えるかは人の判断。集めて、そろえて、付与と取得と残りに分けて並べるのは機械の仕事</li>
+<li>実務は、二年分の洗い出し、氏名と年度のそろえ直し、残日数と年度末までの見込みを出す、人の問題と仕組みの問題を分ける、届け出の置き場を決めて月に一度確かめる、の五つ</li>
+<li>有給に何を含めるかをこちらから指定し、取得日は届け出か出勤簿にある日付で書かせ、給与の控えの有給日数と突き合わせる</li>
+<li>付与と経過と取得の三つで見る。区分の違う人は比べない。半日は零点五日にそろえ、取れていない理由は仕事の代わりの有無で見て、月に一度、決まりを一つ変える</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-equipment-inspection-records.html"><img src="../images/blog-claude-code-equipment-inspection-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで設備・備品の点検記録を整える</span></a><a class="seo-related-card" href="claude-code-bcp-emergency-preparedness.html"><img src="../images/blog-claude-code-bcp-emergency-preparedness-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude CodeでBCP（事業継続計画）の下地をつくる</span></a><a class="seo-related-card" href="claude-code-spec-change-log.html"><img src="../images/blog-claude-code-spec-change-log-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで仕様変更の記録を残す</span></a></div>
+<p class="seo-related-more"><a href="category-operations.html">「業務記録・現場改善」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

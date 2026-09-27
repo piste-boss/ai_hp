@@ -169,3 +169,14 @@
 | 2026-09-13 | Claude Codeで廃棄・ロスの記録を整える！中小企業のための廃棄一覧づくりと捨てているお金を見つける判断材料整理ガイド | claude-code-waste-loss-records.md |
 | 2026-09-14 | Claude Codeで仕入単価の推移を整える！中小企業のための仕入先別の値上がり一覧づくりと仕入れ条件を見直す判断材料整理ガイド | claude-code-purchase-price-history.md |
 | 2026-09-15 | Claude Codeで販促・キャンペーンの結果を整える！中小企業のための実施一覧づくりと次に打つ手の判断材料整理ガイド | claude-code-promotion-campaign-results.md |
+| 2026-09-16 | Claude Codeで貸出・持ち出しの記録を整える！中小企業のための貸出一覧づくりと足りない物・余っている物を見つける判断材料整理ガイド | claude-code-lending-checkout-records.md |
+| 2026-09-17 | Claude Codeでお客様の来た経路を整える！中小企業のための受注経路一覧づくりと効いている入口を見つける判断材料整理ガイド | claude-code-customer-acquisition-channels.md |
+| 2026-09-18 | Claude Codeで案件ごとの作業時間を整える！中小企業のための工数一覧づくりと見積もりの時間読みを直す判断材料整理ガイド | claude-code-job-hours-tracking.md |
+| 2026-09-19 | Claude Codeで消耗品の購入記録を整える！中小企業のための品目別の購入一覧づくりと買いすぎ・切らしを減らす判断材料整理ガイド | claude-code-consumables-purchase-records.md |
+| 2026-09-20 | Claude Codeで社用車の燃料と走行の記録を整える！中小企業のための車両別の費用一覧づくりと一台あたりの負担を見える化する判断材料整理ガイド | claude-code-company-vehicle-cost-records.md |
+| 2026-09-21 | Claude Codeで電気・ガス・水道の使用量と料金の記録を整える！中小企業のための拠点別・月別の光熱費一覧づくりと使いすぎと単価上昇を分けて見る判断材料整理ガイド | claude-code-utility-usage-records.md |
+| 2026-09-22 | Claude Codeで有給休暇の取得記録を整える！中小企業のための従業員別の取得一覧づくりと取り残しと偏りを見つける判断材料整理ガイド | claude-code-paid-leave-records.md |
+| 2026-09-23 | Claude Codeで出張の費用と目的の記録を整える！中小企業のための出張ごとの費用一覧づくりと続ける出張・減らす出張を分ける判断材料整理ガイド | claude-code-business-trip-records.md |
+| 2026-09-24 | Claude Codeで交際費と手土産の記録を整える！中小企業のための相手先別の付き合い費用一覧づくりと効いている付き合い・惰性の付き合いを分ける判断材料整理ガイド | claude-code-entertainment-expense-records.md |
+| 2026-09-25 | Claude Codeで送料と配送の記録を整える！中小企業のための発送ごとの送料一覧づくりと利益を削る発送・見直す発送を分ける判断材料整理ガイド | claude-code-shipping-cost-records.md |
+| 2026-09-26 | Claude Codeで支払手数料の記録を整える！中小企業のための決済・振込・販売サイト手数料の一覧づくりと残す払い方・見直す払い方を分ける判断材料整理ガイド | claude-code-payment-fee-records.md |

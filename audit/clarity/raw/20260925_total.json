@@ -1,0 +1,297 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 31.25,
+        "sessionsWithoutMetricPercentage": 68.75,
+        "pagesViews": 6,
+        "subTotal": 7
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 6.25,
+        "sessionsWithoutMetricPercentage": 93.75,
+        "pagesViews": 2,
+        "subTotal": 2
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 60.85
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 16,
+        "totalBotSessionCount": 2,
+        "distinctUserCount": 29,
+        "pagesPerSessionPercentage": 1.6774193548387097
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 441,
+        "activeTime": 148
+      }
+    ]
+  },
+  {
+    "metricName": "Browser",
+    "information": [
+      {
+        "name": "Chrome",
+        "sessionsCount": 8
+      },
+      {
+        "name": "Edge",
+        "sessionsCount": 6
+      },
+      {
+        "name": "ChromeMobile",
+        "sessionsCount": 1
+      },
+      {
+        "name": "MobileSafari",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "Device",
+    "information": [
+      {
+        "name": "PC",
+        "sessionsCount": 14
+      },
+      {
+        "name": "Mobile",
+        "sessionsCount": 2
+      }
+    ]
+  },
+  {
+    "metricName": "OS",
+    "information": [
+      {
+        "name": "Windows",
+        "sessionsCount": 10
+      },
+      {
+        "name": "MacOSX",
+        "sessionsCount": 4
+      },
+      {
+        "name": "Android",
+        "sessionsCount": 1
+      },
+      {
+        "name": "IOS",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "Country",
+    "information": [
+      {
+        "name": "Japan",
+        "sessionsCount": 16
+      }
+    ]
+  },
+  {
+    "metricName": "PageTitle",
+    "information": [
+      {
+        "name": "AI導入コンサルティング | Piste AI EVANGELISTS",
+        "sessionsCount": 9
+      },
+      {
+        "name": "代表プロフィール・会社概要 石川 卓 | Piste AI EVANGELISTS",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Claude Code × WordPress連携でブログ・HP更新をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × BASE連携でネットショップ運営をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Todoist連携でToDo・タスク管理をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × HubSpot連携でCRM・営業マネジメントをAI自動運用",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Threads連携で投稿・返信・分析をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Wix連携でホームページ運用・更新をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × 楽天市場連携で出店・商品ページ・受注対応をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Google広告連携で広告運用・レポート作成をAI自動化",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "ReferrerUrl",
+    "information": [
+      {
+        "name": "https://www.google.com/",
+        "sessionsCount": 7
+      },
+      {
+        "name": "https://www.bing.com/",
+        "sessionsCount": 4
+      },
+      {
+        "name": null,
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://www.piste-ai.com/about",
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/claude-code-base-integration",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://search.yahoo.co.jp/",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "PopularPages",
+    "information": [
+      {
+        "url": "https://www.piste-ai.com/",
+        "visitsCount": 9
+      },
+      {
+        "url": "https://www.piste-ai.com/about",
+        "visitsCount": 3
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+        "visitsCount": 2
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-todoist-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-threads-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-base-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/ai-sales-email-automation",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+        "visitsCount": 1
+      }
+    ]
+  }
+]

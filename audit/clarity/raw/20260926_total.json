@@ -1,0 +1,301 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 31.25,
+        "sessionsWithoutMetricPercentage": 68.75,
+        "pagesViews": 5,
+        "subTotal": 8
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 12.5,
+        "sessionsWithoutMetricPercentage": 87.5,
+        "pagesViews": 2,
+        "subTotal": 2
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 16,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 55.68
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 16,
+        "totalBotSessionCount": 2,
+        "distinctUserCount": 28,
+        "pagesPerSessionPercentage": 1.4137931034482758
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 281,
+        "activeTime": 154
+      }
+    ]
+  },
+  {
+    "metricName": "Browser",
+    "information": [
+      {
+        "name": "Chrome",
+        "sessionsCount": 7
+      },
+      {
+        "name": "Edge",
+        "sessionsCount": 5
+      },
+      {
+        "name": "ChromeMobile",
+        "sessionsCount": 2
+      },
+      {
+        "name": "MobileSafari",
+        "sessionsCount": 1
+      },
+      {
+        "name": "GoogleApp",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "Device",
+    "information": [
+      {
+        "name": "PC",
+        "sessionsCount": 12
+      },
+      {
+        "name": "Mobile",
+        "sessionsCount": 4
+      }
+    ]
+  },
+  {
+    "metricName": "OS",
+    "information": [
+      {
+        "name": "Windows",
+        "sessionsCount": 9
+      },
+      {
+        "name": "MacOSX",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Android",
+        "sessionsCount": 2
+      },
+      {
+        "name": "IOS",
+        "sessionsCount": 2
+      }
+    ]
+  },
+  {
+    "metricName": "Country",
+    "information": [
+      {
+        "name": "Japan",
+        "sessionsCount": 16
+      }
+    ]
+  },
+  {
+    "metricName": "PageTitle",
+    "information": [
+      {
+        "name": "AI導入コンサルティング | Piste AI EVANGELISTS",
+        "sessionsCount": 4
+      },
+      {
+        "name": "Claude Code × Instagram連携で投稿・コメント・分析をAI自動化",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Claude Code × Wix連携でホームページ運用・更新をAI自動化",
+        "sessionsCount": 2
+      },
+      {
+        "name": "代表プロフィール・会社概要 石川 卓 | Piste AI EVANGELISTS",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × WordPress連携でブログ・HP更新をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × PayPay連携で売上集計・キャッシュレス対応をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "経理業務をAIで自動化！請求書処理・仕訳入力を効率化する実践ガイド",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Todoist連携でToDo・タスク管理をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "AIで営業メールを自動作成！商談獲得率を高めるメール文面の作り方",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "ReferrerUrl",
+    "information": [
+      {
+        "name": "https://www.google.com/",
+        "sessionsCount": 8
+      },
+      {
+        "name": "https://www.bing.com/",
+        "sessionsCount": 5
+      },
+      {
+        "name": null,
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://www.piste-ai.com/",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/training",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/ai-accounting-automation",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/?utm_source=chatgpt.com",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://search.yahoo.co.jp/",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "PopularPages",
+    "information": [
+      {
+        "url": "https://www.piste-ai.com/",
+        "visitsCount": 4
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+        "visitsCount": 3
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+        "visitsCount": 2
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-todoist-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-threads-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/about",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-zendesk-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/ai-accounting-automation",
+        "visitsCount": 1
+      }
+    ]
+  }
+]

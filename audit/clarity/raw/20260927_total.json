@@ -1,0 +1,261 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 10,
+        "sessionsWithoutMetricPercentage": 90,
+        "pagesViews": 1,
+        "subTotal": 1
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 10,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 68.82
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 10,
+        "totalBotSessionCount": 3,
+        "distinctUserCount": 20,
+        "pagesPerSessionPercentage": 1.1428571428571428
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 129,
+        "activeTime": 21
+      }
+    ]
+  },
+  {
+    "metricName": "Browser",
+    "information": [
+      {
+        "name": "Chrome",
+        "sessionsCount": 5
+      },
+      {
+        "name": "ChromeMobile",
+        "sessionsCount": 2
+      },
+      {
+        "name": "MobileSafari",
+        "sessionsCount": 2
+      },
+      {
+        "name": "GoogleApp",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "Device",
+    "information": [
+      {
+        "name": "Mobile",
+        "sessionsCount": 5
+      },
+      {
+        "name": "PC",
+        "sessionsCount": 5
+      }
+    ]
+  },
+  {
+    "metricName": "OS",
+    "information": [
+      {
+        "name": "IOS",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Windows",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Android",
+        "sessionsCount": 2
+      },
+      {
+        "name": "MacOSX",
+        "sessionsCount": 2
+      }
+    ]
+  },
+  {
+    "metricName": "Country",
+    "information": [
+      {
+        "name": "Japan",
+        "sessionsCount": 10
+      }
+    ]
+  },
+  {
+    "metricName": "PageTitle",
+    "information": [
+      {
+        "name": "AI導入コンサルティング | Piste AI EVANGELISTS",
+        "sessionsCount": 4
+      },
+      {
+        "name": "Claude Code × Instagram連携で投稿・コメント・分析をAI自動化",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Claude Code × Googleドライブ連携で資料整理を自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "代表プロフィール・会社概要 石川 卓 | Piste AI EVANGELISTS",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × GA4連携でアクセス解析・改善提案を自動化",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "ReferrerUrl",
+    "information": [
+      {
+        "name": "https://www.google.com/",
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://www.bing.com/",
+        "sessionsCount": 2
+      },
+      {
+        "name": "https://www.piste-ai.com/about",
+        "sessionsCount": 2
+      },
+      {
+        "name": "https://search.yahoo.co.jp/",
+        "sessionsCount": 2
+      },
+      {
+        "name": null,
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "PopularPages",
+    "information": [
+      {
+        "url": "https://www.piste-ai.com/",
+        "visitsCount": 4
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+        "visitsCount": 3
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-notion-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-entertainment-expense-records",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-payment-fee-records",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/about",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-cashflow-forecast",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-business-trip-records",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration",
+        "visitsCount": 1
+      }
+    ]
+  }
+]

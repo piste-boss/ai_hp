@@ -1,7 +1,7 @@
 import re, json, glob, os, sys, datetime, csv
 from html import unescape
 
-SITE = "/Users/ishikawasuguru/AI_コンサル/HP作成/site"
+SITE = "/Users/ishikawasuguru/Desktop/claude/AI/HP/site"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "."
 TODAY = datetime.date(2026, 9, 10)
 

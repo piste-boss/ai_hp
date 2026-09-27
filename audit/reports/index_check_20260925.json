@@ -1,0 +1,1297 @@
+{
+ "https://www.piste-ai.com/about": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T09:29:32Z",
+  "googleCanonical": "https://www.piste-ai.com/about",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/aichi": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/ai-accounting-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T10:26:44Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-accounting-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-adoption-mistakes": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-29T18:01:39Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-adoption-mistakes",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-automation-one-person-business": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T17:48:49Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-automation-one-person-business",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-competitor-analysis": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T06:41:33Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-competitor-analysis",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-contract-review-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-03T09:00:51Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-contract-review-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-cost-roi-for-sme": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-01T19:35:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-cost-roi-for-sme",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-customer-support-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-03T09:13:34Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-customer-support-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-data-analysis-dashboard": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-21T09:07:09Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-data-analysis-dashboard",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-inventory-management": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-06T16:18:35Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-inventory-management",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-knowledge-management": {
+  "verdict": "NEUTRAL",
+  "coverageState": "代替ページ（適切な canonical タグあり）",
+  "lastCrawlTime": "2026-08-01T12:00:01Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-knowledge-management.html",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-meeting-minutes-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-29T18:01:40Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-meeting-minutes-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-presentation-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T12:43:30Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-presentation-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-prompt-techniques-business": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T14:11:32Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-prompt-techniques-business",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-recruitment-efficiency": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-05T03:00:09Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-recruitment-efficiency",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-sales-email-automation": {
+  "verdict": "NEUTRAL",
+  "coverageState": "代替ページ（適切な canonical タグあり）",
+  "lastCrawlTime": "2026-08-06T06:22:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-sales-email-automation.html",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-sales-growth-examples": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-30T05:58:15Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-sales-growth-examples",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-sns-marketing-automation": {
+  "verdict": "NEUTRAL",
+  "coverageState": "代替ページ（適切な canonical タグあり）",
+  "lastCrawlTime": "2026-08-01T11:59:56Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-sns-marketing-automation.html",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/ai-tools-for-business-2026": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T14:40:48Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/ai-tools-for-business-2026",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-ai-basics": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T17:39:07Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/category-ai-basics",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-claude-code-basics": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T06:12:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/category-claude-code-basics",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-finance": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:54:48Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/category-finance",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-operations": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T04:44:07Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/category-operations",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-sales-customer": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T06:41:35Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/category-sales-customer",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/category-tool-integration": {
+  "verdict": "NEUTRAL",
+  "coverageState": "クロール済み - インデックス未登録",
+  "lastCrawlTime": "2026-09-10T23:11:20Z",
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-airregi-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:31:57Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-airregi-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-airtable-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T22:04:42Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-airtable-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-07T07:03:26Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-ameblo-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:54:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-ameblo-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-andpad-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T13:51:11Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-andpad-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-asana-integration": {
+  "verdict": "NEUTRAL",
+  "coverageState": "検出 - インデックス未登録",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-automation-effect-tracking": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:51:03Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-automation-effect-tracking",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-automation-handover": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T10:47:40Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-automation-handover",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T15:20:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-automation-inventory-cleanup",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-backlog-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T08:20:55Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-backlog-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-backup-and-recovery": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T12:16:41Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-backup-and-recovery",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-base-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T22:06:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-base-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-04T14:20:58Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-bcp-emergency-preparedness",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-board-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-06T01:44:43Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-board-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-business-guide": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T18:08:27Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-business-guide",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-business-trip-records": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-calendly-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-24T22:24:05Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-calendly-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-canva-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T08:12:02Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-canva-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-cashflow-forecast": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-25T03:36:22Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-cashflow-forecast",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-chatwork-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-18T09:57:30Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-chatwork-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-claude-md-rules": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T08:02:54Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-claude-md-rules",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-claudemd-memory-guide": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T22:06:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-claudemd-memory-guide",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-cloudsign-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T03:07:49Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-cloudsign-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-colorme-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-colorme-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-company-vehicle-cost-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T06:27:08Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-company-vehicle-cost-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-complaint-first-response": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-26T09:50:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-complaint-first-response",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-confidential-data-rules": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-08T16:15:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-confidential-data-rules",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-consumables-purchase-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T09:18:32Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-consumables-purchase-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-context-management": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T21:31:55Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-context-management",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-21T16:50:23Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-contract-renewal-deadline",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T06:44:28Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-customer-list-deduplication": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-customer-list-deduplication",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-cybozu-office-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:58:22Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-cybozu-office-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-deepl-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-22T18:05:13Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-deepl-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-deliverable-review-process": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T08:13:18Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-deliverable-review-process",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T21:30:29Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-delivery-delay-early-warning",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:59:11Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-denshi-chobo-compliance",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-discord-notification": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T17:27:05Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-discord-notification",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-discount-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-13T15:15:24Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-discount-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-21T05:08:40Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-dormant-customer-reactivation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-dropbox-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-07T14:23:01Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-dropbox-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-entertainment-expense-records": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-equipment-inspection-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T00:52:11Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-equipment-inspection-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-etsy-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-20T07:44:16Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-etsy-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-facebook-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:33:48Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-facebook-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-fixed-cost-review": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:31:28Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-fixed-cost-review",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-food-delivery-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T05:32:19Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-food-delivery-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-freee-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T10:47:40Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-freee-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-05T15:50:33Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-ga4-analytics-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-gmail-integration": {
+  "verdict": "NEUTRAL",
+  "coverageState": "クロール済み - インデックス未登録",
+  "lastCrawlTime": "2026-07-31T18:02:01Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-gmail-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-ads-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-ads-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-business-profile-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T19:20:01Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-business-profile-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-calendar-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:54:32Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-calendar-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-docs-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-19T07:36:42Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-docs-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-drive-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T21:50:30Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-drive-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-google-sheets-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:33:41Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-google-sheets-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-googleform-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T14:41:12Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-googleform-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-gross-margin-analysis": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T21:31:40Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-gross-margin-analysis",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-hooks-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T14:51:23Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-hooks-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-hotpepper-beauty-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T22:04:33Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-hotpepper-beauty-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-hubspot-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-06-10T01:18:37Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-hubspot-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-indeed-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T19:13:52Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-indeed-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-instagram-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-13T16:50:59Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-20T18:51:54Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-invoice-amount-reconciliation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-invoice-registration-check": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T22:12:55Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-invoice-registration-check",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-jalan-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:29:32Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-jalan-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-job-hours-tracking": {
+  "verdict": "NEUTRAL",
+  "coverageState": "検出 - インデックス未登録",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-jobcan-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-30T08:44:56Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-jobcan-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-kintone-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-18T05:30:08Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-kintone-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-lending-checkout-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T08:39:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-lending-checkout-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-license-expiry-tracking": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:11:55Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-license-expiry-tracking",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-line-official-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-30T02:37:25Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-line-official-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-lineworks-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-28T08:38:09Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-lineworks-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-linkedin-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T19:45:51Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-linkedin-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-loan-repayment-overview": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:18:08Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-loan-repayment-overview",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:18Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-loop-scheduler-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-lost-deal-review": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T03:55:05Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-lost-deal-review",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-mailchimp-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:18Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-mailchimp-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-make-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:06:02Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-make-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-mcp-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-18T01:23:07Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-mcp-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-mercari-shops-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-13T06:14:58Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-mercari-shops-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-microsoft-teams-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T07:25:08Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-microsoft-teams-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-microsoft365-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-19T03:32:43Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-microsoft365-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-minne-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:45:38Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-minne-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-miro-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-30T10:18:09Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-miro-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-model-cost-optimization": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-10T23:12:07Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-model-cost-optimization",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-moneyforward-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-21T12:04:54Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-moneyforward-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-near-miss-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T03:54:38Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-near-miss-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-new-client-credit-check": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T19:13:52Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-new-client-credit-check",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-note-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-27T10:35:00Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-note-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-notion-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-09T09:54:04Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-notion-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-paid-leave-records": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-paper-document-digitization": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-15T20:05:12Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-paper-document-digitization",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-paypay-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T13:13:02Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-paypay-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-peatix-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T21:03:26Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-peatix-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-peraichi-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-06-25T13:46:03Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-peraichi-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-permission-security-guide": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-13T22:31:24Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-permission-security-guide",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-pinterest-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-27T07:19:20Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-pinterest-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-plan-mode-business": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-31T18:08:27Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-plan-mode-business",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-playwright-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-01T11:59:58Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-playwright-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-price-revision-preparation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T19:13:56Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-price-revision-preparation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-promotion-campaign-results": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T09:22:55Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-promotion-campaign-results",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-purchase-price-history": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T09:48:22Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-purchase-price-history",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-quote-comparison": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:26Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-quote-comparison",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T09:57:20Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-rakuten-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-06-25T13:44:43Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-rakuten-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-receivables-payment-check": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:03:13Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-receivables-payment-check",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-remote-control-mobile": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T03:33:41Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-remote-control-mobile",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-reserva-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T06:41:41Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-reserva-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-returns-defect-log": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:17:06Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-returns-defect-log",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-salesforce-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-07T03:21:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-salesforce-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-sansan-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T06:27:58Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-sansan-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-search-console-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T10:22:16Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-search-console-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-shipping-cost-records": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-shopify-integration": {
+  "verdict": "NEUTRAL",
+  "coverageState": "検出 - インデックス未登録",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-skills-knowledge": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-skills-knowledge",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-slack-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T08:38:30Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-slack-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-slash-commands": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-17T21:43:05Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-slash-commands",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-smaregi-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T12:12:30Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-smaregi-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-smarthr-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T20:18:02Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-smarthr-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-spec-change-log": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-13T10:42:39Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-spec-change-log",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-square-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-06T17:12:27Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-square-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-stores-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-06-25T13:46:50Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-stores-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-stripe-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-20T13:13:11Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-stripe-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-subagent-team": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-06-09T03:39:42Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-subagent-team",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-subcontractor-track-record": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-12T11:33:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-subcontractor-track-record",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-subsidy-application-support": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:54:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-subsidy-application-support",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-survey-freetext-analysis",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-tabelog-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-18T21:29:24Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-tabelog-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-task-delegation-boundary": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T21:01:17Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-task-delegation-boundary",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-team-parallel-execution": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T06:41:42Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-team-parallel-execution",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-threads-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T15:20:16Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-threads-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-tiktok-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-06T05:07:06Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-tiktok-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-timee-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T03:54:33Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-timee-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-todoist-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-06T10:04:20Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-todoist-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-trello-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-19T22:18:22Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-trello-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-troubleshooting-guide": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-16T06:35:31Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-troubleshooting-guide",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-utility-usage-records": {
+  "verdict": "NEUTRAL",
+  "coverageState": "URL が Google に認識されていません",
+  "lastCrawlTime": null,
+  "googleCanonical": null,
+  "indexingState": "INDEXING_STATE_UNSPECIFIED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-wantedly-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T03:54:24Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-wantedly-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-waste-loss-records": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-20T09:17:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-waste-loss-records",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-websearch-research-automation": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-22T16:40:29Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-websearch-research-automation",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-wix-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T08:00:34Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-wix-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-wordpress-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-19T09:25:38Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-wordpress-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-x-twitter-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-16T06:41:45Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-x-twitter-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:31:34Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-yayoi-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T02:31:53Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-yayoi-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-youtube-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-14T18:39:21Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-youtube-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-zapier-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-18T05:26:43Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-zapier-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-zendesk-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-29T11:19:27Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-zendesk-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-zoho-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-17T05:32:12Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-zoho-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/claude-code-zoom-integration": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-03T10:23:02Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/claude-code-zoom-integration",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-07-17T16:38:38Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/blog/moneyforward-mcp-accounting": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-08-04T02:16:47Z",
+  "googleCanonical": "https://www.piste-ai.com/blog/moneyforward-mcp-accounting",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/claude-code-support": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-11T07:54:57Z",
+  "googleCanonical": "https://www.piste-ai.com/claude-code-support",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-22T09:11:49Z",
+  "googleCanonical": "https://www.piste-ai.com/",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/privacy": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-07T02:33:43Z",
+  "googleCanonical": "https://www.piste-ai.com/privacy",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/terms": {
+  "verdict": "NEUTRAL",
+  "coverageState": "代替ページ（適切な canonical タグあり）",
+  "lastCrawlTime": "2026-07-16T22:18:56Z",
+  "googleCanonical": "https://www.piste-ai.com/terms.html",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/tokushoho": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-03T09:50:59Z",
+  "googleCanonical": "https://www.piste-ai.com/tokushoho",
+  "indexingState": "INDEXING_ALLOWED"
+ },
+ "https://www.piste-ai.com/training": {
+  "verdict": "PASS",
+  "coverageState": "送信して登録されました",
+  "lastCrawlTime": "2026-09-18T08:32:53Z",
+  "googleCanonical": "https://www.piste-ai.com/training",
+  "indexingState": "INDEXING_ALLOWED"
+ }
+}

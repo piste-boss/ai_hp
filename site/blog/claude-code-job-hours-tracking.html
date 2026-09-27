@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで案件ごとの作業時間を整える</title>
+<meta name="description" content="Claude Codeで日報・作業記録・カレンダー・メモに散らばった「どの案件に何時間かけたか」を案件ごとにそろえ、見積もりの時間読みと実際の時間、受注金額と一時間あたりの受取額を横に置き、仕事の型ごとに読みが外れている案件を見つけ、月に一度見積もりの目安を直す運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,作業時間,工数管理,見積もり,原価,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで案件ごとの作業時間を整える">
+  <meta property="og:description" content="Claude Codeで日報・作業記録・カレンダー・メモに散らばった「どの案件に何時間かけたか」を案件ごとにそろえ、見積もりの時間読みと実際の時間、受注金額と一時間あたりの受取額を横に置き、仕事の型ごとに読みが外れている案件を見つけ、月に一度見積もりの目安を直す運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-job-hours-tracking-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-18T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="業務記録・現場改善">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで案件ごとの作業時間を整える">
+  <meta name="twitter:description" content="Claude Codeで日報・作業記録・カレンダー・メモに散らばった「どの案件に何時間かけたか」を案件ごとにそろえ、見積もりの時間読みと実際の時間、受注金額と一時間あたりの受取額を横に置き、仕事の型ごとに読みが外れている案件を見つけ、月に一度見積もりの目安を直す運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-job-hours-tracking-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html"},"url":"https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html","headline":"Claude Codeで案件ごとの作業時間を整える！中小企業のための工数一覧づくりと見積もりの時間読みを直す判断材料整理ガイド","alternativeHeadline":"Claude Codeで案件ごとの作業時間を整える","description":"Claude Codeで日報・作業記録・カレンダー・メモに散らばった「どの案件に何時間かけたか」を案件ごとにそろえ、見積もりの時間読みと実際の時間、受注金額と一時間あたりの受取額を横に置き、仕事の型ごとに読みが外れている案件を見つけ、月に一度見積もりの目安を直す運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-job-hours-tracking-og.jpg","width":1200,"height":800},"datePublished":"2026-09-18T09:00:00+09:00","dateModified":"2026-09-18T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"業務記録・現場改善","keywords":["Claude Code","作業時間","工数管理","見積もり","原価","業務効率化","中小企業"],"wordCount":6120,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"業務記録・現場改善","item":"https://www.piste-ai.com/blog/category-operations.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで案件ごとの作業時間を整える","item":"https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html#faq","mainEntity":[{"@type":"Question","name":"従業員が数人でも必要ですか","acceptedAnswer":{"@type":"Answer","text":"人数が少ないほど、一人の時間の使い方がそのまま会社の利益に響きます。案件が月に十件でも、三か月分なら三十行ほどで、最初の一覧づくりは半日で終わります。少ないうちに形をつくっておく方が、人が増えたときに楽です。"}},{"@type":"Question","name":"従業員に時間を書かせると、監視のように受け取られませんか","acceptedAnswer":{"@type":"Answer","text":"目的を「速く働かせるため」ではなく「見積もりの読みを直し、手のかかる仕事の値段を正しくもらうため」と伝えると、受け取られ方が変わります。読みが外れた案件を担当者のせいにせず、仕事の型と値段の問題として扱うことが大切です。"}},{"@type":"Question","name":"昔の日報に時間が残っていない場合はどうしますか","acceptedAnswer":{"@type":"Answer","text":"残っている期間だけで始めて構いません。過去の分は空欄のまま残し、今月の案件から一行ずつ足していきます。三か月分がたまれば、型ごとの読みの外れ方は見え始めます。過去の分は、受注金額と請求だけでも並べておくと、あとで比べる相手になります。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"日報と見積書の控えと請求の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。案件名のそろえ直しと読みの突き合わせに数日、そのあとは月に一度、型ごとの集計と空欄を出させて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで案件ごとの作業時間を整える！中小企業のための工数一覧づくりと見積もりの時間読みを直す判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-operations.html">業務記録・現場改善</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-18">公開日：2026年9月18日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+<img src="../images/blog-claude-code-job-hours-tracking.webp" alt="Claude Codeで案件ごとの作業時間を整える！中小企業のための工数一覧づくりと見積もりの時間読みを直す判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>日報には作業内容しか書かれず、どの案件に何時間かけたか、見積もりで読んだ時間と実際にかかった時間の差、一時間あたりいくら受け取れているかを一覧で見たことがない建設・製造・士業・修理・制作などの中小企業</li><li><strong>できるようになること：</strong>日報・作業記録・カレンダー・メモに散らばった作業時間を案件ごとにそろえて修理・新規・定期・急ぎなどの型をつけ、見積もりの時間読みと受注金額を横に置いて一時間あたりの受取額を出し、型ごとに読みが五割以上外れた案件や受取額が平均の半分未満の案件に印をつけ、月に一度見積もりの目安を直す運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、過去三か月分（残っている期間だけでも可）の日報・作業記録・カレンダー・現場写真の日時・担当者のメモ、見積書の控えとその計算メモ、請求の記録（受注金額の突き合わせ用）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「あの仕事、思ったより時間がかかった」「見積もりでは二日と読んだのに、結局一週間かかっていた」「忙しいのに、月末に残るお金が少ない」。中小企業では、一つひとつの案件にどれだけの時間をかけたかを、金額と並べて一覧で見たことがある会社はほとんどありません。日報には作業の内容が書かれていても、どの案件に何時間かけたかは書かれず、担当者の感覚に残るだけで、翌月には誰も答えられなくなります。</p>
+<p>その結果、何が起きるか。時間ばかり食う仕事を、去年と同じ値段で今年も受ける。手離れのよい仕事を安く見積もり、手のかかる仕事を高く見積もれない。<strong>作業時間の本当の問題は、忙しいことではなく、どの案件にどれだけ時間をかけ、その時間に見合った金額を受け取れているかを誰も数えていないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、日報、作業記録、カレンダー、担当者のメモに散らばった「何にどれだけ時間をかけたか」を案件ごとの一覧にそろえ、見積もりのときに読んだ時間と実際にかかった時間を横に並べ、時間の読みが外れている仕事の型を見つけるための材料を整えるまでの手順を、非エンジニアの方向けに整理します。どの仕事の値段を見直すか、どの仕事を断るか、誰にどの仕事を任せるかは人の判断。機械に任せるのは、<strong>散らばった記録を集めて、案件ごとにそろえて、比べられる形に並べる作業</strong>です。</p>
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">案件ごとの作業時間が「残らない」3つの理由</a></li>
+<li><a href="#s2">作業時間の整理で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</a></li>
+<li><a href="#s3">Claude Codeで案件ごとの工数一覧をつくり、見積もりの時間読みを直す手順はどう進めますか？</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+<h2 id="s1">案件ごとの作業時間が「残らない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+<img src="../images/blog-claude-code-job-hours-tracking-01.webp" alt="案件ごとの作業時間が「残らない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>作業時間の記録が残らないのは、担当者がさぼっているからではありません。残らない構造が、仕事の側にあります。</p>
+<h3>1. 日報は「何をしたか」で書かれ、「どの案件に何時間か」では書かれない</h3>
+<p>多くの会社の日報は、「午前は現場、午後は見積もり作成」のような書き方です。<strong>同じ日に三つの案件を行き来していても、それぞれに何時間かけたかは書かれません</strong>。一日を案件で割った記録がないので、あとから案件ごとに足し合わせることができません。</p>
+<h3>2. 見積もりの時間読みが、どこにも残っていない</h3>
+<p>見積書には金額が書かれていますが、その金額の根拠になった「二日で終わる」という読みは、担当者の頭の中か、計算用のメモにしか残りません。<strong>実際にかかった時間と比べようにも、比べる相手が残っていない</strong>のです。</p>
+<h3>3. 「時間がかかった」の基準が、感覚のまま</h3>
+<p>一週間かかった仕事を「手間がかかった」と感じるかどうかは、担当者と、その週の忙しさで変わります。<strong>一時間あたりいくら受け取っているかを案件ごとに数えずに、次の見積もりを同じ感覚で出しているのが実態です</strong>。</p>
+<blockquote>記録が残らないのは、日報の単位が案件でなく、時間の読みが残らず、かかったの基準が感覚のままだからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">作業時間の整理で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</h2>
+<p>大前提として、<strong>どの仕事の値段を見直すか、どの仕事を受けないか、誰にどの仕事を任せるかは経営の判断</strong>であり、人が決めることです。機械に任せるのは、散らばった記録を集めて案件ごとにそろえ、読みと実際、時間と金額を横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>日報・作業記録・カレンダー・現場写真の日時・メモから、日付・担当者・案件名・作業内容・時間の記載を拾い出す</td></tr><tr><td>案件名のそろえ直し</td><td>機械</td><td>「山田様」「山田邸」「A社リフォーム」のような書き方の違いを一つの案件にまとめる</td></tr><tr><td>一覧化</td><td>機械</td><td>案件・お客様・担当者・見積もりの時間読み・実際の時間・受注金額・材料費・一時間あたりの受取額を一行にそろえる</td></tr><tr><td>読みとの突き合わせ</td><td>機械</td><td>見積もりのときの時間読みと、実際にかかった時間の差を案件ごとに出す</td></tr><tr><td>仕事の型ごとの集計</td><td>機械</td><td>修理・新規・定期・急ぎのような型ごとに、読みの外れ方と一時間あたりの受取額を集計する</td></tr><tr><td>偏りの検出</td><td>機械</td><td>読みより五割以上長くかかった案件、一時間あたりの受取額が平均の半分以下の案件に印をつける</td></tr><tr><td>見直し案の下書き</td><td>機械</td><td>型ごとの平均時間をもとに、次の見積もりで使う時間の目安の案を書く</td></tr><tr><td>値段の見直し・断る判断・任せ方</td><td>人</td><td>どの仕事の値段を上げるか、どの仕事を受けないか、誰にどの型の仕事を任せるかを決める</td></tr></tbody></table>
+<p>境界線は「並べる」と「決める」の間にあります。機械が出すのは、案件ごとの時間と金額の並びと、読みが外れている型の印までです。その先の、お客様に伝える値段と、受ける受けないの線は、人が引きます。</p>
+<h2 id="s3">Claude Codeで案件ごとの工数一覧をつくり、見積もりの時間読みを直す手順はどう進めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+<img src="../images/blog-claude-code-job-hours-tracking-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：過去三か月分の案件と、かけた時間を洗い出す</h3>
+<p>日報、作業記録、カレンダー、現場写真の撮影日時、担当者のメモを集め、Claude Codeに「この三か月に手をつけた案件を一覧にし、案件ごとに日付・担当者・作業内容・かけた時間を並べてほしい」と頼みます。日報に時間が書かれていない日は、<strong>空欄のまま残させます</strong>。空欄が多い案件ほど、記録の仕組みが足りない案件です。空欄そのものが、最初の発見になります。</p>
+<h3>ステップ2：案件名をそろえ、仕事の型をつける</h3>
+<p>同じ案件が「山田様」「山田邸」「A社の二階」のように三通りで書かれていることは珍しくありません。<strong>案件の名前を一つにそろえ、あわせて、修理・新規・定期・急ぎ・やり直しのような仕事の型を一つずつつけます</strong>。型は五つから七つに絞ります。細かく分けるほど、あとで比べられなくなります。</p>
+<h3>ステップ3：見積もりの読みと、受注金額を横に置く</h3>
+<p>見積書の控えと、その計算に使ったメモから、案件ごとに「何時間で終わると読んだか」と受注金額を拾い、一覧の横に並べます。読みが残っていない案件は、担当者に聞いて埋めるか、空欄のまま残します。あわせて材料費を引き、<strong>受注金額から材料費を引いた額を、実際にかかった時間で割った一時間あたりの受取額</strong>を出します。この一列が、以後の判断の物差しになります。</p>
+<h3>ステップ4：型ごとに集計し、読みが外れている仕事を分ける</h3>
+<p>案件ごとの一覧を、仕事の型ごとにまとめます。型ごとに、平均の時間、読みと実際の差の平均、一時間あたりの受取額の平均を出し、<strong>読みより五割以上長くかかった案件と、一時間あたりの受取額が全体の平均の半分に満たない案件に印をつけます</strong>。ここで初めて、「急ぎの仕事はいつも読みの倍かかっている」「定期の仕事は一時間あたりで見ると一番よい」という形が見えます。</p>
+<h3>ステップ5：日報の書き方を小さく変え、月に一度だけ確かめる</h3>
+<p>一覧ができたら、日報に「案件名と時間」の欄を一行足すだけの決まりにします。分単位でなく、三十分刻みで構いません。<strong>月に一度、その月の案件一覧と型ごとの集計、空欄の多い担当者を出させ、見積もりの時間の目安を型ごとに一つ直します</strong>。細かい運用にすると続きません。一か月に一度、十五分で終わる形にします。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「作業時間」に何を含めるかを、こちらから言葉で決める</h3>
+<p>移動の時間、見積もりを書く時間、お客様との打ち合わせ、やり直しの時間を、作業時間に含めるかどうかで数字は大きく変わります。機械に任せる前に、<strong>含めるものと含めないものをこちらから指定します</strong>。おすすめは、移動と打ち合わせとやり直しをすべて含めることです。含めない時間が多いほど、実態より安く見えます。</p>
+<h3>原則2：時間は「記録にある数字」で書かせ、推測で埋めさせない</h3>
+<p>日報に時間が書かれていない日を、機械は「たぶん四時間くらい」と埋めたがります。<strong>記録にない時間は空欄のまま残させ、推測で埋めさせません</strong>。推測で埋めた一覧は、見た目が整う分だけ、間違った判断を招きます。</p>
+<h3>原則3：一覧の受注金額と、請求の記録を突き合わせる</h3>
+<p>一覧に並んだ受注金額が、実際に請求した金額と合っているかを、請求書の控えと突き合わせさせます。<strong>追加の仕事が発生して金額が変わった案件や、値引きした案件は、一覧の金額と請求が食い違います</strong>。食い違いのある案件は、たいてい時間も読みから外れている案件です。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：かかった時間だけ見て、受け取った金額を見ない</h3>
+<p>「この仕事は時間がかかった」で止まると、値段の見直しにつながりません。時間は必ず、受注金額と一時間あたりの受取額と並べて見ます。時間がかかっていても、一時間あたりで見れば悪くない仕事もあります。</p>
+<h3>型2：担当者ごとの速さの違いを、仕事の型の違いと混ぜる</h3>
+<p>同じ型の仕事でも、担当者によってかかる時間は違います。<strong>型ごとの集計と、担当者ごとの集計は分けて出させます</strong>。混ぜると、「急ぎの仕事は時間がかかる」のか「あの人が急ぎの仕事を担当すると時間がかかる」のかが分からなくなります。</p>
+<h3>型3：案件名のそろえ直しを飛ばす</h3>
+<p>「山田様」と「山田邸」が別の案件として数えられていると、一つの案件の時間が二つに割れ、どちらも短く見えます。そろえ直しは地味ですが、飛ばすと集計全体がずれます。</p>
+<h3>型4：分単位の正確さを求めて、記録が続かない</h3>
+<p>作業時間を分単位で書かせようとすると、三日で日報が止まります。三十分刻みで十分です。<strong>正確さより、空欄のない月が続くことの方が価値があります</strong>。</p>
+<h3>型5：一覧をつくって、見積もりの目安を直さない</h3>
+<p>一覧を眺めて「やっぱり急ぎは大変だ」と納得して終わると、次の見積もりも同じ読みで出します。月に一度、型ごとの時間の目安を一つでよいので書き換えます。書き換えた目安が、次の見積もりの根拠になります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>建設・リフォーム</td><td>現場の作業日数と、見積もりの日数の差を案件ごとに並べる。追加工事で時間が伸びたのに金額が変わっていない案件を見つけ、追加分の見積もりの出し方を整える</td></tr><tr><td>製造・加工</td><td>段取り替えと手直しの時間を、品目ごとに分けて集計する。小口で段取りの多い品目の一時間あたりの受取額を出し、最低ロットや価格の見直しの材料にする</td></tr><tr><td>士業・コンサル</td><td>顧問先ごとに、月の対応時間と顧問料を並べる。時間あたりで見て平均の半分に満たない顧問先を見つけ、契約の範囲と料金の見直しに使う</td></tr><tr><td>修理・設備</td><td>出張の移動時間を含めた案件ごとの時間を出し、遠方の案件の一時間あたりの受取額を確かめる。出張費の設定や、エリアごとの受け方の判断に使う</td></tr><tr><td>デザイン・制作</td><td>修正の回数と修正にかけた時間を案件ごとに残す。修正が読みの倍を超える案件の型を見つけ、修正回数の上限と追加料金の決まりづくりに使う</td></tr></tbody></table>
+<p>どの業種でも共通するのは、<strong>時間だけ、金額だけを見ていた仕事を、一時間あたりの受取額という一つの物差しで並べ直すこと</strong>です。並べ直すと、手をかけるべき仕事と、値段を直すべき仕事が分かれて見えてきます。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>従業員が数人でも必要ですか</h3>
+<p>人数が少ないほど、一人の時間の使い方がそのまま会社の利益に響きます。案件が月に十件でも、三か月分なら三十行ほどで、最初の一覧づくりは半日で終わります。少ないうちに形をつくっておく方が、人が増えたときに楽です。</p>
+<h3>従業員に時間を書かせると、監視のように受け取られませんか</h3>
+<p>目的を「速く働かせるため」ではなく「見積もりの読みを直し、手のかかる仕事の値段を正しくもらうため」と伝えると、受け取られ方が変わります。読みが外れた案件を担当者のせいにせず、仕事の型と値段の問題として扱うことが大切です。</p>
+<h3>昔の日報に時間が残っていない場合はどうしますか</h3>
+<p>残っている期間だけで始めて構いません。過去の分は空欄のまま残し、今月の案件から一行ずつ足していきます。三か月分がたまれば、型ごとの読みの外れ方は見え始めます。過去の分は、受注金額と請求だけでも並べておくと、あとで比べる相手になります。</p>
+<h3>どれくらいの時間がかかりますか</h3>
+<p>日報と見積書の控えと請求の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。案件名のそろえ直しと読みの突き合わせに数日、そのあとは月に一度、型ごとの集計と空欄を出させて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>案件ごとの作業時間が残らないのは、日報の単位が案件でなく、時間の読みが残らず、かかったの基準が感覚のままという構造の問題</li>
+<li>どの仕事の値段を見直すか、どの仕事を受けないか、誰に任せるかは人の判断。集めて、そろえて、並べるのは機械の仕事</li>
+<li>実務は、洗い出し、案件名のそろえ直しと型づけ、読みと金額を横に置く、型ごとに集計して分ける、日報を小さく変えて月に一度確かめる、の五つ</li>
+<li>作業時間に何を含めるかをこちらから指定し、時間は記録にある数字で書かせ、請求の記録と突き合わせる</li>
+<li>時間だけでなく一時間あたりの受取額を見る。型と担当者の集計は分ける。三十分刻みで続け、月に一度、見積もりの目安を一つ直す</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-equipment-inspection-records.html"><img src="../images/blog-claude-code-equipment-inspection-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで設備・備品の点検記録を整える</span></a><a class="seo-related-card" href="claude-code-bcp-emergency-preparedness.html"><img src="../images/blog-claude-code-bcp-emergency-preparedness-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude CodeでBCP（事業継続計画）の下地をつくる</span></a><a class="seo-related-card" href="claude-code-spec-change-log.html"><img src="../images/blog-claude-code-spec-change-log-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">業務記録・現場改善</span><span class="seo-related-title">Claude Codeで仕様変更の記録を残す</span></a></div>
+<p class="seo-related-more"><a href="category-operations.html">「業務記録・現場改善」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

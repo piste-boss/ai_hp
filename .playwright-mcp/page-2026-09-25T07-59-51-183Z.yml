@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Bing 検索に戻る" [ref=e3] [cursor=pointer]:
+      - /url: /?FORM=Z9FD1
+      - heading "Bing 検索に戻る" [level=1] [ref=e4]
+    - navigation "検索フィルター" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "すべて" [ref=e8] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC1
+        - listitem [ref=e9]:
+          - link "Web" [ref=e10] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&webscp=1&FORM=HDRWSC
+        - link "検索" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: 検索
+        - listitem [ref=e14]:
+          - link "画像" [ref=e15] [cursor=pointer]:
+            - /url: /images/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC3
+        - listitem [ref=e16]:
+          - link "動画" [ref=e17] [cursor=pointer]:
+            - /url: /videos/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC4
+        - listitem [ref=e18]:
+          - link "地図" [ref=e19] [cursor=pointer]:
+            - /url: /maps?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC6
+        - listitem [ref=e20]:
+          - link "ニュース" [ref=e21] [cursor=pointer]:
+            - /url: /news/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC7
+      - button "さらに表示" [ref=e23] [cursor=pointer]:
+        - text: さらに表示
+        - img [ref=e25]
+    - complementary "アカウント リワードと設定" [ref=e27]:
+      - button "Microsoft Rewards" [ref=e28] [cursor=pointer]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: Rewards
+          - img [ref=e33]
+      - link "ログイン" [ref=e45] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - button "ログイン" [ref=e48]
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - text: コンテンツは AI を使用して生成されました。
+        - link "詳細情報" [ref=e53] [cursor=pointer]:
+          - /url: https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?
+      - list [ref=e54]:
+        - listitem [ref=e55]:
+          - generic "あなたが送信しました。 Claude Code 導入 サポート 愛知" [ref=e57]: Claude Code 導入 サポート 愛知
+    - generic [ref=e61]:
+      - textbox "フォローアップを尋ねる" [ref=e64]
+      - button "Copilot 検索メニューを開く" [ref=e67] [cursor=pointer]:
+        - img [ref=e68]

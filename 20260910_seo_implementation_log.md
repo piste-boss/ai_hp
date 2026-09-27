@@ -14,7 +14,7 @@
 新記事公開時は Step 5（ブログ一覧更新）の後・Step 7（デプロイ）の前に必ず実行する。
 
 ```bash
-cd /Users/ishikawasuguru/AI_コンサル/HP作成 && python3 tools/optimize_images.py && python3 tools/seo_build.py
+cd /Users/ishikawasuguru/Desktop/claude/AI/HP && python3 tools/optimize_images.py && python3 tools/seo_build.py
 ```
 
 ## 実施内容

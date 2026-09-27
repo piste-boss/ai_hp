@@ -1,0 +1,4 @@
+date,sessions,bot_sessions,users,pages_per_session,scroll_depth,total_time,active_time,dead_click_pct,rage_click_pct,quickback_pct,excessive_scroll_pct,script_error_pct,error_click_pct
+2026-09-25,16,2,29,1.6774193548387097,60.85,441,148,31.25,0,6.25,0,0,0
+2026-09-26,16,2,28,1.4137931034482758,55.68,281,154,31.25,0,12.5,0,0,0
+2026-09-27,10,3,20,1.1428571428571428,68.82,129,21,10,0,0,0,0,0

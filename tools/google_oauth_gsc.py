@@ -2,7 +2,7 @@
 """Search Console / GA4（読み取り）用の Google OAuth 認可を1回だけ行い、トークンを保存する。
 
 使い方（ターミナルで実行）:
-    python3 /Users/ishikawasuguru/AI_コンサル/HP作成/tools/google_oauth_gsc.py
+    python3 /Users/ishikawasuguru/Desktop/claude/AI/HP/tools/google_oauth_gsc.py
 
 1. 表示される URL をブラウザで開く（Search Console と GA4 の所有者アカウントでログイン）
 2. 「許可」を押すと localhost に戻り「認証が完了しました」と表示される

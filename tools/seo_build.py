@@ -77,16 +77,16 @@ CAT_RULES = {
     "finance": [
         "cashflow", "gross-margin", "fixed-cost", "loan-repayment", "receivables", "invoice-amount",
         "invoice-registration", "denshi-chobo", "price-revision", "quote-comparison", "subsidy",
-        "new-client-credit", "ai-accounting-automation", "ai-cost-roi", "discount-records", "purchase-price",
+        "new-client-credit", "ai-accounting-automation", "ai-cost-roi", "discount-records", "purchase-price", "consumables", "vehicle-cost", "utility-usage", "business-trip", "entertainment-expense", "shipping-cost", "payment-fee", "insurance-coverage",
     ],
     "sales-customer": [
         "lost-deal", "dormant-customer", "complaint-first", "customer-list", "survey-freetext",
         "contract-renewal", "ai-sales-email", "ai-customer-support", "ai-sns-marketing", "ai-sales-growth",
-        "ai-competitor", "promotion-campaign",
+        "ai-competitor", "promotion-campaign", "acquisition-channels",
     ],
     "operations": [
         "near-miss", "returns-defect", "equipment-inspection", "spec-change", "subcontractor", "license-expiry", "waste-loss",
-        "delivery-delay", "paper-document", "bcp-", "ai-inventory", "ai-meeting-minutes", "ai-knowledge",
+        "delivery-delay", "paper-document", "bcp-", "ai-inventory", "lending-checkout", "job-hours", "paid-leave", "ai-meeting-minutes", "ai-knowledge",
         "ai-contract-review", "ai-presentation", "ai-data-analysis", "ai-recruitment",
     ],
     "ai-basics": ["ai-adoption-mistakes", "ai-automation-one-person", "ai-prompt-techniques", "ai-tools-for-business"],
@@ -103,6 +103,13 @@ def categorize(slug: str) -> str:
 # ---------------------------------------------------------------- 短縮タイトル
 TITLE_OVERRIDES = {
     # 自動短縮で意味が落ちるものは手で指定
+    "claude-code-insurance-coverage-records": "Claude Codeで保険の加入状況を整える｜中小企業向け",
+    "claude-code-payment-fee-records": "Claude Codeで支払手数料の記録を整える｜中小企業向け",
+    "claude-code-shipping-cost-records": "Claude Codeで送料と配送の記録を整える｜中小企業向け",
+    "claude-code-entertainment-expense-records": "Claude Codeで交際費と手土産の記録を整える｜中小企業向け",
+    "claude-code-business-trip-records": "Claude Codeで出張の費用と目的を整える｜中小企業向け",
+    "claude-code-paid-leave-records": "Claude Codeで有給休暇の記録を整える｜中小企業向け",
+    "claude-code-utility-usage-records": "Claude Codeで光熱費の記録を整える｜中小企業向け",
     "claude-code-cybozu-office-integration": "Claude Code × サイボウズ Office連携で申請・掲示板を自動化",
     "claude-code-google-business-profile-integration": "Claude Code × Googleビジネスプロフィールで口コミ返信を自動化",
     "claude-code-google-calendar-integration": "Claude Code × Googleカレンダー連携で予定調整を自動化",
@@ -484,7 +491,7 @@ def normalize_head(a: Article, rel: list[Article]) -> str:
     for pat in HEAD_STRIP:
         head = re.sub(pat, "", head, flags=re.S | re.I)
     head = re.sub(r"\n{3,}", "\n\n", head)
-    head = re.sub(r"<title>.*?</title>", f"<title>{esc(a.short)} | {BRAND}</title>", head, count=1, flags=re.S)
+    head = re.sub(r"<title>.*?</title>", f"<title>{esc(a.short)}</title>", head, count=1, flags=re.S)
     head = re.sub(r'(<meta charset="UTF-8">)', r"\1" + TRACKING.replace("\\", "\\\\"), head, count=1, flags=re.I)
     head = head.rstrip() + "\n" + build_head(a, rel) + "\n"
     return head + "</head>" + rest
@@ -652,7 +659,7 @@ def build_blog_index(arts: list[Article], by_slug: dict):
         counts[a.category] = counts.get(a.category, 0) + 1
     cards = {}
     def collect(m):
-        slug = m.group(1)[:-5]
+        slug = re.sub(r"\.html$", "", m.group(1))
         a = by_slug.get(slug)
         if a:
             cards[slug] = rebuild_card(m.group(0), a)
@@ -695,7 +702,7 @@ def build_blog_index(arts: list[Article], by_slug: dict):
                     lambda m: m.group(1) + "Category" + m.group(2) + esc(name) + m.group(3) + esc(desc) + m.group(4), cs, count=1, flags=re.S)
         cs = re.sub(r'<nav class="cat-nav".*?</nav>', cat_nav(slug, counts).replace("\\", "\\\\"), cs, count=1, flags=re.S)
         def keep(m):
-            a = by_slug.get(m.group(1)[:-5])
+            a = by_slug.get(re.sub(r"\.html$", "", m.group(1)))
             return m.group(0) if (a and a.category == slug) else ""
         cs = CARD_RE.sub(keep, cs)
         cs = re.sub(r"\n(\s*\n){2,}", "\n", cs)

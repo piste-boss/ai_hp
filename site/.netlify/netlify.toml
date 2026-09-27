@@ -1,12 +1,12 @@
-functionsDirectory = "/Users/ishikawasuguru/AI_コンサル/HP作成/site/netlify/functions"
+functionsDirectory = "/Users/ishikawasuguru/Desktop/claude/AI/HP/site/netlify/functions"
 functionsDirectoryOrigin = "default"
 plugins = []
 
 [build]
-publish = "/Users/ishikawasuguru/AI_コンサル/HP作成/site"
+publish = "/Users/ishikawasuguru/Desktop/claude/AI/HP/site"
 publishOrigin = "default"
-base = "/Users/ishikawasuguru/AI_コンサル/HP作成/site"
-functions = "/Users/ishikawasuguru/AI_コンサル/HP作成/site/netlify/functions"
+base = "/Users/ishikawasuguru/Desktop/claude/AI/HP/site"
+functions = "/Users/ishikawasuguru/Desktop/claude/AI/HP/site/netlify/functions"
 
 [build.environment]
 

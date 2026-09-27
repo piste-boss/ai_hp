@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeで光熱費の記録を整える｜中小企業向け</title>
+<meta name="description" content="Claude Codeで検針票・請求書・納入通知書・ウェブ明細に散らばった電気・ガス・水道の記録を拠点ごと月ごとにそろえ、使用量・金額・単価を並べて増えた分を量と単価に分け、季節の幅を去年と比べて使いすぎと単価上昇を切り分け、検針票の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,光熱費,電気代,ガス代,水道代,使用量,経費削減,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-utility-usage-records.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeで光熱費の記録を整える｜中小企業向け">
+  <meta property="og:description" content="Claude Codeで検針票・請求書・納入通知書・ウェブ明細に散らばった電気・ガス・水道の記録を拠点ごと月ごとにそろえ、使用量・金額・単価を並べて増えた分を量と単価に分け、季節の幅を去年と比べて使いすぎと単価上昇を切り分け、検針票の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-utility-usage-records.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-utility-usage-records-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-21T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="経理・財務・資金">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeで光熱費の記録を整える｜中小企業向け">
+  <meta name="twitter:description" content="Claude Codeで検針票・請求書・納入通知書・ウェブ明細に散らばった電気・ガス・水道の記録を拠点ごと月ごとにそろえ、使用量・金額・単価を並べて増えた分を量と単価に分け、季節の幅を去年と比べて使いすぎと単価上昇を切り分け、検針票の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-utility-usage-records-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-utility-usage-records.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-utility-usage-records.html"},"url":"https://www.piste-ai.com/blog/claude-code-utility-usage-records.html","headline":"Claude Codeで電気・ガス・水道の使用量と料金の記録を整える！中小企業のための拠点別・月別の光熱費一覧づくりと使いすぎと単価上昇を分けて見る判断材料整理ガイド","alternativeHeadline":"Claude Codeで光熱費の記録を整える｜中小企業向け","description":"Claude Codeで検針票・請求書・納入通知書・ウェブ明細に散らばった電気・ガス・水道の記録を拠点ごと月ごとにそろえ、使用量・金額・単価を並べて増えた分を量と単価に分け、季節の幅を去年と比べて使いすぎと単価上昇を切り分け、検針票の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-utility-usage-records-og.jpg","width":1200,"height":800},"datePublished":"2026-09-21T09:00:00+09:00","dateModified":"2026-09-21T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"経理・財務・資金","keywords":["Claude Code","光熱費","電気代","ガス代","水道代","使用量","経費削減","業務効率化","中小企業"],"wordCount":6953,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"経理・財務・資金","item":"https://www.piste-ai.com/blog/category-finance.html"},{"@type":"ListItem","position":4,"name":"Claude Codeで光熱費の記録を整える｜中小企業向け","item":"https://www.piste-ai.com/blog/claude-code-utility-usage-records.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-utility-usage-records.html#faq","mainEntity":[{"@type":"Question","name":"拠点が一つでも必要ですか","acceptedAnswer":{"@type":"Answer","text":"拠点が一つでも、電気・ガス・水道の三つと二年分の月で七十行ほどの一覧になり、最初の一覧づくりは半日で終わります。拠点が一つのうちに検針票の置き場と月に一度の確認の決まりをつくっておく方が、拠点が増えたときに楽です。"}},{"@type":"Question","name":"検針票を捨ててしまっていて、二年分がそろいません","acceptedAnswer":{"@type":"Answer","text":"電力会社やガス会社のウェブの明細には、過去一年から二年分の使用量が残っていることが多くあります。まずそこから拾い、ないものは帳簿の金額だけを並べ、使用量は空欄で残します。過去は金額だけ、これからは量と金額の両方、で十分です。"}},{"@type":"Question","name":"自社ビルではなく、家賃に電気代が含まれている場合はどうしますか","acceptedAnswer":{"@type":"Answer","text":"家賃の中の電気代は、貸主からの明細に使用量が書かれていればそれを拾い、金額だけの場合は金額のみを並べます。含まれている分はその旨を項目の欄に残させ、自社で契約している分と分けて集計します。混ぜると単価が出せなくなります。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"二年分の検針票と請求書を渡して最初の一覧が出るまでは、拠点の数にもよりますが一時間ほどです。拠点名と期間のそろえ直しと帳簿との突き合わせに数日、そのあとは月に一度、その月の拠点ごとの使用量と単価を出させて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeで電気・ガス・水道の使用量と料金の記録を整える！中小企業のための拠点別・月別の光熱費一覧づくりと使いすぎと単価上昇を分けて見る判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-finance.html">経理・財務・資金</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-21">公開日：2026年9月21日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-utility-usage-records.webp" alt="Claude Codeで電気・ガス・水道の使用量と料金の記録を整える！中小企業のための拠点別・月別の光熱費一覧づくりと使いすぎと単価上昇を分けて見る判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>事務所・工場・倉庫・店舗など複数の拠点に電気・ガス・水道の請求が届き、検針票・請求書・二か月に一度の納入通知書・ウェブの明細に分かれたまま帳簿では水道光熱費の一行にまとまって消え、拠点ごと月ごとに使った量と払った金額を一覧で見たことがない製造加工・飲食小売・介護医療・建設リフォーム・士業サービスなどの中小企業</li><li><strong>できるようになること：</strong>散らばった記録を拠点ごと月ごとにそろえ（水道の二か月分は一か月ずつに割る）、金額を使用量で割った単価を出し、前年同月より増えた分を使用量の増加分と単価の上昇分に分け、春秋を基準にした夏冬の幅を去年と今年で並べて、使い方で減らせる分・契約でしか減らせない分・設備を替えないと減らない分を切り分け、検針票の置き場を決めて月に一度確かめる運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、過去二年分（残っている期間だけでも可）の電気の検針票かウェブの明細・ガスの請求書・水道の納入通知書、拠点ごとの契約の種類、帳簿の水道光熱費の合計（一覧との突き合わせ用）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「今月の電気代、去年より高い気がする」「工場と事務所と倉庫で、どこがいちばん使っているか分からない」「値上げのせいなのか、うちが使いすぎているのか、どちらなのか説明できない」。中小企業では、電気、ガス、水道の請求書が毎月届き、金額を見て「高いな」と思いながら支払って終わりになっています。ところが、拠点ごと、月ごとに、使った量と払った金額を一覧で並べて見たことがある会社はほとんどありません。電気は電力会社の検針票かウェブの明細、ガスはガス会社の請求書、水道は二か月に一度の納入通知書と、届く相手も周期も違い、帳簿では「水道光熱費」の一行にまとまって消えていきます。</p>
+<p>その結果、何が起きるか。単価が上がって高くなったのか、使う量が増えて高くなったのかが分からないまま、「節電しよう」と社内に呼びかけて終わる。夏と冬に増えるのは当たり前なのに、その当たり前の幅がどれくらいなのかを誰も知らない。倉庫の電気が夜も点いているのか、古い空調が効率を落としているのかは、金額の合計からは見えない。<strong>光熱費の本当の問題は、金額が高いことではなく、使った量と単価と季節の三つを分けて並べたことがないため、手を打てるところと打てないところの区別がつかないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、検針票、請求書、納入通知書、ウェブの明細に散らばった電気・ガス・水道の記録を拠点ごと月ごとの一覧にそろえ、使った量と払った金額と一単位あたりの単価を並べ、使いすぎで増えた分と単価の上昇で増えた分を分けて見る材料を整えるまでの手順を、非エンジニアの方向けに整理します。設備を替えるか、契約を見直すか、使い方を変えるかを決めるのは人の判断。機械に任せるのは、<strong>散らばった記録を集めて、拠点と月でそろえて、量と単価に分けて並べる作業</strong>です。</p>
+<div class="toc"><h2>目次</h2><ul><li><a href="#s1">光熱費が「見えない」3つの理由</a></li><li><a href="#s2">機械に任せる範囲と、人が決める範囲</a></li><li><a href="#s3">実務5ステップ</a></li><li><a href="#s4">頼み方の3原則</a></li><li><a href="#s5">つまずきやすい5つの型</a></li><li><a href="#s6">業種別の効きどころ</a></li><li><a href="#s7">よくあるご質問</a></li><li><a href="#s8">まとめ</a></li></ul></div>
+<h2 id="s1">光熱費が「見えない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-utility-usage-records-01.webp" alt="光熱費が「見えない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>見えないのは、経理の担当者が記録をさぼっているからではありません。見えない構造が、仕事の側にあります。</p>
+<h3>1. 三つの相手から、三つの周期で、別々の紙が届く</h3>
+<p>電気は毎月、ガスも毎月、水道は二か月に一度。届く相手も紙の形も違い、電気は契約の種類ごとに請求が分かれることもあります。<strong>同じ一か月の光熱費が、三つの相手から違う周期で届き、帳簿では水道光熱費という一つの科目にまとまって入ります</strong>。帳簿は合計を見せてくれますが、どの拠点のどの月に、何がどれだけ増えたかは教えてくれません。</p>
+<h3>2. 「使った量」が請求書の隅にしか書かれていない</h3>
+<p>請求書でまず目に入るのは金額です。電気なら使用量のキロワット時、ガスなら立方メートル、水道なら立方メートルの数字は、紙の隅か明細の二枚目にあります。<strong>量を見ないまま金額だけを見ていると、単価の上昇と使いすぎの区別がつきません</strong>。前年より二割高い電気代は、単価が二割上がったのなら使い方の問題ではなく、量が二割増えたのなら使い方の問題です。</p>
+<h3>3. 季節の「当たり前の幅」を誰も知らない</h3>
+<p>夏の空調と冬の暖房で光熱費が増えるのは当たり前です。しかし、<strong>自社の夏が春のどれくらい増しなのか、去年の夏と今年の夏で同じ幅なのかを数字で知っている会社はほとんどありません</strong>。当たり前の幅が分かっていないと、当たり前の増え方と、何かがおかしい増え方を分けられず、毎年夏に「高い」と言って終わります。</p>
+<blockquote>光熱費が見えないのは、三つの相手から違う周期で紙が届き、使った量が隅にしか書かれておらず、季節の幅を知らないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">機械に任せる範囲と、人が決める範囲</h2>
+<p>大前提として、<strong>設備を替えるか、契約を切り替えるか、使い方の決まりを変えるか、どの拠点から手をつけるかは会社の運営の判断</strong>であり、人が決めることです。機械に任せるのは、散らばった記録を集めて拠点と月でそろえ、量と金額と単価を横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>検針票・請求書・納入通知書・ウェブの明細から、拠点・種類・検針期間・使用量・金額・契約の種類の記載を拾い出す</td></tr><tr><td>拠点名と期間のそろえ直し</td><td>機械</td><td>「本社」「事務所」「二階」のような呼び方の違いを一つの拠点にまとめ、二か月分の水道を一か月ずつに割って月の単位をそろえる</td></tr><tr><td>一覧化</td><td>機械</td><td>拠点・年月・種類・使用量・金額を一行にそろえ、拠点ごと種類ごとに二年分を並べる</td></tr><tr><td>単価の計算</td><td>機械</td><td>金額を使用量で割り、電気は一キロワット時あたり、ガスと水道は一立方メートルあたりの単価を月ごとに出す</td></tr><tr><td>季節の幅の集計</td><td>機械</td><td>拠点ごと種類ごとに、春と秋の平均を基準にして夏と冬が何割増しかを出し、去年と今年で並べる</td></tr><tr><td>増えた分の切り分け</td><td>機械</td><td>前年同月より増えた金額を、使用量が増えた分と単価が上がった分に分けて並べる</td></tr><tr><td>偏りの検出</td><td>機械</td><td>前年同月より使用量が二割以上増えた拠点と月、単価が全拠点の平均より一割以上高い契約、季節の幅が去年より広がった拠点に印をつける</td></tr><tr><td>見直し案の下書き</td><td>機械</td><td>印のついた拠点について、使い方の決まりを変えた場合・契約を変えた場合・設備を替えた場合の年間の差の案を書く</td></tr><tr><td>設備・契約・使い方の判断</td><td>人</td><td>どの拠点のどこに手をつけるか、設備を替えるか、契約を変えるか、使い方の決まりを変えるかを決める</td></tr></tbody></table>
+<p>境界線は「並べる」と「決める」の間にあります。機械が出すのは、拠点ごと月ごとの量と単価の並びと、増え方がおかしい拠点の印までです。その先の、設備に投資するか、使い方を変えるかの線は、人が引きます。</p>
+<h2 id="s3">実務5ステップ</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-utility-usage-records-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：過去二年分の検針票と請求書を洗い出す</h3>
+<p>電気の検針票かウェブの明細、ガスの請求書、水道の納入通知書を、拠点ごとに二年分集め、Claude Codeに「この二年の電気・ガス・水道を拠点ごと月ごとの一覧にし、使用量・金額・契約の種類を並べてほしい」と頼みます。一年分では季節の比較ができないため、<strong>二年分が最初の単位</strong>です。紙が見つからない月は、<strong>空欄のまま残させます</strong>。空欄が多い拠点ほど、記録の置き場が決まっていない拠点です。空欄そのものが、最初の発見になります。</p>
+<h3>ステップ2：拠点名と期間をそろえる</h3>
+<p>同じ場所が「本社」「事務所」「一階」のように三通りで呼ばれていたり、検針の期間が月の途中から途中までだったりします。<strong>拠点の呼び名を一つにそろえ、検針期間を月に読み替え、二か月分で届く水道は一か月ずつに割って、月の単位をそろえます</strong>。あわせて、事務所・工場・倉庫・店舗・寮のような拠点の種類をつけます。種類が違う拠点どうしを比べても、多い少ないに意味がないからです。</p>
+<h3>ステップ3：単価を出し、増えた分を「量」と「単価」に分ける</h3>
+<p>一覧を拠点ごと種類ごとにまとめ、金額を使用量で割って月ごとの単価を出します。<strong>前年同月より増えた金額を、使用量が増えたことで増えた分と、単価が上がったことで増えた分に分けます</strong>。この切り分けが、光熱費を見る物差しになります。単価の上昇で増えた分は使い方では減らせず、契約の見直しでしか手が打てません。使用量の増加で増えた分は、使い方と設備で手が打てます。同じ「二割高い」でも、打つ手がまったく違います。</p>
+<h3>ステップ4：季節の幅を出し、おかしい増え方を分ける</h3>
+<p>春と秋の平均を基準にして、夏と冬がそれぞれ何割増しかを拠点ごとに出し、去年と今年で並べます。<strong>去年の夏が春の四割増しで、今年の夏が七割増しなら、暑さの差を差し引いても何かが変わった拠点</strong>です。空調の効率が落ちたか、稼働の時間が延びたか、使い方が変わったかのどれかです。逆に、季節に関係なく毎月じわじわ増えている拠点は、夜間や休日に何かが動いたままになっている拠点です。ここで初めて、「倉庫の電気は冬より夏が増えるはずなのに、去年の秋から毎月増えている」「二階の事務所だけ単価が他より一割高い契約のままだった」という形が見えます。</p>
+<h3>ステップ5：検針票の置き場を決め、月に一度だけ確かめる</h3>
+<p>一覧ができたら、届いた検針票と請求書を拠点ごとの一つの置き場に入れる、あるいはウェブの明細を月初に一度保存するという一つの決まりだけつくります。<strong>月に一度、その月の拠点ごとの使用量と単価を出させ、前年同月より使用量が二割以上増えた拠点と、単価が上がった契約を出させます</strong>。細かい運用にすると続きません。一か月に一度、十五分で終わる形にします。</p>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「光熱費」に何を含めるかを、こちらから言葉で決める</h3>
+<p>電気・ガス・水道は分かりやすいですが、灯油や重油、プロパンのボンベ、給湯の契約、店舗の共益費に含まれる電気、自販機の電気、社員寮の分を含めるかどうかで数字は変わります。機械に任せる前に、<strong>含めるものと含めないものをこちらから指定します</strong>。おすすめは、その拠点を動かすのに使ったエネルギーをすべて含めることです。含めない物が多いほど、実態より少なく見えます。</p>
+<h3>原則2：使用量は「検針票にある数字」で書かせ、推測で埋めさせない</h3>
+<p>紙が見つからない月を、機械は「前後の月から平均して」埋めたがります。<strong>記録にない使用量は空欄のまま残させ、推測で埋めさせません</strong>。推測で埋めた一覧は、季節の幅が整って見える分だけ、増え方の異常を見逃します。空欄は、次に紙を探す場所を教えてくれる印です。</p>
+<h3>原則3：一覧の合計と、帳簿の水道光熱費を突き合わせる</h3>
+<p>一覧に並んだ金額の合計が、帳簿の水道光熱費の合計と合っているかを突き合わせさせます。<strong>合計が帳簿より小さい場合、集めきれていない請求書があります</strong>。たいていは、別の科目に入っている灯油代か、家賃と一緒に払っている共益費の中の電気です。差額の出どころを探すことが、記録の穴を見つける近道になります。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：金額だけ見て、使用量を見ない</h3>
+<p>前年より金額が高い月を「問題の月」と決めがちですが、単価が上がっていれば金額が上がるのは当たり前です。<strong>金額と使用量と単価の三つを並べて見ます</strong>。金額は増えているのに使用量は減っている拠点は、使い方の努力が単価の上昇に打ち消されているだけで、責める相手はいません。</p>
+<h3>型2：種類の違う拠点どうしを比べる</h3>
+<p>工場と事務所を電気の使用量で比べても、意味のある差は出ません。<strong>同じ種類の拠点どうし、あるいは同じ拠点の去年と今年で比べます</strong>。種類をつけずに全拠点を一列に並べると、多い拠点と少ない拠点が分かるだけで、次の手が決まりません。</p>
+<h3>型3：水道の二か月分を、そのまま一か月に置く</h3>
+<p>水道は二か月に一度の請求のため、そのまま並べると二か月に一度だけ跳ね上がる月ができます。<strong>二か月分は一か月ずつに割って、電気やガスと同じ月の単位にそろえます</strong>。そろえ直しは地味ですが、飛ばすと季節の幅も前年比も全部ずれます。</p>
+<h3>型4：夏と冬の増加を、全部「季節のせい」にする</h3>
+<p>夏に増えるのは当たり前だからと、夏の数字を見ずに済ませると、空調の効率が落ちたことに気づけません。<strong>季節の幅を去年と今年で並べ、幅が広がった拠点だけを見ます</strong>。当たり前の増え方の中に、当たり前でない増え方が隠れています。</p>
+<h3>型5：一覧をつくって、決まりを一つも変えない</h3>
+<p>一覧を眺めて「やっぱり倉庫が多い」と納得して終わると、次の月も同じお金が出ていきます。月に一度、検針票の置き場か、夜間の消し忘れの確認か、一つでよいので決まりを変えます。変えた決まりが、次の月の数字の根拠になります。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>製造・加工</td><td>工場の電気を月の稼働日数で割って一日あたりにし、稼働が減った月に使用量が減っていない設備を見つける。休日に動いたままの機械やコンプレッサーの確認に使う</td></tr><tr><td>飲食・小売</td><td>店舗ごとのガスと電気を売上と並べ、売上が減っても使用量が減らない店を見つける。冷蔵設備の老朽化と営業時間外の消し忘れを分ける材料にする</td></tr><tr><td>介護・医療</td><td>施設ごとの水道と給湯を利用者数で割り、一人あたりの使用量が増えた施設を見つける。漏水の早期発見と設備更新の順番決めに使う</td></tr><tr><td>建設・リフォーム</td><td>事務所と資材倉庫と現場事務所の電気を分け、現場が終わっても契約が残ったままの拠点を見つける。仮設の契約の解約漏れの確認に使う</td></tr><tr><td>士業・サービス</td><td>事務所の電気を在席の人数で割り、在宅勤務の日が増えても使用量が減らない月を見つける。空調の設定と点けっぱなしの機器の見直しに使う</td></tr></tbody></table>
+<p>どの業種でも共通するのは、<strong>帳簿で一行にまとまっていた光熱費を、拠点ごとの使用量と単価と季節の幅という三つの物差しで並べ直すこと</strong>です。並べ直すと、使い方で減らせる分と、契約でしか減らせない分と、設備を替えないと減らない分が分かれて見えてきます。</p>
+<h2 id="s7">よくあるご質問</h2>
+<h3>拠点が一つでも必要ですか</h3>
+<p>拠点が一つでも、電気・ガス・水道の三つと二年分の月で七十行ほどの一覧になり、最初の一覧づくりは半日で終わります。拠点が一つのうちに検針票の置き場と月に一度の確認の決まりをつくっておく方が、拠点が増えたときに楽です。</p>
+<h3>検針票を捨ててしまっていて、二年分がそろいません</h3>
+<p>電力会社やガス会社のウェブの明細には、過去一年から二年分の使用量が残っていることが多くあります。まずそこから拾い、ないものは帳簿の金額だけを並べ、使用量は空欄で残します。過去は金額だけ、これからは量と金額の両方、で十分です。</p>
+<h3>自社ビルではなく、家賃に電気代が含まれている場合はどうしますか</h3>
+<p>家賃の中の電気代は、貸主からの明細に使用量が書かれていればそれを拾い、金額だけの場合は金額のみを並べます。含まれている分はその旨を項目の欄に残させ、自社で契約している分と分けて集計します。混ぜると単価が出せなくなります。</p>
+<h3>どれくらいの時間がかかりますか</h3>
+<p>二年分の検針票と請求書を渡して最初の一覧が出るまでは、拠点の数にもよりますが一時間ほどです。拠点名と期間のそろえ直しと帳簿との突き合わせに数日、そのあとは月に一度、その月の拠点ごとの使用量と単価を出させて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>光熱費が見えないのは、三つの相手から違う周期で紙が届き、使用量が隅にしか書かれておらず、季節の幅を知らないという構造の問題</li>
+<li>設備を替えるか、契約を変えるか、使い方を変えるかは人の判断。集めて、そろえて、量と単価に分けて並べるのは機械の仕事</li>
+<li>実務は、二年分の洗い出し、拠点名と期間のそろえ直し、増えた分を量と単価に分ける、季節の幅を去年と今年で並べる、検針票の置き場を決めて月に一度確かめる、の五つ</li>
+<li>光熱費に何を含めるかをこちらから指定し、使用量は検針票にある数字で書かせ、帳簿の水道光熱費と突き合わせる</li>
+<li>金額と使用量と単価の三つで見る。種類の違う拠点は比べない。水道は月にそろえ、季節の幅は去年と比べ、月に一度、決まりを一つ変える</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-fixed-cost-review.html"><img src="../images/blog-claude-code-fixed-cost-review-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで毎月の固定費を洗い出す</span></a><a class="seo-related-card" href="claude-code-consumables-purchase-records.html"><img src="../images/blog-claude-code-consumables-purchase-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで消耗品の購入記録を整える</span></a><a class="seo-related-card" href="claude-code-company-vehicle-cost-records.html"><img src="../images/blog-claude-code-company-vehicle-cost-records-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">経理・財務・資金</span><span class="seo-related-title">Claude Codeで社用車の燃料と走行の記録を整える</span></a></div>
+<p class="seo-related-more"><a href="category-finance.html">「経理・財務・資金」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>

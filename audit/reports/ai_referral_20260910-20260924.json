@@ -1,0 +1,410 @@
+{
+ "start": "2026-09-10",
+ "end": "2026-09-24",
+ "ga4": {
+  "error": null,
+  "ai_sessions": [
+   {
+    "ai": "ChatGPT",
+    "source": "chatgpt.com",
+    "medium": "ai-assistant",
+    "sessions": 1,
+    "engaged": 1,
+    "key_events": 0
+   }
+  ],
+  "ai_pages": [],
+  "total_sessions": 247,
+  "sources": [
+   {
+    "source": "google",
+    "medium": "organic",
+    "sessions": 120
+   },
+   {
+    "source": "(direct)",
+    "medium": "(none)",
+    "sessions": 71
+   },
+   {
+    "source": "bing",
+    "medium": "organic",
+    "sessions": 42
+   },
+   {
+    "source": "yahoo",
+    "medium": "organic",
+    "sessions": 7
+   },
+   {
+    "source": "l.instagram.com",
+    "medium": "referral",
+    "sessions": 5
+   },
+   {
+    "source": "(not set)",
+    "medium": "(not set)",
+    "sessions": 3
+   },
+   {
+    "source": "chatgpt.com",
+    "medium": "ai-assistant",
+    "sessions": 1
+   },
+   {
+    "source": "facebook.com",
+    "medium": "referral",
+    "sessions": 1
+   }
+  ]
+ },
+ "gsc": {
+  "https://www.piste-ai.com/": {
+   "error": {
+    "error": 403,
+    "body": "{\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"User does not have sufficient permission for site 'https://www.piste-ai.com/'. See also: https://support.google.com/webmasters/answer/2451999.\",\n    \"errors\": [\n      {\n        \"message\": \"User does not have sufficient permission for site 'https://www."
+   }
+  },
+  "sc-domain:piste-ai.com": {
+   "total": {
+    "clicks": 89,
+    "impressions": 1053,
+    "ctr": 0.08452041785375118,
+    "position": 8.515669515669515
+   },
+   "searchAppearance": [],
+   "top_pages": [
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+     ],
+     "clicks": 24,
+     "impressions": 345,
+     "ctr": 0.06956521739130435,
+     "position": 7.936231884057971
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+     ],
+     "clicks": 6,
+     "impressions": 8,
+     "ctr": 0.75,
+     "position": 1.75
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-paypay-integration"
+     ],
+     "clicks": 5,
+     "impressions": 99,
+     "ctr": 0.050505050505050504,
+     "position": 4.121212121212121
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-googleform-integration"
+     ],
+     "clicks": 3,
+     "impressions": 23,
+     "ctr": 0.13043478260869565,
+     "position": 6.304347826086956
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-line-official-integration"
+     ],
+     "clicks": 3,
+     "impressions": 37,
+     "ctr": 0.08108108108108109,
+     "position": 9.243243243243244
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-rakuraku-seisan-integration"
+     ],
+     "clicks": 3,
+     "impressions": 14,
+     "ctr": 0.21428571428571427,
+     "position": 15.785714285714286
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-threads-integration"
+     ],
+     "clicks": 3,
+     "impressions": 35,
+     "ctr": 0.08571428571428572,
+     "position": 5.914285714285715
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-base-integration"
+     ],
+     "clicks": 2,
+     "impressions": 3,
+     "ctr": 0.6666666666666666,
+     "position": 2.333333333333333
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-cashflow-forecast"
+     ],
+     "clicks": 2,
+     "impressions": 6,
+     "ctr": 0.3333333333333333,
+     "position": 7.833333333333333
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-pinterest-integration"
+     ],
+     "clicks": 2,
+     "impressions": 6,
+     "ctr": 0.3333333333333333,
+     "position": 4
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-smaregi-integration"
+     ],
+     "clicks": 2,
+     "impressions": 15,
+     "ctr": 0.13333333333333333,
+     "position": 5.533333333333333
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-yahoo-shopping-integration"
+     ],
+     "clicks": 2,
+     "impressions": 5,
+     "ctr": 0.4,
+     "position": 3.8
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+     ],
+     "clicks": 2,
+     "impressions": 32,
+     "ctr": 0.0625,
+     "position": 13.25
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/"
+     ],
+     "clicks": 1,
+     "impressions": 20,
+     "ctr": 0.05,
+     "position": 5.65
+    },
+    {
+     "keys": [
+      "https://www.piste-ai.com/about"
+     ],
+     "clicks": 1,
+     "impressions": 46,
+     "ctr": 0.021739130434782608,
+     "position": 6.826086956521739
+    }
+   ],
+   "top_queries": [
+    {
+     "keys": [
+      "claude instagram 連携"
+     ],
+     "clicks": 3,
+     "impressions": 18,
+     "ctr": 0.16666666666666666,
+     "position": 8.166666666666668
+    },
+    {
+     "keys": [
+      "claude インスタ 分析"
+     ],
+     "clicks": 1,
+     "impressions": 7,
+     "ctr": 0.14285714285714285,
+     "position": 11.142857142857142
+    },
+    {
+     "keys": [
+      "claude 支払い方法 paypay"
+     ],
+     "clicks": 1,
+     "impressions": 48,
+     "ctr": 0.020833333333333332,
+     "position": 5.25
+    },
+    {
+     "keys": [
+      "ai"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 1
+    },
+    {
+     "keys": [
+      "ai 売上向上 方法"
+     ],
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0,
+     "position": 19.25
+    },
+    {
+     "keys": [
+      "claude code freee"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 16
+    },
+    {
+     "keys": [
+      "claude code freee会計"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 9
+    },
+    {
+     "keys": [
+      "claude code instagram"
+     ],
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0,
+     "position": 8.5
+    },
+    {
+     "keys": [
+      "claude code instagram 自動投稿"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 14
+    },
+    {
+     "keys": [
+      "claude code remote"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 56
+    },
+    {
+     "keys": [
+      "claude code sns運用"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 9
+    },
+    {
+     "keys": [
+      "claude code threads 自動化"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 3
+    },
+    {
+     "keys": [
+      "claude code インスタ 自動化"
+     ],
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0,
+     "position": 12.5
+    },
+    {
+     "keys": [
+      "claude code インスタ運用"
+     ],
+     "clicks": 0,
+     "impressions": 4,
+     "ctr": 0,
+     "position": 11.25
+    },
+    {
+     "keys": [
+      "claude code ショート動画"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 9
+    },
+    {
+     "keys": [
+      "claude code 経理"
+     ],
+     "clicks": 0,
+     "impressions": 5,
+     "ctr": 0,
+     "position": 68.2
+    },
+    {
+     "keys": [
+      "claude instagram"
+     ],
+     "clicks": 0,
+     "impressions": 2,
+     "ctr": 0,
+     "position": 7
+    },
+    {
+     "keys": [
+      "claude paypay"
+     ],
+     "clicks": 0,
+     "impressions": 11,
+     "ctr": 0,
+     "position": 3
+    },
+    {
+     "keys": [
+      "claude remote control"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 62
+    },
+    {
+     "keys": [
+      "claude thread"
+     ],
+     "clicks": 0,
+     "impressions": 1,
+     "ctr": 0,
+     "position": 7
+    }
+   ],
+   "sitemaps": [
+    {
+     "path": "https://www.piste-ai.com/sitemap.xml",
+     "lastDownloaded": "2026-09-20",
+     "errors": "0",
+     "submitted": [
+      "180"
+     ],
+     "indexed": [
+      "0"
+     ]
+    }
+   ]
+  }
+ }
+}

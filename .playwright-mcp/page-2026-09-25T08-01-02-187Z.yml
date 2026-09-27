@@ -1,0 +1,221 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Bing 検索に戻る" [ref=e3] [cursor=pointer]:
+      - /url: /?FORM=Z9FD1
+      - heading "Bing 検索に戻る" [level=1] [ref=e4]
+    - navigation "検索フィルター" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "すべて" [ref=e8] [cursor=pointer]:
+            - /url: /search?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&FORM=HDRSC1
+        - listitem [ref=e9]:
+          - link "Web" [ref=e10] [cursor=pointer]:
+            - /url: /search?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&webscp=1&FORM=HDRWSC
+        - link "検索" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: 検索
+        - listitem [ref=e14]:
+          - link "画像" [ref=e15] [cursor=pointer]:
+            - /url: /images/search?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&FORM=HDRSC3
+        - listitem [ref=e16]:
+          - link "動画" [ref=e17] [cursor=pointer]:
+            - /url: /videos/search?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&FORM=HDRSC4
+        - listitem [ref=e18]:
+          - link "地図" [ref=e19] [cursor=pointer]:
+            - /url: /maps?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&FORM=HDRSC6
+        - listitem [ref=e20]:
+          - link "ニュース" [ref=e21] [cursor=pointer]:
+            - /url: /news/search?q=%E7%A2%A7%E5%8D%97%20AI%E5%B0%8E%E5%85%A5%20%E6%94%AF%E6%8F%B4&FORM=HDRSC7
+      - button "さらに表示" [ref=e23] [cursor=pointer]:
+        - text: さらに表示
+        - img [ref=e25]
+    - complementary "アカウント リワードと設定" [ref=e27]:
+      - button "Microsoft Rewards" [ref=e28] [cursor=pointer]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: Rewards
+          - img [ref=e73]
+      - link "ログイン" [ref=e45] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - button "ログイン" [ref=e48]
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - text: コンテンツは AI を使用して生成されました。
+        - link "詳細情報" [ref=e53] [cursor=pointer]:
+          - /url: https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?
+      - list [ref=e54]:
+        - listitem [ref=e55]:
+          - generic [ref=e56]:
+            - generic "あなたが送信しました。 碧南 AI導入 支援" [ref=e57]: 碧南 AI導入 支援
+            - generic [ref=e85]:
+              - button "コピー" [ref=e86] [cursor=pointer]:
+                - img [ref=e87]
+              - generic [ref=e90]:
+                - button "いいね!" [ref=e91]:
+                  - img [ref=e92]
+                - button "興味なし" [ref=e94]:
+                  - img [ref=e95]
+          - iframe [ref=e98]:
+            - main "検索結果" [ref=f19e3]:
+              - generic [ref=f19e4]:
+                - list [ref=f19e5]:
+                  - listitem [ref=f19e6]:
+                    - region "Copilot 検索" [ref=f19e10]:
+                      - button "すべてのリンクを見る" [ref=f19e13] [cursor=pointer]:
+                        - img [ref=f19e14]
+                        - generic [ref=f19e16]: すべてのリンクを見る
+                      - list
+                      - generic [ref=f19e20]:
+                        - generic [ref=f19e24]:
+                          - generic [ref=f19e25]:
+                            - link "Bing 生成検索 画像" [ref=f19e26] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=3399548b55bb9175c3a1d80f461ee2c3a3e43e9736f851654aa909cbaff97c91JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L2ltYWdlcy9zZWFyY2g_cT3noqfljZcgQUnlsI7lhaUg5pSv5o-0&ntb=1
+                              - img [ref=f19e27]
+                              - generic [ref=f19e29]: 画像
+                              - img [ref=f19e30]
+                            - link "Bing 生成検索 動画" [ref=f19e32] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=2d53309d54f7e772f5f74da6e246b00221f735f1576b40523fd138c0b8301e04JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L3ZpZGVvcy9zZWFyY2g_cT3noqfljZcgQUnlsI7lhaUg5pSv5o-0&ntb=1
+                              - img [ref=f19e33]
+                              - generic [ref=f19e35]: 動画
+                              - img [ref=f19e36]
+                          - heading "碧南市では、中小企業・小規模事業者を対象に、AI導入や業務デジタル化を支援する補助金と共同検証制度が用意されています。" [level=2] [ref=f19e38]:
+                            - strong [ref=f19e40]: 碧南市では、中小企業・小規模事業者を対象に、AI導入や業務デジタル化を支援する補助金と共同検証制度が用意されています。
+                          - generic [ref=f19e41]:
+                            - heading "デジタル化・AI導入補助金2026" [level=3] [ref=f19e42]
+                            - list [ref=f19e43]:
+                              - listitem [ref=f19e44]:
+                                - generic [ref=f19e45]:
+                                  - 'link "概要: 中小企業・小規模事業者が自社の課題に合ったITツール（AIを含む）を導入する経費の一部を補助する制度で、業務効率化や売上向上をサポートします。申請者は企業規模や業種に応じた枠を選択可能です" [ref=f19e46] [cursor=pointer]':
+                                    - /url: https://www.bing.com/ck/a?!&&p=58d8536a67b59abe6baaaa178a8639bb32f985b2a245d3d3eb4beb6dded3e678JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbi1jb21wYW55c3VwcG9ydC5qcC9zdWJzaWR5L2VudHJ5LTI2MjYuaHRtbA&ntb=1
+                                    - generic [ref=f19e47]:
+                                      - strong [ref=f19e48]: 概要
+                                      - text: ": 中小企業・小規模事業者が自社の課題に合ったITツール（AIを含む）を導入する経費の一部を補助する制度で、業務効率化や売上向上をサポートします。申請者は企業規模や業種に応じた枠を選択可能です"
+                                  - link "ソースの表示 www.hekinan-companysupport.jp" [ref=f19e50] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=58d8536a67b59abe6baaaa178a8639bb32f985b2a245d3d3eb4beb6dded3e678JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbi1jb21wYW55c3VwcG9ydC5qcC9zdWJzaWR5L2VudHJ5LTI2MjYuaHRtbA&ntb=1
+                                    - button "2 citations" [ref=f19e51]:
+                                      - img [ref=f19e53]
+                                      - strong [ref=f19e56]: "2"
+                                  - text: 。
+                              - listitem [ref=f19e57]:
+                                - generic [ref=f19e58]:
+                                  - 'link "申請期限: 通常枠の5次締切は令和8年9月29日（火）。その他、「インボイス枠」や「セキュリティ対策推進枠」など特別枠もあります" [ref=f19e59] [cursor=pointer]':
+                                    - /url: https://www.bing.com/ck/a?!&&p=0ce3cbd5ee5b22a636d0cae396cf532d521bc255ff3d96b7de5d8bb503590667JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbmNjaS5vci5qcC8_cGFnZV9pZD01NTM2&ntb=1
+                                    - generic [ref=f19e60]:
+                                      - strong [ref=f19e61]: 申請期限
+                                      - text: ": 通常枠の5次締切は"
+                                      - strong [ref=f19e62]: 令和8年9月29日（火）
+                                      - text: 。その他、「インボイス枠」や「セキュリティ対策推進枠」など特別枠もあります
+                                  - link "ソースの表示 碧南商工会議所" [ref=f19e64] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=0ce3cbd5ee5b22a636d0cae396cf532d521bc255ff3d96b7de5d8bb503590667JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbmNjaS5vci5qcC8_cGFnZV9pZD01NTM2&ntb=1
+                                    - button "1 citation" [ref=f19e65]:
+                                      - img [ref=f19e67]
+                                      - strong [ref=f19e70]: "1"
+                                  - text: 。
+                              - listitem [ref=f19e71]:
+                                - generic [ref=f19e72]:
+                                  - strong [ref=f19e73]: 対象経費
+                                  - text: ": AIツールやIT導入にかかる費用の一部で、導入支援だけでなく運用コストも対象となる場合があります。"
+                              - listitem [ref=f19e74]:
+                                - generic [ref=f19e75]:
+                                  - 'link "申請方法: 碧南市経済環境部商工課や碧南商工会議所のウェブサイトから詳細情報・申請書類の確認・提出が可能です" [ref=f19e76] [cursor=pointer]':
+                                    - /url: https://www.bing.com/ck/a?!&&p=58d8536a67b59abe6baaaa178a8639bb32f985b2a245d3d3eb4beb6dded3e678JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbi1jb21wYW55c3VwcG9ydC5qcC9zdWJzaWR5L2VudHJ5LTI2MjYuaHRtbA&ntb=1
+                                    - generic [ref=f19e77]:
+                                      - strong [ref=f19e78]: 申請方法
+                                      - text: ": 碧南市経済環境部商工課や碧南商工会議所のウェブサイトから詳細情報・申請書類の確認・提出が可能です"
+                                  - link "ソースの表示 www.hekinan-companysupport.jp" [ref=f19e80] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=58d8536a67b59abe6baaaa178a8639bb32f985b2a245d3d3eb4beb6dded3e678JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbi1jb21wYW55c3VwcG9ydC5qcC9zdWJzaWR5L2VudHJ5LTI2MjYuaHRtbA&ntb=1
+                                    - button "2 citations" [ref=f19e81]:
+                                      - img [ref=f19e83]
+                                      - strong [ref=f19e86]: "2"
+                                  - text: 。
+                              - listitem [ref=f19e87]:
+                                - generic [ref=f19e95]:
+                                  - img [ref=f19e97]
+                                  - link "2 ソース" [ref=f19e99]
+                            - heading "碧南市の生成AI共同検証制度" [level=3] [ref=f19e100]
+                            - list [ref=f19e101]:
+                              - listitem [ref=f19e102]:
+                                - generic [ref=f19e103]:
+                                  - 'link "概要: 碧南市は2023年12月12日にNECネクサソリューションズ株式会社と生成AI共同検証協定を締結しました。目的は、市職員の業務負担軽減や市民サービス向上を図るためのAI導入・検証です" [ref=f19e104] [cursor=pointer]':
+                                    - /url: https://www.bing.com/ck/a?!&&p=47dfaf6b59d61ed96c78917142e9d00ffb0db19f460c50c02ffd75ba4c1f89d4JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuY2l0eS5oZWtpbmFuLmxnLmpwL3Nvc2hpa2kva2lrYWt1X3phaXNlaS9raWtha3VzZWlzYWt1L2FkbWluaXN0cmF0aW9uLzIwMjYwLmh0bWw&ntb=1
+                                    - generic [ref=f19e105]:
+                                      - strong [ref=f19e106]: 概要
+                                      - text: ": 碧南市は2023年12月12日に"
+                                      - strong [ref=f19e107]: NECネクサソリューションズ株式会社と生成AI共同検証協定
+                                      - text: を締結しました。目的は、
+                                      - strong [ref=f19e108]: 市職員の業務負担軽減や市民サービス向上
+                                      - text: を図るためのAI導入・検証です
+                                  - link "ソースの表示 hekinan.lg.jp" [ref=f19e110] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=47dfaf6b59d61ed96c78917142e9d00ffb0db19f460c50c02ffd75ba4c1f89d4JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuY2l0eS5oZWtpbmFuLmxnLmpwL3Nvc2hpa2kva2lrYWt1X3phaXNlaS9raWtha3VzZWlzYWt1L2FkbWluaXN0cmF0aW9uLzIwMjYwLmh0bWw&ntb=1
+                                    - button "1 citation" [ref=f19e111]:
+                                      - img [ref=f19e113]
+                                      - strong [ref=f19e116]: "1"
+                                  - text: 。
+                              - listitem [ref=f19e117]:
+                                - generic [ref=f19e118]:
+                                  - 'link "検証期間: 2023年4月1日～2024年3月31日（実施テーマや詳細は市の公式ページ参照）" [ref=f19e119] [cursor=pointer]':
+                                    - /url: https://www.bing.com/ck/a?!&&p=47dfaf6b59d61ed96c78917142e9d00ffb0db19f460c50c02ffd75ba4c1f89d4JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuY2l0eS5oZWtpbmFuLmxnLmpwL3Nvc2hpa2kva2lrYWt1X3phaXNlaS9raWtha3VzZWlzYWt1L2FkbWluaXN0cmF0aW9uLzIwMjYwLmh0bWw&ntb=1
+                                    - generic [ref=f19e120]:
+                                      - strong [ref=f19e121]: 検証期間
+                                      - text: ": 2023年4月1日～2024年3月31日（実施テーマや詳細は市の公式ページ参照）"
+                                  - link "ソースの表示 hekinan.lg.jp" [ref=f19e123] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=47dfaf6b59d61ed96c78917142e9d00ffb0db19f460c50c02ffd75ba4c1f89d4JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuY2l0eS5oZWtpbmFuLmxnLmpwL3Nvc2hpa2kva2lrYWt1X3phaXNlaS9raWtha3VzZWlzYWt1L2FkbWluaXN0cmF0aW9uLzIwMjYwLmh0bWw&ntb=1
+                                    - button "1 citation" [ref=f19e124]:
+                                      - img [ref=f19e126]
+                                      - strong [ref=f19e129]: "1"
+                                  - text: 。
+                              - listitem [ref=f19e130]:
+                                - generic [ref=f19e131]:
+                                  - strong [ref=f19e132]: 意義
+                                  - text: ": 企業と自治体が連携してAI活用を検証することで、地域企業のAI導入へのノウハウや事例が蓄積されます。"
+                              - listitem [ref=f19e133]:
+                                - generic [ref=f19e139]:
+                                  - img [ref=f19e141]
+                                  - link "1 ソース" [ref=f19e143]
+                            - heading "サポート窓口" [level=3] [ref=f19e144]
+                            - list [ref=f19e145]:
+                              - listitem [ref=f19e146]:
+                                - generic [ref=f19e147]:
+                                  - strong [ref=f19e148]: 碧南市経済環境部商工課企業応援係
+                                  - text: ": AI導入補助金、補助制度の詳細相談、申請手続きサポート。"
+                              - listitem [ref=f19e149]:
+                                - generic [ref=f19e150]:
+                                  - strong [ref=f19e151]: 碧南商工会議所
+                                  - text: ": 経営計画作成支援、ITツール導入助言、補助金申請サポート。"
+                            - heading "利用のポイント" [level=3] [ref=f19e152]
+                            - list [ref=f19e153]:
+                              - listitem [ref=f19e154]:
+                                - generic [ref=f19e155]: 導入したいAIやツールの費用・効果を整理しておく。
+                              - listitem [ref=f19e156]:
+                                - generic [ref=f19e157]: 支援制度の枠や申請期限を確認する。
+                              - listitem [ref=f19e158]:
+                                - generic [ref=f19e159]: 商工会議所や市役所窓口で書類作成や申請手順を相談することで、採択の可能性を高める。
+                            - generic [ref=f19e160]: 碧南市の企業がAI活用や業務効率化を進めるための制度は整備されており、公式ウェブサイトや商工会議所を活用することで、補助金の申請や共同検証への参加がスムーズに行えます。
+                        - generic [ref=f19e162]:
+                          - link "www.hekinan-companysupport.jp デジタル化・AI導入補助金2026 | 国・県の支援策 | へきなん企業 ... 国・県の支援策 HOME 国・県の支援策 デジタル化・AI導入補助金2026 【第4次申請締切】令和8年8月25日 (火)17時まで デジタル化・AI導入補助金2026 デジタル化・AI導入補助金2026のサイトへ" [ref=f19e164] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=58d8536a67b59abe6baaaa178a8639bb32f985b2a245d3d3eb4beb6dded3e678JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbi1jb21wYW55c3VwcG9ydC5qcC9zdWJzaWR5L2VudHJ5LTI2MjYuaHRtbA&ntb=1
+                            - generic [ref=f19e165]:
+                              - generic [ref=f19e168]: www.hekinan-companysupport.jp
+                              - generic [ref=f19e170]: デジタル化・AI導入補助金2026 | 国・県の支援策 | へきなん企業 ...
+                              - generic [ref=f19e171]: 国・県の支援策 HOME 国・県の支援策 デジタル化・AI導入補助金2026 【第4次申請締切】令和8年8月25日 (火)17時まで デジタル化・AI導入補助金2026 デジタル化・AI導入補助金2026のサイトへ
+                          - link "hekinan.lg.jp 生成AI共同検証に関する協定／碧南市 碧南市は2023年12月12日にNECネクサソリューションズ株式会社と生成AI共同検証に関する協定を締結しました。 市職員の業務軽減や市民サービスの向上に大きく寄与する可能性があるものとして、積極的に共同検証を進めていきます。" [ref=f19e173] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=47dfaf6b59d61ed96c78917142e9d00ffb0db19f460c50c02ffd75ba4c1f89d4JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuY2l0eS5oZWtpbmFuLmxnLmpwL3Nvc2hpa2kva2lrYWt1X3phaXNlaS9raWtha3VzZWlzYWt1L2FkbWluaXN0cmF0aW9uLzIwMjYwLmh0bWw&ntb=1
+                            - generic [ref=f19e174]:
+                              - generic [ref=f19e177]: hekinan.lg.jp
+                              - generic [ref=f19e179]: 生成AI共同検証に関する協定／碧南市
+                              - generic [ref=f19e180]: 碧南市は2023年12月12日にNECネクサソリューションズ株式会社と生成AI共同検証に関する協定を締結しました。 市職員の業務軽減や市民サービスの向上に大きく寄与する可能性があるものとして、積極的に共同検証を進めていきます。
+                          - link "碧南商工会議所 補助金・助成金 | 碧南商工会議所 デジタル化・AI導入補助金2026 デジタル化・AI導入補助金は、中小企業・小規模事業者等のみなさまが自社の課題やニーズに合ったITツールを導入する経費の一部を補助することで、みなさまの業務効率化・売上アップをサポートするものです。" [ref=f19e182] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=0ce3cbd5ee5b22a636d0cae396cf532d521bc255ff3d96b7de5d8bb503590667JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cuaGVraW5hbmNjaS5vci5qcC8_cGFnZV9pZD01NTM2&ntb=1
+                            - generic [ref=f19e183]:
+                              - generic [ref=f19e186]: 碧南商工会議所
+                              - generic [ref=f19e188]: 補助金・助成金 | 碧南商工会議所
+                              - generic [ref=f19e189]: デジタル化・AI導入補助金2026 デジタル化・AI導入補助金は、中小企業・小規模事業者等のみなさまが自社の課題やニーズに合ったITツールを導入する経費の一部を補助することで、みなさまの業務効率化・売上アップをサポートするものです。
+                - list
+                - complementary "追加の検索結果" [ref=f19e190]:
+                  - list
+    - generic [ref=e59]:
+      - status [ref=e99]
+      - generic [ref=e61]:
+        - textbox "フォローアップを尋ねる" [active] [ref=e64]
+        - button "Copilot 検索メニューを開く" [ref=e67] [cursor=pointer]:
+          - img [ref=e68]

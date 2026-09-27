@@ -1,0 +1,158 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Bing 検索に戻る" [ref=e3] [cursor=pointer]:
+      - /url: /?FORM=Z9FD1
+      - heading "Bing 検索に戻る" [level=1] [ref=e4]
+    - navigation "検索フィルター" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "すべて" [ref=e8] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&FORM=HDRSC1
+        - listitem [ref=e9]:
+          - link "Web" [ref=e10] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&webscp=1&FORM=HDRWSC
+        - link "検索" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: 検索
+        - listitem [ref=e14]:
+          - link "画像" [ref=e15] [cursor=pointer]:
+            - /url: /images/search?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&FORM=HDRSC3
+        - listitem [ref=e16]:
+          - link "動画" [ref=e17] [cursor=pointer]:
+            - /url: /videos/search?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&FORM=HDRSC4
+        - listitem [ref=e18]:
+          - link "地図" [ref=e19] [cursor=pointer]:
+            - /url: /maps?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&FORM=HDRSC6
+        - listitem [ref=e20]:
+          - link "ニュース" [ref=e21] [cursor=pointer]:
+            - /url: /news/search?q=Claude%20Code%20Gmail%20%E9%80%A3%E6%90%BA%20%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20%E3%83%A1%E3%83%BC%E3%83%AB%E8%87%AA%E5%8B%95%E5%8C%96&FORM=HDRSC7
+      - button "さらに表示" [ref=e23] [cursor=pointer]:
+        - text: さらに表示
+        - img [ref=e25]
+    - complementary "アカウント リワードと設定" [ref=e27]:
+      - button "Microsoft Rewards" [ref=e53] [cursor=pointer]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: Rewards
+          - img [ref=e58]
+      - link "ログイン" [ref=e28] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - button "ログイン" [ref=e31]
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - text: コンテンツは AI を使用して生成されました。
+        - link "詳細情報" [ref=e36] [cursor=pointer]:
+          - /url: https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?
+      - list [ref=e37]:
+        - listitem [ref=e38]:
+          - generic [ref=e39]:
+            - generic "あなたが送信しました。 Claude Code Gmail 連携 中小企業 メール自動化" [ref=e40]: Claude Code Gmail 連携 中小企業 メール自動化
+            - generic [ref=e70]:
+              - button "コピー" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+              - generic [ref=e75]:
+                - button "いいね!" [ref=e76]:
+                  - img [ref=e77]
+                - button "興味なし" [ref=e79]:
+                  - img [ref=e80]
+          - iframe [ref=e83]:
+            - main "検索結果" [ref=f15e3]:
+              - generic [ref=f15e4]:
+                - list [ref=f15e5]:
+                  - listitem [ref=f15e6]:
+                    - region "Copilot 検索" [ref=f15e10]:
+                      - button "すべてのリンクを見る" [ref=f15e13] [cursor=pointer]:
+                        - img [ref=f15e14]
+                        - generic [ref=f15e16]: すべてのリンクを見る
+                      - list
+                      - generic [ref=f15e20]:
+                        - generic [ref=f15e24]:
+                          - generic [ref=f15e25]:
+                            - link "Bing 生成検索 画像" [ref=f15e26] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=256f82f3f648e1ff15654056647840c2ba90aa41f70c2f16dd48e9f0daba7e71JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L2ltYWdlcy9zZWFyY2g_cT1DbGF1ZGUgQ29kZSBHbWFpbCDpgKPmkLog5Lit5bCP5LyB5qWtIOODoeODvOODq-iHquWLleWMlg&ntb=1
+                              - img [ref=f15e27]
+                              - generic [ref=f15e29]: 画像
+                              - img [ref=f15e30]
+                            - link "Bing 生成検索 動画" [ref=f15e32] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=ef4988e481e3c73f6c9ab082f1bccadb2e18cec19ce7dd615c45e2fffac1e207JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L3ZpZGVvcy9zZWFyY2g_cT1DbGF1ZGUgQ29kZSBHbWFpbCDpgKPmkLog5Lit5bCP5LyB5qWtIOODoeODvOODq-iHquWLleWMlg&ntb=1
+                              - img [ref=f15e33]
+                              - generic [ref=f15e35]: 動画
+                              - img [ref=f15e36]
+                          - generic [ref=f15e38]:
+                            - generic [ref=f15e39]:
+                              - text: 中小企業では、日常的なメール対応や集客・サポート業務の負荷を軽減するため、
+                              - strong [ref=f15e40]: Claude（AIチャットエンジン）と Gmail の連携によるメール自動化
+                              - text: が有効です。以下に手順と考慮点をまとめます。
+                            - heading "1. 必要な準備" [level=2] [ref=f15e41]
+                            - list [ref=f15e42]:
+                              - listitem [ref=f15e43]:
+                                - generic [ref=f15e44]:
+                                  - strong [ref=f15e45]: Claude API アカウント
+                                  - text: （または利用可能な Claude の自動化機能）
+                              - listitem [ref=f15e46]:
+                                - generic [ref=f15e47]:
+                                  - strong [ref=f15e48]: Google Cloud Platform の Gmail API 有効化
+                                  - text: Gmail API を使用すると、自動でメール送信や受信処理が可能になります。
+                              - listitem [ref=f15e49]:
+                                - generic [ref=f15e50]:
+                                  - strong [ref=f15e51]: OAuth2 認証情報
+                                  - text: セキュリティのために、アプリ側で Gmail アカウントにアクセスする際の OAuth 認証を設定します。
+                            - heading "2. 自動化のユースケース例" [level=2] [ref=f15e52]
+                            - list [ref=f15e53]:
+                              - listitem [ref=f15e54]:
+                                - strong [ref=f15e56]: お問い合わせ返信
+                                - list [ref=f15e57]:
+                                  - listitem [ref=f15e58]:
+                                    - generic [ref=f15e59]: Claude が受信メールの内容を解析し、定型文や適切な返信を生成。
+                                  - listitem [ref=f15e60]:
+                                    - generic [ref=f15e61]: Gmail API を通じて自動送信。
+                              - listitem [ref=f15e62]:
+                                - strong [ref=f15e64]: 定期レポート送信
+                                - list [ref=f15e65]:
+                                  - listitem [ref=f15e66]:
+                                    - generic [ref=f15e67]: Claude が分析結果をまとめ、指定メールリストに送信。
+                              - listitem [ref=f15e68]:
+                                - strong [ref=f15e70]: スケジュール管理
+                                - list [ref=f15e71]:
+                                  - listitem [ref=f15e72]:
+                                    - generic [ref=f15e73]: メール本文から予約やイベントを抽出し、カレンダー連携も可能。
+                            - heading "3. 技術的連携イメージ" [level=2] [ref=f15e74]
+                            - code [ref=f15e76]: "# language: Python # 必要ライブラリインポート import base64 from googleapiclient.discovery import build from google.oauth2.credentials import Credentials # Gmail API 認証情報 creds = Credentials.from_authorized_user_file('credentials.json', ['https://www.googleapis.com/auth/gmail.send']) service = build('gmail', 'v1', credentials=creds) # Claude API に問い合わせ、返信文章を取得する例 def generate_reply(email_content): import requests url = \"https://api.anthropic.com/v1/complete\" headers = {\"Authorization\": \"Bearer YOUR_CLAUDE_API_KEY\"} data = { \"prompt\": f\"以下のメールに返信してください: {email_content}\", \"model\": \"claude-v1\", \"max_tokens_to_sample\": 300 } response = requests.post(url, json=data, headers=headers) return response.json()['completion'] # Gmail 送信関数 def send_email(to, subject, body): message = f\"From: me To: {to} Subject: {subject} {body}\" encoded_message = {'raw': base64.urlsafe_b64encode(message.encode()).decode()} service.users().messages().send(userId='me', body=encoded_message).execute() # 使用例 email_content = \"お問い合わせいただきありがとうございます...\" reply = generate_reply(email_content) send_email(\"customer@example.com\", \"Re: お問い合わせ\", reply)"
+                            - heading "4. 運用上の注意点" [level=2] [ref=f15e77]
+                            - list [ref=f15e78]:
+                              - listitem [ref=f15e79]:
+                                - generic [ref=f15e80]: 自動返信の内容は必ず監査・承認プロセスを組み込むこと。
+                              - listitem [ref=f15e81]:
+                                - generic [ref=f15e82]: 個人情報や機密情報を扱う場合、Claude API と Gmail API の通信は暗号化されていることを確認。
+                              - listitem [ref=f15e83]:
+                                - generic [ref=f15e84]: 自動化の対象を段階的に拡張し、運用テストを行う。
+                            - heading "5. まとめ" [level=2] [ref=f15e85]
+                            - generic [ref=f15e86]: Claude と Gmail を連携することで、中小企業でも大量メール対応や定型業務の自動化が可能になります。Python などを用いて API 経由で処理すれば、効率的に返信文生成・メール送信が行えます。段階的に自動化範囲を広げることで、業務効率を大幅に向上させることが可能です。
+                        - generic [ref=f15e88]:
+                          - link "ココナラ Claude Code × Gmail連携でメール業務を完全自動化！中小企業 ... 本記事では、Claude Code × Gmail連携で中小企業のメール業務を丸ごと自動化する実践パターンと、すぐに導入できる活用例を解説します。 中小企業のメール業務には、以下のような共通の課題があります。" [ref=f15e90] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=5eef84bb739d7825efd708830226223252c3cde97ecf3f321535837867d23591JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9jb2NvbmFsYS5jb20vYmxvZ3MvMjIwODA1MS83NDA2OTg&ntb=1
+                            - generic [ref=f15e91]:
+                              - generic [ref=f15e94]: ココナラ
+                              - generic [ref=f15e96]: Claude Code × Gmail連携でメール業務を完全自動化！中小企業 ...
+                              - generic [ref=f15e97]: 本記事では、Claude Code × Gmail連携で中小企業のメール業務を丸ごと自動化する実践パターンと、すぐに導入できる活用例を解説します。 中小企業のメール業務には、以下のような共通の課題があります。
+                          - link "Note 【非エンジニアが体験】Claude Code × Gmail連携でメール ... そこで今回は、AnthropicのAIコーディングツール Claude Code と Gmail をMCP連携させ、受信メールの仕分け・返信ドラフト生成・営業フォローを自動化し" [ref=f15e99] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=ab7dad0eba5cd590fd03c151740d4fbbf9c7ff0d75d3b4508d933aeeb4a2deb2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ub3RlLmNvbS9sb2Z0eV9rbm90NDE2NS9uL25lMjQ3NzU5ODRkNzA&ntb=1
+                            - generic [ref=f15e100]:
+                              - generic [ref=f15e103]: Note
+                              - generic [ref=f15e105]: 【非エンジニアが体験】Claude Code × Gmail連携でメール ...
+                              - generic [ref=f15e106]: そこで今回は、AnthropicのAIコーディングツール Claude Code と Gmail をMCP連携させ、受信メールの仕分け・返信ドラフト生成・営業フォローを自動化し
+                          - link "ai.lucris.jp Claude × Gmail・Google Workspace連携 完全ガイド【2026 ... ClaudeとGmail/Drive/Calendarを連携すると、メール下書き・資料作成・予定調整がどこまで自動化できるのか。 2026年6月時点の公式コネクタとMCPの違い、設定手順、セキュリティ留意点を企業の情シス・DX・実務者向けに実務目線で徹底解説します。" [ref=f15e108] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=93a81fe2c807167642b7d44c5a7cca4f9b6c7351e7edcfaaa6740aaa66ccfb29JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS5sdWNyaXMuanAvY29sdW1uL2NsYXVkZS1nbWFpbC13b3Jrc3BhY2UtMjAyNi8&ntb=1
+                            - generic [ref=f15e109]:
+                              - generic [ref=f15e112]: ai.lucris.jp
+                              - generic [ref=f15e114]: Claude × Gmail・Google Workspace連携 完全ガイド【2026 ...
+                              - generic [ref=f15e115]: ClaudeとGmail/Drive/Calendarを連携すると、メール下書き・資料作成・予定調整がどこまで自動化できるのか。 2026年6月時点の公式コネクタとMCPの違い、設定手順、セキュリティ留意点を企業の情シス・DX・実務者向けに実務目線で徹底解説します。
+                - list
+                - complementary "追加の検索結果" [ref=f15e116]:
+                  - list
+    - generic [ref=e42]:
+      - status [ref=e84]
+      - generic [ref=e44]:
+        - textbox "フォローアップを尋ねる" [active] [ref=e47]
+        - button "Copilot 検索メニューを開く" [ref=e50] [cursor=pointer]:
+          - img [ref=e51]

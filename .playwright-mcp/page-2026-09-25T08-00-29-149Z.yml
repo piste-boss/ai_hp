@@ -1,0 +1,162 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Bing 検索に戻る" [ref=e3] [cursor=pointer]:
+      - /url: /?FORM=Z9FD1
+      - heading "Bing 検索に戻る" [level=1] [ref=e4]
+    - navigation "検索フィルター" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "すべて" [ref=e8] [cursor=pointer]:
+            - /url: /search?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&FORM=HDRSC1
+        - listitem [ref=e9]:
+          - link "Web" [ref=e10] [cursor=pointer]:
+            - /url: /search?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&webscp=1&FORM=HDRWSC
+        - link "検索" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: 検索
+        - listitem [ref=e14]:
+          - link "画像" [ref=e15] [cursor=pointer]:
+            - /url: /images/search?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&FORM=HDRSC3
+        - listitem [ref=e16]:
+          - link "動画" [ref=e17] [cursor=pointer]:
+            - /url: /videos/search?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&FORM=HDRSC4
+        - listitem [ref=e18]:
+          - link "地図" [ref=e19] [cursor=pointer]:
+            - /url: /maps?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&FORM=HDRSC6
+        - listitem [ref=e20]:
+          - link "ニュース" [ref=e21] [cursor=pointer]:
+            - /url: /news/search?q=%E4%B8%AD%E5%B0%8F%E4%BC%81%E6%A5%AD%20AI%E7%A0%94%E4%BF%AE%20%E5%8A%A9%E6%88%90%E9%87%91&FORM=HDRSC7
+      - button "さらに表示" [ref=e23] [cursor=pointer]:
+        - text: さらに表示
+        - img [ref=e25]
+    - complementary "アカウント リワードと設定" [ref=e27]:
+      - button "Microsoft Rewards" [ref=e53] [cursor=pointer]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: Rewards
+          - img [ref=e58]
+      - link "ログイン" [ref=e28] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - button "ログイン" [ref=e31]
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - text: コンテンツは AI を使用して生成されました。
+        - link "詳細情報" [ref=e36] [cursor=pointer]:
+          - /url: https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?
+      - list [ref=e37]:
+        - listitem [ref=e38]:
+          - generic [ref=e39]:
+            - generic "あなたが送信しました。 中小企業 AI研修 助成金" [ref=e40]: 中小企業 AI研修 助成金
+            - generic [ref=e71]:
+              - button "いいね!" [ref=e72]:
+                - img [ref=e73]
+              - button "興味なし" [ref=e75]:
+                - img [ref=e76]
+          - iframe [ref=e79]:
+            - main "検索結果" [ref=f11e3]:
+              - generic [ref=f11e4]:
+                - list [ref=f11e5]:
+                  - listitem [ref=f11e6]:
+                    - region "Copilot 検索" [ref=f11e9]:
+                      - button "すべてのリンクを見る" [ref=f11e12] [cursor=pointer]:
+                        - img [ref=f11e13]
+                        - generic [ref=f11e15]: すべてのリンクを見る
+                      - list
+                      - generic [ref=f11e17]:
+                        - heading "検索結果" [level=2] [ref=f11e19]
+                        - generic [ref=f11e22]:
+                          - button "クリックして右にスクロール" [ref=f11e23] [cursor=pointer]
+                          - list [ref=f11e30]:
+                            - listitem [ref=f11e31]:
+                              - link "グローバル Web アイコン optimax.co.jp https://www.optimax.co.jp/ai-information/ai-training... AI研修 助成金まとめ｜2026年申請条件・金額・手続きを解説 AI研修で使える助成金を2026年最新版で解説。 人材開発支援助成金（経費助成75%）やデジタル化・AI導入補助金の申請条件・金額・手続きの流れを具体的にまとめます。" [ref=f11e33] [cursor=pointer]:
+                                - /url: https://www.bing.com/ck/a?!&&p=3fe83085fb3cc4784f1c69c118aa7b3eb10f30191335238c655ad09b094f9df2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly93d3cub3B0aW1heC5jby5qcC9haS1pbmZvcm1hdGlvbi9haS10cmFpbmluZy1zdWJzaWR5LW1vbmV5Lw&ntb=1
+                                - generic [ref=f11e34]:
+                                  - img "グローバル Web アイコン" [ref=f11e37]
+                                  - generic [ref=f11e38]:
+                                    - generic [ref=f11e39]: optimax.co.jp
+                                    - generic [ref=f11e40]:
+                                      - text: https://www.optimax.co.jp/
+                                      - strong [ref=f11e41]: ai
+                                      - text: "-information/"
+                                      - strong [ref=f11e42]: ai
+                                      - text: "-training..."
+                                - generic [ref=f11e43]: AI研修 助成金まとめ｜2026年申請条件・金額・手続きを解説
+                                - generic [ref=f11e44]:
+                                  - strong [ref=f11e45]: AI研修
+                                  - text: で使える
+                                  - strong [ref=f11e46]: 助成金
+                                  - text: を2026年最新版で解説。 人材開発支援
+                                  - strong [ref=f11e47]: 助成金
+                                  - text: （経費助成75%）やデジタル化・AI導入補助金の申請条件・金額・手続きの流れを具体的にまとめます。
+                              - link "グローバル Web アイコン ai-gallery.jp https://ai-gallery.jp/articles/ai-kenshu-joseikin-matome AI研修に使える助成金・補助金まとめ【2026年8月改正対応】 AI研修の費用に会社として使える助成金・補助金を「そのまま使える」「ツール導入とセットなら使える」「従業員個人向け」の3区分で整理。 人材開発支援助成金の3コースの使い分け、2026年8月3日改正の注意点、自社に合う制度の絞り込み方ま …" [ref=f11e49] [cursor=pointer]:
+                                - /url: https://www.bing.com/ck/a?!&&p=2a39d0ebda134b838365805edbabb4c4d446f6e626a930ae58b69bb6c4c30b0dJmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1nYWxsZXJ5LmpwL2FydGljbGVzL2FpLWtlbnNodS1qb3NlaWtpbi1tYXRvbWU&ntb=1
+                                - generic [ref=f11e50]:
+                                  - img "グローバル Web アイコン" [ref=f11e53]
+                                  - generic [ref=f11e54]:
+                                    - generic [ref=f11e55]: ai-gallery.jp
+                                    - generic [ref=f11e56]:
+                                      - text: https://
+                                      - strong [ref=f11e57]: ai
+                                      - text: "-gallery.jp/articles/"
+                                      - strong [ref=f11e58]: ai
+                                      - text: "-kenshu-joseikin-matome"
+                                - generic [ref=f11e59]: AI研修に使える助成金・補助金まとめ【2026年8月改正対応】
+                                - generic [ref=f11e60]:
+                                  - strong [ref=f11e61]: AI研修
+                                  - text: の費用に会社として使える
+                                  - strong [ref=f11e62]: 助成金
+                                  - text: ・補助金を「そのまま使える」「ツール導入とセットなら使える」「従業員個人向け」の3区分で整理。 人材開発支援
+                                  - strong [ref=f11e63]: 助成金
+                                  - text: の3コースの使い分け、2026年8月3日改正の注意点、自社に合う制度の絞り込み方ま …
+                            - listitem [ref=f11e64]:
+                              - generic [ref=f11e66]:
+                                - link "グローバル Web アイコン Note • https://note.com/optiens/n/n8c0b78516691 【2026年版】中小企業がAI導入・研修に使える助成金・補助金 ... 人材開発支援助成金（最大75%補助）、キャリアアップ助成金、デジタル人材育成緊急支援事業など、AI研修・社内育成を国費で進めるための制度を、 …" [ref=f11e67] [cursor=pointer]:
+                                  - /url: https://www.bing.com/ck/a?!&&p=5c96c22a4e0babcfba6895c617e9c7ce8c55ce06ec7d906edf464126f24fad33JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ub3RlLmNvbS9vcHRpZW5zL24vbjhjMGI3ODUxNjY5MQ&ntb=1
+                                  - generic [ref=f11e68]:
+                                    - img "グローバル Web アイコン" [ref=f11e71]
+                                    - generic [ref=f11e72]:
+                                      - generic [ref=f11e73]: Note •
+                                      - generic [ref=f11e74]: https://note.com/optiens/n/n8c0b78516691
+                                  - heading "【2026年版】中小企業がAI導入・研修に使える助成金・補助金 ..." [level=1] [ref=f11e75]
+                                  - generic [ref=f11e76]:
+                                    - strong [ref=f11e77]: 人材開発支援助成金
+                                    - text: （最大75%補助）、キャリアアップ助成金、デジタル人材育成緊急支援事業など、AI研修・社内育成を国費で進めるための制度を、 …
+                                - link "グローバル Web アイコン uravation.com • https://uravation.com/media/ai-training-subsidy-complete... AI研修の助成金一覧｜経費75%＋賃金助成【2026年8月改正 ... AI研修に使える主な助成金は、 (1)人材開発支援助成金（最大75%・年間上限1,000万円）、 (2)IT導入補助金（最大450万円）、 (3)自治体独自の助成制度 …" [ref=f11e78] [cursor=pointer]:
+                                  - /url: https://www.bing.com/ck/a?!&&p=da00077ab2e8015a272a6285d2c2d66eaa1a7f9e6881997c61bb8ef3482464a2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly91cmF2YXRpb24uY29tL21lZGlhL2FpLXRyYWluaW5nLXN1YnNpZHktY29tcGxldGUtZ3VpZGUv&ntb=1
+                                  - generic [ref=f11e79]:
+                                    - img "グローバル Web アイコン" [ref=f11e82]
+                                    - generic [ref=f11e83]:
+                                      - generic [ref=f11e84]: uravation.com •
+                                      - generic [ref=f11e85]:
+                                        - text: https://uravation.com/media/
+                                        - strong [ref=f11e86]: ai
+                                        - text: "-training-subsidy-complete..."
+                                  - heading "AI研修の助成金一覧｜経費75%＋賃金助成【2026年8月改正 ..." [level=1] [ref=f11e87]
+                                  - generic [ref=f11e88]:
+                                    - strong [ref=f11e89]: AI研修
+                                    - text: に使える主な
+                                    - strong [ref=f11e90]: 助成金
+                                    - text: は、 (1)人材開発支援助成金（最大75%・年間上限1,000万円）、 (2)IT導入補助金（最大450万円）、 (3)自治体独自の助成制度 …
+                                - link "hidane2025.com • https://hidane2025.com/method/ai-training-subsidy-guide AI研修に使える助成金完全ガイド【2026年最新版】 | 株式会社 ... 中小企業がAI研修に使える人材開発支援助成金を徹底解説。 助成率最大75%（対面研修は上限30万円/人）、申請の5ステップ、よくある落とし穴ま …" [ref=f11e91] [cursor=pointer]:
+                                  - /url: https://www.bing.com/ck/a?!&&p=604dc0ba7862bf1a4f6a877c3cdc4ef495f23e18dc0a34dc836b7bc45fb65534JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9oaWRhbmUyMDI1LmNvbS9tZXRob2QvYWktdHJhaW5pbmctc3Vic2lkeS1ndWlkZQ&ntb=1
+                                  - generic [ref=f11e92]:
+                                    - img [ref=f11e94]
+                                    - generic [ref=f11e95]:
+                                      - generic [ref=f11e96]: hidane2025.com •
+                                      - generic [ref=f11e97]:
+                                        - text: https://hidane2025.com/method/
+                                        - strong [ref=f11e98]: ai
+                                        - text: "-training-subsidy-guide"
+                                  - heading "AI研修に使える助成金完全ガイド【2026年最新版】 | 株式会社 ..." [level=1] [ref=f11e99]
+                                  - generic [ref=f11e100]:
+                                    - strong [ref=f11e101]: 中小企業がAI研修に使える人材開発支援助成金
+                                    - text: を徹底解説。 助成率最大75%（対面研修は上限30万円/人）、申請の5ステップ、よくある落とし穴ま …
+                - list
+                - complementary "追加の検索結果" [ref=f11e102]:
+                  - list
+    - generic [ref=e42]:
+      - status [ref=e80]
+      - generic [ref=e44]:
+        - textbox "フォローアップを尋ねる" [ref=e47]
+        - button "Copilot 検索メニューを開く" [ref=e50] [cursor=pointer]:
+          - img [ref=e51]

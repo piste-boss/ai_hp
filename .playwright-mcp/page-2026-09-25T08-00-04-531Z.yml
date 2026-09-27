@@ -1,0 +1,258 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Bing 検索に戻る" [ref=e3] [cursor=pointer]:
+      - /url: /?FORM=Z9FD1
+      - heading "Bing 検索に戻る" [level=1] [ref=e4]
+    - navigation "検索フィルター" [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "すべて" [ref=e8] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC1
+        - listitem [ref=e9]:
+          - link "Web" [ref=e10] [cursor=pointer]:
+            - /url: /search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&webscp=1&FORM=HDRWSC
+        - link "検索" [ref=e11] [cursor=pointer]:
+          - img [ref=e12]
+          - text: 検索
+        - listitem [ref=e14]:
+          - link "画像" [ref=e15] [cursor=pointer]:
+            - /url: /images/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC3
+        - listitem [ref=e16]:
+          - link "動画" [ref=e17] [cursor=pointer]:
+            - /url: /videos/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC4
+        - listitem [ref=e18]:
+          - link "地図" [ref=e19] [cursor=pointer]:
+            - /url: /maps?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC6
+        - listitem [ref=e20]:
+          - link "ニュース" [ref=e21] [cursor=pointer]:
+            - /url: /news/search?q=Claude%20Code%20%E5%B0%8E%E5%85%A5%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%20%E6%84%9B%E7%9F%A5&FORM=HDRSC7
+      - button "さらに表示" [ref=e23] [cursor=pointer]:
+        - text: さらに表示
+        - img [ref=e25]
+    - complementary "アカウント リワードと設定" [ref=e27]:
+      - button "Microsoft Rewards" [ref=e28] [cursor=pointer]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: Rewards
+          - img [ref=e73]
+      - link "ログイン" [ref=e45] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - button "ログイン" [ref=e48]
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - text: コンテンツは AI を使用して生成されました。
+        - link "詳細情報" [ref=e53] [cursor=pointer]:
+          - /url: https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3?
+      - list [ref=e54]:
+        - listitem [ref=e55]:
+          - generic [ref=e56]:
+            - generic "あなたが送信しました。 Claude Code 導入 サポート 愛知" [ref=e57]: Claude Code 導入 サポート 愛知
+            - generic [ref=e85]:
+              - button "コピー" [ref=e86] [cursor=pointer]:
+                - img [ref=e87]
+              - generic [ref=e90]:
+                - button "いいね!" [ref=e91]:
+                  - img [ref=e92]
+                - button "興味なし" [ref=e94]:
+                  - img [ref=e95]
+          - iframe [ref=e98]:
+            - main "検索結果" [ref=f7e3]:
+              - generic [ref=f7e4]:
+                - list [ref=f7e5]:
+                  - listitem [ref=f7e6]:
+                    - region "Copilot 検索" [ref=f7e10]:
+                      - button "すべてのリンクを見る" [ref=f7e13] [cursor=pointer]:
+                        - img [ref=f7e14]
+                        - generic [ref=f7e16]: すべてのリンクを見る
+                      - list
+                      - generic [ref=f7e20]:
+                        - generic [ref=f7e24]:
+                          - generic [ref=f7e25]:
+                            - link "Bing 生成検索 画像" [ref=f7e26] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=196028613f0be4faea08fde2e5ad36e4e882b0048b760599ff72820300e9ca20JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L2ltYWdlcy9zZWFyY2g_cT1DbGF1ZGUgQ29kZSDlsI7lhaUg44K144Od44O844OIIOaEm-efpQ&ntb=1
+                              - img [ref=f7e27]
+                              - generic [ref=f7e29]: 画像
+                              - img [ref=f7e30]
+                            - link "Bing 生成検索 動画" [ref=f7e32] [cursor=pointer]:
+                              - /url: https://www.bing.com/ck/a?!&&p=2f9ac4f02b1be0fcaeb3713328c35f9655ca262f10a84d405b2a3e04e0db2585JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1L3ZpZGVvcy9zZWFyY2g_cT1DbGF1ZGUgQ29kZSDlsI7lhaUg44K144Od44O844OIIOaEm-efpQ&ntb=1
+                              - img [ref=f7e33]
+                              - generic [ref=f7e35]: 動画
+                              - img [ref=f7e36]
+                          - heading "愛知県の企業でもClaude Codeを活用したDXや業務自動化の導入支援を受けられ、研修やPoC開発と併せて補助金を活用した効率的な導入が可能です。" [level=2] [ref=f7e38]:
+                            - strong [ref=f7e40]: 愛知県の企業でもClaude Codeを活用したDXや業務自動化の導入支援を受けられ、研修やPoC開発と併せて補助金を活用した効率的な導入が可能です。
+                          - generic [ref=f7e41]:
+                            - heading "Claude Codeとは" [level=3] [ref=f7e42]
+                            - generic [ref=f7e43]:
+                              - link "Claude CodeはAnthropic提供のAIコーディング支援ツールで、コードベースの理解、ファイル編集、コマンド実行、バグ修正、テスト作成、ドキュメント作成など開発業務全般を支援します。既存システムの改善や新規プロトタイプ作成、小規模なDXテーマに活用できますが、生成コードを本番投入する前にはレビューとセキュリティ確認が必要です" [ref=f7e44] [cursor=pointer]:
+                                - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                - generic [ref=f7e45]: Claude CodeはAnthropic提供のAIコーディング支援ツールで、コードベースの理解、ファイル編集、コマンド実行、バグ修正、テスト作成、ドキュメント作成など開発業務全般を支援します。既存システムの改善や新規プロトタイプ作成、小規模なDXテーマに活用できますが、生成コードを本番投入する前にはレビューとセキュリティ確認が必要です
+                              - link "ソースの表示 N2i ジャーナル" [ref=f7e47] [cursor=pointer]:
+                                - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                - button "2 citations" [ref=f7e48]:
+                                  - img [ref=f7e50]
+                                  - generic [ref=f7e52]:
+                                    - generic [ref=f7e53]: N2i ジャーナル
+                                    - strong [ref=f7e54]: "+1"
+                              - text: 。
+                            - heading "活用できる業務例（愛知県向け）" [level=3] [ref=f7e55]
+                            - list [ref=f7e56]:
+                              - listitem [ref=f7e57]:
+                                - generic [ref=f7e58]:
+                                  - link "製造業・運輸・物流・建設業：日報や生産データの集計、見積書作成、現場報告書ドラフト作成、在庫・発注管理の自動化" [ref=f7e59] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=fdd37af4aa9fc9f695308c4657740f1455baf42bc227553c1ccb552725bf17e3JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1rZW5zaHUtaG9qb2tpbi5qcC9jbGF1ZGUtY29kZS9haWNoaS8&ntb=1
+                                    - generic [ref=f7e60]:
+                                      - strong [ref=f7e61]: 製造業・運輸・物流・建設業
+                                      - text: ：日報や生産データの集計、見積書作成、現場報告書ドラフト作成、在庫・発注管理の自動化
+                                  - link "ソースの表示 ai-kenshu-hojokin.jp" [ref=f7e63] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=fdd37af4aa9fc9f695308c4657740f1455baf42bc227553c1ccb552725bf17e3JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1rZW5zaHUtaG9qb2tpbi5qcC9jbGF1ZGUtY29kZS9haWNoaS8&ntb=1
+                                    - button "1 citation" [ref=f7e64]:
+                                      - img [ref=f7e66]
+                                      - strong [ref=f7e69]: "1"
+                                  - text: 。
+                              - listitem [ref=f7e70]:
+                                - generic [ref=f7e71]:
+                                  - link "社内DX・プロトタイプ開発：Excel管理アプリ化、社内FAQ検索、簡易ダッシュボード、AIエージェントPoC、小規模ツール作成" [ref=f7e72] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=78cd17776c782fb9532b4b8a4ab58dacfb223e3f1a24bb47c324b603e2362fa2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA2LzI0LzEwMjg1OA&ntb=1
+                                    - generic [ref=f7e73]:
+                                      - strong [ref=f7e74]: 社内DX・プロトタイプ開発
+                                      - text: ：Excel管理アプリ化、社内FAQ検索、簡易ダッシュボード、AIエージェントPoC、小規模ツール作成
+                                  - link "ソースの表示 N2i ジャーナル" [ref=f7e76] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=78cd17776c782fb9532b4b8a4ab58dacfb223e3f1a24bb47c324b603e2362fa2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA2LzI0LzEwMjg1OA&ntb=1
+                                    - button "1 citation" [ref=f7e77]:
+                                      - img [ref=f7e79]
+                                      - strong [ref=f7e82]: "1"
+                                  - text: 。
+                              - listitem [ref=f7e83]:
+                                - generic [ref=f7e84]:
+                                  - link "非エンジニア活用：業務課題整理やプロトタイプ確認を通じた業務改善支援、それをエンジニアと共有して開発できる形が現実的" [ref=f7e85] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=78cd17776c782fb9532b4b8a4ab58dacfb223e3f1a24bb47c324b603e2362fa2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA2LzI0LzEwMjg1OA&ntb=1
+                                    - generic [ref=f7e86]:
+                                      - strong [ref=f7e87]: 非エンジニア活用
+                                      - text: ：業務課題整理やプロトタイプ確認を通じた業務改善支援、それをエンジニアと共有して開発できる形が現実的
+                                  - link "ソースの表示 N2i ジャーナル" [ref=f7e89] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=78cd17776c782fb9532b4b8a4ab58dacfb223e3f1a24bb47c324b603e2362fa2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA2LzI0LzEwMjg1OA&ntb=1
+                                    - button "1 citation" [ref=f7e90]:
+                                      - img [ref=f7e92]
+                                      - strong [ref=f7e95]: "1"
+                                  - text: 。
+                              - listitem [ref=f7e96]:
+                                - generic [ref=f7e104]:
+                                  - img [ref=f7e106]
+                                  - link "2 ソース" [ref=f7e108]
+                            - heading "導入サポートの流れ" [level=3] [ref=f7e109]
+                            - list [ref=f7e110]:
+                              - listitem [ref=f7e111]:
+                                - generic [ref=f7e112]:
+                                  - strong [ref=f7e113]: 初回ヒアリング
+                                  - text: ：業務課題や活用イメージを整理。
+                              - listitem [ref=f7e114]:
+                                - generic [ref=f7e115]:
+                                  - strong [ref=f7e116]: 対象業務の選定
+                                  - text: ：小規模かつ効果が見えやすい範囲から試行。
+                              - listitem [ref=f7e117]:
+                                - generic [ref=f7e118]:
+                                  - strong [ref=f7e119]: PoC・研修実施
+                                  - text: ：開発スピードや操作性、レビュー負担の確認。
+                              - listitem [ref=f7e120]:
+                                - generic [ref=f7e121]:
+                                  - strong [ref=f7e122]: ルール整備
+                                  - text: ：レビュー体制・権限管理・情報管理ルールの構築。
+                              - listitem [ref=f7e123]:
+                                - generic [ref=f7e124]:
+                                  - strong [ref=f7e125]: 社内展開・継続改善
+                                  - text: ：PoC成果をもとに範囲拡大と定着化。
+                            - heading "研修と助成金" [level=3] [ref=f7e126]
+                            - list [ref=f7e127]:
+                              - listitem [ref=f7e128]:
+                                - generic [ref=f7e129]:
+                                  - link "国の「事業展開等リスキリング支援コース」により、中小企業の社員研修費の75%が補助され、さらに受講中の賃金1,000円/時も対象。愛知県独自の補助はありませんが、国の助成金だけで研修費の実質負担を1/4に圧縮可能です" [ref=f7e130] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=fdd37af4aa9fc9f695308c4657740f1455baf42bc227553c1ccb552725bf17e3JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1rZW5zaHUtaG9qb2tpbi5qcC9jbGF1ZGUtY29kZS9haWNoaS8&ntb=1
+                                    - generic [ref=f7e131]: 国の「事業展開等リスキリング支援コース」により、中小企業の社員研修費の75%が補助され、さらに受講中の賃金1,000円/時も対象。愛知県独自の補助はありませんが、国の助成金だけで研修費の実質負担を1/4に圧縮可能です
+                                  - link "ソースの表示 ai-kenshu-hojokin.jp" [ref=f7e133] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=fdd37af4aa9fc9f695308c4657740f1455baf42bc227553c1ccb552725bf17e3JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1rZW5zaHUtaG9qb2tpbi5qcC9jbGF1ZGUtY29kZS9haWNoaS8&ntb=1
+                                    - button "1 citation" [ref=f7e134]:
+                                      - img [ref=f7e136]
+                                      - strong [ref=f7e139]: "1"
+                                  - text: 。
+                              - listitem [ref=f7e140]:
+                                - generic [ref=f7e141]: 研修は開発者向け・非エンジニア向け・管理職向けの内容に分けて設計可能。
+                              - listitem [ref=f7e142]:
+                                - generic [ref=f7e148]:
+                                  - img [ref=f7e150]
+                                  - link "1 ソース" [ref=f7e152]
+                            - heading "導入支援・相談" [level=3] [ref=f7e153]
+                            - generic [ref=f7e154]: 愛知県内の企業向けには、N2iなどが以下の支援を提供します：
+                            - list [ref=f7e155]:
+                              - listitem [ref=f7e156]:
+                                - generic [ref=f7e157]: Claude Codeの活用研修
+                              - listitem [ref=f7e158]:
+                                - generic [ref=f7e159]: AI開発や業務改善、プロトタイプ作成
+                              - listitem [ref=f7e160]:
+                                - generic [ref=f7e161]: 社内業務自動化やAIエージェントPoC
+                              - listitem [ref=f7e162]:
+                                - generic [ref=f7e163]: 導入時の情報管理やレビュー体制整備
+                              - listitem [ref=f7e164]:
+                                - generic [ref=f7e165]:
+                                  - link "初回相談で業務上の適用例や補助金活用の案内を受けられる" [ref=f7e166] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                    - generic [ref=f7e167]: 初回相談で業務上の適用例や補助金活用の案内を受けられる
+                                  - link "ソースの表示 N2i ジャーナル" [ref=f7e169] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                    - button "2 citations" [ref=f7e170]:
+                                      - img [ref=f7e172]
+                                      - strong [ref=f7e175]: "2"
+                              - listitem [ref=f7e176]:
+                                - generic [ref=f7e184]:
+                                  - img [ref=f7e186]
+                                  - link "2 ソース" [ref=f7e188]
+                            - heading "注意点" [level=3] [ref=f7e189]
+                            - list [ref=f7e190]:
+                              - listitem [ref=f7e191]:
+                                - generic [ref=f7e192]: 生成されたコードを直接本番投入しない
+                              - listitem [ref=f7e193]:
+                                - generic [ref=f7e194]: 機密情報・顧客情報の入力に注意
+                              - listitem [ref=f7e195]:
+                                - generic [ref=f7e196]: 権限管理とレビュー体制の整備が必須
+                              - listitem [ref=f7e197]:
+                                - generic [ref=f7e198]:
+                                  - link "非エンジニアだけで本番システムを作らせるのは危険" [ref=f7e199] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                    - generic [ref=f7e200]: 非エンジニアだけで本番システムを作らせるのは危険
+                                  - link "ソースの表示 N2i ジャーナル" [ref=f7e202] [cursor=pointer]:
+                                    - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                                    - button "2 citations" [ref=f7e203]:
+                                      - img [ref=f7e205]
+                                      - strong [ref=f7e208]: "2"
+                              - listitem [ref=f7e209]:
+                                - generic [ref=f7e217]:
+                                  - img [ref=f7e219]
+                                  - link "2 ソース" [ref=f7e221]
+                            - generic [ref=f7e222]: 導入に興味がある場合は、まず小さくPoCやプロトタイプから開始し、成果を確認して業務範囲を拡大するのが推奨です。N2iなどの支援機関への相談により、安全で実務的な導入が可能です。
+                        - generic [ref=f7e224]:
+                          - link "ai-kenshu-hojokin.jp 愛知県のClaude Code導入｜活用場面と補助金【2026年 ... 愛知県の中小企業向けにClaude Code導入を解説。 自動車産業・窯業（瀬戸焼・常滑焼）など地域の産業構造に合わせた活用例と、研修費に使える助成金（国75%）、無料相談・セミナー案内まで。" [ref=f7e226] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=fdd37af4aa9fc9f695308c4657740f1455baf42bc227553c1ccb552725bf17e3JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9haS1rZW5zaHUtaG9qb2tpbi5qcC9jbGF1ZGUtY29kZS9haWNoaS8&ntb=1
+                            - generic [ref=f7e227]:
+                              - generic [ref=f7e230]: ai-kenshu-hojokin.jp
+                              - generic [ref=f7e232]: 愛知県のClaude Code導入｜活用場面と補助金【2026年 ...
+                              - generic [ref=f7e233]: 愛知県の中小企業向けにClaude Code導入を解説。 自動車産業・窯業（瀬戸焼・常滑焼）など地域の産業構造に合わせた活用例と、研修費に使える助成金（国75%）、無料相談・セミナー案内まで。
+                          - link "N2i ジャーナル Claude Code導入支援を愛知で検討する企業へ｜業務改善・AI ... 本記事では、Claude Code導入支援を愛知で検討している企業向けに、Claude Codeでできること、導入支援で相談できる内容、AI開発・業務改善・プロトタイプ開発への活用方法、導入時の注意点を解説します。" [ref=f7e235] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=49eaa25b6f21e99262cec369912578d59ec66be234039286d52203f74b9fcc70JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA1LzI3LzEzMTUyNg&ntb=1
+                            - generic [ref=f7e236]:
+                              - generic [ref=f7e239]: N2i ジャーナル
+                              - generic [ref=f7e241]: Claude Code導入支援を愛知で検討する企業へ｜業務改善・AI ...
+                              - generic [ref=f7e242]: 本記事では、Claude Code導入支援を愛知で検討している企業向けに、Claude Codeでできること、導入支援で相談できる内容、AI開発・業務改善・プロトタイプ開発への活用方法、導入時の注意点を解説します。
+                          - link "N2i ジャーナル 名古屋・愛知でClaude Code・Codex導入支援を探すなら？AI ... 本記事では、名古屋・愛知の企業がClaude Code・Codexを導入する際に考えるべきこと、研修・PoC・社内開発の進め方、N2iで支援できることを解説します。 Claude CodeやCodexは、AIを活用してコーディングや開発タスクを支援するツールです。 Claude Codeは、コードベースを読み取り、ファイル編集、コマンド実行、開発ツール連携を…" [ref=f7e244] [cursor=pointer]:
+                            - /url: https://www.bing.com/ck/a?!&&p=78cd17776c782fb9532b4b8a4ab58dacfb223e3f1a24bb47c324b603e2362fa2JmltdHM9MTc5MDI5NDQwMA&ptn=3&ver=2&hsh=4&fclid=2719bd31-998b-67f0-09d2-aaee981b66da&u=a1aHR0cHM6Ly9ibG9nLm4yaS5qcC9lbnRyeS8yMDI2LzA2LzI0LzEwMjg1OA&ntb=1
+                            - generic [ref=f7e245]:
+                              - generic [ref=f7e248]: N2i ジャーナル
+                              - generic [ref=f7e250]: 名古屋・愛知でClaude Code・Codex導入支援を探すなら？AI ...
+                              - generic [ref=f7e251]: 本記事では、名古屋・愛知の企業がClaude Code・Codexを導入する際に考えるべきこと、研修・PoC・社内開発の進め方、N2iで支援できることを解説します。 Claude CodeやCodexは、AIを活用してコーディングや開発タスクを支援するツールです。 Claude Codeは、コードベースを読み取り、ファイル編集、コマンド実行、開発ツール連携を…
+                - list
+                - complementary "追加の検索結果" [ref=f7e252]:
+                  - list
+    - generic [ref=e59]:
+      - status [ref=e99]
+      - generic [ref=e61]:
+        - textbox "フォローアップを尋ねる" [ref=e64]
+        - button "Copilot 検索メニューを開く" [ref=e67] [cursor=pointer]:
+          - img [ref=e68]

@@ -1,0 +1,964 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 12.5,
+        "sessionsWithoutMetricPercentage": 87.5,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 2,
+        "subTotal": 2,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 1,
+        "subTotal": 2,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 33.33,
+        "sessionsWithoutMetricPercentage": 66.67,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 2,
+        "subTotal": 2,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "sessionsCount": 8,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "averageScrollDepth": 50.91,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "averageScrollDepth": 36,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "averageScrollDepth": 83,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "averageScrollDepth": 37,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "averageScrollDepth": 84,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "averageScrollDepth": 19,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "averageScrollDepth": 94,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "averageScrollDepth": 75.6,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "averageScrollDepth": 95,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "averageScrollDepth": 9,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 14,
+        "pagesPerSessionPercentage": 1.0714285714285714,
+        "Url": null
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "totalSessionCount": 8,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 6,
+        "pagesPerSessionPercentage": 1.375,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 3,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-jalan-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-tiktok-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 2,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 2,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "totalSessionCount": 3,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 3,
+        "pagesPerSessionPercentage": 1.6666666666666667,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 3,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 2,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 32,
+        "activeTime": 32,
+        "Url": "https://www.piste-ai.com/blog/claude-code-base-integration"
+      },
+      {
+        "totalTime": 594,
+        "activeTime": 209,
+        "Url": "https://www.piste-ai.com/"
+      },
+      {
+        "totalTime": 91,
+        "activeTime": 85,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "totalTime": 121,
+        "activeTime": 121,
+        "Url": "https://www.piste-ai.com/blog/claude-code-hubspot-integration"
+      },
+      {
+        "totalTime": 229,
+        "activeTime": 29,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wordpress-integration"
+      },
+      {
+        "totalTime": 40,
+        "activeTime": 40,
+        "Url": "https://www.piste-ai.com/blog/claude-code-amazon-seller-integration"
+      },
+      {
+        "totalTime": 7,
+        "activeTime": 7,
+        "Url": "https://www.piste-ai.com/blog/ai-sales-email-automation"
+      },
+      {
+        "totalTime": 6,
+        "activeTime": 6,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-ads-integration"
+      },
+      {
+        "totalTime": 75,
+        "activeTime": 52,
+        "Url": "https://www.piste-ai.com/#contact"
+      },
+      {
+        "totalTime": 77,
+        "activeTime": 77,
+        "Url": "https://www.piste-ai.com/blog/claude-code-rakuten-integration?nstoken=7SOY%2FFbMog3%2FTQb%2Fdo8Vv60XOoqQlikjB32XgJb7reUHkThOMV%2F%2Bf9OfldJ1%2F3qCnEqu8dzmdKIatbo6IRTA1PeVZpcvsTbtY5YeZrycEAkR0t%2FmOOa%2BYRjsZEsuYwnhdKO5mAZq%2FlMDCFWrvmoHNyReRbQRRbOiSiIFsW%2B9oo0ZsIEuPdgIkZAgy5o4W87Ungglkm0AKQL0vBxI%2BE8vefbvT%2BNfwH9je1tIsRMVcCfwDmaOkBEMj6ydtg21mjMkT6ajAxoANnh66CnM183rab7wyPEMLeHtWpCii7YBOHH6DKj4%2FrgJfrJwd1dyqZqXun6ilpVH1VT%2FM56NmbtFO34F6p597dyC8hUUJ%2Fbm1H09CJCn6CzHFHz3msyCKrOWga7THIVdDlHvTiO8%2Fu52VVpzkZzaydyiwkr3MdUY1ZIiPSyQ0NDij81vYdLid8Zw8%2Bfvc5V0QQXJ5OH6LVejaBFcfTz9SRxMrwMN8t4Xlsmlr6AtiMRR5pwnn9Szxlq%2F4tZ9EXrLwx2ZAaQry96tNdxog8Mm434iKQMu4AboGG18IpxLA%2FZaldfJ%2FOrFnnKxR%2Bu%2FcrYwgyeKdshXQz67tN5Nk1c05BB4PtgVTCUEgN1BIhOIPDvH5fU%3D&nscheck=3pY85blEFNsOad7gAfYRqg%3D%3D"
+      },
+      {
+        "totalTime": 377,
+        "activeTime": 29,
+        "Url": "https://www.piste-ai.com/about"
+      },
+      {
+        "totalTime": 10,
+        "activeTime": 10,
+        "Url": "https://www.piste-ai.com/blog/claude-code-threads-integration"
+      },
+      {
+        "totalTime": 435,
+        "activeTime": 104,
+        "Url": "https://www.piste-ai.com/blog/claude-code-todoist-integration"
+      },
+      {
+        "totalTime": 50,
+        "activeTime": 50,
+        "Url": "https://www.piste-ai.com/blog/claude-code-wix-integration"
+      }
+    ]
+  }
+]

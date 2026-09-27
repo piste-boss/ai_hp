@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LR35246V7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LR35246V7B');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w54yutjekb");
+  </script>
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Codeでお客様の来た経路を整える</title>
+<meta name="description" content="Claude Codeで受付票・予約の記録・見積もりの控え・名刺に散らばった「お客様がどこから来たか」の記録を入口ごとにそろえ、受注と売上を横に置き、入口ごとの相談数・受注率・その後の売上を数えて効いている入口と効いていない入口を分け、月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+<meta name="keywords" content="Claude Code,受注経路,集客分析,顧客獲得,紹介,業務効率化,中小企業">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#1a1a1a;--dark:#2c2c2c;--gold:#c4a24e;--gold-light:#d4b96a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:#eee;line-height:1.9;}
+header{background:var(--dark);padding:18px 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #444;position:sticky;top:0;z-index:10;}
+header img{height:40px;}
+nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px;}
+nav a:hover{color:var(--gold-light);}
+.wrap{max-width:820px;margin:0 auto;padding:48px 22px 80px;}
+h1{font-size:30px;line-height:1.5;color:#fff;margin-bottom:22px;border-left:5px solid var(--gold);padding-left:18px;}
+.lead{font-size:16px;color:#cfcfcf;margin-bottom:38px;}
+h2{font-size:23px;color:var(--gold-light);margin:46px 0 18px;padding-bottom:8px;border-bottom:1px solid #3a3a3a;}
+h3{font-size:18px;color:#fff;margin:30px 0 12px;}
+p{margin-bottom:16px;color:#e2e2e2;}
+ul,ol{margin:0 0 18px 22px;}
+li{margin-bottom:8px;}
+.toc{background:var(--dark);border:1px solid #444;border-radius:10px;padding:22px 26px;margin-bottom:40px;}
+.toc h2{border:none;margin:0 0 12px;font-size:18px;color:var(--gold);}
+.toc a{color:#ddd;text-decoration:none;}
+.toc a:hover{color:var(--gold-light);}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+th,td{border:1px solid #4a4a4a;padding:10px 12px;text-align:left;}
+th{background:var(--dark);color:var(--gold-light);}
+blockquote{border-left:3px solid var(--gold);background:#232323;padding:14px 18px;margin:18px 0;color:#d8d8d8;}
+.cta{background:linear-gradient(135deg,#2c2c2c,#222);border:1px solid var(--gold);border-radius:12px;padding:34px;margin:50px 0 10px;text-align:center;}
+.cta h2{border:none;color:var(--gold);margin-top:0;}
+.cta .price{font-size:30px;color:#fff;font-weight:700;margin:10px 0;}
+.cta a{display:inline-block;background:var(--gold);color:#1a1a1a;font-weight:700;text-decoration:none;padding:14px 38px;border-radius:8px;margin-top:14px;}
+.cta a:hover{background:var(--gold-light);}
+footer{background:var(--dark);text-align:center;padding:26px;color:#888;font-size:13px;border-top:1px solid #444;}
+</style>
+
+<!-- seo:head -->
+  <link rel="canonical" href="https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html">
+  <link rel="alternate" type="application/rss+xml" title="Piste AI EVANGELISTS ブログ" href="https://www.piste-ai.com/feed.xml">
+  <meta name="author" content="石川 卓">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Claude Codeでお客様の来た経路を整える">
+  <meta property="og:description" content="Claude Codeで受付票・予約の記録・見積もりの控え・名刺に散らばった「お客様がどこから来たか」の記録を入口ごとにそろえ、受注と売上を横に置き、入口ごとの相談数・受注率・その後の売上を数えて効いている入口と効いていない入口を分け、月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta property="og:url" content="https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html">
+  <meta property="og:image" content="https://www.piste-ai.com/images/blog-claude-code-customer-acquisition-channels-og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:site_name" content="Piste AI EVANGELISTS">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="article:published_time" content="2026-09-17T09:00:00+09:00">
+  <meta property="article:author" content="https://www.piste-ai.com/about.html">
+  <meta property="article:section" content="営業・顧客対応">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Codeでお客様の来た経路を整える">
+  <meta name="twitter:description" content="Claude Codeで受付票・予約の記録・見積もりの控え・名刺に散らばった「お客様がどこから来たか」の記録を入口ごとにそろえ、受注と売上を横に置き、入口ごとの相談数・受注率・その後の売上を数えて効いている入口と効いていない入口を分け、月に一度確かめる運用まで5ステップを中小企業向けに整理します。">
+  <meta name="twitter:image" content="https://www.piste-ai.com/images/blog-claude-code-customer-acquisition-channels-og.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","ProfessionalService"],"@id":"https://www.piste-ai.com/#organization","name":"株式会社Piste","alternateName":"Piste AI EVANGELISTS","url":"https://www.piste-ai.com/","logo":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/logo.png","width":640,"height":640},"image":"https://www.piste-ai.com/images/ogp.jpg","email":"info@piste-ai.com","telephone":"+81-566-48-6580","address":{"@type":"PostalAddress","postalCode":"447-0042","addressRegion":"愛知県","addressLocality":"碧南市","streetAddress":"中後町3-3 中央ビル1F","addressCountry":"JP"},"areaServed":[{"@type":"Country","name":"日本"},{"@type":"AdministrativeArea","name":"愛知県"}],"founder":{"@id":"https://www.piste-ai.com/about.html#person"},"sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"],"knowsAbout":["AI導入コンサルティング","Claude Code","業務自動化","AI研修","中小企業のDX"],"description":"中小企業のためのAI導入コンサルティング。Claude Code を中心に、相談・実装・定着までマンツーマンで伴走します。Anthropic 公式パートナーネットワーク認定企業。"},{"@type":"Person","@id":"https://www.piste-ai.com/about.html#person","name":"石川 卓","alternateName":"いしかわ すぐる","url":"https://www.piste-ai.com/about.html","image":"https://www.piste-ai.com/images/profile.jpg","jobTitle":"代表取締役 / AIコンサルタント","worksFor":{"@id":"https://www.piste-ai.com/#organization"},"alumniOf":{"@type":"CollegeOrUniversity","name":"岐阜大学大学院 工学研究科"},"knowsAbout":["Claude Code","生成AIの業務活用","中小企業のAI導入","業務自動化","AI研修"],"description":"岐阜大学工学部修士課程修了後、大手鉄鋼メーカーで約8年エンジニアとして勤務。独立後、AIエンジニア・コンサルタントとして400社以上のAI導入を支援（2026年9月時点）。フィットネスクラブ経営者としても自社業務をAIで自動化している。","sameAs":["https://x.com/piste_ai_boss","https://www.instagram.com/piste_ai","https://www.threads.com/@piste_ai","https://coconala.com/users/2208051","https://lin.ee/Pul5f6V"]},{"@type":"WebSite","@id":"https://www.piste-ai.com/#website","url":"https://www.piste-ai.com/","name":"Piste AI EVANGELISTS","publisher":{"@id":"https://www.piste-ai.com/#organization"},"inLanguage":"ja"},{"@type":"BlogPosting","@id":"https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html#article","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html"},"url":"https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html","headline":"Claude Codeでお客様の来た経路を整える！中小企業のための受注経路一覧づくりと効いている入口を見つける判断材料整理ガイド","alternativeHeadline":"Claude Codeでお客様の来た経路を整える","description":"Claude Codeで受付票・予約の記録・見積もりの控え・名刺に散らばった「お客様がどこから来たか」の記録を入口ごとにそろえ、受注と売上を横に置き、入口ごとの相談数・受注率・その後の売上を数えて効いている入口と効いていない入口を分け、月に一度確かめる運用まで5ステップを中小企業向けに整理します。","image":{"@type":"ImageObject","url":"https://www.piste-ai.com/images/blog-claude-code-customer-acquisition-channels-og.jpg","width":1200,"height":800},"datePublished":"2026-09-17T09:00:00+09:00","dateModified":"2026-09-17T09:00:00+09:00","author":{"@id":"https://www.piste-ai.com/about.html#person"},"publisher":{"@id":"https://www.piste-ai.com/#organization"},"isPartOf":{"@id":"https://www.piste-ai.com/#website"},"inLanguage":"ja","articleSection":"営業・顧客対応","keywords":["Claude Code","受注経路","集客分析","顧客獲得","紹介","業務効率化","中小企業"],"wordCount":6281,"isAccessibleForFree":true,"audience":{"@type":"BusinessAudience","audienceType":"中小企業・個人事業主"},"about":[{"@type":"SoftwareApplication","name":"Claude Code","applicationCategory":"DeveloperApplication","operatingSystem":"macOS, Windows, Linux","creator":{"@type":"Organization","name":"Anthropic","url":"https://www.anthropic.com/"}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://www.piste-ai.com/"},{"@type":"ListItem","position":2,"name":"ブログ","item":"https://www.piste-ai.com/blog/"},{"@type":"ListItem","position":3,"name":"営業・顧客対応","item":"https://www.piste-ai.com/blog/category-sales-customer.html"},{"@type":"ListItem","position":4,"name":"Claude Codeでお客様の来た経路を整える","item":"https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html"}]},{"@type":"FAQPage","@id":"https://www.piste-ai.com/blog/claude-code-customer-acquisition-channels.html#faq","mainEntity":[{"@type":"Question","name":"新しいお客様が月に数人でも必要ですか","acceptedAnswer":{"@type":"Answer","text":"数が少ないほど、一人の紹介元や一つの入口に頼っている度合いが大きくなります。月に数人であれば、一年分でも数十行で、最初の一覧づくりは半日で終わります。少ないうちに形をつくっておく方が、増えたときに楽です。"}},{"@type":"Question","name":"お客様にきっかけを聞くのは失礼になりませんか","acceptedAnswer":{"@type":"Answer","text":"「どちらでお知りになりましたか」の一言は、多くの業種で自然に聞かれています。受付票に丸をつける欄を設けておけば、口頭で聞かなくても記録は残ります。紹介であれば、紹介してくれた方へお礼を伝えるためと添えると、むしろ喜ばれます。"}},{"@type":"Question","name":"昔の記録にきっかけが残っていない場合はどうしますか","acceptedAnswer":{"@type":"Answer","text":"残っている期間だけで始めて構いません。過去の分は空欄のまま残し、今月の新しいお客様から一行ずつ足していきます。三か月分がたまれば、入口の偏りは見え始めます。過去の分は、請求の記録から受注と売上だけでも並べておくと、あとで比べる相手になります。"}},{"@type":"Question","name":"どれくらいの時間がかかりますか","acceptedAnswer":{"@type":"Answer","text":"受付票と見積もり・請求の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。入口のそろえ直しと受注の突き合わせに数日、そのあとは月に一度、内訳と空欄を出させて確かめるだけです。"}}]}]}</script>
+  <style id="seo-style">
+.seo-breadcrumb{font-size:13px;color:#9a9a9a;margin:0 0 6px;line-height:1.6}
+.seo-breadcrumb a{color:#c4a24e;text-decoration:none;margin:0;font-size:13px}
+.seo-breadcrumb a:hover{text-decoration:underline}
+.seo-postmeta{font-size:13px;color:#9a9a9a;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.seo-postmeta a{color:#d4b96a;text-decoration:underline;text-underline-offset:3px}
+body > footer{color:#a9a9a9}
+.seo-keypoints{background:#232323;border-left:4px solid #c4a24e;border-radius:8px;padding:16px 20px;margin:0 0 30px}
+.seo-keypoints-title{font-weight:700;color:#d4b96a;margin:0 0 8px;font-size:15px}
+.seo-keypoints ul{margin:0 0 0 20px;padding:0}
+.seo-keypoints li{margin-bottom:4px;color:#e2e2e2;font-size:15px}
+.seo-related{margin:52px 0 12px}
+.seo-related h2{font-size:20px;color:#d4b96a;border-bottom:1px solid #3a3a3a;padding-bottom:8px;margin:0 0 16px}
+.seo-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:640px){.seo-related-grid{grid-template-columns:1fr}}
+.seo-related-card{display:block;background:#2c2c2c;border:1px solid #444;border-radius:10px;overflow:hidden;text-decoration:none;color:#eee}
+.seo-related-card:hover{border-color:#c4a24e}
+.seo-related-card img{width:100%;height:auto;display:block;aspect-ratio:3/2;object-fit:cover}
+.seo-related-cat{display:block;font-size:11px;color:#c4a24e;padding:10px 12px 0;letter-spacing:.04em}
+.seo-related-title{display:block;font-size:14px;line-height:1.5;padding:4px 12px 12px;font-weight:600}
+.seo-related-more{margin:14px 0 0;font-size:14px}
+.seo-related-more a{color:#c4a24e}
+</style>
+<!-- /seo:head -->
+<link rel="stylesheet" href="/css/piste-theme.css?v=20260914-1">
+</head>
+<body class="piste-theme">
+<header>
+<a href="../index.html"><img src="../images/logo.webp" alt="Piste ロゴ" loading="eager" fetchpriority="high" width="240" height="240"></a>
+<nav>
+<a href="../index.html#about">私たちについて</a>
+<a href="../index.html#service">サービス</a>
+<a href="../index.html#blog">ブログ</a>
+<a href="../index.html#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<div class="wrap" role="main">
+<h1>Claude Codeでお客様の来た経路を整える！中小企業のための受注経路一覧づくりと効いている入口を見つける判断材料整理ガイド</h1>
+<!-- seo:meta -->
+<nav class="seo-breadcrumb" aria-label="パンくずリスト"><a href="../index.html">ホーム</a> › <a href="index.html">ブログ</a> › <a href="category-sales-customer.html">営業・顧客対応</a></nav>
+<p class="seo-postmeta"><time datetime="2026-09-17">公開日：2026年9月17日</time><span>著者：<a href="../about.html" rel="author">石川 卓</a>（株式会社Piste）</span></p>
+<!-- /seo:meta -->
+<div class="blog-hero-image" style="margin: 30px 0; border-radius: 12px; overflow: hidden;">
+  <img src="../images/blog-claude-code-customer-acquisition-channels.webp" alt="Claude Codeでお客様の来た経路を整える！中小企業のための受注経路一覧づくりと効いている入口を見つける判断材料整理ガイド" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<!-- seo:points -->
+<div class="seo-keypoints"><p class="seo-keypoints-title">この記事の要点</p><ul><li><strong>対象：</strong>新しいお客様が紹介・ホームページ・SNS・看板・広告などどの入口から来たのかを受付票の空欄や担当者の記憶に頼っていて、どの入口が受注と売上につながっているかを一覧で見たことがない建設・飲食・美容・士業・製造などの中小企業</li><li><strong>できるようになること：</strong>受付票・予約の記録・見積もりの控え・名刺・メモに散らばった「きっかけ」を九つの入口にそろえ、見積・請求の記録から受注の有無と初回・その後の売上を横に置き、入口ごとの相談数・受注率・その後の売上を数えて効いている入口と紹介元の偏りを見つけ、月に一度確かめる運用の判断材料をつくれる</li><li><strong>必要なもの：</strong>Claude Code と、過去一年分（残っている期間だけでも可）の受付票・予約の記録・見積もりの控え・名刺・担当者のメモ、見積・請求の記録（受注と売上の突き合わせ用）</li></ul></div>
+<!-- /seo:points -->
+<p class="lead">「あのお客様は誰かの紹介だった気がする」「ホームページを見て来たと言っていたような」「看板を見て入った人が最近多い気がする」。中小企業では、新しいお客様が毎月何人か来ているのに、<strong>その人がどこから来たのかを一覧で見たことがある会社はほとんどありません</strong>。初回の受付票に「きっかけ」の欄があっても空欄のまま、聞いたとしても担当者の記憶に残るだけで、一年たつと誰も答えられなくなります。</p>
+<p>その結果、何が起きるか。効いているかどうか分からないまま、去年と同じ広告に同じ金額を払う。紹介で来たお客様がいちばん長く続いているのに、紹介してくれた人へのお礼の決まりがない。ホームページからのご相談が増えているのに、更新は三年前で止まっている。<strong>受注経路の本当の問題は、集客にお金をかけていることではなく、どの入口から来たお客様がどれだけ受注につながり、どれだけ続いているかを誰も数えていないことです</strong>。</p>
+<p>この記事では、Anthropic社の公式AIコーディングツール <strong>Claude Code</strong> を使って、受付票、予約の記録、見積もりの控え、名刺の束、担当者のメモに散らばった「どこから来たか」の情報を一つの一覧にそろえ、入口ごとの受注の数と売上を並べ、効いている入口と効いていない入口を分けるための材料を整えるまでの手順を、非エンジニアの方向けに整理します。どの入口にお金と時間をかけるか、どこを閉じるか、紹介にどう応えるかは人の判断。機械に任せるのは、<strong>散らばった記録を集めて、そろえて、比べられる形に並べる作業</strong>です。</p>
+<div class="toc">
+<h2>目次</h2>
+<ul>
+<li><a href="#s1">お客様の来た経路が「残らない」3つの理由</a></li>
+<li><a href="#s2">お客様の来た経路の整理で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</a></li>
+<li><a href="#s3">Claude Codeで受注経路一覧をつくり、効いている入口と効いていない入口を分ける手順はどう進めますか？</a></li>
+<li><a href="#s4">頼み方の3原則</a></li>
+<li><a href="#s5">つまずきやすい5つの型</a></li>
+<li><a href="#s6">業種別の効きどころ</a></li>
+<li><a href="#s7">よくあるご質問</a></li>
+<li><a href="#s8">まとめ</a></li>
+</ul>
+</div>
+<h2 id="s1">お客様の来た経路が「残らない」3つの理由</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-customer-acquisition-channels-01.webp" alt="お客様の来た経路が「残らない」3つの理由" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<p>経路の記録が残らないのは、担当者が聞き忘れているからではありません。残らない構造が、仕事の側にあります。</p>
+<h3>1. 聞く瞬間は、目の前のご相談で手いっぱい</h3>
+<p>初めて来たお客様の前では、要望を聞き、見積もりを出し、日程を決めることで頭がいっぱいです。<strong>「どこで知りましたか」の一言は、最初の一か月だけ聞かれて、あとは飛ばされます</strong>。聞かれなかった行が増えるほど、一覧は信用されなくなります。</p>
+<h3>2. 聞いた答えが、そのまま残らない</h3>
+<p>「知り合いから」「ネットで」「前に一度来た」という答えは、受付票の余白、予約の備考、担当者の頭の中に散ります。<strong>どこに書くかが決まっていないので、あとから集められません</strong>。</p>
+<h3>3. 「効いている」の基準がない</h3>
+<p>紹介で来たお客様が三人いれば紹介が効いていると感じ、広告から来た人が一人もいない月があれば広告が無駄に思えます。ただ、感じ方は担当者ごと、月ごとに違います。<strong>一年で入口ごとに何人来て、何人が受注になり、いくら売り上げたかを数えずに、次の集客を決めているのが実態です</strong>。</p>
+<blockquote>記録が残らないのは、聞く瞬間が手いっぱいで、答えの置き場がなく、効いているの基準がないからです。この三つは、いずれも機械に任せて軽くできる種類の問題です。</blockquote>
+<h2 id="s2">お客様の来た経路の整理で、Claude Codeに任せる範囲と人が決める範囲はどこですか？</h2>
+<p>大前提として、<strong>どの入口にお金と時間をかけるか、どの入口を閉じるか、紹介してくれた人にどう応えるかは経営の判断</strong>であり、人が決めることです。機械に任せるのは、散らばった記録を集めて入口ごとにそろえ、受注と売上を横に並べ、比べられる形にするところまでです。</p>
+<table><thead><tr><th>工程</th><th>担当</th><th>内容</th></tr></thead><tbody><tr><td>記録の収集</td><td>機械</td><td>受付票・予約の記録・見積もりの控え・名刺・メモから、お客様・初回の日付・きっかけの記載を拾い出す</td></tr><tr><td>入口の名前のそろえ直し</td><td>機械</td><td>「知り合い」「紹介」「〇〇さんから」のような書き方の違いを一つの入口にまとめる</td></tr><tr><td>一覧化</td><td>機械</td><td>お客様・初回の日付・入口・紹介元・初回の受注の有無・初回の金額・その後の回数を一行にそろえる</td></tr><tr><td>受注との突き合わせ</td><td>機械</td><td>初回の相談が受注になったか、見積もりで止まったかを、見積もりと請求の記録から埋める</td></tr><tr><td>入口ごとの集計</td><td>機械</td><td>入口ごとに一年の相談数・受注数・受注率・初回の売上・その後の売上を数える</td></tr><tr><td>偏りの検出</td><td>機械</td><td>一人の紹介元に受注が集中している、特定の入口だけ受注率が低い、といった偏りに印をつける</td></tr><tr><td>見直し案の下書き</td><td>機械</td><td>増やす候補・減らす候補・お礼を決める候補を、根拠の数字つきで短くまとめる</td></tr><tr><td>どこに力をかけるかの決定</td><td>人</td><td>商圏、季節の波、人手、費用、お客様との関係を見て決める</td></tr></tbody></table>
+<h2 id="s3">Claude Codeで受注経路一覧をつくり、効いている入口と効いていない入口を分ける手順はどう進めますか？</h2>
+<div class="blog-section-image" style="margin: 25px 0; border-radius: 8px; overflow: hidden;">
+  <img src="../images/blog-claude-code-customer-acquisition-channels-02.webp" alt="実務5ステップ" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="800">
+</div>
+<h3>ステップ1：過去一年分の新しいお客様を洗い出す</h3>
+<p>まず、受付票、予約の記録、見積もりの控え、名刺の束、担当者のメモをまとめて Claude Code に渡し、「この一年で初めて来たお客様を、お客様・初回の日付・きっかけの記載・担当者の一覧にしてください。きっかけが書かれていない行は空欄のまま残してください」と頼みます。</p>
+<p>ここで大切なのは、<strong>空欄を埋めさせないこと</strong>です。きっかけが分からないお客様は、そのまま空欄で残します。空欄の割合そのものが、これまでどれだけ聞けていなかったかを示す数字になります。</p>
+<h3>ステップ2：入口の名前をそろえる</h3>
+<p>同じ入口でも、担当者ごと、書類ごとに書き方が違います。「同じ入口と考えられる書き方をまとめて、まとめた根拠を横に書いてください。迷うものは要確認の印をつけたままにしてください」と頼みます。入口は、紹介、既存のお客様の再注文、ホームページ、SNS、検索、看板や店頭、広告、催しや展示会、業者からの取り次ぎ、の九つほどに分ければ足ります。</p>
+<p>名前がそろって初めて、<strong>「知り合い」と「〇〇さんの紹介」が同じ入口として数えられ、紹介が全体の四割を占めていた、といったことが見えます</strong>。紹介は、誰からの紹介かを別の列に残します。</p>
+<h3>ステップ3：受注と売上を横に置く</h3>
+<p>一覧がそろったら、「お客様ごとに、初回の相談が受注になったか、見積もりで止まったかを見積もりと請求の記録から埋めてください。受注になったお客様は、初回の金額と、その後一年の注文回数と合計金額を横に並べてください」と頼みます。</p>
+<p>一覧に持たせる列は、お客様、初回の日付、入口、紹介元、受注の有無、初回の金額、その後の回数、その後の合計、備考の九項目で足ります。<strong>受注にならなかった行が入口ごとに並ぶと、来る人は多いのに受注に結びつかない入口が分かります</strong>。</p>
+<h3>ステップ4：入口ごとに数え、効いている入口と効いていない入口を分ける</h3>
+<p>次に、「入口ごとに、一年の相談数・受注数・受注率・初回の売上合計・その後の売上合計を数えてください。その後の売上合計の多い順に並べ、相談数は多いのに受注率が二割を下回る入口には印をつけてください」と頼みます。</p>
+<p>ここで初めて、<strong>相談は少ないが一件あたりが大きく長く続く入口と、相談は多いが受注にならず一回で終わる入口が分かれます</strong>。広告なら払った金額をその後の売上と並べ、紹介なら紹介元ごとの受注数を並べ、ホームページなら更新した月の前後で相談数を比べたものが、力をかける先を決める根拠になります。</p>
+<h3>ステップ5：聞く決まりを小さく決め、月に一度だけ確かめる</h3>
+<p>一覧を見て、増やす入口、減らす入口、紹介へのお礼の決まり、ホームページの手入れの要否を決めます。これは人の仕事です。決めたら、きっかけを聞く決まりは「初回の受付票に九つの入口から一つ丸をつけるだけ」の最も軽い形にし、月に一度、「今月初めて来たお客様の入口の内訳と、きっかけが空欄の行を出してください」と頼んで確かめます。</p>
+<blockquote>決まりは最初から細かくしなくて構いません。「初回に一つ丸をつける」「月に一度、内訳と空欄を見る」の二つから始めて、一覧を見ながら直していく方が、実務に定着します。</blockquote>
+<h2 id="s4">頼み方の3原則</h2>
+<h3>原則1：「新しいお客様」の範囲を、こちらから言葉で決める</h3>
+<p>「新しいお客様を一覧にして」だけでは、機械は受付票に書かれた人しか拾いません。何年も前に一度来て戻ってきた人、既存のお客様が別の部署や家族を連れてきた場合、業者から取り次がれた案件を新しいお客様に含めるかどうかで一覧は変わります。<strong>どこまでを新しいお客様として数え、再注文をどう扱うかを、最初にこちらから言葉で指定します</strong>。</p>
+<h3>原則2：きっかけは「聞いた言葉」で書かせ、推測で埋めさせない</h3>
+<p>「たぶん紹介」「ネット経由と思われる」のような推測は、あとで数えられません。「〇〇さんに聞いたと本人が言った」「予約画面のきっかけ欄にホームページと入っていた」というように、<strong>聞いた言葉と記録にあった言葉で書かせます</strong>。分からないものは、分からないまま残させます。</p>
+<h3>原則3：一覧の受注数と、請求の記録を突き合わせる</h3>
+<p>一覧に載っているお客様の受注数を、請求の記録と照らします。請求はあるのに一覧にないお客様は、初回の記録が残っていないか、きっかけを聞かれなかったかのどちらかです。<strong>「一覧に載っていないお客様」を見つけるのが、この突き合わせの目的</strong>です。</p>
+<h2 id="s5">つまずきやすい5つの型</h2>
+<h3>型1：相談数だけ見て、その後の売上を見ない</h3>
+<p>相談の数がいちばん多い入口が、いちばん効いている入口とは限りません。受注率が低く、一回で終わる入口かもしれません。<strong>相談数、受注率、その後の売上の三つを分けて見る</strong>のが、この一覧の使い方です。</p>
+<h3>型2：紹介を一つにまとめて、誰からの紹介かを残さない</h3>
+<p>紹介が四割を占めていても、その大半が二人の紹介元から来ているなら、その二人が離れた瞬間に売上の四割が消えます。<strong>紹介元を別の列に残し、偏りを見ます</strong>。</p>
+<h3>型3：入口のそろえ直しを飛ばす</h3>
+<p>「知り合い」「紹介」「〇〇さん」が別々の入口として並んでいると、紹介の数が分かれて見え、小さく見誤ります。地味な工程ですが、<strong>ここを飛ばした一覧は、正しい数字に見えて間違っています</strong>。</p>
+<h3>型4：広告の費用を、相談数とだけ比べる</h3>
+<p>払った広告費を相談数で割ると、一件あたりの費用は安く見えます。受注率とその後の売上まで並べると、<strong>相談は集めているが売上にはほとんど結びついていない広告</strong>が見つかることがあります。費用は、その後の売上と並べます。</p>
+<h3>型5：一覧をつくって、月に一度の確認をやめる</h3>
+<p>一年分を並べて満足すると、翌月にはきっかけの欄がまた空欄に戻ります。<strong>月に一度、入口の内訳と空欄の行を出させる</strong>ことだけを続けます。</p>
+<h2 id="s6">業種別の効きどころ</h2>
+<table><thead><tr><th>業種</th><th>効きどころ</th></tr></thead><tbody><tr><td>建設・リフォーム</td><td>紹介・業者からの取り次ぎ・ホームページ・チラシを分け、一件あたりの金額とその後の追加工事を並べ、紹介元ごとの受注数からお礼と関係づくりの優先順位を決める</td></tr><tr><td>飲食・小売</td><td>看板や店頭、SNS、口コミ、地図での検索を分け、初回のあと三か月以内に再来店した割合を入口ごとに並べ、力をかける発信先を決める</td></tr><tr><td>美容・サロン</td><td>紹介・予約サイト・SNS・ホームページを分け、予約サイト経由の手数料とその後の来店回数を並べ、指名につながる入口を見つける</td></tr><tr><td>士業・コンサル</td><td>紹介・セミナー・ホームページ・既存のお客様からの別案件を分け、初回の金額と契約の継続期間を並べ、長く続く入口を確かめる</td></tr><tr><td>製造・卸</td><td>展示会・既存取引先の紹介・商社の取り次ぎ・ホームページを分け、初回の試作から量産に進んだ割合を入口ごとに並べ、出展の要否を決める</td></tr></tbody></table>
+<h2 id="s7">よくあるご質問</h2>
+<h3>Q. 新しいお客様が月に数人でも必要ですか</h3>
+<p>数が少ないほど、一人の紹介元や一つの入口に頼っている度合いが大きくなります。月に数人であれば、一年分でも数十行で、最初の一覧づくりは半日で終わります。少ないうちに形をつくっておく方が、増えたときに楽です。</p>
+<h3>Q. お客様にきっかけを聞くのは失礼になりませんか</h3>
+<p>「どちらでお知りになりましたか」の一言は、多くの業種で自然に聞かれています。受付票に丸をつける欄を設けておけば、口頭で聞かなくても記録は残ります。紹介であれば、紹介してくれた方へお礼を伝えるためと添えると、むしろ喜ばれます。</p>
+<h3>Q. 昔の記録にきっかけが残っていない場合はどうしますか</h3>
+<p>残っている期間だけで始めて構いません。過去の分は空欄のまま残し、今月の新しいお客様から一行ずつ足していきます。三か月分がたまれば、入口の偏りは見え始めます。過去の分は、請求の記録から受注と売上だけでも並べておくと、あとで比べる相手になります。</p>
+<h3>Q. どれくらいの時間がかかりますか</h3>
+<p>受付票と見積もり・請求の記録を渡して最初の一覧が出るまでは、件数にもよりますが一時間ほどです。入口のそろえ直しと受注の突き合わせに数日、そのあとは月に一度、内訳と空欄を出させて確かめるだけです。</p>
+<h2 id="s8">まとめ</h2>
+<ul>
+<li>お客様の来た経路が残らないのは、聞く瞬間が手いっぱいで、答えの置き場がなく、効いているの基準がないという構造の問題</li>
+<li>どの入口に力をかけるか、どこを閉じるか、紹介にどう応えるかは人の判断。集めて、そろえて、並べるのは機械の仕事</li>
+<li>実務は、洗い出し、入口のそろえ直し、受注と売上を横に置く、入口ごとに数えて分ける、聞く決まりを小さく決めて月に一度確かめる、の五つ</li>
+<li>何を新しいお客様と数えるかをこちらから指定し、きっかけは聞いた言葉で書かせ、請求の記録と突き合わせる</li>
+<li>相談数だけでなく受注率とその後の売上を見る。紹介元の偏りを残し、広告費はその後の売上と並べる。記録は丸をつけるだけの軽い形にして続ける</li>
+</ul>
+<!-- seo:related -->
+<section class="seo-related" aria-labelledby="seo-related-h"><h2 id="seo-related-h">関連記事</h2><div class="seo-related-grid"><a class="seo-related-card" href="claude-code-dormant-customer-reactivation.html"><img src="../images/blog-claude-code-dormant-customer-reactivation-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">営業・顧客対応</span><span class="seo-related-title">Claude Codeで休眠顧客の掘り起こしリストをつくる</span></a><a class="seo-related-card" href="claude-code-contract-renewal-deadline.html"><img src="../images/blog-claude-code-contract-renewal-deadline-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">営業・顧客対応</span><span class="seo-related-title">Claude Codeで契約・サブスクの更新期限を見落とさない</span></a><a class="seo-related-card" href="claude-code-survey-freetext-analysis.html"><img src="../images/blog-claude-code-survey-freetext-analysis-card.webp" alt="" loading="lazy" width="640" height="427"><span class="seo-related-cat">営業・顧客対応</span><span class="seo-related-title">Claude Codeでお客様アンケートの自由記述をまとめる</span></a></div>
+<p class="seo-related-more"><a href="category-sales-customer.html">「営業・顧客対応」の記事一覧を見る</a></p></section>
+<!-- /seo:related -->
+<div class="cta">
+<h2>Claude Code 導入サポート</h2>
+<p>設定から実際の業務への組み込みまで、非エンジニアの方向けに伴走します。</p>
+<div class="price">¥3,000</div>
+<a href="../index.html#contact">導入について相談する</a>
+</div>
+<p style="color:#9a9a9a;font-size:14px;">これまで中小企業・個人事業主の皆さまの業務自動化を数多く支援してきました。まずは今いちばん時間を取られている作業から、一緒に整えていきましょう。</p>
+</div>
+
+<footer>&copy; 2026 Piste. All rights reserved.</footer>
+</body>
+</html>
