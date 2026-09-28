@@ -1,0 +1,530 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 33.33,
+        "sessionsWithoutMetricPercentage": 66.67,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 100,
+        "sessionsWithoutMetricPercentage": 0,
+        "pagesViews": 1,
+        "subTotal": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 3,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "sessionsCount": 1,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 49.5,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "averageScrollDepth": 16,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "averageScrollDepth": 81,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "averageScrollDepth": 70,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "averageScrollDepth": 100,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "averageScrollDepth": 48,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 20,
+        "pagesPerSessionPercentage": 1,
+        "Url": null
+      },
+      {
+        "totalSessionCount": 3,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 4,
+        "pagesPerSessionPercentage": 1.25,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/#training"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-insurance-coverage-records"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "totalSessionCount": 1,
+        "totalBotSessionCount": 0,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      },
+      {
+        "totalSessionCount": 0,
+        "totalBotSessionCount": 1,
+        "distinctUserCount": 1,
+        "pagesPerSessionPercentage": 1,
+        "Url": "https://www.piste-ai.com/blog/ai-meeting-minutes-automation"
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 148,
+        "activeTime": 113,
+        "Url": "https://www.piste-ai.com/blog/claude-code-instagram-integration"
+      },
+      {
+        "totalTime": 18,
+        "activeTime": 18,
+        "Url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026"
+      },
+      {
+        "totalTime": 72,
+        "activeTime": 72,
+        "Url": "https://www.piste-ai.com/blog/claude-code-note-integration"
+      },
+      {
+        "totalTime": 22,
+        "activeTime": 22,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration#s3"
+      },
+      {
+        "totalTime": 140,
+        "activeTime": 140,
+        "Url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration"
+      },
+      {
+        "totalTime": 251,
+        "activeTime": 31,
+        "Url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration"
+      },
+      {
+        "totalTime": 34,
+        "activeTime": 34,
+        "Url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration"
+      }
+    ]
+  }
+]

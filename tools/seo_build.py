@@ -86,7 +86,7 @@ CAT_RULES = {
     ],
     "operations": [
         "near-miss", "returns-defect", "equipment-inspection", "spec-change", "subcontractor", "license-expiry", "waste-loss",
-        "delivery-delay", "paper-document", "bcp-", "ai-inventory", "lending-checkout", "job-hours", "paid-leave", "ai-meeting-minutes", "ai-knowledge",
+        "delivery-delay", "paper-document", "bcp-", "ai-inventory", "lending-checkout", "job-hours", "paid-leave", "device-inventory", "ai-meeting-minutes", "ai-knowledge",
         "ai-contract-review", "ai-presentation", "ai-data-analysis", "ai-recruitment",
     ],
     "ai-basics": ["ai-adoption-mistakes", "ai-automation-one-person", "ai-prompt-techniques", "ai-tools-for-business"],
@@ -103,6 +103,7 @@ def categorize(slug: str) -> str:
 # ---------------------------------------------------------------- 短縮タイトル
 TITLE_OVERRIDES = {
     # 自動短縮で意味が落ちるものは手で指定
+    "claude-code-device-inventory-records": "Claude Codeでパソコンとスマホの台帳を整える｜中小企業向け",
     "claude-code-insurance-coverage-records": "Claude Codeで保険の加入状況を整える｜中小企業向け",
     "claude-code-payment-fee-records": "Claude Codeで支払手数料の記録を整える｜中小企業向け",
     "claude-code-shipping-cost-records": "Claude Codeで送料と配送の記録を整える｜中小企業向け",

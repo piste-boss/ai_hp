@@ -6,7 +6,16 @@
   <atom:link href="https://www.piste-ai.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>中小企業のための Claude Code・AI活用ガイド。ツール連携、経理・財務、営業・顧客対応、業務記録・現場改善、AI導入の基礎を毎日更新。</description>
   <language>ja</language>
-  <lastBuildDate>Sun, 27 Sep 2026 08:53:00 +0900</lastBuildDate>
+  <lastBuildDate>Mon, 28 Sep 2026 06:50:24 +0900</lastBuildDate>
+  <item>
+    <title>Claude Codeで会社のパソコンとスマホの台帳を整える！中小企業のための端末ごとの利用者と購入時期の一覧づくりと買い替える端末・使い続ける端末を分ける判断材料整理ガイド</title>
+    <link>https://www.piste-ai.com/blog/claude-code-device-inventory-records.html</link>
+    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-device-inventory-records.html</guid>
+    <pubDate>Mon, 28 Sep 2026 09:00:00 +0900</pubDate>
+    <category>業務記録・現場改善</category>
+    <description>Claude Codeで納品書・購入履歴・携帯の契約の明細・リースの契約書・固定資産の台帳に散らばった会社のパソコンとスマホの記録を端末ごとにそろえ、利用者と購入時期と費用を並べて買い替える端末と使い続ける端末を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。</description>
+    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-device-inventory-records-og.jpg" type="image/jpeg" length="0"/>
+  </item>
   <item>
     <title>Claude Codeで保険の加入状況を整える！中小企業のための保険ごとの補償と保険料の一覧づくりと重なる補償・足りない補償を分ける判断材料整理ガイド</title>
     <link>https://www.piste-ai.com/blog/claude-code-insurance-coverage-records.html</link>
@@ -267,15 +276,6 @@
     <category>経理・財務・資金</category>
     <description>Claude Codeで売掛金の未入金チェックを仕組み化する手順を解説。請求一覧と入金記録の集め方、照合ルールの決め方、未入金一覧の出し方、経過日数での段階分け、督促のご案内文の下書きまで5ステップと、つまずきやすい4つの型を中小企業向けに整理します。</description>
     <enclosure url="https://www.piste-ai.com/images/blog-claude-code-receivables-payment-check-og.jpg" type="image/jpeg" length="0"/>
-  </item>
-  <item>
-    <title>Claude Codeで商品・取引先ごとの粗利を出す！中小企業のためのもうけの出どころを見つける利益率整理ガイド</title>
-    <link>https://www.piste-ai.com/blog/claude-code-gross-margin-analysis.html</link>
-    <guid isPermaLink="true">https://www.piste-ai.com/blog/claude-code-gross-margin-analysis.html</guid>
-    <pubDate>Fri, 28 Aug 2026 09:00:00 +0900</pubDate>
-    <category>経理・財務・資金</category>
-    <description>Claude Codeで商品ごと・取引先ごとの粗利を出す手順を解説。十二か月分の売上と原価の集め方、先に決める五つの計算ルール、紐づかない行の扱い、額と率の二軸での並べ方、四区分への仕分けまで5ステップと、つまずきやすい5つの型を中小企業向けに整理します。</description>
-    <enclosure url="https://www.piste-ai.com/images/blog-claude-code-gross-margin-analysis-og.jpg" type="image/jpeg" length="0"/>
   </item>
 </channel>
 </rss>

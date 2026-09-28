@@ -1,0 +1,253 @@
+[
+  {
+    "metricName": "DeadClickCount",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 28.57,
+        "sessionsWithoutMetricPercentage": 71.43,
+        "pagesViews": 3,
+        "subTotal": 3
+      }
+    ]
+  },
+  {
+    "metricName": "ExcessiveScroll",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "RageClickCount",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "QuickbackClick",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScriptErrorCount",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ErrorClickCount",
+    "information": [
+      {
+        "sessionsCount": 7,
+        "sessionsWithMetricPercentage": 0,
+        "sessionsWithoutMetricPercentage": 100,
+        "pagesViews": 0,
+        "subTotal": 0
+      }
+    ]
+  },
+  {
+    "metricName": "ScrollDepth",
+    "information": [
+      {
+        "averageScrollDepth": 61.3
+      }
+    ]
+  },
+  {
+    "metricName": "Traffic",
+    "information": [
+      {
+        "totalSessionCount": 7,
+        "totalBotSessionCount": 4,
+        "distinctUserCount": 32,
+        "pagesPerSessionPercentage": 1.09375
+      }
+    ]
+  },
+  {
+    "metricName": "EngagementTime",
+    "information": [
+      {
+        "totalTime": 140,
+        "activeTime": 94
+      }
+    ]
+  },
+  {
+    "metricName": "Browser",
+    "information": [
+      {
+        "name": "ChromeMobile",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Chrome",
+        "sessionsCount": 2
+      },
+      {
+        "name": "Edge",
+        "sessionsCount": 2
+      }
+    ]
+  },
+  {
+    "metricName": "Device",
+    "information": [
+      {
+        "name": "PC",
+        "sessionsCount": 4
+      },
+      {
+        "name": "Mobile",
+        "sessionsCount": 3
+      }
+    ]
+  },
+  {
+    "metricName": "OS",
+    "information": [
+      {
+        "name": "Android",
+        "sessionsCount": 3
+      },
+      {
+        "name": "MacOSX",
+        "sessionsCount": 2
+      },
+      {
+        "name": "Windows",
+        "sessionsCount": 2
+      }
+    ]
+  },
+  {
+    "metricName": "Country",
+    "information": [
+      {
+        "name": "Japan",
+        "sessionsCount": 7
+      }
+    ]
+  },
+  {
+    "metricName": "PageTitle",
+    "information": [
+      {
+        "name": "Claude Code × Instagram連携で投稿・コメント・分析をAI自動化",
+        "sessionsCount": 3
+      },
+      {
+        "name": "Claude Code × ペライチ連携でLP・ホームページ作成をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × note連携で記事作成・発信・分析をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × Googleドライブ連携で資料整理を自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "Claude Code × 弥生会計連携で記帳・仕訳・月次決算をAI自動化",
+        "sessionsCount": 1
+      },
+      {
+        "name": "ChatGPTだけじゃない！2026年注目のビジネス向け生成AIツール5選",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "ReferrerUrl",
+    "information": [
+      {
+        "name": "https://www.google.com/",
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://www.bing.com/",
+        "sessionsCount": 3
+      },
+      {
+        "name": "https://search.yahoo.co.jp/",
+        "sessionsCount": 1
+      },
+      {
+        "name": "https://www.piste-ai.com/blog/claude-code-peraichi-integration",
+        "sessionsCount": 1
+      }
+    ]
+  },
+  {
+    "metricName": "PopularPages",
+    "information": [
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-instagram-integration",
+        "visitsCount": 4
+      },
+      {
+        "url": "https://www.piste-ai.com/",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/ai-tools-for-business-2026",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-note-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-yayoi-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-insurance-coverage-records",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-google-drive-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/claude-code-peraichi-integration",
+        "visitsCount": 1
+      },
+      {
+        "url": "https://www.piste-ai.com/blog/ai-meeting-minutes-automation",
+        "visitsCount": 1
+      }
+    ]
+  }
+]

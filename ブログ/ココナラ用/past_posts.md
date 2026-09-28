@@ -180,3 +180,5 @@
 | 2026-09-24 | Claude Codeで交際費と手土産の記録を整える！中小企業のための相手先別の付き合い費用一覧づくりと効いている付き合い・惰性の付き合いを分ける判断材料整理ガイド | claude-code-entertainment-expense-records.md |
 | 2026-09-25 | Claude Codeで送料と配送の記録を整える！中小企業のための発送ごとの送料一覧づくりと利益を削る発送・見直す発送を分ける判断材料整理ガイド | claude-code-shipping-cost-records.md |
 | 2026-09-26 | Claude Codeで支払手数料の記録を整える！中小企業のための決済・振込・販売サイト手数料の一覧づくりと残す払い方・見直す払い方を分ける判断材料整理ガイド | claude-code-payment-fee-records.md |
+| 2026-09-27 | Claude Codeで保険の加入状況を整える！中小企業のための保険ごとの補償と保険料の一覧づくりと重なる補償・足りない補償を分ける判断材料整理ガイド | claude-code-insurance-coverage-records.md |
+| 2026-09-28 | Claude Codeで会社のパソコンとスマホの台帳を整える！中小企業のための端末ごとの利用者と購入時期の一覧づくりと買い替える端末・使い続ける端末を分ける判断材料整理ガイド | claude-code-device-inventory-records.md |

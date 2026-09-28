@@ -9,7 +9,7 @@
 - [AI研修プログラム](https://www.piste-ai.com/training.html): 従業員向け Claude Code 実践研修（全12コマ）。厚生労働省「人材開発支援助成金」の対象
 - [愛知県・西三河の中小企業向けAI導入支援](https://www.piste-ai.com/aichi.html): 地域の事業者向けの案内
 - [代表プロフィール](https://www.piste-ai.com/about.html): 石川 卓（岐阜大学大学院修了、大手鉄鋼メーカーで約8年勤務、400社以上のAI導入支援（2026年9月時点））
-- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。172記事
+- [ブログ一覧](https://www.piste-ai.com/blog/): 毎日更新。173記事
 - [RSS](https://www.piste-ai.com/feed.xml) / [サイトマップ](https://www.piste-ai.com/sitemap.xml)
 
 ## 料金（税込）
@@ -193,6 +193,7 @@ CLAUDE.md・権限・スキル・サブエージェントなど、Claude Code �
 
 ヒヤリハット・不良品・点検・納期・外注先・仕様変更など、現場の記録を一覧にして改善につなげる方法。一覧: https://www.piste-ai.com/blog/category-operations.html
 
+- [Claude Codeで会社のパソコンとスマホの台帳を整える！中小企業のための端末ごとの利用者と購入時期の一覧づくりと買い替える端末・使い続ける端末を分ける判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-device-inventory-records.html) (2026-09-28): Claude Codeで納品書・購入履歴・携帯の契約の明細・リースの契約書・固定資産の台帳に散らばった会社のパソコンとスマホの記録を端末ごとにそろえ、利用者と購入時期と費用を並べて買い替える端末と使い続ける端末を分け、三か月に一度確かめる運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで有給休暇の取得記録を整える！中小企業のための従業員別の取得一覧づくりと取り残しと偏りを見つける判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-paid-leave-records.html) (2026-09-22): Claude Codeで届け出・出勤簿・給与の控え・カレンダーに散らばった有給休暇の記録を従業員ごと年度ごとにそろえ、付与・取得・残日数を並べて年度末までの取得見込みを出し、取り残しと偏りを人の問題と仕組みの問題に分け、届け出の置き場を決めて月に一度確かめる運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで案件ごとの作業時間を整える！中小企業のための工数一覧づくりと見積もりの時間読みを直す判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-job-hours-tracking.html) (2026-09-18): Claude Codeで日報・作業記録・カレンダー・メモに散らばった「どの案件に何時間かけたか」を案件ごとにそろえ、見積もりの時間読みと実際の時間、受注金額と一時間あたりの受取額を横に置き、仕事の型ごとに読みが外れている案件を見つけ、月に一度見積もりの目安を直す運用まで5ステップを中小企業向けに整理します。
 - [Claude Codeで貸出・持ち出しの記録を整える！中小企業のための貸出一覧づくりと足りない物・余っている物を見つける判断材料整理ガイド](https://www.piste-ai.com/blog/claude-code-lending-checkout-records.html) (2026-09-16): Claude Codeで持ち出し簿・ホワイトボードの写真・運行記録・購入履歴に散らばった貸出の記録を物ごとにそろえ、管理番号をつけ、今どこにあるかを出し、一年の持ち出し回数と重なりを数えて足りない物と余っている物を分け、月に一度確かめる運用まで5ステップを中小企業向けに整理します。
